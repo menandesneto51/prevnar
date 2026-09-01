@@ -660,11 +660,42 @@ def extract_regiao_saude() -> dict:
     return payload
 
 
-def run(max_pages_aux: int = 3, *, pni_cache_files: int = 200) -> None:
+def fetch_pni_cache(*, max_new_pages: int = 50) -> dict:
+    """Continua paginação PNI 2026 a partir do último offset em cache."""
+    if iter_pni_2026 is None:
+        print("PNI cache: api_client indisponível", flush=True)
+        return {"arquivos": 0, "novos": 0}
+    cache = RAW / "api_pni_2026"
+    cache.mkdir(parents=True, exist_ok=True)
+    existing = sorted(cache.glob("pni2026_offset_*.json"))
+    start = 0
+    if existing:
+        last = existing[-1].stem.split("_")[-1]
+        start = int(last) + 1000
+    print(f"PNI cache: {len(existing)} arquivos; próximo offset {start}", flush=True)
+    if max_new_pages <= 0:
+        return {"arquivos": len(existing), "offset_inicio": start, "novos": 0}
+    novos = 0
+    for offset, rows in iter_pni_2026(
+        start_offset=start,
+        max_pages=max_new_pages,
+        cache_dir=cache,
+    ):
+        novos += 1
+        if len(rows) < 1000:
+            break
+    total = len(list(cache.glob("pni2026_offset_*.json")))
+    print(f"  +{novos} páginas · total {total} arquivos", flush=True)
+    return {"arquivos": total, "offset_inicio": start, "novos": novos}
+
+
+def run(max_pages_aux: int = 3, *, pni_cache_files: int = 400, pni_fetch_pages: int = 0) -> None:
+    if pni_fetch_pages:
+        fetch_pni_cache(max_new_pages=pni_fetch_pages)
     extract_sidra_fracoes()
     extract_ipca()
     extract_sies(max_pages=max(25, max_pages_aux * 8))
-    extract_esavi(max_pages=max_pages_aux)
+    extract_esavi(max_pages=max(20, max_pages_aux * 3))
     extract_sinan_sih()
     extract_sim()
     extract_srag(max_pages=max(15, max_pages_aux * 5))

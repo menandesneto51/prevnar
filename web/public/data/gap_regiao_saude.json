@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-01T13:36:16.168100+00:00",
+  "atualizado_em": "2026-09-01T19:29:36.815785+00:00",
   "nota": "População IBGE 2022 da API; gap RS rateia elegíveis UF por pop da RS.",
   "linhas": [
     {
@@ -10,8 +10,8 @@
       "n_municipios": 1,
       "pop_ibge_2022": 11451999,
       "elegiveis_rateados": 2174346,
-      "pessoas_vacinadas": 0,
-      "gap": 2174346
+      "pessoas_vacinadas": 10893,
+      "gap": 2163453
     },
     {
       "codigo_regiao_saude": "33005",
@@ -21,8 +21,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 9705577,
       "elegiveis_rateados": 1944292,
-      "pessoas_vacinadas": 0,
-      "gap": 1944292
+      "pessoas_vacinadas": 4663,
+      "gap": 1939629
     },
     {
       "codigo_regiao_saude": "23001",
@@ -32,8 +32,8 @@
       "n_municipios": 44,
       "pop_ibge_2022": 4553473,
       "elegiveis_rateados": 843330,
-      "pessoas_vacinadas": 0,
-      "gap": 843330
+      "pessoas_vacinadas": 1377,
+      "gap": 841953
     },
     {
       "codigo_regiao_saude": "26010",
@@ -43,8 +43,8 @@
       "n_municipios": 20,
       "pop_ibge_2022": 3954223,
       "elegiveis_rateados": 734840,
-      "pessoas_vacinadas": 0,
-      "gap": 734840
+      "pessoas_vacinadas": 830,
+      "gap": 734010
     },
     {
       "codigo_regiao_saude": "41002",
@@ -54,19 +54,8 @@
       "n_municipios": 29,
       "pop_ibge_2022": 3560258,
       "elegiveis_rateados": 659051,
-      "pessoas_vacinadas": 0,
-      "gap": 659051
-    },
-    {
-      "codigo_regiao_saude": "31016",
-      "regiao_saude": "BELO HORIZONTE/NOVA LIMA/SANTA LUZIA",
-      "uf": "MG",
-      "macrorregiao_saude": "CENTRO",
-      "n_municipios": 13,
-      "pop_ibge_2022": 3215170,
-      "elegiveis_rateados": 600728,
-      "pessoas_vacinadas": 0,
-      "gap": 600728
+      "pessoas_vacinadas": 2106,
+      "gap": 656945
     },
     {
       "codigo_regiao_saude": "35072",
@@ -76,8 +65,19 @@
       "n_municipios": 19,
       "pop_ibge_2022": 3159035,
       "elegiveis_rateados": 599794,
-      "pessoas_vacinadas": 0,
-      "gap": 599794
+      "pessoas_vacinadas": 1877,
+      "gap": 597917
+    },
+    {
+      "codigo_regiao_saude": "31016",
+      "regiao_saude": "BELO HORIZONTE/NOVA LIMA/SANTA LUZIA",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 13,
+      "pop_ibge_2022": 3215170,
+      "elegiveis_rateados": 600728,
+      "pessoas_vacinadas": 4616,
+      "gap": 596112
     },
     {
       "codigo_regiao_saude": "35011",
@@ -87,8 +87,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 2918916,
       "elegiveis_rateados": 554203,
-      "pessoas_vacinadas": 0,
-      "gap": 554203
+      "pessoas_vacinadas": 733,
+      "gap": 553470
     },
     {
       "codigo_regiao_saude": "53001",
@@ -98,8 +98,8 @@
       "n_municipios": 1,
       "pop_ibge_2022": 2817381,
       "elegiveis_rateados": 534177,
-      "pessoas_vacinadas": 0,
-      "gap": 534177
+      "pessoas_vacinadas": 2858,
+      "gap": 531319
     },
     {
       "codigo_regiao_saude": "29020",
@@ -109,8 +109,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 2921354,
       "elegiveis_rateados": 520462,
-      "pessoas_vacinadas": 0,
-      "gap": 520462
+      "pessoas_vacinadas": 654,
+      "gap": 519808
     },
     {
       "codigo_regiao_saude": "35015",
@@ -120,8 +120,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 2696530,
       "elegiveis_rateados": 511980,
-      "pessoas_vacinadas": 0,
-      "gap": 511980
+      "pessoas_vacinadas": 1402,
+      "gap": 510578
     },
     {
       "codigo_regiao_saude": "32002",
@@ -131,8 +131,8 @@
       "n_municipios": 23,
       "pop_ibge_2022": 2272099,
       "elegiveis_rateados": 430703,
-      "pessoas_vacinadas": 0,
-      "gap": 430703
+      "pessoas_vacinadas": 2490,
+      "gap": 428213
     },
     {
       "codigo_regiao_saude": "43010",
@@ -142,8 +142,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 2153262,
       "elegiveis_rateados": 420901,
-      "pessoas_vacinadas": 0,
-      "gap": 420901
+      "pessoas_vacinadas": 3764,
+      "gap": 417137
     },
     {
       "codigo_regiao_saude": "13001",
@@ -153,8 +153,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 2401411,
       "elegiveis_rateados": 410694,
-      "pessoas_vacinadas": 0,
-      "gap": 410694
+      "pessoas_vacinadas": 334,
+      "gap": 410360
     },
     {
       "codigo_regiao_saude": "33006",
@@ -164,8 +164,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 1908751,
       "elegiveis_rateados": 382375,
-      "pessoas_vacinadas": 0,
-      "gap": 382375
+      "pessoas_vacinadas": 766,
+      "gap": 381609
     },
     {
       "codigo_regiao_saude": "35014",
@@ -175,8 +175,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 1954889,
       "elegiveis_rateados": 371167,
-      "pessoas_vacinadas": 0,
-      "gap": 371167
+      "pessoas_vacinadas": 618,
+      "gap": 370549
     },
     {
       "codigo_regiao_saude": "52001",
@@ -186,8 +186,8 @@
       "n_municipios": 26,
       "pop_ibge_2022": 1888228,
       "elegiveis_rateados": 346906,
-      "pessoas_vacinadas": 0,
-      "gap": 346906
+      "pessoas_vacinadas": 2520,
+      "gap": 344386
     },
     {
       "codigo_regiao_saude": "35041",
@@ -197,8 +197,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 1805531,
       "elegiveis_rateados": 342809,
-      "pessoas_vacinadas": 0,
-      "gap": 342809
+      "pessoas_vacinadas": 828,
+      "gap": 341981
     },
     {
       "codigo_regiao_saude": "35163",
@@ -208,8 +208,8 @@
       "n_municipios": 20,
       "pop_ibge_2022": 1780501,
       "elegiveis_rateados": 338057,
-      "pessoas_vacinadas": 0,
-      "gap": 338057
+      "pessoas_vacinadas": 952,
+      "gap": 337105
     },
     {
       "codigo_regiao_saude": "15006",
@@ -219,8 +219,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 1978620,
       "elegiveis_rateados": 335935,
-      "pessoas_vacinadas": 0,
-      "gap": 335935
+      "pessoas_vacinadas": 404,
+      "gap": 335531
     },
     {
       "codigo_regiao_saude": "23011",
@@ -230,8 +230,8 @@
       "n_municipios": 55,
       "pop_ibge_2022": 1644010,
       "elegiveis_rateados": 304480,
-      "pessoas_vacinadas": 0,
-      "gap": 304480
+      "pessoas_vacinadas": 193,
+      "gap": 304287
     },
     {
       "codigo_regiao_saude": "23023",
@@ -241,8 +241,8 @@
       "n_municipios": 45,
       "pop_ibge_2022": 1447729,
       "elegiveis_rateados": 268128,
-      "pessoas_vacinadas": 0,
-      "gap": 268128
+      "pessoas_vacinadas": 176,
+      "gap": 267952
     },
     {
       "codigo_regiao_saude": "42007",
@@ -252,8 +252,8 @@
       "n_municipios": 22,
       "pop_ibge_2022": 1356861,
       "elegiveis_rateados": 260134,
-      "pessoas_vacinadas": 0,
-      "gap": 260134
+      "pessoas_vacinadas": 1450,
+      "gap": 258684
     },
     {
       "codigo_regiao_saude": "26003",
@@ -263,8 +263,8 @@
       "n_municipios": 32,
       "pop_ibge_2022": 1340017,
       "elegiveis_rateados": 249024,
-      "pessoas_vacinadas": 0,
-      "gap": 249024
+      "pessoas_vacinadas": 119,
+      "gap": 248905
     },
     {
       "codigo_regiao_saude": "25001",
@@ -274,8 +274,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 1335829,
       "elegiveis_rateados": 246060,
-      "pessoas_vacinadas": 0,
-      "gap": 246060
+      "pessoas_vacinadas": 310,
+      "gap": 245750
     },
     {
       "codigo_regiao_saude": "21016",
@@ -285,8 +285,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 1477303,
       "elegiveis_rateados": 239717,
-      "pessoas_vacinadas": 0,
-      "gap": 239717
+      "pessoas_vacinadas": 393,
+      "gap": 239324
     },
     {
       "codigo_regiao_saude": "24007",
@@ -296,8 +296,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 1263738,
       "elegiveis_rateados": 233673,
-      "pessoas_vacinadas": 0,
-      "gap": 233673
+      "pessoas_vacinadas": 406,
+      "gap": 233267
     },
     {
       "codigo_regiao_saude": "27001",
@@ -307,8 +307,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 1247528,
       "elegiveis_rateados": 226870,
-      "pessoas_vacinadas": 0,
-      "gap": 226870
+      "pessoas_vacinadas": 434,
+      "gap": 226436
     },
     {
       "codigo_regiao_saude": "22004",
@@ -318,8 +318,8 @@
       "n_municipios": 31,
       "pop_ibge_2022": 1243402,
       "elegiveis_rateados": 226390,
-      "pessoas_vacinadas": 0,
-      "gap": 226390
+      "pessoas_vacinadas": 429,
+      "gap": 225961
     },
     {
       "codigo_regiao_saude": "35013",
@@ -329,8 +329,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 1118024,
       "elegiveis_rateados": 212275,
-      "pessoas_vacinadas": 0,
-      "gap": 212275
+      "pessoas_vacinadas": 244,
+      "gap": 212031
     },
     {
       "codigo_regiao_saude": "35171",
@@ -340,8 +340,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 1086313,
       "elegiveis_rateados": 206254,
-      "pessoas_vacinadas": 0,
-      "gap": 206254
+      "pessoas_vacinadas": 461,
+      "gap": 205793
     },
     {
       "codigo_regiao_saude": "29006",
@@ -351,8 +351,8 @@
       "n_municipios": 28,
       "pop_ibge_2022": 1137467,
       "elegiveis_rateados": 202649,
-      "pessoas_vacinadas": 0,
-      "gap": 202649
+      "pessoas_vacinadas": 82,
+      "gap": 202567
     },
     {
       "codigo_regiao_saude": "51002",
@@ -362,8 +362,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 1056139,
       "elegiveis_rateados": 195423,
-      "pessoas_vacinadas": 0,
-      "gap": 195423
+      "pessoas_vacinadas": 386,
+      "gap": 195037
     },
     {
       "codigo_regiao_saude": "50011",
@@ -373,8 +373,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 1024664,
       "elegiveis_rateados": 191378,
-      "pessoas_vacinadas": 0,
-      "gap": 191378
+      "pessoas_vacinadas": 549,
+      "gap": 190829
     },
     {
       "codigo_regiao_saude": "33009",
@@ -384,8 +384,8 @@
       "n_municipios": 16,
       "pop_ibge_2022": 910020,
       "elegiveis_rateados": 182302,
-      "pessoas_vacinadas": 0,
-      "gap": 182302
+      "pessoas_vacinadas": 481,
+      "gap": 181821
     },
     {
       "codigo_regiao_saude": "33008",
@@ -395,8 +395,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 907868,
       "elegiveis_rateados": 181871,
-      "pessoas_vacinadas": 0,
-      "gap": 181871
+      "pessoas_vacinadas": 336,
+      "gap": 181535
     },
     {
       "codigo_regiao_saude": "52004",
@@ -406,8 +406,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 963718,
       "elegiveis_rateados": 177055,
-      "pessoas_vacinadas": 0,
-      "gap": 177055
+      "pessoas_vacinadas": 134,
+      "gap": 176921
     },
     {
       "codigo_regiao_saude": "52002",
@@ -417,8 +417,8 @@
       "n_municipios": 25,
       "pop_ibge_2022": 955564,
       "elegiveis_rateados": 175556,
-      "pessoas_vacinadas": 0,
-      "gap": 175556
+      "pessoas_vacinadas": 481,
+      "gap": 175075
     },
     {
       "codigo_regiao_saude": "31075",
@@ -428,8 +428,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 936974,
       "elegiveis_rateados": 175066,
-      "pessoas_vacinadas": 0,
-      "gap": 175066
+      "pessoas_vacinadas": 734,
+      "gap": 174332
     },
     {
       "codigo_regiao_saude": "41017",
@@ -439,8 +439,8 @@
       "n_municipios": 21,
       "pop_ibge_2022": 943867,
       "elegiveis_rateados": 174722,
-      "pessoas_vacinadas": 0,
-      "gap": 174722
+      "pessoas_vacinadas": 867,
+      "gap": 173855
     },
     {
       "codigo_regiao_saude": "35132",
@@ -450,8 +450,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 915131,
       "elegiveis_rateados": 173752,
-      "pessoas_vacinadas": 0,
-      "gap": 173752
+      "pessoas_vacinadas": 514,
+      "gap": 173238
     },
     {
       "codigo_regiao_saude": "33004",
@@ -461,8 +461,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 865130,
       "elegiveis_rateados": 173309,
-      "pessoas_vacinadas": 0,
-      "gap": 173309
+      "pessoas_vacinadas": 269,
+      "gap": 173040
     },
     {
       "codigo_regiao_saude": "33002",
@@ -472,8 +472,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 846933,
       "elegiveis_rateados": 169664,
-      "pessoas_vacinadas": 0,
-      "gap": 169664
+      "pessoas_vacinadas": 107,
+      "gap": 169557
     },
     {
       "codigo_regiao_saude": "15003",
@@ -483,8 +483,8 @@
       "n_municipios": 17,
       "pop_ibge_2022": 945472,
       "elegiveis_rateados": 160525,
-      "pessoas_vacinadas": 0,
-      "gap": 160525
+      "pessoas_vacinadas": 72,
+      "gap": 160453
     },
     {
       "codigo_regiao_saude": "35073",
@@ -494,8 +494,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 843633,
       "elegiveis_rateados": 160177,
-      "pessoas_vacinadas": 0,
-      "gap": 160177
+      "pessoas_vacinadas": 488,
+      "gap": 159689
     },
     {
       "codigo_regiao_saude": "41015",
@@ -505,8 +505,8 @@
       "n_municipios": 30,
       "pop_ibge_2022": 865048,
       "elegiveis_rateados": 160132,
-      "pessoas_vacinadas": 0,
-      "gap": 160132
+      "pessoas_vacinadas": 833,
+      "gap": 159299
     },
     {
       "codigo_regiao_saude": "43021",
@@ -516,8 +516,8 @@
       "n_municipios": 21,
       "pop_ibge_2022": 817250,
       "elegiveis_rateados": 159749,
-      "pessoas_vacinadas": 0,
-      "gap": 159749
+      "pessoas_vacinadas": 471,
+      "gap": 159278
     },
     {
       "codigo_regiao_saude": "42006",
@@ -527,8 +527,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 812968,
       "elegiveis_rateados": 155860,
-      "pessoas_vacinadas": 0,
-      "gap": 155860
+      "pessoas_vacinadas": 421,
+      "gap": 155439
     },
     {
       "codigo_regiao_saude": "42005",
@@ -538,8 +538,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 810890,
       "elegiveis_rateados": 155462,
-      "pessoas_vacinadas": 0,
-      "gap": 155462
+      "pessoas_vacinadas": 489,
+      "gap": 154973
     },
     {
       "codigo_regiao_saude": "31018",
@@ -549,8 +549,8 @@
       "n_municipios": 3,
       "pop_ibge_2022": 829244,
       "elegiveis_rateados": 154937,
-      "pessoas_vacinadas": 0,
-      "gap": 154937
+      "pessoas_vacinadas": 517,
+      "gap": 154420
     },
     {
       "codigo_regiao_saude": "43007",
@@ -560,8 +560,8 @@
       "n_municipios": 15,
       "pop_ibge_2022": 774030,
       "elegiveis_rateados": 151301,
-      "pessoas_vacinadas": 0,
-      "gap": 151301
+      "pessoas_vacinadas": 405,
+      "gap": 150896
     },
     {
       "codigo_regiao_saude": "28001",
@@ -571,8 +571,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 815291,
       "elegiveis_rateados": 149671,
-      "pessoas_vacinadas": 0,
-      "gap": 149671
+      "pessoas_vacinadas": 322,
+      "gap": 149349
     },
     {
       "codigo_regiao_saude": "42011",
@@ -582,8 +582,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 778481,
       "elegiveis_rateados": 149249,
-      "pessoas_vacinadas": 0,
-      "gap": 149249
+      "pessoas_vacinadas": 401,
+      "gap": 148848
     },
     {
       "codigo_regiao_saude": "43008",
@@ -593,8 +593,8 @@
       "n_municipios": 18,
       "pop_ibge_2022": 758223,
       "elegiveis_rateados": 148211,
-      "pessoas_vacinadas": 0,
-      "gap": 148211
+      "pessoas_vacinadas": 374,
+      "gap": 147837
     },
     {
       "codigo_regiao_saude": "35155",
@@ -604,8 +604,8 @@
       "n_municipios": 20,
       "pop_ibge_2022": 765491,
       "elegiveis_rateados": 145341,
-      "pessoas_vacinadas": 0,
-      "gap": 145341
+      "pessoas_vacinadas": 428,
+      "gap": 144913
     },
     {
       "codigo_regiao_saude": "15008",
@@ -615,19 +615,8 @@
       "n_municipios": 22,
       "pop_ibge_2022": 842760,
       "elegiveis_rateados": 143086,
-      "pessoas_vacinadas": 0,
-      "gap": 143086
-    },
-    {
-      "codigo_regiao_saude": "31017",
-      "regiao_saude": "BETIM",
-      "uf": "MG",
-      "macrorregiao_saude": "CENTRO",
-      "n_municipios": 13,
-      "pop_ibge_2022": 732511,
-      "elegiveis_rateados": 136864,
-      "pessoas_vacinadas": 0,
-      "gap": 136864
+      "pessoas_vacinadas": 34,
+      "gap": 143052
     },
     {
       "codigo_regiao_saude": "15002",
@@ -637,8 +626,19 @@
       "n_municipios": 14,
       "pop_ibge_2022": 804487,
       "elegiveis_rateados": 136588,
-      "pessoas_vacinadas": 0,
-      "gap": 136588
+      "pessoas_vacinadas": 42,
+      "gap": 136546
+    },
+    {
+      "codigo_regiao_saude": "31017",
+      "regiao_saude": "BETIM",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 13,
+      "pop_ibge_2022": 732511,
+      "elegiveis_rateados": 136864,
+      "pessoas_vacinadas": 383,
+      "gap": 136481
     },
     {
       "codigo_regiao_saude": "15011",
@@ -648,8 +648,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 782692,
       "elegiveis_rateados": 132887,
-      "pessoas_vacinadas": 0,
-      "gap": 132887
+      "pessoas_vacinadas": 22,
+      "gap": 132865
     },
     {
       "codigo_regiao_saude": "32004",
@@ -659,8 +659,8 @@
       "n_municipios": 26,
       "pop_ibge_2022": 656128,
       "elegiveis_rateados": 124377,
-      "pessoas_vacinadas": 0,
-      "gap": 124377
+      "pessoas_vacinadas": 327,
+      "gap": 124050
     },
     {
       "codigo_regiao_saude": "29028",
@@ -670,8 +670,8 @@
       "n_municipios": 19,
       "pop_ibge_2022": 687753,
       "elegiveis_rateados": 122529,
-      "pessoas_vacinadas": 0,
-      "gap": 122529
+      "pessoas_vacinadas": 84,
+      "gap": 122445
     },
     {
       "codigo_regiao_saude": "35062",
@@ -681,8 +681,8 @@
       "n_municipios": 18,
       "pop_ibge_2022": 644731,
       "elegiveis_rateados": 122413,
-      "pessoas_vacinadas": 0,
-      "gap": 122413
+      "pessoas_vacinadas": 272,
+      "gap": 122141
     },
     {
       "codigo_regiao_saude": "35174",
@@ -692,8 +692,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 620034,
       "elegiveis_rateados": 117723,
-      "pessoas_vacinadas": 0,
-      "gap": 117723
+      "pessoas_vacinadas": 279,
+      "gap": 117444
     },
     {
       "codigo_regiao_saude": "41003",
@@ -703,8 +703,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 635618,
       "elegiveis_rateados": 117661,
-      "pessoas_vacinadas": 0,
-      "gap": 117661
+      "pessoas_vacinadas": 257,
+      "gap": 117404
     },
     {
       "codigo_regiao_saude": "35103",
@@ -714,8 +714,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 605080,
       "elegiveis_rateados": 114884,
-      "pessoas_vacinadas": 0,
-      "gap": 114884
+      "pessoas_vacinadas": 262,
+      "gap": 114622
     },
     {
       "codigo_regiao_saude": "23024",
@@ -725,8 +725,8 @@
       "n_municipios": 20,
       "pop_ibge_2022": 618818,
       "elegiveis_rateados": 114609,
-      "pessoas_vacinadas": 0,
-      "gap": 114609
+      "pessoas_vacinadas": 68,
+      "gap": 114541
     },
     {
       "codigo_regiao_saude": "43023",
@@ -736,8 +736,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 582915,
       "elegiveis_rateados": 113943,
-      "pessoas_vacinadas": 0,
-      "gap": 113943
+      "pessoas_vacinadas": 429,
+      "gap": 113514
     },
     {
       "codigo_regiao_saude": "35012",
@@ -747,8 +747,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 591562,
       "elegiveis_rateados": 112318,
-      "pessoas_vacinadas": 0,
-      "gap": 112318
+      "pessoas_vacinadas": 84,
+      "gap": 112234
     },
     {
       "codigo_regiao_saude": "31097",
@@ -758,19 +758,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 592694,
       "elegiveis_rateados": 110740,
-      "pessoas_vacinadas": 0,
-      "gap": 110740
-    },
-    {
-      "codigo_regiao_saude": "11004",
-      "regiao_saude": "MADEIRA-MAMORE",
-      "uf": "RO",
-      "macrorregiao_saude": "MACRORREGIAO I - PORTO VELHO",
-      "n_municipios": 5,
-      "pop_ibge_2022": 556123,
-      "elegiveis_rateados": 108974,
-      "pessoas_vacinadas": 0,
-      "gap": 108974
+      "pessoas_vacinadas": 365,
+      "gap": 110375
     },
     {
       "codigo_regiao_saude": "14001",
@@ -780,8 +769,19 @@
       "n_municipios": 9,
       "pop_ibge_2022": 546251,
       "elegiveis_rateados": 108949,
-      "pessoas_vacinadas": 0,
-      "gap": 108949
+      "pessoas_vacinadas": 50,
+      "gap": 108899
+    },
+    {
+      "codigo_regiao_saude": "11004",
+      "regiao_saude": "MADEIRA-MAMORE",
+      "uf": "RO",
+      "macrorregiao_saude": "MACRORREGIAO I - PORTO VELHO",
+      "n_municipios": 5,
+      "pop_ibge_2022": 556123,
+      "elegiveis_rateados": 108974,
+      "pessoas_vacinadas": 114,
+      "gap": 108860
     },
     {
       "codigo_regiao_saude": "31007",
@@ -791,8 +791,8 @@
       "n_municipios": 32,
       "pop_ibge_2022": 574819,
       "elegiveis_rateados": 107400,
-      "pessoas_vacinadas": 0,
-      "gap": 107400
+      "pessoas_vacinadas": 334,
+      "gap": 107066
     },
     {
       "codigo_regiao_saude": "41010",
@@ -802,8 +802,8 @@
       "n_municipios": 25,
       "pop_ibge_2022": 576817,
       "elegiveis_rateados": 106777,
-      "pessoas_vacinadas": 0,
-      "gap": 106777
+      "pessoas_vacinadas": 257,
+      "gap": 106520
     },
     {
       "codigo_regiao_saude": "26006",
@@ -813,8 +813,8 @@
       "n_municipios": 20,
       "pop_ibge_2022": 568121,
       "elegiveis_rateados": 105578,
-      "pessoas_vacinadas": 0,
-      "gap": 105578
+      "pessoas_vacinadas": 62,
+      "gap": 105516
     },
     {
       "codigo_regiao_saude": "51013",
@@ -824,8 +824,8 @@
       "n_municipios": 19,
       "pop_ibge_2022": 569886,
       "elegiveis_rateados": 105449,
-      "pessoas_vacinadas": 0,
-      "gap": 105449
+      "pessoas_vacinadas": 334,
+      "gap": 105115
     },
     {
       "codigo_regiao_saude": "29004",
@@ -835,8 +835,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 584772,
       "elegiveis_rateados": 104182,
-      "pessoas_vacinadas": 0,
-      "gap": 104182
+      "pessoas_vacinadas": 25,
+      "gap": 104157
     },
     {
       "codigo_regiao_saude": "25016",
@@ -846,8 +846,8 @@
       "n_municipios": 15,
       "pop_ibge_2022": 554758,
       "elegiveis_rateados": 102187,
-      "pessoas_vacinadas": 0,
-      "gap": 102187
+      "pessoas_vacinadas": 97,
+      "gap": 102090
     },
     {
       "codigo_regiao_saude": "29025",
@@ -857,8 +857,8 @@
       "n_municipios": 18,
       "pop_ibge_2022": 572322,
       "elegiveis_rateados": 101964,
-      "pessoas_vacinadas": 0,
-      "gap": 101964
+      "pessoas_vacinadas": 11,
+      "gap": 101953
     },
     {
       "codigo_regiao_saude": "26004",
@@ -868,8 +868,8 @@
       "n_municipios": 21,
       "pop_ibge_2022": 538018,
       "elegiveis_rateados": 99983,
-      "pessoas_vacinadas": 0,
-      "gap": 99983
+      "pessoas_vacinadas": 46,
+      "gap": 99937
     },
     {
       "codigo_regiao_saude": "12002",
@@ -879,19 +879,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 526077,
       "elegiveis_rateados": 99324,
-      "pessoas_vacinadas": 0,
-      "gap": 99324
-    },
-    {
-      "codigo_regiao_saude": "52011",
-      "regiao_saude": "PIRINEUS",
-      "uf": "GO",
-      "macrorregiao_saude": "MACRORREGIAO CENTRO-NORTE",
-      "n_municipios": 10,
-      "pop_ibge_2022": 538825,
-      "elegiveis_rateados": 98993,
-      "pessoas_vacinadas": 0,
-      "gap": 98993
+      "pessoas_vacinadas": 110,
+      "gap": 99214
     },
     {
       "codigo_regiao_saude": "29016",
@@ -901,8 +890,19 @@
       "n_municipios": 10,
       "pop_ibge_2022": 555100,
       "elegiveis_rateados": 98895,
-      "pessoas_vacinadas": 0,
-      "gap": 98895
+      "pessoas_vacinadas": 25,
+      "gap": 98870
+    },
+    {
+      "codigo_regiao_saude": "52011",
+      "regiao_saude": "PIRINEUS",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-NORTE",
+      "n_municipios": 10,
+      "pop_ibge_2022": 538825,
+      "elegiveis_rateados": 98993,
+      "pessoas_vacinadas": 296,
+      "gap": 98697
     },
     {
       "codigo_regiao_saude": "26009",
@@ -912,19 +912,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 531226,
       "elegiveis_rateados": 98721,
-      "pessoas_vacinadas": 0,
-      "gap": 98721
-    },
-    {
-      "codigo_regiao_saude": "51014",
-      "regiao_saude": "TELES PIRES",
-      "uf": "MT",
-      "macrorregiao_saude": "MACRORREGIAO NORTE ",
-      "n_municipios": 14,
-      "pop_ibge_2022": 533240,
-      "elegiveis_rateados": 98668,
-      "pessoas_vacinadas": 0,
-      "gap": 98668
+      "pessoas_vacinadas": 59,
+      "gap": 98662
     },
     {
       "codigo_regiao_saude": "23025",
@@ -934,8 +923,19 @@
       "n_municipios": 20,
       "pop_ibge_2022": 530927,
       "elegiveis_rateados": 98331,
-      "pessoas_vacinadas": 0,
-      "gap": 98331
+      "pessoas_vacinadas": 84,
+      "gap": 98247
+    },
+    {
+      "codigo_regiao_saude": "51014",
+      "regiao_saude": "TELES PIRES",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO NORTE ",
+      "n_municipios": 14,
+      "pop_ibge_2022": 533240,
+      "elegiveis_rateados": 98668,
+      "pessoas_vacinadas": 561,
+      "gap": 98107
     },
     {
       "codigo_regiao_saude": "16001",
@@ -945,8 +945,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 495027,
       "elegiveis_rateados": 96011,
-      "pessoas_vacinadas": 0,
-      "gap": 96011
+      "pessoas_vacinadas": 53,
+      "gap": 95958
     },
     {
       "codigo_regiao_saude": "32001",
@@ -956,8 +956,8 @@
       "n_municipios": 15,
       "pop_ibge_2022": 500928,
       "elegiveis_rateados": 94957,
-      "pessoas_vacinadas": 0,
-      "gap": 94957
+      "pessoas_vacinadas": 261,
+      "gap": 94696
     },
     {
       "codigo_regiao_saude": "26008",
@@ -967,8 +967,8 @@
       "n_municipios": 22,
       "pop_ibge_2022": 507488,
       "elegiveis_rateados": 94310,
-      "pessoas_vacinadas": 0,
-      "gap": 94310
+      "pessoas_vacinadas": 26,
+      "gap": 94284
     },
     {
       "codigo_regiao_saude": "35161",
@@ -978,8 +978,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 496205,
       "elegiveis_rateados": 94213,
-      "pessoas_vacinadas": 0,
-      "gap": 94213
+      "pessoas_vacinadas": 161,
+      "gap": 94052
     },
     {
       "codigo_regiao_saude": "35071",
@@ -989,8 +989,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 493718,
       "elegiveis_rateados": 93740,
-      "pessoas_vacinadas": 0,
-      "gap": 93740
+      "pessoas_vacinadas": 270,
+      "gap": 93470
     },
     {
       "codigo_regiao_saude": "27007",
@@ -1000,8 +1000,8 @@
       "n_municipios": 17,
       "pop_ibge_2022": 509377,
       "elegiveis_rateados": 92633,
-      "pessoas_vacinadas": 0,
-      "gap": 92633
+      "pessoas_vacinadas": 86,
+      "gap": 92547
     },
     {
       "codigo_regiao_saude": "29001",
@@ -1011,8 +1011,8 @@
       "n_municipios": 18,
       "pop_ibge_2022": 495045,
       "elegiveis_rateados": 88196,
-      "pessoas_vacinadas": 0,
-      "gap": 88196
+      "pessoas_vacinadas": 17,
+      "gap": 88179
     },
     {
       "codigo_regiao_saude": "21008",
@@ -1022,8 +1022,8 @@
       "n_municipios": 16,
       "pop_ibge_2022": 539458,
       "elegiveis_rateados": 87536,
-      "pessoas_vacinadas": 0,
-      "gap": 87536
+      "pessoas_vacinadas": 45,
+      "gap": 87491
     },
     {
       "codigo_regiao_saude": "43003",
@@ -1033,8 +1033,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 446488,
       "elegiveis_rateados": 87276,
-      "pessoas_vacinadas": 0,
-      "gap": 87276
+      "pessoas_vacinadas": 118,
+      "gap": 87158
     },
     {
       "codigo_regiao_saude": "29015",
@@ -1044,8 +1044,8 @@
       "n_municipios": 26,
       "pop_ibge_2022": 488953,
       "elegiveis_rateados": 87111,
-      "pessoas_vacinadas": 0,
-      "gap": 87111
+      "pessoas_vacinadas": 42,
+      "gap": 87069
     },
     {
       "codigo_regiao_saude": "15009",
@@ -1055,8 +1055,8 @@
       "n_municipios": 16,
       "pop_ibge_2022": 510856,
       "elegiveis_rateados": 86734,
-      "pessoas_vacinadas": 0,
-      "gap": 86734
+      "pessoas_vacinadas": 19,
+      "gap": 86715
     },
     {
       "codigo_regiao_saude": "35172",
@@ -1066,8 +1066,8 @@
       "n_municipios": 17,
       "pop_ibge_2022": 454993,
       "elegiveis_rateados": 86388,
-      "pessoas_vacinadas": 0,
-      "gap": 86388
+      "pessoas_vacinadas": 168,
+      "gap": 86220
     },
     {
       "codigo_regiao_saude": "29002",
@@ -1077,8 +1077,8 @@
       "n_municipios": 15,
       "pop_ibge_2022": 481212,
       "elegiveis_rateados": 85732,
-      "pessoas_vacinadas": 0,
-      "gap": 85732
+      "pessoas_vacinadas": 84,
+      "gap": 85648
     },
     {
       "codigo_regiao_saude": "42015",
@@ -1088,8 +1088,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 446838,
       "elegiveis_rateados": 85667,
-      "pessoas_vacinadas": 0,
-      "gap": 85667
+      "pessoas_vacinadas": 226,
+      "gap": 85441
     },
     {
       "codigo_regiao_saude": "43001",
@@ -1099,8 +1099,8 @@
       "n_municipios": 22,
       "pop_ibge_2022": 436614,
       "elegiveis_rateados": 85345,
-      "pessoas_vacinadas": 0,
-      "gap": 85345
+      "pessoas_vacinadas": 223,
+      "gap": 85122
     },
     {
       "codigo_regiao_saude": "41005",
@@ -1110,8 +1110,8 @@
       "n_municipios": 20,
       "pop_ibge_2022": 451626,
       "elegiveis_rateados": 83602,
-      "pessoas_vacinadas": 0,
-      "gap": 83602
+      "pessoas_vacinadas": 197,
+      "gap": 83405
     },
     {
       "codigo_regiao_saude": "31084",
@@ -1121,8 +1121,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 446005,
       "elegiveis_rateados": 83332,
-      "pessoas_vacinadas": 0,
-      "gap": 83332
+      "pessoas_vacinadas": 198,
+      "gap": 83134
     },
     {
       "codigo_regiao_saude": "24002",
@@ -1132,8 +1132,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 450009,
       "elegiveis_rateados": 83210,
-      "pessoas_vacinadas": 0,
-      "gap": 83210
+      "pessoas_vacinadas": 85,
+      "gap": 83125
     },
     {
       "codigo_regiao_saude": "29022",
@@ -1143,8 +1143,8 @@
       "n_municipios": 23,
       "pop_ibge_2022": 462059,
       "elegiveis_rateados": 82319,
-      "pessoas_vacinadas": 0,
-      "gap": 82319
+      "pessoas_vacinadas": 7,
+      "gap": 82312
     },
     {
       "codigo_regiao_saude": "41009",
@@ -1154,8 +1154,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 443395,
       "elegiveis_rateados": 82078,
-      "pessoas_vacinadas": 0,
-      "gap": 82078
+      "pessoas_vacinadas": 137,
+      "gap": 81941
     },
     {
       "codigo_regiao_saude": "43017",
@@ -1165,8 +1165,8 @@
       "n_municipios": 28,
       "pop_ibge_2022": 418117,
       "elegiveis_rateados": 81730,
-      "pessoas_vacinadas": 0,
-      "gap": 81730
+      "pessoas_vacinadas": 401,
+      "gap": 81329
     },
     {
       "codigo_regiao_saude": "29012",
@@ -1176,8 +1176,8 @@
       "n_municipios": 22,
       "pop_ibge_2022": 456186,
       "elegiveis_rateados": 81273,
-      "pessoas_vacinadas": 0,
-      "gap": 81273
+      "pessoas_vacinadas": 42,
+      "gap": 81231
     },
     {
       "codigo_regiao_saude": "29007",
@@ -1187,8 +1187,8 @@
       "n_municipios": 23,
       "pop_ibge_2022": 455690,
       "elegiveis_rateados": 81185,
-      "pessoas_vacinadas": 0,
-      "gap": 81185
+      "pessoas_vacinadas": 36,
+      "gap": 81149
     },
     {
       "codigo_regiao_saude": "35081",
@@ -1198,8 +1198,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 424174,
       "elegiveis_rateados": 80536,
-      "pessoas_vacinadas": 0,
-      "gap": 80536
+      "pessoas_vacinadas": 141,
+      "gap": 80395
     },
     {
       "codigo_regiao_saude": "52015",
@@ -1209,8 +1209,8 @@
       "n_municipios": 18,
       "pop_ibge_2022": 438027,
       "elegiveis_rateados": 80474,
-      "pessoas_vacinadas": 0,
-      "gap": 80474
+      "pessoas_vacinadas": 321,
+      "gap": 80153
     },
     {
       "codigo_regiao_saude": "31024",
@@ -1220,8 +1220,8 @@
       "n_municipios": 23,
       "pop_ibge_2022": 427821,
       "elegiveis_rateados": 79935,
-      "pessoas_vacinadas": 0,
-      "gap": 79935
+      "pessoas_vacinadas": 265,
+      "gap": 79670
     },
     {
       "codigo_regiao_saude": "50012",
@@ -1231,8 +1231,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 424554,
       "elegiveis_rateados": 79295,
-      "pessoas_vacinadas": 0,
-      "gap": 79295
+      "pessoas_vacinadas": 251,
+      "gap": 79044
     },
     {
       "codigo_regiao_saude": "31072",
@@ -1242,8 +1242,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 424060,
       "elegiveis_rateados": 79232,
-      "pessoas_vacinadas": 0,
-      "gap": 79232
+      "pessoas_vacinadas": 246,
+      "gap": 78986
     },
     {
       "codigo_regiao_saude": "35131",
@@ -1253,8 +1253,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 413702,
       "elegiveis_rateados": 78548,
-      "pessoas_vacinadas": 0,
-      "gap": 78548
+      "pessoas_vacinadas": 168,
+      "gap": 78380
     },
     {
       "codigo_regiao_saude": "42002",
@@ -1264,8 +1264,8 @@
       "n_municipios": 27,
       "pop_ibge_2022": 408924,
       "elegiveis_rateados": 78398,
-      "pessoas_vacinadas": 0,
-      "gap": 78398
+      "pessoas_vacinadas": 242,
+      "gap": 78156
     },
     {
       "codigo_regiao_saude": "41020",
@@ -1275,8 +1275,8 @@
       "n_municipios": 18,
       "pop_ibge_2022": 418589,
       "elegiveis_rateados": 77486,
-      "pessoas_vacinadas": 0,
-      "gap": 77486
+      "pessoas_vacinadas": 229,
+      "gap": 77257
     },
     {
       "codigo_regiao_saude": "26002",
@@ -1286,8 +1286,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 415617,
       "elegiveis_rateados": 77237,
-      "pessoas_vacinadas": 0,
-      "gap": 77237
+      "pessoas_vacinadas": 42,
+      "gap": 77195
     },
     {
       "codigo_regiao_saude": "15001",
@@ -1297,8 +1297,8 @@
       "n_municipios": 15,
       "pop_ibge_2022": 454710,
       "elegiveis_rateados": 77202,
-      "pessoas_vacinadas": 0,
-      "gap": 77202
+      "pessoas_vacinadas": 75,
+      "gap": 77127
     },
     {
       "codigo_regiao_saude": "35112",
@@ -1308,8 +1308,8 @@
       "n_municipios": 19,
       "pop_ibge_2022": 405916,
       "elegiveis_rateados": 77070,
-      "pessoas_vacinadas": 0,
-      "gap": 77070
+      "pessoas_vacinadas": 158,
+      "gap": 76912
     },
     {
       "codigo_regiao_saude": "29026",
@@ -1319,8 +1319,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 430826,
       "elegiveis_rateados": 76755,
-      "pessoas_vacinadas": 0,
-      "gap": 76755
+      "pessoas_vacinadas": 51,
+      "gap": 76704
     },
     {
       "codigo_regiao_saude": "32003",
@@ -1330,8 +1330,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 404557,
       "elegiveis_rateados": 76689,
-      "pessoas_vacinadas": 0,
-      "gap": 76689
+      "pessoas_vacinadas": 234,
+      "gap": 76455
     },
     {
       "codigo_regiao_saude": "43009",
@@ -1341,8 +1341,8 @@
       "n_municipios": 20,
       "pop_ibge_2022": 385656,
       "elegiveis_rateados": 75385,
-      "pessoas_vacinadas": 0,
-      "gap": 75385
+      "pessoas_vacinadas": 130,
+      "gap": 75255
     },
     {
       "codigo_regiao_saude": "31036",
@@ -1352,8 +1352,8 @@
       "n_municipios": 25,
       "pop_ibge_2022": 400949,
       "elegiveis_rateados": 74914,
-      "pessoas_vacinadas": 0,
-      "gap": 74914
+      "pessoas_vacinadas": 218,
+      "gap": 74696
     },
     {
       "codigo_regiao_saude": "35032",
@@ -1363,8 +1363,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 390525,
       "elegiveis_rateados": 74147,
-      "pessoas_vacinadas": 0,
-      "gap": 74147
+      "pessoas_vacinadas": 163,
+      "gap": 73984
     },
     {
       "codigo_regiao_saude": "42016",
@@ -1374,8 +1374,8 @@
       "n_municipios": 18,
       "pop_ibge_2022": 381530,
       "elegiveis_rateados": 73146,
-      "pessoas_vacinadas": 0,
-      "gap": 73146
+      "pessoas_vacinadas": 221,
+      "gap": 72925
     },
     {
       "codigo_regiao_saude": "22003",
@@ -1385,8 +1385,8 @@
       "n_municipios": 23,
       "pop_ibge_2022": 400268,
       "elegiveis_rateados": 72878,
-      "pessoas_vacinadas": 0,
-      "gap": 72878
+      "pessoas_vacinadas": 34,
+      "gap": 72844
     },
     {
       "codigo_regiao_saude": "35093",
@@ -1396,8 +1396,8 @@
       "n_municipios": 19,
       "pop_ibge_2022": 382161,
       "elegiveis_rateados": 72559,
-      "pessoas_vacinadas": 0,
-      "gap": 72559
+      "pessoas_vacinadas": 142,
+      "gap": 72417
     },
     {
       "codigo_regiao_saude": "29010",
@@ -1407,8 +1407,8 @@
       "n_municipios": 19,
       "pop_ibge_2022": 403735,
       "elegiveis_rateados": 71929,
-      "pessoas_vacinadas": 0,
-      "gap": 71929
+      "pessoas_vacinadas": 43,
+      "gap": 71886
     },
     {
       "codigo_regiao_saude": "42012",
@@ -1418,8 +1418,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 370576,
       "elegiveis_rateados": 71046,
-      "pessoas_vacinadas": 0,
-      "gap": 71046
+      "pessoas_vacinadas": 141,
+      "gap": 70905
     },
     {
       "codigo_regiao_saude": "41008",
@@ -1429,8 +1429,8 @@
       "n_municipios": 27,
       "pop_ibge_2022": 382860,
       "elegiveis_rateados": 70872,
-      "pessoas_vacinadas": 0,
-      "gap": 70872
+      "pessoas_vacinadas": 98,
+      "gap": 70774
     },
     {
       "codigo_regiao_saude": "31037",
@@ -1440,8 +1440,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 377249,
       "elegiveis_rateados": 70486,
-      "pessoas_vacinadas": 0,
-      "gap": 70486
+      "pessoas_vacinadas": 196,
+      "gap": 70290
     },
     {
       "codigo_regiao_saude": "24001",
@@ -1451,8 +1451,8 @@
       "n_municipios": 27,
       "pop_ibge_2022": 379892,
       "elegiveis_rateados": 70244,
-      "pessoas_vacinadas": 0,
-      "gap": 70244
+      "pessoas_vacinadas": 18,
+      "gap": 70226
     },
     {
       "codigo_regiao_saude": "29018",
@@ -1462,8 +1462,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 394077,
       "elegiveis_rateados": 70208,
-      "pessoas_vacinadas": 0,
-      "gap": 70208
+      "pessoas_vacinadas": 56,
+      "gap": 70152
     },
     {
       "codigo_regiao_saude": "29003",
@@ -1473,8 +1473,8 @@
       "n_municipios": 20,
       "pop_ibge_2022": 392917,
       "elegiveis_rateados": 70001,
-      "pessoas_vacinadas": 0,
-      "gap": 70001
+      "pessoas_vacinadas": 64,
+      "gap": 69937
     },
     {
       "codigo_regiao_saude": "41016",
@@ -1484,8 +1484,8 @@
       "n_municipios": 17,
       "pop_ibge_2022": 376371,
       "elegiveis_rateados": 69671,
-      "pessoas_vacinadas": 0,
-      "gap": 69671
+      "pessoas_vacinadas": 163,
+      "gap": 69508
     },
     {
       "codigo_regiao_saude": "17006",
@@ -1495,8 +1495,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 375713,
       "elegiveis_rateados": 69538,
-      "pessoas_vacinadas": 0,
-      "gap": 69538
+      "pessoas_vacinadas": 121,
+      "gap": 69417
     },
     {
       "codigo_regiao_saude": "35102",
@@ -1506,8 +1506,8 @@
       "n_municipios": 4,
       "pop_ibge_2022": 357916,
       "elegiveis_rateados": 67956,
-      "pessoas_vacinadas": 0,
-      "gap": 67956
+      "pessoas_vacinadas": 161,
+      "gap": 67795
     },
     {
       "codigo_regiao_saude": "33007",
@@ -1517,8 +1517,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 336995,
       "elegiveis_rateados": 67509,
-      "pessoas_vacinadas": 0,
-      "gap": 67509
+      "pessoas_vacinadas": 83,
+      "gap": 67426
     },
     {
       "codigo_regiao_saude": "29014",
@@ -1528,8 +1528,8 @@
       "n_municipios": 19,
       "pop_ibge_2022": 375960,
       "elegiveis_rateados": 66980,
-      "pessoas_vacinadas": 0,
-      "gap": 66980
+      "pessoas_vacinadas": 12,
+      "gap": 66968
     },
     {
       "codigo_regiao_saude": "43028",
@@ -1539,8 +1539,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 340857,
       "elegiveis_rateados": 66628,
-      "pessoas_vacinadas": 0,
-      "gap": 66628
+      "pessoas_vacinadas": 173,
+      "gap": 66455
     },
     {
       "codigo_regiao_saude": "35173",
@@ -1550,8 +1550,8 @@
       "n_municipios": 4,
       "pop_ibge_2022": 344383,
       "elegiveis_rateados": 65387,
-      "pessoas_vacinadas": 0,
-      "gap": 65387
+      "pessoas_vacinadas": 80,
+      "gap": 65307
     },
     {
       "codigo_regiao_saude": "31059",
@@ -1561,8 +1561,8 @@
       "n_municipios": 23,
       "pop_ibge_2022": 348467,
       "elegiveis_rateados": 65108,
-      "pessoas_vacinadas": 0,
-      "gap": 65108
+      "pessoas_vacinadas": 160,
+      "gap": 64948
     },
     {
       "codigo_regiao_saude": "31086",
@@ -1572,19 +1572,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 347827,
       "elegiveis_rateados": 64989,
-      "pessoas_vacinadas": 0,
-      "gap": 64989
-    },
-    {
-      "codigo_regiao_saude": "31025",
-      "regiao_saude": "VESPASIANO/LAGOA SANTA",
-      "uf": "MG",
-      "macrorregiao_saude": "CENTRO",
-      "n_municipios": 7,
-      "pop_ibge_2022": 343342,
-      "elegiveis_rateados": 64151,
-      "pessoas_vacinadas": 0,
-      "gap": 64151
+      "pessoas_vacinadas": 211,
+      "gap": 64778
     },
     {
       "codigo_regiao_saude": "33003",
@@ -1594,19 +1583,19 @@
       "n_municipios": 11,
       "pop_ibge_2022": 320003,
       "elegiveis_rateados": 64105,
-      "pessoas_vacinadas": 0,
-      "gap": 64105
+      "pessoas_vacinadas": 64,
+      "gap": 64041
     },
     {
-      "codigo_regiao_saude": "35101",
-      "regiao_saude": "ARARAS",
-      "uf": "SP",
-      "macrorregiao_saude": "RRAS14",
-      "n_municipios": 5,
-      "pop_ibge_2022": 334950,
-      "elegiveis_rateados": 63596,
-      "pessoas_vacinadas": 0,
-      "gap": 63596
+      "codigo_regiao_saude": "31025",
+      "regiao_saude": "VESPASIANO/LAGOA SANTA",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 7,
+      "pop_ibge_2022": 343342,
+      "elegiveis_rateados": 64151,
+      "pessoas_vacinadas": 236,
+      "gap": 63915
     },
     {
       "codigo_regiao_saude": "42017",
@@ -1616,19 +1605,19 @@
       "n_municipios": 7,
       "pop_ibge_2022": 331693,
       "elegiveis_rateados": 63591,
-      "pessoas_vacinadas": 0,
-      "gap": 63591
+      "pessoas_vacinadas": 70,
+      "gap": 63521
     },
     {
-      "codigo_regiao_saude": "11003",
-      "regiao_saude": "CENTRAL",
-      "uf": "RO",
-      "macrorregiao_saude": "MACRORREGIONAL II (CACOAL)",
-      "n_municipios": 14,
-      "pop_ibge_2022": 323955,
-      "elegiveis_rateados": 63480,
-      "pessoas_vacinadas": 0,
-      "gap": 63480
+      "codigo_regiao_saude": "35101",
+      "regiao_saude": "ARARAS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS14",
+      "n_municipios": 5,
+      "pop_ibge_2022": 334950,
+      "elegiveis_rateados": 63596,
+      "pessoas_vacinadas": 142,
+      "gap": 63454
     },
     {
       "codigo_regiao_saude": "21011",
@@ -1638,8 +1627,8 @@
       "n_municipios": 17,
       "pop_ibge_2022": 390927,
       "elegiveis_rateados": 63434,
-      "pessoas_vacinadas": 0,
-      "gap": 63434
+      "pessoas_vacinadas": 7,
+      "gap": 63427
     },
     {
       "codigo_regiao_saude": "15012",
@@ -1649,8 +1638,19 @@
       "n_municipios": 9,
       "pop_ibge_2022": 373376,
       "elegiveis_rateados": 63393,
-      "pessoas_vacinadas": 0,
-      "gap": 63393
+      "pessoas_vacinadas": 15,
+      "gap": 63378
+    },
+    {
+      "codigo_regiao_saude": "11003",
+      "regiao_saude": "CENTRAL",
+      "uf": "RO",
+      "macrorregiao_saude": "MACRORREGIONAL II (CACOAL)",
+      "n_municipios": 14,
+      "pop_ibge_2022": 323955,
+      "elegiveis_rateados": 63480,
+      "pessoas_vacinadas": 113,
+      "gap": 63367
     },
     {
       "codigo_regiao_saude": "41011",
@@ -1660,8 +1660,8 @@
       "n_municipios": 25,
       "pop_ibge_2022": 341931,
       "elegiveis_rateados": 63296,
-      "pessoas_vacinadas": 0,
-      "gap": 63296
+      "pessoas_vacinadas": 153,
+      "gap": 63143
     },
     {
       "codigo_regiao_saude": "26007",
@@ -1671,8 +1671,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 338050,
       "elegiveis_rateados": 62822,
-      "pessoas_vacinadas": 0,
-      "gap": 62822
+      "pessoas_vacinadas": 19,
+      "gap": 62803
     },
     {
       "codigo_regiao_saude": "29019",
@@ -1682,8 +1682,8 @@
       "n_municipios": 16,
       "pop_ibge_2022": 351255,
       "elegiveis_rateados": 62579,
-      "pessoas_vacinadas": 0,
-      "gap": 62579
+      "pessoas_vacinadas": 18,
+      "gap": 62561
     },
     {
       "codigo_regiao_saude": "35141",
@@ -1693,8 +1693,8 @@
       "n_municipios": 4,
       "pop_ibge_2022": 329533,
       "elegiveis_rateados": 62567,
-      "pessoas_vacinadas": 0,
-      "gap": 62567
+      "pessoas_vacinadas": 126,
+      "gap": 62441
     },
     {
       "codigo_regiao_saude": "24003",
@@ -1704,8 +1704,8 @@
       "n_municipios": 26,
       "pop_ibge_2022": 337691,
       "elegiveis_rateados": 62441,
-      "pessoas_vacinadas": 0,
-      "gap": 62441
+      "pessoas_vacinadas": 13,
+      "gap": 62428
     },
     {
       "codigo_regiao_saude": "28006",
@@ -1715,8 +1715,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 337747,
       "elegiveis_rateados": 62004,
-      "pessoas_vacinadas": 0,
-      "gap": 62004
+      "pessoas_vacinadas": 17,
+      "gap": 61987
     },
     {
       "codigo_regiao_saude": "35064",
@@ -1726,19 +1726,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 324768,
       "elegiveis_rateados": 61662,
-      "pessoas_vacinadas": 0,
-      "gap": 61662
-    },
-    {
-      "codigo_regiao_saude": "43025",
-      "regiao_saude": "REGIAO 25",
-      "uf": "RS",
-      "macrorregiao_saude": "SERRA",
-      "n_municipios": 22,
-      "pop_ibge_2022": 315027,
-      "elegiveis_rateados": 61579,
-      "pessoas_vacinadas": 0,
-      "gap": 61579
+      "pessoas_vacinadas": 67,
+      "gap": 61595
     },
     {
       "codigo_regiao_saude": "50017",
@@ -1748,8 +1737,19 @@
       "n_municipios": 15,
       "pop_ibge_2022": 329549,
       "elegiveis_rateados": 61550,
-      "pessoas_vacinadas": 0,
-      "gap": 61550
+      "pessoas_vacinadas": 119,
+      "gap": 61431
+    },
+    {
+      "codigo_regiao_saude": "43025",
+      "regiao_saude": "REGIAO 25",
+      "uf": "RS",
+      "macrorregiao_saude": "SERRA",
+      "n_municipios": 22,
+      "pop_ibge_2022": 315027,
+      "elegiveis_rateados": 61579,
+      "pessoas_vacinadas": 306,
+      "gap": 61273
     },
     {
       "codigo_regiao_saude": "15007",
@@ -1759,19 +1759,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 358718,
       "elegiveis_rateados": 60904,
-      "pessoas_vacinadas": 0,
-      "gap": 60904
-    },
-    {
-      "codigo_regiao_saude": "52005",
-      "regiao_saude": "ESTRADA DE FERRO",
-      "uf": "GO",
-      "macrorregiao_saude": "MACRORREGIAO CENTRO SUDESTE",
-      "n_municipios": 18,
-      "pop_ibge_2022": 325940,
-      "elegiveis_rateados": 59882,
-      "pessoas_vacinadas": 0,
-      "gap": 59882
+      "pessoas_vacinadas": 7,
+      "gap": 60897
     },
     {
       "codigo_regiao_saude": "35031",
@@ -1781,8 +1770,19 @@
       "n_municipios": 8,
       "pop_ibge_2022": 314890,
       "elegiveis_rateados": 59787,
-      "pessoas_vacinadas": 0,
-      "gap": 59787
+      "pessoas_vacinadas": 148,
+      "gap": 59639
+    },
+    {
+      "codigo_regiao_saude": "52005",
+      "regiao_saude": "ESTRADA DE FERRO",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO SUDESTE",
+      "n_municipios": 18,
+      "pop_ibge_2022": 325940,
+      "elegiveis_rateados": 59882,
+      "pessoas_vacinadas": 343,
+      "gap": 59539
     },
     {
       "codigo_regiao_saude": "42004",
@@ -1792,8 +1792,8 @@
       "n_municipios": 28,
       "pop_ibge_2022": 309808,
       "elegiveis_rateados": 59396,
-      "pessoas_vacinadas": 0,
-      "gap": 59396
+      "pessoas_vacinadas": 142,
+      "gap": 59254
     },
     {
       "codigo_regiao_saude": "21009",
@@ -1803,8 +1803,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 356974,
       "elegiveis_rateados": 57925,
-      "pessoas_vacinadas": 0,
-      "gap": 57925
+      "pessoas_vacinadas": 13,
+      "gap": 57912
     },
     {
       "codigo_regiao_saude": "35061",
@@ -1814,8 +1814,8 @@
       "n_municipios": 17,
       "pop_ibge_2022": 303615,
       "elegiveis_rateados": 57646,
-      "pessoas_vacinadas": 0,
-      "gap": 57646
+      "pessoas_vacinadas": 79,
+      "gap": 57567
     },
     {
       "codigo_regiao_saude": "35063",
@@ -1825,8 +1825,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 302784,
       "elegiveis_rateados": 57488,
-      "pessoas_vacinadas": 0,
-      "gap": 57488
+      "pessoas_vacinadas": 118,
+      "gap": 57370
     },
     {
       "codigo_regiao_saude": "21006",
@@ -1836,8 +1836,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 352087,
       "elegiveis_rateados": 57132,
-      "pessoas_vacinadas": 0,
-      "gap": 57132
+      "pessoas_vacinadas": 11,
+      "gap": 57121
     },
     {
       "codigo_regiao_saude": "35151",
@@ -1847,19 +1847,8 @@
       "n_municipios": 19,
       "pop_ibge_2022": 298381,
       "elegiveis_rateados": 56652,
-      "pessoas_vacinadas": 0,
-      "gap": 56652
-    },
-    {
-      "codigo_regiao_saude": "35021",
-      "regiao_saude": "CENTRAL DO DRS II",
-      "uf": "SP",
-      "macrorregiao_saude": "RRAS19",
-      "n_municipios": 11,
-      "pop_ibge_2022": 298249,
-      "elegiveis_rateados": 56627,
-      "pessoas_vacinadas": 0,
-      "gap": 56627
+      "pessoas_vacinadas": 119,
+      "gap": 56533
     },
     {
       "codigo_regiao_saude": "42013",
@@ -1869,8 +1858,19 @@
       "n_municipios": 18,
       "pop_ibge_2022": 295210,
       "elegiveis_rateados": 56597,
-      "pessoas_vacinadas": 0,
-      "gap": 56597
+      "pessoas_vacinadas": 150,
+      "gap": 56447
+    },
+    {
+      "codigo_regiao_saude": "35021",
+      "regiao_saude": "CENTRAL DO DRS II",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS19",
+      "n_municipios": 11,
+      "pop_ibge_2022": 298249,
+      "elegiveis_rateados": 56627,
+      "pessoas_vacinadas": 195,
+      "gap": 56432
     },
     {
       "codigo_regiao_saude": "29009",
@@ -1880,8 +1880,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 316218,
       "elegiveis_rateados": 56337,
-      "pessoas_vacinadas": 0,
-      "gap": 56337
+      "pessoas_vacinadas": 28,
+      "gap": 56309
     },
     {
       "codigo_regiao_saude": "26005",
@@ -1891,8 +1891,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 302351,
       "elegiveis_rateados": 56188,
-      "pessoas_vacinadas": 0,
-      "gap": 56188
+      "pessoas_vacinadas": 19,
+      "gap": 56169
     },
     {
       "codigo_regiao_saude": "21014",
@@ -1902,8 +1902,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 345504,
       "elegiveis_rateados": 56064,
-      "pessoas_vacinadas": 0,
-      "gap": 56064
+      "pessoas_vacinadas": 7,
+      "gap": 56057
     },
     {
       "codigo_regiao_saude": "31048",
@@ -1913,8 +1913,8 @@
       "n_municipios": 20,
       "pop_ibge_2022": 299453,
       "elegiveis_rateados": 55950,
-      "pessoas_vacinadas": 0,
-      "gap": 55950
+      "pessoas_vacinadas": 173,
+      "gap": 55777
     },
     {
       "codigo_regiao_saude": "41001",
@@ -1924,8 +1924,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 301405,
       "elegiveis_rateados": 55794,
-      "pessoas_vacinadas": 0,
-      "gap": 55794
+      "pessoas_vacinadas": 61,
+      "gap": 55733
     },
     {
       "codigo_regiao_saude": "42009",
@@ -1935,19 +1935,8 @@
       "n_municipios": 20,
       "pop_ibge_2022": 287459,
       "elegiveis_rateados": 55111,
-      "pessoas_vacinadas": 0,
-      "gap": 55111
-    },
-    {
-      "codigo_regiao_saude": "24004",
-      "regiao_saude": "4ª REGIAO DE SAUDE - CAICO",
-      "uf": "RN",
-      "macrorregiao_saude": "MACRORREGIAO I",
-      "n_municipios": 25,
-      "pop_ibge_2022": 296664,
-      "elegiveis_rateados": 54855,
-      "pessoas_vacinadas": 0,
-      "gap": 54855
+      "pessoas_vacinadas": 172,
+      "gap": 54939
     },
     {
       "codigo_regiao_saude": "15014",
@@ -1957,8 +1946,19 @@
       "n_municipios": 7,
       "pop_ibge_2022": 322944,
       "elegiveis_rateados": 54830,
-      "pessoas_vacinadas": 0,
-      "gap": 54830
+      "pessoas_vacinadas": 3,
+      "gap": 54827
+    },
+    {
+      "codigo_regiao_saude": "24004",
+      "regiao_saude": "4ª REGIAO DE SAUDE - CAICO",
+      "uf": "RN",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 25,
+      "pop_ibge_2022": 296664,
+      "elegiveis_rateados": 54855,
+      "pessoas_vacinadas": 64,
+      "gap": 54791
     },
     {
       "codigo_regiao_saude": "35033",
@@ -1968,19 +1968,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 286891,
       "elegiveis_rateados": 54471,
-      "pessoas_vacinadas": 0,
-      "gap": 54471
-    },
-    {
-      "codigo_regiao_saude": "31001",
-      "regiao_saude": "ALFENAS/MACHADO",
-      "uf": "MG",
-      "macrorregiao_saude": "SUDOESTE",
-      "n_municipios": 16,
-      "pop_ibge_2022": 291274,
-      "elegiveis_rateados": 54422,
-      "pessoas_vacinadas": 0,
-      "gap": 54422
+      "pessoas_vacinadas": 112,
+      "gap": 54359
     },
     {
       "codigo_regiao_saude": "43011",
@@ -1990,8 +1979,19 @@
       "n_municipios": 24,
       "pop_ibge_2022": 278410,
       "elegiveis_rateados": 54421,
-      "pessoas_vacinadas": 0,
-      "gap": 54421
+      "pessoas_vacinadas": 157,
+      "gap": 54264
+    },
+    {
+      "codigo_regiao_saude": "31001",
+      "regiao_saude": "ALFENAS/MACHADO",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDOESTE",
+      "n_municipios": 16,
+      "pop_ibge_2022": 291274,
+      "elegiveis_rateados": 54422,
+      "pessoas_vacinadas": 217,
+      "gap": 54205
     },
     {
       "codigo_regiao_saude": "35051",
@@ -2001,8 +2001,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 285684,
       "elegiveis_rateados": 54242,
-      "pessoas_vacinadas": 0,
-      "gap": 54242
+      "pessoas_vacinadas": 125,
+      "gap": 54117
     },
     {
       "codigo_regiao_saude": "41019",
@@ -2012,8 +2012,8 @@
       "n_municipios": 22,
       "pop_ibge_2022": 292531,
       "elegiveis_rateados": 54151,
-      "pessoas_vacinadas": 0,
-      "gap": 54151
+      "pessoas_vacinadas": 76,
+      "gap": 54075
     },
     {
       "codigo_regiao_saude": "25002",
@@ -2023,8 +2023,8 @@
       "n_municipios": 25,
       "pop_ibge_2022": 292420,
       "elegiveis_rateados": 53864,
-      "pessoas_vacinadas": 0,
-      "gap": 53864
+      "pessoas_vacinadas": 21,
+      "gap": 53843
     },
     {
       "codigo_regiao_saude": "41012",
@@ -2034,8 +2034,8 @@
       "n_municipios": 21,
       "pop_ibge_2022": 289984,
       "elegiveis_rateados": 53680,
-      "pessoas_vacinadas": 0,
-      "gap": 53680
+      "pessoas_vacinadas": 105,
+      "gap": 53575
     },
     {
       "codigo_regiao_saude": "22005",
@@ -2045,8 +2045,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 290842,
       "elegiveis_rateados": 52954,
-      "pessoas_vacinadas": 0,
-      "gap": 52954
+      "pessoas_vacinadas": 39,
+      "gap": 52915
     },
     {
       "codigo_regiao_saude": "35121",
@@ -2056,8 +2056,8 @@
       "n_municipios": 15,
       "pop_ibge_2022": 277852,
       "elegiveis_rateados": 52755,
-      "pessoas_vacinadas": 0,
-      "gap": 52755
+      "pessoas_vacinadas": 40,
+      "gap": 52715
     },
     {
       "codigo_regiao_saude": "29021",
@@ -2067,8 +2067,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 293897,
       "elegiveis_rateados": 52360,
-      "pessoas_vacinadas": 0,
-      "gap": 52360
+      "pessoas_vacinadas": 17,
+      "gap": 52343
     },
     {
       "codigo_regiao_saude": "29024",
@@ -2078,8 +2078,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 293267,
       "elegiveis_rateados": 52248,
-      "pessoas_vacinadas": 0,
-      "gap": 52248
+      "pessoas_vacinadas": 16,
+      "gap": 52232
     },
     {
       "codigo_regiao_saude": "35162",
@@ -2089,8 +2089,8 @@
       "n_municipios": 15,
       "pop_ibge_2022": 273248,
       "elegiveis_rateados": 51881,
-      "pessoas_vacinadas": 0,
-      "gap": 51881
+      "pessoas_vacinadas": 64,
+      "gap": 51817
     },
     {
       "codigo_regiao_saude": "41007",
@@ -2100,8 +2100,8 @@
       "n_municipios": 15,
       "pop_ibge_2022": 279819,
       "elegiveis_rateados": 51798,
-      "pessoas_vacinadas": 0,
-      "gap": 51798
+      "pessoas_vacinadas": 182,
+      "gap": 51616
     },
     {
       "codigo_regiao_saude": "17001",
@@ -2111,8 +2111,8 @@
       "n_municipios": 17,
       "pop_ibge_2022": 278397,
       "elegiveis_rateados": 51527,
-      "pessoas_vacinadas": 0,
-      "gap": 51527
+      "pessoas_vacinadas": 49,
+      "gap": 51478
     },
     {
       "codigo_regiao_saude": "35142",
@@ -2122,8 +2122,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 268362,
       "elegiveis_rateados": 50953,
-      "pessoas_vacinadas": 0,
-      "gap": 50953
+      "pessoas_vacinadas": 131,
+      "gap": 50822
     },
     {
       "codigo_regiao_saude": "33001",
@@ -2133,8 +2133,8 @@
       "n_municipios": 3,
       "pop_ibge_2022": 253897,
       "elegiveis_rateados": 50862,
-      "pessoas_vacinadas": 0,
-      "gap": 50862
+      "pessoas_vacinadas": 42,
+      "gap": 50820
     },
     {
       "codigo_regiao_saude": "31058",
@@ -2144,8 +2144,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 271765,
       "elegiveis_rateados": 50777,
-      "pessoas_vacinadas": 0,
-      "gap": 50777
+      "pessoas_vacinadas": 84,
+      "gap": 50693
     },
     {
       "codigo_regiao_saude": "52003",
@@ -2155,8 +2155,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 275752,
       "elegiveis_rateados": 50661,
-      "pessoas_vacinadas": 0,
-      "gap": 50661
+      "pessoas_vacinadas": 60,
+      "gap": 50601
     },
     {
       "codigo_regiao_saude": "41014",
@@ -2166,19 +2166,8 @@
       "n_municipios": 28,
       "pop_ibge_2022": 272818,
       "elegiveis_rateados": 50502,
-      "pessoas_vacinadas": 0,
-      "gap": 50502
-    },
-    {
-      "codigo_regiao_saude": "31057",
-      "regiao_saude": "PATOS DE MINAS",
-      "uf": "MG",
-      "macrorregiao_saude": "NOROESTE",
-      "n_municipios": 11,
-      "pop_ibge_2022": 268193,
-      "elegiveis_rateados": 50110,
-      "pessoas_vacinadas": 0,
-      "gap": 50110
+      "pessoas_vacinadas": 75,
+      "gap": 50427
     },
     {
       "codigo_regiao_saude": "31099",
@@ -2188,8 +2177,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 268035,
       "elegiveis_rateados": 50080,
-      "pessoas_vacinadas": 0,
-      "gap": 50080
+      "pessoas_vacinadas": 89,
+      "gap": 49991
     },
     {
       "codigo_regiao_saude": "35023",
@@ -2199,8 +2188,19 @@
       "n_municipios": 17,
       "pop_ibge_2022": 263703,
       "elegiveis_rateados": 50068,
-      "pessoas_vacinadas": 0,
-      "gap": 50068
+      "pessoas_vacinadas": 147,
+      "gap": 49921
+    },
+    {
+      "codigo_regiao_saude": "31057",
+      "regiao_saude": "PATOS DE MINAS",
+      "uf": "MG",
+      "macrorregiao_saude": "NOROESTE",
+      "n_municipios": 11,
+      "pop_ibge_2022": 268193,
+      "elegiveis_rateados": 50110,
+      "pessoas_vacinadas": 367,
+      "gap": 49743
     },
     {
       "codigo_regiao_saude": "31052",
@@ -2210,8 +2210,8 @@
       "n_municipios": 15,
       "pop_ibge_2022": 266114,
       "elegiveis_rateados": 49721,
-      "pessoas_vacinadas": 0,
-      "gap": 49721
+      "pessoas_vacinadas": 33,
+      "gap": 49688
     },
     {
       "codigo_regiao_saude": "35104",
@@ -2221,19 +2221,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 256792,
       "elegiveis_rateados": 48756,
-      "pessoas_vacinadas": 0,
-      "gap": 48756
-    },
-    {
-      "codigo_regiao_saude": "31032",
-      "regiao_saude": "PARA DE MINAS/NOVA SERRANA",
-      "uf": "MG",
-      "macrorregiao_saude": "OESTE",
-      "n_municipios": 9,
-      "pop_ibge_2022": 260480,
-      "elegiveis_rateados": 48669,
-      "pessoas_vacinadas": 0,
-      "gap": 48669
+      "pessoas_vacinadas": 75,
+      "gap": 48681
     },
     {
       "codigo_regiao_saude": "29027",
@@ -2243,8 +2232,19 @@
       "n_municipios": 11,
       "pop_ibge_2022": 273172,
       "elegiveis_rateados": 48668,
-      "pessoas_vacinadas": 0,
-      "gap": 48668
+      "pessoas_vacinadas": 8,
+      "gap": 48660
+    },
+    {
+      "codigo_regiao_saude": "31032",
+      "regiao_saude": "PARA DE MINAS/NOVA SERRANA",
+      "uf": "MG",
+      "macrorregiao_saude": "OESTE",
+      "n_municipios": 9,
+      "pop_ibge_2022": 260480,
+      "elegiveis_rateados": 48669,
+      "pessoas_vacinadas": 156,
+      "gap": 48513
     },
     {
       "codigo_regiao_saude": "31008",
@@ -2254,19 +2254,8 @@
       "n_municipios": 24,
       "pop_ibge_2022": 257374,
       "elegiveis_rateados": 48088,
-      "pessoas_vacinadas": 0,
-      "gap": 48088
-    },
-    {
-      "codigo_regiao_saude": "52017",
-      "regiao_saude": "SUL",
-      "uf": "GO",
-      "macrorregiao_saude": "MACRORREGIAO CENTRO SUDESTE",
-      "n_municipios": 12,
-      "pop_ibge_2022": 261009,
-      "elegiveis_rateados": 47953,
-      "pessoas_vacinadas": 0,
-      "gap": 47953
+      "pessoas_vacinadas": 93,
+      "gap": 47995
     },
     {
       "codigo_regiao_saude": "43005",
@@ -2276,19 +2265,19 @@
       "n_municipios": 11,
       "pop_ibge_2022": 245111,
       "elegiveis_rateados": 47912,
-      "pessoas_vacinadas": 0,
-      "gap": 47912
+      "pessoas_vacinadas": 132,
+      "gap": 47780
     },
     {
-      "codigo_regiao_saude": "51007",
-      "regiao_saude": "MEDIO NORTE MATOGROSSENSE",
-      "uf": "MT",
-      "macrorregiao_saude": "MACRORREGIAO CENTRO-NOROESTE",
-      "n_municipios": 10,
-      "pop_ibge_2022": 253894,
-      "elegiveis_rateados": 46979,
-      "pessoas_vacinadas": 0,
-      "gap": 46979
+      "codigo_regiao_saude": "52017",
+      "regiao_saude": "SUL",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO SUDESTE",
+      "n_municipios": 12,
+      "pop_ibge_2022": 261009,
+      "elegiveis_rateados": 47953,
+      "pessoas_vacinadas": 216,
+      "gap": 47737
     },
     {
       "codigo_regiao_saude": "28004",
@@ -2298,8 +2287,19 @@
       "n_municipios": 6,
       "pop_ibge_2022": 255448,
       "elegiveis_rateados": 46895,
-      "pessoas_vacinadas": 0,
-      "gap": 46895
+      "pessoas_vacinadas": 17,
+      "gap": 46878
+    },
+    {
+      "codigo_regiao_saude": "51007",
+      "regiao_saude": "MEDIO NORTE MATOGROSSENSE",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-NOROESTE",
+      "n_municipios": 10,
+      "pop_ibge_2022": 253894,
+      "elegiveis_rateados": 46979,
+      "pessoas_vacinadas": 167,
+      "gap": 46812
     },
     {
       "codigo_regiao_saude": "13002",
@@ -2309,8 +2309,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 273152,
       "elegiveis_rateados": 46715,
-      "pessoas_vacinadas": 0,
-      "gap": 46715
+      "pessoas_vacinadas": 10,
+      "gap": 46705
     },
     {
       "codigo_regiao_saude": "21013",
@@ -2320,8 +2320,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 287534,
       "elegiveis_rateados": 46657,
-      "pessoas_vacinadas": 0,
-      "gap": 46657
+      "pessoas_vacinadas": 5,
+      "gap": 46652
     },
     {
       "codigo_regiao_saude": "28003",
@@ -2331,19 +2331,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 252041,
       "elegiveis_rateados": 46270,
-      "pessoas_vacinadas": 0,
-      "gap": 46270
-    },
-    {
-      "codigo_regiao_saude": "42001",
-      "regiao_saude": "EXTREMO OESTE",
-      "uf": "SC",
-      "macrorregiao_saude": "GRANDE OESTE",
-      "n_municipios": 30,
-      "pop_ibge_2022": 241277,
-      "elegiveis_rateados": 46257,
-      "pessoas_vacinadas": 0,
-      "gap": 46257
+      "pessoas_vacinadas": 30,
+      "gap": 46240
     },
     {
       "codigo_regiao_saude": "21005",
@@ -2353,8 +2342,19 @@
       "n_municipios": 7,
       "pop_ibge_2022": 284858,
       "elegiveis_rateados": 46223,
-      "pessoas_vacinadas": 0,
-      "gap": 46223
+      "pessoas_vacinadas": 12,
+      "gap": 46211
+    },
+    {
+      "codigo_regiao_saude": "42001",
+      "regiao_saude": "EXTREMO OESTE",
+      "uf": "SC",
+      "macrorregiao_saude": "GRANDE OESTE",
+      "n_municipios": 30,
+      "pop_ibge_2022": 241277,
+      "elegiveis_rateados": 46257,
+      "pessoas_vacinadas": 104,
+      "gap": 46153
     },
     {
       "codigo_regiao_saude": "21007",
@@ -2364,8 +2364,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 283681,
       "elegiveis_rateados": 46032,
-      "pessoas_vacinadas": 0,
-      "gap": 46032
+      "pessoas_vacinadas": 8,
+      "gap": 46024
     },
     {
       "codigo_regiao_saude": "50009",
@@ -2375,8 +2375,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 245939,
       "elegiveis_rateados": 45934,
-      "pessoas_vacinadas": 0,
-      "gap": 45934
+      "pessoas_vacinadas": 36,
+      "gap": 45898
     },
     {
       "codigo_regiao_saude": "43016",
@@ -2386,8 +2386,8 @@
       "n_municipios": 33,
       "pop_ibge_2022": 233287,
       "elegiveis_rateados": 45601,
-      "pessoas_vacinadas": 0,
-      "gap": 45601
+      "pessoas_vacinadas": 160,
+      "gap": 45441
     },
     {
       "codigo_regiao_saude": "43029",
@@ -2397,8 +2397,8 @@
       "n_municipios": 27,
       "pop_ibge_2022": 231329,
       "elegiveis_rateados": 45218,
-      "pessoas_vacinadas": 0,
-      "gap": 45218
+      "pessoas_vacinadas": 122,
+      "gap": 45096
     },
     {
       "codigo_regiao_saude": "43014",
@@ -2408,19 +2408,8 @@
       "n_municipios": 22,
       "pop_ibge_2022": 231027,
       "elegiveis_rateados": 45159,
-      "pessoas_vacinadas": 0,
-      "gap": 45159
-    },
-    {
-      "codigo_regiao_saude": "24006",
-      "regiao_saude": "6ª REGIAO DE SAUDE - PAU DOS FERROS",
-      "uf": "RN",
-      "macrorregiao_saude": "MACRORREGIAO II",
-      "n_municipios": 37,
-      "pop_ibge_2022": 242412,
-      "elegiveis_rateados": 44824,
-      "pessoas_vacinadas": 0,
-      "gap": 44824
+      "pessoas_vacinadas": 92,
+      "gap": 45067
     },
     {
       "codigo_regiao_saude": "13009",
@@ -2430,8 +2419,19 @@
       "n_municipios": 9,
       "pop_ibge_2022": 262013,
       "elegiveis_rateados": 44810,
-      "pessoas_vacinadas": 0,
-      "gap": 44810
+      "pessoas_vacinadas": 1,
+      "gap": 44809
+    },
+    {
+      "codigo_regiao_saude": "24006",
+      "regiao_saude": "6ª REGIAO DE SAUDE - PAU DOS FERROS",
+      "uf": "RN",
+      "macrorregiao_saude": "MACRORREGIAO II",
+      "n_municipios": 37,
+      "pop_ibge_2022": 242412,
+      "elegiveis_rateados": 44824,
+      "pessoas_vacinadas": 49,
+      "gap": 44775
     },
     {
       "codigo_regiao_saude": "43013",
@@ -2441,8 +2441,8 @@
       "n_municipios": 20,
       "pop_ibge_2022": 228408,
       "elegiveis_rateados": 44647,
-      "pessoas_vacinadas": 0,
-      "gap": 44647
+      "pessoas_vacinadas": 130,
+      "gap": 44517
     },
     {
       "codigo_regiao_saude": "21012",
@@ -2452,8 +2452,8 @@
       "n_municipios": 16,
       "pop_ibge_2022": 274385,
       "elegiveis_rateados": 44524,
-      "pessoas_vacinadas": 0,
-      "gap": 44524
+      "pessoas_vacinadas": 12,
+      "gap": 44512
     },
     {
       "codigo_regiao_saude": "35092",
@@ -2463,8 +2463,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 234483,
       "elegiveis_rateados": 44520,
-      "pessoas_vacinadas": 0,
-      "gap": 44520
+      "pessoas_vacinadas": 69,
+      "gap": 44451
     },
     {
       "codigo_regiao_saude": "15004",
@@ -2474,8 +2474,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 261819,
       "elegiveis_rateados": 44452,
-      "pessoas_vacinadas": 0,
-      "gap": 44452
+      "pessoas_vacinadas": 17,
+      "gap": 44435
     },
     {
       "codigo_regiao_saude": "31015",
@@ -2485,8 +2485,8 @@
       "n_municipios": 18,
       "pop_ibge_2022": 237071,
       "elegiveis_rateados": 44295,
-      "pessoas_vacinadas": 0,
-      "gap": 44295
+      "pessoas_vacinadas": 171,
+      "gap": 44124
     },
     {
       "codigo_regiao_saude": "26012",
@@ -2496,8 +2496,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 237227,
       "elegiveis_rateados": 44085,
-      "pessoas_vacinadas": 0,
-      "gap": 44085
+      "pessoas_vacinadas": 13,
+      "gap": 44072
     },
     {
       "codigo_regiao_saude": "12003",
@@ -2507,8 +2507,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 232841,
       "elegiveis_rateados": 43961,
-      "pessoas_vacinadas": 0,
-      "gap": 43961
+      "pessoas_vacinadas": 9,
+      "gap": 43952
     },
     {
       "codigo_regiao_saude": "35094",
@@ -2518,8 +2518,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 230687,
       "elegiveis_rateados": 43800,
-      "pessoas_vacinadas": 0,
-      "gap": 43800
+      "pessoas_vacinadas": 57,
+      "gap": 43743
     },
     {
       "codigo_regiao_saude": "31006",
@@ -2529,8 +2529,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 233289,
       "elegiveis_rateados": 43588,
-      "pessoas_vacinadas": 0,
-      "gap": 43588
+      "pessoas_vacinadas": 161,
+      "gap": 43427
     },
     {
       "codigo_regiao_saude": "52016",
@@ -2540,8 +2540,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 236669,
       "elegiveis_rateados": 43481,
-      "pessoas_vacinadas": 0,
-      "gap": 43481
+      "pessoas_vacinadas": 108,
+      "gap": 43373
     },
     {
       "codigo_regiao_saude": "22009",
@@ -2551,8 +2551,8 @@
       "n_municipios": 26,
       "pop_ibge_2022": 238172,
       "elegiveis_rateados": 43365,
-      "pessoas_vacinadas": 0,
-      "gap": 43365
+      "pessoas_vacinadas": 23,
+      "gap": 43342
     },
     {
       "codigo_regiao_saude": "29005",
@@ -2562,8 +2562,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 241117,
       "elegiveis_rateados": 42957,
-      "pessoas_vacinadas": 0,
-      "gap": 42957
+      "pessoas_vacinadas": 10,
+      "gap": 42947
     },
     {
       "codigo_regiao_saude": "29017",
@@ -2573,8 +2573,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 240721,
       "elegiveis_rateados": 42886,
-      "pessoas_vacinadas": 0,
-      "gap": 42886
+      "pessoas_vacinadas": 11,
+      "gap": 42875
     },
     {
       "codigo_regiao_saude": "21019",
@@ -2584,8 +2584,8 @@
       "n_municipios": 17,
       "pop_ibge_2022": 263353,
       "elegiveis_rateados": 42733,
-      "pessoas_vacinadas": 0,
-      "gap": 42733
+      "pessoas_vacinadas": 6,
+      "gap": 42727
     },
     {
       "codigo_regiao_saude": "42014",
@@ -2595,19 +2595,8 @@
       "n_municipios": 15,
       "pop_ibge_2022": 222182,
       "elegiveis_rateados": 42596,
-      "pessoas_vacinadas": 0,
-      "gap": 42596
-    },
-    {
-      "codigo_regiao_saude": "31021",
-      "regiao_saude": "ITABIRA",
-      "uf": "MG",
-      "macrorregiao_saude": "CENTRO",
-      "n_municipios": 13,
-      "pop_ibge_2022": 227558,
-      "elegiveis_rateados": 42517,
-      "pessoas_vacinadas": 0,
-      "gap": 42517
+      "pessoas_vacinadas": 80,
+      "gap": 42516
     },
     {
       "codigo_regiao_saude": "15010",
@@ -2617,8 +2606,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 250295,
       "elegiveis_rateados": 42496,
-      "pessoas_vacinadas": 0,
-      "gap": 42496
+      "pessoas_vacinadas": 8,
+      "gap": 42488
     },
     {
       "codigo_regiao_saude": "28002",
@@ -2628,19 +2617,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 231300,
       "elegiveis_rateados": 42462,
-      "pessoas_vacinadas": 0,
-      "gap": 42462
-    },
-    {
-      "codigo_regiao_saude": "43006",
-      "regiao_saude": "REGIAO 06 - VALE DO PARANHANA E COSTA SERRA",
-      "uf": "RS",
-      "macrorregiao_saude": "METROPOLITANA",
-      "n_municipios": 8,
-      "pop_ibge_2022": 216513,
-      "elegiveis_rateados": 42322,
-      "pessoas_vacinadas": 0,
-      "gap": 42322
+      "pessoas_vacinadas": 28,
+      "gap": 42434
     },
     {
       "codigo_regiao_saude": "29011",
@@ -2650,8 +2628,30 @@
       "n_municipios": 14,
       "pop_ibge_2022": 237522,
       "elegiveis_rateados": 42316,
-      "pessoas_vacinadas": 0,
-      "gap": 42316
+      "pessoas_vacinadas": 9,
+      "gap": 42307
+    },
+    {
+      "codigo_regiao_saude": "43006",
+      "regiao_saude": "REGIAO 06 - VALE DO PARANHANA E COSTA SERRA",
+      "uf": "RS",
+      "macrorregiao_saude": "METROPOLITANA",
+      "n_municipios": 8,
+      "pop_ibge_2022": 216513,
+      "elegiveis_rateados": 42322,
+      "pessoas_vacinadas": 73,
+      "gap": 42249
+    },
+    {
+      "codigo_regiao_saude": "31021",
+      "regiao_saude": "ITABIRA",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 13,
+      "pop_ibge_2022": 227558,
+      "elegiveis_rateados": 42517,
+      "pessoas_vacinadas": 325,
+      "gap": 42192
     },
     {
       "codigo_regiao_saude": "11001",
@@ -2661,8 +2661,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 214728,
       "elegiveis_rateados": 42076,
-      "pessoas_vacinadas": 0,
-      "gap": 42076
+      "pessoas_vacinadas": 64,
+      "gap": 42012
     },
     {
       "codigo_regiao_saude": "21001",
@@ -2672,8 +2672,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 258896,
       "elegiveis_rateados": 42010,
-      "pessoas_vacinadas": 0,
-      "gap": 42010
+      "pessoas_vacinadas": 17,
+      "gap": 41993
     },
     {
       "codigo_regiao_saude": "25006",
@@ -2683,8 +2683,8 @@
       "n_municipios": 24,
       "pop_ibge_2022": 227354,
       "elegiveis_rateados": 41879,
-      "pessoas_vacinadas": 0,
-      "gap": 41879
+      "pessoas_vacinadas": 19,
+      "gap": 41860
     },
     {
       "codigo_regiao_saude": "21018",
@@ -2694,19 +2694,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 256845,
       "elegiveis_rateados": 41677,
-      "pessoas_vacinadas": 0,
-      "gap": 41677
-    },
-    {
-      "codigo_regiao_saude": "31013",
-      "regiao_saude": "BARBACENA",
-      "uf": "MG",
-      "macrorregiao_saude": "CENTRO SUL",
-      "n_municipios": 15,
-      "pop_ibge_2022": 222233,
-      "elegiveis_rateados": 41522,
-      "pessoas_vacinadas": 0,
-      "gap": 41522
+      "pessoas_vacinadas": 8,
+      "gap": 41669
     },
     {
       "codigo_regiao_saude": "21002",
@@ -2716,8 +2705,19 @@
       "n_municipios": 11,
       "pop_ibge_2022": 255222,
       "elegiveis_rateados": 41414,
-      "pessoas_vacinadas": 0,
-      "gap": 41414
+      "pessoas_vacinadas": 11,
+      "gap": 41403
+    },
+    {
+      "codigo_regiao_saude": "31013",
+      "regiao_saude": "BARBACENA",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO SUL",
+      "n_municipios": 15,
+      "pop_ibge_2022": 222233,
+      "elegiveis_rateados": 41522,
+      "pessoas_vacinadas": 193,
+      "gap": 41329
     },
     {
       "codigo_regiao_saude": "27009",
@@ -2727,8 +2727,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 223669,
       "elegiveis_rateados": 40675,
-      "pessoas_vacinadas": 0,
-      "gap": 40675
+      "pessoas_vacinadas": 16,
+      "gap": 40659
     },
     {
       "codigo_regiao_saude": "31035",
@@ -2738,8 +2738,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 217646,
       "elegiveis_rateados": 40665,
-      "pessoas_vacinadas": 0,
-      "gap": 40665
+      "pessoas_vacinadas": 72,
+      "gap": 40593
     },
     {
       "codigo_regiao_saude": "21017",
@@ -2749,8 +2749,8 @@
       "n_municipios": 4,
       "pop_ibge_2022": 249953,
       "elegiveis_rateados": 40559,
-      "pessoas_vacinadas": 0,
-      "gap": 40559
+      "pessoas_vacinadas": 15,
+      "gap": 40544
     },
     {
       "codigo_regiao_saude": "29013",
@@ -2760,8 +2760,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 224782,
       "elegiveis_rateados": 40047,
-      "pessoas_vacinadas": 0,
-      "gap": 40047
+      "pessoas_vacinadas": 7,
+      "gap": 40040
     },
     {
       "codigo_regiao_saude": "31012",
@@ -2771,8 +2771,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 214237,
       "elegiveis_rateados": 40028,
-      "pessoas_vacinadas": 0,
-      "gap": 40028
+      "pessoas_vacinadas": 181,
+      "gap": 39847
     },
     {
       "codigo_regiao_saude": "15013",
@@ -2782,8 +2782,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 234276,
       "elegiveis_rateados": 39776,
-      "pessoas_vacinadas": 0,
-      "gap": 39776
+      "pessoas_vacinadas": 6,
+      "gap": 39770
     },
     {
       "codigo_regiao_saude": "13005",
@@ -2793,8 +2793,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 232548,
       "elegiveis_rateados": 39771,
-      "pessoas_vacinadas": 0,
-      "gap": 39771
+      "pessoas_vacinadas": 3,
+      "gap": 39768
     },
     {
       "codigo_regiao_saude": "42003",
@@ -2804,8 +2804,8 @@
       "n_municipios": 21,
       "pop_ibge_2022": 207199,
       "elegiveis_rateados": 39724,
-      "pessoas_vacinadas": 0,
-      "gap": 39724
+      "pessoas_vacinadas": 124,
+      "gap": 39600
     },
     {
       "codigo_regiao_saude": "41018",
@@ -2815,8 +2815,8 @@
       "n_municipios": 21,
       "pop_ibge_2022": 214399,
       "elegiveis_rateados": 39688,
-      "pessoas_vacinadas": 0,
-      "gap": 39688
+      "pessoas_vacinadas": 129,
+      "gap": 39559
     },
     {
       "codigo_regiao_saude": "31092",
@@ -2826,8 +2826,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 210267,
       "elegiveis_rateados": 39287,
-      "pessoas_vacinadas": 0,
-      "gap": 39287
+      "pessoas_vacinadas": 112,
+      "gap": 39175
     },
     {
       "codigo_regiao_saude": "35143",
@@ -2837,8 +2837,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 206531,
       "elegiveis_rateados": 39213,
-      "pessoas_vacinadas": 0,
-      "gap": 39213
+      "pessoas_vacinadas": 62,
+      "gap": 39151
     },
     {
       "codigo_regiao_saude": "31060",
@@ -2848,8 +2848,8 @@
       "n_municipios": 21,
       "pop_ibge_2022": 207331,
       "elegiveis_rateados": 38738,
-      "pessoas_vacinadas": 0,
-      "gap": 38738
+      "pessoas_vacinadas": 140,
+      "gap": 38598
     },
     {
       "codigo_regiao_saude": "21003",
@@ -2859,8 +2859,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 233333,
       "elegiveis_rateados": 37862,
-      "pessoas_vacinadas": 0,
-      "gap": 37862
+      "pessoas_vacinadas": 13,
+      "gap": 37849
     },
     {
       "codigo_regiao_saude": "21015",
@@ -2870,8 +2870,8 @@
       "n_municipios": 15,
       "pop_ibge_2022": 233148,
       "elegiveis_rateados": 37832,
-      "pessoas_vacinadas": 0,
-      "gap": 37832
+      "pessoas_vacinadas": 19,
+      "gap": 37813
     },
     {
       "codigo_regiao_saude": "22011",
@@ -2881,30 +2881,8 @@
       "n_municipios": 28,
       "pop_ibge_2022": 206599,
       "elegiveis_rateados": 37616,
-      "pessoas_vacinadas": 0,
-      "gap": 37616
-    },
-    {
-      "codigo_regiao_saude": "35157",
-      "regiao_saude": "VOTUPORANGA",
-      "uf": "SP",
-      "macrorregiao_saude": "RRAS12",
-      "n_municipios": 17,
-      "pop_ibge_2022": 198031,
-      "elegiveis_rateados": 37599,
-      "pessoas_vacinadas": 0,
-      "gap": 37599
-    },
-    {
-      "codigo_regiao_saude": "31003",
-      "regiao_saude": "ITAJUBA",
-      "uf": "MG",
-      "macrorregiao_saude": "EXTREMO SUL",
-      "n_municipios": 15,
-      "pop_ibge_2022": 200946,
-      "elegiveis_rateados": 37545,
-      "pessoas_vacinadas": 0,
-      "gap": 37545
+      "pessoas_vacinadas": 27,
+      "gap": 37589
     },
     {
       "codigo_regiao_saude": "21004",
@@ -2914,8 +2892,30 @@
       "n_municipios": 7,
       "pop_ibge_2022": 231348,
       "elegiveis_rateados": 37540,
-      "pessoas_vacinadas": 0,
-      "gap": 37540
+      "pessoas_vacinadas": 15,
+      "gap": 37525
+    },
+    {
+      "codigo_regiao_saude": "35157",
+      "regiao_saude": "VOTUPORANGA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS12",
+      "n_municipios": 17,
+      "pop_ibge_2022": 198031,
+      "elegiveis_rateados": 37599,
+      "pessoas_vacinadas": 88,
+      "gap": 37511
+    },
+    {
+      "codigo_regiao_saude": "31003",
+      "regiao_saude": "ITAJUBA",
+      "uf": "MG",
+      "macrorregiao_saude": "EXTREMO SUL",
+      "n_municipios": 15,
+      "pop_ibge_2022": 200946,
+      "elegiveis_rateados": 37545,
+      "pessoas_vacinadas": 106,
+      "gap": 37439
     },
     {
       "codigo_regiao_saude": "35022",
@@ -2925,8 +2925,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 197605,
       "elegiveis_rateados": 37518,
-      "pessoas_vacinadas": 0,
-      "gap": 37518
+      "pessoas_vacinadas": 96,
+      "gap": 37422
     },
     {
       "codigo_regiao_saude": "52012",
@@ -2936,8 +2936,8 @@
       "n_municipios": 17,
       "pop_ibge_2022": 202776,
       "elegiveis_rateados": 37254,
-      "pessoas_vacinadas": 0,
-      "gap": 37254
+      "pessoas_vacinadas": 155,
+      "gap": 37099
     },
     {
       "codigo_regiao_saude": "43015",
@@ -2947,19 +2947,8 @@
       "n_municipios": 26,
       "pop_ibge_2022": 189989,
       "elegiveis_rateados": 37137,
-      "pessoas_vacinadas": 0,
-      "gap": 37137
-    },
-    {
-      "codigo_regiao_saude": "42008",
-      "regiao_saude": "MEIO OESTE",
-      "uf": "SC",
-      "macrorregiao_saude": "MEIO OESTE",
-      "n_municipios": 20,
-      "pop_ibge_2022": 193657,
-      "elegiveis_rateados": 37127,
-      "pessoas_vacinadas": 0,
-      "gap": 37127
+      "pessoas_vacinadas": 111,
+      "gap": 37026
     },
     {
       "codigo_regiao_saude": "50013",
@@ -2969,8 +2958,19 @@
       "n_municipios": 6,
       "pop_ibge_2022": 198672,
       "elegiveis_rateados": 37106,
-      "pessoas_vacinadas": 0,
-      "gap": 37106
+      "pessoas_vacinadas": 106,
+      "gap": 37000
+    },
+    {
+      "codigo_regiao_saude": "42008",
+      "regiao_saude": "MEIO OESTE",
+      "uf": "SC",
+      "macrorregiao_saude": "MEIO OESTE",
+      "n_municipios": 20,
+      "pop_ibge_2022": 193657,
+      "elegiveis_rateados": 37127,
+      "pessoas_vacinadas": 166,
+      "gap": 36961
     },
     {
       "codigo_regiao_saude": "43027",
@@ -2980,8 +2980,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 189103,
       "elegiveis_rateados": 36964,
-      "pessoas_vacinadas": 0,
-      "gap": 36964
+      "pessoas_vacinadas": 42,
+      "gap": 36922
     },
     {
       "codigo_regiao_saude": "31034",
@@ -2991,8 +2991,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 196029,
       "elegiveis_rateados": 36626,
-      "pessoas_vacinadas": 0,
-      "gap": 36626
+      "pessoas_vacinadas": 116,
+      "gap": 36510
     },
     {
       "codigo_regiao_saude": "17002",
@@ -3002,8 +3002,8 @@
       "n_municipios": 24,
       "pop_ibge_2022": 196920,
       "elegiveis_rateados": 36447,
-      "pessoas_vacinadas": 0,
-      "gap": 36447
+      "pessoas_vacinadas": 8,
+      "gap": 36439
     },
     {
       "codigo_regiao_saude": "43026",
@@ -3013,8 +3013,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 184802,
       "elegiveis_rateados": 36123,
-      "pessoas_vacinadas": 0,
-      "gap": 36123
+      "pessoas_vacinadas": 114,
+      "gap": 36009
     },
     {
       "codigo_regiao_saude": "31074",
@@ -3024,8 +3024,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 193311,
       "elegiveis_rateados": 36119,
-      "pessoas_vacinadas": 0,
-      "gap": 36119
+      "pessoas_vacinadas": 155,
+      "gap": 35964
     },
     {
       "codigo_regiao_saude": "43022",
@@ -3035,8 +3035,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 182932,
       "elegiveis_rateados": 35758,
-      "pessoas_vacinadas": 0,
-      "gap": 35758
+      "pessoas_vacinadas": 43,
+      "gap": 35715
     },
     {
       "codigo_regiao_saude": "31070",
@@ -3046,8 +3046,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 190805,
       "elegiveis_rateados": 35650,
-      "pessoas_vacinadas": 0,
-      "gap": 35650
+      "pessoas_vacinadas": 100,
+      "gap": 35550
     },
     {
       "codigo_regiao_saude": "31022",
@@ -3057,8 +3057,8 @@
       "n_municipios": 3,
       "pop_ibge_2022": 189573,
       "elegiveis_rateados": 35420,
-      "pessoas_vacinadas": 0,
-      "gap": 35420
+      "pessoas_vacinadas": 120,
+      "gap": 35300
     },
     {
       "codigo_regiao_saude": "27003",
@@ -3068,19 +3068,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 193680,
       "elegiveis_rateados": 35222,
-      "pessoas_vacinadas": 0,
-      "gap": 35222
-    },
-    {
-      "codigo_regiao_saude": "31073",
-      "regiao_saude": "ITUIUTABA",
-      "uf": "MG",
-      "macrorregiao_saude": "TRIANGULO DO NORTE",
-      "n_municipios": 9,
-      "pop_ibge_2022": 187953,
-      "elegiveis_rateados": 35117,
-      "pessoas_vacinadas": 0,
-      "gap": 35117
+      "pessoas_vacinadas": 10,
+      "gap": 35212
     },
     {
       "codigo_regiao_saude": "25003",
@@ -3090,8 +3079,19 @@
       "n_municipios": 12,
       "pop_ibge_2022": 190270,
       "elegiveis_rateados": 35048,
-      "pessoas_vacinadas": 0,
-      "gap": 35048
+      "pessoas_vacinadas": 12,
+      "gap": 35036
+    },
+    {
+      "codigo_regiao_saude": "31073",
+      "regiao_saude": "ITUIUTABA",
+      "uf": "MG",
+      "macrorregiao_saude": "TRIANGULO DO NORTE",
+      "n_municipios": 9,
+      "pop_ibge_2022": 187953,
+      "elegiveis_rateados": 35117,
+      "pessoas_vacinadas": 127,
+      "gap": 34990
     },
     {
       "codigo_regiao_saude": "31079",
@@ -3101,8 +3101,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 186540,
       "elegiveis_rateados": 34853,
-      "pessoas_vacinadas": 0,
-      "gap": 34853
+      "pessoas_vacinadas": 124,
+      "gap": 34729
     },
     {
       "codigo_regiao_saude": "31004",
@@ -3112,8 +3112,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 185316,
       "elegiveis_rateados": 34625,
-      "pessoas_vacinadas": 0,
-      "gap": 34625
+      "pessoas_vacinadas": 139,
+      "gap": 34486
     },
     {
       "codigo_regiao_saude": "26001",
@@ -3123,19 +3123,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 184940,
       "elegiveis_rateados": 34369,
-      "pessoas_vacinadas": 0,
-      "gap": 34369
-    },
-    {
-      "codigo_regiao_saude": "43004",
-      "regiao_saude": "REGIAO 04",
-      "uf": "RS",
-      "macrorregiao_saude": "METROPOLITANA",
-      "n_municipios": 12,
-      "pop_ibge_2022": 175741,
-      "elegiveis_rateados": 34352,
-      "pessoas_vacinadas": 0,
-      "gap": 34352
+      "pessoas_vacinadas": 27,
+      "gap": 34342
     },
     {
       "codigo_regiao_saude": "24005",
@@ -3145,30 +3134,19 @@
       "n_municipios": 21,
       "pop_ibge_2022": 185464,
       "elegiveis_rateados": 34293,
-      "pessoas_vacinadas": 0,
-      "gap": 34293
+      "pessoas_vacinadas": 5,
+      "gap": 34288
     },
     {
-      "codigo_regiao_saude": "27005",
-      "regiao_saude": "5ª REGIAO DE SAUDE",
-      "uf": "AL",
-      "macrorregiao_saude": "1ª MACRORREGIAO DE SAUDE",
-      "n_municipios": 7,
-      "pop_ibge_2022": 187683,
-      "elegiveis_rateados": 34131,
-      "pessoas_vacinadas": 0,
-      "gap": 34131
-    },
-    {
-      "codigo_regiao_saude": "51011",
-      "regiao_saude": "OESTE MATOGROSSENSE",
-      "uf": "MT",
-      "macrorregiao_saude": "MACRORREGIAO OESTE",
+      "codigo_regiao_saude": "43004",
+      "regiao_saude": "REGIAO 04",
+      "uf": "RS",
+      "macrorregiao_saude": "METROPOLITANA",
       "n_municipios": 12,
-      "pop_ibge_2022": 184452,
-      "elegiveis_rateados": 34130,
-      "pessoas_vacinadas": 0,
-      "gap": 34130
+      "pop_ibge_2022": 175741,
+      "elegiveis_rateados": 34352,
+      "pessoas_vacinadas": 104,
+      "gap": 34248
     },
     {
       "codigo_regiao_saude": "16003",
@@ -3178,8 +3156,30 @@
       "n_municipios": 4,
       "pop_ibge_2022": 175947,
       "elegiveis_rateados": 34125,
-      "pessoas_vacinadas": 0,
-      "gap": 34125
+      "pessoas_vacinadas": 6,
+      "gap": 34119
+    },
+    {
+      "codigo_regiao_saude": "27005",
+      "regiao_saude": "5ª REGIAO DE SAUDE",
+      "uf": "AL",
+      "macrorregiao_saude": "1ª MACRORREGIAO DE SAUDE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 187683,
+      "elegiveis_rateados": 34131,
+      "pessoas_vacinadas": 16,
+      "gap": 34115
+    },
+    {
+      "codigo_regiao_saude": "51011",
+      "regiao_saude": "OESTE MATOGROSSENSE",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO OESTE",
+      "n_municipios": 12,
+      "pop_ibge_2022": 184452,
+      "elegiveis_rateados": 34130,
+      "pessoas_vacinadas": 114,
+      "gap": 34016
     },
     {
       "codigo_regiao_saude": "27006",
@@ -3189,8 +3189,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 186340,
       "elegiveis_rateados": 33887,
-      "pessoas_vacinadas": 0,
-      "gap": 33887
+      "pessoas_vacinadas": 22,
+      "gap": 33865
     },
     {
       "codigo_regiao_saude": "22002",
@@ -3200,8 +3200,8 @@
       "n_municipios": 21,
       "pop_ibge_2022": 186012,
       "elegiveis_rateados": 33868,
-      "pessoas_vacinadas": 0,
-      "gap": 33868
+      "pessoas_vacinadas": 17,
+      "gap": 33851
     },
     {
       "codigo_regiao_saude": "41021",
@@ -3211,19 +3211,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 181345,
       "elegiveis_rateados": 33569,
-      "pessoas_vacinadas": 0,
-      "gap": 33569
-    },
-    {
-      "codigo_regiao_saude": "31019",
-      "regiao_saude": "CURVELO",
-      "uf": "MG",
-      "macrorregiao_saude": "CENTRO",
-      "n_municipios": 11,
-      "pop_ibge_2022": 178891,
-      "elegiveis_rateados": 33424,
-      "pessoas_vacinadas": 0,
-      "gap": 33424
+      "pessoas_vacinadas": 75,
+      "gap": 33494
     },
     {
       "codigo_regiao_saude": "29023",
@@ -3233,8 +3222,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 187151,
       "elegiveis_rateados": 33342,
-      "pessoas_vacinadas": 0,
-      "gap": 33342
+      "pessoas_vacinadas": 8,
+      "gap": 33334
     },
     {
       "codigo_regiao_saude": "29008",
@@ -3244,8 +3233,19 @@
       "n_municipios": 9,
       "pop_ibge_2022": 187096,
       "elegiveis_rateados": 33333,
-      "pessoas_vacinadas": 0,
-      "gap": 33333
+      "pessoas_vacinadas": 4,
+      "gap": 33329
+    },
+    {
+      "codigo_regiao_saude": "31019",
+      "regiao_saude": "CURVELO",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 11,
+      "pop_ibge_2022": 178891,
+      "elegiveis_rateados": 33424,
+      "pessoas_vacinadas": 120,
+      "gap": 33304
     },
     {
       "codigo_regiao_saude": "52018",
@@ -3255,8 +3255,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 180290,
       "elegiveis_rateados": 33123,
-      "pessoas_vacinadas": 0,
-      "gap": 33123
+      "pessoas_vacinadas": 92,
+      "gap": 33031
     },
     {
       "codigo_regiao_saude": "17005",
@@ -3266,8 +3266,8 @@
       "n_municipios": 18,
       "pop_ibge_2022": 177432,
       "elegiveis_rateados": 32840,
-      "pessoas_vacinadas": 0,
-      "gap": 32840
+      "pessoas_vacinadas": 36,
+      "gap": 32804
     },
     {
       "codigo_regiao_saude": "21010",
@@ -3277,8 +3277,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 200996,
       "elegiveis_rateados": 32615,
-      "pessoas_vacinadas": 0,
-      "gap": 32615
+      "pessoas_vacinadas": 16,
+      "gap": 32599
     },
     {
       "codigo_regiao_saude": "11002",
@@ -3288,8 +3288,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 166180,
       "elegiveis_rateados": 32563,
-      "pessoas_vacinadas": 0,
-      "gap": 32563
+      "pessoas_vacinadas": 93,
+      "gap": 32470
     },
     {
       "codigo_regiao_saude": "13003",
@@ -3299,8 +3299,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 188932,
       "elegiveis_rateados": 32312,
-      "pessoas_vacinadas": 0,
-      "gap": 32312
+      "pessoas_vacinadas": 7,
+      "gap": 32305
     },
     {
       "codigo_regiao_saude": "31071",
@@ -3310,8 +3310,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 172237,
       "elegiveis_rateados": 32181,
-      "pessoas_vacinadas": 0,
-      "gap": 32181
+      "pessoas_vacinadas": 80,
+      "gap": 32101
     },
     {
       "codigo_regiao_saude": "25012",
@@ -3321,8 +3321,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 173724,
       "elegiveis_rateados": 32000,
-      "pessoas_vacinadas": 0,
-      "gap": 32000
+      "pessoas_vacinadas": 4,
+      "gap": 31996
     },
     {
       "codigo_regiao_saude": "25009",
@@ -3332,8 +3332,8 @@
       "n_municipios": 15,
       "pop_ibge_2022": 173175,
       "elegiveis_rateados": 31899,
-      "pessoas_vacinadas": 0,
-      "gap": 31899
+      "pessoas_vacinadas": 35,
+      "gap": 31864
     },
     {
       "codigo_regiao_saude": "31044",
@@ -3343,19 +3343,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 170181,
       "elegiveis_rateados": 31797,
-      "pessoas_vacinadas": 0,
-      "gap": 31797
-    },
-    {
-      "codigo_regiao_saude": "43020",
-      "regiao_saude": "REGIAO 20 - ROTA DA PRODUCAO",
-      "uf": "RS",
-      "macrorregiao_saude": "NORTE",
-      "n_municipios": 26,
-      "pop_ibge_2022": 159758,
-      "elegiveis_rateados": 31228,
-      "pessoas_vacinadas": 0,
-      "gap": 31228
+      "pessoas_vacinadas": 41,
+      "gap": 31756
     },
     {
       "codigo_regiao_saude": "28005",
@@ -3365,8 +3354,19 @@
       "n_municipios": 9,
       "pop_ibge_2022": 170047,
       "elegiveis_rateados": 31217,
-      "pessoas_vacinadas": 0,
-      "gap": 31217
+      "pessoas_vacinadas": 20,
+      "gap": 31197
+    },
+    {
+      "codigo_regiao_saude": "43020",
+      "regiao_saude": "REGIAO 20 - ROTA DA PRODUCAO",
+      "uf": "RS",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 26,
+      "pop_ibge_2022": 159758,
+      "elegiveis_rateados": 31228,
+      "pessoas_vacinadas": 117,
+      "gap": 31111
     },
     {
       "codigo_regiao_saude": "31045",
@@ -3376,8 +3376,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 165935,
       "elegiveis_rateados": 31004,
-      "pessoas_vacinadas": 0,
-      "gap": 31004
+      "pessoas_vacinadas": 47,
+      "gap": 30957
     },
     {
       "codigo_regiao_saude": "52013",
@@ -3387,8 +3387,8 @@
       "n_municipios": 20,
       "pop_ibge_2022": 168047,
       "elegiveis_rateados": 30874,
-      "pessoas_vacinadas": 0,
-      "gap": 30874
+      "pessoas_vacinadas": 139,
+      "gap": 30735
     },
     {
       "codigo_regiao_saude": "13004",
@@ -3398,8 +3398,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 179565,
       "elegiveis_rateados": 30710,
-      "pessoas_vacinadas": 0,
-      "gap": 30710
+      "pessoas_vacinadas": 2,
+      "gap": 30708
     },
     {
       "codigo_regiao_saude": "41004",
@@ -3409,8 +3409,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 164469,
       "elegiveis_rateados": 30445,
-      "pessoas_vacinadas": 0,
-      "gap": 30445
+      "pessoas_vacinadas": 43,
+      "gap": 30402
     },
     {
       "codigo_regiao_saude": "31094",
@@ -3420,8 +3420,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 162377,
       "elegiveis_rateados": 30339,
-      "pessoas_vacinadas": 0,
-      "gap": 30339
+      "pessoas_vacinadas": 10,
+      "gap": 30329
     },
     {
       "codigo_regiao_saude": "41006",
@@ -3431,8 +3431,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 162561,
       "elegiveis_rateados": 30092,
-      "pessoas_vacinadas": 0,
-      "gap": 30092
+      "pessoas_vacinadas": 64,
+      "gap": 30028
     },
     {
       "codigo_regiao_saude": "50014",
@@ -3442,8 +3442,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 160563,
       "elegiveis_rateados": 29989,
-      "pessoas_vacinadas": 0,
-      "gap": 29989
+      "pessoas_vacinadas": 71,
+      "gap": 29918
     },
     {
       "codigo_regiao_saude": "35065",
@@ -3453,8 +3453,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 157929,
       "elegiveis_rateados": 29985,
-      "pessoas_vacinadas": 0,
-      "gap": 29985
+      "pessoas_vacinadas": 104,
+      "gap": 29881
     },
     {
       "codigo_regiao_saude": "31030",
@@ -3464,8 +3464,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 159901,
       "elegiveis_rateados": 29876,
-      "pessoas_vacinadas": 0,
-      "gap": 29876
+      "pessoas_vacinadas": 73,
+      "gap": 29803
     },
     {
       "codigo_regiao_saude": "11006",
@@ -3475,8 +3475,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 151735,
       "elegiveis_rateados": 29733,
-      "pessoas_vacinadas": 0,
-      "gap": 29733
+      "pessoas_vacinadas": 51,
+      "gap": 29682
     },
     {
       "codigo_regiao_saude": "42010",
@@ -3486,8 +3486,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 154808,
       "elegiveis_rateados": 29679,
-      "pessoas_vacinadas": 0,
-      "gap": 29679
+      "pessoas_vacinadas": 138,
+      "gap": 29541
     },
     {
       "codigo_regiao_saude": "22001",
@@ -3497,8 +3497,8 @@
       "n_municipios": 15,
       "pop_ibge_2022": 159428,
       "elegiveis_rateados": 29027,
-      "pessoas_vacinadas": 0,
-      "gap": 29027
+      "pessoas_vacinadas": 17,
+      "gap": 29010
     },
     {
       "codigo_regiao_saude": "22006",
@@ -3508,8 +3508,8 @@
       "n_municipios": 20,
       "pop_ibge_2022": 157353,
       "elegiveis_rateados": 28650,
-      "pessoas_vacinadas": 0,
-      "gap": 28650
+      "pessoas_vacinadas": 13,
+      "gap": 28637
     },
     {
       "codigo_regiao_saude": "27002",
@@ -3519,8 +3519,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 157127,
       "elegiveis_rateados": 28574,
-      "pessoas_vacinadas": 0,
-      "gap": 28574
+      "pessoas_vacinadas": 12,
+      "gap": 28562
     },
     {
       "codigo_regiao_saude": "41013",
@@ -3530,8 +3530,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 153870,
       "elegiveis_rateados": 28483,
-      "pessoas_vacinadas": 0,
-      "gap": 28483
+      "pessoas_vacinadas": 79,
+      "gap": 28404
     },
     {
       "codigo_regiao_saude": "25014",
@@ -3541,19 +3541,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 152747,
       "elegiveis_rateados": 28136,
-      "pessoas_vacinadas": 0,
-      "gap": 28136
-    },
-    {
-      "codigo_regiao_saude": "35082",
-      "regiao_saude": "ALTA ANHANGUERA",
-      "uf": "SP",
-      "macrorregiao_saude": "RRAS13",
-      "n_municipios": 6,
-      "pop_ibge_2022": 148066,
-      "elegiveis_rateados": 28113,
-      "pessoas_vacinadas": 0,
-      "gap": 28113
+      "pessoas_vacinadas": 7,
+      "gap": 28129
     },
     {
       "codigo_regiao_saude": "25015",
@@ -3563,8 +3552,19 @@
       "n_municipios": 14,
       "pop_ibge_2022": 152551,
       "elegiveis_rateados": 28100,
-      "pessoas_vacinadas": 0,
-      "gap": 28100
+      "pessoas_vacinadas": 7,
+      "gap": 28093
+    },
+    {
+      "codigo_regiao_saude": "35082",
+      "regiao_saude": "ALTA ANHANGUERA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS13",
+      "n_municipios": 6,
+      "pop_ibge_2022": 148066,
+      "elegiveis_rateados": 28113,
+      "pessoas_vacinadas": 66,
+      "gap": 28047
     },
     {
       "codigo_regiao_saude": "17004",
@@ -3574,8 +3574,8 @@
       "n_municipios": 23,
       "pop_ibge_2022": 151095,
       "elegiveis_rateados": 27965,
-      "pessoas_vacinadas": 0,
-      "gap": 27965
+      "pessoas_vacinadas": 31,
+      "gap": 27934
     },
     {
       "codigo_regiao_saude": "27008",
@@ -3585,8 +3585,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 151116,
       "elegiveis_rateados": 27481,
-      "pessoas_vacinadas": 0,
-      "gap": 27481
+      "pessoas_vacinadas": 15,
+      "gap": 27466
     },
     {
       "codigo_regiao_saude": "28007",
@@ -3596,8 +3596,8 @@
       "n_municipios": 16,
       "pop_ibge_2022": 148130,
       "elegiveis_rateados": 27194,
-      "pessoas_vacinadas": 0,
-      "gap": 27194
+      "pessoas_vacinadas": 8,
+      "gap": 27186
     },
     {
       "codigo_regiao_saude": "24008",
@@ -3607,19 +3607,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 146859,
       "elegiveis_rateados": 27155,
-      "pessoas_vacinadas": 0,
-      "gap": 27155
-    },
-    {
-      "codigo_regiao_saude": "35052",
-      "regiao_saude": "SUL - BARRETOS",
-      "uf": "SP",
-      "macrorregiao_saude": "RRAS13",
-      "n_municipios": 8,
-      "pop_ibge_2022": 142795,
-      "elegiveis_rateados": 27112,
-      "pessoas_vacinadas": 0,
-      "gap": 27112
+      "pessoas_vacinadas": 8,
+      "gap": 27147
     },
     {
       "codigo_regiao_saude": "27010",
@@ -3629,8 +3618,19 @@
       "n_municipios": 7,
       "pop_ibge_2022": 149051,
       "elegiveis_rateados": 27106,
-      "pessoas_vacinadas": 0,
-      "gap": 27106
+      "pessoas_vacinadas": 6,
+      "gap": 27100
+    },
+    {
+      "codigo_regiao_saude": "35052",
+      "regiao_saude": "SUL - BARRETOS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS13",
+      "n_municipios": 8,
+      "pop_ibge_2022": 142795,
+      "elegiveis_rateados": 27112,
+      "pessoas_vacinadas": 36,
+      "gap": 27076
     },
     {
       "codigo_regiao_saude": "50010",
@@ -3640,8 +3640,8 @@
       "n_municipios": 3,
       "pop_ibge_2022": 143326,
       "elegiveis_rateados": 26769,
-      "pessoas_vacinadas": 0,
-      "gap": 26769
+      "pessoas_vacinadas": 25,
+      "gap": 26744
     },
     {
       "codigo_regiao_saude": "31026",
@@ -3651,8 +3651,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 141832,
       "elegiveis_rateados": 26500,
-      "pessoas_vacinadas": 0,
-      "gap": 26500
+      "pessoas_vacinadas": 61,
+      "gap": 26439
     },
     {
       "codigo_regiao_saude": "26011",
@@ -3662,8 +3662,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 141653,
       "elegiveis_rateados": 26324,
-      "pessoas_vacinadas": 0,
-      "gap": 26324
+      "pessoas_vacinadas": 10,
+      "gap": 26314
     },
     {
       "codigo_regiao_saude": "51008",
@@ -3673,30 +3673,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 141995,
       "elegiveis_rateados": 26274,
-      "pessoas_vacinadas": 0,
-      "gap": 26274
-    },
-    {
-      "codigo_regiao_saude": "51005",
-      "regiao_saude": "GARCAS ARAGUAIA",
-      "uf": "MT",
-      "macrorregiao_saude": "MACRORREGIAO LESTE",
-      "n_municipios": 10,
-      "pop_ibge_2022": 141350,
-      "elegiveis_rateados": 26155,
-      "pessoas_vacinadas": 0,
+      "pessoas_vacinadas": 119,
       "gap": 26155
-    },
-    {
-      "codigo_regiao_saude": "31023",
-      "regiao_saude": "JOAO MONLEVADE",
-      "uf": "MG",
-      "macrorregiao_saude": "CENTRO",
-      "n_municipios": 5,
-      "pop_ibge_2022": 139815,
-      "elegiveis_rateados": 26123,
-      "pessoas_vacinadas": 0,
-      "gap": 26123
     },
     {
       "codigo_regiao_saude": "25007",
@@ -3706,8 +3684,30 @@
       "n_municipios": 18,
       "pop_ibge_2022": 141772,
       "elegiveis_rateados": 26114,
-      "pessoas_vacinadas": 0,
-      "gap": 26114
+      "pessoas_vacinadas": 5,
+      "gap": 26109
+    },
+    {
+      "codigo_regiao_saude": "51005",
+      "regiao_saude": "GARCAS ARAGUAIA",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO LESTE",
+      "n_municipios": 10,
+      "pop_ibge_2022": 141350,
+      "elegiveis_rateados": 26155,
+      "pessoas_vacinadas": 58,
+      "gap": 26097
+    },
+    {
+      "codigo_regiao_saude": "31023",
+      "regiao_saude": "JOAO MONLEVADE",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 5,
+      "pop_ibge_2022": 139815,
+      "elegiveis_rateados": 26123,
+      "pessoas_vacinadas": 121,
+      "gap": 26002
     },
     {
       "codigo_regiao_saude": "35133",
@@ -3717,8 +3717,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 135941,
       "elegiveis_rateados": 25811,
-      "pessoas_vacinadas": 0,
-      "gap": 25811
+      "pessoas_vacinadas": 53,
+      "gap": 25758
     },
     {
       "codigo_regiao_saude": "43018",
@@ -3728,8 +3728,8 @@
       "n_municipios": 20,
       "pop_ibge_2022": 131458,
       "elegiveis_rateados": 25696,
-      "pessoas_vacinadas": 0,
-      "gap": 25696
+      "pessoas_vacinadas": 105,
+      "gap": 25591
     },
     {
       "codigo_regiao_saude": "31002",
@@ -3739,8 +3739,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 136669,
       "elegiveis_rateados": 25535,
-      "pessoas_vacinadas": 0,
-      "gap": 25535
+      "pessoas_vacinadas": 78,
+      "gap": 25457
     },
     {
       "codigo_regiao_saude": "35111",
@@ -3750,8 +3750,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 132622,
       "elegiveis_rateados": 25180,
-      "pessoas_vacinadas": 0,
-      "gap": 25180
+      "pessoas_vacinadas": 15,
+      "gap": 25165
     },
     {
       "codigo_regiao_saude": "31061",
@@ -3761,8 +3761,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 134409,
       "elegiveis_rateados": 25113,
-      "pessoas_vacinadas": 0,
-      "gap": 25113
+      "pessoas_vacinadas": 153,
+      "gap": 24960
     },
     {
       "codigo_regiao_saude": "31055",
@@ -3772,8 +3772,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 133939,
       "elegiveis_rateados": 25025,
-      "pessoas_vacinadas": 0,
-      "gap": 25025
+      "pessoas_vacinadas": 86,
+      "gap": 24939
     },
     {
       "codigo_regiao_saude": "11005",
@@ -3783,8 +3783,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 127502,
       "elegiveis_rateados": 24984,
-      "pessoas_vacinadas": 0,
-      "gap": 24984
+      "pessoas_vacinadas": 45,
+      "gap": 24939
     },
     {
       "codigo_regiao_saude": "35074",
@@ -3794,8 +3794,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 131473,
       "elegiveis_rateados": 24962,
-      "pessoas_vacinadas": 0,
-      "gap": 24962
+      "pessoas_vacinadas": 51,
+      "gap": 24911
     },
     {
       "codigo_regiao_saude": "41022",
@@ -3805,8 +3805,8 @@
       "n_municipios": 16,
       "pop_ibge_2022": 134799,
       "elegiveis_rateados": 24953,
-      "pessoas_vacinadas": 0,
-      "gap": 24953
+      "pessoas_vacinadas": 62,
+      "gap": 24891
     },
     {
       "codigo_regiao_saude": "35091",
@@ -3816,8 +3816,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 130843,
       "elegiveis_rateados": 24843,
-      "pessoas_vacinadas": 0,
-      "gap": 24843
+      "pessoas_vacinadas": 36,
+      "gap": 24807
     },
     {
       "codigo_regiao_saude": "31085",
@@ -3827,8 +3827,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 131922,
       "elegiveis_rateados": 24649,
-      "pessoas_vacinadas": 0,
-      "gap": 24649
+      "pessoas_vacinadas": 11,
+      "gap": 24638
     },
     {
       "codigo_regiao_saude": "43030",
@@ -3838,8 +3838,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 125513,
       "elegiveis_rateados": 24534,
-      "pessoas_vacinadas": 0,
-      "gap": 24534
+      "pessoas_vacinadas": 65,
+      "gap": 24469
     },
     {
       "codigo_regiao_saude": "31031",
@@ -3849,8 +3849,8 @@
       "n_municipios": 4,
       "pop_ibge_2022": 131181,
       "elegiveis_rateados": 24510,
-      "pessoas_vacinadas": 0,
-      "gap": 24510
+      "pessoas_vacinadas": 78,
+      "gap": 24432
     },
     {
       "codigo_regiao_saude": "43012",
@@ -3860,8 +3860,8 @@
       "n_municipios": 12,
       "pop_ibge_2022": 124688,
       "elegiveis_rateados": 24373,
-      "pessoas_vacinadas": 0,
-      "gap": 24373
+      "pessoas_vacinadas": 61,
+      "gap": 24312
     },
     {
       "codigo_regiao_saude": "52008",
@@ -3871,8 +3871,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 131825,
       "elegiveis_rateados": 24219,
-      "pessoas_vacinadas": 0,
-      "gap": 24219
+      "pessoas_vacinadas": 41,
+      "gap": 24178
     },
     {
       "codigo_regiao_saude": "35095",
@@ -3882,8 +3882,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 125835,
       "elegiveis_rateados": 23892,
-      "pessoas_vacinadas": 0,
-      "gap": 23892
+      "pessoas_vacinadas": 54,
+      "gap": 23838
     },
     {
       "codigo_regiao_saude": "13008",
@@ -3893,8 +3893,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 139095,
       "elegiveis_rateados": 23788,
-      "pessoas_vacinadas": 0,
-      "gap": 23788
+      "pessoas_vacinadas": 1,
+      "gap": 23787
     },
     {
       "codigo_regiao_saude": "31042",
@@ -3904,8 +3904,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 127156,
       "elegiveis_rateados": 23758,
-      "pessoas_vacinadas": 0,
-      "gap": 23758
+      "pessoas_vacinadas": 50,
+      "gap": 23708
     },
     {
       "codigo_regiao_saude": "31009",
@@ -3915,8 +3915,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 126097,
       "elegiveis_rateados": 23560,
-      "pessoas_vacinadas": 0,
-      "gap": 23560
+      "pessoas_vacinadas": 82,
+      "gap": 23478
     },
     {
       "codigo_regiao_saude": "17007",
@@ -3926,8 +3926,8 @@
       "n_municipios": 15,
       "pop_ibge_2022": 126761,
       "elegiveis_rateados": 23461,
-      "pessoas_vacinadas": 0,
-      "gap": 23461
+      "pessoas_vacinadas": 16,
+      "gap": 23445
     },
     {
       "codigo_regiao_saude": "13006",
@@ -3937,19 +3937,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 136736,
       "elegiveis_rateados": 23385,
-      "pessoas_vacinadas": 0,
-      "gap": 23385
-    },
-    {
-      "codigo_regiao_saude": "31078",
-      "regiao_saude": "CONGONHAS",
-      "uf": "MG",
-      "macrorregiao_saude": "CENTRO SUL",
-      "n_municipios": 6,
-      "pop_ibge_2022": 124199,
-      "elegiveis_rateados": 23206,
-      "pessoas_vacinadas": 0,
-      "gap": 23206
+      "pessoas_vacinadas": 5,
+      "gap": 23380
     },
     {
       "codigo_regiao_saude": "22012",
@@ -3959,30 +3948,19 @@
       "n_municipios": 16,
       "pop_ibge_2022": 127442,
       "elegiveis_rateados": 23204,
-      "pessoas_vacinadas": 0,
-      "gap": 23204
+      "pessoas_vacinadas": 3,
+      "gap": 23201
     },
     {
-      "codigo_regiao_saude": "31011",
-      "regiao_saude": "TRES PONTAS",
+      "codigo_regiao_saude": "31078",
+      "regiao_saude": "CONGONHAS",
       "uf": "MG",
-      "macrorregiao_saude": "SUL",
-      "n_municipios": 5,
-      "pop_ibge_2022": 123558,
-      "elegiveis_rateados": 23086,
-      "pessoas_vacinadas": 0,
-      "gap": 23086
-    },
-    {
-      "codigo_regiao_saude": "35154",
-      "regiao_saude": "FERNANDOPOLIS",
-      "uf": "SP",
-      "macrorregiao_saude": "RRAS12",
-      "n_municipios": 13,
-      "pop_ibge_2022": 121570,
-      "elegiveis_rateados": 23082,
-      "pessoas_vacinadas": 0,
-      "gap": 23082
+      "macrorregiao_saude": "CENTRO SUL",
+      "n_municipios": 6,
+      "pop_ibge_2022": 124199,
+      "elegiveis_rateados": 23206,
+      "pessoas_vacinadas": 89,
+      "gap": 23117
     },
     {
       "codigo_regiao_saude": "31101",
@@ -3992,8 +3970,30 @@
       "n_municipios": 10,
       "pop_ibge_2022": 123262,
       "elegiveis_rateados": 23030,
-      "pessoas_vacinadas": 0,
-      "gap": 23030
+      "pessoas_vacinadas": 12,
+      "gap": 23018
+    },
+    {
+      "codigo_regiao_saude": "35154",
+      "regiao_saude": "FERNANDOPOLIS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS12",
+      "n_municipios": 13,
+      "pop_ibge_2022": 121570,
+      "elegiveis_rateados": 23082,
+      "pessoas_vacinadas": 75,
+      "gap": 23007
+    },
+    {
+      "codigo_regiao_saude": "31011",
+      "regiao_saude": "TRES PONTAS",
+      "uf": "MG",
+      "macrorregiao_saude": "SUL",
+      "n_municipios": 5,
+      "pop_ibge_2022": 123558,
+      "elegiveis_rateados": 23086,
+      "pessoas_vacinadas": 110,
+      "gap": 22976
     },
     {
       "codigo_regiao_saude": "51012",
@@ -4003,8 +4003,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 124245,
       "elegiveis_rateados": 22990,
-      "pessoas_vacinadas": 0,
-      "gap": 22990
+      "pessoas_vacinadas": 28,
+      "gap": 22962
     },
     {
       "codigo_regiao_saude": "43002",
@@ -4014,8 +4014,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 117410,
       "elegiveis_rateados": 22950,
-      "pessoas_vacinadas": 0,
-      "gap": 22950
+      "pessoas_vacinadas": 63,
+      "gap": 22887
     },
     {
       "codigo_regiao_saude": "27004",
@@ -4025,8 +4025,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 122112,
       "elegiveis_rateados": 22207,
-      "pessoas_vacinadas": 0,
-      "gap": 22207
+      "pessoas_vacinadas": 12,
+      "gap": 22195
     },
     {
       "codigo_regiao_saude": "52014",
@@ -4036,8 +4036,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 120645,
       "elegiveis_rateados": 22165,
-      "pessoas_vacinadas": 0,
-      "gap": 22165
+      "pessoas_vacinadas": 75,
+      "gap": 22090
     },
     {
       "codigo_regiao_saude": "13007",
@@ -4047,8 +4047,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 128161,
       "elegiveis_rateados": 21918,
-      "pessoas_vacinadas": 0,
-      "gap": 21918
+      "pessoas_vacinadas": 1,
+      "gap": 21917
     },
     {
       "codigo_regiao_saude": "51006",
@@ -4058,8 +4058,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 118277,
       "elegiveis_rateados": 21885,
-      "pessoas_vacinadas": 0,
-      "gap": 21885
+      "pessoas_vacinadas": 77,
+      "gap": 21808
     },
     {
       "codigo_regiao_saude": "17008",
@@ -4069,8 +4069,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 117502,
       "elegiveis_rateados": 21748,
-      "pessoas_vacinadas": 0,
-      "gap": 21748
+      "pessoas_vacinadas": 12,
+      "gap": 21736
     },
     {
       "codigo_regiao_saude": "43019",
@@ -4080,8 +4080,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 111042,
       "elegiveis_rateados": 21706,
-      "pessoas_vacinadas": 0,
-      "gap": 21706
+      "pessoas_vacinadas": 61,
+      "gap": 21645
     },
     {
       "codigo_regiao_saude": "50015",
@@ -4091,8 +4091,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 115922,
       "elegiveis_rateados": 21651,
-      "pessoas_vacinadas": 0,
-      "gap": 21651
+      "pessoas_vacinadas": 27,
+      "gap": 21624
     },
     {
       "codigo_regiao_saude": "52010",
@@ -4102,8 +4102,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 116983,
       "elegiveis_rateados": 21492,
-      "pessoas_vacinadas": 0,
-      "gap": 21492
+      "pessoas_vacinadas": 65,
+      "gap": 21427
     },
     {
       "codigo_regiao_saude": "52009",
@@ -4113,8 +4113,8 @@
       "n_municipios": 16,
       "pop_ibge_2022": 116132,
       "elegiveis_rateados": 21336,
-      "pessoas_vacinadas": 0,
-      "gap": 21336
+      "pessoas_vacinadas": 78,
+      "gap": 21258
     },
     {
       "codigo_regiao_saude": "50016",
@@ -4124,8 +4124,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 113824,
       "elegiveis_rateados": 21259,
-      "pessoas_vacinadas": 0,
-      "gap": 21259
+      "pessoas_vacinadas": 41,
+      "gap": 21218
     },
     {
       "codigo_regiao_saude": "35083",
@@ -4135,8 +4135,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 111606,
       "elegiveis_rateados": 21190,
-      "pessoas_vacinadas": 0,
-      "gap": 21190
+      "pessoas_vacinadas": 16,
+      "gap": 21174
     },
     {
       "codigo_regiao_saude": "31027",
@@ -4146,8 +4146,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 112578,
       "elegiveis_rateados": 21034,
-      "pessoas_vacinadas": 0,
-      "gap": 21034
+      "pessoas_vacinadas": 41,
+      "gap": 20993
     },
     {
       "codigo_regiao_saude": "25008",
@@ -4157,8 +4157,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 113431,
       "elegiveis_rateados": 20894,
-      "pessoas_vacinadas": 0,
-      "gap": 20894
+      "pessoas_vacinadas": 20,
+      "gap": 20874
     },
     {
       "codigo_regiao_saude": "25010",
@@ -4168,8 +4168,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 113363,
       "elegiveis_rateados": 20881,
-      "pessoas_vacinadas": 0,
-      "gap": 20881
+      "pessoas_vacinadas": 20,
+      "gap": 20861
     },
     {
       "codigo_regiao_saude": "31010",
@@ -4179,8 +4179,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 110962,
       "elegiveis_rateados": 20732,
-      "pessoas_vacinadas": 0,
-      "gap": 20732
+      "pessoas_vacinadas": 44,
+      "gap": 20688
     },
     {
       "codigo_regiao_saude": "31028",
@@ -4190,8 +4190,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 110358,
       "elegiveis_rateados": 20619,
-      "pessoas_vacinadas": 0,
-      "gap": 20619
+      "pessoas_vacinadas": 56,
+      "gap": 20563
     },
     {
       "codigo_regiao_saude": "31053",
@@ -4201,19 +4201,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 110232,
       "elegiveis_rateados": 20596,
-      "pessoas_vacinadas": 0,
-      "gap": 20596
-    },
-    {
-      "codigo_regiao_saude": "51001",
-      "regiao_saude": "ALTO TAPAJOS",
-      "uf": "MT",
-      "macrorregiao_saude": "MACRORREGIAO NORTE ",
-      "n_municipios": 6,
-      "pop_ibge_2022": 111154,
-      "elegiveis_rateados": 20567,
-      "pessoas_vacinadas": 0,
-      "gap": 20567
+      "pessoas_vacinadas": 46,
+      "gap": 20550
     },
     {
       "codigo_regiao_saude": "25005",
@@ -4223,8 +4212,19 @@
       "n_municipios": 17,
       "pop_ibge_2022": 111279,
       "elegiveis_rateados": 20498,
-      "pessoas_vacinadas": 0,
-      "gap": 20498
+      "pessoas_vacinadas": 2,
+      "gap": 20496
+    },
+    {
+      "codigo_regiao_saude": "51001",
+      "regiao_saude": "ALTO TAPAJOS",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO NORTE ",
+      "n_municipios": 6,
+      "pop_ibge_2022": 111154,
+      "elegiveis_rateados": 20567,
+      "pessoas_vacinadas": 126,
+      "gap": 20441
     },
     {
       "codigo_regiao_saude": "25004",
@@ -4245,8 +4245,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 106768,
       "elegiveis_rateados": 19440,
-      "pessoas_vacinadas": 0,
-      "gap": 19440
+      "pessoas_vacinadas": 13,
+      "gap": 19427
     },
     {
       "codigo_regiao_saude": "35153",
@@ -4256,8 +4256,8 @@
       "n_municipios": 16,
       "pop_ibge_2022": 102341,
       "elegiveis_rateados": 19431,
-      "pessoas_vacinadas": 0,
-      "gap": 19431
+      "pessoas_vacinadas": 45,
+      "gap": 19386
     },
     {
       "codigo_regiao_saude": "35156",
@@ -4267,8 +4267,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 101427,
       "elegiveis_rateados": 19258,
-      "pessoas_vacinadas": 0,
-      "gap": 19258
+      "pessoas_vacinadas": 30,
+      "gap": 19228
     },
     {
       "codigo_regiao_saude": "43024",
@@ -4278,8 +4278,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 98005,
       "elegiveis_rateados": 19157,
-      "pessoas_vacinadas": 0,
-      "gap": 19157
+      "pessoas_vacinadas": 77,
+      "gap": 19080
     },
     {
       "codigo_regiao_saude": "31082",
@@ -4289,19 +4289,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 102163,
       "elegiveis_rateados": 19088,
-      "pessoas_vacinadas": 0,
-      "gap": 19088
-    },
-    {
-      "codigo_regiao_saude": "31088",
-      "regiao_saude": "OLIVEIRA/SANTO ANTONIO DO AMPARO",
-      "uf": "MG",
-      "macrorregiao_saude": "OESTE",
-      "n_municipios": 6,
-      "pop_ibge_2022": 100229,
-      "elegiveis_rateados": 18727,
-      "pessoas_vacinadas": 0,
-      "gap": 18727
+      "pessoas_vacinadas": 118,
+      "gap": 18970
     },
     {
       "codigo_regiao_saude": "22010",
@@ -4311,8 +4300,8 @@
       "n_municipios": 14,
       "pop_ibge_2022": 102676,
       "elegiveis_rateados": 18694,
-      "pessoas_vacinadas": 0,
-      "gap": 18694
+      "pessoas_vacinadas": 12,
+      "gap": 18682
     },
     {
       "codigo_regiao_saude": "51015",
@@ -4322,8 +4311,19 @@
       "n_municipios": 5,
       "pop_ibge_2022": 100965,
       "elegiveis_rateados": 18682,
-      "pessoas_vacinadas": 0,
-      "gap": 18682
+      "pessoas_vacinadas": 49,
+      "gap": 18633
+    },
+    {
+      "codigo_regiao_saude": "31088",
+      "regiao_saude": "OLIVEIRA/SANTO ANTONIO DO AMPARO",
+      "uf": "MG",
+      "macrorregiao_saude": "OESTE",
+      "n_municipios": 6,
+      "pop_ibge_2022": 100229,
+      "elegiveis_rateados": 18727,
+      "pessoas_vacinadas": 94,
+      "gap": 18633
     },
     {
       "codigo_regiao_saude": "31100",
@@ -4333,8 +4333,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 98317,
       "elegiveis_rateados": 18370,
-      "pessoas_vacinadas": 0,
-      "gap": 18370
+      "pessoas_vacinadas": 5,
+      "gap": 18365
     },
     {
       "codigo_regiao_saude": "14002",
@@ -4344,8 +4344,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 90456,
       "elegiveis_rateados": 18041,
-      "pessoas_vacinadas": 0,
-      "gap": 18041
+      "pessoas_vacinadas": 2,
+      "gap": 18039
     },
     {
       "codigo_regiao_saude": "31089",
@@ -4355,8 +4355,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 95156,
       "elegiveis_rateados": 17779,
-      "pessoas_vacinadas": 0,
-      "gap": 17779
+      "pessoas_vacinadas": 46,
+      "gap": 17733
     },
     {
       "codigo_regiao_saude": "52007",
@@ -4366,8 +4366,8 @@
       "n_municipios": 11,
       "pop_ibge_2022": 94524,
       "elegiveis_rateados": 17366,
-      "pessoas_vacinadas": 0,
-      "gap": 17366
+      "pessoas_vacinadas": 28,
+      "gap": 17338
     },
     {
       "codigo_regiao_saude": "31102",
@@ -4377,8 +4377,8 @@
       "n_municipios": 10,
       "pop_ibge_2022": 92148,
       "elegiveis_rateados": 17217,
-      "pessoas_vacinadas": 0,
-      "gap": 17217
+      "pessoas_vacinadas": 24,
+      "gap": 17193
     },
     {
       "codigo_regiao_saude": "35114",
@@ -4388,8 +4388,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 88009,
       "elegiveis_rateados": 16710,
-      "pessoas_vacinadas": 0,
-      "gap": 16710
+      "pessoas_vacinadas": 15,
+      "gap": 16695
     },
     {
       "codigo_regiao_saude": "31020",
@@ -4399,8 +4399,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 89002,
       "elegiveis_rateados": 16629,
-      "pessoas_vacinadas": 0,
-      "gap": 16629
+      "pessoas_vacinadas": 67,
+      "gap": 16562
     },
     {
       "codigo_regiao_saude": "31087",
@@ -4410,19 +4410,8 @@
       "n_municipios": 4,
       "pop_ibge_2022": 87325,
       "elegiveis_rateados": 16316,
-      "pessoas_vacinadas": 0,
-      "gap": 16316
-    },
-    {
-      "codigo_regiao_saude": "51003",
-      "regiao_saude": "ARAGUAIA XINGU",
-      "uf": "MT",
-      "macrorregiao_saude": "MACRORREGIAO LESTE",
-      "n_municipios": 7,
-      "pop_ibge_2022": 87796,
-      "elegiveis_rateados": 16245,
-      "pessoas_vacinadas": 0,
-      "gap": 16245
+      "pessoas_vacinadas": 49,
+      "gap": 16267
     },
     {
       "codigo_regiao_saude": "17003",
@@ -4432,8 +4421,19 @@
       "n_municipios": 15,
       "pop_ibge_2022": 87640,
       "elegiveis_rateados": 16221,
-      "pessoas_vacinadas": 0,
-      "gap": 16221
+      "pessoas_vacinadas": 13,
+      "gap": 16208
+    },
+    {
+      "codigo_regiao_saude": "51003",
+      "regiao_saude": "ARAGUAIA XINGU",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO LESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 87796,
+      "elegiveis_rateados": 16245,
+      "pessoas_vacinadas": 50,
+      "gap": 16195
     },
     {
       "codigo_regiao_saude": "51004",
@@ -4443,8 +4443,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 87608,
       "elegiveis_rateados": 16211,
-      "pessoas_vacinadas": 0,
-      "gap": 16211
+      "pessoas_vacinadas": 30,
+      "gap": 16181
     },
     {
       "codigo_regiao_saude": "31040",
@@ -4454,8 +4454,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 82013,
       "elegiveis_rateados": 15323,
-      "pessoas_vacinadas": 0,
-      "gap": 15323
+      "pessoas_vacinadas": 33,
+      "gap": 15290
     },
     {
       "codigo_regiao_saude": "31093",
@@ -4465,8 +4465,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 79525,
       "elegiveis_rateados": 14859,
-      "pessoas_vacinadas": 0,
-      "gap": 14859
+      "pessoas_vacinadas": 39,
+      "gap": 14820
     },
     {
       "codigo_regiao_saude": "31064",
@@ -4476,8 +4476,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 77593,
       "elegiveis_rateados": 14498,
-      "pessoas_vacinadas": 0,
-      "gap": 14498
+      "pessoas_vacinadas": 36,
+      "gap": 14462
     },
     {
       "codigo_regiao_saude": "25011",
@@ -4487,8 +4487,8 @@
       "n_municipios": 7,
       "pop_ibge_2022": 78026,
       "elegiveis_rateados": 14372,
-      "pessoas_vacinadas": 0,
-      "gap": 14372
+      "pessoas_vacinadas": 4,
+      "gap": 14368
     },
     {
       "codigo_regiao_saude": "31065",
@@ -4498,8 +4498,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 74976,
       "elegiveis_rateados": 14009,
-      "pessoas_vacinadas": 0,
-      "gap": 14009
+      "pessoas_vacinadas": 14,
+      "gap": 13995
     },
     {
       "codigo_regiao_saude": "31083",
@@ -4509,8 +4509,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 73179,
       "elegiveis_rateados": 13673,
-      "pessoas_vacinadas": 0,
-      "gap": 13673
+      "pessoas_vacinadas": 22,
+      "gap": 13651
     },
     {
       "codigo_regiao_saude": "12001",
@@ -4520,8 +4520,8 @@
       "n_municipios": 4,
       "pop_ibge_2022": 71100,
       "elegiveis_rateados": 13424,
-      "pessoas_vacinadas": 0,
-      "gap": 13424
+      "pessoas_vacinadas": 7,
+      "gap": 13417
     },
     {
       "codigo_regiao_saude": "31047",
@@ -4531,8 +4531,8 @@
       "n_municipios": 9,
       "pop_ibge_2022": 71610,
       "elegiveis_rateados": 13380,
-      "pessoas_vacinadas": 0,
-      "gap": 13380
+      "pessoas_vacinadas": 18,
+      "gap": 13362
     },
     {
       "codigo_regiao_saude": "31090",
@@ -4542,8 +4542,8 @@
       "n_municipios": 13,
       "pop_ibge_2022": 71271,
       "elegiveis_rateados": 13316,
-      "pessoas_vacinadas": 0,
-      "gap": 13316
+      "pessoas_vacinadas": 10,
+      "gap": 13306
     },
     {
       "codigo_regiao_saude": "31077",
@@ -4553,8 +4553,8 @@
       "n_municipios": 3,
       "pop_ibge_2022": 70790,
       "elegiveis_rateados": 13227,
-      "pessoas_vacinadas": 0,
-      "gap": 13227
+      "pessoas_vacinadas": 41,
+      "gap": 13186
     },
     {
       "codigo_regiao_saude": "51010",
@@ -4564,8 +4564,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 68322,
       "elegiveis_rateados": 12642,
-      "pessoas_vacinadas": 0,
-      "gap": 12642
+      "pessoas_vacinadas": 131,
+      "gap": 12511
     },
     {
       "codigo_regiao_saude": "31051",
@@ -4575,8 +4575,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 66026,
       "elegiveis_rateados": 12336,
-      "pessoas_vacinadas": 0,
-      "gap": 12336
+      "pessoas_vacinadas": 4,
+      "gap": 12332
     },
     {
       "codigo_regiao_saude": "16002",
@@ -4586,19 +4586,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 62785,
       "elegiveis_rateados": 12177,
-      "pessoas_vacinadas": 0,
-      "gap": 12177
-    },
-    {
-      "codigo_regiao_saude": "31038",
-      "regiao_saude": "MANTENA/ITABIRINHA",
-      "uf": "MG",
-      "macrorregiao_saude": "LESTE",
-      "n_municipios": 8,
-      "pop_ibge_2022": 64534,
-      "elegiveis_rateados": 12058,
-      "pessoas_vacinadas": 0,
-      "gap": 12058
+      "pessoas_vacinadas": 2,
+      "gap": 12175
     },
     {
       "codigo_regiao_saude": "35115",
@@ -4608,8 +4597,19 @@
       "n_municipios": 4,
       "pop_ibge_2022": 63454,
       "elegiveis_rateados": 12048,
-      "pessoas_vacinadas": 0,
-      "gap": 12048
+      "pessoas_vacinadas": 12,
+      "gap": 12036
+    },
+    {
+      "codigo_regiao_saude": "31038",
+      "regiao_saude": "MANTENA/ITABIRINHA",
+      "uf": "MG",
+      "macrorregiao_saude": "LESTE",
+      "n_municipios": 8,
+      "pop_ibge_2022": 64534,
+      "elegiveis_rateados": 12058,
+      "pessoas_vacinadas": 23,
+      "gap": 12035
     },
     {
       "codigo_regiao_saude": "31068",
@@ -4619,8 +4619,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 64091,
       "elegiveis_rateados": 11975,
-      "pessoas_vacinadas": 0,
-      "gap": 11975
+      "pessoas_vacinadas": 1,
+      "gap": 11974
     },
     {
       "codigo_regiao_saude": "31098",
@@ -4630,8 +4630,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 64043,
       "elegiveis_rateados": 11966,
-      "pessoas_vacinadas": 0,
-      "gap": 11966
+      "pessoas_vacinadas": 20,
+      "gap": 11946
     },
     {
       "codigo_regiao_saude": "31066",
@@ -4641,8 +4641,8 @@
       "n_municipios": 3,
       "pop_ibge_2022": 60597,
       "elegiveis_rateados": 11322,
-      "pessoas_vacinadas": 0,
-      "gap": 11322
+      "pessoas_vacinadas": 30,
+      "gap": 11292
     },
     {
       "codigo_regiao_saude": "25013",
@@ -4652,8 +4652,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 58384,
       "elegiveis_rateados": 10754,
-      "pessoas_vacinadas": 0,
-      "gap": 10754
+      "pessoas_vacinadas": 7,
+      "gap": 10747
     },
     {
       "codigo_regiao_saude": "35113",
@@ -4663,8 +4663,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 56401,
       "elegiveis_rateados": 10709,
-      "pessoas_vacinadas": 0,
-      "gap": 10709
+      "pessoas_vacinadas": 15,
+      "gap": 10694
     },
     {
       "codigo_regiao_saude": "31095",
@@ -4674,8 +4674,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 56981,
       "elegiveis_rateados": 10646,
-      "pessoas_vacinadas": 0,
-      "gap": 10646
+      "pessoas_vacinadas": 24,
+      "gap": 10622
     },
     {
       "codigo_regiao_saude": "31076",
@@ -4685,8 +4685,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 55744,
       "elegiveis_rateados": 10415,
-      "pessoas_vacinadas": 0,
-      "gap": 10415
+      "pessoas_vacinadas": 10,
+      "gap": 10405
     },
     {
       "codigo_regiao_saude": "31062",
@@ -4696,8 +4696,8 @@
       "n_municipios": 8,
       "pop_ibge_2022": 55665,
       "elegiveis_rateados": 10401,
-      "pessoas_vacinadas": 0,
-      "gap": 10401
+      "pessoas_vacinadas": 19,
+      "gap": 10382
     },
     {
       "codigo_regiao_saude": "31067",
@@ -4707,8 +4707,8 @@
       "n_municipios": 4,
       "pop_ibge_2022": 54375,
       "elegiveis_rateados": 10160,
-      "pessoas_vacinadas": 0,
-      "gap": 10160
+      "pessoas_vacinadas": 8,
+      "gap": 10152
     },
     {
       "codigo_regiao_saude": "35152",
@@ -4718,8 +4718,8 @@
       "n_municipios": 6,
       "pop_ibge_2022": 52794,
       "elegiveis_rateados": 10024,
-      "pessoas_vacinadas": 0,
-      "gap": 10024
+      "pessoas_vacinadas": 35,
+      "gap": 9989
     },
     {
       "codigo_regiao_saude": "51016",
@@ -4729,8 +4729,8 @@
       "n_municipios": 4,
       "pop_ibge_2022": 53666,
       "elegiveis_rateados": 9930,
-      "pessoas_vacinadas": 0,
-      "gap": 9930
+      "pessoas_vacinadas": 86,
+      "gap": 9844
     },
     {
       "codigo_regiao_saude": "31041",
@@ -4740,8 +4740,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 52192,
       "elegiveis_rateados": 9752,
-      "pessoas_vacinadas": 0,
-      "gap": 9752
+      "pessoas_vacinadas": 6,
+      "gap": 9746
     },
     {
       "codigo_regiao_saude": "22007",
@@ -4751,8 +4751,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 52237,
       "elegiveis_rateados": 9511,
-      "pessoas_vacinadas": 0,
-      "gap": 9511
+      "pessoas_vacinadas": 5,
+      "gap": 9506
     },
     {
       "codigo_regiao_saude": "31091",
@@ -4762,8 +4762,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 47716,
       "elegiveis_rateados": 8915,
-      "pessoas_vacinadas": 0,
-      "gap": 8915
+      "pessoas_vacinadas": 29,
+      "gap": 8886
     },
     {
       "codigo_regiao_saude": "31046",
@@ -4773,8 +4773,8 @@
       "n_municipios": 3,
       "pop_ibge_2022": 46482,
       "elegiveis_rateados": 8685,
-      "pessoas_vacinadas": 0,
-      "gap": 8685
+      "pessoas_vacinadas": 8,
+      "gap": 8677
     },
     {
       "codigo_regiao_saude": "31050",
@@ -4784,8 +4784,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 43968,
       "elegiveis_rateados": 8215,
-      "pessoas_vacinadas": 0,
-      "gap": 8215
+      "pessoas_vacinadas": 8,
+      "gap": 8207
     },
     {
       "codigo_regiao_saude": "11007",
@@ -4795,8 +4795,8 @@
       "n_municipios": 3,
       "pop_ibge_2022": 40973,
       "elegiveis_rateados": 8029,
-      "pessoas_vacinadas": 0,
-      "gap": 8029
+      "pessoas_vacinadas": 6,
+      "gap": 8023
     },
     {
       "codigo_regiao_saude": "52006",
@@ -4806,8 +4806,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 41541,
       "elegiveis_rateados": 7632,
-      "pessoas_vacinadas": 0,
-      "gap": 7632
+      "pessoas_vacinadas": 3,
+      "gap": 7629
     },
     {
       "codigo_regiao_saude": "31096",
@@ -4817,8 +4817,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 34662,
       "elegiveis_rateados": 6476,
-      "pessoas_vacinadas": 0,
-      "gap": 6476
+      "pessoas_vacinadas": 2,
+      "gap": 6474
     },
     {
       "codigo_regiao_saude": "51009",
@@ -4828,8 +4828,8 @@
       "n_municipios": 5,
       "pop_ibge_2022": 25660,
       "elegiveis_rateados": 4748,
-      "pessoas_vacinadas": 0,
-      "gap": 4748
+      "pessoas_vacinadas": 4,
+      "gap": 4744
     }
   ]
 }

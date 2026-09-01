@@ -295,6 +295,8 @@ def build() -> dict:
             st = "parcial"
         elif iid == "sies_distribuida_aplicada" and not sies.get("por_uf_vpc20"):
             st = "parcial"
+        elif iid == "pct_fora_crie" and not (qualidade_oferta.get("doses_em_cnes_crie") or 0):
+            st = "parcial"
         elif iid == "srag_casos_100k" and not (srag.get("linhas") or []):
             st = "sem_dado"
         elif val is None:
@@ -352,6 +354,8 @@ def build() -> dict:
         "custo_uf": sorted(custo_rows, key=lambda x: -x["custo_gap_brl"]),
         "gap_regiao_saude": gap_rs_rows,
         "serie_transicao": serie,
+        "linha_tempo_vpc20": num.get("linha_tempo") or [],
+        "periodo_vpc20": num.get("periodo") or {},
         "cobertura_sit1": cob_sit1,
         "qualidade_oferta": qualidade_oferta,
         "indicadores_catalogo": indicadores,
@@ -392,7 +396,7 @@ if __name__ == "__main__":
     try:
         import extract_nacional
 
-        extract_nacional.run(max_pages_aux=2)
+        extract_nacional.run(max_pages_aux=10, pni_cache_files=400)
     except Exception as exc:  # noqa: BLE001
         print(f"extract parcial: {exc}")
     out = build()

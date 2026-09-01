@@ -1,0 +1,36 @@
+{
+  "atualizado_em": "2026-09-01T19:29:36.467278+00:00",
+  "fonte": "pni_vpc20_jun_2026.csv + pni_vpc20_mai_2026.csv",
+  "fonte_arquivos": [
+    "pni_vpc20_jun_2026.csv",
+    "pni_vpc20_mai_2026.csv"
+  ],
+  "periodo": {
+    "inicio": "2026-05-01",
+    "fim": "2026-06-31",
+    "meses": 2,
+    "arquivos": [
+      "pni_vpc20_jun_2026.csv",
+      "pni_vpc20_mai_2026.csv"
+    ]
+  },
+  "linha_tempo": [
+    {
+      "ano_mes": "2026-05",
+      "doses_mes": 46777,
+      "pessoas_mes": 46726,
+      "doses_acumuladas": 46777,
+      "pessoas_acumuladas": 46726
+    },
+    {
+      "ano_mes": "2026-06",
+      "doses_mes": 45029,
+      "pessoas_mes": 44984,
+      "doses_acumuladas": 91806,
+      "pessoas_acumuladas": 91679
+    }
+  ],
+  "total_doses": 91806,
+  "total_pessoas": 91679,
+  "nota": "Doses VPC20 (co_vacina=107), idade≥5, data≥início campanha. Meses = dt_vacina (YYYY-MM). Acumulado = soma progressiva."
+}

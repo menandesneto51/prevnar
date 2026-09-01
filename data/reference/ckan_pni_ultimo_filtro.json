@@ -1,9 +1,9 @@
 {
-  "zip": "C:\\Users\\Menandesneto\\OneDrive\\Área de Trabalho\\prevnar\\data\\raw\\ckan_pni\\vacinacao_mai_2026_csv.zip",
-  "out_csv": "C:\\Users\\Menandesneto\\OneDrive\\Área de Trabalho\\prevnar\\data\\raw\\pni_vpc20_mai_2026.csv",
-  "scanned": 21348763,
-  "kept_vpc20": 118612,
-  "grupo_preenchido": 106340,
+  "zip": "C:\\Users\\Menandesneto\\OneDrive\\Área de Trabalho\\prevnar\\data\\raw\\ckan_pni\\vacinacao_jun_2026_csv.zip",
+  "out_csv": "C:\\Users\\Menandesneto\\OneDrive\\Área de Trabalho\\prevnar\\data\\raw\\pni_vpc20_jun_2026.csv",
+  "scanned": 17881263,
+  "kept_vpc20": 193275,
+  "grupo_preenchido": 185969,
   "colunas": [
     "co_documento",
     "co_paciente",

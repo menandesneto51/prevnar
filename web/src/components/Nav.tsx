@@ -9,6 +9,7 @@ const links = [
   { href: "/indicadores", label: "Indicadores" },
   { href: "/regioes", label: "Regiões" },
   { href: "/serie", label: "Série" },
+  { href: "/timeline", label: "Linha do tempo" },
   { href: "/monitoramento", label: "Monitoramento" },
   { href: "/estoque", label: "Estoque" },
   { href: "/custo", label: "Custo do gap" },

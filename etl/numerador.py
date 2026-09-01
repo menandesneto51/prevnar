@@ -120,7 +120,7 @@ def parse_api_date(value: str | None) -> date | None:
 
 def discover_vacina_nomes(con, csv_path: Path) -> list[str]:
     # CKAN usa sg_imunobiologico / ds_nome; dumps antigos usam vacina_nome
-    for col in ("vacina_nome", "sg_imunobiologico", "ds_nome"):
+    for col in ("sg_imunobiologico", "ds_nome", "vacina_nome"):
         q = f"""
         SELECT DISTINCT "{col}"
         FROM read_csv_auto('{csv_path.as_posix()}', delim=';', header=true, ignore_errors=true, sample_size=200000)
@@ -141,9 +141,16 @@ def discover_vacina_nomes(con, csv_path: Path) -> list[str]:
 
 
 def find_csv_paths() -> list[Path]:
-    preferred = sorted(RAW.glob("pni_vpc20*.csv")) + sorted(RAW.glob("pni_vpc20*.CSV"))
-    if preferred:
-        return preferred
+    seen: set[str] = set()
+    out: list[Path] = []
+    for p in sorted(RAW.glob("pni_vpc20*.csv")) + sorted(RAW.glob("pni_vpc20*.CSV")):
+        key = str(p.resolve()).lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(p)
+    if out:
+        return out
     candidates = sorted(RAW.glob("*.csv")) + sorted(RAW.glob("*.CSV"))
     return candidates[:1] if candidates else []
 
@@ -151,6 +158,38 @@ def find_csv_paths() -> list[Path]:
 def find_csv() -> Path | None:
     paths = find_csv_paths()
     return paths[-1] if paths else None
+
+
+def build_linha_tempo(df, *, col_data: str = "data_aplicacao") -> list[dict]:
+    """Série mensal VPC20: doses no mês, pessoas no mês e acumulados."""
+    doses_por_mes: dict[str, int] = {}
+    pessoas_por_mes: dict[str, set[str]] = {}
+    for _, row in df.iterrows():
+        raw = row.get(col_data)
+        mes = str(raw)[:7] if raw is not None and str(raw) not in ("", "nan", "None") else ""
+        if len(mes) != 7 or mes[4] != "-":
+            continue
+        doses_por_mes[mes] = doses_por_mes.get(mes, 0) + 1
+        pessoas_por_mes.setdefault(mes, set()).add(str(row["paciente_id"]))
+
+    pessoas_acum: set[str] = set()
+    doses_acum = 0
+    out: list[dict] = []
+    for mes in sorted(doses_por_mes):
+        doses_mes = doses_por_mes[mes]
+        doses_acum += doses_mes
+        pessoas_mes = pessoas_por_mes.get(mes, set())
+        pessoas_acum |= pessoas_mes
+        out.append(
+            {
+                "ano_mes": mes,
+                "doses_mes": doses_mes,
+                "pessoas_mes": len(pessoas_mes),
+                "doses_acumuladas": doses_acum,
+                "pessoas_acumuladas": len(pessoas_acum),
+            }
+        )
+    return out
 
 
 # --- API path -----------------------------------------------------------------
@@ -179,6 +218,8 @@ def process_api(*, max_pages: int | None = None) -> dict:
     pessoas_all: set[str] = set()
     pessoas_cond_uf: dict[tuple[int, str], set[str]] = {}
     grupos_nao_mapeados: dict[str, int] = {}
+    doses_por_mes: dict[str, int] = {}
+    pessoas_por_mes: dict[str, set[str]] = {}
     doses = 0
     scanned = 0
     vpc20_raw = 0
@@ -249,6 +290,10 @@ def process_api(*, max_pages: int | None = None) -> dict:
 
             doses += 1
             pessoas_all.add(pid)
+            if dt:
+                mes = dt.isoformat()[:7]
+                doses_por_mes[mes] = doses_por_mes.get(mes, 0) + 1
+                pessoas_por_mes.setdefault(mes, set()).add(pid)
             pessoas_uf.setdefault(uf, set()).add(pid)
             mun = normalize_mun_ibge(r.get("codigo_municipio_paciente")) or normalize_mun_ibge(
                 r.get("codigo_municipio_estabelecimento")
@@ -275,6 +320,24 @@ def process_api(*, max_pages: int | None = None) -> dict:
             f"  offset={offset} página={pages} scanned={scanned} "
             f"vpc20={vpc20_raw} ≥5a+data={vpc20_pos_filtro_data_idade} "
             f"doses={doses} pessoas={len(pessoas_all)}"
+        )
+
+    linha_tempo_api: list[dict] = []
+    pessoas_acum: set[str] = set()
+    doses_acum = 0
+    for mes in sorted(doses_por_mes):
+        doses_mes = doses_por_mes[mes]
+        doses_acum += doses_mes
+        pessoas_mes = pessoas_por_mes.get(mes, set())
+        pessoas_acum |= pessoas_mes
+        linha_tempo_api.append(
+            {
+                "ano_mes": mes,
+                "doses_mes": doses_mes,
+                "pessoas_mes": len(pessoas_mes),
+                "doses_acumuladas": doses_acum,
+                "pessoas_acumuladas": len(pessoas_acum),
+            }
         )
 
     payload = {
@@ -330,6 +393,12 @@ def process_api(*, max_pages: int | None = None) -> dict:
             }
             for (cid, uf), pids in sorted(pessoas_cond_uf.items(), key=lambda x: (-len(x[1]), x[0]))
         ],
+        "linha_tempo": linha_tempo_api,
+        "periodo": {
+            "inicio": inicio.isoformat(),
+            "fim": linha_tempo_api[-1]["ano_mes"] + "-31" if linha_tempo_api else None,
+            "meses": len(linha_tempo_api),
+        },
         "cids_nao_mapeados": {},
         "grupos_nao_mapeados": dict(sorted(grupos_nao_mapeados.items(), key=lambda x: -x[1])[:50]),
         "sanity_referencia_doses": None,
@@ -493,15 +562,27 @@ def process_csv(csv_path: Path | list[Path]) -> dict:
     if col_cnes:
         df_crie = df[df["cnes_norm"].isin(crie)].copy()
         used_crie = True
-        if len(df_crie) == 0 and len(df) > 0:
-            print("  AVISO: nenhum CNES bateu a lista seed — mantendo todos VPC20 filtrados.")
+        min_crie = max(100, int(len(df) * 0.05))
+        if len(df) > 0 and len(df_crie) < min_crie:
+            print(
+                f"  AVISO: só {len(df_crie)} de {len(df)} doses em CNES seed "
+                f"(mín. {min_crie}) — mantendo todos VPC20 filtrados."
+            )
             df_crie = df.copy()
             used_crie = False
     else:
         df_crie = df.copy()
         used_crie = False
 
-    # Dedup doses by paciente+data if multiple months overlap (keep unique people for totals)
+    # Dedup paciente+data se vários meses CKAN forem mesclados
+    if len(paths) > 1 and "data_aplicacao" in df_crie.columns:
+        before = len(df_crie)
+        df_crie = df_crie.drop_duplicates(subset=["paciente_id", "data_aplicacao"])
+        if len(df_crie) < before:
+            print(f"  dedup paciente+data: {before} → {len(df_crie)}")
+
+    linha_tempo = build_linha_tempo(df_crie, col_data="data_aplicacao")
+
     total_doses = len(df_crie)
     total_pessoas = df_crie["paciente_id"].nunique()
     if col_cid:
@@ -587,6 +668,13 @@ def process_csv(csv_path: Path | list[Path]) -> dict:
                 for mun, pids in sorted(pessoas_mun.items(), key=lambda x: -len(x[1]))
             ],
             "linhas": linhas,
+            "linha_tempo": linha_tempo,
+            "periodo": {
+                "inicio": data_inicio().isoformat(),
+                "fim": linha_tempo[-1]["ano_mes"] + "-31" if linha_tempo else None,
+                "meses": len(linha_tempo),
+                "arquivos": [p.name for p in paths],
+            },
             "cids_nao_mapeados": dict(sorted(unmapped.items(), key=lambda x: -x[1])[:50]),
             "sanity_referencia_doses": None,
             "sanity_divergencia_pct": None,

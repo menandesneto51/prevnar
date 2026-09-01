@@ -227,6 +227,21 @@ def run(refresh_sources: bool = True) -> dict:
             "linhas": summary.get("por_municipio") or [],
         },
     )
+    timeline = {
+        "atualizado_em": summary["atualizado_em"],
+        "fonte": numerador.get("fonte"),
+        "fonte_arquivos": numerador.get("fonte_arquivos") or [],
+        "periodo": numerador.get("periodo") or {},
+        "linha_tempo": numerador.get("linha_tempo") or [],
+        "total_doses": numerador.get("total_doses"),
+        "total_pessoas": numerador.get("total_pessoas"),
+        "nota": (
+            "Doses VPC20 (co_vacina=107), idade≥5, data≥início campanha. "
+            "Meses = dt_vacina (YYYY-MM). Acumulado = soma progressiva."
+        ),
+    }
+    save_json(MART / "vpc20_timeline.json", timeline)
+    save_json(web_public / "vpc20_timeline.json", timeline)
     save_json(MART / "por_municipio.json", {"linhas": summary.get("por_municipio") or []})
 
     print(f"Mart: {len(gap_rows)} linhas gap | dashboard.json gerado")
