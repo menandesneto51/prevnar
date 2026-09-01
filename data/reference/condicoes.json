@@ -1,0 +1,23 @@
+[
+  {"condicao_id": 1, "condicao_nt52": "HIV/AIDS", "situacao_denominador": 1, "exibe_cobertura": true, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 2, "condicao_nt52": "Oncológicos ativos", "situacao_denominador": 1, "exibe_cobertura": true, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 3, "condicao_nt52": "Transplantados órgãos sólidos", "situacao_denominador": 1, "exibe_cobertura": true, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 4, "condicao_nt52": "TCTH", "situacao_denominador": 1, "exibe_cobertura": true, "esquema_doses": 3, "ativo_v1": true},
+  {"condicao_id": 5, "condicao_nt52": "Terapia CAR-T", "situacao_denominador": 3, "exibe_cobertura": false, "esquema_doses": 3, "ativo_v1": true, "raro": true},
+  {"condicao_id": 6, "condicao_nt52": "Asplenia anatômica/funcional", "situacao_denominador": 2, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 7, "condicao_nt52": "Imunodeficiências primárias", "situacao_denominador": 3, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": true, "raro": true},
+  {"condicao_id": 8, "condicao_nt52": "Fibrose cística", "situacao_denominador": 1, "exibe_cobertura": true, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 9, "condicao_nt52": "Fístula liquórica e DVP", "situacao_denominador": 2, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 10, "condicao_nt52": "Imunodepressão terapêutica", "situacao_denominador": 2, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 11, "condicao_nt52": "Implante coclear", "situacao_denominador": 3, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 12, "condicao_nt52": "Nefropatias / diálise / s. nefrótica", "situacao_denominador": 2, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": true, "nota": "Diálise (Z99.2) usa denominador Situação 1 (SBN) quando carregado"},
+  {"condicao_id": 13, "condicao_nt52": "Pneumopatias crônicas (exceto asma leve)", "situacao_denominador": 2, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 14, "condicao_nt52": "Asma persistente moderada/grave", "situacao_denominador": 2, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 15, "condicao_nt52": "Cardiopatias crônicas", "situacao_denominador": 2, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 16, "condicao_nt52": "Hepatopatias crônicas", "situacao_denominador": 2, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 17, "condicao_nt52": "Doenças neurológicas crônicas incapacitantes", "situacao_denominador": 2, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 18, "condicao_nt52": "Trissomias", "situacao_denominador": 3, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 19, "condicao_nt52": "Diabetes mellitus", "situacao_denominador": 2, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": true},
+  {"condicao_id": 20, "condicao_nt52": "Doenças de depósito", "situacao_denominador": 3, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": true, "raro": true},
+  {"condicao_id": 21, "condicao_nt52": "Prematuros ≤36 sem. (até 23 meses)", "situacao_denominador": 3, "exibe_cobertura": false, "esquema_doses": 1, "ativo_v1": false, "nota": "Excluído do v1 — recorte pediátrico futuro"}
+]

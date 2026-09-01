@@ -1,0 +1,142 @@
+{
+  "atualizado_em": "2026-09-01T13:34:25.916436+00:00",
+  "fonte": "data/manual/sim_pneumo.csv",
+  "linhas": [
+    {
+      "uf": "AC",
+      "ano_mes": "2026-01",
+      "obitos": 0
+    },
+    {
+      "uf": "AL",
+      "ano_mes": "2026-01",
+      "obitos": 1
+    },
+    {
+      "uf": "AM",
+      "ano_mes": "2026-01",
+      "obitos": 1
+    },
+    {
+      "uf": "AP",
+      "ano_mes": "2026-01",
+      "obitos": 0
+    },
+    {
+      "uf": "BA",
+      "ano_mes": "2026-01",
+      "obitos": 2
+    },
+    {
+      "uf": "CE",
+      "ano_mes": "2026-01",
+      "obitos": 1
+    },
+    {
+      "uf": "DF",
+      "ano_mes": "2026-01",
+      "obitos": 1
+    },
+    {
+      "uf": "ES",
+      "ano_mes": "2026-01",
+      "obitos": 1
+    },
+    {
+      "uf": "GO",
+      "ano_mes": "2026-01",
+      "obitos": 1
+    },
+    {
+      "uf": "MA",
+      "ano_mes": "2026-01",
+      "obitos": 1
+    },
+    {
+      "uf": "MG",
+      "ano_mes": "2026-01",
+      "obitos": 2
+    },
+    {
+      "uf": "MS",
+      "ano_mes": "2026-01",
+      "obitos": 0
+    },
+    {
+      "uf": "MT",
+      "ano_mes": "2026-01",
+      "obitos": 1
+    },
+    {
+      "uf": "PA",
+      "ano_mes": "2026-01",
+      "obitos": 1
+    },
+    {
+      "uf": "PB",
+      "ano_mes": "2026-01",
+      "obitos": 0
+    },
+    {
+      "uf": "PE",
+      "ano_mes": "2026-01",
+      "obitos": 1
+    },
+    {
+      "uf": "PI",
+      "ano_mes": "2026-01",
+      "obitos": 0
+    },
+    {
+      "uf": "PR",
+      "ano_mes": "2026-01",
+      "obitos": 2
+    },
+    {
+      "uf": "RJ",
+      "ano_mes": "2026-01",
+      "obitos": 3
+    },
+    {
+      "uf": "RN",
+      "ano_mes": "2026-01",
+      "obitos": 0
+    },
+    {
+      "uf": "RO",
+      "ano_mes": "2026-01",
+      "obitos": 0
+    },
+    {
+      "uf": "RR",
+      "ano_mes": "2026-01",
+      "obitos": 0
+    },
+    {
+      "uf": "RS",
+      "ano_mes": "2026-01",
+      "obitos": 1
+    },
+    {
+      "uf": "SC",
+      "ano_mes": "2026-01",
+      "obitos": 1
+    },
+    {
+      "uf": "SE",
+      "ano_mes": "2026-01",
+      "obitos": 0
+    },
+    {
+      "uf": "SP",
+      "ano_mes": "2026-01",
+      "obitos": 8
+    },
+    {
+      "uf": "TO",
+      "ano_mes": "2026-01",
+      "obitos": 0
+    }
+  ],
+  "nota": "Substituir por ETL FTP SIM/DATASUS"
+}

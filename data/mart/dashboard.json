@@ -1,0 +1,855 @@
+{
+  "atualizado_em": "2026-09-01T13:34:21.284733+00:00",
+  "nacional": {
+    "elegiveis": 37853021,
+    "pessoas_vacinadas": 46726,
+    "gap": 37806295,
+    "taxa_cid_preenchido": 0.0,
+    "total_doses": 46920,
+    "fixture": false,
+    "fonte_numerador": "pni_vpc20_mai_2026.csv",
+    "fonte_tipo": "csv",
+    "sem_cid_na_fonte": true
+  },
+  "por_condicao": [
+    {
+      "condicao_id": 19,
+      "condicao_nt52": "Diabetes mellitus",
+      "situacao_denominador": 2,
+      "elegiveis": 12517399,
+      "elegiveis_display": "12.517.399",
+      "pessoas_vacinadas": 28,
+      "gap": 12517371,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 13,
+      "condicao_nt52": "Pneumopatias crônicas (exceto asma leve)",
+      "situacao_denominador": 2,
+      "elegiveis": 5720751,
+      "elegiveis_display": "5.720.751",
+      "pessoas_vacinadas": 87,
+      "gap": 5720664,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 12,
+      "condicao_nt52": "Nefropatias / diálise / s. nefrótica",
+      "situacao_denominador": 2,
+      "elegiveis": 5350036,
+      "elegiveis_display": "5.350.036",
+      "pessoas_vacinadas": 4,
+      "gap": 5350032,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 14,
+      "condicao_nt52": "Asma persistente moderada/grave",
+      "situacao_denominador": 2,
+      "elegiveis": 4551781,
+      "elegiveis_display": "4.551.781",
+      "pessoas_vacinadas": 0,
+      "gap": 4551781,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 15,
+      "condicao_nt52": "Cardiopatias crônicas",
+      "situacao_denominador": 2,
+      "elegiveis": 3892280,
+      "elegiveis_display": "3.892.280",
+      "pessoas_vacinadas": 40,
+      "gap": 3892240,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 10,
+      "condicao_nt52": "Imunodepressão terapêutica",
+      "situacao_denominador": 2,
+      "elegiveis": 2438454,
+      "elegiveis_display": "2.438.454",
+      "pessoas_vacinadas": 157,
+      "gap": 2438297,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 17,
+      "condicao_nt52": "Doenças neurológicas crônicas incapacitantes",
+      "situacao_denominador": 2,
+      "elegiveis": 1062917,
+      "elegiveis_display": "1.062.917",
+      "pessoas_vacinadas": 40,
+      "gap": 1062877,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 16,
+      "condicao_nt52": "Hepatopatias crônicas",
+      "situacao_denominador": 2,
+      "elegiveis": 975384,
+      "elegiveis_display": "975.384",
+      "pessoas_vacinadas": 1,
+      "gap": 975383,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 1,
+      "condicao_nt52": "HIV/AIDS",
+      "situacao_denominador": 1,
+      "elegiveis": 480000,
+      "elegiveis_display": "480.000",
+      "pessoas_vacinadas": 0,
+      "gap": 480000,
+      "cobertura_pct": 0.0,
+      "exibe_cobertura": true,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 18,
+      "condicao_nt52": "Trissomias",
+      "situacao_denominador": 3,
+      "elegiveis": 258075,
+      "elegiveis_display": "258.075",
+      "pessoas_vacinadas": 5,
+      "gap": 258070,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 2,
+      "condicao_nt52": "Oncológicos ativos",
+      "situacao_denominador": 1,
+      "elegiveis": 220000,
+      "elegiveis_display": "220.000",
+      "pessoas_vacinadas": 0,
+      "gap": 220000,
+      "cobertura_pct": 0.0,
+      "exibe_cobertura": true,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 6,
+      "condicao_nt52": "Asplenia anatômica/funcional",
+      "situacao_denominador": 2,
+      "elegiveis": 212584,
+      "elegiveis_display": "212.584",
+      "pessoas_vacinadas": 0,
+      "gap": 212584,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 3,
+      "condicao_nt52": "Transplantados órgãos sólidos",
+      "situacao_denominador": 1,
+      "elegiveis": 55000,
+      "elegiveis_display": "55.000",
+      "pessoas_vacinadas": 0,
+      "gap": 55000,
+      "cobertura_pct": 0.0,
+      "exibe_cobertura": true,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 7,
+      "condicao_nt52": "Imunodeficiências primárias",
+      "situacao_denominador": 3,
+      "elegiveis": 35000,
+      "elegiveis_display": "35.000",
+      "pessoas_vacinadas": 0,
+      "gap": 35000,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": true
+    },
+    {
+      "condicao_id": 9,
+      "condicao_nt52": "Fístula liquórica e DVP",
+      "situacao_denominador": 2,
+      "elegiveis": 21258,
+      "elegiveis_display": "21.258",
+      "pessoas_vacinadas": 0,
+      "gap": 21258,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 4,
+      "condicao_nt52": "TCTH",
+      "situacao_denominador": 1,
+      "elegiveis": 18000,
+      "elegiveis_display": "18.000",
+      "pessoas_vacinadas": 0,
+      "gap": 18000,
+      "cobertura_pct": 0.0,
+      "exibe_cobertura": true,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 11,
+      "condicao_nt52": "Implante coclear",
+      "situacao_denominador": 3,
+      "elegiveis": 17500,
+      "elegiveis_display": "17.500",
+      "pessoas_vacinadas": 0,
+      "gap": 17500,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 20,
+      "condicao_nt52": "Doenças de depósito",
+      "situacao_denominador": 3,
+      "elegiveis": 17500,
+      "elegiveis_display": "17.500",
+      "pessoas_vacinadas": 0,
+      "gap": 17500,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": true
+    },
+    {
+      "condicao_id": 8,
+      "condicao_nt52": "Fibrose cística",
+      "situacao_denominador": 1,
+      "elegiveis": 6500,
+      "elegiveis_display": "6.500",
+      "pessoas_vacinadas": 0,
+      "gap": 6500,
+      "cobertura_pct": 0.0,
+      "exibe_cobertura": true,
+      "carga_pendente": false,
+      "raro": false
+    },
+    {
+      "condicao_id": 5,
+      "condicao_nt52": "Terapia CAR-T",
+      "situacao_denominador": 3,
+      "elegiveis": 2602,
+      "elegiveis_display": "2.602",
+      "pessoas_vacinadas": 0,
+      "gap": 2602,
+      "cobertura_pct": null,
+      "exibe_cobertura": false,
+      "carga_pendente": false,
+      "raro": true
+    }
+  ],
+  "por_uf": [
+    {
+      "uf": "SP",
+      "elegiveis": 8432188,
+      "pessoas_vacinadas": 13042,
+      "gap": 8419146,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 13042
+    },
+    {
+      "uf": "MG",
+      "elegiveis": 3837729,
+      "pessoas_vacinadas": 7325,
+      "gap": 3830404,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 7325
+    },
+    {
+      "uf": "RJ",
+      "elegiveis": 3216289,
+      "pessoas_vacinadas": 3385,
+      "gap": 3212904,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 3385
+    },
+    {
+      "uf": "BA",
+      "elegiveis": 2519441,
+      "pessoas_vacinadas": 730,
+      "gap": 2518711,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 730
+    },
+    {
+      "uf": "RS",
+      "elegiveis": 2127306,
+      "pessoas_vacinadas": 4208,
+      "gap": 2123098,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 4208
+    },
+    {
+      "uf": "PR",
+      "elegiveis": 2118507,
+      "pessoas_vacinadas": 3439,
+      "gap": 2115068,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 3439
+    },
+    {
+      "uf": "PE",
+      "elegiveis": 1683482,
+      "pessoas_vacinadas": 616,
+      "gap": 1682866,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 616
+    },
+    {
+      "uf": "CE",
+      "elegiveis": 1628878,
+      "pessoas_vacinadas": 721,
+      "gap": 1628157,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 721
+    },
+    {
+      "uf": "SC",
+      "elegiveis": 1459041,
+      "pessoas_vacinadas": 2440,
+      "gap": 1456601,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 2440
+    },
+    {
+      "uf": "PA",
+      "elegiveis": 1378808,
+      "pessoas_vacinadas": 310,
+      "gap": 1378498,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 310
+    },
+    {
+      "uf": "GO",
+      "elegiveis": 1296421,
+      "pessoas_vacinadas": 2543,
+      "gap": 1293878,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 2543
+    },
+    {
+      "uf": "MA",
+      "elegiveis": 1099488,
+      "pessoas_vacinadas": 232,
+      "gap": 1099256,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 232
+    },
+    {
+      "uf": "PB",
+      "elegiveis": 732138,
+      "pessoas_vacinadas": 310,
+      "gap": 731828,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 310
+    },
+    {
+      "uf": "ES",
+      "elegiveis": 726725,
+      "pessoas_vacinadas": 1725,
+      "gap": 725000,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 1725
+    },
+    {
+      "uf": "MT",
+      "elegiveis": 676979,
+      "pessoas_vacinadas": 1442,
+      "gap": 675537,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 1442
+    },
+    {
+      "uf": "AM",
+      "elegiveis": 674102,
+      "pessoas_vacinadas": 120,
+      "gap": 673982,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 120
+    },
+    {
+      "uf": "RN",
+      "elegiveis": 610696,
+      "pessoas_vacinadas": 346,
+      "gap": 610350,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 346
+    },
+    {
+      "uf": "PI",
+      "elegiveis": 595596,
+      "pessoas_vacinadas": 212,
+      "gap": 595384,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 212
+    },
+    {
+      "uf": "AL",
+      "elegiveis": 568787,
+      "pessoas_vacinadas": 243,
+      "gap": 568544,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 243
+    },
+    {
+      "uf": "DF",
+      "elegiveis": 534177,
+      "pessoas_vacinadas": 1563,
+      "gap": 532614,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 1563
+    },
+    {
+      "uf": "MS",
+      "elegiveis": 514932,
+      "pessoas_vacinadas": 650,
+      "gap": 514282,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 650
+    },
+    {
+      "uf": "SE",
+      "elegiveis": 405713,
+      "pessoas_vacinadas": 214,
+      "gap": 405499,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 214
+    },
+    {
+      "uf": "RO",
+      "elegiveis": 309839,
+      "pessoas_vacinadas": 202,
+      "gap": 309637,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 202
+    },
+    {
+      "uf": "TO",
+      "elegiveis": 279746,
+      "pessoas_vacinadas": 135,
+      "gap": 279611,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 135
+    },
+    {
+      "uf": "AC",
+      "elegiveis": 156709,
+      "pessoas_vacinadas": 63,
+      "gap": 156646,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 63
+    },
+    {
+      "uf": "AP",
+      "elegiveis": 142314,
+      "pessoas_vacinadas": 21,
+      "gap": 142293,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 21
+    },
+    {
+      "uf": "RR",
+      "elegiveis": 126990,
+      "pessoas_vacinadas": 25,
+      "gap": 126965,
+      "pendencias": 0,
+      "pessoas_vacinadas_consolidado": 25
+    }
+  ],
+  "por_municipio": [],
+  "qualidade": {
+    "taxa_cid_preenchido": 0.0,
+    "cids_nao_mapeados": {},
+    "filtro_crie_aplicado": false,
+    "sem_cid_na_fonte": true,
+    "fonte_tipo": "csv",
+    "filtro_detalhe": null,
+    "sanity_divergencia_pct": null,
+    "sanity_alerta": false,
+    "situacao1": {
+      "carregados": [
+        "1",
+        "12_dialise",
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "pendentes": [],
+      "detalhe": {
+        "1": 27,
+        "12_dialise": 27,
+        "2": 27,
+        "3": 27,
+        "4": 27,
+        "8": 27
+      }
+    },
+    "nota_numerador": "CSV CKAN PNI 2026. Sem motivo_indicacao_CID — breakdown via co_vacina_grupo_atendimento (proxy)."
+  },
+  "ufs": [
+    {
+      "uf": "RO",
+      "codigo_ibge": "11",
+      "nome": "Rondônia",
+      "regiao": "Norte"
+    },
+    {
+      "uf": "AC",
+      "codigo_ibge": "12",
+      "nome": "Acre",
+      "regiao": "Norte"
+    },
+    {
+      "uf": "AM",
+      "codigo_ibge": "13",
+      "nome": "Amazonas",
+      "regiao": "Norte"
+    },
+    {
+      "uf": "RR",
+      "codigo_ibge": "14",
+      "nome": "Roraima",
+      "regiao": "Norte"
+    },
+    {
+      "uf": "PA",
+      "codigo_ibge": "15",
+      "nome": "Pará",
+      "regiao": "Norte"
+    },
+    {
+      "uf": "AP",
+      "codigo_ibge": "16",
+      "nome": "Amapá",
+      "regiao": "Norte"
+    },
+    {
+      "uf": "TO",
+      "codigo_ibge": "17",
+      "nome": "Tocantins",
+      "regiao": "Norte"
+    },
+    {
+      "uf": "MA",
+      "codigo_ibge": "21",
+      "nome": "Maranhão",
+      "regiao": "Nordeste"
+    },
+    {
+      "uf": "PI",
+      "codigo_ibge": "22",
+      "nome": "Piauí",
+      "regiao": "Nordeste"
+    },
+    {
+      "uf": "CE",
+      "codigo_ibge": "23",
+      "nome": "Ceará",
+      "regiao": "Nordeste"
+    },
+    {
+      "uf": "RN",
+      "codigo_ibge": "24",
+      "nome": "Rio Grande do Norte",
+      "regiao": "Nordeste"
+    },
+    {
+      "uf": "PB",
+      "codigo_ibge": "25",
+      "nome": "Paraíba",
+      "regiao": "Nordeste"
+    },
+    {
+      "uf": "PE",
+      "codigo_ibge": "26",
+      "nome": "Pernambuco",
+      "regiao": "Nordeste"
+    },
+    {
+      "uf": "AL",
+      "codigo_ibge": "27",
+      "nome": "Alagoas",
+      "regiao": "Nordeste"
+    },
+    {
+      "uf": "SE",
+      "codigo_ibge": "28",
+      "nome": "Sergipe",
+      "regiao": "Nordeste"
+    },
+    {
+      "uf": "BA",
+      "codigo_ibge": "29",
+      "nome": "Bahia",
+      "regiao": "Nordeste"
+    },
+    {
+      "uf": "MG",
+      "codigo_ibge": "31",
+      "nome": "Minas Gerais",
+      "regiao": "Sudeste"
+    },
+    {
+      "uf": "ES",
+      "codigo_ibge": "32",
+      "nome": "Espírito Santo",
+      "regiao": "Sudeste"
+    },
+    {
+      "uf": "RJ",
+      "codigo_ibge": "33",
+      "nome": "Rio de Janeiro",
+      "regiao": "Sudeste"
+    },
+    {
+      "uf": "SP",
+      "codigo_ibge": "35",
+      "nome": "São Paulo",
+      "regiao": "Sudeste"
+    },
+    {
+      "uf": "PR",
+      "codigo_ibge": "41",
+      "nome": "Paraná",
+      "regiao": "Sul"
+    },
+    {
+      "uf": "SC",
+      "codigo_ibge": "42",
+      "nome": "Santa Catarina",
+      "regiao": "Sul"
+    },
+    {
+      "uf": "RS",
+      "codigo_ibge": "43",
+      "nome": "Rio Grande do Sul",
+      "regiao": "Sul"
+    },
+    {
+      "uf": "MS",
+      "codigo_ibge": "50",
+      "nome": "Mato Grosso do Sul",
+      "regiao": "Centro-Oeste"
+    },
+    {
+      "uf": "MT",
+      "codigo_ibge": "51",
+      "nome": "Mato Grosso",
+      "regiao": "Centro-Oeste"
+    },
+    {
+      "uf": "GO",
+      "codigo_ibge": "52",
+      "nome": "Goiás",
+      "regiao": "Centro-Oeste"
+    },
+    {
+      "uf": "DF",
+      "codigo_ibge": "53",
+      "nome": "Distrito Federal",
+      "regiao": "Centro-Oeste"
+    }
+  ],
+  "condicoes": [
+    {
+      "condicao_id": 1,
+      "condicao_nt52": "HIV/AIDS",
+      "situacao_denominador": 1,
+      "exibe_cobertura": true,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 2,
+      "condicao_nt52": "Oncológicos ativos",
+      "situacao_denominador": 1,
+      "exibe_cobertura": true,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 3,
+      "condicao_nt52": "Transplantados órgãos sólidos",
+      "situacao_denominador": 1,
+      "exibe_cobertura": true,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 4,
+      "condicao_nt52": "TCTH",
+      "situacao_denominador": 1,
+      "exibe_cobertura": true,
+      "esquema_doses": 3,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 5,
+      "condicao_nt52": "Terapia CAR-T",
+      "situacao_denominador": 3,
+      "exibe_cobertura": false,
+      "esquema_doses": 3,
+      "ativo_v1": true,
+      "raro": true
+    },
+    {
+      "condicao_id": 6,
+      "condicao_nt52": "Asplenia anatômica/funcional",
+      "situacao_denominador": 2,
+      "exibe_cobertura": false,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 7,
+      "condicao_nt52": "Imunodeficiências primárias",
+      "situacao_denominador": 3,
+      "exibe_cobertura": false,
+      "esquema_doses": 1,
+      "ativo_v1": true,
+      "raro": true
+    },
+    {
+      "condicao_id": 8,
+      "condicao_nt52": "Fibrose cística",
+      "situacao_denominador": 1,
+      "exibe_cobertura": true,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 9,
+      "condicao_nt52": "Fístula liquórica e DVP",
+      "situacao_denominador": 2,
+      "exibe_cobertura": false,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 10,
+      "condicao_nt52": "Imunodepressão terapêutica",
+      "situacao_denominador": 2,
+      "exibe_cobertura": false,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 11,
+      "condicao_nt52": "Implante coclear",
+      "situacao_denominador": 3,
+      "exibe_cobertura": false,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 12,
+      "condicao_nt52": "Nefropatias / diálise / s. nefrótica",
+      "situacao_denominador": 2,
+      "exibe_cobertura": false,
+      "esquema_doses": 1,
+      "ativo_v1": true,
+      "nota": "Diálise (Z99.2) usa denominador Situação 1 (SBN) quando carregado"
+    },
+    {
+      "condicao_id": 13,
+      "condicao_nt52": "Pneumopatias crônicas (exceto asma leve)",
+      "situacao_denominador": 2,
+      "exibe_cobertura": false,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 14,
+      "condicao_nt52": "Asma persistente moderada/grave",
+      "situacao_denominador": 2,
+      "exibe_cobertura": false,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 15,
+      "condicao_nt52": "Cardiopatias crônicas",
+      "situacao_denominador": 2,
+      "exibe_cobertura": false,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 16,
+      "condicao_nt52": "Hepatopatias crônicas",
+      "situacao_denominador": 2,
+      "exibe_cobertura": false,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 17,
+      "condicao_nt52": "Doenças neurológicas crônicas incapacitantes",
+      "situacao_denominador": 2,
+      "exibe_cobertura": false,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 18,
+      "condicao_nt52": "Trissomias",
+      "situacao_denominador": 3,
+      "exibe_cobertura": false,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 19,
+      "condicao_nt52": "Diabetes mellitus",
+      "situacao_denominador": 2,
+      "exibe_cobertura": false,
+      "esquema_doses": 1,
+      "ativo_v1": true
+    },
+    {
+      "condicao_id": 20,
+      "condicao_nt52": "Doenças de depósito",
+      "situacao_denominador": 3,
+      "exibe_cobertura": false,
+      "esquema_doses": 1,
+      "ativo_v1": true,
+      "raro": true
+    }
+  ]
+}

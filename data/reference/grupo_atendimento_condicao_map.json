@@ -1,0 +1,22 @@
+{
+  "versao": "1.0",
+  "fonte": "BRGrupoAtendimento (FHIR) + NT 52/2026",
+  "nota": "Proxy codigo_vacina_grupo_atendimento → condição NT52 até CSV CKAN com motivo_indicacao_CID. Cobertura Sit.1 fica parcial.",
+  "mapeamentos": [
+    {"codigo_grupo_atendimento": "000102", "nome_grupo": "Neoplasias", "condicao_id": 2, "proxy": true},
+    {"codigo_grupo_atendimento": "000103", "nome_grupo": "Diabetes Mellitus", "condicao_id": 19, "proxy": true},
+    {"codigo_grupo_atendimento": "000104", "nome_grupo": "Pneumopatias Crônicas Graves", "condicao_id": 13, "proxy": true},
+    {"codigo_grupo_atendimento": "000105", "nome_grupo": "Doença Renal Crônica", "condicao_id": 12, "proxy": true},
+    {"codigo_grupo_atendimento": "000106", "nome_grupo": "Doenças Cardiovasculares e Cerebrovasculares", "condicao_id": 15, "proxy": true},
+    {"codigo_grupo_atendimento": "000108", "nome_grupo": "Indivíduos Transplantados de Órgão Sólido", "condicao_id": 3, "proxy": true},
+    {"codigo_grupo_atendimento": "000110", "nome_grupo": "Síndrome de Down", "condicao_id": 18, "proxy": true},
+    {"codigo_grupo_atendimento": "000111", "nome_grupo": "Outros Imunocomprometidos", "condicao_id": 10, "proxy": true},
+    {"codigo_grupo_atendimento": "000112", "nome_grupo": "Indivíduos Transplantados de Medula Óssea", "condicao_id": 4, "proxy": true},
+    {"codigo_grupo_atendimento": "000114", "nome_grupo": "Cirrose hepática", "condicao_id": 16, "proxy": true},
+    {"codigo_grupo_atendimento": "000115", "nome_grupo": "Doença neurológica crônica", "condicao_id": 17, "proxy": true},
+    {"codigo_grupo_atendimento": "000116", "nome_grupo": "Doença cardiovascular", "condicao_id": 15, "proxy": true},
+    {"codigo_grupo_atendimento": "000117", "nome_grupo": "Imunocomprometidos", "condicao_id": 10, "proxy": true},
+    {"codigo_grupo_atendimento": "000118", "nome_grupo": "Trissomias", "condicao_id": 18, "proxy": true},
+    {"codigo_grupo_atendimento": "000120", "nome_grupo": "Doença renal / diálise (proxy código observado)", "condicao_id": 12, "proxy": true}
+  ]
+}

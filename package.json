@@ -1,0 +1,10 @@
+{
+  "name": "radar-vacinal-vpc20",
+  "private": true,
+  "scripts": {
+    "etl": ".venv\\Scripts\\python etl\\build_mart.py",
+    "dev": "npm --prefix web run dev -- -p 3005",
+    "build": "npm --prefix web run build",
+    "start": "npm --prefix web run start -- -p 3005"
+  }
+}

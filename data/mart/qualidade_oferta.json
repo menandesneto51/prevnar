@@ -1,0 +1,233 @@
+{
+  "atualizado_em": "2026-09-01T13:36:06.776490+00:00",
+  "fonte": "cache api_pni_2026 (200 arquivos) + cnes_crie.json",
+  "atraso_rnds_dias": {
+    "mediana": 2.0,
+    "p90": 38,
+    "n": 469
+  },
+  "pct_fora_crie": 100.0,
+  "doses_vpc20_ge5": 469,
+  "doses_em_cnes_crie": 0,
+  "doses_estrategia_rie": 439,
+  "n_cries_seed": 35,
+  "doses_por_crie_nacional": 13.4,
+  "oferta_uf": [
+    {
+      "uf": "AC",
+      "doses_vpc20_ge5": 0,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 0.0,
+      "pct_fora_crie": null
+    },
+    {
+      "uf": "AL",
+      "doses_vpc20_ge5": 5,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 5.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "AM",
+      "doses_vpc20_ge5": 2,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 2.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "AP",
+      "doses_vpc20_ge5": 0,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 0.0,
+      "pct_fora_crie": null
+    },
+    {
+      "uf": "BA",
+      "doses_vpc20_ge5": 7,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 7.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "CE",
+      "doses_vpc20_ge5": 5,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 5.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "DF",
+      "doses_vpc20_ge5": 13,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 13.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "ES",
+      "doses_vpc20_ge5": 20,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 20.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "GO",
+      "doses_vpc20_ge5": 27,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 27.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "MA",
+      "doses_vpc20_ge5": 4,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 4.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "MG",
+      "doses_vpc20_ge5": 75,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 75.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "MS",
+      "doses_vpc20_ge5": 6,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 6.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "MT",
+      "doses_vpc20_ge5": 12,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 12.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "PA",
+      "doses_vpc20_ge5": 4,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 4.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "PB",
+      "doses_vpc20_ge5": 3,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 3.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "PE",
+      "doses_vpc20_ge5": 12,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 12.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "PI",
+      "doses_vpc20_ge5": 5,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 5.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "PR",
+      "doses_vpc20_ge5": 24,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 24.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "RJ",
+      "doses_vpc20_ge5": 43,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 3,
+      "doses_por_crie": 14.33,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "RN",
+      "doses_vpc20_ge5": 4,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 4.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "RO",
+      "doses_vpc20_ge5": 2,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 2.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "RR",
+      "doses_vpc20_ge5": 0,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 0.0,
+      "pct_fora_crie": null
+    },
+    {
+      "uf": "RS",
+      "doses_vpc20_ge5": 52,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 52.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "SC",
+      "doses_vpc20_ge5": 26,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 26.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "SE",
+      "doses_vpc20_ge5": 1,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 1.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "SP",
+      "doses_vpc20_ge5": 111,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 7,
+      "doses_por_crie": 15.86,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "TO",
+      "doses_vpc20_ge5": 1,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 1.0,
+      "pct_fora_crie": 100.0
+    }
+  ]
+}

@@ -1,0 +1,548 @@
+{
+  "atualizado_em": "2026-09-01T13:34:21.255785+00:00",
+  "fonte": "pni_vpc20_mai_2026.csv",
+  "fonte_tipo": "csv",
+  "fixture": false,
+  "vacina_nomes_descobertos": [],
+  "filtro_crie_aplicado": false,
+  "total_doses": 46920,
+  "total_pessoas": 46726,
+  "taxa_cid_preenchido": 0.0,
+  "sem_cid_na_fonte": true,
+  "proxy_grupo_atendimento": true,
+  "grupo_atendimento_mapeados": 365,
+  "grupos_nao_mapeados": {
+    "000210": 33415,
+    "000926": 7960,
+    "000302": 224,
+    "000703": 74,
+    "000121": 59,
+    "000801": 30,
+    "000912": 21,
+    "001102": 20,
+    "000107": 12,
+    "000907": 7,
+    "000929": 6,
+    "000923": 5,
+    "000802": 5,
+    "001801": 5,
+    "002001": 4,
+    "001501": 3,
+    "002201": 3,
+    "000119": 3,
+    "000927": 2,
+    "000109": 2,
+    "000920": 2,
+    "000908": 2,
+    "000919": 2,
+    "000909": 1,
+    "000901": 1,
+    "000101": 1,
+    "001401": 1,
+    "000931": 1,
+    "001003": 1,
+    "000123": 1,
+    "001901": 1,
+    "000902": 1,
+    "000505": 1,
+    "000921": 1,
+    "000403": 1,
+    "000916": 1,
+    "000401": 1,
+    "000910": 1,
+    "001601": 1,
+    "000122": 1
+  },
+  "pessoas_por_uf": {
+    "AC": 63,
+    "AL": 243,
+    "AM": 120,
+    "AP": 21,
+    "BA": 730,
+    "CE": 721,
+    "DF": 1563,
+    "ES": 1725,
+    "GO": 2543,
+    "MA": 232,
+    "MG": 7325,
+    "MS": 650,
+    "MT": 1442,
+    "ND": 465,
+    "PA": 310,
+    "PB": 310,
+    "PE": 616,
+    "PI": 212,
+    "PR": 3439,
+    "RJ": 3385,
+    "RN": 346,
+    "RO": 202,
+    "RR": 25,
+    "RS": 4208,
+    "SC": 2440,
+    "SE": 214,
+    "SP": 13042,
+    "TO": 135
+  },
+  "linhas": [
+    {
+      "condicao_id": 10,
+      "uf": "AL",
+      "pessoas_vacinadas": 19,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "BA",
+      "pessoas_vacinadas": 3,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "CE",
+      "pessoas_vacinadas": 5,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "DF",
+      "pessoas_vacinadas": 6,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "GO",
+      "pessoas_vacinadas": 7,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "MA",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "MG",
+      "pessoas_vacinadas": 11,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "MS",
+      "pessoas_vacinadas": 9,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "MT",
+      "pessoas_vacinadas": 2,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "ND",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "PA",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "PB",
+      "pessoas_vacinadas": 8,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "PE",
+      "pessoas_vacinadas": 4,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "PI",
+      "pessoas_vacinadas": 10,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "PR",
+      "pessoas_vacinadas": 6,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "RJ",
+      "pessoas_vacinadas": 7,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "RN",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "RO",
+      "pessoas_vacinadas": 2,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "RS",
+      "pessoas_vacinadas": 19,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "SC",
+      "pessoas_vacinadas": 5,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "SE",
+      "pessoas_vacinadas": 2,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 10,
+      "uf": "SP",
+      "pessoas_vacinadas": 29,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 12,
+      "uf": "MG",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 12,
+      "uf": "PR",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 12,
+      "uf": "RS",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 12,
+      "uf": "SP",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "BA",
+      "pessoas_vacinadas": 2,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "CE",
+      "pessoas_vacinadas": 5,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "DF",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "GO",
+      "pessoas_vacinadas": 3,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "MG",
+      "pessoas_vacinadas": 11,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "MS",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "MT",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "ND",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "PA",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "PB",
+      "pessoas_vacinadas": 3,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "PE",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "PI",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "PR",
+      "pessoas_vacinadas": 2,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "RJ",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "RS",
+      "pessoas_vacinadas": 13,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "SC",
+      "pessoas_vacinadas": 7,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "SE",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 13,
+      "uf": "SP",
+      "pessoas_vacinadas": 33,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 15,
+      "uf": "BA",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 15,
+      "uf": "GO",
+      "pessoas_vacinadas": 2,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 15,
+      "uf": "MA",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 15,
+      "uf": "MG",
+      "pessoas_vacinadas": 4,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 15,
+      "uf": "PB",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 15,
+      "uf": "PR",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 15,
+      "uf": "RJ",
+      "pessoas_vacinadas": 3,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 15,
+      "uf": "RS",
+      "pessoas_vacinadas": 4,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 15,
+      "uf": "SC",
+      "pessoas_vacinadas": 6,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 15,
+      "uf": "SP",
+      "pessoas_vacinadas": 17,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 16,
+      "uf": "RS",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 17,
+      "uf": "BA",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 17,
+      "uf": "MG",
+      "pessoas_vacinadas": 4,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 17,
+      "uf": "ND",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 17,
+      "uf": "PA",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 17,
+      "uf": "PB",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 17,
+      "uf": "PR",
+      "pessoas_vacinadas": 2,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 17,
+      "uf": "RJ",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 17,
+      "uf": "SP",
+      "pessoas_vacinadas": 30,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 18,
+      "uf": "GO",
+      "pessoas_vacinadas": 2,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 18,
+      "uf": "PR",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 18,
+      "uf": "SP",
+      "pessoas_vacinadas": 2,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 19,
+      "uf": "AL",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 19,
+      "uf": "BA",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 19,
+      "uf": "CE",
+      "pessoas_vacinadas": 4,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 19,
+      "uf": "GO",
+      "pessoas_vacinadas": 3,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 19,
+      "uf": "MG",
+      "pessoas_vacinadas": 7,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 19,
+      "uf": "PB",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 19,
+      "uf": "PI",
+      "pessoas_vacinadas": 1,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 19,
+      "uf": "RJ",
+      "pessoas_vacinadas": 2,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 19,
+      "uf": "SC",
+      "pessoas_vacinadas": 2,
+      "fonte_proxy": "grupo_atendimento"
+    },
+    {
+      "condicao_id": 19,
+      "uf": "SP",
+      "pessoas_vacinadas": 6,
+      "fonte_proxy": "grupo_atendimento"
+    }
+  ],
+  "cids_nao_mapeados": {},
+  "sanity_referencia_doses": null,
+  "sanity_divergencia_pct": null,
+  "nota": "CSV CKAN PNI 2026. Sem motivo_indicacao_CID — breakdown via co_vacina_grupo_atendimento (proxy)."
+}

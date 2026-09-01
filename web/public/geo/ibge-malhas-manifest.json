@@ -1,0 +1,28 @@
+{
+  "source": "IBGE Malha Municipal Digital 2024",
+  "crs": "EPSG:4674 (SIRGAS 2000)",
+  "copied_from": "Projeto VSR/apps/web/public/geo",
+  "raw_dir": "C:\\vigia-raw\\ibge\\malhas_2024",
+  "layers": {
+    "pais": { "features": 1, "file": "br-pais-2024.geojson" },
+    "uf": { "features": 27, "file": "br-uf-2024.geojson" },
+    "regioes": { "features": 0, "file": "br-regioes-2024.geojson" },
+    "municipios": {
+      "uf_count": 27,
+      "municipality_count": 5573,
+      "dir": "municipios/"
+    }
+  },
+  "checksums_sha256": {
+    "pais": "e84c4d4ab199e646b5a180e0f5b7a991fe4c3d424dff8ae3dcf4495992c128d5",
+    "uf": "be61a1e11bf86b265098b5a0b02eb836237421ad73354b1f0892fb6be4598866",
+    "regioes": "e97f7d434c0c1ee8d8c62f525ade5892562dd982df82310b1dae9a4b93f87394",
+    "municipios": "bb78a8dc60a8320231f6eda79a8c89f68f0e22f0d81608dc051ee505fc72a1e5"
+  },
+  "notes": [
+    "Cópia estática no Radar Vacinal (web/public/geo).",
+    "Geometrias simplificadas para web (topology-preserving).",
+    "Municípios publicados por UF para evitar GeoJSON nacional monolítico.",
+    "Arquivos brutos (.zip/.shp) ficam fora do Git em C:\\vigia-raw\\ibge."
+  ]
+}

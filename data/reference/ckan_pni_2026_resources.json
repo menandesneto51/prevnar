@@ -1,0 +1,32 @@
+{
+  "dataset": "https://dadosabertos.saude.gov.br/dataset/doses-aplicadas-pelo-programa-de-nacional-de-imunizacoes-pni-2026",
+  "nota": "API CKAN package_show retorna 404; use URL S3. ZIPs ~2,5 GB/mês. Baixar para cache local (%LOCALAPPDATA%\\prevnar_ckan) evita lentidão OneDrive.",
+  "s3_padrao": "https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/PNI/csv/vacinacao_{mes}_{ano}_csv.zip",
+  "dicionario": "https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/dbbni/Dicionario_tb_ria_rotina.pdf",
+  "pipeline": "etl/run_ckan_pipeline.py",
+  "exemplos": [
+    {
+      "mes": "mai",
+      "ano": 2026,
+      "resource_id": "7085add6-4b11-491d-93c4-e28253ab6c17",
+      "url": "https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/PNI/csv/vacinacao_mai_2026_csv.zip",
+      "tamanho_bytes": 3324886864,
+      "status": "ok"
+    },
+    {
+      "mes": "jun",
+      "ano": 2026,
+      "url": "https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/PNI/csv/vacinacao_jun_2026_csv.zip",
+      "tamanho_bytes": 2751059346,
+      "status": "pendente"
+    },
+    {
+      "mes": "jul",
+      "ano": 2026,
+      "url": "https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/PNI/csv/vacinacao_jul_2026_csv.zip",
+      "tamanho_bytes": 2266767355,
+      "status": "pendente"
+    }
+  ],
+  "extrator": "etl/extract_ckan_pni.py"
+}

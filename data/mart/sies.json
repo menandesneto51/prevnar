@@ -1,0 +1,2056 @@
+{
+  "atualizado_em": "2026-09-01T13:34:25.662155+00:00",
+  "fonte": "https://apidadosabertos.saude.gov.br/vacinacao/sistema-de-informacao-de-insumos-estrategicos",
+  "registros": 5000,
+  "amostra_campos": [
+    "tx_area",
+    "qtde",
+    "mes",
+    "ibge",
+    "origem",
+    "tx_sigla",
+    "ano",
+    "tx_insumo"
+  ],
+  "por_uf_distribuidas": {
+    "PR": 133700,
+    "RS": 27500,
+    "BA": 51500,
+    "PE": 17136,
+    "RO": 3000,
+    "MS": 15000,
+    "AC": 13396,
+    "PA": 21000,
+    "SE": 7848,
+    "ES": 4800,
+    "AL": 17770,
+    "MA": 20300,
+    "AP": 6078,
+    "RN": 500
+  },
+  "por_uf_pneumo": {
+    "PR": 133700,
+    "RS": 27500,
+    "BA": 51500,
+    "PE": 17136,
+    "RO": 3000,
+    "MS": 15000,
+    "AC": 13396,
+    "PA": 21000,
+    "SE": 7848,
+    "ES": 4800,
+    "AL": 17770,
+    "MA": 20300,
+    "AP": 6078,
+    "RN": 500
+  },
+  "por_uf_vpc20": {},
+  "por_classe_insumo": {
+    "vpc10": 298288,
+    "pneumo_outros": 35440,
+    "vpc13": 5800
+  },
+  "linhas_sample": [
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "40000",
+      "mes": "12",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA ORAL CONTRA POLIOMIELITE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "90000",
+      "mes": "12",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "DILUENTE P/VACINA BCG"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "40000",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA ORAL DE ROTAVIRUS HUMANO UNIDOSE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "3500",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA PNEUMOCOCICA CONJUGADA - 13 VALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100000",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA CONTRA HEPATITE \"B\""
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA ORAL DE ROTAVIRUS HUMANO UNIDOSE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "39500",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "SARS-COV2 - ASTRASENICA/JANSEN"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "SORO ANTI-RABICO HUMANO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "904110",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "SARS-COV2 - CORONAVAC"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100000",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "DILUENTE P/VACINA CONTRA FEBRE AMARELA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "1192180",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "SARS-COV2 - ASTRASENICA/JANSEN"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "12540",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA CONTRA PNEUMOCOCO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30000",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA TETRA VIRAL"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "300",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA PNEUMOCOCICA CONJUGADA - 13 VALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "220000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA ORAL CONTRA POLIOMIELITE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30000",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA CONTRA VARICELA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "20000",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA CONTRA FEBRE AMARELA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "101000",
+      "mes": "11",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA ORAL DE ROTAVIRUS HUMANO UNIDOSE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "350000",
+      "mes": "11",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA DUPLA ADULTO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "1507600",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "SARS-COV2 - CORONAVAC"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "84000",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA ORAL CONTRA POLIOMIELITE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "149560",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA TRIPLICE VIRAL"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "13840",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA CONTRA PNEUMOCOCO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "250",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "IMUNOGLOBULINA HUMANA ANTI-HEPATITE B - 100 UI"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "200",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "SORO ANTICROTALICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "SORO ANTIBOTROPICO (PENTAVALENTE) E CROTALICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "250000",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA DUPLA ADULTO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "550",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA CONTRA PNEUMOCOCO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "90000",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA PAPILOMAVIRUS HUMANO 6,11,16,18 (RECOMBINANTE)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "78030",
+      "mes": "9",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA PENTAVALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA PENTAVALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA CONTRA POLIO INATIVA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "27000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA TRIPLICE ACELULAR (DTPA) - 01 DOSE/ADULTO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "500",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA CONTRA HEPATITE \"A\" (CRIE)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA CONTRA HEPATITE \"A\" (ROTINA PEDIATRICA)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "70000",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA PENTAVALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "1500",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA PNEUMOCOCICA CONJUGADA - 13 VALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "149560",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "DILUENTE P/VACINA TRIPLICE VIRAL"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "41000",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA PENTAVALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "3000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA CONTRA RAIVA CANINA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "5000",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA ORAL DE ROTAVIRUS HUMANO UNIDOSE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA HEXAVALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "200",
+      "mes": "12",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "SORO ANTICROTALICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "350",
+      "mes": "12",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "SORO ANTI-RABICO HUMANO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "150",
+      "mes": "12",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "SORO ANTIESCORPIONICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "250000",
+      "mes": "12",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA CONTRA HEPATITE \"B\""
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30000",
+      "mes": "12",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA CONTRA POLIO INATIVA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "10000",
+      "mes": "12",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA ORAL DE ROTAVIRUS HUMANO UNIDOSE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "DILUENTE P/VACINA BCG"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA BCG INTRADERMICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "70000",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA CONTRA POLIO INATIVA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "400",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "SORO ANTI-RABICO HUMANO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "9000",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA PNEUMOCOCICA CONJUGADA - 13 VALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "700",
+      "mes": "1",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA TRIPLICE ACELULAR (DTPA) - PEDIATRICA CRIE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "25090",
+      "mes": "1",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA MENINGOCOCICA CONJUGADA GRUPO C"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "200",
+      "mes": "9",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "SORO ANTIBOTROPICO (PENTAVALENTE)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "150",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA CONTRA HAEMOPHILUS INFLUENZAE TIPO B"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "SORO ANTIARACNIDICO (LOXOSCELES, PHONEUTRIA E TITYUS)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "15300",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "DILUENTE P/VACINA TETRA VIRAL"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "IMUNOGLOBULINA HUMANA ANTI-RABICA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "SORO ANTIARACNIDICO (LOXOSCELES, PHONEUTRIA E TITYUS)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "8000",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "VACINA CONTRA RAIVA EM CULTURA CELULAR/VERO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "IMUNOGLOBULINA HUMANA ANTI-HEPATITE B - 100 UI"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30",
+      "mes": "5",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "SORO ANTILONOMIA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "40000",
+      "mes": "1",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA CONTRA POLIO INATIVA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "500",
+      "mes": "1",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA CONTRA HEPATITE \"A\" (CRIE)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "500",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "VACINA HEXAVALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "200",
+      "mes": "12",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "SORO ANTICROTALICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100000",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA DUPLA ADULTO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "300",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA TRIPLICE ACELULAR (DTPA) - PEDIATRICA CRIE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "60000",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA PNEUMOCOCICA CONJUGADA - 10 VALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "20000",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA PNEUMOCOCICA CONJUGADA - 10 VALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "20000",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA TRIPLICE ACELULAR (DTPA) - 01 DOSE/ADULTO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "200",
+      "mes": "5",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA CONTRA HAEMOPHILUS INFLUENZAE TIPO B"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "40000",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA MENINGOCOCICA CONJUGADA GRUPO C"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "90000",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "DILUENTE P/VACINA BCG"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "5000",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA MENINGOCOCICA CONJUGADA ACWY"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "150000",
+      "mes": "9",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA DUPLA ADULTO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "38430",
+      "mes": "5",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA CONTRA INFLUENZA (GRIPE)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "70000",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA TRIPLICE (DTP)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "238832",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA TRIPLICE ACELULAR (DTPA) - 01 DOSE/ADULTO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "120000",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA TRIPLICE VIRAL"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "40000",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA ORAL DE ROTAVIRUS HUMANO UNIDOSE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30000",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA TRIPLICE (DTP)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "17800",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA BCG INTRADERMICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "SORO ANTILONOMIA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "180000",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA ORAL CONTRA POLIOMIELITE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "SORO ANTIELAPÍDICO (BIVALENTE)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "60000",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA CONTRA POLIO INATIVA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "1292400",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "VACINA CONTRA INFLUENZA (GRIPE)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "5000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA TRIPLICE ACELULAR (DTPA) - REF/ADULT 01 DS"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "40",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "SORO ANTIELAPÍDICO (BIVALENTE)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "200",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "SORO ANTICROTALICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "70000",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA TRIPLICE (DTP)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "42000",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA TRIPLICE (DTP)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "263572",
+      "mes": "9",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA TRIPLICE VIRAL"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "40000",
+      "mes": "5",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA CONTRA POLIO INATIVA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "330",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "SORO ANTI-TETANICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "5000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "VACINA CONTRA RAIVA EM CULTURA CELULAR/VERO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "15000",
+      "mes": "9",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA CONTRA HEPATITE \"A\" (ROTINA PEDIATRICA)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "5",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA PENTAVALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "VACINA DUPLA ADULTO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "VACINA CONTRA POLIO INATIVA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "1440000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "SARS-COV2 - ASTRASENICA/JANSEN"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "VACINA PNEUMOCOCICA CONJUGADA - 10 VALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "200000",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "VACINA CONTRA FEBRE AMARELA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "80000",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "VACINA DUPLA ADULTO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "35000",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "VACINA CONTRA HEPATITE \"A\" (ROTINA PEDIATRICA)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "700",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA CONTRA HEPATITE \"A\" (CRIE)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "150",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "SORO ANTICROTALICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "60000",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "VACINA PNEUMOCOCICA CONJUGADA - 10 VALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "20",
+      "mes": "12",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "SORO ANTIELAPÍDICO (BIVALENTE)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "40000",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "VACINA ORAL CONTRA POLIOMIELITE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "7000",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "VACINA TRIPLICE ACELULAR (DTPA) - 01 DOSE/ADULTO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "700",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "DILUENTE P/VACINA CONTRA HAEMOPHILUS INFLUENZAE TIPO B"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "IMUNOGLOBULINA HUMANA ANTI-RABICA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "80000",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "DILUENTE P/VACINA CONTRA FEBRE AMARELA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "DILUENTE P/VACINA BCG"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "70000",
+      "mes": "9",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "VACINA CONTRA VARICELA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "9",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "DILUENTE P/VACINA BCG"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30000",
+      "mes": "9",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2022",
+      "tx_insumo": "VACINA ORAL DE ROTAVIRUS HUMANO UNIDOSE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100000",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "DILUENTE P/VACINA TRIPLICE VIRAL"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "162000",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "SARS-COV2 - BIVALENTE BA1"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100000",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA TRIPLICE VIRAL"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "SARS-COV2 - ASTRASENICA/JANSEN"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "150",
+      "mes": "5",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "SORO ANTICROTALICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "SORO ANTIARACNIDICO (LOXOSCELES, PHONEUTRIA E TITYUS)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "SORO ANTIBOTROPICO (PENTAVALENTE) E CROTALICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "150",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "SORO ANTI-TETANICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "SORO ANTIESCORPIONICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "60000",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA ORAL CONTRA POLIOMIELITE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "15000",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA PAPILOMAVIRUS HUMANO 6,11,16,18 (RECOMBINANTE)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "120000",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA CONTRA HEPATITE \"B\""
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "280000",
+      "mes": "9",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "DILUENTE P/VACINA TRIPLICE VIRAL"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "20",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "IMUNOGLOBULINA HUMANA ANTI-HEPATITE B - 100 UI"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "170000",
+      "mes": "9",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA PENTAVALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "70",
+      "mes": "9",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "IMUNOGLOBULINA HUMANA ANTI-TETANICA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "600",
+      "mes": "9",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA PNEUMOCOCICA CONJUGADA - 13 VALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "750",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA PNEUMOCOCICA CONJUGADA - 13 VALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "70000",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "DILUENTE P/VACINA BCG"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "65000",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA CONTRA POLIO INATIVA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30000",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA PNEUMOCOCICA CONJUGADA - 10 VALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50",
+      "mes": "11",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "IMUNOGLOBULINA HUMANA ANTI-RABICA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100000",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "DILUENTE P/VACINA CONTRA FEBRE AMARELA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "40000",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "SARS-COV2 - BABY"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "20000",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2024",
+      "tx_insumo": "VACINA CONTRA POLIO INATIVA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "109998",
+      "mes": "1",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2024",
+      "tx_insumo": "SARS-COV2 - BIVALENTE BA4/BA5"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "38000",
+      "mes": "1",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2024",
+      "tx_insumo": "VACINA TRIPLICE (DTP)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30000",
+      "mes": "1",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2024",
+      "tx_insumo": "VACINA PENTAVALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "1",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2024",
+      "tx_insumo": "DILUENTE P/VACINA CONTRA FEBRE AMARELA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "70000",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2024",
+      "tx_insumo": "VACINA ORAL CONTRA POLIOMIELITE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "600",
+      "mes": "12",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "SORO ANTI-RABICO HUMANO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "7000",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2024",
+      "tx_insumo": "VACINA CONTRA HEPATITE \"A\" (ROTINA PEDIATRICA)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "60000",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "DILUENTE P/VACINA BCG"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "SORO ANTIESCORPIONICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA PENTAVALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "DILUENTE P/VACINA BCG"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "70000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA MENINGOCOCICA CONJUGADA GRUPO C"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30000",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "DILUENTE P/VACINA CONTRA VARICELA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "700",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA HEXAVALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA MENINGOCOCICA CONJUGADA GRUPO C"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "300",
+      "mes": "5",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA TRIPLICE ACELULAR (DTPA) - PEDIATRICA CRIE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "700",
+      "mes": "5",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA HEXAVALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "30",
+      "mes": "8",
+      "ibge": "261160",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PE",
+      "ano": "2023",
+      "tx_insumo": "SORO ANTILONOMIA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "700",
+      "mes": "5",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA CONTRA HAEMOPHILUS INFLUENZAE TIPO B"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "150000",
+      "mes": "5",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "DILUENTE P/VACINA TRIPLICE VIRAL"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "20000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA TRIPLICE ACELULAR (DTPA) - 01 DOSE/ADULTO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "180000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "DILUENTE P/VACINA TRIPLICE VIRAL"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "700",
+      "mes": "5",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "DILUENTE P/VACINA CONTRA HAEMOPHILUS INFLUENZAE TIPO B"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "5",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "VACINA BCG INTRADERMICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "20004",
+      "mes": "7",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "SARS-COV2 - BIVALENTE BA4/BA5"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "250",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "SORO ANTI-RABICO HUMANO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "10",
+      "mes": "8",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2023",
+      "tx_insumo": "SORO ANTIELAPÍDICO (BIVALENTE)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "300",
+      "mes": "5",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "SORO ANTI-RABICO HUMANO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "990200",
+      "mes": "9",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "SARS-COV2 - CORONAVAC"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "40",
+      "mes": "11",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "SORO ANTILONOMIA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "80",
+      "mes": "11",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "SORO ANTIESCORPIONICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "10",
+      "mes": "11",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "IMUNOGLOBULINA HUMANA ANTI-RABICA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "150",
+      "mes": "11",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "IMUNOGLOBULINA HUMANA ANTI-VARICELA ZOSTER"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "120",
+      "mes": "11",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "SORO ANTI-TETANICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "400",
+      "mes": "11",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "SORO ANTIBOTROPICO (PENTAVALENTE)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "IMUNOGLOBULINA HUMANA ANTI-VARICELA ZOSTER"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "5000",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA CONTRA RAIVA EM CULTURA CELULAR/VERO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "20000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA CONTRA HEPATITE \"A\" (ROTINA PEDIATRICA)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50000",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA CONTRA VARICELA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "42000",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA TRIPLICE ACELULAR (DTPA) - 01 DOSE/ADULTO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "1000",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA CONTRA HAEMOPHILUS INFLUENZAE TIPO B"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "600",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA TRIPLICE ACELULAR (DTPA) - PEDIATRICA CRIE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "100",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "SORO ANTI-TETANICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "20",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "SORO ANTIELAPÍDICO (BIVALENTE)"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "20000",
+      "mes": "4",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA ORAL DE ROTAVIRUS HUMANO UNIDOSE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "300",
+      "mes": "6",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "IMUNOGLOBULINA HUMANA ANTI-HEPATITE B - 180 UI"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50",
+      "mes": "1",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "SORO ANTILONOMIA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "40000",
+      "mes": "3",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2021",
+      "tx_insumo": "VACINA MENINGOCOCICA CONJUGADA GRUPO C"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "80000",
+      "mes": "11",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2020",
+      "tx_insumo": "VACINA PENTAVALENTE"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "60000",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA DUPLA ADULTO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "80000",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "VACINA CONTRA HEPATITE \"B\""
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "250",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "SORO ANTICROTALICO"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "45000",
+      "mes": "10",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2018",
+      "tx_insumo": "DILUENTE P/VACINA CONTRA VARICELA"
+    },
+    {
+      "tx_area": "IMUNOBIOLOGICO",
+      "qtde": "50",
+      "mes": "2",
+      "ibge": "410690",
+      "origem": "Distribuido",
+      "tx_sigla": "SES-PR",
+      "ano": "2019",
+      "tx_insumo": "SORO ANTIBOTROPICO (PENTAVALENTE) E CROTALICO"
+    }
+  ],
+  "nota": "Distribuídas pneumo conjugada ≥2024 agregadas por UF (SES-XX / IBGE). VPC20 ainda não no SIES — proxy = pneumo total."
+}

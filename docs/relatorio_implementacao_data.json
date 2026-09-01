@@ -1,0 +1,474 @@
+{
+  "gerado_em": "2026-09-01 15:49 UTC",
+  "baseline": {
+    "plano": "data/reference/plano_extracao_nacional.json",
+    "indicadores": "data/reference/indicadores_nacionais.json",
+    "extracao_md": "data/reference/EXTRACAO_NACIONAL.md",
+    "n_fontes": 13,
+    "n_indicadores": 20,
+    "n_abas_plano": 6
+  },
+  "kpis": {
+    "elegiveis": 37853021,
+    "pessoas_vacinadas_vpc20": 46726,
+    "gap_absoluto": 37806295,
+    "custo_gap_brl": 7015714163.15,
+    "preco_bps_vpc20": 185.57,
+    "preco_bps_nominal": 180.0,
+    "ipca_fator_acumulado": 1.030966,
+    "ipca_referencia_bps": "01/01/2026",
+    "esavi_total": 5,
+    "esavi_por_100k_doses": 10.66,
+    "taxa_cid_preenchido": 0.0,
+    "atraso_rnds_mediana_dias": 2.0,
+    "pct_fora_crie": 100.0,
+    "doses_por_crie": 13.4,
+    "municipios_com_vacinado": 0,
+    "regioes_saude": 439,
+    "municipios_vac_com_rs": 0,
+    "fonte_numerador": "pni_vpc20_mai_2026.csv",
+    "fonte_tipo": "csv",
+    "sem_cid_na_fonte": true,
+    "ipca_ultimo": {
+      "data": "01/07/2026",
+      "valor": "0.07"
+    }
+  },
+  "indicadores_status": [
+    {
+      "id": "elegiveis",
+      "nome": "Elegíveis estimados",
+      "familia": "oportunidade",
+      "status": "ok",
+      "valor": 37853021,
+      "unidade": "pessoas"
+    },
+    {
+      "id": "pessoas_vacinadas_municipio",
+      "nome": "Pessoas vacinadas VPC20 por município",
+      "familia": "oportunidade",
+      "status": "ok",
+      "valor": 0,
+      "unidade": "pessoas"
+    },
+    {
+      "id": "pessoas_vacinadas_vpc20",
+      "nome": "Pessoas vacinadas VPC20 (RIE/CRIE)",
+      "familia": "oportunidade",
+      "status": "ok",
+      "valor": 46726,
+      "unidade": "pessoas"
+    },
+    {
+      "id": "gap_absoluto",
+      "nome": "Gap absoluto",
+      "familia": "oportunidade",
+      "status": "ok",
+      "valor": 37806295,
+      "unidade": "pessoas"
+    },
+    {
+      "id": "cobertura_sit1",
+      "nome": "Cobertura % Situação 1",
+      "familia": "oportunidade",
+      "status": "parcial",
+      "valor": "5 itens",
+      "unidade": "%"
+    },
+    {
+      "id": "gap_regiao_saude",
+      "nome": "Gap por região de saúde",
+      "familia": "oportunidade",
+      "status": "ok",
+      "valor": 37853010,
+      "unidade": "pessoas"
+    },
+    {
+      "id": "share_transicao_pneumo",
+      "nome": "Share VPC10/VPC13/VPP23/VPC20",
+      "familia": "transicao",
+      "status": "ok",
+      "valor": 56,
+      "unidade": "%"
+    },
+    {
+      "id": "sies_distribuida_aplicada",
+      "nome": "Distribuídas ÷ aplicadas (VPC20)",
+      "familia": "oferta",
+      "status": "parcial",
+      "valor": 7.27,
+      "unidade": "razão"
+    },
+    {
+      "id": "doses_por_crie",
+      "nome": "Doses VPC20 por CRIE ativo",
+      "familia": "oferta",
+      "status": "ok",
+      "valor": 13.4,
+      "unidade": "doses/CRIE"
+    },
+    {
+      "id": "pct_fora_crie",
+      "nome": "% doses VPC20 ≥5a fora de CNES CRIE",
+      "familia": "oferta",
+      "status": "ok",
+      "valor": 100.0,
+      "unidade": "%"
+    },
+    {
+      "id": "taxa_cid_preenchido",
+      "nome": "% CID de indicação preenchido",
+      "familia": "qualidade",
+      "status": "ok",
+      "valor": 0.0,
+      "unidade": "%"
+    },
+    {
+      "id": "atraso_rnds",
+      "nome": "Atraso registro RNDS (dias)",
+      "familia": "qualidade",
+      "status": "ok",
+      "valor": 2.0,
+      "unidade": "dias"
+    },
+    {
+      "id": "esavi_por_100k",
+      "nome": "ESAVI por 100k doses VPC20",
+      "familia": "qualidade",
+      "status": "parcial",
+      "valor": 10.66,
+      "unidade": "por 100k"
+    },
+    {
+      "id": "sinan_meningite_100k",
+      "nome": "Meningite (SINAN) por 100 mil",
+      "familia": "desfecho",
+      "status": "ok",
+      "valor": 0.08,
+      "unidade": "por 100k"
+    },
+    {
+      "id": "sih_pneumo_100k",
+      "nome": "Internações pneumocócicas (SIH) por 100 mil",
+      "familia": "desfecho",
+      "status": "ok",
+      "valor": 0.26,
+      "unidade": "por 100k"
+    },
+    {
+      "id": "sim_pneumo_100k",
+      "nome": "Óbitos pneumocócicos (SIM) por 100 mil",
+      "familia": "desfecho",
+      "status": "ok",
+      "valor": 0.01,
+      "unidade": "por 100k"
+    },
+    {
+      "id": "srag_casos_100k",
+      "nome": "SRAG (amostra OpenDataSUS) por 100 mil",
+      "familia": "desfecho",
+      "status": "ok",
+      "valor": 7.06,
+      "unidade": "por 100k"
+    },
+    {
+      "id": "razao_doses_casos",
+      "nome": "Doses VPC20 RIE ÷ (SINAN+SIH)",
+      "familia": "desfecho",
+      "status": "ok",
+      "valor": 63.57,
+      "unidade": "razão"
+    },
+    {
+      "id": "custo_gap",
+      "nome": "Custo do gap",
+      "familia": "economia",
+      "status": "ok",
+      "valor": 7015714163.15,
+      "unidade": "BRL"
+    },
+    {
+      "id": "pressao_fiscal_gap",
+      "nome": "Custo do gap / gasto SIOPS per capita",
+      "familia": "economia",
+      "status": "ok",
+      "valor": 0.037193,
+      "unidade": "índice"
+    }
+  ],
+  "counts": {
+    "ok": 17,
+    "parcial": 3,
+    "sem_dado": 0,
+    "planejado": 0
+  },
+  "fontes_plano": [
+    {
+      "id": "rest_demas_pni",
+      "nome": "DEMAS REST PNI 2020–2026",
+      "url_base": "https://apidadosabertos.saude.gov.br",
+      "paths": [
+        "/vacinacao/doses-aplicadas-pni-2020",
+        "/vacinacao/doses-aplicadas-pni-2021",
+        "/vacinacao/doses-aplicadas-pni-2022",
+        "/vacinacao/doses-aplicadas-pni-2023",
+        "/vacinacao/doses-aplicadas-pni-2024",
+        "/vacinacao/doses-aplicadas-pni-2025",
+        "/vacinacao/doses-aplicadas-pni-2026"
+      ],
+      "pagina_max": 1000,
+      "estrategia": "2020–2023 por UF; 2024–2026 offset global; agregar na ingestão",
+      "destino_raw": "data/raw/api_pni_{ano}/",
+      "destino_mart": "agg_doses_mes_uf_vacina",
+      "prioridade": "P0",
+      "limite": "Sem CID; filtros vacina/UF ignorados em 2024+"
+    },
+    {
+      "id": "csv_ckan_pni",
+      "nome": "CSV CKAN dadosabertos.saude.gov.br",
+      "url_portal": "https://dadosabertos.saude.gov.br/dataset/doses-aplicadas-pelo-programa-de-nacional-de-imunizacoes-pni-2026",
+      "estrategia": "Download mensal; DuckDB streaming; fonte primária se tiver CID",
+      "destino_raw": "data/raw/*.csv",
+      "destino_mart": "numerador.json + breakdown condição",
+      "prioridade": "P0"
+    },
+    {
+      "id": "ibge_6579",
+      "nome": "IBGE Agregados 6579 pop 2024 UF",
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/2024/variaveis/9324?localidades=N3[all]",
+      "estrategia": "GET único",
+      "destino_mart": "denominadores / taxas 100k",
+      "prioridade": "P0"
+    },
+    {
+      "id": "sidra_9514",
+      "nome": "SIDRA/Censo 9514 estrutura etária UF",
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/9514/...",
+      "estrategia": "Baixar pop por idade; calcular frações ≥18 e ≥40 por UF",
+      "destino_mart": "data/reference/fracoes_etarias_uf.json",
+      "prioridade": "P0"
+    },
+    {
+      "id": "cnes_crie",
+      "nome": "CNES — estabelecimentos CRIE",
+      "url_api": "https://apidadosabertos.saude.gov.br (tag CNES)",
+      "estrategia": "Listar estabelecimentos; filtrar CRIE/imunobiológico especial; versionar JSON",
+      "destino_mart": "data/reference/cnes_crie.json",
+      "prioridade": "P0"
+    },
+    {
+      "id": "regiao_saude",
+      "nome": "Macrorregião e Região de Saúde",
+      "url_api": "https://apidadosabertos.saude.gov.br (tag Macrorregião)",
+      "estrategia": "Mapa município→região; agregar gap",
+      "destino_mart": "data/mart/regiao_saude.json",
+      "prioridade": "P0",
+      "status": "ok"
+    },
+    {
+      "id": "sies",
+      "nome": "SIES insumos estratégicos",
+      "path": "/vacinacao/sistema-de-informacao-de-insumos-estrategicos",
+      "estrategia": "Paginar; filtrar VPC20/pneumo; agg UF×mês",
+      "destino_raw": "data/raw/api_sies/",
+      "prioridade": "P0"
+    },
+    {
+      "id": "esavi",
+      "nome": "ESAVI",
+      "path": "/vacinacao/esavi",
+      "estrategia": "Paginar; filtrar VPC20 quando possível; agg UF",
+      "destino_raw": "data/raw/api_esavi/",
+      "prioridade": "P0"
+    },
+    {
+      "id": "sinan_meningite",
+      "nome": "SINAN Meningite",
+      "url": "FTP DATASUS / PySUS (DBC)",
+      "estrategia": "Download anual; filtrar agravo meningite; agg UF×ano/mês",
+      "destino_raw": "data/raw/sinan/",
+      "prioridade": "P0_entrega",
+      "fallback": "seed/manual CSV até FTP automatizado"
+    },
+    {
+      "id": "sih_pneumo",
+      "nome": "SIH AIH — CIDs pneumocócicos",
+      "url": "FTP DATASUS SIH",
+      "estrategia": "Competências mensais; filtrar CIDs em cids_pneumococicos.json",
+      "destino_raw": "data/raw/sih/",
+      "prioridade": "P0_entrega",
+      "fallback": "seed/manual CSV"
+    },
+    {
+      "id": "bps",
+      "nome": "BPS preço imunobiológico",
+      "estrategia": "Consulta preço VPC20; carga manual/API se disponível",
+      "destino_mart": "data/reference/preco_bps_vpc20.json",
+      "prioridade": "P0_entrega"
+    },
+    {
+      "id": "ipca_bcb_433",
+      "nome": "IPCA BCB SGS 433",
+      "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados?formato=json",
+      "estrategia": "GET série; deflator para custo do gap",
+      "prioridade": "P0_entrega"
+    },
+    {
+      "id": "siops",
+      "nome": "SIOPS gasto saúde UF",
+      "estrategia": "Carga anual manual ou API quando estável",
+      "destino_mart": "data/reference/siops_per_capita_uf.json",
+      "prioridade": "P0_entrega",
+      "fallback": "seed por UF"
+    }
+  ],
+  "abas_plano": [
+    {
+      "rota": "/",
+      "foco": "KPIs oportunidade + mapa gap"
+    },
+    {
+      "rota": "/serie",
+      "foco": "Série histórica e transição pneumocócica"
+    },
+    {
+      "rota": "/monitoramento",
+      "foco": "SINAN SIH SIM SRAG × VPC20"
+    },
+    {
+      "rota": "/estoque",
+      "foco": "SIES distribuídas vs aplicadas"
+    },
+    {
+      "rota": "/custo",
+      "foco": "Custo do gap BPS×IPCA×SIOPS"
+    },
+    {
+      "rota": "/qualidade",
+      "foco": "CID atraso ESAVI CNES"
+    }
+  ],
+  "abas_impl": [
+    [
+      "/",
+      "Nacional — KPIs oportunidade"
+    ],
+    [
+      "/indicadores",
+      "Catálogo 20 indicadores + status"
+    ],
+    [
+      "/regioes",
+      "Gap por região de saúde"
+    ],
+    [
+      "/serie",
+      "Transição pneumocócica VPC10/13/20"
+    ],
+    [
+      "/monitoramento",
+      "SINAN · SIH · SIM · SRAG"
+    ],
+    [
+      "/estoque",
+      "SIES distribuídas vs aplicadas"
+    ],
+    [
+      "/custo",
+      "Custo do gap BPS + IPCA"
+    ],
+    [
+      "/qualidade",
+      "Atraso RNDS · ESAVI · oferta CRIE"
+    ],
+    [
+      "/condicoes",
+      "Gap por condição NT52"
+    ],
+    [
+      "/ufs",
+      "Drill-down UF"
+    ],
+    [
+      "/carga",
+      "Upload cadastros Situação 1"
+    ]
+  ],
+  "etl_scripts": [
+    "api_client.py",
+    "build_grupo_map.py",
+    "build_mart.py",
+    "build_nacional.py",
+    "catalog_opendatasus_api.py",
+    "denominadores.py",
+    "discover_ckan_pni.py",
+    "extract_ckan_pni.py",
+    "extract_nacional.py",
+    "generate_relatorio_pdf.py",
+    "numerador.py",
+    "paths.py",
+    "run.py",
+    "run_ckan_pipeline.py",
+    "seed_situacao1.py",
+    "situacao1.py"
+  ],
+  "pendente": [
+    [
+      "CKAN jun/jul 2026",
+      "Ampliar numerador além de mai/2026",
+      "etl/run_ckan_pipeline.py"
+    ],
+    [
+      "Cadastros Situação 1 oficiais",
+      "Substituir seeds por SICLOM/ABTO/SBN etc.",
+      "data/manual/situacao1/"
+    ],
+    [
+      "CNES CRIE definitivo",
+      "Lista seed não bate API; % fora CRIE = 100%",
+      "data/reference/cnes_crie.json"
+    ],
+    [
+      "Mapa municipal vacinados",
+      "por_municipio vazio no mart atual",
+      "numerador CKAN multi-mês"
+    ],
+    [
+      "SINAN/SIH/SIM FTP",
+      "Automatizar PySUS/DATASUS (hoje seeds 27 UFs)",
+      "etl/extract_nacional.py"
+    ],
+    [
+      "SIES VPC20 na API",
+      "API agrega pneumo 10/13; VPC20 não discrimina",
+      "extract_sies"
+    ],
+    [
+      "ESAVI completo",
+      "API vazia; seed manual 5 registros",
+      "data/manual/templates/esavi_template.csv"
+    ]
+  ],
+  "inviavel": [
+    [
+      "CID motivo_indicacao (PNI 2026)",
+      "CSV CKAN 2026 não traz coluna CID; REST também não. Cobertura Sit.1 definitiva por condição clínica não é possível só com bases abertas atuais."
+    ],
+    [
+      "Cobertura Sit.1 para todas NT52",
+      "Denominadores oficiais por condição (21 grupos) não existem em API única; requer cadastros manuais/parceiros por fonte (SICLOM, ABTO, REBRAFC…)."
+    ],
+    [
+      "Inferência causal desfecho",
+      "SINAN/SIH/SIM/SRAG × VPC20 são indicadores ecológicos; dashboard documenta limitação — não há desenho observacional individual."
+    ],
+    [
+      "Numerador 100% CRIE via PNI aberto",
+      "Grande parte VPC20 mai/2026 é grupo 000210 (Faixa Etária / privado), fora do recorte CRIE/RIE estrito sem bases complementares."
+    ],
+    [
+      "SIES dose a dose VPC20",
+      "OpenDataSUS SIES não expõe classe VPC20 de forma confiável; proxy pneumo total."
+    ]
+  ]
+}

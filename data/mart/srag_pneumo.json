@@ -1,0 +1,139 @@
+{
+  "atualizado_em": "2026-09-01T13:35:57.620130+00:00",
+  "fonte": "https://apidadosabertos.saude.gov.br/vigilancia-e-meio-ambiente/srag-2019-2026",
+  "registros_amostra": 15000,
+  "paginas_lidas": 15,
+  "linhas": [
+    {
+      "uf": "SP",
+      "casos": 3560
+    },
+    {
+      "uf": "PR",
+      "casos": 1637
+    },
+    {
+      "uf": "AM",
+      "casos": 1425
+    },
+    {
+      "uf": "PE",
+      "casos": 1084
+    },
+    {
+      "uf": "MG",
+      "casos": 1037
+    },
+    {
+      "uf": "DF",
+      "casos": 825
+    },
+    {
+      "uf": "RJ",
+      "casos": 702
+    },
+    {
+      "uf": "GO",
+      "casos": 543
+    },
+    {
+      "uf": "RS",
+      "casos": 536
+    },
+    {
+      "uf": "PA",
+      "casos": 428
+    },
+    {
+      "uf": "CE",
+      "casos": 427
+    },
+    {
+      "uf": "MS",
+      "casos": 426
+    },
+    {
+      "uf": "SC",
+      "casos": 405
+    },
+    {
+      "uf": "BA",
+      "casos": 371
+    },
+    {
+      "uf": "ES",
+      "casos": 302
+    },
+    {
+      "uf": "PI",
+      "casos": 231
+    },
+    {
+      "uf": "AC",
+      "casos": 182
+    },
+    {
+      "uf": "RN",
+      "casos": 149
+    },
+    {
+      "uf": "SE",
+      "casos": 135
+    },
+    {
+      "uf": "PB",
+      "casos": 122
+    },
+    {
+      "uf": "MT",
+      "casos": 114
+    },
+    {
+      "uf": "MA",
+      "casos": 96
+    },
+    {
+      "uf": "TO",
+      "casos": 87
+    },
+    {
+      "uf": "RO",
+      "casos": 85
+    },
+    {
+      "uf": "AL",
+      "casos": 58
+    },
+    {
+      "uf": "AP",
+      "casos": 19
+    },
+    {
+      "uf": "RR",
+      "casos": 14
+    }
+  ],
+  "por_mes_amostra": [
+    [
+      "2017-12",
+      3
+    ],
+    [
+      "2018-12",
+      14977
+    ],
+    [
+      "2019-12",
+      16
+    ],
+    [
+      "2020-12",
+      3
+    ],
+    [
+      "2021-12",
+      1
+    ]
+  ],
+  "nota": "Amostra paginada SRAG; filtro pneumo específico pendente (FTP completo)."
+}

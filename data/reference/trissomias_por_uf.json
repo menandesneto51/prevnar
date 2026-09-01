@@ -1,0 +1,33 @@
+{
+  "_fonte": "Distribuição proporcional da estimativa nacional 262.500 pela população IBGE 2024 (proxy até carga Censo Q90–Q92 por UF)",
+  "_estimativa_nacional": 262500,
+  "por_uf": {
+    "RO": 2120,
+    "AC": 1070,
+    "AM": 5200,
+    "RR": 870,
+    "PA": 10520,
+    "AP": 975,
+    "TO": 1915,
+    "MA": 8510,
+    "PI": 4100,
+    "CE": 11210,
+    "RN": 4185,
+    "PB": 5030,
+    "PE": 11580,
+    "AL": 3910,
+    "SE": 2780,
+    "BA": 18030,
+    "MG": 25890,
+    "ES": 4980,
+    "RJ": 20900,
+    "SP": 55820,
+    "PR": 14350,
+    "SC": 9780,
+    "RS": 13630,
+    "MS": 3520,
+    "MT": 4660,
+    "GO": 8920,
+    "DF": 3620
+  }
+}

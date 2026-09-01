@@ -1,0 +1,146 @@
+{
+  "objetivo": "Plano de extração para o dashboard nacional VPC20/CRIE",
+  "atualizado_em": "2026-08-31",
+  "ordem_etl": [
+    "ibge_6579",
+    "sidra_9514",
+    "cnes_crie",
+    "rest_demas_pni_serie",
+    "csv_ckan_pni",
+    "sies",
+    "esavi",
+    "sinan_meningite",
+    "sih_pneumo",
+    "sim_srag",
+    "bps_ipca_siops",
+    "build_marts_nacionais"
+  ],
+  "fontes": [
+    {
+      "id": "rest_demas_pni",
+      "nome": "DEMAS REST PNI 2020–2026",
+      "url_base": "https://apidadosabertos.saude.gov.br",
+      "paths": [
+        "/vacinacao/doses-aplicadas-pni-2020",
+        "/vacinacao/doses-aplicadas-pni-2021",
+        "/vacinacao/doses-aplicadas-pni-2022",
+        "/vacinacao/doses-aplicadas-pni-2023",
+        "/vacinacao/doses-aplicadas-pni-2024",
+        "/vacinacao/doses-aplicadas-pni-2025",
+        "/vacinacao/doses-aplicadas-pni-2026"
+      ],
+      "pagina_max": 1000,
+      "estrategia": "2020–2023 por UF; 2024–2026 offset global; agregar na ingestão",
+      "destino_raw": "data/raw/api_pni_{ano}/",
+      "destino_mart": "agg_doses_mes_uf_vacina",
+      "prioridade": "P0",
+      "limite": "Sem CID; filtros vacina/UF ignorados em 2024+"
+    },
+    {
+      "id": "csv_ckan_pni",
+      "nome": "CSV CKAN dadosabertos.saude.gov.br",
+      "url_portal": "https://dadosabertos.saude.gov.br/dataset/doses-aplicadas-pelo-programa-de-nacional-de-imunizacoes-pni-2026",
+      "estrategia": "Download mensal; DuckDB streaming; fonte primária se tiver CID",
+      "destino_raw": "data/raw/*.csv",
+      "destino_mart": "numerador.json + breakdown condição",
+      "prioridade": "P0"
+    },
+    {
+      "id": "ibge_6579",
+      "nome": "IBGE Agregados 6579 pop 2024 UF",
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/2024/variaveis/9324?localidades=N3[all]",
+      "estrategia": "GET único",
+      "destino_mart": "denominadores / taxas 100k",
+      "prioridade": "P0"
+    },
+    {
+      "id": "sidra_9514",
+      "nome": "SIDRA/Censo 9514 estrutura etária UF",
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/9514/...",
+      "estrategia": "Baixar pop por idade; calcular frações ≥18 e ≥40 por UF",
+      "destino_mart": "data/reference/fracoes_etarias_uf.json",
+      "prioridade": "P0"
+    },
+    {
+      "id": "cnes_crie",
+      "nome": "CNES — estabelecimentos CRIE",
+      "url_api": "https://apidadosabertos.saude.gov.br (tag CNES)",
+      "estrategia": "Listar estabelecimentos; filtrar CRIE/imunobiológico especial; versionar JSON",
+      "destino_mart": "data/reference/cnes_crie.json",
+      "prioridade": "P0"
+    },
+    {
+      "id": "regiao_saude",
+      "nome": "Macrorregião e Região de Saúde",
+      "url_api": "https://apidadosabertos.saude.gov.br (tag Macrorregião)",
+      "estrategia": "Mapa município→região; agregar gap",
+      "destino_mart": "data/mart/regiao_saude.json",
+      "prioridade": "P0",
+      "status": "ok"
+    },
+    {
+      "id": "sies",
+      "nome": "SIES insumos estratégicos",
+      "path": "/vacinacao/sistema-de-informacao-de-insumos-estrategicos",
+      "estrategia": "Paginar; filtrar VPC20/pneumo; agg UF×mês",
+      "destino_raw": "data/raw/api_sies/",
+      "prioridade": "P0"
+    },
+    {
+      "id": "esavi",
+      "nome": "ESAVI",
+      "path": "/vacinacao/esavi",
+      "estrategia": "Paginar; filtrar VPC20 quando possível; agg UF",
+      "destino_raw": "data/raw/api_esavi/",
+      "prioridade": "P0"
+    },
+    {
+      "id": "sinan_meningite",
+      "nome": "SINAN Meningite",
+      "url": "FTP DATASUS / PySUS (DBC)",
+      "estrategia": "Download anual; filtrar agravo meningite; agg UF×ano/mês",
+      "destino_raw": "data/raw/sinan/",
+      "prioridade": "P0_entrega",
+      "fallback": "seed/manual CSV até FTP automatizado"
+    },
+    {
+      "id": "sih_pneumo",
+      "nome": "SIH AIH — CIDs pneumocócicos",
+      "url": "FTP DATASUS SIH",
+      "estrategia": "Competências mensais; filtrar CIDs em cids_pneumococicos.json",
+      "destino_raw": "data/raw/sih/",
+      "prioridade": "P0_entrega",
+      "fallback": "seed/manual CSV"
+    },
+    {
+      "id": "bps",
+      "nome": "BPS preço imunobiológico",
+      "estrategia": "Consulta preço VPC20; carga manual/API se disponível",
+      "destino_mart": "data/reference/preco_bps_vpc20.json",
+      "prioridade": "P0_entrega"
+    },
+    {
+      "id": "ipca_bcb_433",
+      "nome": "IPCA BCB SGS 433",
+      "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados?formato=json",
+      "estrategia": "GET série; deflator para custo do gap",
+      "prioridade": "P0_entrega"
+    },
+    {
+      "id": "siops",
+      "nome": "SIOPS gasto saúde UF",
+      "estrategia": "Carga anual manual ou API quando estável",
+      "destino_mart": "data/reference/siops_per_capita_uf.json",
+      "prioridade": "P0_entrega",
+      "fallback": "seed por UF"
+    }
+  ],
+  "dashboard_nacional_abas": [
+    {"rota": "/", "foco": "KPIs oportunidade + mapa gap"},
+    {"rota": "/serie", "foco": "Série histórica e transição pneumocócica"},
+    {"rota": "/monitoramento", "foco": "SINAN SIH SIM SRAG × VPC20"},
+    {"rota": "/estoque", "foco": "SIES distribuídas vs aplicadas"},
+    {"rota": "/custo", "foco": "Custo do gap BPS×IPCA×SIOPS"},
+    {"rota": "/qualidade", "foco": "CID atraso ESAVI CNES"}
+  ]
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="64" viewBox="0 0 280 64" role="img" aria-label="JAMBRO">
+  <rect width="280" height="64" rx="8" fill="#ffffff"/>
+  <rect x="0" y="8" width="7" height="48" fill="#4a6aaf"/>
+  <text x="22" y="40" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#252f49" letter-spacing="2">JAMBRO</text>
+  <text x="22" y="56" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#4a6aaf" letter-spacing="1">TECNOLOGIA · DADOS · SAUDE</text>
+</svg>

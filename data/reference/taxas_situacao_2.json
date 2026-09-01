@@ -1,0 +1,72 @@
+[
+  {
+    "condicao_id": 10,
+    "condicao_nt52": "Imunodepressão terapêutica",
+    "taxa_por_100mil": 1500,
+    "pop_base": "ge18",
+    "fonte": "PNS 2019 — AR, lúpus, IBD"
+  },
+  {
+    "condicao_id": 12,
+    "condicao_nt52": "Nefropatias DRC 3–5 (excl. diálise)",
+    "taxa_por_100mil": 3200,
+    "pop_base": "ge18",
+    "fonte": "GBD 2019 (3,2% pop adulta)"
+  },
+  {
+    "condicao_id": 13,
+    "condicao_nt52": "Pneumopatias crônicas (exceto asma leve)",
+    "taxa_por_100mil": 6320,
+    "pop_base": "ge40",
+    "fonte": "PLATINO-BR (15,8% ≥40a × 40% GOLD II+)"
+  },
+  {
+    "condicao_id": 14,
+    "condicao_nt52": "Asma persistente moderada/grave",
+    "taxa_por_100mil": 2800,
+    "pop_base": "ge18",
+    "fonte": "PNS 2019 × fração grave"
+  },
+  {
+    "condicao_id": 15,
+    "condicao_nt52": "Cardiopatias crônicas",
+    "taxa_por_100mil": 4300,
+    "pop_base": "ge40",
+    "fonte": "PNS 2019 — doença cardíaca referida"
+  },
+  {
+    "condicao_id": 16,
+    "condicao_nt52": "Hepatopatias crônicas",
+    "taxa_por_100mil": 600,
+    "pop_base": "ge18",
+    "fonte": "GBD 2019 — cirrose e hepatite crônica"
+  },
+  {
+    "condicao_id": 17,
+    "condicao_nt52": "Doenças neurológicas crônicas incapacitantes",
+    "taxa_por_100mil": 500,
+    "pop_base": "total",
+    "fonte": "GBD 2019 — epilepsia, PCI, ELA"
+  },
+  {
+    "condicao_id": 19,
+    "condicao_nt52": "Diabetes mellitus",
+    "taxa_por_100mil": 7700,
+    "pop_base": "ge18",
+    "fonte": "PNS 2019 (7,7% adultos)"
+  },
+  {
+    "condicao_id": 6,
+    "condicao_nt52": "Asplenia anatômica/funcional",
+    "taxa_por_100mil": 100,
+    "pop_base": "total",
+    "fonte": "GBD 2019 / literatura"
+  },
+  {
+    "condicao_id": 9,
+    "condicao_nt52": "Fístula liquórica e DVP",
+    "taxa_por_100mil": 10,
+    "pop_base": "total",
+    "fonte": "SIH/SUS — estimativa por procedimento"
+  }
+]

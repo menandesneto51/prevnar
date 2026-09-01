@@ -1,0 +1,182 @@
+{
+  "atualizado_em": "2026-09-01T13:34:25.909887+00:00",
+  "fonte": "data/manual/sih_pneumo.csv",
+  "cids": {
+    "descricao": "CIDs para filtrar desfecho pneumocócico em SIH/SIM (revisável)",
+    "internacao_sih": [
+      {
+        "cid": "J13",
+        "nome": "Pneumonia por Streptococcus pneumoniae"
+      },
+      {
+        "cid": "J181",
+        "nome": "Pneumonia lobar por S. pneumoniae (quando codificado)"
+      },
+      {
+        "cid": "G001",
+        "nome": "Meningite por S. pneumoniae"
+      },
+      {
+        "cid": "A403",
+        "nome": "Sepse por S. pneumoniae"
+      }
+    ],
+    "obito_sim": [
+      {
+        "cid": "J13",
+        "nome": "Pneumonia por S. pneumoniae"
+      },
+      {
+        "cid": "G001",
+        "nome": "Meningite pneumocócica"
+      },
+      {
+        "cid": "A403",
+        "nome": "Sepse pneumocócica"
+      }
+    ],
+    "sinan_meningite": {
+      "agravo": "Meningite",
+      "preferir_etiologia": "pneumocócica",
+      "fallback": "meningite bacteriana (flag definicao=ampla)"
+    }
+  },
+  "linhas": [
+    {
+      "uf": "AC",
+      "ano_mes": "2026-05",
+      "internacoes": 4
+    },
+    {
+      "uf": "AL",
+      "ano_mes": "2026-05",
+      "internacoes": 8
+    },
+    {
+      "uf": "AM",
+      "ano_mes": "2026-05",
+      "internacoes": 12
+    },
+    {
+      "uf": "AP",
+      "ano_mes": "2026-05",
+      "internacoes": 3
+    },
+    {
+      "uf": "BA",
+      "ano_mes": "2026-05",
+      "internacoes": 40
+    },
+    {
+      "uf": "CE",
+      "ano_mes": "2026-05",
+      "internacoes": 22
+    },
+    {
+      "uf": "DF",
+      "ano_mes": "2026-05",
+      "internacoes": 10
+    },
+    {
+      "uf": "ES",
+      "ano_mes": "2026-05",
+      "internacoes": 14
+    },
+    {
+      "uf": "GO",
+      "ano_mes": "2026-05",
+      "internacoes": 18
+    },
+    {
+      "uf": "MA",
+      "ano_mes": "2026-05",
+      "internacoes": 15
+    },
+    {
+      "uf": "MG",
+      "ano_mes": "2026-05",
+      "internacoes": 48
+    },
+    {
+      "uf": "MS",
+      "ano_mes": "2026-05",
+      "internacoes": 9
+    },
+    {
+      "uf": "MT",
+      "ano_mes": "2026-05",
+      "internacoes": 11
+    },
+    {
+      "uf": "PA",
+      "ano_mes": "2026-05",
+      "internacoes": 16
+    },
+    {
+      "uf": "PB",
+      "ano_mes": "2026-05",
+      "internacoes": 10
+    },
+    {
+      "uf": "PE",
+      "ano_mes": "2026-05",
+      "internacoes": 28
+    },
+    {
+      "uf": "PI",
+      "ano_mes": "2026-05",
+      "internacoes": 8
+    },
+    {
+      "uf": "PR",
+      "ano_mes": "2026-05",
+      "internacoes": 30
+    },
+    {
+      "uf": "RJ",
+      "ano_mes": "2026-05",
+      "internacoes": 55
+    },
+    {
+      "uf": "RN",
+      "ano_mes": "2026-05",
+      "internacoes": 9
+    },
+    {
+      "uf": "RO",
+      "ano_mes": "2026-05",
+      "internacoes": 5
+    },
+    {
+      "uf": "RR",
+      "ano_mes": "2026-05",
+      "internacoes": 2
+    },
+    {
+      "uf": "RS",
+      "ano_mes": "2026-05",
+      "internacoes": 32
+    },
+    {
+      "uf": "SC",
+      "ano_mes": "2026-05",
+      "internacoes": 20
+    },
+    {
+      "uf": "SE",
+      "ano_mes": "2026-05",
+      "internacoes": 6
+    },
+    {
+      "uf": "SP",
+      "ano_mes": "2026-05",
+      "internacoes": 120
+    },
+    {
+      "uf": "TO",
+      "ano_mes": "2026-05",
+      "internacoes": 5
+    }
+  ],
+  "nota": "Substituir por ETL FTP SIH"
+}

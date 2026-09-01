@@ -1,0 +1,257 @@
+{
+  "versao": "1.0",
+  "painel": "Radar Vacinal VPC20 · CRIE · dashboard nacional",
+  "granularidade_padrao": [
+    "nacional",
+    "uf",
+    "ano_mes"
+  ],
+  "granularidade_opcional": [
+    "regiao_saude",
+    "municipio"
+  ],
+  "indicadores": [
+    {
+      "id": "elegiveis",
+      "nome": "Elegíveis estimados",
+      "familia": "oportunidade",
+      "formula": "sum(denominadores por condição)",
+      "fonte": [
+        "ibge_6579",
+        "sidra_9514",
+        "taxas_sit2",
+        "sit1_manual",
+        "sit3_estaticas"
+      ],
+      "unidade": "pessoas",
+      "exibe_nacional": true
+    },
+    {
+      "id": "pessoas_vacinadas_municipio",
+      "nome": "Pessoas vacinadas VPC20 por município",
+      "familia": "oportunidade",
+      "formula": "COUNT DISTINCT paciente por codigo_municipio_paciente",
+      "fonte": [
+        "rest_demas_pni",
+        "csv_ckan_pni"
+      ],
+      "unidade": "pessoas",
+      "granularidade": [
+        "municipio",
+        "uf"
+      ],
+      "exibe_mapa": true,
+      "nota": "API DEMAS traz IBGE 6 dígitos; malha IBGE 2024 usa 7 — match por prefixo 6"
+    },
+    {
+      "id": "pessoas_vacinadas_vpc20",
+      "nome": "Pessoas vacinadas VPC20 (RIE/CRIE)",
+      "familia": "oportunidade",
+      "formula": "COUNT DISTINCT paciente | co_vacina=107 | idade>=5 | RIE/CRIE",
+      "fonte": [
+        "csv_ckan_pni",
+        "rest_demas_pni"
+      ],
+      "unidade": "pessoas",
+      "exibe_nacional": true
+    },
+    {
+      "id": "gap_absoluto",
+      "nome": "Gap absoluto",
+      "familia": "oportunidade",
+      "formula": "elegiveis - pessoas_vacinadas_vpc20",
+      "fonte": [
+        "derivado"
+      ],
+      "unidade": "pessoas",
+      "exibe_nacional": true
+    },
+    {
+      "id": "cobertura_sit1",
+      "nome": "Cobertura % Situação 1",
+      "familia": "oportunidade",
+      "formula": "100 * vacinados / elegiveis",
+      "fonte": [
+        "sit1_manual",
+        "numerador"
+      ],
+      "unidade": "%",
+      "nota": "Somente condições com cadastro"
+    },
+    {
+      "id": "gap_regiao_saude",
+      "nome": "Gap por região de saúde",
+      "familia": "oportunidade",
+      "formula": "elegiveis_rs - vacinados_rs",
+      "fonte": [
+        "regiao_saude",
+        "numerador",
+        "denominadores"
+      ],
+      "unidade": "pessoas",
+      "nota": "Elegíveis da UF rateados pela pop IBGE 2022 da RS; vacinados via mun→RS"
+    },
+    {
+      "id": "share_transicao_pneumo",
+      "nome": "Share VPC10/VPC13/VPP23/VPC20",
+      "familia": "transicao",
+      "formula": "doses_vacina / doses_pneumo_total por UF×mês",
+      "fonte": [
+        "rest_demas_pni",
+        "csv_ckan_pni"
+      ],
+      "unidade": "%",
+      "codigos_vacina": {
+        "26": "VPC10",
+        "59": "VPC13",
+        "23": "VPP23_candidato",
+        "107": "VPC20"
+      }
+    },
+    {
+      "id": "sies_distribuida_aplicada",
+      "nome": "Distribuídas ÷ aplicadas (VPC20)",
+      "familia": "oferta",
+      "formula": "doses_distribuidas_sies / doses_aplicadas",
+      "fonte": [
+        "sies",
+        "numerador"
+      ],
+      "unidade": "razão"
+    },
+    {
+      "id": "doses_por_crie",
+      "nome": "Doses VPC20 por CRIE ativo",
+      "familia": "oferta",
+      "formula": "doses_vpc20_rie / n_cries_uf",
+      "fonte": [
+        "cnes",
+        "numerador"
+      ],
+      "unidade": "doses/CRIE"
+    },
+    {
+      "id": "pct_fora_crie",
+      "nome": "% doses VPC20 ≥5a fora de CNES CRIE",
+      "familia": "oferta",
+      "formula": "100 * doses_nao_crie / doses_vpc20_ge5",
+      "fonte": [
+        "cnes",
+        "rest_demas_pni"
+      ],
+      "unidade": "%"
+    },
+    {
+      "id": "taxa_cid_preenchido",
+      "nome": "% CID de indicação preenchido",
+      "familia": "qualidade",
+      "formula": "registros com CID / total VPC20 RIE",
+      "fonte": [
+        "csv_ckan_pni"
+      ],
+      "unidade": "%"
+    },
+    {
+      "id": "atraso_rnds",
+      "nome": "Atraso registro RNDS (dias)",
+      "familia": "qualidade",
+      "formula": "median(dt_entrada_rnds - dt_vacina)",
+      "fonte": [
+        "rest_demas_pni",
+        "csv_ckan_pni"
+      ],
+      "unidade": "dias"
+    },
+    {
+      "id": "esavi_por_100k",
+      "nome": "ESAVI por 100k doses VPC20",
+      "familia": "qualidade",
+      "formula": "100000 * esavi / doses_vpc20",
+      "fonte": [
+        "esavi",
+        "numerador"
+      ],
+      "unidade": "por 100k"
+    },
+    {
+      "id": "sinan_meningite_100k",
+      "nome": "Meningite (SINAN) por 100 mil",
+      "familia": "desfecho",
+      "formula": "100000 * casos_sinan / pop_uf",
+      "fonte": [
+        "sinan_meningite",
+        "ibge_6579"
+      ],
+      "unidade": "por 100k"
+    },
+    {
+      "id": "sih_pneumo_100k",
+      "nome": "Internações pneumocócicas (SIH) por 100 mil",
+      "familia": "desfecho",
+      "formula": "100000 * internacoes / pop_uf",
+      "fonte": [
+        "sih",
+        "ibge_6579"
+      ],
+      "unidade": "por 100k"
+    },
+    {
+      "id": "sim_pneumo_100k",
+      "nome": "Óbitos pneumocócicos (SIM) por 100 mil",
+      "familia": "desfecho",
+      "formula": "100000 * obitos / pop_uf",
+      "unidade": "por 100k",
+      "fonte": [
+        "sim",
+        "ibge_6579"
+      ]
+    },
+    {
+      "id": "srag_casos_100k",
+      "nome": "SRAG (amostra OpenDataSUS) por 100 mil",
+      "familia": "desfecho",
+      "formula": "100000 * casos_srag / pop_uf",
+      "fonte": [
+        "srag_2019_2026",
+        "ibge_6579"
+      ],
+      "unidade": "por 100k",
+      "nota": "Amostra paginada; ecológico — não causal"
+    },
+    {
+      "id": "razao_doses_casos",
+      "nome": "Doses VPC20 RIE ÷ (SINAN+SIH)",
+      "familia": "desfecho",
+      "formula": "doses_vpc20_rie / (casos_sinan + internacoes_sih)",
+      "fonte": [
+        "derivado"
+      ],
+      "unidade": "razão",
+      "nota": "Ecológico — sem inferência causal"
+    },
+    {
+      "id": "custo_gap",
+      "nome": "Custo do gap",
+      "familia": "economia",
+      "formula": "gap_pessoas * preco_bps_vpc20 (deflacionado IPCA)",
+      "fonte": [
+        "bps",
+        "ipca_bcb_433",
+        "gap_absoluto"
+      ],
+      "unidade": "BRL"
+    },
+    {
+      "id": "pressao_fiscal_gap",
+      "nome": "Custo do gap / gasto SIOPS per capita",
+      "familia": "economia",
+      "formula": "custo_gap / (siops_per_capita * pop)",
+      "fonte": [
+        "siops",
+        "custo_gap",
+        "ibge_6579"
+      ],
+      "unidade": "índice"
+    }
+  ]
+}

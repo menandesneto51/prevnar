@@ -1,0 +1,19 @@
+{
+  "descricao": "CIDs para filtrar desfecho pneumocócico em SIH/SIM (revisável)",
+  "internacao_sih": [
+    {"cid": "J13", "nome": "Pneumonia por Streptococcus pneumoniae"},
+    {"cid": "J181", "nome": "Pneumonia lobar por S. pneumoniae (quando codificado)"},
+    {"cid": "G001", "nome": "Meningite por S. pneumoniae"},
+    {"cid": "A403", "nome": "Sepse por S. pneumoniae"}
+  ],
+  "obito_sim": [
+    {"cid": "J13", "nome": "Pneumonia por S. pneumoniae"},
+    {"cid": "G001", "nome": "Meningite pneumocócica"},
+    {"cid": "A403", "nome": "Sepse pneumocócica"}
+  ],
+  "sinan_meningite": {
+    "agravo": "Meningite",
+    "preferir_etiologia": "pneumocócica",
+    "fallback": "meningite bacteriana (flag definicao=ampla)"
+  }
+}

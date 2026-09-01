@@ -1,0 +1,25 @@
+{
+  "vpc20": {
+    "codigo_vacina": ["107"],
+    "nome": "vacina pneumocócica conjugada 20-valente",
+    "sigla": "VPC20",
+    "fonte": "NT 64/2026-DPNI/SVSA/MS e NT 69/2026"
+  },
+  "estrategia_especial_rie": {
+    "codigo_estrategia_vacinacao": ["2", "8"],
+    "descricao": "Estratégia Especial / RIE. Na API DEMAS o código observado na prática é 8; a NT documenta 2.",
+    "fonte_empirica": "Amostra API PNI 2026: 107 → estrat 8 dominante, 2 raro"
+  },
+  "doses_adulto_rie": {
+    "codigo_dose_vacina": ["9"],
+    "descricao": "Dose única (DU) ≥5 anos na RIE"
+  },
+  "data_inicio_padrao": "2026-05-01",
+  "nota_data": "Guia técnico citava jun/2026; API já traz VPC20 (107) em mai/2026. Override: RADAR_DATA_INICIO=YYYY-MM-DD",
+  "outros_pneumococicos": {
+    "26": "VPC10",
+    "59": "VPC13",
+    "106": "VPC15",
+    "107": "VPC20"
+  }
+}

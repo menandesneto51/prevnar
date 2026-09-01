@@ -1,0 +1,12 @@
+{
+  "_fonte": "Seed SIOPS per capita (BRL/habitante/ano) — substituir por carga oficial",
+  "ano": 2024,
+  "por_uf": {
+    "AC": 980, "AL": 920, "AM": 1050, "AP": 1100, "BA": 950,
+    "CE": 1000, "DF": 1800, "ES": 1200, "GO": 1150, "MA": 850,
+    "MG": 1100, "MS": 1250, "MT": 1180, "PA": 900, "PB": 940,
+    "PE": 980, "PI": 880, "PR": 1300, "RJ": 1400, "RN": 960,
+    "RO": 1000, "RR": 1120, "RS": 1350, "SC": 1380, "SE": 930,
+    "SP": 1500, "TO": 970
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "condicao_id": 5,
+    "condicao_nt52": "Terapia CAR-T",
+    "estimativa_nacional": 2600,
+    "metodo": "rateio_pop_adulta",
+    "raro": true,
+    "fonte": "Literatura BR 2024 / centros CAR-T"
+  },
+  {
+    "condicao_id": 7,
+    "condicao_nt52": "Imunodeficiências primárias",
+    "estimativa_nacional": 35000,
+    "metodo": "rateio_pop_total",
+    "raro": true,
+    "fonte": "Literatura / registros SBP"
+  },
+  {
+    "condicao_id": 11,
+    "condicao_nt52": "Implante coclear",
+    "estimativa_nacional": 17500,
+    "metodo": "rateio_pop_total",
+    "raro": false,
+    "fonte": "SBO/ABFono — estimativa BR"
+  },
+  {
+    "condicao_id": 18,
+    "condicao_nt52": "Trissomias",
+    "estimativa_nacional": 262500,
+    "metodo": "seed_por_uf",
+    "raro": false,
+    "fonte": "IBGE Censo 2022 — Q90–Q92"
+  },
+  {
+    "condicao_id": 20,
+    "condicao_nt52": "Doenças de depósito",
+    "estimativa_nacional": 17500,
+    "metodo": "rateio_pop_total",
+    "raro": true,
+    "fonte": "Literatura — prevalência estimada"
+  }
+]

@@ -1,0 +1,7448 @@
+{
+  "atualizado_em": "2026-09-01T13:36:16.168100+00:00",
+  "kpis": {
+    "elegiveis": 37853021,
+    "pessoas_vacinadas_vpc20": 46726,
+    "gap_absoluto": 37806295,
+    "custo_gap_brl": 7015714163.15,
+    "preco_bps_vpc20": 185.57,
+    "preco_bps_nominal": 180.0,
+    "ipca_fator_acumulado": 1.030966,
+    "ipca_referencia_bps": "01/01/2026",
+    "esavi_total": 5,
+    "esavi_por_100k_doses": 10.66,
+    "taxa_cid_preenchido": 0.0,
+    "atraso_rnds_mediana_dias": 2.0,
+    "pct_fora_crie": 100.0,
+    "doses_por_crie": 13.4,
+    "municipios_com_vacinado": 0,
+    "regioes_saude": 439,
+    "municipios_vac_com_rs": 0,
+    "fonte_numerador": "pni_vpc20_mai_2026.csv",
+    "fonte_tipo": "csv",
+    "sem_cid_na_fonte": true,
+    "ipca_ultimo": {
+      "data": "01/07/2026",
+      "valor": "0.07"
+    }
+  },
+  "monitoramento_uf": [
+    {
+      "uf": "SP",
+      "pop": 45973194,
+      "pessoas_vacinadas_vpc20": 13042,
+      "sinan_casos": 42,
+      "sih_internacoes": 120,
+      "sim_obitos": 8,
+      "srag_casos": 3560,
+      "sinan_100k": 0.09,
+      "sih_100k": 0.26,
+      "sim_100k": 0.02,
+      "srag_100k": 7.74,
+      "razao_doses_casos": 80.51
+    },
+    {
+      "uf": "PR",
+      "pop": 11824665,
+      "pessoas_vacinadas_vpc20": 3439,
+      "sinan_casos": 9,
+      "sih_internacoes": 30,
+      "sim_obitos": 2,
+      "srag_casos": 1637,
+      "sinan_100k": 0.08,
+      "sih_100k": 0.25,
+      "sim_100k": 0.02,
+      "srag_100k": 13.84,
+      "razao_doses_casos": 88.18
+    },
+    {
+      "uf": "AM",
+      "pop": 4281209,
+      "pessoas_vacinadas_vpc20": 120,
+      "sinan_casos": 3,
+      "sih_internacoes": 12,
+      "sim_obitos": 1,
+      "srag_casos": 1425,
+      "sinan_100k": 0.07,
+      "sih_100k": 0.28,
+      "sim_100k": 0.02,
+      "srag_100k": 33.28,
+      "razao_doses_casos": 8.0
+    },
+    {
+      "uf": "PE",
+      "pop": 9539029,
+      "pessoas_vacinadas_vpc20": 616,
+      "sinan_casos": 8,
+      "sih_internacoes": 28,
+      "sim_obitos": 1,
+      "srag_casos": 1084,
+      "sinan_100k": 0.08,
+      "sih_100k": 0.29,
+      "sim_100k": 0.01,
+      "srag_100k": 11.36,
+      "razao_doses_casos": 17.11
+    },
+    {
+      "uf": "MG",
+      "pop": 21322691,
+      "pessoas_vacinadas_vpc20": 7325,
+      "sinan_casos": 15,
+      "sih_internacoes": 48,
+      "sim_obitos": 2,
+      "srag_casos": 1037,
+      "sinan_100k": 0.07,
+      "sih_100k": 0.23,
+      "sim_100k": 0.01,
+      "srag_100k": 4.86,
+      "razao_doses_casos": 116.27
+    },
+    {
+      "uf": "DF",
+      "pop": 2982818,
+      "pessoas_vacinadas_vpc20": 1563,
+      "sinan_casos": 3,
+      "sih_internacoes": 10,
+      "sim_obitos": 1,
+      "srag_casos": 825,
+      "sinan_100k": 0.1,
+      "sih_100k": 0.34,
+      "sim_100k": 0.03,
+      "srag_100k": 27.66,
+      "razao_doses_casos": 120.23
+    },
+    {
+      "uf": "RJ",
+      "pop": 17219679,
+      "pessoas_vacinadas_vpc20": 3385,
+      "sinan_casos": 18,
+      "sih_internacoes": 55,
+      "sim_obitos": 3,
+      "srag_casos": 702,
+      "sinan_100k": 0.1,
+      "sih_100k": 0.32,
+      "sim_100k": 0.02,
+      "srag_100k": 4.08,
+      "razao_doses_casos": 46.37
+    },
+    {
+      "uf": "RS",
+      "pop": 11229915,
+      "pessoas_vacinadas_vpc20": 4208,
+      "sinan_casos": 11,
+      "sih_internacoes": 32,
+      "sim_obitos": 1,
+      "srag_casos": 536,
+      "sinan_100k": 0.1,
+      "sih_100k": 0.28,
+      "sim_100k": 0.01,
+      "srag_100k": 4.77,
+      "razao_doses_casos": 97.86
+    },
+    {
+      "uf": "GO",
+      "pop": 7350483,
+      "pessoas_vacinadas_vpc20": 2543,
+      "sinan_casos": 5,
+      "sih_internacoes": 18,
+      "sim_obitos": 1,
+      "srag_casos": 543,
+      "sinan_100k": 0.07,
+      "sih_100k": 0.24,
+      "sim_100k": 0.01,
+      "srag_100k": 7.39,
+      "razao_doses_casos": 110.57
+    },
+    {
+      "uf": "CE",
+      "pop": 9233656,
+      "pessoas_vacinadas_vpc20": 721,
+      "sinan_casos": 7,
+      "sih_internacoes": 22,
+      "sim_obitos": 1,
+      "srag_casos": 427,
+      "sinan_100k": 0.08,
+      "sih_100k": 0.24,
+      "sim_100k": 0.01,
+      "srag_100k": 4.62,
+      "razao_doses_casos": 24.86
+    },
+    {
+      "uf": "PA",
+      "pop": 8664306,
+      "pessoas_vacinadas_vpc20": 310,
+      "sinan_casos": 5,
+      "sih_internacoes": 16,
+      "sim_obitos": 1,
+      "srag_casos": 428,
+      "sinan_100k": 0.06,
+      "sih_100k": 0.18,
+      "sim_100k": 0.01,
+      "srag_100k": 4.94,
+      "razao_doses_casos": 14.76
+    },
+    {
+      "uf": "MS",
+      "pop": 2901895,
+      "pessoas_vacinadas_vpc20": 650,
+      "sinan_casos": 2,
+      "sih_internacoes": 9,
+      "sim_obitos": 0,
+      "srag_casos": 426,
+      "sinan_100k": 0.07,
+      "sih_100k": 0.31,
+      "sim_100k": 0.0,
+      "srag_100k": 14.68,
+      "razao_doses_casos": 59.09
+    },
+    {
+      "uf": "SC",
+      "pop": 8058441,
+      "pessoas_vacinadas_vpc20": 2440,
+      "sinan_casos": 6,
+      "sih_internacoes": 20,
+      "sim_obitos": 1,
+      "srag_casos": 405,
+      "sinan_100k": 0.07,
+      "sih_100k": 0.25,
+      "sim_100k": 0.01,
+      "srag_100k": 5.03,
+      "razao_doses_casos": 93.85
+    },
+    {
+      "uf": "BA",
+      "pop": 14850513,
+      "pessoas_vacinadas_vpc20": 730,
+      "sinan_casos": 12,
+      "sih_internacoes": 40,
+      "sim_obitos": 2,
+      "srag_casos": 371,
+      "sinan_100k": 0.08,
+      "sih_100k": 0.27,
+      "sim_100k": 0.01,
+      "srag_100k": 2.5,
+      "razao_doses_casos": 14.04
+    },
+    {
+      "uf": "ES",
+      "pop": 4102129,
+      "pessoas_vacinadas_vpc20": 1725,
+      "sinan_casos": 4,
+      "sih_internacoes": 14,
+      "sim_obitos": 1,
+      "srag_casos": 302,
+      "sinan_100k": 0.1,
+      "sih_100k": 0.34,
+      "sim_100k": 0.02,
+      "srag_100k": 7.36,
+      "razao_doses_casos": 95.83
+    },
+    {
+      "uf": "PI",
+      "pop": 3375646,
+      "pessoas_vacinadas_vpc20": 212,
+      "sinan_casos": 2,
+      "sih_internacoes": 8,
+      "sim_obitos": 0,
+      "srag_casos": 231,
+      "sinan_100k": 0.06,
+      "sih_100k": 0.24,
+      "sim_100k": 0.0,
+      "srag_100k": 6.84,
+      "razao_doses_casos": 21.2
+    },
+    {
+      "uf": "AC",
+      "pop": 880631,
+      "pessoas_vacinadas_vpc20": 63,
+      "sinan_casos": 1,
+      "sih_internacoes": 4,
+      "sim_obitos": 0,
+      "srag_casos": 182,
+      "sinan_100k": 0.11,
+      "sih_100k": 0.45,
+      "sim_100k": 0.0,
+      "srag_100k": 20.67,
+      "razao_doses_casos": 12.6
+    },
+    {
+      "uf": "RN",
+      "pop": 3446071,
+      "pessoas_vacinadas_vpc20": 346,
+      "sinan_casos": 3,
+      "sih_internacoes": 9,
+      "sim_obitos": 0,
+      "srag_casos": 149,
+      "sinan_100k": 0.09,
+      "sih_100k": 0.26,
+      "sim_100k": 0.0,
+      "srag_100k": 4.32,
+      "razao_doses_casos": 28.83
+    },
+    {
+      "uf": "SE",
+      "pop": 2291077,
+      "pessoas_vacinadas_vpc20": 214,
+      "sinan_casos": 2,
+      "sih_internacoes": 6,
+      "sim_obitos": 0,
+      "srag_casos": 135,
+      "sinan_100k": 0.09,
+      "sih_100k": 0.26,
+      "sim_100k": 0.0,
+      "srag_100k": 5.89,
+      "razao_doses_casos": 26.75
+    },
+    {
+      "uf": "PB",
+      "pop": 4145040,
+      "pessoas_vacinadas_vpc20": 310,
+      "sinan_casos": 3,
+      "sih_internacoes": 10,
+      "sim_obitos": 0,
+      "srag_casos": 122,
+      "sinan_100k": 0.07,
+      "sih_100k": 0.24,
+      "sim_100k": 0.0,
+      "srag_100k": 2.94,
+      "razao_doses_casos": 23.85
+    },
+    {
+      "uf": "MT",
+      "pop": 3836399,
+      "pessoas_vacinadas_vpc20": 1442,
+      "sinan_casos": 3,
+      "sih_internacoes": 11,
+      "sim_obitos": 1,
+      "srag_casos": 114,
+      "sinan_100k": 0.08,
+      "sih_100k": 0.29,
+      "sim_100k": 0.03,
+      "srag_100k": 2.97,
+      "razao_doses_casos": 103.0
+    },
+    {
+      "uf": "MA",
+      "pop": 7010960,
+      "pessoas_vacinadas_vpc20": 232,
+      "sinan_casos": 4,
+      "sih_internacoes": 15,
+      "sim_obitos": 1,
+      "srag_casos": 96,
+      "sinan_100k": 0.06,
+      "sih_100k": 0.21,
+      "sim_100k": 0.01,
+      "srag_100k": 1.37,
+      "razao_doses_casos": 12.21
+    },
+    {
+      "uf": "TO",
+      "pop": 1577342,
+      "pessoas_vacinadas_vpc20": 135,
+      "sinan_casos": 2,
+      "sih_internacoes": 5,
+      "sim_obitos": 0,
+      "srag_casos": 87,
+      "sinan_100k": 0.13,
+      "sih_100k": 0.32,
+      "sim_100k": 0.0,
+      "srag_100k": 5.52,
+      "razao_doses_casos": 19.29
+    },
+    {
+      "uf": "RO",
+      "pop": 1746227,
+      "pessoas_vacinadas_vpc20": 202,
+      "sinan_casos": 1,
+      "sih_internacoes": 5,
+      "sim_obitos": 0,
+      "srag_casos": 85,
+      "sinan_100k": 0.06,
+      "sih_100k": 0.29,
+      "sim_100k": 0.0,
+      "srag_100k": 4.87,
+      "razao_doses_casos": 33.67
+    },
+    {
+      "uf": "AL",
+      "pop": 3220104,
+      "pessoas_vacinadas_vpc20": 243,
+      "sinan_casos": 2,
+      "sih_internacoes": 8,
+      "sim_obitos": 1,
+      "srag_casos": 58,
+      "sinan_100k": 0.06,
+      "sih_100k": 0.25,
+      "sim_100k": 0.03,
+      "srag_100k": 1.8,
+      "razao_doses_casos": 24.3
+    },
+    {
+      "uf": "AP",
+      "pop": 802837,
+      "pessoas_vacinadas_vpc20": 21,
+      "sinan_casos": 1,
+      "sih_internacoes": 3,
+      "sim_obitos": 0,
+      "srag_casos": 19,
+      "sinan_100k": 0.12,
+      "sih_100k": 0.37,
+      "sim_100k": 0.0,
+      "srag_100k": 2.37,
+      "razao_doses_casos": 5.25
+    },
+    {
+      "uf": "RR",
+      "pop": 716793,
+      "pessoas_vacinadas_vpc20": 25,
+      "sinan_casos": 1,
+      "sih_internacoes": 2,
+      "sim_obitos": 0,
+      "srag_casos": 14,
+      "sinan_100k": 0.14,
+      "sih_100k": 0.28,
+      "sim_100k": 0.0,
+      "srag_100k": 1.95,
+      "razao_doses_casos": 8.33
+    }
+  ],
+  "estoque_uf": [
+    {
+      "uf": "AC",
+      "distribuidas": 13396,
+      "aplicadas": 63,
+      "razao_dist_aplic": 212.63,
+      "doses_por_crie": 0.0,
+      "pct_fora_crie": null,
+      "n_cries_seed": 1
+    },
+    {
+      "uf": "AL",
+      "distribuidas": 17770,
+      "aplicadas": 243,
+      "razao_dist_aplic": 73.13,
+      "doses_por_crie": 5.0,
+      "pct_fora_crie": 100.0,
+      "n_cries_seed": 1
+    },
+    {
+      "uf": "AP",
+      "distribuidas": 6078,
+      "aplicadas": 21,
+      "razao_dist_aplic": 289.43,
+      "doses_por_crie": 0.0,
+      "pct_fora_crie": null,
+      "n_cries_seed": 1
+    },
+    {
+      "uf": "BA",
+      "distribuidas": 51500,
+      "aplicadas": 730,
+      "razao_dist_aplic": 70.55,
+      "doses_por_crie": 7.0,
+      "pct_fora_crie": 100.0,
+      "n_cries_seed": 1
+    },
+    {
+      "uf": "ES",
+      "distribuidas": 4800,
+      "aplicadas": 1725,
+      "razao_dist_aplic": 2.78,
+      "doses_por_crie": 20.0,
+      "pct_fora_crie": 100.0,
+      "n_cries_seed": 1
+    },
+    {
+      "uf": "MA",
+      "distribuidas": 20300,
+      "aplicadas": 232,
+      "razao_dist_aplic": 87.5,
+      "doses_por_crie": 4.0,
+      "pct_fora_crie": 100.0,
+      "n_cries_seed": 1
+    },
+    {
+      "uf": "MS",
+      "distribuidas": 15000,
+      "aplicadas": 650,
+      "razao_dist_aplic": 23.08,
+      "doses_por_crie": 6.0,
+      "pct_fora_crie": 100.0,
+      "n_cries_seed": 1
+    },
+    {
+      "uf": "PA",
+      "distribuidas": 21000,
+      "aplicadas": 310,
+      "razao_dist_aplic": 67.74,
+      "doses_por_crie": 4.0,
+      "pct_fora_crie": 100.0,
+      "n_cries_seed": 1
+    },
+    {
+      "uf": "PE",
+      "distribuidas": 17136,
+      "aplicadas": 616,
+      "razao_dist_aplic": 27.82,
+      "doses_por_crie": 12.0,
+      "pct_fora_crie": 100.0,
+      "n_cries_seed": 1
+    },
+    {
+      "uf": "PR",
+      "distribuidas": 133700,
+      "aplicadas": 3439,
+      "razao_dist_aplic": 38.88,
+      "doses_por_crie": 24.0,
+      "pct_fora_crie": 100.0,
+      "n_cries_seed": 1
+    },
+    {
+      "uf": "RN",
+      "distribuidas": 500,
+      "aplicadas": 346,
+      "razao_dist_aplic": 1.45,
+      "doses_por_crie": 4.0,
+      "pct_fora_crie": 100.0,
+      "n_cries_seed": 1
+    },
+    {
+      "uf": "RO",
+      "distribuidas": 3000,
+      "aplicadas": 202,
+      "razao_dist_aplic": 14.85,
+      "doses_por_crie": 2.0,
+      "pct_fora_crie": 100.0,
+      "n_cries_seed": 1
+    },
+    {
+      "uf": "RS",
+      "distribuidas": 27500,
+      "aplicadas": 4208,
+      "razao_dist_aplic": 6.54,
+      "doses_por_crie": 52.0,
+      "pct_fora_crie": 100.0,
+      "n_cries_seed": 1
+    },
+    {
+      "uf": "SE",
+      "distribuidas": 7848,
+      "aplicadas": 214,
+      "razao_dist_aplic": 36.67,
+      "doses_por_crie": 1.0,
+      "pct_fora_crie": 100.0,
+      "n_cries_seed": 1
+    }
+  ],
+  "sies_resumo": {
+    "por_classe_insumo": {
+      "vpc10": 298288,
+      "pneumo_outros": 35440,
+      "vpc13": 5800
+    },
+    "nota": "Distribuídas pneumo conjugada ≥2024 agregadas por UF (SES-XX / IBGE). VPC20 ainda não no SIES — proxy = pneumo total."
+  },
+  "oferta_uf": [
+    {
+      "uf": "AC",
+      "doses_vpc20_ge5": 0,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 0.0,
+      "pct_fora_crie": null
+    },
+    {
+      "uf": "AL",
+      "doses_vpc20_ge5": 5,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 5.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "AM",
+      "doses_vpc20_ge5": 2,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 2.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "AP",
+      "doses_vpc20_ge5": 0,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 0.0,
+      "pct_fora_crie": null
+    },
+    {
+      "uf": "BA",
+      "doses_vpc20_ge5": 7,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 7.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "CE",
+      "doses_vpc20_ge5": 5,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 5.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "DF",
+      "doses_vpc20_ge5": 13,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 13.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "ES",
+      "doses_vpc20_ge5": 20,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 20.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "GO",
+      "doses_vpc20_ge5": 27,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 27.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "MA",
+      "doses_vpc20_ge5": 4,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 4.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "MG",
+      "doses_vpc20_ge5": 75,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 75.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "MS",
+      "doses_vpc20_ge5": 6,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 6.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "MT",
+      "doses_vpc20_ge5": 12,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 12.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "PA",
+      "doses_vpc20_ge5": 4,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 4.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "PB",
+      "doses_vpc20_ge5": 3,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 3.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "PE",
+      "doses_vpc20_ge5": 12,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 12.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "PI",
+      "doses_vpc20_ge5": 5,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 5.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "PR",
+      "doses_vpc20_ge5": 24,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 24.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "RJ",
+      "doses_vpc20_ge5": 43,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 3,
+      "doses_por_crie": 14.33,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "RN",
+      "doses_vpc20_ge5": 4,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 4.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "RO",
+      "doses_vpc20_ge5": 2,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 2.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "RR",
+      "doses_vpc20_ge5": 0,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 0.0,
+      "pct_fora_crie": null
+    },
+    {
+      "uf": "RS",
+      "doses_vpc20_ge5": 52,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 52.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "SC",
+      "doses_vpc20_ge5": 26,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 26.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "SE",
+      "doses_vpc20_ge5": 1,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 1.0,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "SP",
+      "doses_vpc20_ge5": 111,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 7,
+      "doses_por_crie": 15.86,
+      "pct_fora_crie": 100.0
+    },
+    {
+      "uf": "TO",
+      "doses_vpc20_ge5": 1,
+      "doses_em_cnes_crie": 0,
+      "n_cries_seed": 1,
+      "doses_por_crie": 1.0,
+      "pct_fora_crie": 100.0
+    }
+  ],
+  "custo_uf": [
+    {
+      "uf": "SP",
+      "gap": 8419146,
+      "custo_gap_brl": 1562340923.22,
+      "siops_per_capita": 1500,
+      "pressao_fiscal_indice": 0.022656
+    },
+    {
+      "uf": "MG",
+      "gap": 3830404,
+      "custo_gap_brl": 710808070.28,
+      "siops_per_capita": 1100,
+      "pressao_fiscal_indice": 0.030305
+    },
+    {
+      "uf": "RJ",
+      "gap": 3212904,
+      "custo_gap_brl": 596218595.28,
+      "siops_per_capita": 1400,
+      "pressao_fiscal_indice": 0.024732
+    },
+    {
+      "uf": "BA",
+      "gap": 2518711,
+      "custo_gap_brl": 467397200.27,
+      "siops_per_capita": 950,
+      "pressao_fiscal_indice": 0.03313
+    },
+    {
+      "uf": "RS",
+      "gap": 2123098,
+      "custo_gap_brl": 393983295.86,
+      "siops_per_capita": 1350,
+      "pressao_fiscal_indice": 0.025988
+    },
+    {
+      "uf": "PR",
+      "gap": 2115068,
+      "custo_gap_brl": 392493168.76,
+      "siops_per_capita": 1300,
+      "pressao_fiscal_indice": 0.025533
+    },
+    {
+      "uf": "PE",
+      "gap": 1682866,
+      "custo_gap_brl": 312289443.62,
+      "siops_per_capita": 980,
+      "pressao_fiscal_indice": 0.033406
+    },
+    {
+      "uf": "CE",
+      "gap": 1628157,
+      "custo_gap_brl": 302137094.49,
+      "siops_per_capita": 1000,
+      "pressao_fiscal_indice": 0.032721
+    },
+    {
+      "uf": "SC",
+      "gap": 1456601,
+      "custo_gap_brl": 270301447.57,
+      "siops_per_capita": 1380,
+      "pressao_fiscal_indice": 0.024306
+    },
+    {
+      "uf": "PA",
+      "gap": 1378498,
+      "custo_gap_brl": 255807873.86,
+      "siops_per_capita": 900,
+      "pressao_fiscal_indice": 0.032805
+    },
+    {
+      "uf": "GO",
+      "gap": 1293878,
+      "custo_gap_brl": 240104940.46,
+      "siops_per_capita": 1150,
+      "pressao_fiscal_indice": 0.028405
+    },
+    {
+      "uf": "MA",
+      "gap": 1099256,
+      "custo_gap_brl": 203988935.92,
+      "siops_per_capita": 850,
+      "pressao_fiscal_indice": 0.03423
+    },
+    {
+      "uf": "PB",
+      "gap": 731828,
+      "custo_gap_brl": 135805321.96,
+      "siops_per_capita": 940,
+      "pressao_fiscal_indice": 0.034855
+    },
+    {
+      "uf": "ES",
+      "gap": 725000,
+      "custo_gap_brl": 134538250.0,
+      "siops_per_capita": 1200,
+      "pressao_fiscal_indice": 0.027331
+    },
+    {
+      "uf": "MT",
+      "gap": 675537,
+      "custo_gap_brl": 125359401.09,
+      "siops_per_capita": 1180,
+      "pressao_fiscal_indice": 0.027692
+    },
+    {
+      "uf": "AM",
+      "gap": 673982,
+      "custo_gap_brl": 125070839.74,
+      "siops_per_capita": 1050,
+      "pressao_fiscal_indice": 0.027823
+    },
+    {
+      "uf": "RN",
+      "gap": 610350,
+      "custo_gap_brl": 113262649.5,
+      "siops_per_capita": 960,
+      "pressao_fiscal_indice": 0.034237
+    },
+    {
+      "uf": "PI",
+      "gap": 595384,
+      "custo_gap_brl": 110485408.88,
+      "siops_per_capita": 880,
+      "pressao_fiscal_indice": 0.037193
+    },
+    {
+      "uf": "AL",
+      "gap": 568544,
+      "custo_gap_brl": 105504710.08,
+      "siops_per_capita": 920,
+      "pressao_fiscal_indice": 0.035613
+    },
+    {
+      "uf": "DF",
+      "gap": 532614,
+      "custo_gap_brl": 98837179.98,
+      "siops_per_capita": 1800,
+      "pressao_fiscal_indice": 0.018409
+    },
+    {
+      "uf": "MS",
+      "gap": 514282,
+      "custo_gap_brl": 95435310.74,
+      "siops_per_capita": 1250,
+      "pressao_fiscal_indice": 0.02631
+    },
+    {
+      "uf": "SE",
+      "gap": 405499,
+      "custo_gap_brl": 75248449.43,
+      "siops_per_capita": 930,
+      "pressao_fiscal_indice": 0.035316
+    },
+    {
+      "uf": "RO",
+      "gap": 309637,
+      "custo_gap_brl": 57459338.09,
+      "siops_per_capita": 1000,
+      "pressao_fiscal_indice": 0.032905
+    },
+    {
+      "uf": "TO",
+      "gap": 279611,
+      "custo_gap_brl": 51887413.27,
+      "siops_per_capita": 970,
+      "pressao_fiscal_indice": 0.033913
+    },
+    {
+      "uf": "AC",
+      "gap": 156646,
+      "custo_gap_brl": 29068798.22,
+      "siops_per_capita": 980,
+      "pressao_fiscal_indice": 0.033683
+    },
+    {
+      "uf": "AP",
+      "gap": 142293,
+      "custo_gap_brl": 26405312.01,
+      "siops_per_capita": 1100,
+      "pressao_fiscal_indice": 0.0299
+    },
+    {
+      "uf": "RR",
+      "gap": 126965,
+      "custo_gap_brl": 23560895.05,
+      "siops_per_capita": 1120,
+      "pressao_fiscal_indice": 0.029348
+    }
+  ],
+  "gap_regiao_saude": [
+    {
+      "codigo_regiao_saude": "35016",
+      "regiao_saude": "SAO PAULO",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS6",
+      "n_municipios": 1,
+      "pop_ibge_2022": 11451999,
+      "elegiveis_rateados": 2174346,
+      "pessoas_vacinadas": 0,
+      "gap": 2174346
+    },
+    {
+      "codigo_regiao_saude": "33005",
+      "regiao_saude": "METROPOLITANA I",
+      "uf": "RJ",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 12,
+      "pop_ibge_2022": 9705577,
+      "elegiveis_rateados": 1944292,
+      "pessoas_vacinadas": 0,
+      "gap": 1944292
+    },
+    {
+      "codigo_regiao_saude": "23001",
+      "regiao_saude": "1ª RS FORTALEZA",
+      "uf": "CE",
+      "macrorregiao_saude": "FORTALEZA",
+      "n_municipios": 44,
+      "pop_ibge_2022": 4553473,
+      "elegiveis_rateados": 843330,
+      "pessoas_vacinadas": 0,
+      "gap": 843330
+    },
+    {
+      "codigo_regiao_saude": "26010",
+      "regiao_saude": "I REGIÃO DE SAÚDE",
+      "uf": "PE",
+      "macrorregiao_saude": "METROPOLITANA",
+      "n_municipios": 20,
+      "pop_ibge_2022": 3954223,
+      "elegiveis_rateados": 734840,
+      "pessoas_vacinadas": 0,
+      "gap": 734840
+    },
+    {
+      "codigo_regiao_saude": "41002",
+      "regiao_saude": "2ª RS METROPOLITANA",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL LESTE",
+      "n_municipios": 29,
+      "pop_ibge_2022": 3560258,
+      "elegiveis_rateados": 659051,
+      "pessoas_vacinadas": 0,
+      "gap": 659051
+    },
+    {
+      "codigo_regiao_saude": "31016",
+      "regiao_saude": "BELO HORIZONTE/NOVA LIMA/SANTA LUZIA",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 13,
+      "pop_ibge_2022": 3215170,
+      "elegiveis_rateados": 600728,
+      "pessoas_vacinadas": 0,
+      "gap": 600728
+    },
+    {
+      "codigo_regiao_saude": "35072",
+      "regiao_saude": "REGIAO METROPOLITANA DE CAMPINAS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS15",
+      "n_municipios": 19,
+      "pop_ibge_2022": 3159035,
+      "elegiveis_rateados": 599794,
+      "pessoas_vacinadas": 0,
+      "gap": 599794
+    },
+    {
+      "codigo_regiao_saude": "35011",
+      "regiao_saude": "ALTO DO TIETE",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS2",
+      "n_municipios": 11,
+      "pop_ibge_2022": 2918916,
+      "elegiveis_rateados": 554203,
+      "pessoas_vacinadas": 0,
+      "gap": 554203
+    },
+    {
+      "codigo_regiao_saude": "53001",
+      "regiao_saude": "DISTRITO FEDERAL",
+      "uf": "DF",
+      "macrorregiao_saude": "DISTRITO FEDERAL",
+      "n_municipios": 1,
+      "pop_ibge_2022": 2817381,
+      "elegiveis_rateados": 534177,
+      "pessoas_vacinadas": 0,
+      "gap": 534177
+    },
+    {
+      "codigo_regiao_saude": "29020",
+      "regiao_saude": "SALVADOR",
+      "uf": "BA",
+      "macrorregiao_saude": "LESTE - (NRS - SALVADOR)",
+      "n_municipios": 10,
+      "pop_ibge_2022": 2921354,
+      "elegiveis_rateados": 520462,
+      "pessoas_vacinadas": 0,
+      "gap": 520462
+    },
+    {
+      "codigo_regiao_saude": "35015",
+      "regiao_saude": "GRANDE ABC",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS1",
+      "n_municipios": 7,
+      "pop_ibge_2022": 2696530,
+      "elegiveis_rateados": 511980,
+      "pessoas_vacinadas": 0,
+      "gap": 511980
+    },
+    {
+      "codigo_regiao_saude": "32002",
+      "regiao_saude": "METROPOLITANA",
+      "uf": "ES",
+      "macrorregiao_saude": "METROPOLITANA",
+      "n_municipios": 23,
+      "pop_ibge_2022": 2272099,
+      "elegiveis_rateados": 430703,
+      "pessoas_vacinadas": 0,
+      "gap": 430703
+    },
+    {
+      "codigo_regiao_saude": "43010",
+      "regiao_saude": "REGIAO 10",
+      "uf": "RS",
+      "macrorregiao_saude": "METROPOLITANA",
+      "n_municipios": 6,
+      "pop_ibge_2022": 2153262,
+      "elegiveis_rateados": 420901,
+      "pessoas_vacinadas": 0,
+      "gap": 420901
+    },
+    {
+      "codigo_regiao_saude": "13001",
+      "regiao_saude": "MANAUS, ENTORNO E ALTO RIO NEGRO",
+      "uf": "AM",
+      "macrorregiao_saude": "CENTRAL",
+      "n_municipios": 12,
+      "pop_ibge_2022": 2401411,
+      "elegiveis_rateados": 410694,
+      "pessoas_vacinadas": 0,
+      "gap": 410694
+    },
+    {
+      "codigo_regiao_saude": "33006",
+      "regiao_saude": "METROPOLITANA II",
+      "uf": "RJ",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 7,
+      "pop_ibge_2022": 1908751,
+      "elegiveis_rateados": 382375,
+      "pessoas_vacinadas": 0,
+      "gap": 382375
+    },
+    {
+      "codigo_regiao_saude": "35014",
+      "regiao_saude": "ROTA DOS BANDEIRANTES",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS5",
+      "n_municipios": 7,
+      "pop_ibge_2022": 1954889,
+      "elegiveis_rateados": 371167,
+      "pessoas_vacinadas": 0,
+      "gap": 371167
+    },
+    {
+      "codigo_regiao_saude": "52001",
+      "regiao_saude": "CENTRAL",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-OESTE",
+      "n_municipios": 26,
+      "pop_ibge_2022": 1888228,
+      "elegiveis_rateados": 346906,
+      "pessoas_vacinadas": 0,
+      "gap": 346906
+    },
+    {
+      "codigo_regiao_saude": "35041",
+      "regiao_saude": "BAIXADA SANTISTA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS7",
+      "n_municipios": 9,
+      "pop_ibge_2022": 1805531,
+      "elegiveis_rateados": 342809,
+      "pessoas_vacinadas": 0,
+      "gap": 342809
+    },
+    {
+      "codigo_regiao_saude": "35163",
+      "regiao_saude": "SOROCABA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS8",
+      "n_municipios": 20,
+      "pop_ibge_2022": 1780501,
+      "elegiveis_rateados": 338057,
+      "pessoas_vacinadas": 0,
+      "gap": 338057
+    },
+    {
+      "codigo_regiao_saude": "15006",
+      "regiao_saude": "METROPOLITANA I",
+      "uf": "PA",
+      "macrorregiao_saude": "MACRORREGIONAL I",
+      "n_municipios": 5,
+      "pop_ibge_2022": 1978620,
+      "elegiveis_rateados": 335935,
+      "pessoas_vacinadas": 0,
+      "gap": 335935
+    },
+    {
+      "codigo_regiao_saude": "23011",
+      "regiao_saude": "5ª RS SOBRAL",
+      "uf": "CE",
+      "macrorregiao_saude": "SOBRAL",
+      "n_municipios": 55,
+      "pop_ibge_2022": 1644010,
+      "elegiveis_rateados": 304480,
+      "pessoas_vacinadas": 0,
+      "gap": 304480
+    },
+    {
+      "codigo_regiao_saude": "23023",
+      "regiao_saude": "2ª RS CARIRI",
+      "uf": "CE",
+      "macrorregiao_saude": "CARIRI",
+      "n_municipios": 45,
+      "pop_ibge_2022": 1447729,
+      "elegiveis_rateados": 268128,
+      "pessoas_vacinadas": 0,
+      "gap": 268128
+    },
+    {
+      "codigo_regiao_saude": "42007",
+      "regiao_saude": "GRANDE FLORIANOPOLIS",
+      "uf": "SC",
+      "macrorregiao_saude": "GRANDE FLORIANOPOLIS",
+      "n_municipios": 22,
+      "pop_ibge_2022": 1356861,
+      "elegiveis_rateados": 260134,
+      "pessoas_vacinadas": 0,
+      "gap": 260134
+    },
+    {
+      "codigo_regiao_saude": "26003",
+      "regiao_saude": "IV REGIÃO DE SAÚDE",
+      "uf": "PE",
+      "macrorregiao_saude": "AGRESTE",
+      "n_municipios": 32,
+      "pop_ibge_2022": 1340017,
+      "elegiveis_rateados": 249024,
+      "pessoas_vacinadas": 0,
+      "gap": 249024
+    },
+    {
+      "codigo_regiao_saude": "25001",
+      "regiao_saude": "1ª REGIAO MATA ATLANTICA",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO I - JOAO PESSOA",
+      "n_municipios": 14,
+      "pop_ibge_2022": 1335829,
+      "elegiveis_rateados": 246060,
+      "pessoas_vacinadas": 0,
+      "gap": 246060
+    },
+    {
+      "codigo_regiao_saude": "21016",
+      "regiao_saude": "SAO LUIS",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO NORTE",
+      "n_municipios": 5,
+      "pop_ibge_2022": 1477303,
+      "elegiveis_rateados": 239717,
+      "pessoas_vacinadas": 0,
+      "gap": 239717
+    },
+    {
+      "codigo_regiao_saude": "24007",
+      "regiao_saude": "7ª REGIAO DE SAUDE - METROPOLITANA",
+      "uf": "RN",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 5,
+      "pop_ibge_2022": 1263738,
+      "elegiveis_rateados": 233673,
+      "pessoas_vacinadas": 0,
+      "gap": 233673
+    },
+    {
+      "codigo_regiao_saude": "27001",
+      "regiao_saude": "1ª REGIAO DE SAUDE",
+      "uf": "AL",
+      "macrorregiao_saude": "1ª MACRORREGIAO DE SAUDE",
+      "n_municipios": 12,
+      "pop_ibge_2022": 1247528,
+      "elegiveis_rateados": 226870,
+      "pessoas_vacinadas": 0,
+      "gap": 226870
+    },
+    {
+      "codigo_regiao_saude": "22004",
+      "regiao_saude": "ENTRE RIOS",
+      "uf": "PI",
+      "macrorregiao_saude": "MEIO NORTE",
+      "n_municipios": 31,
+      "pop_ibge_2022": 1243402,
+      "elegiveis_rateados": 226390,
+      "pessoas_vacinadas": 0,
+      "gap": 226390
+    },
+    {
+      "codigo_regiao_saude": "35013",
+      "regiao_saude": "MANANCIAIS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS4",
+      "n_municipios": 8,
+      "pop_ibge_2022": 1118024,
+      "elegiveis_rateados": 212275,
+      "pessoas_vacinadas": 0,
+      "gap": 212275
+    },
+    {
+      "codigo_regiao_saude": "35171",
+      "regiao_saude": "ALTO VALE DO PARAIBA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS17",
+      "n_municipios": 8,
+      "pop_ibge_2022": 1086313,
+      "elegiveis_rateados": 206254,
+      "pessoas_vacinadas": 0,
+      "gap": 206254
+    },
+    {
+      "codigo_regiao_saude": "29006",
+      "regiao_saude": "FEIRA DE SANTANA",
+      "uf": "BA",
+      "macrorregiao_saude": "CENTRO-LESTE (NRS - FEIRA SANTANA)",
+      "n_municipios": 28,
+      "pop_ibge_2022": 1137467,
+      "elegiveis_rateados": 202649,
+      "pessoas_vacinadas": 0,
+      "gap": 202649
+    },
+    {
+      "codigo_regiao_saude": "51002",
+      "regiao_saude": "BAIXADA CUIABANA",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-NORTE",
+      "n_municipios": 11,
+      "pop_ibge_2022": 1056139,
+      "elegiveis_rateados": 195423,
+      "pessoas_vacinadas": 0,
+      "gap": 195423
+    },
+    {
+      "codigo_regiao_saude": "50011",
+      "regiao_saude": "CENTRO",
+      "uf": "MS",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 9,
+      "pop_ibge_2022": 1024664,
+      "elegiveis_rateados": 191378,
+      "pessoas_vacinadas": 0,
+      "gap": 191378
+    },
+    {
+      "codigo_regiao_saude": "33009",
+      "regiao_saude": "SERRANA",
+      "uf": "RJ",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 16,
+      "pop_ibge_2022": 910020,
+      "elegiveis_rateados": 182302,
+      "pessoas_vacinadas": 0,
+      "gap": 182302
+    },
+    {
+      "codigo_regiao_saude": "33008",
+      "regiao_saude": "NORTE",
+      "uf": "RJ",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 8,
+      "pop_ibge_2022": 907868,
+      "elegiveis_rateados": 181871,
+      "pessoas_vacinadas": 0,
+      "gap": 181871
+    },
+    {
+      "codigo_regiao_saude": "52004",
+      "regiao_saude": "ENTORNO SUL",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO NORDESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 963718,
+      "elegiveis_rateados": 177055,
+      "pessoas_vacinadas": 0,
+      "gap": 177055
+    },
+    {
+      "codigo_regiao_saude": "52002",
+      "regiao_saude": "CENTRO SUL",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO SUDESTE",
+      "n_municipios": 25,
+      "pop_ibge_2022": 955564,
+      "elegiveis_rateados": 175556,
+      "pessoas_vacinadas": 0,
+      "gap": 175556
+    },
+    {
+      "codigo_regiao_saude": "31075",
+      "regiao_saude": "UBERLANDIA/ARAGUARI",
+      "uf": "MG",
+      "macrorregiao_saude": "TRIANGULO DO NORTE",
+      "n_municipios": 9,
+      "pop_ibge_2022": 936974,
+      "elegiveis_rateados": 175066,
+      "pessoas_vacinadas": 0,
+      "gap": 175066
+    },
+    {
+      "codigo_regiao_saude": "41017",
+      "regiao_saude": "17ª RS LONDRINA",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL NORTE",
+      "n_municipios": 21,
+      "pop_ibge_2022": 943867,
+      "elegiveis_rateados": 174722,
+      "pessoas_vacinadas": 0,
+      "gap": 174722
+    },
+    {
+      "codigo_regiao_saude": "35132",
+      "regiao_saude": "AQUIFERO GUARANI",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS13",
+      "n_municipios": 10,
+      "pop_ibge_2022": 915131,
+      "elegiveis_rateados": 173752,
+      "pessoas_vacinadas": 0,
+      "gap": 173752
+    },
+    {
+      "codigo_regiao_saude": "33004",
+      "regiao_saude": "MEDIO PARAIBA",
+      "uf": "RJ",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 12,
+      "pop_ibge_2022": 865130,
+      "elegiveis_rateados": 173309,
+      "pessoas_vacinadas": 0,
+      "gap": 173309
+    },
+    {
+      "codigo_regiao_saude": "33002",
+      "regiao_saude": "BAIXADA LITORANEA",
+      "uf": "RJ",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 9,
+      "pop_ibge_2022": 846933,
+      "elegiveis_rateados": 169664,
+      "pessoas_vacinadas": 0,
+      "gap": 169664
+    },
+    {
+      "codigo_regiao_saude": "15003",
+      "regiao_saude": "CARAJAS",
+      "uf": "PA",
+      "macrorregiao_saude": "MACRORREGIONAL IV",
+      "n_municipios": 17,
+      "pop_ibge_2022": 945472,
+      "elegiveis_rateados": 160525,
+      "pessoas_vacinadas": 0,
+      "gap": 160525
+    },
+    {
+      "codigo_regiao_saude": "35073",
+      "regiao_saude": "JUNDIAI",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS16",
+      "n_municipios": 7,
+      "pop_ibge_2022": 843633,
+      "elegiveis_rateados": 160177,
+      "pessoas_vacinadas": 0,
+      "gap": 160177
+    },
+    {
+      "codigo_regiao_saude": "41015",
+      "regiao_saude": "15ª RS MARINGA",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL NOROESTE",
+      "n_municipios": 30,
+      "pop_ibge_2022": 865048,
+      "elegiveis_rateados": 160132,
+      "pessoas_vacinadas": 0,
+      "gap": 160132
+    },
+    {
+      "codigo_regiao_saude": "43021",
+      "regiao_saude": "REGIAO 21",
+      "uf": "RS",
+      "macrorregiao_saude": "SUL",
+      "n_municipios": 21,
+      "pop_ibge_2022": 817250,
+      "elegiveis_rateados": 159749,
+      "pessoas_vacinadas": 0,
+      "gap": 159749
+    },
+    {
+      "codigo_regiao_saude": "42006",
+      "regiao_saude": "MEDIO VALE DO ITAJAI",
+      "uf": "SC",
+      "macrorregiao_saude": "VALE DO ITAJAI",
+      "n_municipios": 14,
+      "pop_ibge_2022": 812968,
+      "elegiveis_rateados": 155860,
+      "pessoas_vacinadas": 0,
+      "gap": 155860
+    },
+    {
+      "codigo_regiao_saude": "42005",
+      "regiao_saude": "FOZ DO RIO ITAJAI",
+      "uf": "SC",
+      "macrorregiao_saude": "FOZ DO RIO ITAJAI",
+      "n_municipios": 11,
+      "pop_ibge_2022": 810890,
+      "elegiveis_rateados": 155462,
+      "pessoas_vacinadas": 0,
+      "gap": 155462
+    },
+    {
+      "codigo_regiao_saude": "31018",
+      "regiao_saude": "CONTAGEM",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 3,
+      "pop_ibge_2022": 829244,
+      "elegiveis_rateados": 154937,
+      "pessoas_vacinadas": 0,
+      "gap": 154937
+    },
+    {
+      "codigo_regiao_saude": "43007",
+      "regiao_saude": "REGIAO 07",
+      "uf": "RS",
+      "macrorregiao_saude": "METROPOLITANA",
+      "n_municipios": 15,
+      "pop_ibge_2022": 774030,
+      "elegiveis_rateados": 151301,
+      "pessoas_vacinadas": 0,
+      "gap": 151301
+    },
+    {
+      "codigo_regiao_saude": "28001",
+      "regiao_saude": "ARACAJU",
+      "uf": "SE",
+      "macrorregiao_saude": "MACRO UNICA",
+      "n_municipios": 8,
+      "pop_ibge_2022": 815291,
+      "elegiveis_rateados": 149671,
+      "pessoas_vacinadas": 0,
+      "gap": 149671
+    },
+    {
+      "codigo_regiao_saude": "42011",
+      "regiao_saude": "NORDESTE",
+      "uf": "SC",
+      "macrorregiao_saude": "PLANALTO NORTE E NORDESTE",
+      "n_municipios": 6,
+      "pop_ibge_2022": 778481,
+      "elegiveis_rateados": 149249,
+      "pessoas_vacinadas": 0,
+      "gap": 149249
+    },
+    {
+      "codigo_regiao_saude": "43008",
+      "regiao_saude": "REGIAO 08",
+      "uf": "RS",
+      "macrorregiao_saude": "METROPOLITANA",
+      "n_municipios": 18,
+      "pop_ibge_2022": 758223,
+      "elegiveis_rateados": 148211,
+      "pessoas_vacinadas": 0,
+      "gap": 148211
+    },
+    {
+      "codigo_regiao_saude": "35155",
+      "regiao_saude": "SAO JOSE DO RIO PRETO",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS12",
+      "n_municipios": 20,
+      "pop_ibge_2022": 765491,
+      "elegiveis_rateados": 145341,
+      "pessoas_vacinadas": 0,
+      "gap": 145341
+    },
+    {
+      "codigo_regiao_saude": "15008",
+      "regiao_saude": "METROPOLITANA III",
+      "uf": "PA",
+      "macrorregiao_saude": "MACRORREGIONAL II",
+      "n_municipios": 22,
+      "pop_ibge_2022": 842760,
+      "elegiveis_rateados": 143086,
+      "pessoas_vacinadas": 0,
+      "gap": 143086
+    },
+    {
+      "codigo_regiao_saude": "31017",
+      "regiao_saude": "BETIM",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 13,
+      "pop_ibge_2022": 732511,
+      "elegiveis_rateados": 136864,
+      "pessoas_vacinadas": 0,
+      "gap": 136864
+    },
+    {
+      "codigo_regiao_saude": "15002",
+      "regiao_saude": "BAIXO AMAZONAS",
+      "uf": "PA",
+      "macrorregiao_saude": "MACRORREGIONAL III ",
+      "n_municipios": 14,
+      "pop_ibge_2022": 804487,
+      "elegiveis_rateados": 136588,
+      "pessoas_vacinadas": 0,
+      "gap": 136588
+    },
+    {
+      "codigo_regiao_saude": "15011",
+      "regiao_saude": "TOCANTINS",
+      "uf": "PA",
+      "macrorregiao_saude": "MACRORREGIONAL I",
+      "n_municipios": 10,
+      "pop_ibge_2022": 782692,
+      "elegiveis_rateados": 132887,
+      "pessoas_vacinadas": 0,
+      "gap": 132887
+    },
+    {
+      "codigo_regiao_saude": "32004",
+      "regiao_saude": "SUL",
+      "uf": "ES",
+      "macrorregiao_saude": "SUL",
+      "n_municipios": 26,
+      "pop_ibge_2022": 656128,
+      "elegiveis_rateados": 124377,
+      "pessoas_vacinadas": 0,
+      "gap": 124377
+    },
+    {
+      "codigo_regiao_saude": "29028",
+      "regiao_saude": "VITORIA DA CONQUISTA",
+      "uf": "BA",
+      "macrorregiao_saude": "SUDOESTE (NBS - VITORIA CONQUISTA)",
+      "n_municipios": 19,
+      "pop_ibge_2022": 687753,
+      "elegiveis_rateados": 122529,
+      "pessoas_vacinadas": 0,
+      "gap": 122529
+    },
+    {
+      "codigo_regiao_saude": "35062",
+      "regiao_saude": "BAURU",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS9",
+      "n_municipios": 18,
+      "pop_ibge_2022": 644731,
+      "elegiveis_rateados": 122413,
+      "pessoas_vacinadas": 0,
+      "gap": 122413
+    },
+    {
+      "codigo_regiao_saude": "35174",
+      "regiao_saude": "VALE DO PARAIBA/REGIAO SERRANA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS17",
+      "n_municipios": 10,
+      "pop_ibge_2022": 620034,
+      "elegiveis_rateados": 117723,
+      "pessoas_vacinadas": 0,
+      "gap": 117723
+    },
+    {
+      "codigo_regiao_saude": "41003",
+      "regiao_saude": "3ª RS PONTA GROSSA",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL LESTE",
+      "n_municipios": 12,
+      "pop_ibge_2022": 635618,
+      "elegiveis_rateados": 117661,
+      "pessoas_vacinadas": 0,
+      "gap": 117661
+    },
+    {
+      "codigo_regiao_saude": "35103",
+      "regiao_saude": "PIRACICABA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS14",
+      "n_municipios": 11,
+      "pop_ibge_2022": 605080,
+      "elegiveis_rateados": 114884,
+      "pessoas_vacinadas": 0,
+      "gap": 114884
+    },
+    {
+      "codigo_regiao_saude": "23024",
+      "regiao_saude": "3ª RS SERTAO CENTRAL",
+      "uf": "CE",
+      "macrorregiao_saude": "SERTAO CENTRAL",
+      "n_municipios": 20,
+      "pop_ibge_2022": 618818,
+      "elegiveis_rateados": 114609,
+      "pessoas_vacinadas": 0,
+      "gap": 114609
+    },
+    {
+      "codigo_regiao_saude": "43023",
+      "regiao_saude": "REGIAO 23",
+      "uf": "RS",
+      "macrorregiao_saude": "SERRA",
+      "n_municipios": 6,
+      "pop_ibge_2022": 582915,
+      "elegiveis_rateados": 113943,
+      "pessoas_vacinadas": 0,
+      "gap": 113943
+    },
+    {
+      "codigo_regiao_saude": "35012",
+      "regiao_saude": "FRANCO DA ROCHA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS3",
+      "n_municipios": 5,
+      "pop_ibge_2022": 591562,
+      "elegiveis_rateados": 112318,
+      "pessoas_vacinadas": 0,
+      "gap": 112318
+    },
+    {
+      "codigo_regiao_saude": "31097",
+      "regiao_saude": "JUIZ DE FORA",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDESTE",
+      "n_municipios": 12,
+      "pop_ibge_2022": 592694,
+      "elegiveis_rateados": 110740,
+      "pessoas_vacinadas": 0,
+      "gap": 110740
+    },
+    {
+      "codigo_regiao_saude": "11004",
+      "regiao_saude": "MADEIRA-MAMORE",
+      "uf": "RO",
+      "macrorregiao_saude": "MACRORREGIAO I - PORTO VELHO",
+      "n_municipios": 5,
+      "pop_ibge_2022": 556123,
+      "elegiveis_rateados": 108974,
+      "pessoas_vacinadas": 0,
+      "gap": 108974
+    },
+    {
+      "codigo_regiao_saude": "14001",
+      "regiao_saude": "CENTRO NORTE",
+      "uf": "RR",
+      "macrorregiao_saude": "MACRO-RORAIMA",
+      "n_municipios": 9,
+      "pop_ibge_2022": 546251,
+      "elegiveis_rateados": 108949,
+      "pessoas_vacinadas": 0,
+      "gap": 108949
+    },
+    {
+      "codigo_regiao_saude": "31007",
+      "regiao_saude": "POUSO ALEGRE/SANTA RITA DO SAPUCAI",
+      "uf": "MG",
+      "macrorregiao_saude": "EXTREMO SUL",
+      "n_municipios": 32,
+      "pop_ibge_2022": 574819,
+      "elegiveis_rateados": 107400,
+      "pessoas_vacinadas": 0,
+      "gap": 107400
+    },
+    {
+      "codigo_regiao_saude": "41010",
+      "regiao_saude": "10ª RS CASCAVEL",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIAO OESTE",
+      "n_municipios": 25,
+      "pop_ibge_2022": 576817,
+      "elegiveis_rateados": 106777,
+      "pessoas_vacinadas": 0,
+      "gap": 106777
+    },
+    {
+      "codigo_regiao_saude": "26006",
+      "regiao_saude": "II REGIÃO DE SAÚDE",
+      "uf": "PE",
+      "macrorregiao_saude": "METROPOLITANA",
+      "n_municipios": 20,
+      "pop_ibge_2022": 568121,
+      "elegiveis_rateados": 105578,
+      "pessoas_vacinadas": 0,
+      "gap": 105578
+    },
+    {
+      "codigo_regiao_saude": "51013",
+      "regiao_saude": "SUL MATOGROSSENSE",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO SUL ",
+      "n_municipios": 19,
+      "pop_ibge_2022": 569886,
+      "elegiveis_rateados": 105449,
+      "pessoas_vacinadas": 0,
+      "gap": 105449
+    },
+    {
+      "codigo_regiao_saude": "29004",
+      "regiao_saude": "CAMACARI",
+      "uf": "BA",
+      "macrorregiao_saude": "LESTE - (NRS - SALVADOR)",
+      "n_municipios": 6,
+      "pop_ibge_2022": 584772,
+      "elegiveis_rateados": 104182,
+      "pessoas_vacinadas": 0,
+      "gap": 104182
+    },
+    {
+      "codigo_regiao_saude": "25016",
+      "regiao_saude": "16ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO II - CAMPINA GRANDE",
+      "n_municipios": 15,
+      "pop_ibge_2022": 554758,
+      "elegiveis_rateados": 102187,
+      "pessoas_vacinadas": 0,
+      "gap": 102187
+    },
+    {
+      "codigo_regiao_saude": "29025",
+      "regiao_saude": "SERRINHA",
+      "uf": "BA",
+      "macrorregiao_saude": "CENTRO-LESTE (NRS - FEIRA SANTANA)",
+      "n_municipios": 18,
+      "pop_ibge_2022": 572322,
+      "elegiveis_rateados": 101964,
+      "pessoas_vacinadas": 0,
+      "gap": 101964
+    },
+    {
+      "codigo_regiao_saude": "26004",
+      "regiao_saude": "V REGIÃO DE SAÚDE",
+      "uf": "PE",
+      "macrorregiao_saude": "AGRESTE",
+      "n_municipios": 21,
+      "pop_ibge_2022": 538018,
+      "elegiveis_rateados": 99983,
+      "pessoas_vacinadas": 0,
+      "gap": 99983
+    },
+    {
+      "codigo_regiao_saude": "12002",
+      "regiao_saude": "BAIXO ACRE E PURUS",
+      "uf": "AC",
+      "macrorregiao_saude": "MACRO UNICA - AC",
+      "n_municipios": 11,
+      "pop_ibge_2022": 526077,
+      "elegiveis_rateados": 99324,
+      "pessoas_vacinadas": 0,
+      "gap": 99324
+    },
+    {
+      "codigo_regiao_saude": "52011",
+      "regiao_saude": "PIRINEUS",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-NORTE",
+      "n_municipios": 10,
+      "pop_ibge_2022": 538825,
+      "elegiveis_rateados": 98993,
+      "pessoas_vacinadas": 0,
+      "gap": 98993
+    },
+    {
+      "codigo_regiao_saude": "29016",
+      "regiao_saude": "JUAZEIRO",
+      "uf": "BA",
+      "macrorregiao_saude": "NORTE - (NRS - JUAZEIRO)",
+      "n_municipios": 10,
+      "pop_ibge_2022": 555100,
+      "elegiveis_rateados": 98895,
+      "pessoas_vacinadas": 0,
+      "gap": 98895
+    },
+    {
+      "codigo_regiao_saude": "26009",
+      "regiao_saude": "VIII REGIÃO DE SAÚDE",
+      "uf": "PE",
+      "macrorregiao_saude": "VALE DO S.FRANCISCO E ARARIPE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 531226,
+      "elegiveis_rateados": 98721,
+      "pessoas_vacinadas": 0,
+      "gap": 98721
+    },
+    {
+      "codigo_regiao_saude": "51014",
+      "regiao_saude": "TELES PIRES",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO NORTE ",
+      "n_municipios": 14,
+      "pop_ibge_2022": 533240,
+      "elegiveis_rateados": 98668,
+      "pessoas_vacinadas": 0,
+      "gap": 98668
+    },
+    {
+      "codigo_regiao_saude": "23025",
+      "regiao_saude": "4ª RS LITORAL LESTE/JAGUARIBE",
+      "uf": "CE",
+      "macrorregiao_saude": "LITORAL LESTE/JAGUARIBE",
+      "n_municipios": 20,
+      "pop_ibge_2022": 530927,
+      "elegiveis_rateados": 98331,
+      "pessoas_vacinadas": 0,
+      "gap": 98331
+    },
+    {
+      "codigo_regiao_saude": "16001",
+      "regiao_saude": "AREA CENTRAL",
+      "uf": "AP",
+      "macrorregiao_saude": "MACRO UNICA - AP",
+      "n_municipios": 7,
+      "pop_ibge_2022": 495027,
+      "elegiveis_rateados": 96011,
+      "pessoas_vacinadas": 0,
+      "gap": 96011
+    },
+    {
+      "codigo_regiao_saude": "32001",
+      "regiao_saude": "CENTRAL",
+      "uf": "ES",
+      "macrorregiao_saude": "CENTRAL NORTE",
+      "n_municipios": 15,
+      "pop_ibge_2022": 500928,
+      "elegiveis_rateados": 94957,
+      "pessoas_vacinadas": 0,
+      "gap": 94957
+    },
+    {
+      "codigo_regiao_saude": "26008",
+      "regiao_saude": "III REGIÃO DE SAÚDE",
+      "uf": "PE",
+      "macrorregiao_saude": "METROPOLITANA",
+      "n_municipios": 22,
+      "pop_ibge_2022": 507488,
+      "elegiveis_rateados": 94310,
+      "pessoas_vacinadas": 0,
+      "gap": 94310
+    },
+    {
+      "codigo_regiao_saude": "35161",
+      "regiao_saude": "ITAPETININGA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS8",
+      "n_municipios": 13,
+      "pop_ibge_2022": 496205,
+      "elegiveis_rateados": 94213,
+      "pessoas_vacinadas": 0,
+      "gap": 94213
+    },
+    {
+      "codigo_regiao_saude": "35071",
+      "regiao_saude": "BRAGANCA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS16",
+      "n_municipios": 11,
+      "pop_ibge_2022": 493718,
+      "elegiveis_rateados": 93740,
+      "pessoas_vacinadas": 0,
+      "gap": 93740
+    },
+    {
+      "codigo_regiao_saude": "27007",
+      "regiao_saude": "7ª REGIAO DE SAUDE",
+      "uf": "AL",
+      "macrorregiao_saude": "2ª MACRORREGIAO DE SAUDE",
+      "n_municipios": 17,
+      "pop_ibge_2022": 509377,
+      "elegiveis_rateados": 92633,
+      "pessoas_vacinadas": 0,
+      "gap": 92633
+    },
+    {
+      "codigo_regiao_saude": "29001",
+      "regiao_saude": "ALAGOINHAS",
+      "uf": "BA",
+      "macrorregiao_saude": "NORDESTE (NRS - ALAGOINHAS)",
+      "n_municipios": 18,
+      "pop_ibge_2022": 495045,
+      "elegiveis_rateados": 88196,
+      "pessoas_vacinadas": 0,
+      "gap": 88196
+    },
+    {
+      "codigo_regiao_saude": "21008",
+      "regiao_saude": "IMPERATRIZ",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO SUL",
+      "n_municipios": 16,
+      "pop_ibge_2022": 539458,
+      "elegiveis_rateados": 87536,
+      "pessoas_vacinadas": 0,
+      "gap": 87536
+    },
+    {
+      "codigo_regiao_saude": "43003",
+      "regiao_saude": "REGIAO 03",
+      "uf": "RS",
+      "macrorregiao_saude": "CENTRO-OESTE",
+      "n_municipios": 11,
+      "pop_ibge_2022": 446488,
+      "elegiveis_rateados": 87276,
+      "pessoas_vacinadas": 0,
+      "gap": 87276
+    },
+    {
+      "codigo_regiao_saude": "29015",
+      "regiao_saude": "JEQUIE",
+      "uf": "BA",
+      "macrorregiao_saude": "SUL (NBS - ILHEUS)",
+      "n_municipios": 26,
+      "pop_ibge_2022": 488953,
+      "elegiveis_rateados": 87111,
+      "pessoas_vacinadas": 0,
+      "gap": 87111
+    },
+    {
+      "codigo_regiao_saude": "15009",
+      "regiao_saude": "RIO CAETES",
+      "uf": "PA",
+      "macrorregiao_saude": "MACRORREGIONAL II",
+      "n_municipios": 16,
+      "pop_ibge_2022": 510856,
+      "elegiveis_rateados": 86734,
+      "pessoas_vacinadas": 0,
+      "gap": 86734
+    },
+    {
+      "codigo_regiao_saude": "35172",
+      "regiao_saude": "CIRCUITO DA FE E VALE HISTORICO",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS17",
+      "n_municipios": 17,
+      "pop_ibge_2022": 454993,
+      "elegiveis_rateados": 86388,
+      "pessoas_vacinadas": 0,
+      "gap": 86388
+    },
+    {
+      "codigo_regiao_saude": "29002",
+      "regiao_saude": "BARREIRAS",
+      "uf": "BA",
+      "macrorregiao_saude": "OESTE (NBS - BARREIRAS)",
+      "n_municipios": 15,
+      "pop_ibge_2022": 481212,
+      "elegiveis_rateados": 85732,
+      "pessoas_vacinadas": 0,
+      "gap": 85732
+    },
+    {
+      "codigo_regiao_saude": "42015",
+      "regiao_saude": "CARBONIFERA",
+      "uf": "SC",
+      "macrorregiao_saude": "SUL",
+      "n_municipios": 12,
+      "pop_ibge_2022": 446838,
+      "elegiveis_rateados": 85667,
+      "pessoas_vacinadas": 0,
+      "gap": 85667
+    },
+    {
+      "codigo_regiao_saude": "43001",
+      "regiao_saude": "REGIAO 01",
+      "uf": "RS",
+      "macrorregiao_saude": "CENTRO-OESTE",
+      "n_municipios": 22,
+      "pop_ibge_2022": 436614,
+      "elegiveis_rateados": 85345,
+      "pessoas_vacinadas": 0,
+      "gap": 85345
+    },
+    {
+      "codigo_regiao_saude": "41005",
+      "regiao_saude": "5ª RS GUARAPUAVA",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL LESTE",
+      "n_municipios": 20,
+      "pop_ibge_2022": 451626,
+      "elegiveis_rateados": 83602,
+      "pessoas_vacinadas": 0,
+      "gap": 83602
+    },
+    {
+      "codigo_regiao_saude": "31084",
+      "regiao_saude": "MONTES CLAROS",
+      "uf": "MG",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 6,
+      "pop_ibge_2022": 446005,
+      "elegiveis_rateados": 83332,
+      "pessoas_vacinadas": 0,
+      "gap": 83332
+    },
+    {
+      "codigo_regiao_saude": "24002",
+      "regiao_saude": "2ª REGIAO DE SAUDE - MOSSORO",
+      "uf": "RN",
+      "macrorregiao_saude": "MACRORREGIAO II",
+      "n_municipios": 14,
+      "pop_ibge_2022": 450009,
+      "elegiveis_rateados": 83210,
+      "pessoas_vacinadas": 0,
+      "gap": 83210
+    },
+    {
+      "codigo_regiao_saude": "29022",
+      "regiao_saude": "SANTO ANTONIO DE JESUS",
+      "uf": "BA",
+      "macrorregiao_saude": "LESTE - (NRS - SALVADOR)",
+      "n_municipios": 23,
+      "pop_ibge_2022": 462059,
+      "elegiveis_rateados": 82319,
+      "pessoas_vacinadas": 0,
+      "gap": 82319
+    },
+    {
+      "codigo_regiao_saude": "41009",
+      "regiao_saude": "9ª RS FOZ DO IGUACU",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIAO OESTE",
+      "n_municipios": 9,
+      "pop_ibge_2022": 443395,
+      "elegiveis_rateados": 82078,
+      "pessoas_vacinadas": 0,
+      "gap": 82078
+    },
+    {
+      "codigo_regiao_saude": "43017",
+      "regiao_saude": "REGIAO 17 - PLANALTO",
+      "uf": "RS",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 28,
+      "pop_ibge_2022": 418117,
+      "elegiveis_rateados": 81730,
+      "pessoas_vacinadas": 0,
+      "gap": 81730
+    },
+    {
+      "codigo_regiao_saude": "29012",
+      "regiao_saude": "ITABUNA",
+      "uf": "BA",
+      "macrorregiao_saude": "SUL (NBS - ILHEUS)",
+      "n_municipios": 22,
+      "pop_ibge_2022": 456186,
+      "elegiveis_rateados": 81273,
+      "pessoas_vacinadas": 0,
+      "gap": 81273
+    },
+    {
+      "codigo_regiao_saude": "29007",
+      "regiao_saude": "GUANAMBI",
+      "uf": "BA",
+      "macrorregiao_saude": "SUDOESTE (NBS - VITORIA CONQUISTA)",
+      "n_municipios": 23,
+      "pop_ibge_2022": 455690,
+      "elegiveis_rateados": 81185,
+      "pessoas_vacinadas": 0,
+      "gap": 81185
+    },
+    {
+      "codigo_regiao_saude": "35081",
+      "regiao_saude": "TRES COLINAS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS13",
+      "n_municipios": 10,
+      "pop_ibge_2022": 424174,
+      "elegiveis_rateados": 80536,
+      "pessoas_vacinadas": 0,
+      "gap": 80536
+    },
+    {
+      "codigo_regiao_saude": "52015",
+      "regiao_saude": "SUDOESTE I",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO SUDOESTE",
+      "n_municipios": 18,
+      "pop_ibge_2022": 438027,
+      "elegiveis_rateados": 80474,
+      "pessoas_vacinadas": 0,
+      "gap": 80474
+    },
+    {
+      "codigo_regiao_saude": "31024",
+      "regiao_saude": "SETE LAGOAS",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 23,
+      "pop_ibge_2022": 427821,
+      "elegiveis_rateados": 79935,
+      "pessoas_vacinadas": 0,
+      "gap": 79935
+    },
+    {
+      "codigo_regiao_saude": "50012",
+      "regiao_saude": "CENTRO SUL",
+      "uf": "MS",
+      "macrorregiao_saude": "CONE SUL",
+      "n_municipios": 12,
+      "pop_ibge_2022": 424554,
+      "elegiveis_rateados": 79295,
+      "pessoas_vacinadas": 0,
+      "gap": 79295
+    },
+    {
+      "codigo_regiao_saude": "31072",
+      "regiao_saude": "UBERABA",
+      "uf": "MG",
+      "macrorregiao_saude": "TRIANGULO DO SUL",
+      "n_municipios": 8,
+      "pop_ibge_2022": 424060,
+      "elegiveis_rateados": 79232,
+      "pessoas_vacinadas": 0,
+      "gap": 79232
+    },
+    {
+      "codigo_regiao_saude": "35131",
+      "regiao_saude": "HORIZONTE VERDE",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS13",
+      "n_municipios": 9,
+      "pop_ibge_2022": 413702,
+      "elegiveis_rateados": 78548,
+      "pessoas_vacinadas": 0,
+      "gap": 78548
+    },
+    {
+      "codigo_regiao_saude": "42002",
+      "regiao_saude": "OESTE",
+      "uf": "SC",
+      "macrorregiao_saude": "GRANDE OESTE",
+      "n_municipios": 27,
+      "pop_ibge_2022": 408924,
+      "elegiveis_rateados": 78398,
+      "pessoas_vacinadas": 0,
+      "gap": 78398
+    },
+    {
+      "codigo_regiao_saude": "41020",
+      "regiao_saude": "20ª RS TOLEDO",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIAO OESTE",
+      "n_municipios": 18,
+      "pop_ibge_2022": 418589,
+      "elegiveis_rateados": 77486,
+      "pessoas_vacinadas": 0,
+      "gap": 77486
+    },
+    {
+      "codigo_regiao_saude": "26002",
+      "regiao_saude": "VI REGIÃO DE SAÚDE",
+      "uf": "PE",
+      "macrorregiao_saude": "SERTAO",
+      "n_municipios": 13,
+      "pop_ibge_2022": 415617,
+      "elegiveis_rateados": 77237,
+      "pessoas_vacinadas": 0,
+      "gap": 77237
+    },
+    {
+      "codigo_regiao_saude": "15001",
+      "regiao_saude": "ARAGUAIA",
+      "uf": "PA",
+      "macrorregiao_saude": "MACRORREGIONAL IV",
+      "n_municipios": 15,
+      "pop_ibge_2022": 454710,
+      "elegiveis_rateados": 77202,
+      "pessoas_vacinadas": 0,
+      "gap": 77202
+    },
+    {
+      "codigo_regiao_saude": "35112",
+      "regiao_saude": "ALTA SOROCABANA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS11",
+      "n_municipios": 19,
+      "pop_ibge_2022": 405916,
+      "elegiveis_rateados": 77070,
+      "pessoas_vacinadas": 0,
+      "gap": 77070
+    },
+    {
+      "codigo_regiao_saude": "29026",
+      "regiao_saude": "TEIXEIRA DE FREITAS",
+      "uf": "BA",
+      "macrorregiao_saude": "EXTREMO SUL (NRS - TEIXEIRA FREITAS)",
+      "n_municipios": 13,
+      "pop_ibge_2022": 430826,
+      "elegiveis_rateados": 76755,
+      "pessoas_vacinadas": 0,
+      "gap": 76755
+    },
+    {
+      "codigo_regiao_saude": "32003",
+      "regiao_saude": "NORTE",
+      "uf": "ES",
+      "macrorregiao_saude": "CENTRAL NORTE",
+      "n_municipios": 14,
+      "pop_ibge_2022": 404557,
+      "elegiveis_rateados": 76689,
+      "pessoas_vacinadas": 0,
+      "gap": 76689
+    },
+    {
+      "codigo_regiao_saude": "43009",
+      "regiao_saude": "REGIAO 09",
+      "uf": "RS",
+      "macrorregiao_saude": "METROPOLITANA",
+      "n_municipios": 20,
+      "pop_ibge_2022": 385656,
+      "elegiveis_rateados": 75385,
+      "pessoas_vacinadas": 0,
+      "gap": 75385
+    },
+    {
+      "codigo_regiao_saude": "31036",
+      "regiao_saude": "GOVERNADOR VALADARES",
+      "uf": "MG",
+      "macrorregiao_saude": "LESTE",
+      "n_municipios": 25,
+      "pop_ibge_2022": 400949,
+      "elegiveis_rateados": 74914,
+      "pessoas_vacinadas": 0,
+      "gap": 74914
+    },
+    {
+      "codigo_regiao_saude": "35032",
+      "regiao_saude": "CORACAO DO DRS III",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS18",
+      "n_municipios": 6,
+      "pop_ibge_2022": 390525,
+      "elegiveis_rateados": 74147,
+      "pessoas_vacinadas": 0,
+      "gap": 74147
+    },
+    {
+      "codigo_regiao_saude": "42016",
+      "regiao_saude": "LAGUNA",
+      "uf": "SC",
+      "macrorregiao_saude": "SUL",
+      "n_municipios": 18,
+      "pop_ibge_2022": 381530,
+      "elegiveis_rateados": 73146,
+      "pessoas_vacinadas": 0,
+      "gap": 73146
+    },
+    {
+      "codigo_regiao_saude": "22003",
+      "regiao_saude": "COCAIS",
+      "uf": "PI",
+      "macrorregiao_saude": "LITORAL",
+      "n_municipios": 23,
+      "pop_ibge_2022": 400268,
+      "elegiveis_rateados": 72878,
+      "pessoas_vacinadas": 0,
+      "gap": 72878
+    },
+    {
+      "codigo_regiao_saude": "35093",
+      "regiao_saude": "MARILIA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS10",
+      "n_municipios": 19,
+      "pop_ibge_2022": 382161,
+      "elegiveis_rateados": 72559,
+      "pessoas_vacinadas": 0,
+      "gap": 72559
+    },
+    {
+      "codigo_regiao_saude": "29010",
+      "regiao_saude": "IRECE",
+      "uf": "BA",
+      "macrorregiao_saude": "CENTRO - NORTE (NRS - JACOBINA)",
+      "n_municipios": 19,
+      "pop_ibge_2022": 403735,
+      "elegiveis_rateados": 71929,
+      "pessoas_vacinadas": 0,
+      "gap": 71929
+    },
+    {
+      "codigo_regiao_saude": "42012",
+      "regiao_saude": "PLANALTO NORTE",
+      "uf": "SC",
+      "macrorregiao_saude": "PLANALTO NORTE E NORDESTE",
+      "n_municipios": 13,
+      "pop_ibge_2022": 370576,
+      "elegiveis_rateados": 71046,
+      "pessoas_vacinadas": 0,
+      "gap": 71046
+    },
+    {
+      "codigo_regiao_saude": "41008",
+      "regiao_saude": "8ª RS FRANCISCO BELTRAO",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIAO OESTE",
+      "n_municipios": 27,
+      "pop_ibge_2022": 382860,
+      "elegiveis_rateados": 70872,
+      "pessoas_vacinadas": 0,
+      "gap": 70872
+    },
+    {
+      "codigo_regiao_saude": "31037",
+      "regiao_saude": "IPATINGA",
+      "uf": "MG",
+      "macrorregiao_saude": "VALE DO ACO",
+      "n_municipios": 14,
+      "pop_ibge_2022": 377249,
+      "elegiveis_rateados": 70486,
+      "pessoas_vacinadas": 0,
+      "gap": 70486
+    },
+    {
+      "codigo_regiao_saude": "24001",
+      "regiao_saude": "1ª REGIAO DE SAUDE - SAO JOSE DE MIPIBU",
+      "uf": "RN",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 27,
+      "pop_ibge_2022": 379892,
+      "elegiveis_rateados": 70244,
+      "pessoas_vacinadas": 0,
+      "gap": 70244
+    },
+    {
+      "codigo_regiao_saude": "29018",
+      "regiao_saude": "PORTO SEGURO",
+      "uf": "BA",
+      "macrorregiao_saude": "EXTREMO SUL (NRS - TEIXEIRA FREITAS)",
+      "n_municipios": 8,
+      "pop_ibge_2022": 394077,
+      "elegiveis_rateados": 70208,
+      "pessoas_vacinadas": 0,
+      "gap": 70208
+    },
+    {
+      "codigo_regiao_saude": "29003",
+      "regiao_saude": "BRUMADO",
+      "uf": "BA",
+      "macrorregiao_saude": "SUDOESTE (NBS - VITORIA CONQUISTA)",
+      "n_municipios": 20,
+      "pop_ibge_2022": 392917,
+      "elegiveis_rateados": 70001,
+      "pessoas_vacinadas": 0,
+      "gap": 70001
+    },
+    {
+      "codigo_regiao_saude": "41016",
+      "regiao_saude": "16ª RS APUCARANA",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL NORTE",
+      "n_municipios": 17,
+      "pop_ibge_2022": 376371,
+      "elegiveis_rateados": 69671,
+      "pessoas_vacinadas": 0,
+      "gap": 69671
+    },
+    {
+      "codigo_regiao_saude": "17006",
+      "regiao_saude": "CAPIM DOURADO",
+      "uf": "TO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-SUL",
+      "n_municipios": 14,
+      "pop_ibge_2022": 375713,
+      "elegiveis_rateados": 69538,
+      "pessoas_vacinadas": 0,
+      "gap": 69538
+    },
+    {
+      "codigo_regiao_saude": "35102",
+      "regiao_saude": "LIMEIRA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS14",
+      "n_municipios": 4,
+      "pop_ibge_2022": 357916,
+      "elegiveis_rateados": 67956,
+      "pessoas_vacinadas": 0,
+      "gap": 67956
+    },
+    {
+      "codigo_regiao_saude": "33007",
+      "regiao_saude": "NOROESTE",
+      "uf": "RJ",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 14,
+      "pop_ibge_2022": 336995,
+      "elegiveis_rateados": 67509,
+      "pessoas_vacinadas": 0,
+      "gap": 67509
+    },
+    {
+      "codigo_regiao_saude": "29014",
+      "regiao_saude": "JACOBINA",
+      "uf": "BA",
+      "macrorregiao_saude": "CENTRO - NORTE (NRS - JACOBINA)",
+      "n_municipios": 19,
+      "pop_ibge_2022": 375960,
+      "elegiveis_rateados": 66980,
+      "pessoas_vacinadas": 0,
+      "gap": 66980
+    },
+    {
+      "codigo_regiao_saude": "43028",
+      "regiao_saude": "REGIAO 28",
+      "uf": "RS",
+      "macrorregiao_saude": "VALES",
+      "n_municipios": 13,
+      "pop_ibge_2022": 340857,
+      "elegiveis_rateados": 66628,
+      "pessoas_vacinadas": 0,
+      "gap": 66628
+    },
+    {
+      "codigo_regiao_saude": "35173",
+      "regiao_saude": "LITORAL NORTE",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS17",
+      "n_municipios": 4,
+      "pop_ibge_2022": 344383,
+      "elegiveis_rateados": 65387,
+      "pessoas_vacinadas": 0,
+      "gap": 65387
+    },
+    {
+      "codigo_regiao_saude": "31059",
+      "regiao_saude": "MANHUACU",
+      "uf": "MG",
+      "macrorregiao_saude": "LESTE DO SUL",
+      "n_municipios": 23,
+      "pop_ibge_2022": 348467,
+      "elegiveis_rateados": 65108,
+      "pessoas_vacinadas": 0,
+      "gap": 65108
+    },
+    {
+      "codigo_regiao_saude": "31086",
+      "regiao_saude": "DIVINOPOLIS",
+      "uf": "MG",
+      "macrorregiao_saude": "OESTE",
+      "n_municipios": 8,
+      "pop_ibge_2022": 347827,
+      "elegiveis_rateados": 64989,
+      "pessoas_vacinadas": 0,
+      "gap": 64989
+    },
+    {
+      "codigo_regiao_saude": "31025",
+      "regiao_saude": "VESPASIANO/LAGOA SANTA",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 7,
+      "pop_ibge_2022": 343342,
+      "elegiveis_rateados": 64151,
+      "pessoas_vacinadas": 0,
+      "gap": 64151
+    },
+    {
+      "codigo_regiao_saude": "33003",
+      "regiao_saude": "CENTRO-SUL",
+      "uf": "RJ",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 11,
+      "pop_ibge_2022": 320003,
+      "elegiveis_rateados": 64105,
+      "pessoas_vacinadas": 0,
+      "gap": 64105
+    },
+    {
+      "codigo_regiao_saude": "35101",
+      "regiao_saude": "ARARAS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS14",
+      "n_municipios": 5,
+      "pop_ibge_2022": 334950,
+      "elegiveis_rateados": 63596,
+      "pessoas_vacinadas": 0,
+      "gap": 63596
+    },
+    {
+      "codigo_regiao_saude": "42017",
+      "regiao_saude": "VALE DO ITAPOCU",
+      "uf": "SC",
+      "macrorregiao_saude": "PLANALTO NORTE E NORDESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 331693,
+      "elegiveis_rateados": 63591,
+      "pessoas_vacinadas": 0,
+      "gap": 63591
+    },
+    {
+      "codigo_regiao_saude": "11003",
+      "regiao_saude": "CENTRAL",
+      "uf": "RO",
+      "macrorregiao_saude": "MACRORREGIONAL II (CACOAL)",
+      "n_municipios": 14,
+      "pop_ibge_2022": 323955,
+      "elegiveis_rateados": 63480,
+      "pessoas_vacinadas": 0,
+      "gap": 63480
+    },
+    {
+      "codigo_regiao_saude": "21011",
+      "regiao_saude": "PINHEIRO",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO NORTE",
+      "n_municipios": 17,
+      "pop_ibge_2022": 390927,
+      "elegiveis_rateados": 63434,
+      "pessoas_vacinadas": 0,
+      "gap": 63434
+    },
+    {
+      "codigo_regiao_saude": "15012",
+      "regiao_saude": "XINGU",
+      "uf": "PA",
+      "macrorregiao_saude": "MACRORREGIONAL III ",
+      "n_municipios": 9,
+      "pop_ibge_2022": 373376,
+      "elegiveis_rateados": 63393,
+      "pessoas_vacinadas": 0,
+      "gap": 63393
+    },
+    {
+      "codigo_regiao_saude": "41011",
+      "regiao_saude": "11ª RS CAMPO MOURAO",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL NOROESTE",
+      "n_municipios": 25,
+      "pop_ibge_2022": 341931,
+      "elegiveis_rateados": 63296,
+      "pessoas_vacinadas": 0,
+      "gap": 63296
+    },
+    {
+      "codigo_regiao_saude": "26007",
+      "regiao_saude": "IX REGIÃO DE SAÚDE",
+      "uf": "PE",
+      "macrorregiao_saude": "VALE DO S.FRANCISCO E ARARIPE",
+      "n_municipios": 11,
+      "pop_ibge_2022": 338050,
+      "elegiveis_rateados": 62822,
+      "pessoas_vacinadas": 0,
+      "gap": 62822
+    },
+    {
+      "codigo_regiao_saude": "29019",
+      "regiao_saude": "RIBEIRA DO POMBAL",
+      "uf": "BA",
+      "macrorregiao_saude": "NORDESTE (NRS - ALAGOINHAS)",
+      "n_municipios": 16,
+      "pop_ibge_2022": 351255,
+      "elegiveis_rateados": 62579,
+      "pessoas_vacinadas": 0,
+      "gap": 62579
+    },
+    {
+      "codigo_regiao_saude": "35141",
+      "regiao_saude": "BAIXA MOGIANA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS15",
+      "n_municipios": 4,
+      "pop_ibge_2022": 329533,
+      "elegiveis_rateados": 62567,
+      "pessoas_vacinadas": 0,
+      "gap": 62567
+    },
+    {
+      "codigo_regiao_saude": "24003",
+      "regiao_saude": "3ª REGIAO DE SAUDE - JOAO CAMARA",
+      "uf": "RN",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 26,
+      "pop_ibge_2022": 337691,
+      "elegiveis_rateados": 62441,
+      "pessoas_vacinadas": 0,
+      "gap": 62441
+    },
+    {
+      "codigo_regiao_saude": "28006",
+      "regiao_saude": "NOSSA SENHORA DO SOCORRO",
+      "uf": "SE",
+      "macrorregiao_saude": "MACRO UNICA",
+      "n_municipios": 12,
+      "pop_ibge_2022": 337747,
+      "elegiveis_rateados": 62004,
+      "pessoas_vacinadas": 0,
+      "gap": 62004
+    },
+    {
+      "codigo_regiao_saude": "35064",
+      "regiao_saude": "JAU",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS9",
+      "n_municipios": 12,
+      "pop_ibge_2022": 324768,
+      "elegiveis_rateados": 61662,
+      "pessoas_vacinadas": 0,
+      "gap": 61662
+    },
+    {
+      "codigo_regiao_saude": "43025",
+      "regiao_saude": "REGIAO 25",
+      "uf": "RS",
+      "macrorregiao_saude": "SERRA",
+      "n_municipios": 22,
+      "pop_ibge_2022": 315027,
+      "elegiveis_rateados": 61579,
+      "pessoas_vacinadas": 0,
+      "gap": 61579
+    },
+    {
+      "codigo_regiao_saude": "50017",
+      "regiao_saude": "SUL FRONTEIRA",
+      "uf": "MS",
+      "macrorregiao_saude": "CONE SUL",
+      "n_municipios": 15,
+      "pop_ibge_2022": 329549,
+      "elegiveis_rateados": 61550,
+      "pessoas_vacinadas": 0,
+      "gap": 61550
+    },
+    {
+      "codigo_regiao_saude": "15007",
+      "regiao_saude": "METROPOLITANA II",
+      "uf": "PA",
+      "macrorregiao_saude": "MACRORREGIONAL II",
+      "n_municipios": 9,
+      "pop_ibge_2022": 358718,
+      "elegiveis_rateados": 60904,
+      "pessoas_vacinadas": 0,
+      "gap": 60904
+    },
+    {
+      "codigo_regiao_saude": "52005",
+      "regiao_saude": "ESTRADA DE FERRO",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO SUDESTE",
+      "n_municipios": 18,
+      "pop_ibge_2022": 325940,
+      "elegiveis_rateados": 59882,
+      "pessoas_vacinadas": 0,
+      "gap": 59882
+    },
+    {
+      "codigo_regiao_saude": "35031",
+      "regiao_saude": "CENTRAL DO DRS III",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS18",
+      "n_municipios": 8,
+      "pop_ibge_2022": 314890,
+      "elegiveis_rateados": 59787,
+      "pessoas_vacinadas": 0,
+      "gap": 59787
+    },
+    {
+      "codigo_regiao_saude": "42004",
+      "regiao_saude": "ALTO VALE DO ITAJAI",
+      "uf": "SC",
+      "macrorregiao_saude": "VALE DO ITAJAI",
+      "n_municipios": 28,
+      "pop_ibge_2022": 309808,
+      "elegiveis_rateados": 59396,
+      "pessoas_vacinadas": 0,
+      "gap": 59396
+    },
+    {
+      "codigo_regiao_saude": "21009",
+      "regiao_saude": "ITAPECURU MIRIM",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO NORTE",
+      "n_municipios": 14,
+      "pop_ibge_2022": 356974,
+      "elegiveis_rateados": 57925,
+      "pessoas_vacinadas": 0,
+      "gap": 57925
+    },
+    {
+      "codigo_regiao_saude": "35061",
+      "regiao_saude": "VALE DO JURUMIRIM",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS9",
+      "n_municipios": 17,
+      "pop_ibge_2022": 303615,
+      "elegiveis_rateados": 57646,
+      "pessoas_vacinadas": 0,
+      "gap": 57646
+    },
+    {
+      "codigo_regiao_saude": "35063",
+      "regiao_saude": "POLO CUESTA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS9",
+      "n_municipios": 13,
+      "pop_ibge_2022": 302784,
+      "elegiveis_rateados": 57488,
+      "pessoas_vacinadas": 0,
+      "gap": 57488
+    },
+    {
+      "codigo_regiao_saude": "21006",
+      "regiao_saude": "CHAPADINHA",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO NORTE",
+      "n_municipios": 13,
+      "pop_ibge_2022": 352087,
+      "elegiveis_rateados": 57132,
+      "pessoas_vacinadas": 0,
+      "gap": 57132
+    },
+    {
+      "codigo_regiao_saude": "35151",
+      "regiao_saude": "CATANDUVA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS12",
+      "n_municipios": 19,
+      "pop_ibge_2022": 298381,
+      "elegiveis_rateados": 56652,
+      "pessoas_vacinadas": 0,
+      "gap": 56652
+    },
+    {
+      "codigo_regiao_saude": "35021",
+      "regiao_saude": "CENTRAL DO DRS II",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS19",
+      "n_municipios": 11,
+      "pop_ibge_2022": 298249,
+      "elegiveis_rateados": 56627,
+      "pessoas_vacinadas": 0,
+      "gap": 56627
+    },
+    {
+      "codigo_regiao_saude": "42013",
+      "regiao_saude": "SERRA CATARINENSE",
+      "uf": "SC",
+      "macrorregiao_saude": "SERRA CATARINENSE",
+      "n_municipios": 18,
+      "pop_ibge_2022": 295210,
+      "elegiveis_rateados": 56597,
+      "pessoas_vacinadas": 0,
+      "gap": 56597
+    },
+    {
+      "codigo_regiao_saude": "29009",
+      "regiao_saude": "ILHEUS",
+      "uf": "BA",
+      "macrorregiao_saude": "SUL (NBS - ILHEUS)",
+      "n_municipios": 8,
+      "pop_ibge_2022": 316218,
+      "elegiveis_rateados": 56337,
+      "pessoas_vacinadas": 0,
+      "gap": 56337
+    },
+    {
+      "codigo_regiao_saude": "26005",
+      "regiao_saude": "XII REGIÃO DE SAÚDE",
+      "uf": "PE",
+      "macrorregiao_saude": "METROPOLITANA",
+      "n_municipios": 10,
+      "pop_ibge_2022": 302351,
+      "elegiveis_rateados": 56188,
+      "pessoas_vacinadas": 0,
+      "gap": 56188
+    },
+    {
+      "codigo_regiao_saude": "21014",
+      "regiao_saude": "SANTA INES",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO NORTE",
+      "n_municipios": 13,
+      "pop_ibge_2022": 345504,
+      "elegiveis_rateados": 56064,
+      "pessoas_vacinadas": 0,
+      "gap": 56064
+    },
+    {
+      "codigo_regiao_saude": "31048",
+      "regiao_saude": "UBA",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDESTE",
+      "n_municipios": 20,
+      "pop_ibge_2022": 299453,
+      "elegiveis_rateados": 55950,
+      "pessoas_vacinadas": 0,
+      "gap": 55950
+    },
+    {
+      "codigo_regiao_saude": "41001",
+      "regiao_saude": "1ª RS PARANAGUA",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL LESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 301405,
+      "elegiveis_rateados": 55794,
+      "pessoas_vacinadas": 0,
+      "gap": 55794
+    },
+    {
+      "codigo_regiao_saude": "42009",
+      "regiao_saude": "ALTO VALE DO RIO DO PEIXE",
+      "uf": "SC",
+      "macrorregiao_saude": "MEIO OESTE",
+      "n_municipios": 20,
+      "pop_ibge_2022": 287459,
+      "elegiveis_rateados": 55111,
+      "pessoas_vacinadas": 0,
+      "gap": 55111
+    },
+    {
+      "codigo_regiao_saude": "24004",
+      "regiao_saude": "4ª REGIAO DE SAUDE - CAICO",
+      "uf": "RN",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 25,
+      "pop_ibge_2022": 296664,
+      "elegiveis_rateados": 54855,
+      "pessoas_vacinadas": 0,
+      "gap": 54855
+    },
+    {
+      "codigo_regiao_saude": "15014",
+      "regiao_saude": "MARAJO II",
+      "uf": "PA",
+      "macrorregiao_saude": "MACRORREGIONAL I",
+      "n_municipios": 7,
+      "pop_ibge_2022": 322944,
+      "elegiveis_rateados": 54830,
+      "pessoas_vacinadas": 0,
+      "gap": 54830
+    },
+    {
+      "codigo_regiao_saude": "35033",
+      "regiao_saude": "NOROESTE DO DRS III",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS18",
+      "n_municipios": 10,
+      "pop_ibge_2022": 286891,
+      "elegiveis_rateados": 54471,
+      "pessoas_vacinadas": 0,
+      "gap": 54471
+    },
+    {
+      "codigo_regiao_saude": "31001",
+      "regiao_saude": "ALFENAS/MACHADO",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDOESTE",
+      "n_municipios": 16,
+      "pop_ibge_2022": 291274,
+      "elegiveis_rateados": 54422,
+      "pessoas_vacinadas": 0,
+      "gap": 54422
+    },
+    {
+      "codigo_regiao_saude": "43011",
+      "regiao_saude": "REGIAO 11",
+      "uf": "RS",
+      "macrorregiao_saude": "MISSIONEIRA",
+      "n_municipios": 24,
+      "pop_ibge_2022": 278410,
+      "elegiveis_rateados": 54421,
+      "pessoas_vacinadas": 0,
+      "gap": 54421
+    },
+    {
+      "codigo_regiao_saude": "35051",
+      "regiao_saude": "NORTE - BARRETOS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS13",
+      "n_municipios": 10,
+      "pop_ibge_2022": 285684,
+      "elegiveis_rateados": 54242,
+      "pessoas_vacinadas": 0,
+      "gap": 54242
+    },
+    {
+      "codigo_regiao_saude": "41019",
+      "regiao_saude": "19ª RS JACAREZINHO",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL NORTE",
+      "n_municipios": 22,
+      "pop_ibge_2022": 292531,
+      "elegiveis_rateados": 54151,
+      "pessoas_vacinadas": 0,
+      "gap": 54151
+    },
+    {
+      "codigo_regiao_saude": "25002",
+      "regiao_saude": "2ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO I - JOAO PESSOA",
+      "n_municipios": 25,
+      "pop_ibge_2022": 292420,
+      "elegiveis_rateados": 53864,
+      "pessoas_vacinadas": 0,
+      "gap": 53864
+    },
+    {
+      "codigo_regiao_saude": "41012",
+      "regiao_saude": "12ª RS UMUARAMA",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL NOROESTE",
+      "n_municipios": 21,
+      "pop_ibge_2022": 289984,
+      "elegiveis_rateados": 53680,
+      "pessoas_vacinadas": 0,
+      "gap": 53680
+    },
+    {
+      "codigo_regiao_saude": "22005",
+      "regiao_saude": "PLANICIE LITORANEA",
+      "uf": "PI",
+      "macrorregiao_saude": "LITORAL",
+      "n_municipios": 11,
+      "pop_ibge_2022": 290842,
+      "elegiveis_rateados": 52954,
+      "pessoas_vacinadas": 0,
+      "gap": 52954
+    },
+    {
+      "codigo_regiao_saude": "35121",
+      "regiao_saude": "VALE DO RIBEIRA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS7",
+      "n_municipios": 15,
+      "pop_ibge_2022": 277852,
+      "elegiveis_rateados": 52755,
+      "pessoas_vacinadas": 0,
+      "gap": 52755
+    },
+    {
+      "codigo_regiao_saude": "29021",
+      "regiao_saude": "SANTA MARIA DA VITORIA",
+      "uf": "BA",
+      "macrorregiao_saude": "OESTE (NBS - BARREIRAS)",
+      "n_municipios": 12,
+      "pop_ibge_2022": 293897,
+      "elegiveis_rateados": 52360,
+      "pessoas_vacinadas": 0,
+      "gap": 52360
+    },
+    {
+      "codigo_regiao_saude": "29024",
+      "regiao_saude": "SENHOR DO BONFIM",
+      "uf": "BA",
+      "macrorregiao_saude": "NORTE - (NRS - JUAZEIRO)",
+      "n_municipios": 9,
+      "pop_ibge_2022": 293267,
+      "elegiveis_rateados": 52248,
+      "pessoas_vacinadas": 0,
+      "gap": 52248
+    },
+    {
+      "codigo_regiao_saude": "35162",
+      "regiao_saude": "ITAPEVA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS8",
+      "n_municipios": 15,
+      "pop_ibge_2022": 273248,
+      "elegiveis_rateados": 51881,
+      "pessoas_vacinadas": 0,
+      "gap": 51881
+    },
+    {
+      "codigo_regiao_saude": "41007",
+      "regiao_saude": "7ª RS PATO BRANCO",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIAO OESTE",
+      "n_municipios": 15,
+      "pop_ibge_2022": 279819,
+      "elegiveis_rateados": 51798,
+      "pessoas_vacinadas": 0,
+      "gap": 51798
+    },
+    {
+      "codigo_regiao_saude": "17001",
+      "regiao_saude": "MEDIO NORTE ARAGUAIA",
+      "uf": "TO",
+      "macrorregiao_saude": "MACRORREGIAO DE SAUDE NORTE",
+      "n_municipios": 17,
+      "pop_ibge_2022": 278397,
+      "elegiveis_rateados": 51527,
+      "pessoas_vacinadas": 0,
+      "gap": 51527
+    },
+    {
+      "codigo_regiao_saude": "35142",
+      "regiao_saude": "MANTIQUEIRA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS15",
+      "n_municipios": 8,
+      "pop_ibge_2022": 268362,
+      "elegiveis_rateados": 50953,
+      "pessoas_vacinadas": 0,
+      "gap": 50953
+    },
+    {
+      "codigo_regiao_saude": "33001",
+      "regiao_saude": "BAIA DA ILHA GRANDE",
+      "uf": "RJ",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 3,
+      "pop_ibge_2022": 253897,
+      "elegiveis_rateados": 50862,
+      "pessoas_vacinadas": 0,
+      "gap": 50862
+    },
+    {
+      "codigo_regiao_saude": "31058",
+      "regiao_saude": "UNAI/PARACATU",
+      "uf": "MG",
+      "macrorregiao_saude": "NOROESTE",
+      "n_municipios": 12,
+      "pop_ibge_2022": 271765,
+      "elegiveis_rateados": 50777,
+      "pessoas_vacinadas": 0,
+      "gap": 50777
+    },
+    {
+      "codigo_regiao_saude": "52003",
+      "regiao_saude": "ENTORNO NORTE",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO NORDESTE",
+      "n_municipios": 8,
+      "pop_ibge_2022": 275752,
+      "elegiveis_rateados": 50661,
+      "pessoas_vacinadas": 0,
+      "gap": 50661
+    },
+    {
+      "codigo_regiao_saude": "41014",
+      "regiao_saude": "14ª RS PARANAVAI",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL NOROESTE",
+      "n_municipios": 28,
+      "pop_ibge_2022": 272818,
+      "elegiveis_rateados": 50502,
+      "pessoas_vacinadas": 0,
+      "gap": 50502
+    },
+    {
+      "codigo_regiao_saude": "31057",
+      "regiao_saude": "PATOS DE MINAS",
+      "uf": "MG",
+      "macrorregiao_saude": "NOROESTE",
+      "n_municipios": 11,
+      "pop_ibge_2022": 268193,
+      "elegiveis_rateados": 50110,
+      "pessoas_vacinadas": 0,
+      "gap": 50110
+    },
+    {
+      "codigo_regiao_saude": "31099",
+      "regiao_saude": "TEOFILO OTONI/MALACACHETA",
+      "uf": "MG",
+      "macrorregiao_saude": "NORDESTE",
+      "n_municipios": 12,
+      "pop_ibge_2022": 268035,
+      "elegiveis_rateados": 50080,
+      "pessoas_vacinadas": 0,
+      "gap": 50080
+    },
+    {
+      "codigo_regiao_saude": "35023",
+      "regiao_saude": "CONSORCIOS DO DRS II",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS19",
+      "n_municipios": 17,
+      "pop_ibge_2022": 263703,
+      "elegiveis_rateados": 50068,
+      "pessoas_vacinadas": 0,
+      "gap": 50068
+    },
+    {
+      "codigo_regiao_saude": "31052",
+      "regiao_saude": "JANAUBA/MONTE AZUL",
+      "uf": "MG",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 15,
+      "pop_ibge_2022": 266114,
+      "elegiveis_rateados": 49721,
+      "pessoas_vacinadas": 0,
+      "gap": 49721
+    },
+    {
+      "codigo_regiao_saude": "35104",
+      "regiao_saude": "RIO CLARO",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS14",
+      "n_municipios": 6,
+      "pop_ibge_2022": 256792,
+      "elegiveis_rateados": 48756,
+      "pessoas_vacinadas": 0,
+      "gap": 48756
+    },
+    {
+      "codigo_regiao_saude": "31032",
+      "regiao_saude": "PARA DE MINAS/NOVA SERRANA",
+      "uf": "MG",
+      "macrorregiao_saude": "OESTE",
+      "n_municipios": 9,
+      "pop_ibge_2022": 260480,
+      "elegiveis_rateados": 48669,
+      "pessoas_vacinadas": 0,
+      "gap": 48669
+    },
+    {
+      "codigo_regiao_saude": "29027",
+      "regiao_saude": "VALENCA",
+      "uf": "BA",
+      "macrorregiao_saude": "SUL (NBS - ILHEUS)",
+      "n_municipios": 11,
+      "pop_ibge_2022": 273172,
+      "elegiveis_rateados": 48668,
+      "pessoas_vacinadas": 0,
+      "gap": 48668
+    },
+    {
+      "codigo_regiao_saude": "31008",
+      "regiao_saude": "SAO LOURENCO",
+      "uf": "MG",
+      "macrorregiao_saude": "SUL",
+      "n_municipios": 24,
+      "pop_ibge_2022": 257374,
+      "elegiveis_rateados": 48088,
+      "pessoas_vacinadas": 0,
+      "gap": 48088
+    },
+    {
+      "codigo_regiao_saude": "52017",
+      "regiao_saude": "SUL",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO SUDESTE",
+      "n_municipios": 12,
+      "pop_ibge_2022": 261009,
+      "elegiveis_rateados": 47953,
+      "pessoas_vacinadas": 0,
+      "gap": 47953
+    },
+    {
+      "codigo_regiao_saude": "43005",
+      "regiao_saude": "REGIAO 05",
+      "uf": "RS",
+      "macrorregiao_saude": "METROPOLITANA",
+      "n_municipios": 11,
+      "pop_ibge_2022": 245111,
+      "elegiveis_rateados": 47912,
+      "pessoas_vacinadas": 0,
+      "gap": 47912
+    },
+    {
+      "codigo_regiao_saude": "51007",
+      "regiao_saude": "MEDIO NORTE MATOGROSSENSE",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-NOROESTE",
+      "n_municipios": 10,
+      "pop_ibge_2022": 253894,
+      "elegiveis_rateados": 46979,
+      "pessoas_vacinadas": 0,
+      "gap": 46979
+    },
+    {
+      "codigo_regiao_saude": "28004",
+      "regiao_saude": "LAGARTO",
+      "uf": "SE",
+      "macrorregiao_saude": "MACRO UNICA",
+      "n_municipios": 6,
+      "pop_ibge_2022": 255448,
+      "elegiveis_rateados": 46895,
+      "pessoas_vacinadas": 0,
+      "gap": 46895
+    },
+    {
+      "codigo_regiao_saude": "13002",
+      "regiao_saude": "RIO NEGRO E SOLIMOES",
+      "uf": "AM",
+      "macrorregiao_saude": "CENTRAL",
+      "n_municipios": 8,
+      "pop_ibge_2022": 273152,
+      "elegiveis_rateados": 46715,
+      "pessoas_vacinadas": 0,
+      "gap": 46715
+    },
+    {
+      "codigo_regiao_saude": "21013",
+      "regiao_saude": "ROSARIO",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO NORTE",
+      "n_municipios": 12,
+      "pop_ibge_2022": 287534,
+      "elegiveis_rateados": 46657,
+      "pessoas_vacinadas": 0,
+      "gap": 46657
+    },
+    {
+      "codigo_regiao_saude": "28003",
+      "regiao_saude": "ITABAIANA",
+      "uf": "SE",
+      "macrorregiao_saude": "MACRO UNICA",
+      "n_municipios": 14,
+      "pop_ibge_2022": 252041,
+      "elegiveis_rateados": 46270,
+      "pessoas_vacinadas": 0,
+      "gap": 46270
+    },
+    {
+      "codigo_regiao_saude": "42001",
+      "regiao_saude": "EXTREMO OESTE",
+      "uf": "SC",
+      "macrorregiao_saude": "GRANDE OESTE",
+      "n_municipios": 30,
+      "pop_ibge_2022": 241277,
+      "elegiveis_rateados": 46257,
+      "pessoas_vacinadas": 0,
+      "gap": 46257
+    },
+    {
+      "codigo_regiao_saude": "21005",
+      "regiao_saude": "CAXIAS",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO LESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 284858,
+      "elegiveis_rateados": 46223,
+      "pessoas_vacinadas": 0,
+      "gap": 46223
+    },
+    {
+      "codigo_regiao_saude": "21007",
+      "regiao_saude": "CODO",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO LESTE",
+      "n_municipios": 6,
+      "pop_ibge_2022": 283681,
+      "elegiveis_rateados": 46032,
+      "pessoas_vacinadas": 0,
+      "gap": 46032
+    },
+    {
+      "codigo_regiao_saude": "50009",
+      "regiao_saude": "BAIXO PANTANAL",
+      "uf": "MS",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 12,
+      "pop_ibge_2022": 245939,
+      "elegiveis_rateados": 45934,
+      "pessoas_vacinadas": 0,
+      "gap": 45934
+    },
+    {
+      "codigo_regiao_saude": "43016",
+      "regiao_saude": "REGIAO 16",
+      "uf": "RS",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 33,
+      "pop_ibge_2022": 233287,
+      "elegiveis_rateados": 45601,
+      "pessoas_vacinadas": 0,
+      "gap": 45601
+    },
+    {
+      "codigo_regiao_saude": "43029",
+      "regiao_saude": "REGIAO 29",
+      "uf": "RS",
+      "macrorregiao_saude": "VALES",
+      "n_municipios": 27,
+      "pop_ibge_2022": 231329,
+      "elegiveis_rateados": 45218,
+      "pessoas_vacinadas": 0,
+      "gap": 45218
+    },
+    {
+      "codigo_regiao_saude": "43014",
+      "regiao_saude": "REGIAO 14",
+      "uf": "RS",
+      "macrorregiao_saude": "MISSIONEIRA",
+      "n_municipios": 22,
+      "pop_ibge_2022": 231027,
+      "elegiveis_rateados": 45159,
+      "pessoas_vacinadas": 0,
+      "gap": 45159
+    },
+    {
+      "codigo_regiao_saude": "24006",
+      "regiao_saude": "6ª REGIAO DE SAUDE - PAU DOS FERROS",
+      "uf": "RN",
+      "macrorregiao_saude": "MACRORREGIAO II",
+      "n_municipios": 37,
+      "pop_ibge_2022": 242412,
+      "elegiveis_rateados": 44824,
+      "pessoas_vacinadas": 0,
+      "gap": 44824
+    },
+    {
+      "codigo_regiao_saude": "13009",
+      "regiao_saude": "ALTO SOLIMOES",
+      "uf": "AM",
+      "macrorregiao_saude": "OESTE",
+      "n_municipios": 9,
+      "pop_ibge_2022": 262013,
+      "elegiveis_rateados": 44810,
+      "pessoas_vacinadas": 0,
+      "gap": 44810
+    },
+    {
+      "codigo_regiao_saude": "43013",
+      "regiao_saude": "REGIAO 13",
+      "uf": "RS",
+      "macrorregiao_saude": "MISSIONEIRA",
+      "n_municipios": 20,
+      "pop_ibge_2022": 228408,
+      "elegiveis_rateados": 44647,
+      "pessoas_vacinadas": 0,
+      "gap": 44647
+    },
+    {
+      "codigo_regiao_saude": "21012",
+      "regiao_saude": "PRESIDENTE DUTRA",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO LESTE",
+      "n_municipios": 16,
+      "pop_ibge_2022": 274385,
+      "elegiveis_rateados": 44524,
+      "pessoas_vacinadas": 0,
+      "gap": 44524
+    },
+    {
+      "codigo_regiao_saude": "35092",
+      "regiao_saude": "ASSIS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS10",
+      "n_municipios": 12,
+      "pop_ibge_2022": 234483,
+      "elegiveis_rateados": 44520,
+      "pessoas_vacinadas": 0,
+      "gap": 44520
+    },
+    {
+      "codigo_regiao_saude": "15004",
+      "regiao_saude": "LAGO DE TUCURUI",
+      "uf": "PA",
+      "macrorregiao_saude": "MACRORREGIONAL IV",
+      "n_municipios": 5,
+      "pop_ibge_2022": 261819,
+      "elegiveis_rateados": 44452,
+      "pessoas_vacinadas": 0,
+      "gap": 44452
+    },
+    {
+      "codigo_regiao_saude": "31015",
+      "regiao_saude": "SAO JOAO DEL REI",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO SUL",
+      "n_municipios": 18,
+      "pop_ibge_2022": 237071,
+      "elegiveis_rateados": 44295,
+      "pessoas_vacinadas": 0,
+      "gap": 44295
+    },
+    {
+      "codigo_regiao_saude": "26012",
+      "regiao_saude": "XI REGIÃO DE SAÚDE",
+      "uf": "PE",
+      "macrorregiao_saude": "SERTAO",
+      "n_municipios": 10,
+      "pop_ibge_2022": 237227,
+      "elegiveis_rateados": 44085,
+      "pessoas_vacinadas": 0,
+      "gap": 44085
+    },
+    {
+      "codigo_regiao_saude": "12003",
+      "regiao_saude": "JURUA E TARAUACA/ENVIRA",
+      "uf": "AC",
+      "macrorregiao_saude": "MACRO UNICA - AC",
+      "n_municipios": 7,
+      "pop_ibge_2022": 232841,
+      "elegiveis_rateados": 43961,
+      "pessoas_vacinadas": 0,
+      "gap": 43961
+    },
+    {
+      "codigo_regiao_saude": "35094",
+      "regiao_saude": "OURINHOS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS10",
+      "n_municipios": 13,
+      "pop_ibge_2022": 230687,
+      "elegiveis_rateados": 43800,
+      "pessoas_vacinadas": 0,
+      "gap": 43800
+    },
+    {
+      "codigo_regiao_saude": "31006",
+      "regiao_saude": "POCOS DE CALDAS",
+      "uf": "MG",
+      "macrorregiao_saude": "EXTREMO SUL",
+      "n_municipios": 6,
+      "pop_ibge_2022": 233289,
+      "elegiveis_rateados": 43588,
+      "pessoas_vacinadas": 0,
+      "gap": 43588
+    },
+    {
+      "codigo_regiao_saude": "52016",
+      "regiao_saude": "SUDOESTE II",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO SUDOESTE",
+      "n_municipios": 10,
+      "pop_ibge_2022": 236669,
+      "elegiveis_rateados": 43481,
+      "pessoas_vacinadas": 0,
+      "gap": 43481
+    },
+    {
+      "codigo_regiao_saude": "22009",
+      "regiao_saude": "VALE DO RIO GUARIBAS",
+      "uf": "PI",
+      "macrorregiao_saude": "SEMI-ARIDO",
+      "n_municipios": 26,
+      "pop_ibge_2022": 238172,
+      "elegiveis_rateados": 43365,
+      "pessoas_vacinadas": 0,
+      "gap": 43365
+    },
+    {
+      "codigo_regiao_saude": "29005",
+      "regiao_saude": "CRUZ DAS ALMAS",
+      "uf": "BA",
+      "macrorregiao_saude": "LESTE - (NRS - SALVADOR)",
+      "n_municipios": 9,
+      "pop_ibge_2022": 241117,
+      "elegiveis_rateados": 42957,
+      "pessoas_vacinadas": 0,
+      "gap": 42957
+    },
+    {
+      "codigo_regiao_saude": "29017",
+      "regiao_saude": "PAULO AFONSO",
+      "uf": "BA",
+      "macrorregiao_saude": "NORTE - (NRS - JUAZEIRO)",
+      "n_municipios": 9,
+      "pop_ibge_2022": 240721,
+      "elegiveis_rateados": 42886,
+      "pessoas_vacinadas": 0,
+      "gap": 42886
+    },
+    {
+      "codigo_regiao_saude": "21019",
+      "regiao_saude": "ZE DOCA",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO NORTE",
+      "n_municipios": 17,
+      "pop_ibge_2022": 263353,
+      "elegiveis_rateados": 42733,
+      "pessoas_vacinadas": 0,
+      "gap": 42733
+    },
+    {
+      "codigo_regiao_saude": "42014",
+      "regiao_saude": "EXTREMO SUL CATARINENSE",
+      "uf": "SC",
+      "macrorregiao_saude": "SUL",
+      "n_municipios": 15,
+      "pop_ibge_2022": 222182,
+      "elegiveis_rateados": 42596,
+      "pessoas_vacinadas": 0,
+      "gap": 42596
+    },
+    {
+      "codigo_regiao_saude": "31021",
+      "regiao_saude": "ITABIRA",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 13,
+      "pop_ibge_2022": 227558,
+      "elegiveis_rateados": 42517,
+      "pessoas_vacinadas": 0,
+      "gap": 42517
+    },
+    {
+      "codigo_regiao_saude": "15010",
+      "regiao_saude": "TAPAJOS",
+      "uf": "PA",
+      "macrorregiao_saude": "MACRORREGIONAL III ",
+      "n_municipios": 6,
+      "pop_ibge_2022": 250295,
+      "elegiveis_rateados": 42496,
+      "pessoas_vacinadas": 0,
+      "gap": 42496
+    },
+    {
+      "codigo_regiao_saude": "28002",
+      "regiao_saude": "ESTANCIA",
+      "uf": "SE",
+      "macrorregiao_saude": "MACRO UNICA",
+      "n_municipios": 10,
+      "pop_ibge_2022": 231300,
+      "elegiveis_rateados": 42462,
+      "pessoas_vacinadas": 0,
+      "gap": 42462
+    },
+    {
+      "codigo_regiao_saude": "43006",
+      "regiao_saude": "REGIAO 06 - VALE DO PARANHANA E COSTA SERRA",
+      "uf": "RS",
+      "macrorregiao_saude": "METROPOLITANA",
+      "n_municipios": 8,
+      "pop_ibge_2022": 216513,
+      "elegiveis_rateados": 42322,
+      "pessoas_vacinadas": 0,
+      "gap": 42322
+    },
+    {
+      "codigo_regiao_saude": "29011",
+      "regiao_saude": "ITABERABA",
+      "uf": "BA",
+      "macrorregiao_saude": "CENTRO-LESTE (NRS - FEIRA SANTANA)",
+      "n_municipios": 14,
+      "pop_ibge_2022": 237522,
+      "elegiveis_rateados": 42316,
+      "pessoas_vacinadas": 0,
+      "gap": 42316
+    },
+    {
+      "codigo_regiao_saude": "11001",
+      "regiao_saude": "VALE DO JAMARI",
+      "uf": "RO",
+      "macrorregiao_saude": "MACRORREGIAO I - PORTO VELHO",
+      "n_municipios": 9,
+      "pop_ibge_2022": 214728,
+      "elegiveis_rateados": 42076,
+      "pessoas_vacinadas": 0,
+      "gap": 42076
+    },
+    {
+      "codigo_regiao_saude": "21001",
+      "regiao_saude": "ACAILANDIA",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO SUL",
+      "n_municipios": 8,
+      "pop_ibge_2022": 258896,
+      "elegiveis_rateados": 42010,
+      "pessoas_vacinadas": 0,
+      "gap": 42010
+    },
+    {
+      "codigo_regiao_saude": "25006",
+      "regiao_saude": "6ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO III - SERTAO/ALTO SERTAO",
+      "n_municipios": 24,
+      "pop_ibge_2022": 227354,
+      "elegiveis_rateados": 41879,
+      "pessoas_vacinadas": 0,
+      "gap": 41879
+    },
+    {
+      "codigo_regiao_saude": "21018",
+      "regiao_saude": "VIANA",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO NORTE",
+      "n_municipios": 11,
+      "pop_ibge_2022": 256845,
+      "elegiveis_rateados": 41677,
+      "pessoas_vacinadas": 0,
+      "gap": 41677
+    },
+    {
+      "codigo_regiao_saude": "31013",
+      "regiao_saude": "BARBACENA",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO SUL",
+      "n_municipios": 15,
+      "pop_ibge_2022": 222233,
+      "elegiveis_rateados": 41522,
+      "pessoas_vacinadas": 0,
+      "gap": 41522
+    },
+    {
+      "codigo_regiao_saude": "21002",
+      "regiao_saude": "BACABAL",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO NORTE",
+      "n_municipios": 11,
+      "pop_ibge_2022": 255222,
+      "elegiveis_rateados": 41414,
+      "pessoas_vacinadas": 0,
+      "gap": 41414
+    },
+    {
+      "codigo_regiao_saude": "27009",
+      "regiao_saude": "9ª REGIAO DE SAUDE",
+      "uf": "AL",
+      "macrorregiao_saude": "2ª MACRORREGIAO DE SAUDE",
+      "n_municipios": 14,
+      "pop_ibge_2022": 223669,
+      "elegiveis_rateados": 40675,
+      "pessoas_vacinadas": 0,
+      "gap": 40675
+    },
+    {
+      "codigo_regiao_saude": "31035",
+      "regiao_saude": "CORONEL FABRICIANO/TIMOTEO",
+      "uf": "MG",
+      "macrorregiao_saude": "VALE DO ACO",
+      "n_municipios": 8,
+      "pop_ibge_2022": 217646,
+      "elegiveis_rateados": 40665,
+      "pessoas_vacinadas": 0,
+      "gap": 40665
+    },
+    {
+      "codigo_regiao_saude": "21017",
+      "regiao_saude": "TIMON",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO LESTE",
+      "n_municipios": 4,
+      "pop_ibge_2022": 249953,
+      "elegiveis_rateados": 40559,
+      "pessoas_vacinadas": 0,
+      "gap": 40559
+    },
+    {
+      "codigo_regiao_saude": "29013",
+      "regiao_saude": "ITAPETINGA",
+      "uf": "BA",
+      "macrorregiao_saude": "SUDOESTE (NBS - VITORIA CONQUISTA)",
+      "n_municipios": 12,
+      "pop_ibge_2022": 224782,
+      "elegiveis_rateados": 40047,
+      "pessoas_vacinadas": 0,
+      "gap": 40047
+    },
+    {
+      "codigo_regiao_saude": "31012",
+      "regiao_saude": "VARGINHA",
+      "uf": "MG",
+      "macrorregiao_saude": "SUL",
+      "n_municipios": 6,
+      "pop_ibge_2022": 214237,
+      "elegiveis_rateados": 40028,
+      "pessoas_vacinadas": 0,
+      "gap": 40028
+    },
+    {
+      "codigo_regiao_saude": "15013",
+      "regiao_saude": "MARAJO I",
+      "uf": "PA",
+      "macrorregiao_saude": "MACRORREGIONAL I",
+      "n_municipios": 9,
+      "pop_ibge_2022": 234276,
+      "elegiveis_rateados": 39776,
+      "pessoas_vacinadas": 0,
+      "gap": 39776
+    },
+    {
+      "codigo_regiao_saude": "13005",
+      "regiao_saude": "BAIXO AMAZONAS",
+      "uf": "AM",
+      "macrorregiao_saude": "LESTE",
+      "n_municipios": 5,
+      "pop_ibge_2022": 232548,
+      "elegiveis_rateados": 39771,
+      "pessoas_vacinadas": 0,
+      "gap": 39771
+    },
+    {
+      "codigo_regiao_saude": "42003",
+      "regiao_saude": "XANXERE",
+      "uf": "SC",
+      "macrorregiao_saude": "GRANDE OESTE",
+      "n_municipios": 21,
+      "pop_ibge_2022": 207199,
+      "elegiveis_rateados": 39724,
+      "pessoas_vacinadas": 0,
+      "gap": 39724
+    },
+    {
+      "codigo_regiao_saude": "41018",
+      "regiao_saude": "18ª RS CORNELIO PROCOPIO",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL NORTE",
+      "n_municipios": 21,
+      "pop_ibge_2022": 214399,
+      "elegiveis_rateados": 39688,
+      "pessoas_vacinadas": 0,
+      "gap": 39688
+    },
+    {
+      "codigo_regiao_saude": "31092",
+      "regiao_saude": "PASSOS",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDOESTE",
+      "n_municipios": 10,
+      "pop_ibge_2022": 210267,
+      "elegiveis_rateados": 39287,
+      "pessoas_vacinadas": 0,
+      "gap": 39287
+    },
+    {
+      "codigo_regiao_saude": "35143",
+      "regiao_saude": "RIO PARDO",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS15",
+      "n_municipios": 8,
+      "pop_ibge_2022": 206531,
+      "elegiveis_rateados": 39213,
+      "pessoas_vacinadas": 0,
+      "gap": 39213
+    },
+    {
+      "codigo_regiao_saude": "31060",
+      "regiao_saude": "PONTE NOVA",
+      "uf": "MG",
+      "macrorregiao_saude": "LESTE DO SUL",
+      "n_municipios": 21,
+      "pop_ibge_2022": 207331,
+      "elegiveis_rateados": 38738,
+      "pessoas_vacinadas": 0,
+      "gap": 38738
+    },
+    {
+      "codigo_regiao_saude": "21003",
+      "regiao_saude": "BALSAS",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO SUL",
+      "n_municipios": 13,
+      "pop_ibge_2022": 233333,
+      "elegiveis_rateados": 37862,
+      "pessoas_vacinadas": 0,
+      "gap": 37862
+    },
+    {
+      "codigo_regiao_saude": "21015",
+      "regiao_saude": "SAO JOAO DOS PATOS",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO LESTE",
+      "n_municipios": 15,
+      "pop_ibge_2022": 233148,
+      "elegiveis_rateados": 37832,
+      "pessoas_vacinadas": 0,
+      "gap": 37832
+    },
+    {
+      "codigo_regiao_saude": "22011",
+      "regiao_saude": "VALE DOS RIOS PIAUI E ITAUEIRAS",
+      "uf": "PI",
+      "macrorregiao_saude": "CERRADOS",
+      "n_municipios": 28,
+      "pop_ibge_2022": 206599,
+      "elegiveis_rateados": 37616,
+      "pessoas_vacinadas": 0,
+      "gap": 37616
+    },
+    {
+      "codigo_regiao_saude": "35157",
+      "regiao_saude": "VOTUPORANGA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS12",
+      "n_municipios": 17,
+      "pop_ibge_2022": 198031,
+      "elegiveis_rateados": 37599,
+      "pessoas_vacinadas": 0,
+      "gap": 37599
+    },
+    {
+      "codigo_regiao_saude": "31003",
+      "regiao_saude": "ITAJUBA",
+      "uf": "MG",
+      "macrorregiao_saude": "EXTREMO SUL",
+      "n_municipios": 15,
+      "pop_ibge_2022": 200946,
+      "elegiveis_rateados": 37545,
+      "pessoas_vacinadas": 0,
+      "gap": 37545
+    },
+    {
+      "codigo_regiao_saude": "21004",
+      "regiao_saude": "BARRA DO CORDA",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO SUL",
+      "n_municipios": 7,
+      "pop_ibge_2022": 231348,
+      "elegiveis_rateados": 37540,
+      "pessoas_vacinadas": 0,
+      "gap": 37540
+    },
+    {
+      "codigo_regiao_saude": "35022",
+      "regiao_saude": "LAGOS DO DRS II",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS19",
+      "n_municipios": 12,
+      "pop_ibge_2022": 197605,
+      "elegiveis_rateados": 37518,
+      "pessoas_vacinadas": 0,
+      "gap": 37518
+    },
+    {
+      "codigo_regiao_saude": "52012",
+      "regiao_saude": "RIO VERMELHO",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-OESTE",
+      "n_municipios": 17,
+      "pop_ibge_2022": 202776,
+      "elegiveis_rateados": 37254,
+      "pessoas_vacinadas": 0,
+      "gap": 37254
+    },
+    {
+      "codigo_regiao_saude": "43015",
+      "regiao_saude": "REGIAO 15 - CAMINHO DAS AGUAS",
+      "uf": "RS",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 26,
+      "pop_ibge_2022": 189989,
+      "elegiveis_rateados": 37137,
+      "pessoas_vacinadas": 0,
+      "gap": 37137
+    },
+    {
+      "codigo_regiao_saude": "42008",
+      "regiao_saude": "MEIO OESTE",
+      "uf": "SC",
+      "macrorregiao_saude": "MEIO OESTE",
+      "n_municipios": 20,
+      "pop_ibge_2022": 193657,
+      "elegiveis_rateados": 37127,
+      "pessoas_vacinadas": 0,
+      "gap": 37127
+    },
+    {
+      "codigo_regiao_saude": "50013",
+      "regiao_saude": "LESTE",
+      "uf": "MS",
+      "macrorregiao_saude": "COSTA LESTE",
+      "n_municipios": 6,
+      "pop_ibge_2022": 198672,
+      "elegiveis_rateados": 37106,
+      "pessoas_vacinadas": 0,
+      "gap": 37106
+    },
+    {
+      "codigo_regiao_saude": "43027",
+      "regiao_saude": "REGIAO 27",
+      "uf": "RS",
+      "macrorregiao_saude": "VALES",
+      "n_municipios": 12,
+      "pop_ibge_2022": 189103,
+      "elegiveis_rateados": 36964,
+      "pessoas_vacinadas": 0,
+      "gap": 36964
+    },
+    {
+      "codigo_regiao_saude": "31034",
+      "regiao_saude": "CARATINGA",
+      "uf": "MG",
+      "macrorregiao_saude": "VALE DO ACO",
+      "n_municipios": 13,
+      "pop_ibge_2022": 196029,
+      "elegiveis_rateados": 36626,
+      "pessoas_vacinadas": 0,
+      "gap": 36626
+    },
+    {
+      "codigo_regiao_saude": "17002",
+      "regiao_saude": "BICO DO PAPAGAIO",
+      "uf": "TO",
+      "macrorregiao_saude": "MACRORREGIAO DE SAUDE NORTE",
+      "n_municipios": 24,
+      "pop_ibge_2022": 196920,
+      "elegiveis_rateados": 36447,
+      "pessoas_vacinadas": 0,
+      "gap": 36447
+    },
+    {
+      "codigo_regiao_saude": "43026",
+      "regiao_saude": "REGIAO 26",
+      "uf": "RS",
+      "macrorregiao_saude": "SERRA",
+      "n_municipios": 12,
+      "pop_ibge_2022": 184802,
+      "elegiveis_rateados": 36123,
+      "pessoas_vacinadas": 0,
+      "gap": 36123
+    },
+    {
+      "codigo_regiao_saude": "31074",
+      "regiao_saude": "PATROCINIO/MONTE CARMELO",
+      "uf": "MG",
+      "macrorregiao_saude": "TRIANGULO DO NORTE",
+      "n_municipios": 9,
+      "pop_ibge_2022": 193311,
+      "elegiveis_rateados": 36119,
+      "pessoas_vacinadas": 0,
+      "gap": 36119
+    },
+    {
+      "codigo_regiao_saude": "43022",
+      "regiao_saude": "REGIAO 22",
+      "uf": "RS",
+      "macrorregiao_saude": "SUL",
+      "n_municipios": 6,
+      "pop_ibge_2022": 182932,
+      "elegiveis_rateados": 35758,
+      "pessoas_vacinadas": 0,
+      "gap": 35758
+    },
+    {
+      "codigo_regiao_saude": "31070",
+      "regiao_saude": "ARAXA",
+      "uf": "MG",
+      "macrorregiao_saude": "TRIANGULO DO SUL",
+      "n_municipios": 8,
+      "pop_ibge_2022": 190805,
+      "elegiveis_rateados": 35650,
+      "pessoas_vacinadas": 0,
+      "gap": 35650
+    },
+    {
+      "codigo_regiao_saude": "31022",
+      "regiao_saude": "OURO PRETO",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 3,
+      "pop_ibge_2022": 189573,
+      "elegiveis_rateados": 35420,
+      "pessoas_vacinadas": 0,
+      "gap": 35420
+    },
+    {
+      "codigo_regiao_saude": "27003",
+      "regiao_saude": "3ª REGIAO DE SAUDE",
+      "uf": "AL",
+      "macrorregiao_saude": "1ª MACRORREGIAO DE SAUDE",
+      "n_municipios": 11,
+      "pop_ibge_2022": 193680,
+      "elegiveis_rateados": 35222,
+      "pessoas_vacinadas": 0,
+      "gap": 35222
+    },
+    {
+      "codigo_regiao_saude": "31073",
+      "regiao_saude": "ITUIUTABA",
+      "uf": "MG",
+      "macrorregiao_saude": "TRIANGULO DO NORTE",
+      "n_municipios": 9,
+      "pop_ibge_2022": 187953,
+      "elegiveis_rateados": 35117,
+      "pessoas_vacinadas": 0,
+      "gap": 35117
+    },
+    {
+      "codigo_regiao_saude": "25003",
+      "regiao_saude": "3ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO II - CAMPINA GRANDE",
+      "n_municipios": 12,
+      "pop_ibge_2022": 190270,
+      "elegiveis_rateados": 35048,
+      "pessoas_vacinadas": 0,
+      "gap": 35048
+    },
+    {
+      "codigo_regiao_saude": "31079",
+      "regiao_saude": "CONSELHEIRO LAFAIETE",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO SUL",
+      "n_municipios": 12,
+      "pop_ibge_2022": 186540,
+      "elegiveis_rateados": 34853,
+      "pessoas_vacinadas": 0,
+      "gap": 34853
+    },
+    {
+      "codigo_regiao_saude": "31004",
+      "regiao_saude": "LAVRAS",
+      "uf": "MG",
+      "macrorregiao_saude": "SUL",
+      "n_municipios": 10,
+      "pop_ibge_2022": 185316,
+      "elegiveis_rateados": 34625,
+      "pessoas_vacinadas": 0,
+      "gap": 34625
+    },
+    {
+      "codigo_regiao_saude": "26001",
+      "regiao_saude": "X REGIÃO DE SAÚDE",
+      "uf": "PE",
+      "macrorregiao_saude": "SERTAO",
+      "n_municipios": 12,
+      "pop_ibge_2022": 184940,
+      "elegiveis_rateados": 34369,
+      "pessoas_vacinadas": 0,
+      "gap": 34369
+    },
+    {
+      "codigo_regiao_saude": "43004",
+      "regiao_saude": "REGIAO 04",
+      "uf": "RS",
+      "macrorregiao_saude": "METROPOLITANA",
+      "n_municipios": 12,
+      "pop_ibge_2022": 175741,
+      "elegiveis_rateados": 34352,
+      "pessoas_vacinadas": 0,
+      "gap": 34352
+    },
+    {
+      "codigo_regiao_saude": "24005",
+      "regiao_saude": "5ª REGIAO DE SAUDE - SANTA CRUZ",
+      "uf": "RN",
+      "macrorregiao_saude": "MACRORREGIAO I",
+      "n_municipios": 21,
+      "pop_ibge_2022": 185464,
+      "elegiveis_rateados": 34293,
+      "pessoas_vacinadas": 0,
+      "gap": 34293
+    },
+    {
+      "codigo_regiao_saude": "27005",
+      "regiao_saude": "5ª REGIAO DE SAUDE",
+      "uf": "AL",
+      "macrorregiao_saude": "1ª MACRORREGIAO DE SAUDE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 187683,
+      "elegiveis_rateados": 34131,
+      "pessoas_vacinadas": 0,
+      "gap": 34131
+    },
+    {
+      "codigo_regiao_saude": "51011",
+      "regiao_saude": "OESTE MATOGROSSENSE",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO OESTE",
+      "n_municipios": 12,
+      "pop_ibge_2022": 184452,
+      "elegiveis_rateados": 34130,
+      "pessoas_vacinadas": 0,
+      "gap": 34130
+    },
+    {
+      "codigo_regiao_saude": "16003",
+      "regiao_saude": "AREA SUDOESTE",
+      "uf": "AP",
+      "macrorregiao_saude": "MACRO UNICA - AP",
+      "n_municipios": 4,
+      "pop_ibge_2022": 175947,
+      "elegiveis_rateados": 34125,
+      "pessoas_vacinadas": 0,
+      "gap": 34125
+    },
+    {
+      "codigo_regiao_saude": "27006",
+      "regiao_saude": "6ª REGIAO DE SAUDE",
+      "uf": "AL",
+      "macrorregiao_saude": "1ª MACRORREGIAO DE SAUDE",
+      "n_municipios": 8,
+      "pop_ibge_2022": 186340,
+      "elegiveis_rateados": 33887,
+      "pessoas_vacinadas": 0,
+      "gap": 33887
+    },
+    {
+      "codigo_regiao_saude": "22002",
+      "regiao_saude": "CHAPADA DAS MANGABEIRAS",
+      "uf": "PI",
+      "macrorregiao_saude": "CERRADOS",
+      "n_municipios": 21,
+      "pop_ibge_2022": 186012,
+      "elegiveis_rateados": 33868,
+      "pessoas_vacinadas": 0,
+      "gap": 33868
+    },
+    {
+      "codigo_regiao_saude": "41021",
+      "regiao_saude": "21ª RS TELEMACO BORBA",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL LESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 181345,
+      "elegiveis_rateados": 33569,
+      "pessoas_vacinadas": 0,
+      "gap": 33569
+    },
+    {
+      "codigo_regiao_saude": "31019",
+      "regiao_saude": "CURVELO",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 11,
+      "pop_ibge_2022": 178891,
+      "elegiveis_rateados": 33424,
+      "pessoas_vacinadas": 0,
+      "gap": 33424
+    },
+    {
+      "codigo_regiao_saude": "29023",
+      "regiao_saude": "SEABRA",
+      "uf": "BA",
+      "macrorregiao_saude": "CENTRO-LESTE (NRS - FEIRA SANTANA)",
+      "n_municipios": 11,
+      "pop_ibge_2022": 187151,
+      "elegiveis_rateados": 33342,
+      "pessoas_vacinadas": 0,
+      "gap": 33342
+    },
+    {
+      "codigo_regiao_saude": "29008",
+      "regiao_saude": "IBOTIRAMA",
+      "uf": "BA",
+      "macrorregiao_saude": "OESTE (NBS - BARREIRAS)",
+      "n_municipios": 9,
+      "pop_ibge_2022": 187096,
+      "elegiveis_rateados": 33333,
+      "pessoas_vacinadas": 0,
+      "gap": 33333
+    },
+    {
+      "codigo_regiao_saude": "52018",
+      "regiao_saude": "SAO PATRICIO II",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-NORTE",
+      "n_municipios": 8,
+      "pop_ibge_2022": 180290,
+      "elegiveis_rateados": 33123,
+      "pessoas_vacinadas": 0,
+      "gap": 33123
+    },
+    {
+      "codigo_regiao_saude": "17005",
+      "regiao_saude": "ILHA DO BANANAL",
+      "uf": "TO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-SUL",
+      "n_municipios": 18,
+      "pop_ibge_2022": 177432,
+      "elegiveis_rateados": 32840,
+      "pessoas_vacinadas": 0,
+      "gap": 32840
+    },
+    {
+      "codigo_regiao_saude": "21010",
+      "regiao_saude": "PEDREIRAS",
+      "uf": "MA",
+      "macrorregiao_saude": "MACRORREGIAO LESTE",
+      "n_municipios": 12,
+      "pop_ibge_2022": 200996,
+      "elegiveis_rateados": 32615,
+      "pessoas_vacinadas": 0,
+      "gap": 32615
+    },
+    {
+      "codigo_regiao_saude": "11002",
+      "regiao_saude": "CAFE",
+      "uf": "RO",
+      "macrorregiao_saude": "MACRORREGIONAL II (CACOAL)",
+      "n_municipios": 6,
+      "pop_ibge_2022": 166180,
+      "elegiveis_rateados": 32563,
+      "pessoas_vacinadas": 0,
+      "gap": 32563
+    },
+    {
+      "codigo_regiao_saude": "13003",
+      "regiao_saude": "RIO MADEIRA",
+      "uf": "AM",
+      "macrorregiao_saude": "LESTE",
+      "n_municipios": 5,
+      "pop_ibge_2022": 188932,
+      "elegiveis_rateados": 32312,
+      "pessoas_vacinadas": 0,
+      "gap": 32312
+    },
+    {
+      "codigo_regiao_saude": "31071",
+      "regiao_saude": "FRUTAL / ITURAMA",
+      "uf": "MG",
+      "macrorregiao_saude": "TRIANGULO DO SUL",
+      "n_municipios": 11,
+      "pop_ibge_2022": 172237,
+      "elegiveis_rateados": 32181,
+      "pessoas_vacinadas": 0,
+      "gap": 32181
+    },
+    {
+      "codigo_regiao_saude": "25012",
+      "regiao_saude": "12ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO I - JOAO PESSOA",
+      "n_municipios": 14,
+      "pop_ibge_2022": 173724,
+      "elegiveis_rateados": 32000,
+      "pessoas_vacinadas": 0,
+      "gap": 32000
+    },
+    {
+      "codigo_regiao_saude": "25009",
+      "regiao_saude": "9ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO III - SERTAO/ALTO SERTAO",
+      "n_municipios": 15,
+      "pop_ibge_2022": 173175,
+      "elegiveis_rateados": 31899,
+      "pessoas_vacinadas": 0,
+      "gap": 31899
+    },
+    {
+      "codigo_regiao_saude": "31044",
+      "regiao_saude": "LEOPOLDINA/CATAGUASES",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDESTE",
+      "n_municipios": 10,
+      "pop_ibge_2022": 170181,
+      "elegiveis_rateados": 31797,
+      "pessoas_vacinadas": 0,
+      "gap": 31797
+    },
+    {
+      "codigo_regiao_saude": "43020",
+      "regiao_saude": "REGIAO 20 - ROTA DA PRODUCAO",
+      "uf": "RS",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 26,
+      "pop_ibge_2022": 159758,
+      "elegiveis_rateados": 31228,
+      "pessoas_vacinadas": 0,
+      "gap": 31228
+    },
+    {
+      "codigo_regiao_saude": "28005",
+      "regiao_saude": "NOSSA SENHORA DA GLORIA",
+      "uf": "SE",
+      "macrorregiao_saude": "MACRO UNICA",
+      "n_municipios": 9,
+      "pop_ibge_2022": 170047,
+      "elegiveis_rateados": 31217,
+      "pessoas_vacinadas": 0,
+      "gap": 31217
+    },
+    {
+      "codigo_regiao_saude": "31045",
+      "regiao_saude": "MURIAE",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDESTE",
+      "n_municipios": 11,
+      "pop_ibge_2022": 165935,
+      "elegiveis_rateados": 31004,
+      "pessoas_vacinadas": 0,
+      "gap": 31004
+    },
+    {
+      "codigo_regiao_saude": "52013",
+      "regiao_saude": "SAO PATRICIO I",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-NORTE",
+      "n_municipios": 20,
+      "pop_ibge_2022": 168047,
+      "elegiveis_rateados": 30874,
+      "pessoas_vacinadas": 0,
+      "gap": 30874
+    },
+    {
+      "codigo_regiao_saude": "13004",
+      "regiao_saude": "MEDIO AMAZONAS",
+      "uf": "AM",
+      "macrorregiao_saude": "LESTE",
+      "n_municipios": 6,
+      "pop_ibge_2022": 179565,
+      "elegiveis_rateados": 30710,
+      "pessoas_vacinadas": 0,
+      "gap": 30710
+    },
+    {
+      "codigo_regiao_saude": "41004",
+      "regiao_saude": "4ª RS IRATI",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL LESTE",
+      "n_municipios": 9,
+      "pop_ibge_2022": 164469,
+      "elegiveis_rateados": 30445,
+      "pessoas_vacinadas": 0,
+      "gap": 30445
+    },
+    {
+      "codigo_regiao_saude": "31094",
+      "regiao_saude": "ALMENARA/JACINTO",
+      "uf": "MG",
+      "macrorregiao_saude": "NORDESTE",
+      "n_municipios": 14,
+      "pop_ibge_2022": 162377,
+      "elegiveis_rateados": 30339,
+      "pessoas_vacinadas": 0,
+      "gap": 30339
+    },
+    {
+      "codigo_regiao_saude": "41006",
+      "regiao_saude": "6ª RS UNIAO DA VITORIA",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL LESTE",
+      "n_municipios": 9,
+      "pop_ibge_2022": 162561,
+      "elegiveis_rateados": 30092,
+      "pessoas_vacinadas": 0,
+      "gap": 30092
+    },
+    {
+      "codigo_regiao_saude": "50014",
+      "regiao_saude": "NORDESTE",
+      "uf": "MS",
+      "macrorregiao_saude": "COSTA LESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 160563,
+      "elegiveis_rateados": 29989,
+      "pessoas_vacinadas": 0,
+      "gap": 29989
+    },
+    {
+      "codigo_regiao_saude": "35065",
+      "regiao_saude": "LINS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS9",
+      "n_municipios": 8,
+      "pop_ibge_2022": 157929,
+      "elegiveis_rateados": 29985,
+      "pessoas_vacinadas": 0,
+      "gap": 29985
+    },
+    {
+      "codigo_regiao_saude": "31030",
+      "regiao_saude": "FORMIGA",
+      "uf": "MG",
+      "macrorregiao_saude": "OESTE",
+      "n_municipios": 8,
+      "pop_ibge_2022": 159901,
+      "elegiveis_rateados": 29876,
+      "pessoas_vacinadas": 0,
+      "gap": 29876
+    },
+    {
+      "codigo_regiao_saude": "11006",
+      "regiao_saude": "CONE SUL",
+      "uf": "RO",
+      "macrorregiao_saude": "MACRORREGIONAL II (CACOAL)",
+      "n_municipios": 7,
+      "pop_ibge_2022": 151735,
+      "elegiveis_rateados": 29733,
+      "pessoas_vacinadas": 0,
+      "gap": 29733
+    },
+    {
+      "codigo_regiao_saude": "42010",
+      "regiao_saude": "ALTO URUGUAI CATARINENSE",
+      "uf": "SC",
+      "macrorregiao_saude": "MEIO OESTE",
+      "n_municipios": 13,
+      "pop_ibge_2022": 154808,
+      "elegiveis_rateados": 29679,
+      "pessoas_vacinadas": 0,
+      "gap": 29679
+    },
+    {
+      "codigo_regiao_saude": "22001",
+      "regiao_saude": "CARNAUBAIS",
+      "uf": "PI",
+      "macrorregiao_saude": "MEIO NORTE",
+      "n_municipios": 15,
+      "pop_ibge_2022": 159428,
+      "elegiveis_rateados": 29027,
+      "pessoas_vacinadas": 0,
+      "gap": 29027
+    },
+    {
+      "codigo_regiao_saude": "22006",
+      "regiao_saude": "SERRA DA CAPIVARA",
+      "uf": "PI",
+      "macrorregiao_saude": "CERRADOS",
+      "n_municipios": 20,
+      "pop_ibge_2022": 157353,
+      "elegiveis_rateados": 28650,
+      "pessoas_vacinadas": 0,
+      "gap": 28650
+    },
+    {
+      "codigo_regiao_saude": "27002",
+      "regiao_saude": "2ª REGIAO DE SAUDE",
+      "uf": "AL",
+      "macrorregiao_saude": "1ª MACRORREGIAO DE SAUDE",
+      "n_municipios": 9,
+      "pop_ibge_2022": 157127,
+      "elegiveis_rateados": 28574,
+      "pessoas_vacinadas": 0,
+      "gap": 28574
+    },
+    {
+      "codigo_regiao_saude": "41013",
+      "regiao_saude": "13ª RS CIANORTE",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL NOROESTE",
+      "n_municipios": 11,
+      "pop_ibge_2022": 153870,
+      "elegiveis_rateados": 28483,
+      "pessoas_vacinadas": 0,
+      "gap": 28483
+    },
+    {
+      "codigo_regiao_saude": "25014",
+      "regiao_saude": "14ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO I - JOAO PESSOA",
+      "n_municipios": 11,
+      "pop_ibge_2022": 152747,
+      "elegiveis_rateados": 28136,
+      "pessoas_vacinadas": 0,
+      "gap": 28136
+    },
+    {
+      "codigo_regiao_saude": "35082",
+      "regiao_saude": "ALTA ANHANGUERA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS13",
+      "n_municipios": 6,
+      "pop_ibge_2022": 148066,
+      "elegiveis_rateados": 28113,
+      "pessoas_vacinadas": 0,
+      "gap": 28113
+    },
+    {
+      "codigo_regiao_saude": "25015",
+      "regiao_saude": "15ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO II - CAMPINA GRANDE",
+      "n_municipios": 14,
+      "pop_ibge_2022": 152551,
+      "elegiveis_rateados": 28100,
+      "pessoas_vacinadas": 0,
+      "gap": 28100
+    },
+    {
+      "codigo_regiao_saude": "17004",
+      "regiao_saude": "CERRADO TOCANTINS ARAGUAIA",
+      "uf": "TO",
+      "macrorregiao_saude": "MACRORREGIAO DE SAUDE NORTE",
+      "n_municipios": 23,
+      "pop_ibge_2022": 151095,
+      "elegiveis_rateados": 27965,
+      "pessoas_vacinadas": 0,
+      "gap": 27965
+    },
+    {
+      "codigo_regiao_saude": "27008",
+      "regiao_saude": "8ª REGIAO DE SAUDE",
+      "uf": "AL",
+      "macrorregiao_saude": "2ª MACRORREGIAO DE SAUDE",
+      "n_municipios": 8,
+      "pop_ibge_2022": 151116,
+      "elegiveis_rateados": 27481,
+      "pessoas_vacinadas": 0,
+      "gap": 27481
+    },
+    {
+      "codigo_regiao_saude": "28007",
+      "regiao_saude": "PROPRIA",
+      "uf": "SE",
+      "macrorregiao_saude": "MACRO UNICA",
+      "n_municipios": 16,
+      "pop_ibge_2022": 148130,
+      "elegiveis_rateados": 27194,
+      "pessoas_vacinadas": 0,
+      "gap": 27194
+    },
+    {
+      "codigo_regiao_saude": "24008",
+      "regiao_saude": "8ª REGIAO DE SAUDE - ACU",
+      "uf": "RN",
+      "macrorregiao_saude": "MACRORREGIAO II",
+      "n_municipios": 12,
+      "pop_ibge_2022": 146859,
+      "elegiveis_rateados": 27155,
+      "pessoas_vacinadas": 0,
+      "gap": 27155
+    },
+    {
+      "codigo_regiao_saude": "35052",
+      "regiao_saude": "SUL - BARRETOS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS13",
+      "n_municipios": 8,
+      "pop_ibge_2022": 142795,
+      "elegiveis_rateados": 27112,
+      "pessoas_vacinadas": 0,
+      "gap": 27112
+    },
+    {
+      "codigo_regiao_saude": "27010",
+      "regiao_saude": "10ª REGIAO DE SAUDE",
+      "uf": "AL",
+      "macrorregiao_saude": "2ª MACRORREGIAO DE SAUDE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 149051,
+      "elegiveis_rateados": 27106,
+      "pessoas_vacinadas": 0,
+      "gap": 27106
+    },
+    {
+      "codigo_regiao_saude": "50010",
+      "regiao_saude": "PANTANAL",
+      "uf": "MS",
+      "macrorregiao_saude": "PANTANAL",
+      "n_municipios": 3,
+      "pop_ibge_2022": 143326,
+      "elegiveis_rateados": 26769,
+      "pessoas_vacinadas": 0,
+      "gap": 26769
+    },
+    {
+      "codigo_regiao_saude": "31026",
+      "regiao_saude": "DIAMANTINA/ITAMARANDIBA",
+      "uf": "MG",
+      "macrorregiao_saude": "JEQUITINHONHA",
+      "n_municipios": 13,
+      "pop_ibge_2022": 141832,
+      "elegiveis_rateados": 26500,
+      "pessoas_vacinadas": 0,
+      "gap": 26500
+    },
+    {
+      "codigo_regiao_saude": "26011",
+      "regiao_saude": "VII REGIÃO DE SAÚDE",
+      "uf": "PE",
+      "macrorregiao_saude": "VALE DO S.FRANCISCO E ARARIPE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 141653,
+      "elegiveis_rateados": 26324,
+      "pessoas_vacinadas": 0,
+      "gap": 26324
+    },
+    {
+      "codigo_regiao_saude": "51008",
+      "regiao_saude": "NOROESTE MATOGROSSENSE",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-NOROESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 141995,
+      "elegiveis_rateados": 26274,
+      "pessoas_vacinadas": 0,
+      "gap": 26274
+    },
+    {
+      "codigo_regiao_saude": "51005",
+      "regiao_saude": "GARCAS ARAGUAIA",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO LESTE",
+      "n_municipios": 10,
+      "pop_ibge_2022": 141350,
+      "elegiveis_rateados": 26155,
+      "pessoas_vacinadas": 0,
+      "gap": 26155
+    },
+    {
+      "codigo_regiao_saude": "31023",
+      "regiao_saude": "JOAO MONLEVADE",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 5,
+      "pop_ibge_2022": 139815,
+      "elegiveis_rateados": 26123,
+      "pessoas_vacinadas": 0,
+      "gap": 26123
+    },
+    {
+      "codigo_regiao_saude": "25007",
+      "regiao_saude": "7ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO III - SERTAO/ALTO SERTAO",
+      "n_municipios": 18,
+      "pop_ibge_2022": 141772,
+      "elegiveis_rateados": 26114,
+      "pessoas_vacinadas": 0,
+      "gap": 26114
+    },
+    {
+      "codigo_regiao_saude": "35133",
+      "regiao_saude": "VALE DAS CACHOEIRAS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS13",
+      "n_municipios": 7,
+      "pop_ibge_2022": 135941,
+      "elegiveis_rateados": 25811,
+      "pessoas_vacinadas": 0,
+      "gap": 25811
+    },
+    {
+      "codigo_regiao_saude": "43018",
+      "regiao_saude": "REGIAO 18",
+      "uf": "RS",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 20,
+      "pop_ibge_2022": 131458,
+      "elegiveis_rateados": 25696,
+      "pessoas_vacinadas": 0,
+      "gap": 25696
+    },
+    {
+      "codigo_regiao_saude": "31002",
+      "regiao_saude": "GUAXUPE",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDOESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 136669,
+      "elegiveis_rateados": 25535,
+      "pessoas_vacinadas": 0,
+      "gap": 25535
+    },
+    {
+      "codigo_regiao_saude": "35111",
+      "regiao_saude": "ALTA PAULISTA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS11",
+      "n_municipios": 12,
+      "pop_ibge_2022": 132622,
+      "elegiveis_rateados": 25180,
+      "pessoas_vacinadas": 0,
+      "gap": 25180
+    },
+    {
+      "codigo_regiao_saude": "31061",
+      "regiao_saude": "VICOSA",
+      "uf": "MG",
+      "macrorregiao_saude": "LESTE DO SUL",
+      "n_municipios": 9,
+      "pop_ibge_2022": 134409,
+      "elegiveis_rateados": 25113,
+      "pessoas_vacinadas": 0,
+      "gap": 25113
+    },
+    {
+      "codigo_regiao_saude": "31055",
+      "regiao_saude": "PIRAPORA",
+      "uf": "MG",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 133939,
+      "elegiveis_rateados": 25025,
+      "pessoas_vacinadas": 0,
+      "gap": 25025
+    },
+    {
+      "codigo_regiao_saude": "11005",
+      "regiao_saude": "ZONA DA MATA",
+      "uf": "RO",
+      "macrorregiao_saude": "MACRORREGIONAL II (CACOAL)",
+      "n_municipios": 8,
+      "pop_ibge_2022": 127502,
+      "elegiveis_rateados": 24984,
+      "pessoas_vacinadas": 0,
+      "gap": 24984
+    },
+    {
+      "codigo_regiao_saude": "35074",
+      "regiao_saude": "CIRCUITO DAS AGUAS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS15",
+      "n_municipios": 5,
+      "pop_ibge_2022": 131473,
+      "elegiveis_rateados": 24962,
+      "pessoas_vacinadas": 0,
+      "gap": 24962
+    },
+    {
+      "codigo_regiao_saude": "41022",
+      "regiao_saude": "22ª RS IVAIPORA",
+      "uf": "PR",
+      "macrorregiao_saude": "MACRORREGIONAL NORTE",
+      "n_municipios": 16,
+      "pop_ibge_2022": 134799,
+      "elegiveis_rateados": 24953,
+      "pessoas_vacinadas": 0,
+      "gap": 24953
+    },
+    {
+      "codigo_regiao_saude": "35091",
+      "regiao_saude": "ADAMANTINA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS10",
+      "n_municipios": 10,
+      "pop_ibge_2022": 130843,
+      "elegiveis_rateados": 24843,
+      "pessoas_vacinadas": 0,
+      "gap": 24843
+    },
+    {
+      "codigo_regiao_saude": "31085",
+      "regiao_saude": "TAIOBEIRAS",
+      "uf": "MG",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 10,
+      "pop_ibge_2022": 131922,
+      "elegiveis_rateados": 24649,
+      "pessoas_vacinadas": 0,
+      "gap": 24649
+    },
+    {
+      "codigo_regiao_saude": "43030",
+      "regiao_saude": "REGIAO 30",
+      "uf": "RS",
+      "macrorregiao_saude": "VALES",
+      "n_municipios": 10,
+      "pop_ibge_2022": 125513,
+      "elegiveis_rateados": 24534,
+      "pessoas_vacinadas": 0,
+      "gap": 24534
+    },
+    {
+      "codigo_regiao_saude": "31031",
+      "regiao_saude": "ITAUNA",
+      "uf": "MG",
+      "macrorregiao_saude": "OESTE",
+      "n_municipios": 4,
+      "pop_ibge_2022": 131181,
+      "elegiveis_rateados": 24510,
+      "pessoas_vacinadas": 0,
+      "gap": 24510
+    },
+    {
+      "codigo_regiao_saude": "43012",
+      "regiao_saude": "REGIAO 12",
+      "uf": "RS",
+      "macrorregiao_saude": "MISSIONEIRA",
+      "n_municipios": 12,
+      "pop_ibge_2022": 124688,
+      "elegiveis_rateados": 24373,
+      "pessoas_vacinadas": 0,
+      "gap": 24373
+    },
+    {
+      "codigo_regiao_saude": "52008",
+      "regiao_saude": "NORTE",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-NORTE",
+      "n_municipios": 13,
+      "pop_ibge_2022": 131825,
+      "elegiveis_rateados": 24219,
+      "pessoas_vacinadas": 0,
+      "gap": 24219
+    },
+    {
+      "codigo_regiao_saude": "35095",
+      "regiao_saude": "TUPA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS10",
+      "n_municipios": 8,
+      "pop_ibge_2022": 125835,
+      "elegiveis_rateados": 23892,
+      "pessoas_vacinadas": 0,
+      "gap": 23892
+    },
+    {
+      "codigo_regiao_saude": "13008",
+      "regiao_saude": "TRIANGULO",
+      "uf": "AM",
+      "macrorregiao_saude": "OESTE",
+      "n_municipios": 6,
+      "pop_ibge_2022": 139095,
+      "elegiveis_rateados": 23788,
+      "pessoas_vacinadas": 0,
+      "gap": 23788
+    },
+    {
+      "codigo_regiao_saude": "31042",
+      "regiao_saude": "CARANGOLA",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDESTE",
+      "n_municipios": 11,
+      "pop_ibge_2022": 127156,
+      "elegiveis_rateados": 23758,
+      "pessoas_vacinadas": 0,
+      "gap": 23758
+    },
+    {
+      "codigo_regiao_saude": "31009",
+      "regiao_saude": "SAO SEBASTIAO DO PARAISO",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDOESTE",
+      "n_municipios": 6,
+      "pop_ibge_2022": 126097,
+      "elegiveis_rateados": 23560,
+      "pessoas_vacinadas": 0,
+      "gap": 23560
+    },
+    {
+      "codigo_regiao_saude": "17007",
+      "regiao_saude": "CANTAO",
+      "uf": "TO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-SUL",
+      "n_municipios": 15,
+      "pop_ibge_2022": 126761,
+      "elegiveis_rateados": 23461,
+      "pessoas_vacinadas": 0,
+      "gap": 23461
+    },
+    {
+      "codigo_regiao_saude": "13006",
+      "regiao_saude": "REGIONAL PURUS",
+      "uf": "AM",
+      "macrorregiao_saude": "CENTRAL",
+      "n_municipios": 5,
+      "pop_ibge_2022": 136736,
+      "elegiveis_rateados": 23385,
+      "pessoas_vacinadas": 0,
+      "gap": 23385
+    },
+    {
+      "codigo_regiao_saude": "31078",
+      "regiao_saude": "CONGONHAS",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO SUL",
+      "n_municipios": 6,
+      "pop_ibge_2022": 124199,
+      "elegiveis_rateados": 23206,
+      "pessoas_vacinadas": 0,
+      "gap": 23206
+    },
+    {
+      "codigo_regiao_saude": "22012",
+      "regiao_saude": "CHAPADA VALE DO RIO ITAIM",
+      "uf": "PI",
+      "macrorregiao_saude": "SEMI-ARIDO",
+      "n_municipios": 16,
+      "pop_ibge_2022": 127442,
+      "elegiveis_rateados": 23204,
+      "pessoas_vacinadas": 0,
+      "gap": 23204
+    },
+    {
+      "codigo_regiao_saude": "31011",
+      "regiao_saude": "TRES PONTAS",
+      "uf": "MG",
+      "macrorregiao_saude": "SUL",
+      "n_municipios": 5,
+      "pop_ibge_2022": 123558,
+      "elegiveis_rateados": 23086,
+      "pessoas_vacinadas": 0,
+      "gap": 23086
+    },
+    {
+      "codigo_regiao_saude": "35154",
+      "regiao_saude": "FERNANDOPOLIS",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS12",
+      "n_municipios": 13,
+      "pop_ibge_2022": 121570,
+      "elegiveis_rateados": 23082,
+      "pessoas_vacinadas": 0,
+      "gap": 23082
+    },
+    {
+      "codigo_regiao_saude": "31101",
+      "regiao_saude": "BRASILIA DE MINAS",
+      "uf": "MG",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 10,
+      "pop_ibge_2022": 123262,
+      "elegiveis_rateados": 23030,
+      "pessoas_vacinadas": 0,
+      "gap": 23030
+    },
+    {
+      "codigo_regiao_saude": "51012",
+      "regiao_saude": "SUDOESTE MATOGROSSENSE",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO OESTE",
+      "n_municipios": 10,
+      "pop_ibge_2022": 124245,
+      "elegiveis_rateados": 22990,
+      "pessoas_vacinadas": 0,
+      "gap": 22990
+    },
+    {
+      "codigo_regiao_saude": "43002",
+      "regiao_saude": "REGIAO 02",
+      "uf": "RS",
+      "macrorregiao_saude": "CENTRO-OESTE",
+      "n_municipios": 11,
+      "pop_ibge_2022": 117410,
+      "elegiveis_rateados": 22950,
+      "pessoas_vacinadas": 0,
+      "gap": 22950
+    },
+    {
+      "codigo_regiao_saude": "27004",
+      "regiao_saude": "4ª REGIAO DE SAUDE",
+      "uf": "AL",
+      "macrorregiao_saude": "1ª MACRORREGIAO DE SAUDE",
+      "n_municipios": 9,
+      "pop_ibge_2022": 122112,
+      "elegiveis_rateados": 22207,
+      "pessoas_vacinadas": 0,
+      "gap": 22207
+    },
+    {
+      "codigo_regiao_saude": "52014",
+      "regiao_saude": "SERRA DA MESA",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-NORTE",
+      "n_municipios": 9,
+      "pop_ibge_2022": 120645,
+      "elegiveis_rateados": 22165,
+      "pessoas_vacinadas": 0,
+      "gap": 22165
+    },
+    {
+      "codigo_regiao_saude": "13007",
+      "regiao_saude": "REGIONAL JURUA",
+      "uf": "AM",
+      "macrorregiao_saude": "OESTE",
+      "n_municipios": 6,
+      "pop_ibge_2022": 128161,
+      "elegiveis_rateados": 21918,
+      "pessoas_vacinadas": 0,
+      "gap": 21918
+    },
+    {
+      "codigo_regiao_saude": "51006",
+      "regiao_saude": "MEDIO ARAGUAIA",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO LESTE",
+      "n_municipios": 8,
+      "pop_ibge_2022": 118277,
+      "elegiveis_rateados": 21885,
+      "pessoas_vacinadas": 0,
+      "gap": 21885
+    },
+    {
+      "codigo_regiao_saude": "17008",
+      "regiao_saude": "AMOR PERFEITO",
+      "uf": "TO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-SUL",
+      "n_municipios": 13,
+      "pop_ibge_2022": 117502,
+      "elegiveis_rateados": 21748,
+      "pessoas_vacinadas": 0,
+      "gap": 21748
+    },
+    {
+      "codigo_regiao_saude": "43019",
+      "regiao_saude": "REGIAO 19",
+      "uf": "RS",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 14,
+      "pop_ibge_2022": 111042,
+      "elegiveis_rateados": 21706,
+      "pessoas_vacinadas": 0,
+      "gap": 21706
+    },
+    {
+      "codigo_regiao_saude": "50015",
+      "regiao_saude": "NORTE",
+      "uf": "MS",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 8,
+      "pop_ibge_2022": 115922,
+      "elegiveis_rateados": 21651,
+      "pessoas_vacinadas": 0,
+      "gap": 21651
+    },
+    {
+      "codigo_regiao_saude": "52010",
+      "regiao_saude": "OESTE II",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-OESTE",
+      "n_municipios": 13,
+      "pop_ibge_2022": 116983,
+      "elegiveis_rateados": 21492,
+      "pessoas_vacinadas": 0,
+      "gap": 21492
+    },
+    {
+      "codigo_regiao_saude": "52009",
+      "regiao_saude": "OESTE I",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-OESTE",
+      "n_municipios": 16,
+      "pop_ibge_2022": 116132,
+      "elegiveis_rateados": 21336,
+      "pessoas_vacinadas": 0,
+      "gap": 21336
+    },
+    {
+      "codigo_regiao_saude": "50016",
+      "regiao_saude": "SUDESTE",
+      "uf": "MS",
+      "macrorregiao_saude": "CONE SUL",
+      "n_municipios": 7,
+      "pop_ibge_2022": 113824,
+      "elegiveis_rateados": 21259,
+      "pessoas_vacinadas": 0,
+      "gap": 21259
+    },
+    {
+      "codigo_regiao_saude": "35083",
+      "regiao_saude": "ALTA MOGIANA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS13",
+      "n_municipios": 6,
+      "pop_ibge_2022": 111606,
+      "elegiveis_rateados": 21190,
+      "pessoas_vacinadas": 0,
+      "gap": 21190
+    },
+    {
+      "codigo_regiao_saude": "31027",
+      "regiao_saude": "TURMALINA/MINAS NOVAS/CAPELINHA",
+      "uf": "MG",
+      "macrorregiao_saude": "JEQUITINHONHA",
+      "n_municipios": 8,
+      "pop_ibge_2022": 112578,
+      "elegiveis_rateados": 21034,
+      "pessoas_vacinadas": 0,
+      "gap": 21034
+    },
+    {
+      "codigo_regiao_saude": "25008",
+      "regiao_saude": "8ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO III - SERTAO/ALTO SERTAO",
+      "n_municipios": 10,
+      "pop_ibge_2022": 113431,
+      "elegiveis_rateados": 20894,
+      "pessoas_vacinadas": 0,
+      "gap": 20894
+    },
+    {
+      "codigo_regiao_saude": "25010",
+      "regiao_saude": "10ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO III - SERTAO/ALTO SERTAO",
+      "n_municipios": 9,
+      "pop_ibge_2022": 113363,
+      "elegiveis_rateados": 20881,
+      "pessoas_vacinadas": 0,
+      "gap": 20881
+    },
+    {
+      "codigo_regiao_saude": "31010",
+      "regiao_saude": "TRES CORACOES",
+      "uf": "MG",
+      "macrorregiao_saude": "SUL",
+      "n_municipios": 5,
+      "pop_ibge_2022": 110962,
+      "elegiveis_rateados": 20732,
+      "pessoas_vacinadas": 0,
+      "gap": 20732
+    },
+    {
+      "codigo_regiao_saude": "31028",
+      "regiao_saude": "BOM DESPACHO",
+      "uf": "MG",
+      "macrorregiao_saude": "OESTE",
+      "n_municipios": 8,
+      "pop_ibge_2022": 110358,
+      "elegiveis_rateados": 20619,
+      "pessoas_vacinadas": 0,
+      "gap": 20619
+    },
+    {
+      "codigo_regiao_saude": "31053",
+      "regiao_saude": "JANUARIA",
+      "uf": "MG",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 5,
+      "pop_ibge_2022": 110232,
+      "elegiveis_rateados": 20596,
+      "pessoas_vacinadas": 0,
+      "gap": 20596
+    },
+    {
+      "codigo_regiao_saude": "51001",
+      "regiao_saude": "ALTO TAPAJOS",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO NORTE ",
+      "n_municipios": 6,
+      "pop_ibge_2022": 111154,
+      "elegiveis_rateados": 20567,
+      "pessoas_vacinadas": 0,
+      "gap": 20567
+    },
+    {
+      "codigo_regiao_saude": "25005",
+      "regiao_saude": "5ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO II - CAMPINA GRANDE",
+      "n_municipios": 17,
+      "pop_ibge_2022": 111279,
+      "elegiveis_rateados": 20498,
+      "pessoas_vacinadas": 0,
+      "gap": 20498
+    },
+    {
+      "codigo_regiao_saude": "25004",
+      "regiao_saude": "4ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO II - CAMPINA GRANDE",
+      "n_municipios": 12,
+      "pop_ibge_2022": 105604,
+      "elegiveis_rateados": 19452,
+      "pessoas_vacinadas": 0,
+      "gap": 19452
+    },
+    {
+      "codigo_regiao_saude": "22008",
+      "regiao_saude": "VALE DO CANINDE",
+      "uf": "PI",
+      "macrorregiao_saude": "SEMI-ARIDO",
+      "n_municipios": 14,
+      "pop_ibge_2022": 106768,
+      "elegiveis_rateados": 19440,
+      "pessoas_vacinadas": 0,
+      "gap": 19440
+    },
+    {
+      "codigo_regiao_saude": "35153",
+      "regiao_saude": "JALES",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS12",
+      "n_municipios": 16,
+      "pop_ibge_2022": 102341,
+      "elegiveis_rateados": 19431,
+      "pessoas_vacinadas": 0,
+      "gap": 19431
+    },
+    {
+      "codigo_regiao_saude": "35156",
+      "regiao_saude": "JOSE BONIFACIO",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS12",
+      "n_municipios": 11,
+      "pop_ibge_2022": 101427,
+      "elegiveis_rateados": 19258,
+      "pessoas_vacinadas": 0,
+      "gap": 19258
+    },
+    {
+      "codigo_regiao_saude": "43024",
+      "regiao_saude": "REGIAO 24",
+      "uf": "RS",
+      "macrorregiao_saude": "SERRA",
+      "n_municipios": 9,
+      "pop_ibge_2022": 98005,
+      "elegiveis_rateados": 19157,
+      "pessoas_vacinadas": 0,
+      "gap": 19157
+    },
+    {
+      "codigo_regiao_saude": "31082",
+      "regiao_saude": "SAO GOTARDO",
+      "uf": "MG",
+      "macrorregiao_saude": "NOROESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 102163,
+      "elegiveis_rateados": 19088,
+      "pessoas_vacinadas": 0,
+      "gap": 19088
+    },
+    {
+      "codigo_regiao_saude": "31088",
+      "regiao_saude": "OLIVEIRA/SANTO ANTONIO DO AMPARO",
+      "uf": "MG",
+      "macrorregiao_saude": "OESTE",
+      "n_municipios": 6,
+      "pop_ibge_2022": 100229,
+      "elegiveis_rateados": 18727,
+      "pessoas_vacinadas": 0,
+      "gap": 18727
+    },
+    {
+      "codigo_regiao_saude": "22010",
+      "regiao_saude": "VALE DO SAMBITO",
+      "uf": "PI",
+      "macrorregiao_saude": "SEMI-ARIDO",
+      "n_municipios": 14,
+      "pop_ibge_2022": 102676,
+      "elegiveis_rateados": 18694,
+      "pessoas_vacinadas": 0,
+      "gap": 18694
+    },
+    {
+      "codigo_regiao_saude": "51015",
+      "regiao_saude": "VALE DO PEIXOTO",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO NORTE ",
+      "n_municipios": 5,
+      "pop_ibge_2022": 100965,
+      "elegiveis_rateados": 18682,
+      "pessoas_vacinadas": 0,
+      "gap": 18682
+    },
+    {
+      "codigo_regiao_saude": "31100",
+      "regiao_saude": "SAO FRANCISCO",
+      "uf": "MG",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 5,
+      "pop_ibge_2022": 98317,
+      "elegiveis_rateados": 18370,
+      "pessoas_vacinadas": 0,
+      "gap": 18370
+    },
+    {
+      "codigo_regiao_saude": "14002",
+      "regiao_saude": "SUL",
+      "uf": "RR",
+      "macrorregiao_saude": "MACRO-RORAIMA",
+      "n_municipios": 6,
+      "pop_ibge_2022": 90456,
+      "elegiveis_rateados": 18041,
+      "pessoas_vacinadas": 0,
+      "gap": 18041
+    },
+    {
+      "codigo_regiao_saude": "31089",
+      "regiao_saude": "CAMPO BELO",
+      "uf": "MG",
+      "macrorregiao_saude": "OESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 95156,
+      "elegiveis_rateados": 17779,
+      "pessoas_vacinadas": 0,
+      "gap": 17779
+    },
+    {
+      "codigo_regiao_saude": "52007",
+      "regiao_saude": "NORDESTE II",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO NORDESTE",
+      "n_municipios": 11,
+      "pop_ibge_2022": 94524,
+      "elegiveis_rateados": 17366,
+      "pessoas_vacinadas": 0,
+      "gap": 17366
+    },
+    {
+      "codigo_regiao_saude": "31102",
+      "regiao_saude": "PECANHA/SAO JOAO EVANGELISTA/SANTA MARIA DO SUACUI",
+      "uf": "MG",
+      "macrorregiao_saude": "LESTE",
+      "n_municipios": 10,
+      "pop_ibge_2022": 92148,
+      "elegiveis_rateados": 17217,
+      "pessoas_vacinadas": 0,
+      "gap": 17217
+    },
+    {
+      "codigo_regiao_saude": "35114",
+      "regiao_saude": "EXTREMO OESTE PAULISTA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS11",
+      "n_municipios": 5,
+      "pop_ibge_2022": 88009,
+      "elegiveis_rateados": 16710,
+      "pessoas_vacinadas": 0,
+      "gap": 16710
+    },
+    {
+      "codigo_regiao_saude": "31020",
+      "regiao_saude": "GUANHAES",
+      "uf": "MG",
+      "macrorregiao_saude": "CENTRO",
+      "n_municipios": 9,
+      "pop_ibge_2022": 89002,
+      "elegiveis_rateados": 16629,
+      "pessoas_vacinadas": 0,
+      "gap": 16629
+    },
+    {
+      "codigo_regiao_saude": "31087",
+      "regiao_saude": "LAGOA DA PRATA/SANTO ANTONIO DO MONTE",
+      "uf": "MG",
+      "macrorregiao_saude": "OESTE",
+      "n_municipios": 4,
+      "pop_ibge_2022": 87325,
+      "elegiveis_rateados": 16316,
+      "pessoas_vacinadas": 0,
+      "gap": 16316
+    },
+    {
+      "codigo_regiao_saude": "51003",
+      "regiao_saude": "ARAGUAIA XINGU",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO LESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 87796,
+      "elegiveis_rateados": 16245,
+      "pessoas_vacinadas": 0,
+      "gap": 16245
+    },
+    {
+      "codigo_regiao_saude": "17003",
+      "regiao_saude": "SUDESTE",
+      "uf": "TO",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-SUL",
+      "n_municipios": 15,
+      "pop_ibge_2022": 87640,
+      "elegiveis_rateados": 16221,
+      "pessoas_vacinadas": 0,
+      "gap": 16221
+    },
+    {
+      "codigo_regiao_saude": "51004",
+      "regiao_saude": "CENTRO NORTE",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO CENTRO-NOROESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 87608,
+      "elegiveis_rateados": 16211,
+      "pessoas_vacinadas": 0,
+      "gap": 16211
+    },
+    {
+      "codigo_regiao_saude": "31040",
+      "regiao_saude": "RESPLENDOR",
+      "uf": "MG",
+      "macrorregiao_saude": "LESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 82013,
+      "elegiveis_rateados": 15323,
+      "pessoas_vacinadas": 0,
+      "gap": 15323
+    },
+    {
+      "codigo_regiao_saude": "31093",
+      "regiao_saude": "PIUMHI",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDOESTE",
+      "n_municipios": 7,
+      "pop_ibge_2022": 79525,
+      "elegiveis_rateados": 14859,
+      "pessoas_vacinadas": 0,
+      "gap": 14859
+    },
+    {
+      "codigo_regiao_saude": "31064",
+      "regiao_saude": "ARACUAI",
+      "uf": "MG",
+      "macrorregiao_saude": "JEQUITINHONHA",
+      "n_municipios": 6,
+      "pop_ibge_2022": 77593,
+      "elegiveis_rateados": 14498,
+      "pessoas_vacinadas": 0,
+      "gap": 14498
+    },
+    {
+      "codigo_regiao_saude": "25011",
+      "regiao_saude": "11ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO III - SERTAO/ALTO SERTAO",
+      "n_municipios": 7,
+      "pop_ibge_2022": 78026,
+      "elegiveis_rateados": 14372,
+      "pessoas_vacinadas": 0,
+      "gap": 14372
+    },
+    {
+      "codigo_regiao_saude": "31065",
+      "regiao_saude": "ITAOBIM",
+      "uf": "MG",
+      "macrorregiao_saude": "NORDESTE",
+      "n_municipios": 6,
+      "pop_ibge_2022": 74976,
+      "elegiveis_rateados": 14009,
+      "pessoas_vacinadas": 0,
+      "gap": 14009
+    },
+    {
+      "codigo_regiao_saude": "31083",
+      "regiao_saude": "BOCAIUVA",
+      "uf": "MG",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 6,
+      "pop_ibge_2022": 73179,
+      "elegiveis_rateados": 13673,
+      "pessoas_vacinadas": 0,
+      "gap": 13673
+    },
+    {
+      "codigo_regiao_saude": "12001",
+      "regiao_saude": "ALTO ACRE",
+      "uf": "AC",
+      "macrorregiao_saude": "MACRO UNICA - AC",
+      "n_municipios": 4,
+      "pop_ibge_2022": 71100,
+      "elegiveis_rateados": 13424,
+      "pessoas_vacinadas": 0,
+      "gap": 13424
+    },
+    {
+      "codigo_regiao_saude": "31047",
+      "regiao_saude": "SAO JOAO NEPOMUCENO",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDESTE",
+      "n_municipios": 9,
+      "pop_ibge_2022": 71610,
+      "elegiveis_rateados": 13380,
+      "pessoas_vacinadas": 0,
+      "gap": 13380
+    },
+    {
+      "codigo_regiao_saude": "31090",
+      "regiao_saude": "LIMA DUARTE",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDESTE",
+      "n_municipios": 13,
+      "pop_ibge_2022": 71271,
+      "elegiveis_rateados": 13316,
+      "pessoas_vacinadas": 0,
+      "gap": 13316
+    },
+    {
+      "codigo_regiao_saude": "31077",
+      "regiao_saude": "JOAO PINHEIRO",
+      "uf": "MG",
+      "macrorregiao_saude": "NOROESTE",
+      "n_municipios": 3,
+      "pop_ibge_2022": 70790,
+      "elegiveis_rateados": 13227,
+      "pessoas_vacinadas": 0,
+      "gap": 13227
+    },
+    {
+      "codigo_regiao_saude": "51010",
+      "regiao_saude": "NORTE MATOGROSSENSE",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO NORTE ",
+      "n_municipios": 6,
+      "pop_ibge_2022": 68322,
+      "elegiveis_rateados": 12642,
+      "pessoas_vacinadas": 0,
+      "gap": 12642
+    },
+    {
+      "codigo_regiao_saude": "31051",
+      "regiao_saude": "FRANCISCO SA",
+      "uf": "MG",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 6,
+      "pop_ibge_2022": 66026,
+      "elegiveis_rateados": 12336,
+      "pessoas_vacinadas": 0,
+      "gap": 12336
+    },
+    {
+      "codigo_regiao_saude": "16002",
+      "regiao_saude": "AREA NORTE",
+      "uf": "AP",
+      "macrorregiao_saude": "MACRO UNICA - AP",
+      "n_municipios": 5,
+      "pop_ibge_2022": 62785,
+      "elegiveis_rateados": 12177,
+      "pessoas_vacinadas": 0,
+      "gap": 12177
+    },
+    {
+      "codigo_regiao_saude": "31038",
+      "regiao_saude": "MANTENA/ITABIRINHA",
+      "uf": "MG",
+      "macrorregiao_saude": "LESTE",
+      "n_municipios": 8,
+      "pop_ibge_2022": 64534,
+      "elegiveis_rateados": 12058,
+      "pessoas_vacinadas": 0,
+      "gap": 12058
+    },
+    {
+      "codigo_regiao_saude": "35115",
+      "regiao_saude": "PONTAL DO PARANAPANEMA",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS11",
+      "n_municipios": 4,
+      "pop_ibge_2022": 63454,
+      "elegiveis_rateados": 12048,
+      "pessoas_vacinadas": 0,
+      "gap": 12048
+    },
+    {
+      "codigo_regiao_saude": "31068",
+      "regiao_saude": "PEDRA AZUL",
+      "uf": "MG",
+      "macrorregiao_saude": "NORDESTE",
+      "n_municipios": 5,
+      "pop_ibge_2022": 64091,
+      "elegiveis_rateados": 11975,
+      "pessoas_vacinadas": 0,
+      "gap": 11975
+    },
+    {
+      "codigo_regiao_saude": "31098",
+      "regiao_saude": "SALINAS",
+      "uf": "MG",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 6,
+      "pop_ibge_2022": 64043,
+      "elegiveis_rateados": 11966,
+      "pessoas_vacinadas": 0,
+      "gap": 11966
+    },
+    {
+      "codigo_regiao_saude": "31066",
+      "regiao_saude": "NANUQUE",
+      "uf": "MG",
+      "macrorregiao_saude": "NORDESTE",
+      "n_municipios": 3,
+      "pop_ibge_2022": 60597,
+      "elegiveis_rateados": 11322,
+      "pessoas_vacinadas": 0,
+      "gap": 11322
+    },
+    {
+      "codigo_regiao_saude": "25013",
+      "regiao_saude": "13ª REGIAO",
+      "uf": "PB",
+      "macrorregiao_saude": "MACRORREGIAO III - SERTAO/ALTO SERTAO",
+      "n_municipios": 6,
+      "pop_ibge_2022": 58384,
+      "elegiveis_rateados": 10754,
+      "pessoas_vacinadas": 0,
+      "gap": 10754
+    },
+    {
+      "codigo_regiao_saude": "35113",
+      "regiao_saude": "ALTO CAPIVARI",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS11",
+      "n_municipios": 5,
+      "pop_ibge_2022": 56401,
+      "elegiveis_rateados": 10709,
+      "pessoas_vacinadas": 0,
+      "gap": 10709
+    },
+    {
+      "codigo_regiao_saude": "31095",
+      "regiao_saude": "SERRO",
+      "uf": "MG",
+      "macrorregiao_saude": "JEQUITINHONHA",
+      "n_municipios": 5,
+      "pop_ibge_2022": 56981,
+      "elegiveis_rateados": 10646,
+      "pessoas_vacinadas": 0,
+      "gap": 10646
+    },
+    {
+      "codigo_regiao_saude": "31076",
+      "regiao_saude": "MANGA",
+      "uf": "MG",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 5,
+      "pop_ibge_2022": 55744,
+      "elegiveis_rateados": 10415,
+      "pessoas_vacinadas": 0,
+      "gap": 10415
+    },
+    {
+      "codigo_regiao_saude": "31062",
+      "regiao_saude": "AGUAS FORMOSAS",
+      "uf": "MG",
+      "macrorregiao_saude": "NORDESTE",
+      "n_municipios": 8,
+      "pop_ibge_2022": 55665,
+      "elegiveis_rateados": 10401,
+      "pessoas_vacinadas": 0,
+      "gap": 10401
+    },
+    {
+      "codigo_regiao_saude": "31067",
+      "regiao_saude": "PADRE PARAISO",
+      "uf": "MG",
+      "macrorregiao_saude": "NORDESTE",
+      "n_municipios": 4,
+      "pop_ibge_2022": 54375,
+      "elegiveis_rateados": 10160,
+      "pessoas_vacinadas": 0,
+      "gap": 10160
+    },
+    {
+      "codigo_regiao_saude": "35152",
+      "regiao_saude": "SANTA FE DO SUL",
+      "uf": "SP",
+      "macrorregiao_saude": "RRAS12",
+      "n_municipios": 6,
+      "pop_ibge_2022": 52794,
+      "elegiveis_rateados": 10024,
+      "pessoas_vacinadas": 0,
+      "gap": 10024
+    },
+    {
+      "codigo_regiao_saude": "51016",
+      "regiao_saude": "VALE DOS ARINOS",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO NORTE ",
+      "n_municipios": 4,
+      "pop_ibge_2022": 53666,
+      "elegiveis_rateados": 9930,
+      "pessoas_vacinadas": 0,
+      "gap": 9930
+    },
+    {
+      "codigo_regiao_saude": "31041",
+      "regiao_saude": "ALEM PARAIBA",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDESTE",
+      "n_municipios": 5,
+      "pop_ibge_2022": 52192,
+      "elegiveis_rateados": 9752,
+      "pessoas_vacinadas": 0,
+      "gap": 9752
+    },
+    {
+      "codigo_regiao_saude": "22007",
+      "regiao_saude": "TABULEIROS DO ALTO PARNAIBA",
+      "uf": "PI",
+      "macrorregiao_saude": "CERRADOS",
+      "n_municipios": 5,
+      "pop_ibge_2022": 52237,
+      "elegiveis_rateados": 9511,
+      "pessoas_vacinadas": 0,
+      "gap": 9511
+    },
+    {
+      "codigo_regiao_saude": "31091",
+      "regiao_saude": "CASSIA",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDOESTE",
+      "n_municipios": 5,
+      "pop_ibge_2022": 47716,
+      "elegiveis_rateados": 8915,
+      "pessoas_vacinadas": 0,
+      "gap": 8915
+    },
+    {
+      "codigo_regiao_saude": "31046",
+      "regiao_saude": "SANTOS DUMONT",
+      "uf": "MG",
+      "macrorregiao_saude": "SUDESTE",
+      "n_municipios": 3,
+      "pop_ibge_2022": 46482,
+      "elegiveis_rateados": 8685,
+      "pessoas_vacinadas": 0,
+      "gap": 8685
+    },
+    {
+      "codigo_regiao_saude": "31050",
+      "regiao_saude": "CORACAO DE JESUS",
+      "uf": "MG",
+      "macrorregiao_saude": "NORTE",
+      "n_municipios": 5,
+      "pop_ibge_2022": 43968,
+      "elegiveis_rateados": 8215,
+      "pessoas_vacinadas": 0,
+      "gap": 8215
+    },
+    {
+      "codigo_regiao_saude": "11007",
+      "regiao_saude": "VALE DO GUAPORE",
+      "uf": "RO",
+      "macrorregiao_saude": "MACRORREGIONAL II (CACOAL)",
+      "n_municipios": 3,
+      "pop_ibge_2022": 40973,
+      "elegiveis_rateados": 8029,
+      "pessoas_vacinadas": 0,
+      "gap": 8029
+    },
+    {
+      "codigo_regiao_saude": "52006",
+      "regiao_saude": "NORDESTE I",
+      "uf": "GO",
+      "macrorregiao_saude": "MACRORREGIAO NORDESTE",
+      "n_municipios": 5,
+      "pop_ibge_2022": 41541,
+      "elegiveis_rateados": 7632,
+      "pessoas_vacinadas": 0,
+      "gap": 7632
+    },
+    {
+      "codigo_regiao_saude": "31096",
+      "regiao_saude": "ITAMBACURI",
+      "uf": "MG",
+      "macrorregiao_saude": "NORDESTE",
+      "n_municipios": 5,
+      "pop_ibge_2022": 34662,
+      "elegiveis_rateados": 6476,
+      "pessoas_vacinadas": 0,
+      "gap": 6476
+    },
+    {
+      "codigo_regiao_saude": "51009",
+      "regiao_saude": "NORTE ARAGUAIA KARAJA",
+      "uf": "MT",
+      "macrorregiao_saude": "MACRORREGIAO LESTE",
+      "n_municipios": 5,
+      "pop_ibge_2022": 25660,
+      "elegiveis_rateados": 4748,
+      "pessoas_vacinadas": 0,
+      "gap": 4748
+    }
+  ],
+  "serie_transicao": {
+    "atualizado_em": "2026-09-01T13:36:02.776490+00:00",
+    "fonte": "cache api_pni_2026 (200 arquivos)",
+    "codigos": {
+      "26": "VPC10",
+      "59": "VPC13",
+      "107": "VPC20",
+      "23": "VPP23?"
+    },
+    "linhas": [
+      {
+        "ano_mes": "2026-05",
+        "uf": "AC",
+        "doses": {
+          "VPC10": 24,
+          "VPC13": 2,
+          "VPC20": 1,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 88.89,
+          "VPC13": 7.41,
+          "VPC20": 3.7,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "AL",
+        "doses": {
+          "VPC10": 54,
+          "VPC13": 1,
+          "VPC20": 5,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 90.0,
+          "VPC13": 1.67,
+          "VPC20": 8.33,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "AM",
+        "doses": {
+          "VPC10": 89,
+          "VPC13": 1,
+          "VPC20": 3,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 95.7,
+          "VPC13": 1.08,
+          "VPC20": 3.23,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "AP",
+        "doses": {
+          "VPC10": 19,
+          "VPC13": 0,
+          "VPC20": 0,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 100.0,
+          "VPC13": 0.0,
+          "VPC20": 0.0,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "BA",
+        "doses": {
+          "VPC10": 250,
+          "VPC13": 12,
+          "VPC20": 7,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 92.59,
+          "VPC13": 4.44,
+          "VPC20": 2.59,
+          "VPP23?": 0.37
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "CE",
+        "doses": {
+          "VPC10": 156,
+          "VPC13": 9,
+          "VPC20": 12,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 87.64,
+          "VPC13": 5.06,
+          "VPC20": 6.74,
+          "VPP23?": 0.56
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "DF",
+        "doses": {
+          "VPC10": 40,
+          "VPC13": 6,
+          "VPC20": 23,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 57.14,
+          "VPC13": 8.57,
+          "VPC20": 32.86,
+          "VPP23?": 1.43
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "ES",
+        "doses": {
+          "VPC10": 64,
+          "VPC13": 2,
+          "VPC20": 22,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 71.91,
+          "VPC13": 2.25,
+          "VPC20": 24.72,
+          "VPP23?": 1.12
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "GO",
+        "doses": {
+          "VPC10": 124,
+          "VPC13": 4,
+          "VPC20": 44,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 72.09,
+          "VPC13": 2.33,
+          "VPC20": 25.58,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "MA",
+        "doses": {
+          "VPC10": 117,
+          "VPC13": 7,
+          "VPC20": 7,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 88.64,
+          "VPC13": 5.3,
+          "VPC20": 5.3,
+          "VPP23?": 0.76
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "MG",
+        "doses": {
+          "VPC10": 280,
+          "VPC13": 26,
+          "VPC20": 138,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 63.06,
+          "VPC13": 5.86,
+          "VPC20": 31.08,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "MS",
+        "doses": {
+          "VPC10": 53,
+          "VPC13": 1,
+          "VPC20": 11,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 81.54,
+          "VPC13": 1.54,
+          "VPC20": 16.92,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "MT",
+        "doses": {
+          "VPC10": 88,
+          "VPC13": 3,
+          "VPC20": 25,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 75.86,
+          "VPC13": 2.59,
+          "VPC20": 21.55,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "ND",
+        "doses": {
+          "VPC10": 89,
+          "VPC13": 0,
+          "VPC20": 20,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 81.65,
+          "VPC13": 0.0,
+          "VPC20": 18.35,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "PA",
+        "doses": {
+          "VPC10": 151,
+          "VPC13": 3,
+          "VPC20": 8,
+          "VPP23?": 2
+        },
+        "share_pct": {
+          "VPC10": 92.07,
+          "VPC13": 1.83,
+          "VPC20": 4.88,
+          "VPP23?": 1.22
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "PB",
+        "doses": {
+          "VPC10": 72,
+          "VPC13": 0,
+          "VPC20": 7,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 90.0,
+          "VPC13": 0.0,
+          "VPC20": 8.75,
+          "VPP23?": 1.25
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "PE",
+        "doses": {
+          "VPC10": 166,
+          "VPC13": 2,
+          "VPC20": 24,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 86.46,
+          "VPC13": 1.04,
+          "VPC20": 12.5,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "PI",
+        "doses": {
+          "VPC10": 63,
+          "VPC13": 1,
+          "VPC20": 6,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 88.73,
+          "VPC13": 1.41,
+          "VPC20": 8.45,
+          "VPP23?": 1.41
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "PR",
+        "doses": {
+          "VPC10": 164,
+          "VPC13": 6,
+          "VPC20": 53,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 73.54,
+          "VPC13": 2.69,
+          "VPC20": 23.77,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "RJ",
+        "doses": {
+          "VPC10": 209,
+          "VPC13": 5,
+          "VPC20": 57,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 76.84,
+          "VPC13": 1.84,
+          "VPC20": 20.96,
+          "VPP23?": 0.37
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "RN",
+        "doses": {
+          "VPC10": 38,
+          "VPC13": 4,
+          "VPC20": 8,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 76.0,
+          "VPC13": 8.0,
+          "VPC20": 16.0,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "RO",
+        "doses": {
+          "VPC10": 37,
+          "VPC13": 2,
+          "VPC20": 8,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 78.72,
+          "VPC13": 4.26,
+          "VPC20": 17.02,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "RR",
+        "doses": {
+          "VPC10": 18,
+          "VPC13": 1,
+          "VPC20": 1,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 90.0,
+          "VPC13": 5.0,
+          "VPC20": 5.0,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "RS",
+        "doses": {
+          "VPC10": 140,
+          "VPC13": 5,
+          "VPC20": 66,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 66.04,
+          "VPC13": 2.36,
+          "VPC20": 31.13,
+          "VPP23?": 0.47
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "SC",
+        "doses": {
+          "VPC10": 119,
+          "VPC13": 11,
+          "VPC20": 54,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 64.67,
+          "VPC13": 5.98,
+          "VPC20": 29.35,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "SE",
+        "doses": {
+          "VPC10": 37,
+          "VPC13": 0,
+          "VPC20": 0,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 100.0,
+          "VPC13": 0.0,
+          "VPC20": 0.0,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "SP",
+        "doses": {
+          "VPC10": 624,
+          "VPC13": 46,
+          "VPC20": 199,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 71.72,
+          "VPC13": 5.29,
+          "VPC20": 22.87,
+          "VPP23?": 0.11
+        }
+      },
+      {
+        "ano_mes": "2026-05",
+        "uf": "TO",
+        "doses": {
+          "VPC10": 30,
+          "VPC13": 0,
+          "VPC20": 2,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 93.75,
+          "VPC13": 0.0,
+          "VPC20": 6.25,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "AC",
+        "doses": {
+          "VPC10": 7,
+          "VPC13": 2,
+          "VPC20": 3,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 58.33,
+          "VPC13": 16.67,
+          "VPC20": 25.0,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "AL",
+        "doses": {
+          "VPC10": 34,
+          "VPC13": 1,
+          "VPC20": 5,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 82.93,
+          "VPC13": 2.44,
+          "VPC20": 12.2,
+          "VPP23?": 2.44
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "AM",
+        "doses": {
+          "VPC10": 37,
+          "VPC13": 0,
+          "VPC20": 2,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 94.87,
+          "VPC13": 0.0,
+          "VPC20": 5.13,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "AP",
+        "doses": {
+          "VPC10": 5,
+          "VPC13": 0,
+          "VPC20": 2,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 71.43,
+          "VPC13": 0.0,
+          "VPC20": 28.57,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "BA",
+        "doses": {
+          "VPC10": 81,
+          "VPC13": 21,
+          "VPC20": 18,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 67.5,
+          "VPC13": 17.5,
+          "VPC20": 15.0,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "CE",
+        "doses": {
+          "VPC10": 41,
+          "VPC13": 2,
+          "VPC20": 31,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 54.67,
+          "VPC13": 2.67,
+          "VPC20": 41.33,
+          "VPP23?": 1.33
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "DF",
+        "doses": {
+          "VPC10": 11,
+          "VPC13": 0,
+          "VPC20": 21,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 34.38,
+          "VPC13": 0.0,
+          "VPC20": 65.62,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "ES",
+        "doses": {
+          "VPC10": 16,
+          "VPC13": 1,
+          "VPC20": 34,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 31.37,
+          "VPC13": 1.96,
+          "VPC20": 66.67,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "GO",
+        "doses": {
+          "VPC10": 39,
+          "VPC13": 1,
+          "VPC20": 49,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 43.82,
+          "VPC13": 1.12,
+          "VPC20": 55.06,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "MA",
+        "doses": {
+          "VPC10": 69,
+          "VPC13": 0,
+          "VPC20": 11,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 85.19,
+          "VPC13": 0.0,
+          "VPC20": 13.58,
+          "VPP23?": 1.23
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "MG",
+        "doses": {
+          "VPC10": 125,
+          "VPC13": 4,
+          "VPC20": 86,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 58.14,
+          "VPC13": 1.86,
+          "VPC20": 40.0,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "MS",
+        "doses": {
+          "VPC10": 19,
+          "VPC13": 0,
+          "VPC20": 24,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 44.19,
+          "VPC13": 0.0,
+          "VPC20": 55.81,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "MT",
+        "doses": {
+          "VPC10": 32,
+          "VPC13": 5,
+          "VPC20": 14,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 62.75,
+          "VPC13": 9.8,
+          "VPC20": 27.45,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "ND",
+        "doses": {
+          "VPC10": 35,
+          "VPC13": 0,
+          "VPC20": 9,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 79.55,
+          "VPC13": 0.0,
+          "VPC20": 20.45,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "PA",
+        "doses": {
+          "VPC10": 92,
+          "VPC13": 0,
+          "VPC20": 5,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 94.85,
+          "VPC13": 0.0,
+          "VPC20": 5.15,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "PB",
+        "doses": {
+          "VPC10": 20,
+          "VPC13": 1,
+          "VPC20": 9,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 64.52,
+          "VPC13": 3.23,
+          "VPC20": 29.03,
+          "VPP23?": 3.23
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "PE",
+        "doses": {
+          "VPC10": 63,
+          "VPC13": 0,
+          "VPC20": 13,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 82.89,
+          "VPC13": 0.0,
+          "VPC20": 17.11,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "PI",
+        "doses": {
+          "VPC10": 21,
+          "VPC13": 0,
+          "VPC20": 16,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 56.76,
+          "VPC13": 0.0,
+          "VPC20": 43.24,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "PR",
+        "doses": {
+          "VPC10": 90,
+          "VPC13": 3,
+          "VPC20": 30,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 73.17,
+          "VPC13": 2.44,
+          "VPC20": 24.39,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "RJ",
+        "doses": {
+          "VPC10": 91,
+          "VPC13": 0,
+          "VPC20": 35,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 71.65,
+          "VPC13": 0.0,
+          "VPC20": 27.56,
+          "VPP23?": 0.79
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "RN",
+        "doses": {
+          "VPC10": 19,
+          "VPC13": 0,
+          "VPC20": 3,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 82.61,
+          "VPC13": 0.0,
+          "VPC20": 13.04,
+          "VPP23?": 4.35
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "RO",
+        "doses": {
+          "VPC10": 13,
+          "VPC13": 0,
+          "VPC20": 1,
+          "VPP23?": 1
+        },
+        "share_pct": {
+          "VPC10": 86.67,
+          "VPC13": 0.0,
+          "VPC20": 6.67,
+          "VPP23?": 6.67
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "RR",
+        "doses": {
+          "VPC10": 7,
+          "VPC13": 0,
+          "VPC20": 0,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 100.0,
+          "VPC13": 0.0,
+          "VPC20": 0.0,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "RS",
+        "doses": {
+          "VPC10": 81,
+          "VPC13": 2,
+          "VPC20": 30,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 71.68,
+          "VPC13": 1.77,
+          "VPC20": 26.55,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "SC",
+        "doses": {
+          "VPC10": 31,
+          "VPC13": 1,
+          "VPC20": 48,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 38.75,
+          "VPC13": 1.25,
+          "VPC20": 60.0,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "SE",
+        "doses": {
+          "VPC10": 16,
+          "VPC13": 0,
+          "VPC20": 4,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 80.0,
+          "VPC13": 0.0,
+          "VPC20": 20.0,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "SP",
+        "doses": {
+          "VPC10": 286,
+          "VPC13": 15,
+          "VPC20": 117,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 68.42,
+          "VPC13": 3.59,
+          "VPC20": 27.99,
+          "VPP23?": 0.0
+        }
+      },
+      {
+        "ano_mes": "2026-06",
+        "uf": "TO",
+        "doses": {
+          "VPC10": 19,
+          "VPC13": 0,
+          "VPC20": 1,
+          "VPP23?": 0
+        },
+        "share_pct": {
+          "VPC10": 95.0,
+          "VPC13": 0.0,
+          "VPC20": 5.0,
+          "VPP23?": 0.0
+        }
+      }
+    ]
+  },
+  "cobertura_sit1": [
+    {
+      "condicao_id": 1,
+      "condicao_nt52": "HIV/AIDS",
+      "elegiveis": 480000,
+      "pessoas_vacinadas": 0,
+      "cobertura_pct": 0.0,
+      "carga_pendente": false
+    },
+    {
+      "condicao_id": 2,
+      "condicao_nt52": "Oncológicos ativos",
+      "elegiveis": 220000,
+      "pessoas_vacinadas": 0,
+      "cobertura_pct": 0.0,
+      "carga_pendente": false
+    },
+    {
+      "condicao_id": 3,
+      "condicao_nt52": "Transplantados órgãos sólidos",
+      "elegiveis": 55000,
+      "pessoas_vacinadas": 0,
+      "cobertura_pct": 0.0,
+      "carga_pendente": false
+    },
+    {
+      "condicao_id": 4,
+      "condicao_nt52": "TCTH",
+      "elegiveis": 18000,
+      "pessoas_vacinadas": 0,
+      "cobertura_pct": 0.0,
+      "carga_pendente": false
+    },
+    {
+      "condicao_id": 8,
+      "condicao_nt52": "Fibrose cística",
+      "elegiveis": 6500,
+      "pessoas_vacinadas": 0,
+      "cobertura_pct": 0.0,
+      "carga_pendente": false
+    }
+  ],
+  "qualidade_oferta": {
+    "atualizado_em": "2026-09-01T13:36:06.776490+00:00",
+    "fonte": "cache api_pni_2026 (200 arquivos) + cnes_crie.json",
+    "atraso_rnds_dias": {
+      "mediana": 2.0,
+      "p90": 38,
+      "n": 469
+    },
+    "pct_fora_crie": 100.0,
+    "doses_vpc20_ge5": 469,
+    "doses_em_cnes_crie": 0,
+    "doses_estrategia_rie": 439,
+    "n_cries_seed": 35,
+    "doses_por_crie_nacional": 13.4,
+    "oferta_uf": [
+      {
+        "uf": "AC",
+        "doses_vpc20_ge5": 0,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 0.0,
+        "pct_fora_crie": null
+      },
+      {
+        "uf": "AL",
+        "doses_vpc20_ge5": 5,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 5.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "AM",
+        "doses_vpc20_ge5": 2,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 2.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "AP",
+        "doses_vpc20_ge5": 0,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 0.0,
+        "pct_fora_crie": null
+      },
+      {
+        "uf": "BA",
+        "doses_vpc20_ge5": 7,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 7.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "CE",
+        "doses_vpc20_ge5": 5,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 5.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "DF",
+        "doses_vpc20_ge5": 13,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 13.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "ES",
+        "doses_vpc20_ge5": 20,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 20.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "GO",
+        "doses_vpc20_ge5": 27,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 27.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "MA",
+        "doses_vpc20_ge5": 4,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 4.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "MG",
+        "doses_vpc20_ge5": 75,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 75.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "MS",
+        "doses_vpc20_ge5": 6,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 6.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "MT",
+        "doses_vpc20_ge5": 12,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 12.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "PA",
+        "doses_vpc20_ge5": 4,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 4.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "PB",
+        "doses_vpc20_ge5": 3,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 3.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "PE",
+        "doses_vpc20_ge5": 12,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 12.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "PI",
+        "doses_vpc20_ge5": 5,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 5.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "PR",
+        "doses_vpc20_ge5": 24,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 24.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "RJ",
+        "doses_vpc20_ge5": 43,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 3,
+        "doses_por_crie": 14.33,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "RN",
+        "doses_vpc20_ge5": 4,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 4.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "RO",
+        "doses_vpc20_ge5": 2,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 2.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "RR",
+        "doses_vpc20_ge5": 0,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 0.0,
+        "pct_fora_crie": null
+      },
+      {
+        "uf": "RS",
+        "doses_vpc20_ge5": 52,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 52.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "SC",
+        "doses_vpc20_ge5": 26,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 26.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "SE",
+        "doses_vpc20_ge5": 1,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 1.0,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "SP",
+        "doses_vpc20_ge5": 111,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 7,
+        "doses_por_crie": 15.86,
+        "pct_fora_crie": 100.0
+      },
+      {
+        "uf": "TO",
+        "doses_vpc20_ge5": 1,
+        "doses_em_cnes_crie": 0,
+        "n_cries_seed": 1,
+        "doses_por_crie": 1.0,
+        "pct_fora_crie": 100.0
+      }
+    ]
+  },
+  "indicadores_catalogo": {
+    "versao": "1.0",
+    "painel": "Radar Vacinal VPC20 · CRIE · dashboard nacional",
+    "granularidade_padrao": [
+      "nacional",
+      "uf",
+      "ano_mes"
+    ],
+    "granularidade_opcional": [
+      "regiao_saude",
+      "municipio"
+    ],
+    "indicadores": [
+      {
+        "id": "elegiveis",
+        "nome": "Elegíveis estimados",
+        "familia": "oportunidade",
+        "formula": "sum(denominadores por condição)",
+        "fonte": [
+          "ibge_6579",
+          "sidra_9514",
+          "taxas_sit2",
+          "sit1_manual",
+          "sit3_estaticas"
+        ],
+        "unidade": "pessoas",
+        "exibe_nacional": true
+      },
+      {
+        "id": "pessoas_vacinadas_municipio",
+        "nome": "Pessoas vacinadas VPC20 por município",
+        "familia": "oportunidade",
+        "formula": "COUNT DISTINCT paciente por codigo_municipio_paciente",
+        "fonte": [
+          "rest_demas_pni",
+          "csv_ckan_pni"
+        ],
+        "unidade": "pessoas",
+        "granularidade": [
+          "municipio",
+          "uf"
+        ],
+        "exibe_mapa": true,
+        "nota": "API DEMAS traz IBGE 6 dígitos; malha IBGE 2024 usa 7 — match por prefixo 6"
+      },
+      {
+        "id": "pessoas_vacinadas_vpc20",
+        "nome": "Pessoas vacinadas VPC20 (RIE/CRIE)",
+        "familia": "oportunidade",
+        "formula": "COUNT DISTINCT paciente | co_vacina=107 | idade>=5 | RIE/CRIE",
+        "fonte": [
+          "csv_ckan_pni",
+          "rest_demas_pni"
+        ],
+        "unidade": "pessoas",
+        "exibe_nacional": true
+      },
+      {
+        "id": "gap_absoluto",
+        "nome": "Gap absoluto",
+        "familia": "oportunidade",
+        "formula": "elegiveis - pessoas_vacinadas_vpc20",
+        "fonte": [
+          "derivado"
+        ],
+        "unidade": "pessoas",
+        "exibe_nacional": true
+      },
+      {
+        "id": "cobertura_sit1",
+        "nome": "Cobertura % Situação 1",
+        "familia": "oportunidade",
+        "formula": "100 * vacinados / elegiveis",
+        "fonte": [
+          "sit1_manual",
+          "numerador"
+        ],
+        "unidade": "%",
+        "nota": "Somente condições com cadastro"
+      },
+      {
+        "id": "gap_regiao_saude",
+        "nome": "Gap por região de saúde",
+        "familia": "oportunidade",
+        "formula": "elegiveis_rs - vacinados_rs",
+        "fonte": [
+          "regiao_saude",
+          "numerador",
+          "denominadores"
+        ],
+        "unidade": "pessoas",
+        "nota": "Elegíveis da UF rateados pela pop IBGE 2022 da RS; vacinados via mun→RS"
+      },
+      {
+        "id": "share_transicao_pneumo",
+        "nome": "Share VPC10/VPC13/VPP23/VPC20",
+        "familia": "transicao",
+        "formula": "doses_vacina / doses_pneumo_total por UF×mês",
+        "fonte": [
+          "rest_demas_pni",
+          "csv_ckan_pni"
+        ],
+        "unidade": "%",
+        "codigos_vacina": {
+          "26": "VPC10",
+          "59": "VPC13",
+          "23": "VPP23_candidato",
+          "107": "VPC20"
+        }
+      },
+      {
+        "id": "sies_distribuida_aplicada",
+        "nome": "Distribuídas ÷ aplicadas (VPC20)",
+        "familia": "oferta",
+        "formula": "doses_distribuidas_sies / doses_aplicadas",
+        "fonte": [
+          "sies",
+          "numerador"
+        ],
+        "unidade": "razão"
+      },
+      {
+        "id": "doses_por_crie",
+        "nome": "Doses VPC20 por CRIE ativo",
+        "familia": "oferta",
+        "formula": "doses_vpc20_rie / n_cries_uf",
+        "fonte": [
+          "cnes",
+          "numerador"
+        ],
+        "unidade": "doses/CRIE"
+      },
+      {
+        "id": "pct_fora_crie",
+        "nome": "% doses VPC20 ≥5a fora de CNES CRIE",
+        "familia": "oferta",
+        "formula": "100 * doses_nao_crie / doses_vpc20_ge5",
+        "fonte": [
+          "cnes",
+          "rest_demas_pni"
+        ],
+        "unidade": "%"
+      },
+      {
+        "id": "taxa_cid_preenchido",
+        "nome": "% CID de indicação preenchido",
+        "familia": "qualidade",
+        "formula": "registros com CID / total VPC20 RIE",
+        "fonte": [
+          "csv_ckan_pni"
+        ],
+        "unidade": "%"
+      },
+      {
+        "id": "atraso_rnds",
+        "nome": "Atraso registro RNDS (dias)",
+        "familia": "qualidade",
+        "formula": "median(dt_entrada_rnds - dt_vacina)",
+        "fonte": [
+          "rest_demas_pni",
+          "csv_ckan_pni"
+        ],
+        "unidade": "dias"
+      },
+      {
+        "id": "esavi_por_100k",
+        "nome": "ESAVI por 100k doses VPC20",
+        "familia": "qualidade",
+        "formula": "100000 * esavi / doses_vpc20",
+        "fonte": [
+          "esavi",
+          "numerador"
+        ],
+        "unidade": "por 100k"
+      },
+      {
+        "id": "sinan_meningite_100k",
+        "nome": "Meningite (SINAN) por 100 mil",
+        "familia": "desfecho",
+        "formula": "100000 * casos_sinan / pop_uf",
+        "fonte": [
+          "sinan_meningite",
+          "ibge_6579"
+        ],
+        "unidade": "por 100k"
+      },
+      {
+        "id": "sih_pneumo_100k",
+        "nome": "Internações pneumocócicas (SIH) por 100 mil",
+        "familia": "desfecho",
+        "formula": "100000 * internacoes / pop_uf",
+        "fonte": [
+          "sih",
+          "ibge_6579"
+        ],
+        "unidade": "por 100k"
+      },
+      {
+        "id": "sim_pneumo_100k",
+        "nome": "Óbitos pneumocócicos (SIM) por 100 mil",
+        "familia": "desfecho",
+        "formula": "100000 * obitos / pop_uf",
+        "unidade": "por 100k",
+        "fonte": [
+          "sim",
+          "ibge_6579"
+        ]
+      },
+      {
+        "id": "srag_casos_100k",
+        "nome": "SRAG (amostra OpenDataSUS) por 100 mil",
+        "familia": "desfecho",
+        "formula": "100000 * casos_srag / pop_uf",
+        "fonte": [
+          "srag_2019_2026",
+          "ibge_6579"
+        ],
+        "unidade": "por 100k",
+        "nota": "Amostra paginada; ecológico — não causal"
+      },
+      {
+        "id": "razao_doses_casos",
+        "nome": "Doses VPC20 RIE ÷ (SINAN+SIH)",
+        "familia": "desfecho",
+        "formula": "doses_vpc20_rie / (casos_sinan + internacoes_sih)",
+        "fonte": [
+          "derivado"
+        ],
+        "unidade": "razão",
+        "nota": "Ecológico — sem inferência causal"
+      },
+      {
+        "id": "custo_gap",
+        "nome": "Custo do gap",
+        "familia": "economia",
+        "formula": "gap_pessoas * preco_bps_vpc20 (deflacionado IPCA)",
+        "fonte": [
+          "bps",
+          "ipca_bcb_433",
+          "gap_absoluto"
+        ],
+        "unidade": "BRL"
+      },
+      {
+        "id": "pressao_fiscal_gap",
+        "nome": "Custo do gap / gasto SIOPS per capita",
+        "familia": "economia",
+        "formula": "custo_gap / (siops_per_capita * pop)",
+        "fonte": [
+          "siops",
+          "custo_gap",
+          "ibge_6579"
+        ],
+        "unidade": "índice"
+      }
+    ]
+  },
+  "indicadores_status": [
+    {
+      "id": "elegiveis",
+      "nome": "Elegíveis estimados",
+      "familia": "oportunidade",
+      "status": "ok",
+      "valor": 37853021,
+      "unidade": "pessoas"
+    },
+    {
+      "id": "pessoas_vacinadas_municipio",
+      "nome": "Pessoas vacinadas VPC20 por município",
+      "familia": "oportunidade",
+      "status": "ok",
+      "valor": 0,
+      "unidade": "pessoas"
+    },
+    {
+      "id": "pessoas_vacinadas_vpc20",
+      "nome": "Pessoas vacinadas VPC20 (RIE/CRIE)",
+      "familia": "oportunidade",
+      "status": "ok",
+      "valor": 46726,
+      "unidade": "pessoas"
+    },
+    {
+      "id": "gap_absoluto",
+      "nome": "Gap absoluto",
+      "familia": "oportunidade",
+      "status": "ok",
+      "valor": 37806295,
+      "unidade": "pessoas"
+    },
+    {
+      "id": "cobertura_sit1",
+      "nome": "Cobertura % Situação 1",
+      "familia": "oportunidade",
+      "status": "parcial",
+      "valor": "5 itens",
+      "unidade": "%"
+    },
+    {
+      "id": "gap_regiao_saude",
+      "nome": "Gap por região de saúde",
+      "familia": "oportunidade",
+      "status": "ok",
+      "valor": 37853010,
+      "unidade": "pessoas"
+    },
+    {
+      "id": "share_transicao_pneumo",
+      "nome": "Share VPC10/VPC13/VPP23/VPC20",
+      "familia": "transicao",
+      "status": "ok",
+      "valor": 56,
+      "unidade": "%"
+    },
+    {
+      "id": "sies_distribuida_aplicada",
+      "nome": "Distribuídas ÷ aplicadas (VPC20)",
+      "familia": "oferta",
+      "status": "parcial",
+      "valor": 7.27,
+      "unidade": "razão"
+    },
+    {
+      "id": "doses_por_crie",
+      "nome": "Doses VPC20 por CRIE ativo",
+      "familia": "oferta",
+      "status": "ok",
+      "valor": 13.4,
+      "unidade": "doses/CRIE"
+    },
+    {
+      "id": "pct_fora_crie",
+      "nome": "% doses VPC20 ≥5a fora de CNES CRIE",
+      "familia": "oferta",
+      "status": "ok",
+      "valor": 100.0,
+      "unidade": "%"
+    },
+    {
+      "id": "taxa_cid_preenchido",
+      "nome": "% CID de indicação preenchido",
+      "familia": "qualidade",
+      "status": "ok",
+      "valor": 0.0,
+      "unidade": "%"
+    },
+    {
+      "id": "atraso_rnds",
+      "nome": "Atraso registro RNDS (dias)",
+      "familia": "qualidade",
+      "status": "ok",
+      "valor": 2.0,
+      "unidade": "dias"
+    },
+    {
+      "id": "esavi_por_100k",
+      "nome": "ESAVI por 100k doses VPC20",
+      "familia": "qualidade",
+      "status": "parcial",
+      "valor": 10.66,
+      "unidade": "por 100k"
+    },
+    {
+      "id": "sinan_meningite_100k",
+      "nome": "Meningite (SINAN) por 100 mil",
+      "familia": "desfecho",
+      "status": "ok",
+      "valor": 0.08,
+      "unidade": "por 100k"
+    },
+    {
+      "id": "sih_pneumo_100k",
+      "nome": "Internações pneumocócicas (SIH) por 100 mil",
+      "familia": "desfecho",
+      "status": "ok",
+      "valor": 0.26,
+      "unidade": "por 100k"
+    },
+    {
+      "id": "sim_pneumo_100k",
+      "nome": "Óbitos pneumocócicos (SIM) por 100 mil",
+      "familia": "desfecho",
+      "status": "ok",
+      "valor": 0.01,
+      "unidade": "por 100k"
+    },
+    {
+      "id": "srag_casos_100k",
+      "nome": "SRAG (amostra OpenDataSUS) por 100 mil",
+      "familia": "desfecho",
+      "status": "ok",
+      "valor": 7.06,
+      "unidade": "por 100k"
+    },
+    {
+      "id": "razao_doses_casos",
+      "nome": "Doses VPC20 RIE ÷ (SINAN+SIH)",
+      "familia": "desfecho",
+      "status": "ok",
+      "valor": 63.57,
+      "unidade": "razão"
+    },
+    {
+      "id": "custo_gap",
+      "nome": "Custo do gap",
+      "familia": "economia",
+      "status": "ok",
+      "valor": 7015714163.15,
+      "unidade": "BRL"
+    },
+    {
+      "id": "pressao_fiscal_gap",
+      "nome": "Custo do gap / gasto SIOPS per capita",
+      "familia": "economia",
+      "status": "ok",
+      "valor": 0.037193,
+      "unidade": "índice"
+    }
+  ],
+  "plano_extracao": {
+    "ordem": [
+      "ibge_6579",
+      "sidra_9514",
+      "cnes_crie",
+      "rest_demas_pni_serie",
+      "csv_ckan_pni",
+      "sies",
+      "esavi",
+      "sinan_meningite",
+      "sih_pneumo",
+      "sim_srag",
+      "bps_ipca_siops",
+      "build_marts_nacionais"
+    ],
+    "abas": [
+      {
+        "rota": "/",
+        "foco": "KPIs oportunidade + mapa gap"
+      },
+      {
+        "rota": "/serie",
+        "foco": "Série histórica e transição pneumocócica"
+      },
+      {
+        "rota": "/monitoramento",
+        "foco": "SINAN SIH SIM SRAG × VPC20"
+      },
+      {
+        "rota": "/estoque",
+        "foco": "SIES distribuídas vs aplicadas"
+      },
+      {
+        "rota": "/custo",
+        "foco": "Custo do gap BPS×IPCA×SIOPS"
+      },
+      {
+        "rota": "/qualidade",
+        "foco": "CID atraso ESAVI CNES"
+      }
+    ]
+  },
+  "qualidade": {
+    "esavi_por_uf": {
+      "SP": 3,
+      "RJ": 1,
+      "MG": 1
+    },
+    "sies_nota": "Distribuídas pneumo conjugada ≥2024 agregadas por UF (SES-XX / IBGE). VPC20 ainda não no SIES — proxy = pneumo total.",
+    "sinan_nota": "Substituir por ETL FTP DATASUS/PySUS",
+    "sih_nota": "Substituir por ETL FTP SIH",
+    "sim_nota": "Substituir por ETL FTP SIM/DATASUS",
+    "srag_nota": "Amostra paginada SRAG; filtro pneumo específico pendente (FTP completo).",
+    "atraso_rnds_dias": {
+      "mediana": 2.0,
+      "p90": 38,
+      "n": 469
+    },
+    "regiao_saude_nota": "População IBGE 2022 da API; gap RS rateia elegíveis UF por pop da RS.",
+    "regiao_saude_fonte": "https://apidadosabertos.saude.gov.br/macrorregiao-e-regiao-de-saude/municipio"
+  }
+}

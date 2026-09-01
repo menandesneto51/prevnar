@@ -1,0 +1,202 @@
+/* Estilos compartilhados do dashboard */
+
+.chart-container {
+            width: 100%;
+            height: 700px;
+        }
+
+        .text-primary {
+            color: #252f49 !important;
+        }
+
+        .kpi-card {
+            height: 100%;
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .kpi-card h3 {
+            margin: 5px 0 0;
+            color: #666;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .kpi-percent {
+            margin: 20px 0;
+            text-align: center;
+            font-size: 58px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        .kpi-bar {
+            height: 18px;
+            background: #e9ecef;
+            border-radius: 30px;
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+
+        .kpi-fill {
+            height: 18px;
+            background: linear-gradient(90deg, #4caf50, #00c853);
+            border-radius: 30px;
+        }
+
+        .kpi-info {
+            text-align: center;
+            margin-top: 15px;
+            color: #666;
+            font-size: 22px;
+        }
+
+        .kpi-info strong {
+            color: #222;
+            font-size: 48px;
+        }
+
+        .area-filtros {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+        }
+
+        .area-filtros .form-label {
+            font-weight: 600;
+            color: #252f49;
+        }
+
+        .area-filtros .form-select {
+            min-height: 210px;
+        }
+
+        .grafico-municipal {
+            height: 500px;
+        }
+		.logo_power{
+			text-align: right;
+		}
+		
+
+        @media (max-width: 767.98px) {
+			.logo_power, .logo_projeto{
+			text-align: center;
+				margin-bottom:20px
+			}
+            .chart-container {
+                height: 480px;
+            }
+
+            .grafico-municipal {
+                height: 430px;
+            }
+
+            .kpi-info strong {
+                font-size: 36px;
+            }
+
+            .kpi-percent {
+                font-size: 48px;
+            }
+        }
+
+/* Estilos específicos do painel municipal */
+.text-primary {
+            color: #252f49 !important;
+        }
+
+        .cabecalho-localidade {
+            background: #fff;
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+        }
+
+        .kpi-card {
+            height: 100%;
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+            text-align: center;
+        }
+
+        .kpi-card .rotulo {
+            color: #666;
+            font-size: 19px;
+        }
+
+        .kpi-card strong {
+            display: block;
+            color: #252f49;
+            font-size: 42px;
+            line-height: 1.1;
+            margin-top: 12px;
+        }
+
+        .kpi-card .percentual {
+            color: #198754;
+        }
+
+        .grafico-card {
+            height: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+            overflow: hidden;
+        }
+
+        .grafico-card .cabecalho {
+            padding: 20px 24px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .grafico-card .conteudo {
+            height: 390px;
+            padding: 20px;
+        }
+
+        .nota-comparativo {
+            background: #eef3f8;
+            border-left: 5px solid #252f49;
+            border-radius: 8px;
+            padding: 18px;
+        }
+
+        .area-ia {
+            background: linear-gradient(135deg, #252f49, #3d4b6d);
+            color: #fff;
+            border-radius: 14px;
+            padding: 32px;
+        }
+		
+		.logo_power{
+			text-align: right;
+		}
+
+        @media (max-width: 767.98px) {
+			.logo_power, .logo_projeto{
+			text-align: center;
+				margin-bottom:20px
+			}
+            .kpi-card strong {
+                font-size: 34px;
+            }
+
+            .grafico-card .conteudo {
+                height: 340px;
+            }
+        }
+
+/* Componentes compartilhados */
+.site-header { padding: 20px; background: #fff; }
+.site-nav { background: #464646; padding: 20px; }
+.site-breadcrumb { background: #4a6aaf; }
+.site-breadcrumb p { font-size: 22px; padding: 20px; color: #fff; margin-bottom: 0; }
+.site-footer { background: #4a6aaf; padding: 20px; color: #fff; }

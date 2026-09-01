@@ -1,0 +1,16 @@
+{
+  "atualizado_em": "2026-09-01T13:34:25.906798+00:00",
+  "fonte": "data/manual/esavi.csv",
+  "registros": 5,
+  "amostra_campos": [
+    "uf",
+    "registros"
+  ],
+  "por_uf": {
+    "SP": 3,
+    "RJ": 1,
+    "MG": 1
+  },
+  "linhas_sample": [],
+  "nota": "CSV manual ESAVI."
+}

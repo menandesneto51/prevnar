@@ -1,0 +1,169 @@
+{
+  "atualizado_em": "2026-09-01T13:34:25.909887+00:00",
+  "fonte": "data/manual/sinan_meningite.csv",
+  "linhas": [
+    {
+      "uf": "AC",
+      "ano_mes": "2026-05",
+      "casos": 1,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "AL",
+      "ano_mes": "2026-05",
+      "casos": 2,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "AM",
+      "ano_mes": "2026-05",
+      "casos": 3,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "AP",
+      "ano_mes": "2026-05",
+      "casos": 1,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "BA",
+      "ano_mes": "2026-05",
+      "casos": 12,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "CE",
+      "ano_mes": "2026-05",
+      "casos": 7,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "DF",
+      "ano_mes": "2026-05",
+      "casos": 3,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "ES",
+      "ano_mes": "2026-05",
+      "casos": 4,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "GO",
+      "ano_mes": "2026-05",
+      "casos": 5,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "MA",
+      "ano_mes": "2026-05",
+      "casos": 4,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "MG",
+      "ano_mes": "2026-05",
+      "casos": 15,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "MS",
+      "ano_mes": "2026-05",
+      "casos": 2,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "MT",
+      "ano_mes": "2026-05",
+      "casos": 3,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "PA",
+      "ano_mes": "2026-05",
+      "casos": 5,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "PB",
+      "ano_mes": "2026-05",
+      "casos": 3,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "PE",
+      "ano_mes": "2026-05",
+      "casos": 8,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "PI",
+      "ano_mes": "2026-05",
+      "casos": 2,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "PR",
+      "ano_mes": "2026-05",
+      "casos": 9,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "RJ",
+      "ano_mes": "2026-05",
+      "casos": 18,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "RN",
+      "ano_mes": "2026-05",
+      "casos": 3,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "RO",
+      "ano_mes": "2026-05",
+      "casos": 1,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "RR",
+      "ano_mes": "2026-05",
+      "casos": 1,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "RS",
+      "ano_mes": "2026-05",
+      "casos": 11,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "SC",
+      "ano_mes": "2026-05",
+      "casos": 6,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "SE",
+      "ano_mes": "2026-05",
+      "casos": 2,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "SP",
+      "ano_mes": "2026-05",
+      "casos": 42,
+      "definicao": "ampla"
+    },
+    {
+      "uf": "TO",
+      "ano_mes": "2026-05",
+      "casos": 2,
+      "definicao": "ampla"
+    }
+  ],
+  "nota": "Substituir por ETL FTP DATASUS/PySUS"
+}

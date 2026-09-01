@@ -1,0 +1,9 @@
+{
+  "moeda": "BRL",
+  "produto": "VPC20",
+  "preco_unitario": 180.0,
+  "unidade": "dose",
+  "fonte": "Seed BPS — substituir por consulta oficial BPS",
+  "referencia": "2026-01",
+  "nota": "Usado em custo_gap = gap_pessoas × preco_unitario (1 dose/pessoa no esquema adulto RIE)"
+}
