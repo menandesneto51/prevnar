@@ -1,0 +1,7 @@
+.venv/
+data/raw/
+__pycache__/
+*.pyc
+indicador-br/
+Dicionario_tb_ria_rotina.pdf
+VPC20_CRIE_Numeradores_Denominadores.docx
