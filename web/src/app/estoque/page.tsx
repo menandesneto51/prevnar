@@ -40,7 +40,14 @@ export default async function EstoquePage() {
           value={apl ? (dist / apl).toFixed(2) : "—"}
           tone="warn"
         />
-        <Kpi label="Doses / CRIE (nac.)" value={data.kpis?.doses_por_crie ?? "—"} />
+        <Kpi
+          label="Doses / CRIE (nac.)"
+          value={
+            data.kpis?.doses_por_crie == null
+              ? "—"
+              : String(data.kpis.doses_por_crie)
+          }
+        />
         <Kpi
           label="% fora CRIE"
           value={
