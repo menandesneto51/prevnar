@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { assetUrl } from "@/lib/basePath";
 
 const links = [
   { href: "/", label: "Nacional" },
@@ -32,7 +33,7 @@ export function Nav() {
           <Link href="/" className="flex min-w-0 flex-1 items-center gap-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/brand/logo-jambro.png"
+              src={assetUrl("/brand/logo-jambro.png")}
               alt="JAMBRO"
               className="brand-logo"
               width={160}
@@ -41,7 +42,7 @@ export function Nav() {
             <div className="hidden h-8 w-px bg-[var(--border)] sm:block" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/brand/logo-ipads.png"
+              src={assetUrl("/brand/logo-ipads.png")}
               alt="IPADS"
               className="brand-logo"
               width={160}

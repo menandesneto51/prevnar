@@ -9,6 +9,7 @@ import { GeoJSON, MapContainer, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 import { fmtGapShort, gapFill } from "@/lib/mapColors";
+import { assetUrl } from "@/lib/basePath";
 
 export type GapMapRow = {
   code: string;
@@ -181,18 +182,18 @@ export default function GapChoroplethMap({
         let payload: FeatureCollection;
         if (level === "uf") {
           try {
-            payload = await fetchGeoJson("/geo/br-uf-2024.geojson", controller.signal);
+            payload = await fetchGeoJson(assetUrl("/geo/br-uf-2024.geojson"), controller.signal);
           } catch {
             payload = await fetchGeoJson(
-              "/geo/br-uf-simplified.geojson",
+              assetUrl("/geo/br-uf-simplified.geojson"),
               controller.signal,
             );
           }
         } else if (level === "regiao") {
-          payload = await fetchGeoJson("/geo/br-regioes-2024.geojson", controller.signal);
+          payload = await fetchGeoJson(assetUrl("/geo/br-regioes-2024.geojson"), controller.signal);
         } else {
           payload = await fetchGeoJson(
-            `/geo/municipios/${uf!.toUpperCase()}.geojson`,
+            assetUrl(`/geo/municipios/${uf!.toUpperCase()}.geojson`),
             controller.signal,
           );
         }

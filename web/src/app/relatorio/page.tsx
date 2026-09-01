@@ -1,4 +1,5 @@
 import { fmtInt, fmtBRL } from "@/lib/data";
+import { assetUrl } from "@/lib/basePath";
 import { PrintButton } from "@/components/PrintButton";
 import { getNacional } from "@/lib/data";
 import Link from "next/link";
@@ -79,7 +80,7 @@ export default async function RelatorioPage() {
         <div className="flex gap-2 print:hidden">
           <PrintButton />
           <a
-            href="/relatorio/relatorio_implementacao_prevnar.pdf"
+            href={assetUrl("/relatorio/relatorio_implementacao_prevnar.pdf")}
             className="rounded-md border border-[var(--border)] px-4 py-2 text-sm"
             download
           >

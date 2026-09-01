@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { assetUrl } from "@/lib/basePath";
+
+const STATIC_HOST = process.env.NEXT_PUBLIC_STATIC_HOST === "1";
 
 const FILES = [
   { key: "1", label: "HIV/AIDS — SICLOM" },
@@ -62,6 +65,13 @@ export default function CargaPage() {
         </p>
       </div>
 
+      {STATIC_HOST ? (
+        <div className="card border-[var(--warn)] p-4 text-sm text-[var(--warn)]">
+          Versão publicada (GitHub Pages): somente leitura. Upload e recálculo do mart funcionam
+          apenas no ambiente local com ETL (<code>npm run dev</code> na pasta web).
+        </div>
+      ) : null}
+
       <div className="grid gap-3 md:grid-cols-2">
         {FILES.map((f) => (
           <label key={f.key} className="card flex cursor-pointer flex-col gap-2 p-4 hover:border-[var(--accent)]">
@@ -70,7 +80,7 @@ export default function CargaPage() {
             <input
               type="file"
               accept=".csv,text/csv"
-              disabled={busy}
+              disabled={busy || STATIC_HOST}
               className="text-xs file:mr-3 file:rounded-md file:border-0 file:bg-[var(--accent)] file:px-3 file:py-1.5 file:text-sm file:font-semibold file:text-[var(--navy-950)]"
               onChange={(e) => onUpload(f.key, e.target.files?.[0] ?? null)}
             />
@@ -81,14 +91,14 @@ export default function CargaPage() {
       <div className="flex flex-wrap items-center gap-3">
         <button
           type="button"
-          disabled={busy}
+          disabled={busy || STATIC_HOST}
           onClick={rebuild}
           className="rounded-lg bg-[var(--accent)] px-4 py-2 text-sm font-semibold text-[var(--navy-950)] disabled:opacity-50"
         >
           Recalcular mart
         </button>
         <a
-          href="/templates/situacao1_template.csv"
+          href={assetUrl("/templates/situacao1_template.csv")}
           className="text-sm text-[var(--accent)] hover:underline"
         >
           Baixar template CSV

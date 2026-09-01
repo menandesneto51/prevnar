@@ -3,6 +3,11 @@ import { notFound } from "next/navigation";
 import { Kpi, SituacaoBadge, fmtInt, fmtPct } from "@/components/Kpi";
 import { getDashboard, getGapLinhas } from "@/lib/data";
 
+export async function generateStaticParams() {
+  const data = await getDashboard();
+  return data.por_condicao.map((c) => ({ id: String(c.condicao_id) }));
+}
+
 export default async function CondicaoDetailPage({
   params,
 }: {

@@ -4,6 +4,11 @@ import { Kpi, SituacaoBadge, fmtInt, fmtPct } from "@/components/Kpi";
 import { UfMunicipalityMap } from "@/components/UfMunicipalityMap";
 import { getDashboard, getGapLinhas } from "@/lib/data";
 
+export async function generateStaticParams() {
+  const data = await getDashboard();
+  return data.ufs.map((u) => ({ uf: u.uf.toLowerCase() }));
+}
+
 export default async function UfDetailPage({
   params,
 }: {
