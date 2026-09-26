@@ -27,6 +27,29 @@ type Nacional = {
   }>;
 };
 
+const fallbackEvidence: Record<string, { level?: string; decision?: boolean }> = {
+  elegiveis: { level: "E3", decision: true },
+  pessoas_vacinadas_municipio: { level: "E1", decision: true },
+  pessoas_vacinadas_vpc20: { level: "E1", decision: true },
+  gap_absoluto: { level: undefined, decision: false },
+  cobertura_sit1: { level: "E2/E4", decision: false },
+  gap_regiao_saude: { level: "E3", decision: false },
+  share_transicao_pneumo: { level: "E1", decision: true },
+  sies_distribuida_aplicada: { level: "E2", decision: false },
+  doses_por_crie: { level: "E2", decision: false },
+  pct_fora_crie: { level: "E2", decision: false },
+  taxa_cid_preenchido: { level: "E1", decision: true },
+  atraso_rnds: { level: "E1", decision: true },
+  esavi_por_100k: { level: "E4", decision: false },
+  sinan_meningite_100k: { level: "E1", decision: true },
+  sih_pneumo_100k: { level: "E1", decision: true },
+  sim_pneumo_100k: { level: "E1", decision: true },
+  srag_casos_100k: { level: "E2", decision: false },
+  razao_doses_casos: { level: "E3", decision: false },
+  custo_gap: { level: "E3", decision: false },
+  pressao_fiscal_gap: { level: "E3", decision: false },
+};
+
 const statusClass: Record<string, string> = {
   ok: "badge-sit1",
   parcial: "badge-warn",
@@ -102,10 +125,15 @@ export default async function IndicadoresPage() {
                   <td className="kpi-value">{fmtValor(r)}</td>
                   <td className="text-xs text-[var(--muted)]">{r.unidade || "—"}</td>
                   <td>
-                    <EvidenceBadge level={r.evidence_level} decisionGrade={r.decision_grade} />
+                    <EvidenceBadge
+                      level={r.evidence_level ?? fallbackEvidence[r.id]?.level}
+                      decisionGrade={r.decision_grade ?? fallbackEvidence[r.id]?.decision ?? false}
+                    />
                   </td>
                   <td className="text-xs">
-                    {r.decision_grade ? "decisório" : "interpretativo"}
+                    {(r.decision_grade ?? fallbackEvidence[r.id]?.decision ?? false)
+                      ? "decisório"
+                      : "interpretativo"}
                   </td>
                   <td>
                     <span className={`badge ${statusClass[r.status] || "badge-warn"}`}>
