@@ -944,6 +944,15 @@ def _evaluate_hpv4(
     if not (min_age <= age_months <= max_age):
         return None
 
+    if hpv_doses_received is not None and hpv_doses_received >= 1:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "hpv4_routine",
+            "eligible": False,
+            "requires_review": False,
+            "recommendation": "routine_schedule_complete",
+        }
+
     if pregnant is True:
         return {
             "rule_id": rule["rule_id"],
@@ -961,15 +970,6 @@ def _evaluate_hpv4(
             "eligible": True,
             "requires_review": True,
             "recommendation": "verify_hpv_vaccination_history",
-        }
-
-    if hpv_doses_received >= 1:
-        return {
-            "rule_id": rule["rule_id"],
-            "pathway": "hpv4_routine",
-            "eligible": False,
-            "requires_review": False,
-            "recommendation": "routine_schedule_complete",
         }
 
     return {
@@ -994,10 +994,39 @@ def _evaluate_mmr(
     schedule = rule.get("schedule") or {}
     min_interval = int(schedule.get("min_interval_between_doses_days") or 30)
 
+    if age_months < 12:
+        # Dose zero/bloqueio são tratados por regras próprias.
+        return None
+
+    age_years = age_months / 12
+    if is_healthcare_worker is True:
+        pathway = "mmr_healthcare_worker"
+        required = int(schedule.get("healthcare_worker_required_total_doses") or 2)
+    elif age_years < 30:
+        pathway = "mmr_routine_under_30"
+        required = int(schedule.get("required_total_doses_through_age_29") or 2)
+    elif age_years < 60:
+        pathway = "mmr_routine_age_30_59"
+        required = int(schedule.get("required_total_doses_age_30_59") or 1)
+    else:
+        return None
+
+    if mmr_doses_received is not None and mmr_doses_received >= required:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": pathway,
+            "eligible": False,
+            "requires_review": False,
+            "recommendation": "routine_schedule_complete",
+            "required_total_doses": required,
+            "remaining_doses": 0,
+        }
+
+    # Contraindicações são avaliadas quando ainda existe dose indicada.
     if pregnant is True:
         return {
             "rule_id": rule["rule_id"],
-            "pathway": "mmr_routine",
+            "pathway": pathway,
             "eligible": False,
             "requires_review": False,
             "recommendation": "do_not_vaccinate_during_pregnancy",
@@ -1007,88 +1036,53 @@ def _evaluate_mmr(
     if severe_immunosuppression is True:
         return {
             "rule_id": rule["rule_id"],
-            "pathway": "mmr_routine",
+            "pathway": pathway,
             "eligible": False,
             "requires_review": True,
             "recommendation": "specialist_review_live_vaccine_contraindication",
             "reason": "severe_immunosuppression",
         }
 
-    if age_months < 12:
-        # Dose zero/bloqueio são tratados por regras próprias.
-        return None
-
     if mmr_doses_received is None:
         return {
             "rule_id": rule["rule_id"],
-            "pathway": "mmr_routine",
+            "pathway": pathway,
             "eligible": True,
             "requires_review": True,
             "recommendation": "verify_mmr_vaccination_history",
-        }
-
-    if is_healthcare_worker is True:
-        required = int(schedule.get("healthcare_worker_required_total_doses") or 2)
-        remaining = max(0, required - mmr_doses_received)
-        return {
-            "rule_id": rule["rule_id"],
-            "pathway": "mmr_healthcare_worker",
-            "eligible": remaining > 0,
-            "requires_review": False,
-            "recommendation": (
-                "complete_mmr_two_dose_schedule"
-                if remaining > 0
-                else "routine_schedule_complete"
-            ),
             "required_total_doses": required,
-            "remaining_doses": remaining,
-            "min_interval_days": min_interval,
         }
 
-    age_years = age_months / 12
-    if age_years < 30:
-        required = int(schedule.get("required_total_doses_through_age_29") or 2)
-        remaining = max(0, required - mmr_doses_received)
-        payload = {
-            "rule_id": rule["rule_id"],
-            "pathway": "mmr_routine_under_30",
-            "eligible": remaining > 0,
-            "requires_review": False,
-            "recommendation": (
-                "complete_mmr_two_dose_schedule"
-                if remaining > 0
-                else "routine_schedule_complete"
-            ),
-            "required_total_doses": required,
-            "remaining_doses": remaining,
-            "min_interval_days": min_interval,
-        }
-        if 12 <= age_months < 15 and mmr_doses_received == 1:
-            payload["recommendation"] = "second_mmr_component_dose_at_15_months"
-            payload["target_age_months"] = int(
-                schedule.get("child_second_dose_age_months") or 15
-            )
-        return payload
+    remaining = max(0, required - mmr_doses_received)
+    recommendation = (
+        "complete_mmr_two_dose_schedule"
+        if required == 2 and remaining > 0
+        else "one_mmr_dose"
+    )
+    payload = {
+        "rule_id": rule["rule_id"],
+        "pathway": pathway,
+        "eligible": remaining > 0,
+        "requires_review": False,
+        "recommendation": recommendation,
+        "required_total_doses": required,
+        "remaining_doses": remaining,
+    }
 
-    if age_years < 60:
-        required = int(schedule.get("required_total_doses_age_30_59") or 1)
-        remaining = max(0, required - mmr_doses_received)
-        return {
-            "rule_id": rule["rule_id"],
-            "pathway": "mmr_routine_age_30_59",
-            "eligible": remaining > 0,
-            "requires_review": False,
-            "recommendation": (
-                "one_mmr_dose"
-                if remaining > 0
-                else "routine_schedule_complete"
-            ),
-            "required_total_doses": required,
-            "remaining_doses": remaining,
-        }
+    if required == 2:
+        payload["min_interval_days"] = min_interval
 
-    return None
+    if (
+        pathway == "mmr_routine_under_30"
+        and 12 <= age_months < 15
+        and mmr_doses_received == 1
+    ):
+        payload["recommendation"] = "second_mmr_component_dose_at_15_months"
+        payload["target_age_months"] = int(
+            schedule.get("child_second_dose_age_months") or 15
+        )
 
+    return payload
 
 def evaluate_operational(
     immunobiologic_id: str,
