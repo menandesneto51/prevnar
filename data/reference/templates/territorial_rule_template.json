@@ -1,0 +1,19 @@
+{
+  "rule_id": "REPLACE_ME",
+  "immunobiologic_id": "REPLACE_ME",
+  "rule_type": "eligibility_and_schedule",
+  "rule_context": "blockade",
+  "status": "draft",
+  "effective_from": null,
+  "effective_until": null,
+  "geographic_scope": {
+    "type": "municipality",
+    "codes": [
+      "IBGE_CODE"
+    ]
+  },
+  "normative_acts": [],
+  "population": {},
+  "schedules": [],
+  "note": "Regra territorial. Não ativar sem vigência, território e ato oficial validados."
+}
