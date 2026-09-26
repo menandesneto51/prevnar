@@ -88,3 +88,17 @@ Regras:
 - Release Guardian valida referências cruzadas e bloqueia inconsistências.
 
 Nenhum agente pode inserir regra clínica diretamente no código sem `rule_id`, `immunobiologic_id` e `normative_acts`. Entidades em onboarding/draft não podem gerar recomendação automática.
+
+
+## Escopo territorial e sistemas de código
+
+Regras adicionais obrigatórias para todos os agentes:
+
+- Legal & Privacy Agent deve validar `rule_context`, `geographic_scope`, vigência e ato normativo.
+- Epidemiology Agent deve impedir que estratégia de bloqueio/intensificação local seja interpretada como rotina nacional.
+- Data Agent deve identificar explicitamente o sistema de código de origem (PNI/RNDS, SIES, CNES etc.).
+- Data Quality Agent deve sinalizar mapeamentos parciais e incompatibilidade entre sistemas de código.
+- Intelligence Agent não pode agregar regra territorial fora de seu escopo.
+- Release Guardian deve bloquear referências territoriais estruturalmente inválidas.
+
+Ausência de contexto geográfico significa: somente regras nacionais podem ser resolvidas.
