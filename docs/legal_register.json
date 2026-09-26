@@ -428,6 +428,44 @@
       "published_at": "2025-09-01",
       "effective_from": "2025-09-01",
       "official_url": "https://www.gov.br/saude/pt-br/composicao/svsa/pni/notas-tecnicas/nota-tecnica-no-46-2025-cgici-dpni-svsa-ms"
+    },
+    {
+      "id": "portaria_5663_2024_rnds_vacinacao",
+      "type": "portaria",
+      "number": "GM/MS 5.663/2024",
+      "scope": "federal",
+      "topic": [
+        "rnds",
+        "ria",
+        "registro_vacinal",
+        "interoperabilidade",
+        "imunobiologicos"
+      ],
+      "published_at": "2024-11-04",
+      "effective_from": "2024-11-04",
+      "official_url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2024/prt5663_04_11_2024.html",
+      "note": "Determina o encaminhamento dos dados de doses aplicadas à RNDS conforme o modelo de Registro de Imunobiológico Aplicado (RIA) vigente."
+    },
+    {
+      "id": "nt_115_2024_rnds_registro_vacinal",
+      "type": "nota_tecnica",
+      "number": "115/2024-DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "rnds",
+        "registro_vacinal",
+        "ria",
+        "cpf_cns",
+        "cnes",
+        "qualidade_dados"
+      ],
+      "published_at": "2024-12-11",
+      "effective_from": "2024-12-11",
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2024/nota-tecnica-no-115-2024-dpni-svsa-ms/view",
+      "implements": [
+        "portaria_5663_2024_rnds_vacinacao"
+      ],
+      "note": "Orienta sistemas próprios/terceiros no envio à RNDS, incluindo validação de CPF/CNS e requisitos de identificação do registro."
     }
   ],
   "official_source_domains": [
