@@ -97,8 +97,12 @@ export default async function UfDetailPage({
                 </td>
                 <td>
                   <EvidenceBadge
-                    level={r.gap_evidence_level}
-                    decisionGrade={r.gap_decision_grade}
+                    level={
+                      r.gap_evidence_level ??
+                      data.nacional.evidence_level_clinical_breakdown ??
+                      (data.nacional.sem_cid_na_fonte ? "E2" : "E1")
+                    }
+                    decisionGrade={r.gap_decision_grade ?? false}
                   />
                 </td>
                 <td>{r.exibe_cobertura ? fmtPct(r.cobertura_pct) : "—"}</td>
