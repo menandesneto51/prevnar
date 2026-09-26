@@ -1,0 +1,124 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "policy_note": "Os limites abaixo são expectativas operacionais internas do PREVNAR para sinalização de freshness; não constituem SLA oficial das instituições de origem.",
+  "sources": [
+    {
+      "source_id": "pni",
+      "name": "PNI / OpenDataSUS vacinação",
+      "domain": "imunizacao",
+      "cadence": "mensal_ou_superior",
+      "attention_after_days": 45,
+      "stale_after_days": 75,
+      "critical_for_decision": true
+    },
+    {
+      "source_id": "ibge_population",
+      "name": "IBGE população",
+      "domain": "populacao",
+      "cadence": "anual",
+      "attention_after_days": 550,
+      "stale_after_days": 730,
+      "critical_for_decision": true
+    },
+    {
+      "source_id": "cnes",
+      "name": "CNES",
+      "domain": "oferta",
+      "cadence": "mensal",
+      "attention_after_days": 45,
+      "stale_after_days": 90,
+      "critical_for_decision": true
+    },
+    {
+      "source_id": "sies",
+      "name": "SIES",
+      "domain": "estoque",
+      "cadence": "mensal",
+      "attention_after_days": 45,
+      "stale_after_days": 90,
+      "critical_for_decision": true
+    },
+    {
+      "source_id": "esavi",
+      "name": "ESAVI",
+      "domain": "seguranca_vacinal",
+      "cadence": "periodica",
+      "attention_after_days": 60,
+      "stale_after_days": 120,
+      "critical_for_decision": true
+    },
+    {
+      "source_id": "sinan_meningite",
+      "name": "SINAN meningite",
+      "domain": "desfecho",
+      "cadence": "periodica",
+      "attention_after_days": 90,
+      "stale_after_days": 180,
+      "critical_for_decision": false
+    },
+    {
+      "source_id": "sih",
+      "name": "SIH/SUS",
+      "domain": "internacoes",
+      "cadence": "mensal_com_defasagem",
+      "attention_after_days": 90,
+      "stale_after_days": 180,
+      "critical_for_decision": false
+    },
+    {
+      "source_id": "sim",
+      "name": "SIM",
+      "domain": "mortalidade",
+      "cadence": "anual_com_defasagem",
+      "attention_after_days": 550,
+      "stale_after_days": 730,
+      "critical_for_decision": false
+    },
+    {
+      "source_id": "srag",
+      "name": "SIVEP-Gripe / SRAG",
+      "domain": "vigilancia_respiratoria",
+      "cadence": "semanal",
+      "attention_after_days": 21,
+      "stale_after_days": 42,
+      "critical_for_decision": false
+    },
+    {
+      "source_id": "bps",
+      "name": "Banco de Preços em Saúde",
+      "domain": "economia",
+      "cadence": "periodica",
+      "attention_after_days": 90,
+      "stale_after_days": 180,
+      "critical_for_decision": false
+    },
+    {
+      "source_id": "ipca",
+      "name": "IPCA / Banco Central-IBGE",
+      "domain": "economia",
+      "cadence": "mensal",
+      "attention_after_days": 45,
+      "stale_after_days": 75,
+      "critical_for_decision": false
+    },
+    {
+      "source_id": "siops",
+      "name": "SIOPS",
+      "domain": "financiamento",
+      "cadence": "periodica",
+      "attention_after_days": 365,
+      "stale_after_days": 550,
+      "critical_for_decision": false
+    },
+    {
+      "source_id": "situacao1_manual",
+      "name": "Cadastros administrativos Situação 1",
+      "domain": "elegibilidade",
+      "cadence": "definida_pelo_responsavel",
+      "attention_after_days": 90,
+      "stale_after_days": 180,
+      "critical_for_decision": true
+    }
+  ]
+}

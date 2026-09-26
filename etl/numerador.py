@@ -9,6 +9,7 @@ from pathlib import Path
 
 from api_client import iter_pni_2026
 from paths import MART, RAW, REF, UF_CODES
+from provenance import write_manifest
 
 try:
     import duckdb
@@ -36,6 +37,44 @@ def load_json(name: str):
 
 
 def save_numerador(payload: dict) -> dict:
+    timeline = payload.get("linha_tempo") or []
+    reference_period = timeline[-1].get("ano_mes") if timeline else None
+    source_files = [
+        RAW / str(name)
+        for name in (payload.get("fonte_arquivos") or [])
+        if str(name).strip()
+    ]
+    warnings: list[str] = []
+    if payload.get("fixture"):
+        warnings.append("fixture_demonstrativa")
+    if payload.get("sem_cid_na_fonte"):
+        warnings.append("fonte_sem_cid")
+    if payload.get("proxy_grupo_atendimento"):
+        warnings.append("classificacao_clinica_por_proxy")
+
+    manifest = write_manifest(
+        source_id="pni",
+        reference_period=reference_period,
+        record_count=int(payload.get("total_doses") or 0),
+        status="success",
+        warnings=warnings,
+        files=source_files,
+        schema_version="pni-numerador-v2",
+        pipeline_version="2.0",
+        extra={
+            "fonte": payload.get("fonte"),
+            "fonte_tipo": payload.get("fonte_tipo"),
+            "fixture": bool(payload.get("fixture")),
+        },
+    )
+    payload["provenance"] = {
+        "run_id": manifest["run_id"],
+        "source_id": manifest["source_id"],
+        "reference_period": manifest["reference_period"],
+        "retrieved_at": manifest["retrieved_at"],
+        "freshness": manifest["freshness"],
+    }
+
     out = MART / "numerador.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:

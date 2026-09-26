@@ -99,7 +99,22 @@ export type DashboardData = {
       detalhe: Record<string, number>;
     };
     nota_numerador?: string;
+    freshness?: Record<
+      string,
+      {
+        status?: "atual" | "atencao" | "desatualizado" | "desconhecido";
+        source_id?: string;
+        reference_period?: string | null;
+        reference_end?: string | null;
+        age_days?: number | null;
+        attention_after_days?: number | null;
+        stale_after_days?: number | null;
+        critical_for_decision?: boolean;
+      }
+    >;
+    freshness_alerta?: boolean;
   };
+  provenance?: Record<string, unknown>;
   ufs: { uf: string; codigo_ibge: string; nome: string; regiao: string }[];
   condicoes: {
     condicao_id: number;
