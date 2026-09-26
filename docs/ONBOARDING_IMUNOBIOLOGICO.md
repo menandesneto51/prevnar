@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Permitir a inclusão de uma nova vacina sem criar um novo sistema e sem duplicar regras em código.
+Permitir a inclusão de vacinas, anticorpos monoclonais, imunoglobulinas e outros imunobiológicos sem criar um novo sistema e sem duplicar regras em código.
 
 ## Gate 0 — Evidência e norma
 
@@ -14,21 +14,25 @@ Antes de qualquer implementação:
 - [ ] identificar se o ato substitui/atualiza norma anterior;
 - [ ] identificar população-alvo;
 - [ ] identificar esquema, intervalos e exceções;
+- [ ] identificar o tipo do imunobiológico;
 - [ ] identificar códigos da fonte PNI/OpenDataSUS;
 - [ ] distinguir regra clínica de metodologia de monitoramento;
 - [ ] definir o que **não pode ser automatizado**.
 
 ## Gate 1 — Registry
 
-Adicionar a vacina em:
+Adicionar o imunobiológico em:
 
-`data/reference/vaccine_registry.json`
+`data/reference/immunobiologic_registry.json`
+
+Se `type = vaccine`, manter também a view de compatibilidade em `data/reference/vaccine_registry.json` durante a migração.
 
 Mínimo:
 
 ```json
 {
-  "vaccine_id": "id_estavel",
+  "immunobiologic_id": "id_estavel",
+  "type": "vaccine",
   "name": "Nome completo",
   "display": "SIGLA",
   "pni_codes": [],
@@ -38,7 +42,7 @@ Mínimo:
 }
 ```
 
-Não reutilizar `vaccine_id` para vacina diferente.
+Não reutilizar `immunobiologic_id` para produto diferente. Novas regras devem preferir `immunobiologic_id`; `vaccine_id` permanece apenas para compatibilidade.
 
 ## Gate 2 — Regras normativas
 
@@ -122,7 +126,7 @@ Testar, no mínimo:
 
 A interface deve exibir:
 
-- vacina;
+- imunobiológico e tipo;
 - regra vigente;
 - evidência;
 - período;
