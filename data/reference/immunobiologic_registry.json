@@ -310,14 +310,41 @@
       "display": "Tríplice viral",
       "active": true,
       "monitored": false,
-      "onboarding_status": "normative_discovery",
-      "pni_codes": [],
+      "onboarding_status": "partial_data_mapping",
+      "pni_codes": [
+        "24"
+      ],
       "normative_acts": [
         "calendario_nacional_2026",
         "nt_98_2026_triplice_viral_d0",
-        "ntc_116_2026_sarampo_viajantes"
+        "ntc_116_2026_sarampo_viajantes",
+        "nt_46_2025_triplice_dupla_registro"
       ],
-      "note": "Dose zero, bloqueio, varredura e recomendações para viajantes exigem regras separadas por contexto e território; não converter em regra nacional genérica."
+      "note": "Dose zero, bloqueio, varredura e recomendações para viajantes exigem regras separadas por contexto e território; não converter em regra nacional genérica.",
+      "pni_registration": {
+        "immunobiologic_code": "24",
+        "known_contexts": {
+          "blockade": {
+            "strategy_code": "3",
+            "strategy_label": "Bloqueio",
+            "dose_codes": {
+              "1": "1ª Dose",
+              "2": "2ª Dose",
+              "8": "Dose",
+              "57": "Dose Zero"
+            }
+          },
+          "intensification": {
+            "strategy_code": "4",
+            "strategy_label": "Intensificação",
+            "dose_codes": {
+              "1": "1ª Dose",
+              "2": "2ª Dose"
+            }
+          }
+        },
+        "mapping_scope_note": "Mapeamento parcial para bloqueio/intensificação conforme NT 46/2025; não representa toda a rotina do Calendário 2026."
+      }
     }
   ]
 }
