@@ -145,6 +145,11 @@ def validate_registry_integrity() -> list[str]:
         if a.get("id")
     }
 
+    allowed_contexts = set(normative_rules().get("allowed_rule_contexts") or [])
+    allowed_scope_types = set(
+        normative_rules().get("allowed_geographic_scope_types") or []
+    )
+
     seen_rules: set[str] = set()
     for rule in rules:
         rid = str(rule.get("rule_id") or "")
@@ -167,6 +172,36 @@ def validate_registry_integrity() -> list[str]:
             if str(act_id) not in legal_ids:
                 errors.append(
                     f"Regra {rid} referencia ato legal ausente: {act_id}"
+                )
+
+        context = str(rule.get("rule_context") or "")
+        if not context:
+            errors.append(f"Regra {rid} sem rule_context.")
+        elif allowed_contexts and context not in allowed_contexts:
+            errors.append(
+                f"Regra {rid} possui rule_context inválido: {context}"
+            )
+
+        scope = rule.get("geographic_scope")
+        if not isinstance(scope, dict):
+            errors.append(f"Regra {rid} sem geographic_scope.")
+        else:
+            scope_type = str(scope.get("type") or "")
+            codes = scope.get("codes")
+            if not scope_type:
+                errors.append(f"Regra {rid} sem geographic_scope.type.")
+            elif allowed_scope_types and scope_type not in allowed_scope_types:
+                errors.append(
+                    f"Regra {rid} possui geographic_scope.type inválido: "
+                    f"{scope_type}"
+                )
+            if scope_type != "national" and not codes:
+                errors.append(
+                    f"Regra {rid} com escopo {scope_type} sem códigos/território."
+                )
+            if scope_type == "national" and codes not in (["BR"], None):
+                errors.append(
+                    f"Regra {rid} nacional deve usar codes=['BR'] ou null."
                 )
 
     for iid, item in immunobiologics.items():
