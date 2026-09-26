@@ -384,6 +384,19 @@ def _evaluate_maternal_rsv(
     population = rule.get("population") or {}
     min_weeks = float(population.get("min_gestational_age_weeks") or 28)
 
+    if already_administered_this_pregnancy is True:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "maternal_rsv",
+            "eligible": False,
+            "requires_review": False,
+            "recommendation": "do_not_repeat_routine_dose",
+            "reason": (
+                "dose_already_administered_this_pregnancy"
+                if gestational_age_weeks is None or gestational_age_weeks >= min_weeks
+                else "early_dose_already_administered_monitor_no_repeat"
+            ),
+        }
     if gestational_age_weeks is None:
         return {
             "rule_id": rule["rule_id"],
@@ -407,15 +420,6 @@ def _evaluate_maternal_rsv(
             "eligible": True,
             "requires_review": True,
             "recommendation": "verify_dose_history_this_pregnancy",
-        }
-    if already_administered_this_pregnancy:
-        return {
-            "rule_id": rule["rule_id"],
-            "pathway": "maternal_rsv",
-            "eligible": False,
-            "requires_review": False,
-            "recommendation": "do_not_repeat_routine_dose",
-            "reason": "dose_already_administered_this_pregnancy",
         }
     return {
         "rule_id": rule["rule_id"],
@@ -466,24 +470,30 @@ def _evaluate_nirsevimab(
             "reason": "eligibility_criteria_not_met",
         }
 
-    if in_vsr_season is not True:
+    # Prematuros elegíveis: estratégia ao longo de todo o ano.
+    # Comorbidade sem prematuridade elegível: restrita à sazonalidade do VSR.
+    if not premature and comorbidity_eligible and in_vsr_season is not True:
         return {
             "rule_id": rule["rule_id"],
             "pathway": "pediatric_rsv_passive",
             "eligible": True,
             "requires_review": True,
             "recommendation": "review_outside_or_unknown_vsr_season",
-            "reason": "seasonality_requires_review",
+            "reason": "comorbidity_path_requires_vsr_season",
         }
 
     if vsr_season_number is None:
-        return {
-            "rule_id": rule["rule_id"],
-            "pathway": "pediatric_rsv_passive",
-            "eligible": True,
-            "requires_review": True,
-            "recommendation": "verify_vsr_season_number",
-        }
+        # Para prematuros na primeira exposição, peso resolve a dose; a numeração
+        # sazonal só é indispensável para o caminho de segunda sazonalidade.
+        if not premature:
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "pediatric_rsv_passive",
+                "eligible": True,
+                "requires_review": True,
+                "recommendation": "verify_vsr_season_number",
+            }
+        vsr_season_number = 1
 
     dosing = rule.get("dosing") or []
     if vsr_season_number == 1:
