@@ -30,6 +30,30 @@ export function Kpi({
   );
 }
 
+export function EvidenceBadge({
+  level,
+  decisionGrade,
+}: {
+  level?: string | null;
+  decisionGrade?: boolean;
+}) {
+  const label = level || "—";
+  const cls =
+    level === "E1"
+      ? "badge-sit1"
+      : level === "E2" || level === "E3" || level === "E4"
+        ? "badge-warn"
+        : "badge-danger";
+  return (
+    <span
+      className={`badge ${cls}`}
+      title={decisionGrade ? "Apto ao uso decisório conforme gates atuais" : "Uso interpretativo; não decisório"}
+    >
+      {label}{decisionGrade === false ? " · não decisório" : ""}
+    </span>
+  );
+}
+
 export function SituacaoBadge({ n }: { n: number }) {
   const cls = n === 1 ? "badge-sit1" : n === 2 ? "badge-sit2" : "badge-sit3";
   const label =
