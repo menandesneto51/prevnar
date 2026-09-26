@@ -323,6 +323,95 @@
       "published_at": "2026-03-01",
       "effective_from": "2026-03-01",
       "official_url": "https://www.gov.br/conitec/pt-br/midias/protocolos/2026/protocolo-de-uso-do-nirsevimabe"
+    },
+    {
+      "id": "nt_32_2026_hpv_nic2",
+      "type": "nota_tecnica",
+      "number": "32/2026-CGICI/DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "hpv",
+        "nic2_plus",
+        "ais",
+        "grupo_prioritario"
+      ],
+      "published_at": "2026-03-26",
+      "effective_from": "2026-03-26",
+      "official_url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/h/hpv/notas-tecnicas"
+    },
+    {
+      "id": "nt_50_2026_menacwy",
+      "type": "nota_tecnica",
+      "number": "50/2026-CGICI/DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "menacwy",
+        "cobertura",
+        "coorte",
+        "11_14_anos"
+      ],
+      "published_at": "2026-06-09",
+      "effective_from": "2026-06-09",
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-50-2026-cgici-dpni-svsa-ms/view"
+    },
+    {
+      "id": "nt_6_2026_febre_amarela",
+      "type": "nota_tecnica",
+      "number": "6/2026-CGICI/DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "febre_amarela",
+        "dose_fracionada",
+        "dose_padrao",
+        "2018"
+      ],
+      "published_at": "2026-02-13",
+      "effective_from": "2026-02-13",
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-6-2026-cgici-dpni-svsa-ms.pdf/view"
+    },
+    {
+      "id": "nt_98_2026_triplice_viral_d0",
+      "type": "nota_tecnica",
+      "number": "98/2026-CGICI/DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "sarampo",
+        "triplice_viral",
+        "dose_zero",
+        "6_11_meses"
+      ],
+      "published_at": "2026-09-18",
+      "effective_from": "2026-09-18",
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-98-2026.pdf/view"
+    },
+    {
+      "id": "ntc_116_2026_sarampo_viajantes",
+      "type": "nota_tecnica_conjunta",
+      "number": "116/2026-DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "sarampo",
+        "viajantes",
+        "copa_2026",
+        "triplice_viral"
+      ],
+      "published_at": "2026-04-29",
+      "effective_from": "2026-04-29",
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-116-2026-dpni-svsa-ms.pdf/view"
+    },
+    {
+      "id": "nt_77_2025_menacwy_reforco",
+      "type": "nota_tecnica",
+      "number": "77/2025-CGICI/DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "menacwy",
+        "reforco",
+        "substituicao_meningococica_c"
+      ],
+      "published_at": "2025-06-26",
+      "effective_from": "2025-06-26",
+      "official_url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/m/meningite/notas-tecnicas"
     }
   ]
 }
