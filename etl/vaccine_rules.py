@@ -2,6 +2,9 @@
 
 Objetivo: apoiar vigilância, monitoramento e organização operacional.
 Não substitui avaliação clínica individual nem a consulta à norma oficial vigente.
+
+A entidade canônica é "immunobiologic". Vacinas permanecem suportadas por wrappers
+de compatibilidade durante a migração.
 """
 from __future__ import annotations
 
@@ -12,7 +15,8 @@ from typing import Any
 
 from paths import REF
 
-VACCINE_REGISTRY = REF / "vaccine_registry.json"
+IMMUNOBIOLOGIC_REGISTRY = REF / "immunobiologic_registry.json"
+VACCINE_REGISTRY = REF / "vaccine_registry.json"  # compatibility view
 NORMATIVE_RULES = REF / "normative_rules.json"
 LEGAL_REGISTER = Path(__file__).resolve().parents[1] / "docs" / "legal_register.json"
 
@@ -21,7 +25,12 @@ def _load(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def immunobiologic_registry() -> dict[str, Any]:
+    return _load(IMMUNOBIOLOGIC_REGISTRY)
+
+
 def vaccine_registry() -> dict[str, Any]:
+    """Compatibilidade: view específica de vacinas durante a migração."""
     return _load(VACCINE_REGISTRY)
 
 
@@ -33,15 +42,30 @@ def legal_register() -> dict[str, Any]:
     return _load(LEGAL_REGISTER)
 
 
-def get_vaccine(vaccine_id: str) -> dict[str, Any]:
-    for row in vaccine_registry().get("vaccines", []):
-        if row.get("vaccine_id") == vaccine_id:
+def get_immunobiologic(immunobiologic_id: str) -> dict[str, Any]:
+    for row in immunobiologic_registry().get("immunobiologics", []):
+        if row.get("immunobiologic_id") == immunobiologic_id:
             return row
-    raise KeyError(f"Vacina não registrada: {vaccine_id}")
+    raise KeyError(f"Imunobiológico não registrado: {immunobiologic_id}")
+
+
+def immunobiologic_codes(immunobiologic_id: str) -> set[str]:
+    return {
+        str(x)
+        for x in get_immunobiologic(immunobiologic_id).get("pni_codes", [])
+    }
+
+
+def get_vaccine(vaccine_id: str) -> dict[str, Any]:
+    """Wrapper compatível para consumidores que ainda esperam uma vacina."""
+    item = get_immunobiologic(vaccine_id)
+    if item.get("type") != "vaccine":
+        raise KeyError(f"Imunobiológico não é vacina: {vaccine_id}")
+    return item
 
 
 def vaccine_codes(vaccine_id: str) -> set[str]:
-    return {str(x) for x in get_vaccine(vaccine_id).get("pni_codes", [])}
+    return immunobiologic_codes(vaccine_id)
 
 
 def special_strategy_codes(
@@ -53,12 +77,17 @@ def special_strategy_codes(
     registration = vaccine.get("pni_registration") or {}
     codes = {str(x) for x in registration.get("special_strategy_codes", [])}
     if include_observed_compatibility:
-        codes |= {str(x) for x in registration.get("observed_legacy_or_api_codes", [])}
+        codes |= {
+            str(x)
+            for x in registration.get("observed_legacy_or_api_codes", [])
+        }
     return codes
 
 
-def default_monitoring_start(vaccine_id: str) -> date | None:
-    raw = (get_vaccine(vaccine_id).get("monitoring") or {}).get("default_data_start")
+def default_monitoring_start(immunobiologic_id: str) -> date | None:
+    raw = (
+        get_immunobiologic(immunobiologic_id).get("monitoring") or {}
+    ).get("default_data_start")
     return date.fromisoformat(raw) if raw else None
 
 
@@ -78,22 +107,36 @@ def rule_is_active(rule: dict[str, Any], on_date: date) -> bool:
     return True
 
 
-def active_rules(vaccine_id: str, *, on_date: date | None = None) -> list[dict[str, Any]]:
+def _rule_immunobiologic_id(rule: dict[str, Any]) -> str:
+    return str(
+        rule.get("immunobiologic_id")
+        or rule.get("vaccine_id")
+        or ""
+    )
+
+
+def active_rules(
+    immunobiologic_id: str,
+    *,
+    on_date: date | None = None,
+) -> list[dict[str, Any]]:
     day = on_date or date.today()
     return [
         row
         for row in normative_rules().get("rules", [])
-        if row.get("vaccine_id") == vaccine_id and rule_is_active(row, day)
+        if _rule_immunobiologic_id(row) == immunobiologic_id
+        and rule_is_active(row, day)
     ]
 
 
 def validate_registry_integrity() -> list[str]:
-    """Valida referências cruzadas entre vacinas, regras e registro legal."""
+    """Valida referências entre imunobiológicos, regras e registro legal."""
     errors: list[str] = []
-    vaccines = {
-        str(v["vaccine_id"]): v
-        for v in vaccine_registry().get("vaccines", [])
-        if v.get("vaccine_id")
+
+    immunobiologics = {
+        str(v["immunobiologic_id"]): v
+        for v in immunobiologic_registry().get("immunobiologics", [])
+        if v.get("immunobiologic_id")
     }
     rules = normative_rules().get("rules", [])
     legal_ids = {
@@ -105,23 +148,61 @@ def validate_registry_integrity() -> list[str]:
     seen_rules: set[str] = set()
     for rule in rules:
         rid = str(rule.get("rule_id") or "")
-        vid = str(rule.get("vaccine_id") or "")
+        iid = _rule_immunobiologic_id(rule)
         if not rid:
             errors.append("Regra sem rule_id.")
             continue
         if rid in seen_rules:
             errors.append(f"rule_id duplicado: {rid}")
         seen_rules.add(rid)
-        if vid not in vaccines:
-            errors.append(f"Regra {rid} referencia vacina ausente: {vid}")
+
+        if not iid:
+            errors.append(f"Regra {rid} sem immunobiologic_id/vaccine_id.")
+        elif iid not in immunobiologics:
+            errors.append(
+                f"Regra {rid} referencia imunobiológico ausente: {iid}"
+            )
+
         for act_id in rule.get("normative_acts") or []:
             if str(act_id) not in legal_ids:
-                errors.append(f"Regra {rid} referencia ato legal ausente: {act_id}")
+                errors.append(
+                    f"Regra {rid} referencia ato legal ausente: {act_id}"
+                )
 
-    for vid, vaccine in vaccines.items():
-        for act_id in vaccine.get("normative_acts") or []:
+    for iid, item in immunobiologics.items():
+        item_type = item.get("type")
+        if item_type not in {
+            "vaccine",
+            "monoclonal_antibody",
+            "immunoglobulin",
+            "other",
+        }:
+            errors.append(
+                f"Imunobiológico {iid} possui type inválido: {item_type}"
+            )
+        for act_id in item.get("normative_acts") or []:
             if str(act_id) not in legal_ids:
-                errors.append(f"Vacina {vid} referencia ato legal ausente: {act_id}")
+                errors.append(
+                    f"Imunobiológico {iid} referencia ato legal ausente: {act_id}"
+                )
+
+    # Durante a migração, toda vacina da view legada precisa existir na camada canônica.
+    for vaccine in vaccine_registry().get("vaccines", []):
+        vid = str(vaccine.get("vaccine_id") or "")
+        if not vid:
+            errors.append("Vacina sem vaccine_id no registry de compatibilidade.")
+            continue
+        canonical = immunobiologics.get(vid)
+        if not canonical:
+            errors.append(
+                f"Vacina de compatibilidade {vid} ausente no immunobiologic registry."
+            )
+            continue
+        if canonical.get("type") != "vaccine":
+            errors.append(
+                f"Compatibilidade inválida: {vid} não possui type=vaccine."
+            )
+
     return errors
 
 
@@ -152,7 +233,9 @@ def _evaluate_rie(
     pneumococcal_history: str,
 ) -> dict[str, Any] | None:
     population = rule.get("population") or {}
-    eligible_conditions = {int(x) for x in population.get("condition_ids") or []}
+    eligible_conditions = {
+        int(x) for x in population.get("condition_ids") or []
+    }
     matched = sorted(condition_ids & eligible_conditions)
     if not matched:
         return None
@@ -165,8 +248,6 @@ def _evaluate_rie(
             "matched_condition_ids": matched,
         }
 
-    # CAR-T is explicitly an exception to the generic ≥5y single-dose schedule,
-    # but the current structured source does not encode enough detail to automate it safely.
     if 5 in matched:
         return {
             "rule_id": rule["rule_id"],
@@ -178,7 +259,6 @@ def _evaluate_rie(
             "reason": "car_t_exception_not_fully_automated",
         }
 
-    # TCTH: verified exception for patients from 12 months, 3 doses at 2-month intervals.
     if 4 in matched:
         special = next(
             (
@@ -208,7 +288,6 @@ def _evaluate_rie(
             "schedule": special,
         }
 
-    # Prior pneumococcal vaccination modifies the RIE transition strategy.
     if pneumococcal_history not in ("none", "unknown"):
         history = _history_rule(rule, pneumococcal_history)
         if history:
@@ -221,7 +300,6 @@ def _evaluate_rie(
                 "recommendation": history.get("recommendation"),
                 "history_rule": history,
             }
-        # Pediatric transition schemes are intentionally not collapsed into a guessed rule.
         return {
             "rule_id": rule["rule_id"],
             "pathway": "rie_special",
@@ -298,7 +376,7 @@ def _evaluate_elderly(
 
 
 def evaluate_operational(
-    vaccine_id: str,
+    immunobiologic_id: str,
     *,
     age_months: int,
     condition_ids: list[int] | set[int] | None = None,
@@ -307,45 +385,58 @@ def evaluate_operational(
 ) -> dict[str, Any]:
     """Avalia caminhos configurados para suporte operacional.
 
-    Retorna caminhos aplicáveis sem decidir conflitos clínicos entre eles.
+    Regras em draft/onboarding nunca são retornadas por active_rules().
     """
     day = on_date or date.today()
     conditions = {int(x) for x in (condition_ids or [])}
+    item = get_immunobiologic(immunobiologic_id)
     pathways: list[dict[str, Any]] = []
 
-    for rule in active_rules(vaccine_id, on_date=day):
+    for rule in active_rules(immunobiologic_id, on_date=day):
         if rule.get("rule_type") != "eligibility_and_schedule":
             continue
         strategy = (rule.get("population") or {}).get("strategy")
         result: dict[str, Any] | None = None
-        if strategy == "rie_special":
+
+        # Atualmente somente o domínio pneumocócico está automatizado.
+        # Novos imunobiológicos devem ganhar evaluators explícitos após onboarding.
+        if immunobiologic_id == "vpc20" and strategy == "rie_special":
             result = _evaluate_rie(
                 rule,
                 age_months=age_months,
                 condition_ids=conditions,
                 pneumococcal_history=pneumococcal_history,
             )
-        elif strategy == "elderly_85_plus":
+        elif immunobiologic_id == "vpc20" and strategy == "elderly_85_plus":
             result = _evaluate_elderly(
                 rule,
                 age_months=age_months,
                 pneumococcal_history=pneumococcal_history,
             )
+
         if result:
             pathways.append(result)
 
-    requires_review = any(bool(x.get("requires_review")) for x in pathways)
-    recommendations = {x.get("recommendation") for x in pathways if x.get("recommendation")}
+    requires_review = any(
+        bool(x.get("requires_review")) for x in pathways
+    )
+    recommendations = {
+        x.get("recommendation")
+        for x in pathways
+        if x.get("recommendation")
+    }
     if len(recommendations) > 1:
         requires_review = True
 
-    return {
-        "vaccine_id": vaccine_id,
+    payload = {
+        "immunobiologic_id": immunobiologic_id,
+        "immunobiologic_type": item.get("type"),
         "evaluated_on": day.isoformat(),
         "age_months": age_months,
         "condition_ids": sorted(conditions),
-        "pneumococcal_history": pneumococcal_history,
-        "eligible_by_any_rule": any(bool(x.get("eligible")) for x in pathways),
+        "eligible_by_any_rule": any(
+            bool(x.get("eligible")) for x in pathways
+        ),
         "requires_review": requires_review,
         "pathways": pathways,
         "disclaimer": (
@@ -353,3 +444,8 @@ def evaluate_operational(
             "nem a consulta à norma oficial vigente."
         ),
     }
+    if item.get("type") == "vaccine":
+        payload["vaccine_id"] = immunobiologic_id
+    if immunobiologic_id == "vpc20":
+        payload["pneumococcal_history"] = pneumococcal_history
+    return payload

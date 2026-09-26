@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "updated_at": "2026-09-26",
   "interpretation": "Decision support for surveillance and operational monitoring. Does not replace clinical assessment or official PNI guidance.",
   "rules": [
@@ -131,7 +131,8 @@
           "min_interval_after_vpp23_days": 365,
           "min_interval_after_conjugate_days": 56
         }
-      ]
+      ],
+      "immunobiologic_id": "vpc20"
     },
     {
       "rule_id": "vpc20_elderly_85_2026",
@@ -174,7 +175,8 @@
         }
       ],
       "monitoring_target_pct": 90,
-      "target_population_brazil_2026": 2337775
+      "target_population_brazil_2026": 2337775,
+      "immunobiologic_id": "vpc20"
     },
     {
       "rule_id": "vpc20_coverage_monitoring_2026",
@@ -186,7 +188,23 @@
       "normative_acts": [
         "nt_69_2026_vpc20_coverage"
       ],
-      "note": "Metodologia de cálculo e monitoramento de cobertura no contexto da transição VPC10→VPC20. Não deve ser confundida com elegibilidade clínica."
+      "note": "Metodologia de cálculo e monitoramento de cobertura no contexto da transição VPC10→VPC20. Não deve ser confundida com elegibilidade clínica.",
+      "immunobiologic_id": "vpc20"
+    },
+    {
+      "rule_id": "nirsevimab_onboarding_2026",
+      "immunobiologic_id": "nirsevimab",
+      "rule_type": "onboarding_metadata",
+      "status": "draft",
+      "effective_from": "2026-02-19",
+      "effective_until": null,
+      "normative_acts": [
+        "nt_10_2026_nirsevimab",
+        "nt_31_2026_nirsevimab",
+        "ntc_74_2026_nirsevimab",
+        "nt_89_2026_nirsevimab"
+      ],
+      "note": "Regra de onboarding apenas. Não contém elegibilidade automatizada nem dose; ativação clínica depende da issue #13."
     }
   ]
 }

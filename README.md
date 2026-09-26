@@ -45,10 +45,11 @@ Antes de alterar indicadores, fontes ou regras vacinais, consultar:
 
 Registro normativo estruturado: `docs/legal_register.json`.
 
-Motor vacinal:
-- `data/reference/vaccine_registry.json`;
+Motor de imunobiológicos:
+- `data/reference/immunobiologic_registry.json` — fonte canônica;
+- `data/reference/vaccine_registry.json` — compatibilidade específica de vacinas;
 - `data/reference/normative_rules.json`;
-- `etl/vaccine_rules.py`;
+- `etl/vaccine_rules.py` — nome legado temporário, motor já generalizado;
 - [onboarding de novo imunobiológico](docs/ONBOARDING_IMUNOBIOLOGICO.md).
 
 ## Princípio metodológico

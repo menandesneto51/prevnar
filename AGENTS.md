@@ -77,14 +77,14 @@ Data → Epidemiology → Quality → Legal/Privacy → Intelligence → Action 
 
 ## Onboarding de imunobiológico
 
-Antes de incorporar nova vacina, seguir `docs/ONBOARDING_IMUNOBIOLOGICO.md`.
+Antes de incorporar qualquer novo imunobiológico, seguir `docs/ONBOARDING_IMUNOBIOLOGICO.md`.
 
 Regras:
 - Legal & Privacy Agent registra e valida os atos;
-- Epidemiology Agent valida população, esquema, vigência e exceções;
+- Epidemiology Agent valida população, estratégia, esquema/posologia operacional quando aplicável, vigência e exceções;
 - Data Agent vincula códigos e fontes;
 - Data Quality Agent valida proveniência/freshness;
 - Intelligence Agent só utiliza indicadores aprovados;
 - Release Guardian valida referências cruzadas e bloqueia inconsistências.
 
-Nenhum agente pode inserir regra clínica diretamente no código sem `rule_id` e `normative_acts`.
+Nenhum agente pode inserir regra clínica diretamente no código sem `rule_id`, `immunobiologic_id` e `normative_acts`. Entidades em onboarding/draft não podem gerar recomendação automática.

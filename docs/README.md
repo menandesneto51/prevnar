@@ -11,8 +11,9 @@
 | [RIPD_TRIAGEM.md](RIPD_TRIAGEM.md) | Pré-triagem para necessidade de RIPD |
 | [CHECKLIST_CONFORMIDADE.md](CHECKLIST_CONFORMIDADE.md) | Checklist de fonte, indicador e release |
 | [ROADMAP_V2.md](ROADMAP_V2.md) | Evolução técnica do PREVNAR |
-| [VACCINE_REGISTRY.md](VACCINE_REGISTRY.md) | Registro canônico de vacinas e motor normativo versionado |
-| [ONBOARDING_IMUNOBIOLOGICO.md](ONBOARDING_IMUNOBIOLOGICO.md) | Fluxo padronizado para incorporar novas vacinas |
+| [IMMUNOBIOLOGIC_REGISTRY.md](IMMUNOBIOLOGIC_REGISTRY.md) | Registro canônico de imunobiológicos e compatibilidade vacinal |
+| [VACCINE_REGISTRY.md](VACCINE_REGISTRY.md) | Registro específico de vacinas e motor normativo versionado |
+| [ONBOARDING_IMUNOBIOLOGICO.md](ONBOARDING_IMUNOBIOLOGICO.md) | Fluxo padronizado para incorporar vacinas, anticorpos monoclonais e outros imunobiológicos |
 | [RELEASE_GUARDIAN.md](RELEASE_GUARDIAN.md) | Gates automáticos de release |
 | [SECURITY_HARDENING.md](SECURITY_HARDENING.md) | Segurança de APIs, TLS e runtime |
 | [legal_register.json](legal_register.json) | Registro normativo estruturado para agentes e automação |

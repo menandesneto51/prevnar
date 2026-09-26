@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Evoluir o Radar VPC20 para plataforma reutilizável de inteligência vacinal, preservando o painel atual e removendo dependências hard-coded de uma única vacina.
+Evoluir o Radar VPC20 para plataforma reutilizável de inteligência em imunização, preservando o painel atual e removendo dependências hard-coded de uma única vacina ou tipo de imunobiológico.
 
 ## P0 — Fundação
 
@@ -25,7 +25,15 @@ Evoluir o Radar VPC20 para plataforma reutilizável de inteligência vacinal, pr
 - [x] versionamento de população-alvo;
 - [x] separação observado/proxy/estimado/manual/demonstrativo.
 
-## P2 — Agentes
+## P2 — Generalização e agentes
+
+- [x] criar `immunobiologic_registry.json`;
+- [x] suportar `vaccine | monoclonal_antibody | immunoglobulin | other`;
+- [x] manter compatibilidade com `vaccine_registry.json`;
+- [x] generalizar o motor normativo para `immunobiologic_id`;
+- [x] impedir regras `draft` de gerar recomendação automática;
+
+### Agentes
 
 - [ ] Data Agent;
 - [ ] Epidemiology Agent;
@@ -47,7 +55,7 @@ Evoluir o Radar VPC20 para plataforma reutilizável de inteligência vacinal, pr
 
 ## P4 — Novos imunobiológicos
 
-A entrada de nova vacina deverá exigir configuração e documentação, não duplicação do sistema.
+A entrada de novo imunobiológico deverá exigir configuração e documentação, não duplicação do sistema.
 
 Candidatos:
 - VSR;

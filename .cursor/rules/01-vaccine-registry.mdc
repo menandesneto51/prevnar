@@ -1,17 +1,20 @@
 ---
-description: Regras para vacinas, elegibilidade e normas do PREVNAR
+description: Regras para imunobiológicos, elegibilidade e normas do PREVNAR
 alwaysApply: true
 ---
 
-# PREVNAR — Vaccine Registry
+# PREVNAR — Immunobiologic Registry
 
-1. `data/reference/vaccine_registry.json` é a fonte canônica para identidade da vacina e códigos PNI.
-2. `data/reference/normative_rules.json` é a fonte canônica para elegibilidade, esquema, transição e vigência.
-3. `docs/legal_register.json` deve conter todo ato normativo referenciado.
-4. Não adicionar regra clínica nova diretamente em Python/TypeScript sem registro normativo correspondente.
-5. `data/reference/vacinas_pni.json` é legado; não adicionar novas regras nele.
-6. Toda regra deve ter `rule_id`, vigência, `vaccine_id` e `normative_acts`.
-7. Em ambiguidade normativa, retorne `requires_review`; não invente esquema.
-8. Mudança normativa exige testes de regressão e revisão epidemiológica.
-9. O motor é de suporte operacional/vigilância e não substitui decisão clínica individual.
-10. Antes de release, executar o Release Guardian.
+1. `data/reference/immunobiologic_registry.json` é a fonte canônica para identidade e tipo do imunobiológico.
+2. `data/reference/vaccine_registry.json` é uma view de compatibilidade específica de vacinas durante a migração.
+3. `data/reference/normative_rules.json` é a fonte canônica para elegibilidade, esquema, transição, campanha e vigência.
+4. `docs/legal_register.json` deve conter todo ato normativo referenciado.
+5. Novas regras devem usar `immunobiologic_id`; `vaccine_id` é apenas compatibilidade legada.
+6. Não adicionar regra clínica diretamente em Python/TypeScript sem registro normativo correspondente.
+7. `data/reference/vacinas_pni.json` é legado; não adicionar novas regras nele.
+8. Toda regra deve ter `rule_id`, vigência, `immunobiologic_id` e `normative_acts`.
+9. Entidade cadastrada não implica regra ativa. Onboarding em `draft` nunca gera recomendação automática.
+10. Em ambiguidade normativa, retorne `requires_review`; não invente esquema.
+11. Mudança normativa exige testes de regressão e revisão epidemiológica.
+12. O motor é de suporte operacional/vigilância e não substitui decisão clínica individual.
+13. Antes de release, executar o Release Guardian.
