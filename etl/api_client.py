@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import ssl
 import time
 from pathlib import Path
@@ -15,27 +16,38 @@ PNI_2026 = f"{BASE}/vacinacao/doses-aplicadas-pni-2026"
 PAGE_SIZE = 1000  # teto observado na API
 
 
-def _ssl_contexts() -> list[ssl.SSLContext]:
-    return [ssl.create_default_context(), ssl._create_unverified_context()]
+def _ssl_context() -> ssl.SSLContext:
+    """Contexto TLS validado.
+
+    Ambientes corporativos com proxy/inspeção TLS devem informar a CA institucional
+    via PREVNAR_CA_BUNDLE. Nunca desabilitamos verificação de certificado.
+    """
+    ca_bundle = os.environ.get("PREVNAR_CA_BUNDLE", "").strip()
+    if ca_bundle:
+        path = Path(ca_bundle)
+        if not path.exists() or not path.is_file():
+            raise RuntimeError(f"PREVNAR_CA_BUNDLE não encontrado: {path}")
+        return ssl.create_default_context(cafile=str(path))
+    return ssl.create_default_context()
 
 
 def http_get_json(url: str, timeout: int = 120) -> Any:
-    last_err: Exception | None = None
-    for ctx in _ssl_contexts():
-        try:
-            req = Request(
-                url,
-                headers={
-                    "Accept": "application/json",
-                    "User-Agent": "radar-vacinal-vpc20/1.0",
-                },
-            )
-            with urlopen(req, timeout=timeout, context=ctx) as resp:
-                return json.loads(resp.read().decode("utf-8"))
-        except (ssl.SSLError, URLError, HTTPError, TimeoutError, json.JSONDecodeError) as exc:
-            last_err = exc
-            continue
-    raise RuntimeError(f"Falha GET {url}: {last_err}")
+    try:
+        req = Request(
+            url,
+            headers={
+                "Accept": "application/json",
+                "User-Agent": "prevnar/2.0",
+            },
+        )
+        with urlopen(req, timeout=timeout, context=_ssl_context()) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except (ssl.SSLError, URLError, HTTPError, TimeoutError, json.JSONDecodeError) as exc:
+        raise RuntimeError(
+            f"Falha GET {url} com validação TLS ativa. "
+            "Se houver proxy corporativo, configure PREVNAR_CA_BUNDLE com a CA institucional. "
+            f"Erro: {exc}"
+        ) from exc
 
 
 def iter_pni_2026(
