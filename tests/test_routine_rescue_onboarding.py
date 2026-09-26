@@ -26,16 +26,18 @@ def test_hpv_is_registered_but_not_active() -> None:
     assert active_rules("hpv4", on_date=TODAY) == []
 
 
-def test_menacwy_is_registered_but_not_active() -> None:
+def test_menacwy_has_active_national_routine_rule() -> None:
     item = get_immunobiologic("menacwy")
     assert item["type"] == "vaccine"
-    assert active_rules("menacwy", on_date=TODAY) == []
+    ids = {r["rule_id"] for r in active_rules("menacwy", on_date=TODAY)}
+    assert "menacwy_routine_2026" in ids
 
 
-def test_yellow_fever_is_registered_but_not_active() -> None:
+def test_yellow_fever_has_active_national_routine_rule() -> None:
     item = get_immunobiologic("febre_amarela")
     assert item["type"] == "vaccine"
-    assert active_rules("febre_amarela", on_date=TODAY) == []
+    ids = {r["rule_id"] for r in active_rules("febre_amarela", on_date=TODAY)}
+    assert "febre_amarela_routine_2026" in ids
 
 
 def test_mmr_is_registered_but_not_active() -> None:
