@@ -77,3 +77,16 @@ Mantém a validação estrutural das referências.
 - recomendação clínica completa.
 
 Essas dimensões continuam sendo controladas pelos respectivos catálogos e gates.
+
+
+## Escopo das regras no catálogo
+
+O catálogo exibe o `geographic_scope` de cada regra ativa.
+
+Isso significa que:
+- uma regra municipal continua identificada como municipal;
+- uma regra estadual não é resumida como regra nacional;
+- uma regra por polígono/facility mantém esse contexto;
+- a existência de uma regra territorial ativa não implica que ela se aplique fora do território.
+
+O catálogo descreve **maturidade e existência da regra**. A resolução de aplicabilidade para uma pessoa/território é responsabilidade do motor normativo com `geographic_context`.
