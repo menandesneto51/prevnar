@@ -3,8 +3,8 @@ import { Nav } from "@/components/Nav";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Radar Vacinal · VPC20 CRIE",
-  description: "Painel de oportunidade de vacinação VPC20 nos CRIEs — NT 52/2026",
+  title: "PREVNAR · Inteligência em Imunização",
+  description: "Plataforma de inteligência, qualidade, oportunidade e monitoramento de imunização",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -16,8 +16,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <footer className="site-footer mt-8">
           <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4 text-xs text-white/90">
             <div>
-              Radar Vacinal · Painel de oportunidade (não cobertura %), exceto Situação 1 com
-              cadastro. Referência: NT 52/2026-CGICI/DPNI/SVSA/MS.
+              PREVNAR · Inteligência em Imunização. Indicadores distinguem observação, proxy,
+              estimativa e dados administrativos conforme sua evidência e proveniência.
             </div>
             <div className="flex items-center gap-3 opacity-95">
               <span>JAMBRO</span>

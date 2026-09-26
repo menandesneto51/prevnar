@@ -11,8 +11,9 @@ const links = [
   { href: "/serie", label: "Série" },
   { href: "/timeline", label: "Linha do tempo" },
   { href: "/monitoramento", label: "Monitoramento" },
+  { href: "/respiratorio", label: "Respiratório" },
   { href: "/estoque", label: "Estoque" },
-  { href: "/custo", label: "Custo do gap" },
+  { href: "/custo", label: "Custo teórico" },
   { href: "/condicoes", label: "Condições" },
   { href: "/ufs", label: "UFs" },
   { href: "/qualidade", label: "Qualidade" },
@@ -52,9 +53,9 @@ export function Nav() {
           </Link>
           <div className="text-right">
             <div className="text-sm font-semibold tracking-wide text-[var(--primary-deep)]">
-              Radar Vacinal
+              PREVNAR
             </div>
-            <div className="text-xs text-[var(--muted)]">VPC20 · CRIE · NT 52/2026</div>
+            <div className="text-xs text-[var(--muted)]">Inteligência em Imunização</div>
           </div>
         </div>
       </div>

@@ -32,7 +32,7 @@ def test_vpc20_is_exposed_as_vaccine_immunobiologic() -> None:
 def test_nirsevimab_is_monoclonal_antibody_entity() -> None:
     item = get_immunobiologic("nirsevimab")
     assert item["type"] == "monoclonal_antibody"
-    assert item["onboarding_status"] == "rules_structured_data_mapping_pending"
+    assert item["onboarding_status"] == "data_mapping_structured"
 
 
 def test_nirsevimab_has_active_structured_rule_after_respiratory_onboarding() -> None:
