@@ -132,10 +132,13 @@
       "name": "Nirsevimabe",
       "display": "Nirsevimabe",
       "active": true,
-      "monitored": false,
-      "onboarding_status": "rules_structured_data_mapping_pending",
+      "monitored": true,
+      "onboarding_status": "data_mapping_structured",
       "role": "vsr_passive_immunization",
-      "pni_codes": [],
+      "pni_codes": [
+        "115",
+        "116"
+      ],
       "normative_acts": [
         "portaria_sectics_15_2025_nirsevimab",
         "protocolo_nirsevimab_2026",
@@ -144,7 +147,48 @@
         "ntc_74_2026_nirsevimab",
         "nt_89_2026_nirsevimab"
       ],
-      "note": "Regras operacionais estruturadas; códigos da fonte e derivação automatizada de comorbidades ainda precisam de validação para monitoramento."
+      "note": "Regras operacionais estruturadas; códigos da fonte e derivação automatizada de comorbidades ainda precisam de validação para monitoramento.",
+      "pni_registration": {
+        "presentations": {
+          "115": {
+            "volume_ml": 0.5,
+            "name": "nirsevimabe 0,5ml"
+          },
+          "116": {
+            "volume_ml": 1,
+            "name": "nirsevimabe 1,0ml"
+          }
+        },
+        "strategy_codes": [
+          "2",
+          "8"
+        ],
+        "strategy_labels": {
+          "2": "Especial",
+          "8": "Serviço Privado"
+        },
+        "dose_codes": {
+          "59": "Profilaxia/Tratamento com 1 unidade",
+          "60": "Profilaxia/Tratamento com 2 unidades"
+        },
+        "dose_sigla": {
+          "59": "P/T1",
+          "60": "P/T2"
+        },
+        "max_age_months_exclusive": 24,
+        "manufacturer_codes": {
+          "44329": "PATHEON MANUFATURING SERVICES LLC"
+        },
+        "attendance_groups": {
+          "000116": "Doença Cardiovascular",
+          "000104": "Pneumopatias Crônicas Graves",
+          "000117": "Imunocomprometidos",
+          "000115": "Doença neurológica crônica",
+          "000121": "Anomalias das vias aéreas",
+          "000110": "Síndrome de Down",
+          "000120": "Prematuridade"
+        }
+      }
     },
     {
       "immunobiologic_id": "vvsr_materna",
@@ -152,15 +196,36 @@
       "name": "Vacina vírus sincicial respiratório A e B (recombinante)",
       "display": "VVSR materna",
       "active": true,
-      "monitored": false,
-      "onboarding_status": "rules_structured_data_mapping_pending",
-      "pni_codes": [],
+      "monitored": true,
+      "onboarding_status": "data_mapping_structured",
+      "pni_codes": [
+        "108"
+      ],
       "normative_acts": [
         "portaria_sectics_14_2025_vvsr_gestante",
         "estrategia_vvsr_gestantes_2026",
         "calendario_nacional_2026"
       ],
-      "note": "Regra clínica estruturada; códigos da fonte PNI ainda devem ser validados antes do monitoramento automatizado."
+      "note": "Regra clínica estruturada; códigos da fonte PNI ainda devem ser validados antes do monitoramento automatizado.",
+      "pni_registration": {
+        "strategy_codes": [
+          "1"
+        ],
+        "strategy_labels": {
+          "1": "Rotina"
+        },
+        "dose_codes": {
+          "9": "Única"
+        },
+        "dose_sigla": {
+          "9": "DU"
+        },
+        "attendance_groups": {
+          "001801": "Gestante"
+        },
+        "puerpera_allowed": false,
+        "age_floor_source_rule": ">=9 years in RNDS entry model; clinical eligibility remains gestational age >=28 weeks."
+      }
     },
     {
       "immunobiologic_id": "influenza",
