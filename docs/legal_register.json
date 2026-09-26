@@ -1,0 +1,129 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "acts": [
+    {
+      "id": "lei_6259_1975",
+      "type": "lei",
+      "number": "6259/1975",
+      "scope": "federal",
+      "topic": [
+        "vigilancia_epidemiologica",
+        "pni"
+      ],
+      "official_url": "https://planalto.gov.br/ccivil_03/leis/l6259.htm"
+    },
+    {
+      "id": "lei_8080_1990",
+      "type": "lei",
+      "number": "8080/1990",
+      "scope": "federal",
+      "topic": [
+        "sus",
+        "informacao_em_saude"
+      ],
+      "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8080.htm"
+    },
+    {
+      "id": "lgpd",
+      "type": "lei",
+      "number": "13709/2018",
+      "scope": "federal",
+      "topic": [
+        "dados_pessoais",
+        "dados_sensiveis"
+      ],
+      "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm"
+    },
+    {
+      "id": "portaria_1434_2020",
+      "type": "portaria",
+      "number": "1434/2020",
+      "scope": "federal",
+      "topic": [
+        "rnds",
+        "interoperabilidade"
+      ],
+      "official_url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2020/prt1434_01_06_2020_rep.html"
+    },
+    {
+      "id": "portaria_3232_2024",
+      "type": "portaria",
+      "number": "3232/2024",
+      "scope": "federal",
+      "topic": [
+        "sus_digital"
+      ],
+      "official_url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2024/prt3232_04_03_2024.html"
+    },
+    {
+      "id": "decreto_12560_2025",
+      "type": "decreto",
+      "number": "12560/2025",
+      "scope": "federal",
+      "topic": [
+        "rnds",
+        "sus_digital",
+        "compartilhamento",
+        "ripd"
+      ],
+      "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12560.htm"
+    },
+    {
+      "id": "anpd_res_15_2024",
+      "type": "resolucao",
+      "number": "15/2024",
+      "scope": "federal",
+      "topic": [
+        "incidente_seguranca"
+      ],
+      "official_url": "https://www.gov.br/anpd/pt-br/canais_atendimento/agente-de-tratamento/comunicado-de-incidente-de-seguranca-cis"
+    },
+    {
+      "id": "nt_52_2026_vpc20",
+      "type": "nota_tecnica",
+      "number": "52/2026-CGICI/DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "vpc20",
+        "rie",
+        "crie"
+      ],
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-52-2026-cgici-dpni-svsa-ms.pdf/view"
+    },
+    {
+      "id": "ntc_310_2026_vpc20",
+      "type": "nota_tecnica_conjunta",
+      "number": "310/2026-DPNI/SVSA-DESF/SAPS/MS",
+      "scope": "federal",
+      "topic": [
+        "vpc20",
+        "idosos",
+        "85_mais"
+      ],
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-310-2026.pdf/view"
+    },
+    {
+      "id": "mt_decreto_1427_2025",
+      "type": "decreto",
+      "number": "1427/2025",
+      "scope": "mato_grosso",
+      "topic": [
+        "lgpd",
+        "governanca_dados",
+        "ripd"
+      ],
+      "official_url": "https://iomat.mt.gov.br/apifront/portal/edicoes/imprimir_materia/1702926/18430?find=1.427"
+    },
+    {
+      "id": "mt_decreto_1428_2025",
+      "type": "decreto",
+      "number": "1428/2025",
+      "scope": "mato_grosso",
+      "topic": [
+        "seguranca_informacao"
+      ],
+      "official_url": "https://www.pm.mt.gov.br/documents/5342163/17318310/Decreto%2Bn%C2%BA%2B1.428%2Bde%2B30%2Bde%2Babril%2Bde%2B2025.pdf/19bc1943-b037-b6d9-272c-b6f496bcda68?t=1758220168706"
+    }
+  ]
+}
