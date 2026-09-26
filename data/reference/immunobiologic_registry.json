@@ -264,13 +264,13 @@
       "display": "HPV4",
       "active": true,
       "monitored": false,
-      "onboarding_status": "normative_discovery",
+      "onboarding_status": "rules_structured_data_mapping_pending",
       "pni_codes": [],
       "normative_acts": [
         "calendario_nacional_2026",
         "nt_32_2026_hpv_nic2"
       ],
-      "note": "Cadastro normativo inicial. Código PNI não será preenchido a partir de código SIES/estoque; aguarda confirmação no sistema nacional de registro vacinal.",
+      "note": "Regra nacional de rotina estruturada (9–14 anos, dose única). Código PNI permanece pendente de confirmação no sistema nacional; resgate 15–19 e grupos especiais são contextos separados.",
       "code_mapping_status": "pending_official_pni_code_confirmation"
     },
     {
@@ -364,7 +364,7 @@
       "display": "Tríplice viral",
       "active": true,
       "monitored": false,
-      "onboarding_status": "partial_data_mapping",
+      "onboarding_status": "routine_rule_active_partial_data_mapping",
       "pni_codes": [
         "24"
       ],
@@ -374,7 +374,7 @@
         "ntc_116_2026_sarampo_viajantes",
         "nt_46_2025_triplice_dupla_registro"
       ],
-      "note": "Dose zero, bloqueio, varredura e recomendações para viajantes exigem regras separadas por contexto e território; não converter em regra nacional genérica.",
+      "note": "Regra nacional de rotina ativa por histórico; código 24 e contextos de bloqueio/intensificação parcialmente mapeados. Dose zero e estratégias territoriais permanecem separadas.",
       "pni_registration": {
         "immunobiologic_code": "24",
         "known_contexts": {
