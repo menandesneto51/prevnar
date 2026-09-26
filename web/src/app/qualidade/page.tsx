@@ -36,6 +36,7 @@ export default async function QualidadePage() {
   const unmapped = Object.entries(q.cids_nao_mapeados || {}).sort((a, b) => b[1] - a[1]);
   const atr = nac.qualidade?.atraso_rnds_dias || {};
   const oferta = nac.oferta_uf || [];
+  const freshness = Object.entries(data.qualidade.freshness || {});
 
   return (
     <div className="space-y-6">
@@ -98,6 +99,56 @@ export default async function QualidadePage() {
           )}
         </div>
       </div>
+
+      {freshness.length > 0 ? (
+        <div className="card table-wrap p-2">
+          <h2 className="px-2 py-2 text-sm font-semibold">Freshness das fontes críticas</h2>
+          <p className="px-2 pb-2 text-xs text-[var(--muted)]">
+            Limites operacionais internos do PREVNAR; não representam SLA oficial das fontes.
+          </p>
+          <table className="data">
+            <thead>
+              <tr>
+                <th>Fonte</th>
+                <th>Referência</th>
+                <th>Idade</th>
+                <th>Status</th>
+                <th>Crítica p/ decisão</th>
+              </tr>
+            </thead>
+            <tbody>
+              {freshness.map(([sourceId, item]) => {
+                const status = item?.status || "desconhecido";
+                const cls =
+                  status === "atual"
+                    ? "badge-sit1"
+                    : status === "atencao"
+                      ? "badge-warn"
+                      : "badge-danger";
+                return (
+                  <tr key={sourceId}>
+                    <td className="font-mono text-xs">{sourceId}</td>
+                    <td>{item?.reference_period || "—"}</td>
+                    <td className="kpi-value">
+                      {item?.age_days == null ? "—" : `${item.age_days} d`}
+                    </td>
+                    <td>
+                      <span className={`badge ${cls}`}>{status}</span>
+                    </td>
+                    <td>{item?.critical_for_decision ? "sim" : "não"}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          {q.freshness_alerta ? (
+            <div className="mx-2 mb-2 mt-3 rounded-lg border border-[var(--danger)] p-3 text-xs text-[var(--danger)]">
+              Há fonte crítica para decisão classificada como desatualizada. O Release Guardian
+              deverá bloquear publicação decisória até atualização ou justificativa formal.
+            </div>
+          ) : null}
+        </div>
+      ) : null}
 
       {q.sem_cid_na_fonte ? (
         <div className="card border-[var(--warn)] p-4 text-sm text-[var(--warn)]">
