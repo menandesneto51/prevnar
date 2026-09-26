@@ -318,6 +318,14 @@ def build() -> dict:
             st = "sem_dado"
         else:
             st = "ok"
+        decision_grade = bool(ind.get("decision_grade", False))
+        evidence_level = ind.get("evidence_level")
+        if iid == "cobertura_sit1":
+            decision_grade = st == "ok"
+            evidence_level = "E4" if decision_grade else "E2/E4"
+        if iid == "gap_absoluto":
+            decision_grade = False
+            evidence_level = None
         status_map.append(
             {
                 "id": iid,
@@ -326,6 +334,9 @@ def build() -> dict:
                 "status": st,
                 "valor": val if not isinstance(val, list) else f"{len(val)} itens",
                 "unidade": ind.get("unidade"),
+                "evidence_level": evidence_level,
+                "decision_grade": decision_grade,
+                "nota": ind.get("nota"),
             }
         )
 
