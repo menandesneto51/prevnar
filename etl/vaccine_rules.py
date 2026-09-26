@@ -596,6 +596,285 @@ def _evaluate_nirsevimab(
     }
 
 
+def _evaluate_menacwy(
+    rule: dict[str, Any],
+    *,
+    age_months: int,
+    menc_primary_complete: bool | None,
+    days_since_last_menc: int | None,
+    menacwy_child_booster_received: bool | None,
+    menacwy_adolescent_dose_received: bool | None,
+) -> dict[str, Any] | None:
+    child = rule.get("child_booster") or {}
+    child_min = int(child.get("min_age_months") or 12)
+    child_max = int(child.get("max_age_months") or 59)
+
+    if child_min <= age_months <= child_max:
+        if menacwy_child_booster_received is True:
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "menacwy_child_booster",
+                "eligible": False,
+                "requires_review": False,
+                "recommendation": "routine_booster_already_received",
+            }
+        if menc_primary_complete is None:
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "menacwy_child_booster",
+                "eligible": True,
+                "requires_review": True,
+                "recommendation": "verify_menc_primary_series",
+            }
+        if not menc_primary_complete:
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "menacwy_child_booster",
+                "eligible": True,
+                "requires_review": True,
+                "recommendation": "complete_or_review_meningococcal_primary_series",
+            }
+        min_interval = int(child.get("min_interval_after_menc_days") or 60)
+        if days_since_last_menc is None:
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "menacwy_child_booster",
+                "eligible": True,
+                "requires_review": True,
+                "recommendation": "verify_interval_after_last_menc",
+                "min_interval_days": min_interval,
+            }
+        if days_since_last_menc < min_interval:
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "menacwy_child_booster",
+                "eligible": True,
+                "requires_review": False,
+                "recommendation": "defer_until_minimum_interval",
+                "min_interval_days": min_interval,
+            }
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "menacwy_child_booster",
+            "eligible": True,
+            "requires_review": False,
+            "recommendation": "one_menacwy_booster",
+            "schedule": child,
+        }
+
+    adolescent = rule.get("adolescent") or {}
+    adolescent_min = int(adolescent.get("min_age_months") or 132)
+    adolescent_max = int(adolescent.get("max_age_months") or 179)
+    if adolescent_min <= age_months <= adolescent_max:
+        if menacwy_adolescent_dose_received is None:
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "menacwy_adolescent",
+                "eligible": True,
+                "requires_review": True,
+                "recommendation": "verify_adolescent_menacwy_history",
+            }
+        if menacwy_adolescent_dose_received:
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "menacwy_adolescent",
+                "eligible": False,
+                "requires_review": False,
+                "recommendation": "adolescent_dose_already_received",
+            }
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "menacwy_adolescent",
+            "eligible": True,
+            "requires_review": False,
+            "recommendation": "one_menacwy_dose",
+            "schedule": adolescent,
+        }
+
+    return None
+
+
+def _yellow_fever_history_rule(
+    rule: dict[str, Any],
+    history: str,
+) -> dict[str, Any] | None:
+    for item in rule.get("history_rules") or []:
+        if item.get("history") == history:
+            return item
+    return None
+
+
+def _evaluate_yellow_fever(
+    rule: dict[str, Any],
+    *,
+    age_months: int,
+    yellow_fever_history: str,
+    days_since_last_yellow_fever_dose: int | None,
+) -> dict[str, Any] | None:
+    if age_months < 6:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "yellow_fever_routine",
+            "eligible": False,
+            "requires_review": False,
+            "reason": "below_routine_and_exception_age",
+        }
+
+    if 6 <= age_months <= 8:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "yellow_fever_exception_6_8_months",
+            "eligible": True,
+            "requires_review": True,
+            "recommendation": "risk_benefit_review_for_exceptional_dose_zero",
+        }
+
+    # Pessoas >=60 anos: decisão depende de avaliação individual de risco-benefício.
+    if age_months >= 60 * 12:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "yellow_fever_older_adult",
+            "eligible": True,
+            "requires_review": True,
+            "recommendation": "individual_risk_benefit_review",
+        }
+
+    # Faixa pediátrica do calendário: 9 meses a 4a11m29d.
+    if 9 <= age_months <= 59:
+        schedule = rule.get("pediatric_schedule") or {}
+        if yellow_fever_history == "unknown":
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "yellow_fever_pediatric",
+                "eligible": True,
+                "requires_review": True,
+                "recommendation": "verify_yellow_fever_history",
+                "schedule": schedule,
+            }
+        if yellow_fever_history == "none":
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "yellow_fever_pediatric",
+                "eligible": True,
+                "requires_review": False,
+                "recommendation": "one_standard_dose_and_follow_pediatric_schedule",
+                "schedule": schedule,
+            }
+        if yellow_fever_history == "two_doses_before_5":
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "yellow_fever_pediatric",
+                "eligible": False,
+                "requires_review": False,
+                "recommendation": "complete_no_more_doses",
+            }
+        if yellow_fever_history == "one_dose_before_5":
+            booster_age = int(schedule.get("booster_age_months") or 48)
+            if age_months < booster_age:
+                return {
+                    "rule_id": rule["rule_id"],
+                    "pathway": "yellow_fever_pediatric",
+                    "eligible": False,
+                    "requires_review": False,
+                    "recommendation": "await_routine_booster_age",
+                    "booster_age_months": booster_age,
+                }
+            min_interval = int(schedule.get("min_interval_days") or 30)
+            if days_since_last_yellow_fever_dose is None:
+                return {
+                    "rule_id": rule["rule_id"],
+                    "pathway": "yellow_fever_pediatric",
+                    "eligible": True,
+                    "requires_review": True,
+                    "recommendation": "verify_interval_for_booster",
+                    "min_interval_days": min_interval,
+                }
+            if days_since_last_yellow_fever_dose < min_interval:
+                return {
+                    "rule_id": rule["rule_id"],
+                    "pathway": "yellow_fever_pediatric",
+                    "eligible": True,
+                    "requires_review": False,
+                    "recommendation": "defer_until_minimum_interval",
+                    "min_interval_days": min_interval,
+                }
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "yellow_fever_pediatric",
+                "eligible": True,
+                "requires_review": False,
+                "recommendation": "one_standard_booster",
+            }
+
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "yellow_fever_pediatric",
+            "eligible": True,
+            "requires_review": True,
+            "recommendation": "history_not_supported_for_pediatric_auto_rule",
+        }
+
+    # 5 a 59 anos: histórico define diretamente a recomendação nacional.
+    if 60 <= age_months < 60 * 12:
+        if yellow_fever_history == "unknown":
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "yellow_fever_age_5_59",
+                "eligible": True,
+                "requires_review": True,
+                "recommendation": "verify_yellow_fever_history",
+            }
+
+        lookup_history = (
+            "none_age_5_to_59"
+            if yellow_fever_history == "none"
+            else yellow_fever_history
+        )
+        history_rule = _yellow_fever_history_rule(rule, lookup_history)
+        if not history_rule:
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "yellow_fever_age_5_59",
+                "eligible": True,
+                "requires_review": True,
+                "recommendation": "history_not_recognized",
+            }
+
+        recommendation = history_rule.get("recommendation")
+        min_interval = history_rule.get("min_interval_days")
+        if recommendation == "one_booster" and min_interval:
+            if days_since_last_yellow_fever_dose is None:
+                return {
+                    "rule_id": rule["rule_id"],
+                    "pathway": "yellow_fever_age_5_59",
+                    "eligible": True,
+                    "requires_review": True,
+                    "recommendation": "verify_interval_for_booster",
+                    "min_interval_days": min_interval,
+                }
+            if days_since_last_yellow_fever_dose < int(min_interval):
+                return {
+                    "rule_id": rule["rule_id"],
+                    "pathway": "yellow_fever_age_5_59",
+                    "eligible": True,
+                    "requires_review": False,
+                    "recommendation": "defer_until_minimum_interval",
+                    "min_interval_days": min_interval,
+                }
+
+        eligible = recommendation not in {"complete_no_more_doses"}
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "yellow_fever_age_5_59",
+            "eligible": eligible,
+            "requires_review": False,
+            "recommendation": recommendation,
+            "history_rule": history_rule,
+        }
+
+    return None
+
+
 def evaluate_operational(
     immunobiologic_id: str,
     *,
@@ -609,6 +888,12 @@ def evaluate_operational(
     weight_kg: float | None = None,
     vsr_season_number: int | None = None,
     in_vsr_season: bool | None = None,
+    menc_primary_complete: bool | None = None,
+    days_since_last_menc: int | None = None,
+    menacwy_child_booster_received: bool | None = None,
+    menacwy_adolescent_dose_received: bool | None = None,
+    yellow_fever_history: str = "unknown",
+    days_since_last_yellow_fever_dose: int | None = None,
     on_date: date | None = None,
 ) -> dict[str, Any]:
     """Avalia caminhos configurados para suporte operacional.
@@ -656,6 +941,22 @@ def evaluate_operational(
                 weight_kg=weight_kg,
                 vsr_season_number=vsr_season_number,
                 in_vsr_season=in_vsr_season,
+            )
+        elif immunobiologic_id == "menacwy" and strategy == "routine_menacwy":
+            result = _evaluate_menacwy(
+                rule,
+                age_months=age_months,
+                menc_primary_complete=menc_primary_complete,
+                days_since_last_menc=days_since_last_menc,
+                menacwy_child_booster_received=menacwy_child_booster_received,
+                menacwy_adolescent_dose_received=menacwy_adolescent_dose_received,
+            )
+        elif immunobiologic_id == "febre_amarela" and strategy == "routine_yellow_fever":
+            result = _evaluate_yellow_fever(
+                rule,
+                age_months=age_months,
+                yellow_fever_history=yellow_fever_history,
+                days_since_last_yellow_fever_dose=days_since_last_yellow_fever_dose,
             )
 
         if result:
