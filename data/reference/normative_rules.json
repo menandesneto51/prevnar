@@ -1,5 +1,5 @@
 {
-  "version": "1.3",
+  "version": "1.4",
   "updated_at": "2026-09-26",
   "interpretation": "Decision support for surveillance and operational monitoring. Does not replace clinical assessment or official PNI guidance.",
   "rules": [
@@ -434,6 +434,100 @@
           "BR"
         ]
       }
+    },
+    {
+      "rule_id": "menacwy_routine_2026",
+      "immunobiologic_id": "menacwy",
+      "rule_type": "eligibility_and_schedule",
+      "rule_context": "routine",
+      "status": "active",
+      "effective_from": "2025-07-01",
+      "effective_until": null,
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      },
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_77_2025_menacwy_reforco"
+      ],
+      "population": {
+        "strategy": "routine_menacwy"
+      },
+      "child_booster": {
+        "min_age_months": 12,
+        "max_age_months": 59,
+        "preferred_age_months": 12,
+        "min_interval_after_menc_days": 60,
+        "doses": 1
+      },
+      "adolescent": {
+        "min_age_months": 132,
+        "max_age_months": 179,
+        "doses": 1,
+        "note": "Dose ou reforço conforme situação vacinal encontrada."
+      },
+      "note": "Reforço infantil preferencialmente aos 12 meses, oportunamente até 4 anos 11 meses e 29 dias; adolescentes de 11 a 14 anos recebem uma dose ou reforço conforme situação vacinal."
+    },
+    {
+      "rule_id": "febre_amarela_routine_2026",
+      "immunobiologic_id": "febre_amarela",
+      "rule_type": "eligibility_and_schedule",
+      "rule_context": "routine",
+      "status": "active",
+      "effective_from": "2026-01-30",
+      "effective_until": null,
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      },
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_6_2026_febre_amarela"
+      ],
+      "population": {
+        "strategy": "routine_yellow_fever"
+      },
+      "history_rules": [
+        {
+          "history": "two_doses_before_5",
+          "recommendation": "complete_no_more_doses"
+        },
+        {
+          "history": "one_dose_before_5",
+          "recommendation": "one_booster",
+          "min_interval_days": 30
+        },
+        {
+          "history": "one_dose_at_or_after_5",
+          "recommendation": "complete_no_more_doses"
+        },
+        {
+          "history": "none_age_5_to_59",
+          "recommendation": "one_standard_dose"
+        },
+        {
+          "history": "fractional_2018_only",
+          "recommendation": "one_standard_booster"
+        }
+      ],
+      "pediatric_schedule": {
+        "min_age_months": 9,
+        "max_age_months": 59,
+        "routine_dose_age_months": 9,
+        "booster_age_months": 48,
+        "min_interval_days": 30
+      },
+      "older_adult": {
+        "min_age_years": 60,
+        "auto_recommend": false,
+        "requires_risk_benefit_review": true
+      },
+      "note": "Automação prioriza cenários explicitamente definidos por histórico. Crianças menores de 5 anos com histórico não estruturado e pessoas >=60 anos requerem revisão."
     }
   ],
   "schema_version": "2.0",
