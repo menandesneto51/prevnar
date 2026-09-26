@@ -19,11 +19,13 @@ def test_routine_rescue_registry_integrity() -> None:
     assert validate_registry_integrity() == []
 
 
-def test_hpv_is_registered_but_not_active() -> None:
+def test_hpv_has_active_routine_rule_but_data_mapping_remains_pending() -> None:
     item = get_immunobiologic("hpv4")
     assert item["type"] == "vaccine"
-    assert item["onboarding_status"] == "normative_discovery"
-    assert active_rules("hpv4", on_date=TODAY) == []
+    assert item["onboarding_status"] == "rules_structured_data_mapping_pending"
+    assert item["pni_codes"] == []
+    ids = {r["rule_id"] for r in active_rules("hpv4", on_date=TODAY)}
+    assert "hpv4_routine_2026" in ids
 
 
 def test_menacwy_has_active_national_routine_rule() -> None:
@@ -40,10 +42,11 @@ def test_yellow_fever_has_active_national_routine_rule() -> None:
     assert "febre_amarela_routine_2026" in ids
 
 
-def test_mmr_is_registered_but_not_active() -> None:
+def test_mmr_has_active_national_routine_rule() -> None:
     item = get_immunobiologic("triplice_viral")
     assert item["type"] == "vaccine"
-    assert active_rules("triplice_viral", on_date=TODAY) == []
+    ids = {r["rule_id"] for r in active_rules("triplice_viral", on_date=TODAY)}
+    assert "triplice_viral_routine_2026" in ids
 
 
 def test_mmr_note_requires_context_specific_rules() -> None:
