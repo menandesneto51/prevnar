@@ -158,3 +158,32 @@ def test_mmr_non_healthcare_worker_age_60_plus_has_no_routine_path() -> None:
         on_date=TODAY,
     )
     assert result["pathways"] == []
+
+
+def test_mmr_is_not_recommended_during_pregnancy() -> None:
+    result = evaluate_operational(
+        "triplice_viral",
+        age_months=25 * 12,
+        mmr_doses_received=0,
+        is_healthcare_worker=False,
+        pregnant=True,
+        on_date=TODAY,
+    )
+    pathway = result["pathways"][0]
+    assert pathway["eligible"] is False
+    assert pathway["recommendation"] == "do_not_vaccinate_during_pregnancy"
+
+
+def test_mmr_severe_immunosuppression_requires_specialist_review() -> None:
+    result = evaluate_operational(
+        "triplice_viral",
+        age_months=25 * 12,
+        mmr_doses_received=0,
+        is_healthcare_worker=False,
+        severe_immunosuppression=True,
+        on_date=TODAY,
+    )
+    pathway = result["pathways"][0]
+    assert pathway["eligible"] is False
+    assert pathway["requires_review"] is True
+    assert pathway["recommendation"] == "specialist_review_live_vaccine_contraindication"
