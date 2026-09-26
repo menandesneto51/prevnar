@@ -12,6 +12,7 @@
 | [CHECKLIST_CONFORMIDADE.md](CHECKLIST_CONFORMIDADE.md) | Checklist de fonte, indicador e release |
 | [ROADMAP_V2.md](ROADMAP_V2.md) | Evolução técnica do PREVNAR |
 | [IMMUNOBIOLOGIC_REGISTRY.md](IMMUNOBIOLOGIC_REGISTRY.md) | Registro canônico de imunobiológicos e compatibilidade vacinal |
+| [RESPIRATORY_IMMUNIZATION_2026.md](RESPIRATORY_IMMUNIZATION_2026.md) | Arquitetura normativa e analítica para VVSR, nirsevimabe, influenza e covid-19 |
 | [VACCINE_REGISTRY.md](VACCINE_REGISTRY.md) | Registro específico de vacinas e motor normativo versionado |
 | [ONBOARDING_IMUNOBIOLOGICO.md](ONBOARDING_IMUNOBIOLOGICO.md) | Fluxo padronizado para incorporar vacinas, anticorpos monoclonais e outros imunobiológicos |
 | [RELEASE_GUARDIAN.md](RELEASE_GUARDIAN.md) | Gates automáticos de release |
