@@ -358,6 +358,7 @@ def check_mutable_api_routes(findings: list[Finding], mode: str) -> None:
         "requireauth",
         "getserversession",
         "auth(",
+        "authorizemutablerequest",
     )
     mutating = re.compile(r"export\s+async\s+function\s+(POST|PUT|PATCH|DELETE)\b")
 

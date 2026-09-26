@@ -60,8 +60,8 @@ export default function CargaPage() {
           Envie CSVs com colunas <code className="text-[var(--accent)]">uf,elegiveis</code>. Os
           arquivos ficam em <code>data/manual/situacao1/</code>. Há seed provisório (27 UFs) para
           HIV, oncológicos, transplante, TCTH, fibrose e diálise — substitua pelos extratos oficiais
-          e clique em recalcular o mart (ou rode{" "}
-          <code>.venv\Scripts\python etl\build_mart.py</code>).
+          e clique em recalcular o mart (ou rode <code>python etl/build_mart.py</code> no ambiente
+          virtual do projeto).
         </p>
       </div>
 
