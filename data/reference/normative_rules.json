@@ -1,5 +1,5 @@
 {
-  "version": "1.2",
+  "version": "1.3",
   "updated_at": "2026-09-26",
   "interpretation": "Decision support for surveillance and operational monitoring. Does not replace clinical assessment or official PNI guidance.",
   "rules": [
@@ -303,6 +303,60 @@
         "nt_91_2026_covid"
       ],
       "note": "Aguardando estruturação por produto, faixa etária, histórico e grupo especial antes de ativação automática."
+    },
+    {
+      "rule_id": "hpv4_onboarding_2026",
+      "immunobiologic_id": "hpv4",
+      "rule_type": "onboarding_metadata",
+      "status": "draft",
+      "effective_from": "2026-01-01",
+      "effective_until": null,
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_32_2026_hpv_nic2"
+      ],
+      "note": "Separar rotina, resgate e grupos prioritários antes de ativação."
+    },
+    {
+      "rule_id": "menacwy_onboarding_2026",
+      "immunobiologic_id": "menacwy",
+      "rule_type": "onboarding_metadata",
+      "status": "draft",
+      "effective_from": "2026-01-01",
+      "effective_until": null,
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_50_2026_menacwy",
+        "nt_77_2025_menacwy_reforco"
+      ],
+      "note": "NT 50/2026 é metodologia de avaliação por coorte e não deve ser confundida com elegibilidade clínica."
+    },
+    {
+      "rule_id": "febre_amarela_onboarding_2026",
+      "immunobiologic_id": "febre_amarela",
+      "rule_type": "onboarding_metadata",
+      "status": "draft",
+      "effective_from": "2026-01-01",
+      "effective_until": null,
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_6_2026_febre_amarela"
+      ],
+      "note": "A regra específica de dose padrão após dose fracionada 2018 será estruturada separadamente."
+    },
+    {
+      "rule_id": "triplice_viral_onboarding_2026",
+      "immunobiologic_id": "triplice_viral",
+      "rule_type": "onboarding_metadata",
+      "status": "draft",
+      "effective_from": "2026-01-01",
+      "effective_until": null,
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_98_2026_triplice_viral_d0",
+        "ntc_116_2026_sarampo_viajantes"
+      ],
+      "note": "Dose zero e recomendações temporárias/territoriais serão modeladas por escopo explícito; nenhuma regra nacional genérica é ativada nesta etapa."
     }
   ]
 }
