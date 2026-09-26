@@ -8,6 +8,7 @@ from typing import Any
 import requests
 
 from paths import MART, REF, UF_CODES
+from provenance import write_manifest
 
 IBGE_POP_TOTAL = (
     "https://servicodados.ibge.gov.br/api/v3/agregados/6579/"
@@ -180,10 +181,12 @@ def build_situacao_1_placeholders() -> list[dict]:
 
 def run() -> dict:
     print("Buscando população IBGE 2024…")
+    pop_source_mode = "api"
     try:
         pop = fetch_pop_total_2024()
     except Exception as exc:  # noqa: BLE001
         print(f"Falha IBGE ({exc}); usando fallback estático.")
+        pop_source_mode = "fallback_estatico"
         pop = {
             "RO": 1746227, "AC": 880631, "AM": 4281209, "RR": 716793, "PA": 8664306,
             "AP": 802837, "TO": 1577342, "MA": 7010960, "PI": 3375646, "CE": 9233656,
@@ -194,10 +197,28 @@ def run() -> dict:
         }
 
     rows = build_situacao_1_placeholders() + build_situacao_2(pop) + build_situacao_3(pop)
+    manifest = write_manifest(
+        source_id="ibge_population",
+        reference_period="2024",
+        record_count=len(pop),
+        status="success",
+        warnings=["fallback_estatico"] if pop_source_mode != "api" else [],
+        schema_version="ibge-pop-uf-v1",
+        pipeline_version="2.0",
+        extra={"mode": pop_source_mode},
+    )
     payload = {
         "atualizado_em": datetime.now(timezone.utc).isoformat(),
         "pop_ibge_2024": pop,
         "linhas": rows,
+        "provenance": {
+            "run_id": manifest["run_id"],
+            "source_id": manifest["source_id"],
+            "reference_period": manifest["reference_period"],
+            "retrieved_at": manifest["retrieved_at"],
+            "freshness": manifest["freshness"],
+            "mode": pop_source_mode,
+        },
     }
     out = MART / "denominadores.json"
     with open(out, "w", encoding="utf-8") as f:
