@@ -89,7 +89,10 @@
         "rie",
         "crie"
       ],
-      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-52-2026-cgici-dpni-svsa-ms.pdf/view"
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-52-2026-cgici-dpni-svsa-ms.pdf/view",
+      "updated_by": [
+        "nt_64_2026_vpc20"
+      ]
     },
     {
       "id": "ntc_310_2026_vpc20",
@@ -124,6 +127,39 @@
         "seguranca_informacao"
       ],
       "official_url": "https://www.pm.mt.gov.br/documents/5342163/17318310/Decreto%2Bn%C2%BA%2B1.428%2Bde%2B30%2Bde%2Babril%2Bde%2B2025.pdf/19bc1943-b037-b6d9-272c-b6f496bcda68?t=1758220168706"
+    },
+    {
+      "id": "nt_64_2026_vpc20",
+      "type": "nota_tecnica",
+      "number": "64/2026-DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "vpc20",
+        "rie",
+        "registro_vacinal",
+        "dose_unica"
+      ],
+      "updates": [
+        "nt_52_2026_vpc20"
+      ],
+      "published_at": "2026-07-20",
+      "effective_from": "2026-07-20",
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-64-2026-dpni-svsa-ms.pdf/view"
+    },
+    {
+      "id": "nt_69_2026_vpc20_coverage",
+      "type": "nota_tecnica",
+      "number": "69/2026-CGICI/DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "vpc20",
+        "vpc10",
+        "cobertura_vacinal",
+        "monitoramento"
+      ],
+      "published_at": "2026-07-13",
+      "effective_from": "2026-07-13",
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-69-2026-cgici-dpni-svsa-ms.pdf/view"
     }
   ]
 }

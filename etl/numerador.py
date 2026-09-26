@@ -10,6 +10,11 @@ from pathlib import Path
 from api_client import iter_pni_2026
 from paths import MART, RAW, REF, UF_CODES
 from provenance import write_manifest
+from vaccine_rules import (
+    default_monitoring_start,
+    special_strategy_codes,
+    vaccine_codes,
+)
 
 try:
     import duckdb
@@ -21,14 +26,13 @@ API_CACHE = RAW / "api_pni_2026"
 
 
 def data_inicio() -> date:
-    env = os.environ.get("RADAR_DATA_INICIO", "").strip()
+    env = (
+        os.environ.get("PREVNAR_DATA_INICIO", "").strip()
+        or os.environ.get("RADAR_DATA_INICIO", "").strip()
+    )
     if env:
         return date.fromisoformat(env)
-    try:
-        meta = load_json("vacinas_pni.json")
-        return date.fromisoformat(meta.get("data_inicio_padrao", "2026-05-01"))
-    except Exception:  # noqa: BLE001
-        return date(2026, 5, 1)
+    return default_monitoring_start("vpc20") or date(2026, 5, 1)
 
 
 def load_json(name: str):
@@ -89,13 +93,13 @@ def cnes_crie_set() -> set[str]:
 
 
 def vacina_codes_vpc20() -> set[str]:
-    meta = load_json("vacinas_pni.json")
-    return {str(c) for c in meta["vpc20"]["codigo_vacina"]}
+    """Compatibilidade interna: fonte canônica é vaccine_registry.json."""
+    return vaccine_codes("vpc20")
 
 
 def estrategia_rie_codes() -> set[str]:
-    meta = load_json("vacinas_pni.json")
-    return {str(c) for c in meta["estrategia_especial_rie"]["codigo_estrategia_vacinacao"]}
+    """Estratégia normativa + códigos observacionais explicitamente registrados."""
+    return special_strategy_codes("vpc20", include_observed_compatibility=True)
 
 
 def normalize_cid(cid: str | None) -> str | None:
@@ -385,10 +389,16 @@ def process_api(*, max_pages: int | None = None) -> dict:
         "fonte_tipo": "api",
         "fixture": False,
         "vacina_nomes_descobertos": ["VPC20 (codigo_vacina=107)"],
+        "vaccine_id": "vpc20",
+        "registry_version": load_json("vaccine_registry.json").get("version"),
+        "normative_rules_version": load_json("normative_rules.json").get("version"),
         "codigo_vacina_filtro": sorted(codes),
         "data_inicio": inicio.isoformat(),
         "filtro_crie_aplicado": True,
         "filtro_estrategia_rie": sorted(rie),
+        "filtro_estrategia_rie_normativa": sorted(
+            special_strategy_codes("vpc20", include_observed_compatibility=False)
+        ),
         "filtro_detalhe": {
             "registros_lidos": scanned,
             "paginas": pages,

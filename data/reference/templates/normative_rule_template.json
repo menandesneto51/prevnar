@@ -1,0 +1,14 @@
+{
+  "rule_id": "REPLACE_ME",
+  "vaccine_id": "REPLACE_ME",
+  "rule_type": "eligibility_and_schedule",
+  "status": "draft",
+  "effective_from": null,
+  "effective_until": null,
+  "normative_acts": [],
+  "population": {},
+  "schedules": [],
+  "special_schedules": [],
+  "prior_history_rules": [],
+  "note": "Não ativar até validação normativa e epidemiológica."
+}

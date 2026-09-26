@@ -1,0 +1,192 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "interpretation": "Decision support for surveillance and operational monitoring. Does not replace clinical assessment or official PNI guidance.",
+  "rules": [
+    {
+      "rule_id": "vpc20_rie_2026",
+      "vaccine_id": "vpc20",
+      "rule_type": "eligibility_and_schedule",
+      "status": "active",
+      "effective_from": "2026-05-26",
+      "effective_until": null,
+      "normative_acts": [
+        "nt_52_2026_vpc20",
+        "nt_64_2026_vpc20"
+      ],
+      "population": {
+        "strategy": "rie_special",
+        "min_age_months": 2,
+        "condition_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      },
+      "schedules": [
+        {
+          "schedule_id": "rie_2_6m",
+          "min_age_months": 2,
+          "max_age_months": 6,
+          "primary_doses": 3,
+          "interval_months": [
+            2,
+            2
+          ],
+          "booster": {
+            "age_months_min": 12,
+            "age_months_max": 15,
+            "doses": 1
+          }
+        },
+        {
+          "schedule_id": "rie_7_11m",
+          "min_age_months": 7,
+          "max_age_months": 11,
+          "primary_doses": 2,
+          "interval_months": [
+            2
+          ],
+          "booster": {
+            "age_months_min": 12,
+            "age_months_max": 15,
+            "doses": 1
+          }
+        },
+        {
+          "schedule_id": "rie_12_59m",
+          "min_age_months": 12,
+          "max_age_months": 59,
+          "primary_doses": 2,
+          "interval_months": [
+            2
+          ],
+          "booster": null
+        },
+        {
+          "schedule_id": "rie_5y_plus",
+          "min_age_months": 60,
+          "max_age_months": null,
+          "primary_doses": 1,
+          "interval_months": [],
+          "booster": null,
+          "exceptions_condition_ids": [
+            4,
+            5
+          ]
+        }
+      ],
+      "special_schedules": [
+        {
+          "condition_id": 4,
+          "label": "TCTH",
+          "min_age_months": 12,
+          "primary_doses": 3,
+          "interval_months": [
+            2,
+            2
+          ],
+          "note": "Pessoas submetidas a TCTH previamente vacinadas devem ser consideradas não vacinadas."
+        },
+        {
+          "condition_id": 5,
+          "label": "CAR-T",
+          "auto_recommend": false,
+          "requires_clinical_review": true,
+          "note": "A NT 52 identifica CAR-T como exceção ao esquema de dose única ≥5 anos; o PREVNAR não automatiza esquema específico sem regra normativa detalhada validada."
+        }
+      ],
+      "prior_history_rules": [
+        {
+          "history": "two_vpp23",
+          "recommendation": "do_not_apply_vpc20",
+          "note": "Considerado vacinado dentro das indicações da estratégia especial."
+        },
+        {
+          "history": "complete_vpc10_or_vpc13_no_vpp23",
+          "recommendation": "one_vpc20",
+          "min_interval_after_conjugate_days": 56
+        },
+        {
+          "history": "one_vpp23",
+          "recommendation": "one_vpc20",
+          "min_interval_after_vpp23_days": 365,
+          "min_interval_after_conjugate_days": 56
+        }
+      ]
+    },
+    {
+      "rule_id": "vpc20_elderly_85_2026",
+      "vaccine_id": "vpc20",
+      "rule_type": "eligibility_and_schedule",
+      "status": "active",
+      "effective_from": "2026-09-14",
+      "effective_until": null,
+      "normative_acts": [
+        "ntc_310_2026_vpc20"
+      ],
+      "population": {
+        "strategy": "elderly_85_plus",
+        "min_age_years": 85,
+        "prescription_required": false
+      },
+      "prior_history_rules": [
+        {
+          "history": "two_vpp23",
+          "recommendation": "do_not_apply_vpc20"
+        },
+        {
+          "history": "one_vpc13_or_vpc15_plus_one_vpp23",
+          "recommendation": "do_not_apply_vpc20"
+        },
+        {
+          "history": "one_vpc13_or_vpc15",
+          "recommendation": "one_vpc20",
+          "min_interval_days": 60
+        },
+        {
+          "history": "one_vpp23",
+          "recommendation": "one_vpc20",
+          "min_interval_days": 365
+        },
+        {
+          "history": "none",
+          "recommendation": "one_vpc20",
+          "min_interval_days": 0
+        }
+      ],
+      "monitoring_target_pct": 90,
+      "target_population_brazil_2026": 2337775
+    },
+    {
+      "rule_id": "vpc20_coverage_monitoring_2026",
+      "vaccine_id": "vpc20",
+      "rule_type": "monitoring_methodology",
+      "status": "active",
+      "effective_from": "2026-07-13",
+      "effective_until": null,
+      "normative_acts": [
+        "nt_69_2026_vpc20_coverage"
+      ],
+      "note": "Metodologia de cálculo e monitoramento de cobertura no contexto da transição VPC10→VPC20. Não deve ser confundida com elegibilidade clínica."
+    }
+  ]
+}

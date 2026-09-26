@@ -73,3 +73,18 @@ Bloqueia release quando houver:
 
 ## Ordem recomendada
 Data → Epidemiology → Quality → Legal/Privacy → Intelligence → Action → Release Guardian.
+
+
+## Onboarding de imunobiológico
+
+Antes de incorporar nova vacina, seguir `docs/ONBOARDING_IMUNOBIOLOGICO.md`.
+
+Regras:
+- Legal & Privacy Agent registra e valida os atos;
+- Epidemiology Agent valida população, esquema, vigência e exceções;
+- Data Agent vincula códigos e fontes;
+- Data Quality Agent valida proveniência/freshness;
+- Intelligence Agent só utiliza indicadores aprovados;
+- Release Guardian valida referências cruzadas e bloqueia inconsistências.
+
+Nenhum agente pode inserir regra clínica diretamente no código sem `rule_id` e `normative_acts`.

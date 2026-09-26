@@ -1,0 +1,110 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "vaccines": [
+    {
+      "vaccine_id": "vpc20",
+      "name": "Vacina pneumocócica conjugada 20-valente",
+      "display": "VPC20",
+      "pni_codes": [
+        "107"
+      ],
+      "active": true,
+      "monitored": true,
+      "strategies": [
+        "rie_special",
+        "elderly_85_plus"
+      ],
+      "normative_acts": [
+        "nt_52_2026_vpc20",
+        "nt_64_2026_vpc20",
+        "nt_69_2026_vpc20_coverage",
+        "ntc_310_2026_vpc20"
+      ],
+      "pni_registration": {
+        "special_strategy_codes": [
+          "2"
+        ],
+        "observed_legacy_or_api_codes": [
+          "8"
+        ],
+        "dose_codes": {
+          "first": [
+            "1"
+          ],
+          "second": [
+            "2"
+          ],
+          "third": [
+            "3"
+          ],
+          "booster": [
+            "38"
+          ],
+          "single": [
+            "9"
+          ],
+          "additional": [
+            "37"
+          ],
+          "revaccination_1": [
+            "32"
+          ],
+          "revaccination_2": [
+            "33"
+          ],
+          "revaccination_3": [
+            "34"
+          ]
+        }
+      },
+      "note": "Código 107. Estratégia especial normativa=2. Código 8 permanece como compatibilidade empírica da fonte e deve ser tratado separadamente da regra normativa.",
+      "monitoring": {
+        "default_data_start": "2026-05-01",
+        "note": "Janela analítica observacional configurável; não equivale à data de vigência de cada ato normativo."
+      }
+    },
+    {
+      "vaccine_id": "vpc10",
+      "name": "Vacina pneumocócica conjugada 10-valente",
+      "display": "VPC10",
+      "pni_codes": [
+        "26"
+      ],
+      "active": true,
+      "monitored": false,
+      "role": "historical_transition"
+    },
+    {
+      "vaccine_id": "vpc13",
+      "name": "Vacina pneumocócica conjugada 13-valente",
+      "display": "VPC13",
+      "pni_codes": [
+        "59"
+      ],
+      "active": true,
+      "monitored": false,
+      "role": "historical_transition"
+    },
+    {
+      "vaccine_id": "vpc15",
+      "name": "Vacina pneumocócica conjugada 15-valente",
+      "display": "VPC15",
+      "pni_codes": [
+        "106"
+      ],
+      "active": true,
+      "monitored": false,
+      "role": "historical_transition"
+    },
+    {
+      "vaccine_id": "vpp23",
+      "name": "Vacina pneumocócica polissacarídica 23-valente",
+      "display": "VPP23",
+      "pni_codes": [],
+      "active": true,
+      "monitored": false,
+      "role": "historical_transition"
+    }
+  ]
+}

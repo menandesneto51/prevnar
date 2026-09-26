@@ -45,6 +45,12 @@ Antes de alterar indicadores, fontes ou regras vacinais, consultar:
 
 Registro normativo estruturado: `docs/legal_register.json`.
 
+Motor vacinal:
+- `data/reference/vaccine_registry.json`;
+- `data/reference/normative_rules.json`;
+- `etl/vaccine_rules.py`;
+- [onboarding de novo imunobiológico](docs/ONBOARDING_IMUNOBIOLOGICO.md).
+
 ## Princípio metodológico
 
 O PREVNAR distingue:
