@@ -284,14 +284,21 @@ def collect_api(*, max_pages: int | None = None) -> dict[str, Any]:
         raw = os.environ.get("PREVNAR_RESP_API_MAX_PAGES", "").strip()
         max_pages = int(raw) if raw.isdigit() else None
 
-    all_rows: list[dict[str, Any]] = []
     pages = 0
-    for offset, rows in iter_pni_2026(max_pages=max_pages, cache_dir=CACHE):
-        pages += 1
-        all_rows.extend(rows)
-        print(f"offset={offset} page={pages} rows={len(rows)} scanned={len(all_rows)}")
+    streamed_rows = 0
 
-    result = process_rows(all_rows)
+    def row_stream() -> Iterable[dict[str, Any]]:
+        nonlocal pages, streamed_rows
+        for offset, rows in iter_pni_2026(max_pages=max_pages, cache_dir=CACHE):
+            pages += 1
+            streamed_rows += len(rows)
+            print(
+                f"offset={offset} page={pages} rows={len(rows)} "
+                f"scanned={streamed_rows}"
+            )
+            yield from rows
+
+    result = process_rows(row_stream())
     result["pages"] = pages
     result["generated_at"] = datetime.now(timezone.utc).isoformat()
 
