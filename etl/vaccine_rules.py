@@ -988,9 +988,31 @@ def _evaluate_mmr(
     age_months: int,
     mmr_doses_received: int | None,
     is_healthcare_worker: bool | None,
+    pregnant: bool | None,
+    severe_immunosuppression: bool | None,
 ) -> dict[str, Any] | None:
     schedule = rule.get("schedule") or {}
     min_interval = int(schedule.get("min_interval_between_doses_days") or 30)
+
+    if pregnant is True:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "mmr_routine",
+            "eligible": False,
+            "requires_review": False,
+            "recommendation": "do_not_vaccinate_during_pregnancy",
+            "reason": "pregnancy_contraindication",
+        }
+
+    if severe_immunosuppression is True:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "mmr_routine",
+            "eligible": False,
+            "requires_review": True,
+            "recommendation": "specialist_review_live_vaccine_contraindication",
+            "reason": "severe_immunosuppression",
+        }
 
     if age_months < 12:
         # Dose zero/bloqueio são tratados por regras próprias.
@@ -1091,6 +1113,7 @@ def evaluate_operational(
     pregnant: bool | None = None,
     mmr_doses_received: int | None = None,
     is_healthcare_worker: bool | None = None,
+    severe_immunosuppression: bool | None = None,
     geographic_context: dict[str, Any] | None = None,
     on_date: date | None = None,
 ) -> dict[str, Any]:
@@ -1173,6 +1196,8 @@ def evaluate_operational(
                 age_months=age_months,
                 mmr_doses_received=mmr_doses_received,
                 is_healthcare_worker=is_healthcare_worker,
+                pregnant=pregnant,
+                severe_immunosuppression=severe_immunosuppression,
             )
 
         if result:
