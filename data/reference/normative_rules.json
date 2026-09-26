@@ -1,5 +1,5 @@
 {
-  "version": "1.4",
+  "version": "1.5",
   "updated_at": "2026-09-26",
   "interpretation": "Decision support for surveillance and operational monitoring. Does not replace clinical assessment or official PNI guidance.",
   "rules": [
@@ -528,6 +528,66 @@
         "requires_risk_benefit_review": true
       },
       "note": "Automação prioriza cenários explicitamente definidos por histórico. Crianças menores de 5 anos com histórico não estruturado e pessoas >=60 anos requerem revisão."
+    },
+    {
+      "rule_id": "hpv4_routine_2026",
+      "immunobiologic_id": "hpv4",
+      "rule_type": "eligibility_and_schedule",
+      "rule_context": "routine",
+      "status": "active",
+      "effective_from": "2026-01-30",
+      "effective_until": null,
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      },
+      "normative_acts": [
+        "calendario_nacional_2026"
+      ],
+      "population": {
+        "strategy": "routine_hpv4",
+        "min_age_months": 108,
+        "max_age_months": 179
+      },
+      "schedule": {
+        "required_total_doses": 1
+      },
+      "contraindications": {
+        "pregnancy": true
+      },
+      "note": "Meninas e meninos não vacinados de 9 anos a 14 anos, 11 meses e 29 dias: dose única. Resgate de 15–19 anos permanece em regra separada."
+    },
+    {
+      "rule_id": "triplice_viral_routine_2026",
+      "immunobiologic_id": "triplice_viral",
+      "rule_type": "eligibility_and_schedule",
+      "rule_context": "routine",
+      "status": "active",
+      "effective_from": "2026-01-30",
+      "effective_until": null,
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      },
+      "normative_acts": [
+        "calendario_nacional_2026"
+      ],
+      "population": {
+        "strategy": "routine_mmr"
+      },
+      "schedule": {
+        "child_first_dose_age_months": 12,
+        "child_second_dose_age_months": 15,
+        "min_interval_between_doses_days": 30,
+        "required_total_doses_through_age_29": 2,
+        "required_total_doses_age_30_59": 1,
+        "healthcare_worker_required_total_doses": 2
+      },
+      "note": "Rotina nacional por histórico. Dose zero, bloqueio, intensificação e resposta territorial permanecem em regras separadas."
     }
   ],
   "schema_version": "2.0",
