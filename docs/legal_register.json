@@ -220,6 +220,109 @@
       "published_at": "2026-08-13",
       "effective_from": "2026-08-13",
       "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-89.pdf/view"
+    },
+    {
+      "id": "portaria_sectics_14_2025_vvsr_gestante",
+      "type": "portaria",
+      "number": "SECTICS/MS 14/2025",
+      "scope": "federal",
+      "topic": [
+        "vsr",
+        "vacina_materna",
+        "gestantes",
+        "incorporacao_sus"
+      ],
+      "published_at": "2025-02-24",
+      "effective_from": "2025-02-25",
+      "official_url": "https://bvsms.saude.gov.br/bvs/saudelegis/sctie/2025/prt0014_25_02_2025.html"
+    },
+    {
+      "id": "estrategia_vvsr_gestantes_2026",
+      "type": "guia_tecnico",
+      "number": "Estratégia de vacinação contra o VSR em gestantes — 2026",
+      "scope": "federal",
+      "topic": [
+        "vsr",
+        "vacina_materna",
+        "gestantes",
+        "operacionalizacao"
+      ],
+      "published_at": "2026-03-26",
+      "effective_from": "2026-01-30",
+      "official_url": "https://www.gov.br/saude/pt-br/vacinacao/publicacoes/estrategia-de-vacinacao-contra-o-virus-sincicial-respiratorio-em-gestantes.pdf"
+    },
+    {
+      "id": "calendario_nacional_2026",
+      "type": "instrucao_normativa",
+      "number": "Calendário Nacional de Vacinação 2026",
+      "scope": "federal",
+      "topic": [
+        "pni",
+        "calendario",
+        "vacinas"
+      ],
+      "published_at": "2026-03-02",
+      "effective_from": "2026-01-30",
+      "official_url": "https://www.gov.br/saude/pt-br/composicao/svsa/pni/calendario-tecnico/instrucao-normativa-que-instrui-o-calendario-nacional-de-vacinacao-2026"
+    },
+    {
+      "id": "nt_24_2026_influenza",
+      "type": "nota_tecnica",
+      "number": "24/2026-DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "influenza",
+        "registro",
+        "2026"
+      ],
+      "published_at": "2026-04-14",
+      "effective_from": "2026-04-14",
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-24-2026-dpni-svsa-ms.pdf/view"
+    },
+    {
+      "id": "nt_91_2026_covid",
+      "type": "nota_tecnica",
+      "number": "91/2026-DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "covid_19",
+        "comirnaty",
+        "transicao_operacional",
+        "seguranca"
+      ],
+      "published_at": "2026-09-09",
+      "effective_from": "2026-09-09",
+      "official_url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/covid-19/notas-tecnicas/2026"
+    },
+    {
+      "id": "portaria_sectics_15_2025_nirsevimab",
+      "type": "portaria",
+      "number": "SECTICS/MS 15/2025",
+      "scope": "federal",
+      "topic": [
+        "vsr",
+        "nirsevimabe",
+        "incorporacao_sus",
+        "prematuros",
+        "comorbidades"
+      ],
+      "published_at": "2025-03-05",
+      "effective_from": "2025-03-05",
+      "official_url": "https://bvsms.saude.gov.br/bvs/saudelegis/sctie/2025/prt0015_05_03_2025.html"
+    },
+    {
+      "id": "protocolo_nirsevimab_2026",
+      "type": "protocolo_uso",
+      "number": "Protocolo de uso do nirsevimabe — 2026",
+      "scope": "federal",
+      "topic": [
+        "vsr",
+        "nirsevimabe",
+        "protocolo_uso"
+      ],
+      "published_at": "2026-03-01",
+      "effective_from": "2026-03-01",
+      "official_url": "https://www.gov.br/conitec/pt-br/midias/protocolos/2026/protocolo-de-uso-do-nirsevimabe"
     }
   ]
 }

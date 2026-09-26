@@ -32,15 +32,15 @@ def test_vpc20_is_exposed_as_vaccine_immunobiologic() -> None:
 def test_nirsevimab_is_monoclonal_antibody_entity() -> None:
     item = get_immunobiologic("nirsevimab")
     assert item["type"] == "monoclonal_antibody"
-    assert item["onboarding_status"] == "normative_discovery"
+    assert item["onboarding_status"] == "rules_structured_data_mapping_pending"
 
 
-def test_nirsevimab_draft_rule_is_never_active() -> None:
+def test_nirsevimab_has_active_structured_rule_after_respiratory_onboarding() -> None:
     rules = active_rules("nirsevimab", on_date=date(2026, 9, 26))
-    assert rules == []
+    assert {r["rule_id"] for r in rules} == {"nirsevimab_vsr_2026"}
 
 
-def test_nirsevimab_does_not_generate_automatic_eligibility_before_onboarding() -> None:
+def test_nirsevimab_missing_clinical_inputs_requires_review() -> None:
     result = evaluate_operational(
         "nirsevimab",
         age_months=2,
@@ -49,6 +49,6 @@ def test_nirsevimab_does_not_generate_automatic_eligibility_before_onboarding() 
     )
     assert result["immunobiologic_type"] == "monoclonal_antibody"
     assert result["eligible_by_any_rule"] is False
-    assert result["pathways"] == []
-    assert result["requires_review"] is False
+    assert result["requires_review"] is True
+    assert result["pathways"][0]["recommendation"] == "verify_prematurity_or_comorbidity"
     assert "vaccine_id" not in result

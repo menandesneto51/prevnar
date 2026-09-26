@@ -133,16 +133,64 @@
       "display": "Nirsevimabe",
       "active": true,
       "monitored": false,
-      "onboarding_status": "normative_discovery",
+      "onboarding_status": "rules_structured_data_mapping_pending",
       "role": "vsr_passive_immunization",
       "pni_codes": [],
       "normative_acts": [
+        "portaria_sectics_15_2025_nirsevimab",
+        "protocolo_nirsevimab_2026",
         "nt_10_2026_nirsevimab",
         "nt_31_2026_nirsevimab",
         "ntc_74_2026_nirsevimab",
         "nt_89_2026_nirsevimab"
       ],
-      "note": "Entidade cadastrada para generalização arquitetural. Nenhuma regra clínica automática ativa até conclusão do onboarding da issue #13."
+      "note": "Regras operacionais estruturadas; códigos da fonte e derivação automatizada de comorbidades ainda precisam de validação para monitoramento."
+    },
+    {
+      "immunobiologic_id": "vvsr_materna",
+      "type": "vaccine",
+      "name": "Vacina vírus sincicial respiratório A e B (recombinante)",
+      "display": "VVSR materna",
+      "active": true,
+      "monitored": false,
+      "onboarding_status": "rules_structured_data_mapping_pending",
+      "pni_codes": [],
+      "normative_acts": [
+        "portaria_sectics_14_2025_vvsr_gestante",
+        "estrategia_vvsr_gestantes_2026",
+        "calendario_nacional_2026"
+      ],
+      "note": "Regra clínica estruturada; códigos da fonte PNI ainda devem ser validados antes do monitoramento automatizado."
+    },
+    {
+      "immunobiologic_id": "influenza",
+      "type": "vaccine",
+      "name": "Vacina influenza",
+      "display": "Influenza",
+      "active": true,
+      "monitored": false,
+      "onboarding_status": "data_mapping_pending",
+      "pni_codes": [],
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_24_2026_influenza"
+      ],
+      "note": "Entidade pronta para onboarding; regra clínica/registro permanece draft até mapeamento de códigos e estratégia 2026."
+    },
+    {
+      "immunobiologic_id": "covid19",
+      "type": "vaccine",
+      "name": "Vacina covid-19",
+      "display": "Covid-19",
+      "active": true,
+      "monitored": false,
+      "onboarding_status": "data_mapping_pending",
+      "pni_codes": [],
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_91_2026_covid"
+      ],
+      "note": "Entidade pronta para onboarding; regras por produto/faixa/grupo especial permanecem draft nesta etapa."
     }
   ]
 }

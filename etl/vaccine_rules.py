@@ -375,12 +375,205 @@ def _evaluate_elderly(
     }
 
 
+def _evaluate_maternal_rsv(
+    rule: dict[str, Any],
+    *,
+    gestational_age_weeks: float | None,
+    already_administered_this_pregnancy: bool | None,
+) -> dict[str, Any]:
+    population = rule.get("population") or {}
+    min_weeks = float(population.get("min_gestational_age_weeks") or 28)
+
+    if already_administered_this_pregnancy is True:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "maternal_rsv",
+            "eligible": False,
+            "requires_review": False,
+            "recommendation": "do_not_repeat_routine_dose",
+            "reason": (
+                "dose_already_administered_this_pregnancy"
+                if gestational_age_weeks is None or gestational_age_weeks >= min_weeks
+                else "early_dose_already_administered_monitor_no_repeat"
+            ),
+        }
+    if gestational_age_weeks is None:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "maternal_rsv",
+            "eligible": False,
+            "requires_review": True,
+            "recommendation": "verify_gestational_age",
+        }
+    if gestational_age_weeks < min_weeks:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "maternal_rsv",
+            "eligible": False,
+            "requires_review": False,
+            "reason": "below_minimum_gestational_age",
+        }
+    if already_administered_this_pregnancy is None:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "maternal_rsv",
+            "eligible": True,
+            "requires_review": True,
+            "recommendation": "verify_dose_history_this_pregnancy",
+        }
+    return {
+        "rule_id": rule["rule_id"],
+        "pathway": "maternal_rsv",
+        "eligible": True,
+        "requires_review": False,
+        "recommendation": "one_dose_vvsr_this_pregnancy",
+        "schedule": rule.get("schedule"),
+    }
+
+
+def _evaluate_nirsevimab(
+    rule: dict[str, Any],
+    *,
+    age_months: int,
+    birth_gestational_age_days: int | None,
+    eligible_comorbidity: bool | None,
+    weight_kg: float | None,
+    vsr_season_number: int | None,
+    in_vsr_season: bool | None,
+) -> dict[str, Any]:
+    population = rule.get("population") or {}
+    prematurity_limit = int(population.get("premature_max_gestational_age_days") or 258)
+    premature_age_limit = int(population.get("premature_max_age_months_exclusive") or 6)
+    comorbidity_age_limit = int(population.get("comorbidity_max_age_months_exclusive") or 24)
+
+    premature = (
+        birth_gestational_age_days is not None
+        and birth_gestational_age_days <= prematurity_limit
+        and age_months < premature_age_limit
+    )
+    comorbidity_eligible = bool(eligible_comorbidity) and age_months < comorbidity_age_limit
+
+    if not premature and not comorbidity_eligible:
+        if birth_gestational_age_days is None and eligible_comorbidity is None:
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "pediatric_rsv_passive",
+                "eligible": False,
+                "requires_review": True,
+                "recommendation": "verify_prematurity_or_comorbidity",
+            }
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "pediatric_rsv_passive",
+            "eligible": False,
+            "requires_review": False,
+            "reason": "eligibility_criteria_not_met",
+        }
+
+    # Prematuros elegíveis: estratégia ao longo de todo o ano.
+    # Comorbidade sem prematuridade elegível: restrita à sazonalidade do VSR.
+    if not premature and comorbidity_eligible and in_vsr_season is not True:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "pediatric_rsv_passive",
+            "eligible": True,
+            "requires_review": True,
+            "recommendation": "review_outside_or_unknown_vsr_season",
+            "reason": "comorbidity_path_requires_vsr_season",
+        }
+
+    if vsr_season_number is None:
+        # Para prematuros na primeira exposição, peso resolve a dose; a numeração
+        # sazonal só é indispensável para o caminho de segunda sazonalidade.
+        if not premature:
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "pediatric_rsv_passive",
+                "eligible": True,
+                "requires_review": True,
+                "recommendation": "verify_vsr_season_number",
+            }
+        vsr_season_number = 1
+
+    dosing = rule.get("dosing") or []
+    if vsr_season_number == 1:
+        if weight_kg is None:
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "pediatric_rsv_passive",
+                "eligible": True,
+                "requires_review": True,
+                "recommendation": "verify_weight",
+            }
+        dose = next(
+            (
+                d for d in dosing
+                if d.get("season_number") == 1
+                and (
+                    (
+                        d.get("weight_kg_max_exclusive") is not None
+                        and weight_kg < float(d["weight_kg_max_exclusive"])
+                    )
+                    or (
+                        d.get("weight_kg_min") is not None
+                        and weight_kg >= float(d["weight_kg_min"])
+                    )
+                )
+            ),
+            None,
+        )
+        if dose:
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "pediatric_rsv_passive",
+                "eligible": True,
+                "requires_review": False,
+                "recommendation": "nirsevimab_single_dose",
+                "dose": dose,
+            }
+
+    if vsr_season_number >= 2 and comorbidity_eligible:
+        dose = next(
+            (
+                d for d in dosing
+                if int(d.get("season_number_min") or 999) <= vsr_season_number
+                and d.get("eligible_comorbidity_required")
+            ),
+            None,
+        )
+        if dose:
+            return {
+                "rule_id": rule["rule_id"],
+                "pathway": "pediatric_rsv_passive",
+                "eligible": True,
+                "requires_review": False,
+                "recommendation": "nirsevimab_seasonal_dose",
+                "dose": dose,
+            }
+
+    return {
+        "rule_id": rule["rule_id"],
+        "pathway": "pediatric_rsv_passive",
+        "eligible": True,
+        "requires_review": True,
+        "recommendation": "clinical_protocol_review",
+        "reason": "dose_rule_not_resolved",
+    }
+
+
 def evaluate_operational(
     immunobiologic_id: str,
     *,
     age_months: int,
     condition_ids: list[int] | set[int] | None = None,
     pneumococcal_history: str = "unknown",
+    gestational_age_weeks: float | None = None,
+    already_administered_this_pregnancy: bool | None = None,
+    birth_gestational_age_days: int | None = None,
+    eligible_comorbidity: bool | None = None,
+    weight_kg: float | None = None,
+    vsr_season_number: int | None = None,
+    in_vsr_season: bool | None = None,
     on_date: date | None = None,
 ) -> dict[str, Any]:
     """Avalia caminhos configurados para suporte operacional.
@@ -412,6 +605,22 @@ def evaluate_operational(
                 rule,
                 age_months=age_months,
                 pneumococcal_history=pneumococcal_history,
+            )
+        elif immunobiologic_id == "vvsr_materna" and strategy == "maternal_rsv":
+            result = _evaluate_maternal_rsv(
+                rule,
+                gestational_age_weeks=gestational_age_weeks,
+                already_administered_this_pregnancy=already_administered_this_pregnancy,
+            )
+        elif immunobiologic_id == "nirsevimab" and strategy == "pediatric_rsv_passive":
+            result = _evaluate_nirsevimab(
+                rule,
+                age_months=age_months,
+                birth_gestational_age_days=birth_gestational_age_days,
+                eligible_comorbidity=eligible_comorbidity,
+                weight_kg=weight_kg,
+                vsr_season_number=vsr_season_number,
+                in_vsr_season=in_vsr_season,
             )
 
         if result:
