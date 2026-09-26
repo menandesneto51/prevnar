@@ -806,8 +806,15 @@ def _evaluate_yellow_fever(
                 "pathway": "yellow_fever_pediatric",
                 "eligible": True,
                 "requires_review": False,
-                "recommendation": "one_standard_dose_and_follow_pediatric_schedule",
+                "recommendation": "start_or_catch_up_two_dose_pediatric_schedule",
+                "doses_remaining": 2,
                 "schedule": schedule,
+                "note": (
+                    "Administrar a dose indicada e completar o esquema pediátrico "
+                    "com reforço aos 4 anos, respeitando intervalo mínimo de 30 dias. "
+                    "Se a criança já estiver com 4 anos, o reforço deve respeitar "
+                    "o intervalo mínimo após a primeira dose."
+                ),
             }
         if yellow_fever_history == "two_doses_before_5":
             return {
