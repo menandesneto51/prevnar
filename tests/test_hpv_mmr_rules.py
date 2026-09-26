@@ -187,3 +187,44 @@ def test_mmr_severe_immunosuppression_requires_specialist_review() -> None:
     assert pathway["eligible"] is False
     assert pathway["requires_review"] is True
     assert pathway["recommendation"] == "specialist_review_live_vaccine_contraindication"
+
+
+def test_hpv_completed_schedule_remains_complete_during_pregnancy() -> None:
+    result = evaluate_operational(
+        "hpv4",
+        age_months=14 * 12,
+        hpv_doses_received=1,
+        pregnant=True,
+        on_date=TODAY,
+    )
+    pathway = result["pathways"][0]
+    assert pathway["eligible"] is False
+    assert pathway["recommendation"] == "routine_schedule_complete"
+
+
+def test_mmr_completed_schedule_remains_complete_during_pregnancy() -> None:
+    result = evaluate_operational(
+        "triplice_viral",
+        age_months=25 * 12,
+        mmr_doses_received=2,
+        is_healthcare_worker=False,
+        pregnant=True,
+        on_date=TODAY,
+    )
+    pathway = result["pathways"][0]
+    assert pathway["eligible"] is False
+    assert pathway["recommendation"] == "routine_schedule_complete"
+
+
+def test_mmr_completed_healthcare_schedule_not_overridden_by_immunosuppression() -> None:
+    result = evaluate_operational(
+        "triplice_viral",
+        age_months=40 * 12,
+        mmr_doses_received=2,
+        is_healthcare_worker=True,
+        severe_immunosuppression=True,
+        on_date=TODAY,
+    )
+    pathway = result["pathways"][0]
+    assert pathway["eligible"] is False
+    assert pathway["recommendation"] == "routine_schedule_complete"
