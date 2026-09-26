@@ -293,6 +293,36 @@
       "published_at": "2026-09-09",
       "effective_from": "2026-09-09",
       "official_url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/covid-19/notas-tecnicas/2026"
+    },
+    {
+      "id": "portaria_sectics_15_2025_nirsevimab",
+      "type": "portaria",
+      "number": "SECTICS/MS 15/2025",
+      "scope": "federal",
+      "topic": [
+        "vsr",
+        "nirsevimabe",
+        "incorporacao_sus",
+        "prematuros",
+        "comorbidades"
+      ],
+      "published_at": "2025-03-05",
+      "effective_from": "2025-03-05",
+      "official_url": "https://bvsms.saude.gov.br/bvs/saudelegis/sctie/2025/prt0015_05_03_2025.html"
+    },
+    {
+      "id": "protocolo_nirsevimab_2026",
+      "type": "protocolo_uso",
+      "number": "Protocolo de uso do nirsevimabe — 2026",
+      "scope": "federal",
+      "topic": [
+        "vsr",
+        "nirsevimabe",
+        "protocolo_uso"
+      ],
+      "published_at": "2026-03-01",
+      "effective_from": "2026-03-01",
+      "official_url": "https://www.gov.br/conitec/pt-br/midias/protocolos/2026/protocolo-de-uso-do-nirsevimabe"
     }
   ]
 }
