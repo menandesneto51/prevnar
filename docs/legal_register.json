@@ -160,6 +160,66 @@
       "published_at": "2026-07-13",
       "effective_from": "2026-07-13",
       "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-69-2026-cgici-dpni-svsa-ms.pdf/view"
+    },
+    {
+      "id": "nt_10_2026_nirsevimab",
+      "type": "nota_tecnica",
+      "number": "10/2026-DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "vsr",
+        "nirsevimabe",
+        "registro_imunobiologico",
+        "rnds"
+      ],
+      "published_at": "2026-02-19",
+      "effective_from": "2026-02-19",
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-10-2026-dpni-svsa-ms.pdf/view"
+    },
+    {
+      "id": "nt_31_2026_nirsevimab",
+      "type": "nota_tecnica",
+      "number": "31/2026-CGICI/DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "vsr",
+        "nirsevimabe",
+        "resgate",
+        "pni"
+      ],
+      "published_at": "2026-03-20",
+      "effective_from": "2026-03-20",
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-31-2026-cgici-dpni-svsa-ms.pdf/view"
+    },
+    {
+      "id": "ntc_74_2026_nirsevimab",
+      "type": "nota_tecnica_conjunta",
+      "number": "74/2026-CGFAM/CGICI/NGI/DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "vsr",
+        "nirsevimabe",
+        "erro_imunizacao",
+        "seguranca"
+      ],
+      "published_at": "2026-04-07",
+      "effective_from": "2026-04-07",
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-74-2026-cgfam-cgici-ngi-dpni-svsa-ms.pdf/view"
+    },
+    {
+      "id": "nt_89_2026_nirsevimab",
+      "type": "nota_tecnica",
+      "number": "89/2026-CGICI/DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "vsr",
+        "nirsevimabe",
+        "sazonalidade",
+        "pni"
+      ],
+      "published_at": "2026-08-13",
+      "effective_from": "2026-08-13",
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-89.pdf/view"
     }
   ]
 }
