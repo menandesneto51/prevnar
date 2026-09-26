@@ -1,4 +1,4 @@
-import { fmtInt, fmtPct } from "@/components/Kpi";
+import { EvidenceBadge, fmtInt, fmtPct } from "@/components/Kpi";
 import { fmtBRL, getNacional } from "@/lib/data";
 
 type StatusRow = {
@@ -8,6 +8,9 @@ type StatusRow = {
   status: string;
   valor?: string | number | null;
   unidade?: string;
+  evidence_level?: string | null;
+  decision_grade?: boolean;
+  nota?: string;
 };
 
 type Nacional = {
@@ -84,6 +87,8 @@ export default async function IndicadoresPage() {
                 <th>Indicador</th>
                 <th>Valor</th>
                 <th>Unidade</th>
+                <th>Evidência</th>
+                <th>Uso</th>
                 <th>Status</th>
               </tr>
             </thead>
@@ -97,9 +102,20 @@ export default async function IndicadoresPage() {
                   <td className="kpi-value">{fmtValor(r)}</td>
                   <td className="text-xs text-[var(--muted)]">{r.unidade || "—"}</td>
                   <td>
+                    <EvidenceBadge level={r.evidence_level} decisionGrade={r.decision_grade} />
+                  </td>
+                  <td className="text-xs">
+                    {r.decision_grade ? "decisório" : "interpretativo"}
+                  </td>
+                  <td>
                     <span className={`badge ${statusClass[r.status] || "badge-warn"}`}>
                       {r.status}
                     </span>
+                    {r.nota ? (
+                      <div className="mt-1 max-w-sm text-[10px] leading-relaxed text-[var(--muted)]">
+                        {r.nota}
+                      </div>
+                    ) : null}
                   </td>
                 </tr>
               ))}
