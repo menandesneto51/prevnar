@@ -1,3 +1,5 @@
+export type EvidenceLevel = "E1" | "E2" | "E3" | "E4" | "E5";
+
 export type CondicaoResumo = {
   condicao_id: number;
   condicao_nt52: string;
@@ -10,14 +12,20 @@ export type CondicaoResumo = {
   exibe_cobertura: boolean;
   carga_pendente: boolean;
   raro?: boolean;
+  gap_evidence_level?: string;
+  gap_decision_grade?: boolean;
+  gap_interpretation?: string;
 };
 
 export type UfResumo = {
   uf: string;
   elegiveis: number;
+  oportunidades_estimadas: number;
   pessoas_vacinadas: number;
   pessoas_vacinadas_consolidado?: number;
-  gap: number;
+  gap: number | null;
+  gap_pessoas: number | null;
+  gap_aproximado_legado?: number | null;
   pendencias: number;
 };
 
@@ -36,6 +44,12 @@ export type GapLinha = {
   carga_pendente: boolean;
   fonte_denominador?: string;
   raro?: boolean;
+  numerator_evidence_level?: EvidenceLevel;
+  denominator_evidence_level?: EvidenceLevel;
+  gap_evidence_level?: string;
+  gap_decision_grade?: boolean;
+  clinical_match_confirmed?: boolean;
+  gap_interpretation?: string;
 };
 
 export type MunResumo = {
@@ -50,14 +64,22 @@ export type DashboardData = {
   atualizado_em: string;
   nacional: {
     elegiveis: number;
+    oportunidades_estimadas: number;
     pessoas_vacinadas: number;
     gap: number | null;
+    gap_pessoas: number | null;
+    gap_aproximado_legado?: number | null;
+    gap_pessoas_disponivel?: boolean;
+    nota_oportunidades?: string;
     taxa_cid_preenchido: number | null;
     total_doses: number;
     fixture?: boolean;
     fonte_numerador?: string;
     fonte_tipo?: string;
     sem_cid_na_fonte?: boolean;
+    evidence_level_total?: EvidenceLevel;
+    evidence_level_clinical_breakdown?: EvidenceLevel;
+    decision_grade_clinical_breakdown?: boolean;
   };
   por_condicao: CondicaoResumo[];
   por_uf: UfResumo[];
