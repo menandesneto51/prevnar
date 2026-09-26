@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "purpose": "Official data mapping plan for respiratory immunization monitoring.",
+  "sources": [
+    {
+      "source_id": "pni_vvsr_maternal",
+      "immunobiologic_id": "vvsr_materna",
+      "source_family": "PNI/RNDS",
+      "immunobiologic_codes": [
+        "108"
+      ],
+      "strategy_codes": [
+        "1"
+      ],
+      "dose_codes": [
+        "9"
+      ],
+      "required_attendance_group_codes": [
+        "001801"
+      ],
+      "required_fields": [
+        "patient_id_hash",
+        "immunobiologic_code",
+        "strategy_code",
+        "dose_code",
+        "attendance_group_code",
+        "administration_date",
+        "municipality_code",
+        "establishment_cnes"
+      ],
+      "desired_fields": [
+        "gestational_age_weeks",
+        "maternal_condition",
+        "source_system",
+        "manufacturer",
+        "batch"
+      ],
+      "decision_grade_constraints": [
+        "Clinical eligibility cannot be inferred from age-only RNDS entry rule.",
+        "Gestational-age-specific opportunity metrics require gestational age from an authorized source."
+      ]
+    },
+    {
+      "source_id": "pni_nirsevimab",
+      "immunobiologic_id": "nirsevimab",
+      "source_family": "PNI/RNDS",
+      "immunobiologic_codes": [
+        "115",
+        "116"
+      ],
+      "strategy_codes": [
+        "2",
+        "8"
+      ],
+      "dose_codes": [
+        "59",
+        "60"
+      ],
+      "required_fields": [
+        "patient_id_hash",
+        "immunobiologic_code",
+        "strategy_code",
+        "dose_code",
+        "administration_date",
+        "municipality_code",
+        "establishment_cnes"
+      ],
+      "desired_fields": [
+        "attendance_group_code",
+        "cid10",
+        "weight_kg",
+        "birth_gestational_age",
+        "source_system",
+        "manufacturer",
+        "batch"
+      ],
+      "decision_grade_constraints": [
+        "Dose-code interpretation must respect presentation and number of syringes.",
+        "Prematurity/comorbidity eligibility requires compatible clinical source or validated PNI group/CID proxy.",
+        "Private-service strategy 8 must not be merged silently with SUS strategy 2."
+      ]
+    }
+  ]
+}
