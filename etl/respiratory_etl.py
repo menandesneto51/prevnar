@@ -21,6 +21,7 @@ from provenance import write_manifest
 
 REGISTRY_PATH = REF / "immunobiologic_registry.json"
 CACHE = MART / "_cache" / "pni_respiratory"
+WEB_PUBLIC = Path(__file__).resolve().parents[1] / "web" / "public" / "data"
 
 
 def _load_registry() -> dict[str, dict[str, Any]]:
@@ -321,8 +322,14 @@ def collect_api(*, max_pages: int | None = None) -> dict[str, Any]:
         "vvsr_materna": result["vvsr_materna"],
         "nirsevimab": result["nirsevimab"],
     }
+    dashboard_json = json.dumps(summary, ensure_ascii=False, indent=2)
     (MART / "respiratory_dashboard.json").write_text(
-        json.dumps(summary, ensure_ascii=False, indent=2),
+        dashboard_json,
+        encoding="utf-8",
+    )
+    WEB_PUBLIC.mkdir(parents=True, exist_ok=True)
+    (WEB_PUBLIC / "respiratory_dashboard.json").write_text(
+        dashboard_json,
         encoding="utf-8",
     )
     return summary
