@@ -60,6 +60,20 @@ def test_maternal_rsv_does_not_repeat_routine_dose_same_pregnancy() -> None:
     assert pathway["recommendation"] == "do_not_repeat_routine_dose"
 
 
+def test_maternal_rsv_early_administered_is_not_repeated() -> None:
+    result = evaluate_operational(
+        "vvsr_materna",
+        age_months=0,
+        gestational_age_weeks=26,
+        already_administered_this_pregnancy=True,
+        on_date=TODAY,
+    )
+    pathway = result["pathways"][0]
+    assert pathway["eligible"] is False
+    assert pathway["recommendation"] == "do_not_repeat_routine_dose"
+    assert pathway["reason"] == "early_dose_already_administered_monitor_no_repeat"
+
+
 def test_maternal_rsv_unknown_history_requires_review() -> None:
     result = evaluate_operational(
         "vvsr_materna",
@@ -141,7 +155,7 @@ def test_prematurity_only_no_longer_qualifies_at_six_months() -> None:
     assert pathway["reason"] == "eligibility_criteria_not_met"
 
 
-def test_nirsevimab_outside_season_requires_review_not_auto_dose() -> None:
+def test_premature_nirsevimab_is_year_round() -> None:
     result = evaluate_operational(
         "nirsevimab",
         age_months=3,
@@ -149,6 +163,23 @@ def test_nirsevimab_outside_season_requires_review_not_auto_dose() -> None:
         eligible_comorbidity=False,
         weight_kg=4,
         vsr_season_number=1,
+        in_vsr_season=False,
+        on_date=TODAY,
+    )
+    pathway = result["pathways"][0]
+    assert pathway["eligible"] is True
+    assert pathway["requires_review"] is False
+    assert pathway["dose"]["dose_mg"] == 50
+
+
+def test_comorbidity_only_outside_season_requires_review() -> None:
+    result = evaluate_operational(
+        "nirsevimab",
+        age_months=18,
+        birth_gestational_age_days=40 * 7,
+        eligible_comorbidity=True,
+        weight_kg=10,
+        vsr_season_number=2,
         in_vsr_season=False,
         on_date=TODAY,
     )
