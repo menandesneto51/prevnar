@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Kpi, SituacaoBadge, fmtInt, fmtPct } from "@/components/Kpi";
+import { EvidenceBadge, Kpi, SituacaoBadge, fmtInt, fmtPct } from "@/components/Kpi";
 import { UfMunicipalityMap } from "@/components/UfMunicipalityMap";
 import { getDashboard, getGapLinhas } from "@/lib/data";
 
@@ -38,19 +38,28 @@ export default async function UfDetailPage({
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3">
-        <Kpi label="Elegíveis (soma condições)" value={fmtInt(resumo.elegiveis)} />
+        <Kpi
+          label="Oportunidades estimadas"
+          value={fmtInt(resumo.oportunidades_estimadas ?? resumo.elegiveis)}
+          hint="Soma por condição; pode haver sobreposição"
+        />
         <Kpi
           label="Vacinados"
           value={fmtInt(resumo.pessoas_vacinadas_consolidado ?? resumo.pessoas_vacinadas)}
           tone="accent"
         />
-        <Kpi label="Gap" value={fmtInt(resumo.gap)} tone="warn" />
+        <Kpi
+          label="Gap de pessoas únicas"
+          value={resumo.gap_pessoas == null ? "não disponível" : fmtInt(resumo.gap_pessoas)}
+          hint="Exige denominador deduplicado"
+          tone="warn"
+        />
       </div>
 
       <UfMunicipalityMap
         uf={uf}
         nome={meta.nome}
-        parentGap={resumo.gap}
+        parentGap={resumo.oportunidades_estimadas ?? resumo.elegiveis}
         municipios={data.por_municipio || []}
       />
 
@@ -62,7 +71,8 @@ export default async function UfDetailPage({
               <th>Sit.</th>
               <th>Elegíveis</th>
               <th>Vacinados</th>
-              <th>Gap</th>
+              <th>Oportunidade*</th>
+              <th>Evidência</th>
               <th>Cobertura</th>
             </tr>
           </thead>
@@ -85,12 +95,22 @@ export default async function UfDetailPage({
                 <td className="kpi-value text-[var(--warn)]">
                   {r.gap === null ? "—" : fmtInt(r.gap)}
                 </td>
+                <td>
+                  <EvidenceBadge
+                    level={r.gap_evidence_level}
+                    decisionGrade={r.gap_decision_grade}
+                  />
+                </td>
                 <td>{r.exibe_cobertura ? fmtPct(r.cobertura_pct) : "—"}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      <p className="text-xs text-[var(--muted)]">
+        * Valor por condição. Se o numerador clínico for proxy ou o denominador for estimado,
+        interpretar conforme o nível de evidência; não equivale ao gap de pessoas únicas da UF.
+      </p>
     </div>
   );
 }
