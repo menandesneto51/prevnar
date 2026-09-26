@@ -6,24 +6,24 @@ Evoluir o Radar VPC20 para plataforma reutilizável de inteligência vacinal, pr
 
 ## P0 — Fundação
 
-- [ ] substituir conceito de gap nacional por oportunidades estimadas quando não houver deduplicação;
-- [ ] adicionar `evidence_level` aos indicadores;
-- [ ] adicionar registro de proveniência;
-- [ ] adicionar freshness por fonte;
-- [ ] implantar testes Python e TypeScript;
-- [ ] criar legal/privacy gate;
-- [ ] remover `verify=False` como fallback silencioso;
-- [ ] tornar execução Python portável;
-- [ ] autenticar rotas server-side antes de qualquer exposição externa.
+- [x] substituir conceito de gap nacional por oportunidades estimadas quando não houver deduplicação;
+- [x] adicionar `evidence_level` aos indicadores;
+- [x] adicionar registro de proveniência;
+- [x] adicionar freshness por fonte;
+- [x] implantar testes Python e validação TypeScript por lint/build;
+- [x] criar legal/privacy gate;
+- [x] remover `verify=False` como fallback silencioso;
+- [x] tornar execução Python portável;
+- [x] autenticar rotas server-side antes de qualquer exposição externa.
 
 ## P1 — Motor configurável
 
-- [ ] `vaccine_registry.json`;
-- [ ] `normative_rules.json`;
-- [ ] motor de elegibilidade versionado;
-- [ ] motor de esquema vacinal;
-- [ ] versionamento de população-alvo;
-- [ ] separação observado/proxy/estimado/manual/demonstrativo.
+- [x] `vaccine_registry.json`;
+- [x] `normative_rules.json`;
+- [x] motor de elegibilidade versionado;
+- [x] motor de esquema vacinal;
+- [x] versionamento de população-alvo;
+- [x] separação observado/proxy/estimado/manual/demonstrativo.
 
 ## P2 — Agentes
 
@@ -33,7 +33,7 @@ Evoluir o Radar VPC20 para plataforma reutilizável de inteligência vacinal, pr
 - [ ] Legal & Privacy Agent;
 - [ ] Intelligence Agent;
 - [ ] Action Agent;
-- [ ] Release Guardian.
+- [x] Release Guardian.
 
 ## P3 — Inteligência
 
