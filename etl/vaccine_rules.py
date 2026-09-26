@@ -115,10 +115,58 @@ def _rule_immunobiologic_id(rule: dict[str, Any]) -> str:
     )
 
 
+def geographic_scope_applies(
+    rule: dict[str, Any],
+    geographic_context: dict[str, Any] | None = None,
+) -> bool:
+    scope = rule.get("geographic_scope") or {"type": "national", "codes": ["BR"]}
+    scope_type = str(scope.get("type") or "national")
+    codes = {str(x) for x in (scope.get("codes") or [])}
+
+    if scope_type == "national":
+        return True
+    if not geographic_context:
+        return False
+
+    if scope_type == "state":
+        candidates = {
+            str(geographic_context.get("state") or ""),
+            str(geographic_context.get("uf") or ""),
+            str(geographic_context.get("state_code") or ""),
+        }
+        return bool(codes & {x for x in candidates if x})
+
+    if scope_type == "municipality":
+        candidates = {
+            str(geographic_context.get("municipality") or ""),
+            str(geographic_context.get("municipality_code") or ""),
+            str(geographic_context.get("ibge_municipality_code") or ""),
+        }
+        return bool(codes & {x for x in candidates if x})
+
+    if scope_type == "facility":
+        candidates = {
+            str(geographic_context.get("facility") or ""),
+            str(geographic_context.get("cnes") or ""),
+        }
+        return bool(codes & {x for x in candidates if x})
+
+    if scope_type == "polygon":
+        polygon_ids = {
+            str(x)
+            for x in (geographic_context.get("polygon_ids") or [])
+            if str(x)
+        }
+        return bool(codes & polygon_ids)
+
+    return False
+
+
 def active_rules(
     immunobiologic_id: str,
     *,
     on_date: date | None = None,
+    geographic_context: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     day = on_date or date.today()
     return [
@@ -126,6 +174,7 @@ def active_rules(
         for row in normative_rules().get("rules", [])
         if _rule_immunobiologic_id(row) == immunobiologic_id
         and rule_is_active(row, day)
+        and geographic_scope_applies(row, geographic_context)
     ]
 
 
@@ -894,6 +943,7 @@ def evaluate_operational(
     menacwy_adolescent_dose_received: bool | None = None,
     yellow_fever_history: str = "unknown",
     days_since_last_yellow_fever_dose: int | None = None,
+    geographic_context: dict[str, Any] | None = None,
     on_date: date | None = None,
 ) -> dict[str, Any]:
     """Avalia caminhos configurados para suporte operacional.
@@ -905,7 +955,11 @@ def evaluate_operational(
     item = get_immunobiologic(immunobiologic_id)
     pathways: list[dict[str, Any]] = []
 
-    for rule in active_rules(immunobiologic_id, on_date=day):
+    for rule in active_rules(
+        immunobiologic_id,
+        on_date=day,
+        geographic_context=geographic_context,
+    ):
         if rule.get("rule_type") != "eligibility_and_schedule":
             continue
         strategy = (rule.get("population") or {}).get("strategy")
