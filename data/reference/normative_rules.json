@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "updated_at": "2026-09-26",
   "interpretation": "Decision support for surveillance and operational monitoring. Does not replace clinical assessment or official PNI guidance.",
   "rules": [
@@ -192,11 +192,36 @@
       "immunobiologic_id": "vpc20"
     },
     {
-      "rule_id": "nirsevimab_onboarding_2026",
+      "rule_id": "vvsr_materna_2026",
+      "immunobiologic_id": "vvsr_materna",
+      "rule_type": "eligibility_and_schedule",
+      "status": "active",
+      "effective_from": "2026-01-30",
+      "effective_until": null,
+      "normative_acts": [
+        "portaria_sectics_14_2025_vvsr_gestante",
+        "estrategia_vvsr_gestantes_2026",
+        "calendario_nacional_2026"
+      ],
+      "population": {
+        "strategy": "maternal_rsv",
+        "pregnancy_required": true,
+        "min_gestational_age_weeks": 28,
+        "maternal_age_restriction": false
+      },
+      "schedule": {
+        "doses_per_pregnancy": 1,
+        "repeat_each_pregnancy": true,
+        "simultaneous_with_other_calendar_vaccines": true
+      },
+      "note": "Uma dose a partir da 28ª semana em cada gestação. Não repetir se já administrada na mesma gestação, salvo manejo específico de erro de imunização conforme norma."
+    },
+    {
+      "rule_id": "nirsevimab_vsr_2026",
       "immunobiologic_id": "nirsevimab",
-      "rule_type": "onboarding_metadata",
-      "status": "draft",
-      "effective_from": "2026-02-19",
+      "rule_type": "eligibility_and_schedule",
+      "status": "active",
+      "effective_from": "2026-02-01",
       "effective_until": null,
       "normative_acts": [
         "nt_10_2026_nirsevimab",
@@ -204,7 +229,76 @@
         "ntc_74_2026_nirsevimab",
         "nt_89_2026_nirsevimab"
       ],
-      "note": "Regra de onboarding apenas. Não contém elegibilidade automatizada nem dose; ativação clínica depende da issue #13."
+      "population": {
+        "strategy": "pediatric_rsv_passive",
+        "premature_max_gestational_age_days": 258,
+        "premature_max_age_months_exclusive": 6,
+        "comorbidity_max_age_months_exclusive": 24,
+        "season_months": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "dosing": [
+        {
+          "season_number": 1,
+          "weight_kg_max_exclusive": 5,
+          "dose_mg": 50,
+          "volume_ml": 0.5,
+          "injections": 1
+        },
+        {
+          "season_number": 1,
+          "weight_kg_min": 5,
+          "dose_mg": 100,
+          "volume_ml": 1,
+          "injections": 1
+        },
+        {
+          "season_number_min": 2,
+          "eligible_comorbidity_required": true,
+          "dose_mg": 200,
+          "volume_ml": 2,
+          "injections": 2,
+          "injection_volume_ml": 1
+        }
+      ],
+      "safety": {
+        "not_combine_two_50mg_syringes_to_make_100mg": true,
+        "two_100mg_injections_for_200mg_allowed": true
+      },
+      "note": "Automação restrita aos cenários de elegibilidade, sazonalidade e dose claramente estruturados. Fora da sazonalidade ou com dados incompletos, requer revisão."
+    },
+    {
+      "rule_id": "influenza_onboarding_2026",
+      "immunobiologic_id": "influenza",
+      "rule_type": "onboarding_metadata",
+      "status": "draft",
+      "effective_from": "2026-01-01",
+      "effective_until": null,
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_24_2026_influenza"
+      ],
+      "note": "Aguardando mapeamento de códigos, estratégias e regras por grupo antes de ativação automática."
+    },
+    {
+      "rule_id": "covid19_onboarding_2026",
+      "immunobiologic_id": "covid19",
+      "rule_type": "onboarding_metadata",
+      "status": "draft",
+      "effective_from": "2026-01-01",
+      "effective_until": null,
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_91_2026_covid"
+      ],
+      "note": "Aguardando estruturação por produto, faixa etária, histórico e grupo especial antes de ativação automática."
     }
   ]
 }
