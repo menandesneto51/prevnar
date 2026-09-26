@@ -931,6 +931,143 @@ def _evaluate_yellow_fever(
     return None
 
 
+def _evaluate_hpv4(
+    rule: dict[str, Any],
+    *,
+    age_months: int,
+    hpv_doses_received: int | None,
+    pregnant: bool | None,
+) -> dict[str, Any] | None:
+    population = rule.get("population") or {}
+    min_age = int(population.get("min_age_months") or 108)
+    max_age = int(population.get("max_age_months") or 179)
+    if not (min_age <= age_months <= max_age):
+        return None
+
+    if pregnant is True:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "hpv4_routine",
+            "eligible": False,
+            "requires_review": False,
+            "recommendation": "do_not_vaccinate_during_pregnancy",
+            "reason": "pregnancy_contraindication",
+        }
+
+    if hpv_doses_received is None:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "hpv4_routine",
+            "eligible": True,
+            "requires_review": True,
+            "recommendation": "verify_hpv_vaccination_history",
+        }
+
+    if hpv_doses_received >= 1:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "hpv4_routine",
+            "eligible": False,
+            "requires_review": False,
+            "recommendation": "routine_schedule_complete",
+        }
+
+    return {
+        "rule_id": rule["rule_id"],
+        "pathway": "hpv4_routine",
+        "eligible": True,
+        "requires_review": False,
+        "recommendation": "one_hpv4_dose",
+        "schedule": rule.get("schedule"),
+    }
+
+
+def _evaluate_mmr(
+    rule: dict[str, Any],
+    *,
+    age_months: int,
+    mmr_doses_received: int | None,
+    is_healthcare_worker: bool | None,
+) -> dict[str, Any] | None:
+    schedule = rule.get("schedule") or {}
+    min_interval = int(schedule.get("min_interval_between_doses_days") or 30)
+
+    if age_months < 12:
+        # Dose zero/bloqueio são tratados por regras próprias.
+        return None
+
+    if mmr_doses_received is None:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "mmr_routine",
+            "eligible": True,
+            "requires_review": True,
+            "recommendation": "verify_mmr_vaccination_history",
+        }
+
+    if is_healthcare_worker is True:
+        required = int(schedule.get("healthcare_worker_required_total_doses") or 2)
+        remaining = max(0, required - mmr_doses_received)
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "mmr_healthcare_worker",
+            "eligible": remaining > 0,
+            "requires_review": False,
+            "recommendation": (
+                "complete_mmr_two_dose_schedule"
+                if remaining > 0
+                else "routine_schedule_complete"
+            ),
+            "required_total_doses": required,
+            "remaining_doses": remaining,
+            "min_interval_days": min_interval,
+        }
+
+    age_years = age_months / 12
+    if age_years < 30:
+        required = int(schedule.get("required_total_doses_through_age_29") or 2)
+        remaining = max(0, required - mmr_doses_received)
+        payload = {
+            "rule_id": rule["rule_id"],
+            "pathway": "mmr_routine_under_30",
+            "eligible": remaining > 0,
+            "requires_review": False,
+            "recommendation": (
+                "complete_mmr_two_dose_schedule"
+                if remaining > 0
+                else "routine_schedule_complete"
+            ),
+            "required_total_doses": required,
+            "remaining_doses": remaining,
+            "min_interval_days": min_interval,
+        }
+        if 12 <= age_months < 15 and mmr_doses_received == 1:
+            payload["recommendation"] = "second_mmr_component_dose_at_15_months"
+            payload["target_age_months"] = int(
+                schedule.get("child_second_dose_age_months") or 15
+            )
+        return payload
+
+    if age_years < 60:
+        required = int(schedule.get("required_total_doses_age_30_59") or 1)
+        remaining = max(0, required - mmr_doses_received)
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "mmr_routine_age_30_59",
+            "eligible": remaining > 0,
+            "requires_review": False,
+            "recommendation": (
+                "one_mmr_dose"
+                if remaining > 0
+                else "routine_schedule_complete"
+            ),
+            "required_total_doses": required,
+            "remaining_doses": remaining,
+        }
+
+    return None
+
+
 def evaluate_operational(
     immunobiologic_id: str,
     *,
@@ -950,6 +1087,10 @@ def evaluate_operational(
     menacwy_adolescent_dose_received: bool | None = None,
     yellow_fever_history: str = "unknown",
     days_since_last_yellow_fever_dose: int | None = None,
+    hpv_doses_received: int | None = None,
+    pregnant: bool | None = None,
+    mmr_doses_received: int | None = None,
+    is_healthcare_worker: bool | None = None,
     geographic_context: dict[str, Any] | None = None,
     on_date: date | None = None,
 ) -> dict[str, Any]:
@@ -1018,6 +1159,20 @@ def evaluate_operational(
                 age_months=age_months,
                 yellow_fever_history=yellow_fever_history,
                 days_since_last_yellow_fever_dose=days_since_last_yellow_fever_dose,
+            )
+        elif immunobiologic_id == "hpv4" and strategy == "routine_hpv4":
+            result = _evaluate_hpv4(
+                rule,
+                age_months=age_months,
+                hpv_doses_received=hpv_doses_received,
+                pregnant=pregnant,
+            )
+        elif immunobiologic_id == "triplice_viral" and strategy == "routine_mmr":
+            result = _evaluate_mmr(
+                rule,
+                age_months=age_months,
+                mmr_doses_received=mmr_doses_received,
+                is_healthcare_worker=is_healthcare_worker,
             )
 
         if result:
