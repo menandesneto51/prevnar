@@ -7,6 +7,7 @@
 | [GOVERNANCA_LEGAL.md](GOVERNANCA_LEGAL.md) | Base legal/regulatória federal, SUS/PNI, RNDS, LGPD e Mato Grosso |
 | [GOVERNANCA_DADOS_LGPD.md](GOVERNANCA_DADOS_LGPD.md) | Privacidade, classificação, ambientes, minimização e publicação |
 | [METODOLOGIA_EVIDENCIA.md](METODOLOGIA_EVIDENCIA.md) | Definições de gap, níveis de evidência e quality gate |
+| [GOVERNANCA_RNDS_DADOS_VACINAIS.md](GOVERNANCA_RNDS_DADOS_VACINAIS.md) | Governança RNDS, LGPD, linkage e publicação de dados vacinais |
 | [REGISTRO_FONTES_E_PROVENIENCIA.md](REGISTRO_FONTES_E_PROVENIENCIA.md) | Proveniência e metadados obrigatórios das fontes |
 | [RIPD_TRIAGEM.md](RIPD_TRIAGEM.md) | Pré-triagem para necessidade de RIPD |
 | [CHECKLIST_CONFORMIDADE.md](CHECKLIST_CONFORMIDADE.md) | Checklist de fonte, indicador e release |
