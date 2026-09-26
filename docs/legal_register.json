@@ -412,6 +412,22 @@
       "published_at": "2025-06-26",
       "effective_from": "2025-06-26",
       "official_url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/m/meningite/notas-tecnicas"
+    },
+    {
+      "id": "nt_46_2025_triplice_dupla_registro",
+      "type": "nota_tecnica",
+      "number": "46/2025-CGICI/DPNI/SVSA/MS",
+      "scope": "federal",
+      "topic": [
+        "triplice_viral",
+        "dupla_viral",
+        "registro",
+        "bloqueio",
+        "intensificacao"
+      ],
+      "published_at": "2025-09-01",
+      "effective_from": "2025-09-01",
+      "official_url": "https://www.gov.br/saude/pt-br/composicao/svsa/pni/notas-tecnicas/nota-tecnica-no-46-2025-cgici-dpni-svsa-ms"
     }
   ]
 }
