@@ -1,0 +1,99 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "domain": "respiratory_immunization",
+  "indicators": [
+    {
+      "id": "vvsr_doses_administered",
+      "immunobiologic_id": "vvsr_materna",
+      "name": "Doses VVSR materna administradas",
+      "numerator": "COUNT valid administrations code 108 / strategy 1 / dose 9",
+      "denominator": null,
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "vvsr_gestantes_vacinadas",
+      "immunobiologic_id": "vvsr_materna",
+      "name": "Gestantes vacinadas com VVSR",
+      "numerator": "COUNT DISTINCT patient_id_hash among valid administrations",
+      "denominator": null,
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "vvsr_opportunity_28w",
+      "immunobiologic_id": "vvsr_materna",
+      "name": "Oportunidade de vacinação VVSR a partir da 28ª semana",
+      "numerator": "eligible pregnant persons not yet vaccinated in current pregnancy",
+      "denominator": "pregnant persons >=28 weeks in compatible authorized prenatal source",
+      "evidence_level": "E4",
+      "decision_grade": false,
+      "status": "requires_denominator_and_linkage",
+      "note": "Cannot be derived from PNI age rule alone."
+    },
+    {
+      "id": "vvsr_early_administration",
+      "immunobiologic_id": "vvsr_materna",
+      "name": "Administração VVSR antes da 28ª semana",
+      "numerator": "administrations with gestational_age_weeks < 28",
+      "denominator": "all VVSR administrations with known gestational age",
+      "evidence_level": "E4",
+      "decision_grade": false,
+      "status": "requires_gestational_age_linkage"
+    },
+    {
+      "id": "nirsevimab_doses_administered",
+      "immunobiologic_id": "nirsevimab",
+      "name": "Administrações de nirsevimabe",
+      "numerator": "COUNT administrations codes 115/116",
+      "denominator": null,
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "nirsevimab_one_unit",
+      "immunobiologic_id": "nirsevimab",
+      "name": "Administrações P/T1",
+      "numerator": "COUNT dose_code 59",
+      "denominator": null,
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "nirsevimab_two_units",
+      "immunobiologic_id": "nirsevimab",
+      "name": "Administrações P/T2",
+      "numerator": "COUNT dose_code 60",
+      "denominator": null,
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "nirsevimab_private_share",
+      "immunobiologic_id": "nirsevimab",
+      "name": "Participação de registros em serviço privado",
+      "numerator": "COUNT strategy_code 8",
+      "denominator": "COUNT strategy_code in {2,8}",
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "nirsevimab_eligibility_coverage",
+      "immunobiologic_id": "nirsevimab",
+      "name": "Cobertura em elegíveis para nirsevimabe",
+      "numerator": "eligible unique recipients",
+      "denominator": "eligible unique children from compatible clinical source",
+      "evidence_level": "E4",
+      "decision_grade": false,
+      "status": "requires_clinical_denominator",
+      "note": "PNI group/CID may support proxy analysis but not confirmed unique-person denominator without compatible linkage."
+    }
+  ]
+}
