@@ -292,22 +292,46 @@ def run(refresh_sources: bool = True) -> dict:
     sit1 = load_all()
     denoms = apply_to_denominadores(denoms_payload["linhas"], sit1)
 
+    source_provenance = {
+        "pni": numerador.get("provenance"),
+        "ibge_population": denoms_payload.get("provenance"),
+    }
     gap_rows = build_gap(denoms, numerador, condicoes)
-    save_json(MART / "mart_gap_condicao_uf.json", {
-        "atualizado_em": datetime.now(timezone.utc).isoformat(),
-        "linhas": gap_rows,
-    })
+    save_json(
+        MART / "mart_gap_condicao_uf.json",
+        {
+            "atualizado_em": datetime.now(timezone.utc).isoformat(),
+            "provenance": source_provenance,
+            "linhas": gap_rows,
+        },
+    )
 
     summary = summarize(gap_rows, numerador, condicoes)
     summary["ufs"] = ufs
     summary["condicoes"] = [c for c in condicoes if c.get("ativo_v1")]
+    summary["provenance"] = source_provenance
+    freshness = {
+        source_id: (meta or {}).get("freshness")
+        for source_id, meta in source_provenance.items()
+        if meta
+    }
+    summary["qualidade"]["freshness"] = freshness
+    summary["qualidade"]["freshness_alerta"] = any(
+        isinstance(item, dict)
+        and item.get("critical_for_decision")
+        and item.get("status") == "desatualizado"
+        for item in freshness.values()
+    )
     save_json(MART / "dashboard.json", summary)
 
     # espelhar para o app Next.js
     web_public = Path(__file__).resolve().parents[1] / "web" / "public" / "data"
     web_public.mkdir(parents=True, exist_ok=True)
     save_json(web_public / "dashboard.json", summary)
-    save_json(web_public / "mart_gap_condicao_uf.json", {"linhas": gap_rows})
+    save_json(
+        web_public / "mart_gap_condicao_uf.json",
+        {"provenance": source_provenance, "linhas": gap_rows},
+    )
     save_json(
         web_public / "por_municipio.json",
         {
