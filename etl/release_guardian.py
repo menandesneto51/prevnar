@@ -20,6 +20,7 @@ from pathlib import Path
 from typing import Iterable
 
 from paths import MART, REF, ROOT
+from vaccine_rules import validate_registry_integrity
 
 
 ALLOWED_EVIDENCE = {"E1", "E2", "E3", "E4", "E5"}
@@ -199,6 +200,27 @@ def check_source_registry(findings: list[Finding]) -> None:
                 f"Esperado 0 <= attention < stale para {sid}.",
                 path,
             )
+
+
+def check_vaccine_registry(findings: list[Finding]) -> None:
+    try:
+        errors = validate_registry_integrity()
+    except Exception as exc:  # noqa: BLE001
+        _finding(
+            findings,
+            "error",
+            "vaccine_registry_invalid",
+            f"Falha ao validar vaccine/normative registry: {exc}",
+        )
+        return
+    for message in errors:
+        _finding(
+            findings,
+            "error",
+            "vaccine_registry_reference_error",
+            message,
+            REF / "normative_rules.json",
+        )
 
 
 def check_indicator_catalog(findings: list[Finding]) -> None:
@@ -386,6 +408,7 @@ def run_guardian(mode: str = "ci") -> tuple[list[Finding], dict]:
     findings: list[Finding] = []
     check_legal_register(findings)
     check_source_registry(findings)
+    check_vaccine_registry(findings)
     check_indicator_catalog(findings)
     check_dashboard_runtime(findings, mode)
     check_secrets_and_personal_data(findings)
