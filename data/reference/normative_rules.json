@@ -214,7 +214,7 @@
         "repeat_each_pregnancy": true,
         "simultaneous_with_other_calendar_vaccines": true
       },
-      "note": "Uma dose a partir da 28ª semana em cada gestação. Não repetir se já administrada na mesma gestação, salvo manejo específico de erro de imunização conforme norma."
+      "note": "Uma dose a partir da 28ª semana em cada gestação. Se administrada antes da 28ª semana, não repetir a dose; realizar monitoramento conforme orientação oficial."
     },
     {
       "rule_id": "nirsevimab_vsr_2026",
@@ -244,7 +244,9 @@
           6,
           7,
           8
-        ]
+        ],
+        "premature_administration": "year_round",
+        "comorbidity_administration": "vsr_season_only"
       },
       "dosing": [
         {
@@ -274,7 +276,7 @@
         "not_combine_two_50mg_syringes_to_make_100mg": true,
         "two_100mg_injections_for_200mg_allowed": true
       },
-      "note": "Automação restrita aos cenários de elegibilidade, sazonalidade e dose claramente estruturados. Fora da sazonalidade ou com dados incompletos, requer revisão."
+      "note": "Prematuros elegíveis: administração ao longo de todo o ano. Crianças com comorbidades: durante a sazonalidade do VSR (fevereiro a agosto), podendo alcançar segunda sazonalidade conforme critérios. Dose depende de peso e sazonalidade clínica aplicável."
     },
     {
       "rule_id": "influenza_onboarding_2026",
