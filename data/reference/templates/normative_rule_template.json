@@ -10,5 +10,12 @@
   "schedules": [],
   "special_schedules": [],
   "prior_history_rules": [],
-  "note": "Não ativar até validação normativa e epidemiológica."
+  "note": "Não ativar até validação normativa, epidemiológica, territorial, temporal e testes.",
+  "rule_context": "onboarding",
+  "geographic_scope": {
+    "type": "national",
+    "codes": [
+      "BR"
+    ]
+  }
 }
