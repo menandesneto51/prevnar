@@ -1,0 +1,23 @@
+---
+description: Regras obrigatórias de governança do PREVNAR
+alwaysApply: true
+---
+
+# PREVNAR
+
+1. Trate o Cursor como ambiente padrão de implementação.
+2. Antes de alterar indicador, leia:
+   - docs/METODOLOGIA_EVIDENCIA.md
+   - docs/REGISTRO_FONTES_E_PROVENIENCIA.md
+   - docs/GOVERNANCA_LEGAL.md
+   - docs/GOVERNANCA_DADOS_LGPD.md
+3. Nunca apresente proxy, estimativa, seed e observação como equivalentes.
+4. Todo indicador novo deve possuir source_id, evidence_level, method_version e limitations.
+5. Nenhuma regra de elegibilidade/esquema vacinal pode existir apenas hard-coded: associe a ato normativo versionado.
+6. Não versionar dados pessoais, sensíveis ou segredos.
+7. Não usar fixture/seed como fallback silencioso de produção.
+8. Alteração de fórmula exige teste e incremento de versão metodológica.
+9. Não calcular gap de pessoas únicas a partir da soma de denominadores sobrepostos.
+10. Endpoint que escreve dados ou executa ETL exige autenticação antes de ser exposto fora do DEV.
+11. Não desabilitar validação TLS como solução permanente.
+12. Toda release deve passar pelo Release Guardian definido em AGENTS.md.
