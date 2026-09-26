@@ -24,6 +24,7 @@ export default async function CustoPage() {
       gap_pessoas?: number | null;
       gap_pessoas_disponivel?: boolean;
       oportunidades_estimadas?: number;
+      elegiveis?: number;
       custo_teorico_oportunidades_brl?: number;
       ipca_ultimo?: { data?: string; valor?: string };
     };
@@ -47,7 +48,7 @@ export default async function CustoPage() {
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
         <Kpi
           label="Oportunidades estimadas"
-          value={fmtInt(k.oportunidades_estimadas)}
+          value={fmtInt(k.oportunidades_estimadas ?? k.elegiveis)}
           tone="warn"
         />
         <Kpi label="Preço BPS nominal" value={fmtBRL(k.preco_bps_nominal ?? k.preco_bps_vpc20)} />
