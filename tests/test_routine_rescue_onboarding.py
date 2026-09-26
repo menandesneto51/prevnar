@@ -1,0 +1,51 @@
+from __future__ import annotations
+
+import sys
+from datetime import date
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+ETL = ROOT / "etl"
+if str(ETL) not in sys.path:
+    sys.path.insert(0, str(ETL))
+
+from vaccine_rules import active_rules, get_immunobiologic, validate_registry_integrity
+
+
+TODAY = date(2026, 9, 26)
+
+
+def test_routine_rescue_registry_integrity() -> None:
+    assert validate_registry_integrity() == []
+
+
+def test_hpv_is_registered_but_not_active() -> None:
+    item = get_immunobiologic("hpv4")
+    assert item["type"] == "vaccine"
+    assert item["onboarding_status"] == "normative_discovery"
+    assert active_rules("hpv4", on_date=TODAY) == []
+
+
+def test_menacwy_is_registered_but_not_active() -> None:
+    item = get_immunobiologic("menacwy")
+    assert item["type"] == "vaccine"
+    assert active_rules("menacwy", on_date=TODAY) == []
+
+
+def test_yellow_fever_is_registered_but_not_active() -> None:
+    item = get_immunobiologic("febre_amarela")
+    assert item["type"] == "vaccine"
+    assert active_rules("febre_amarela", on_date=TODAY) == []
+
+
+def test_mmr_is_registered_but_not_active() -> None:
+    item = get_immunobiologic("triplice_viral")
+    assert item["type"] == "vaccine"
+    assert active_rules("triplice_viral", on_date=TODAY) == []
+
+
+def test_mmr_note_requires_context_specific_rules() -> None:
+    item = get_immunobiologic("triplice_viral")
+    note = item["note"].lower()
+    assert "dose zero" in note
+    assert "território" in note or "territorial" in note
