@@ -61,8 +61,12 @@ export default async function CondicoesPage() {
                 </td>
                 <td>
                   <EvidenceBadge
-                    level={c.gap_evidence_level}
-                    decisionGrade={c.gap_decision_grade}
+                    level={
+                      c.gap_evidence_level ??
+                      data.nacional.evidence_level_clinical_breakdown ??
+                      (data.nacional.sem_cid_na_fonte ? "E2" : "E1")
+                    }
+                    decisionGrade={c.gap_decision_grade ?? false}
                   />
                 </td>
                 <td>
