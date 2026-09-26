@@ -16,8 +16,8 @@ Nesta etapa, as entidades estão em estágios diferentes:
 
 - **MenACWY:** regra nacional de rotina ativa e mapeamento PNI parcial confirmado;
 - **Febre amarela:** regra nacional de rotina ativa e código PNI confirmado;
-- **Tríplice viral:** mapeamento parcial para bloqueio/intensificação; regra clínica geral permanece draft;
-- **HPV4:** permanece em onboarding, sem código PNI preenchido até confirmação nacional inequívoca.
+- **Tríplice viral:** regra nacional de rotina ativa; mapeamento parcial para bloqueio/intensificação; dose zero e estratégias territoriais permanecem separadas;
+- **HPV4:** regra nacional de rotina ativa para 9–14 anos; código PNI permanece pendente de confirmação nacional inequívoca.
 
 O objetivo é registrar corretamente:
 - atos normativos;
@@ -45,6 +45,16 @@ Antes de ativar regras:
 - vigência específica.
 
 Código SIES/estoque não deve ser reaproveitado como se fosse código PNI.
+
+### Regra nacional ativa — HPV4
+
+A regra `hpv4_routine_2026` estrutura:
+- meninas e meninos de 9 anos a 14 anos, 11 meses e 29 dias;
+- uma dose para não vacinados;
+- histórico desconhecido → verificar antes de recomendar;
+- gestação → não vacinar durante a gestação.
+
+O resgate de 15 a 19 anos e os grupos especiais (imunodeprimidos, vítimas de violência sexual, PrEP, PRR e outros grupos previstos em normas específicas) permanecem em regras separadas.
 
 ## MenACWY
 
@@ -116,6 +126,25 @@ O PREVNAR deve representar separadamente:
 - varredura;
 - recomendação para viajantes;
 - estratégias territoriais temporárias.
+
+### Regra nacional ativa — Tríplice viral
+
+A regra `triplice_viral_routine_2026` estrutura:
+- primeira dose pediátrica aos 12 meses;
+- segundo componente aos 15 meses;
+- até 29 anos: duas doses por histórico, intervalo mínimo de 30 dias;
+- 30 a 59 anos: pelo menos uma dose;
+- profissionais de saúde: duas doses independentemente da idade;
+- gestação: contraindicação;
+- imunossupressão grave: revisão especializada.
+
+A rotina nacional não absorve:
+- dose zero;
+- bloqueio;
+- varredura;
+- intensificação;
+- regras de viajantes;
+- ações territoriais.
 
 ### Regra territorial obrigatória
 
