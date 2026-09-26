@@ -80,6 +80,35 @@ def test_yellow_fever_age_5_to_59_unvaccinated_gets_one_standard_dose() -> None:
     assert pathway["recommendation"] == "one_standard_dose"
 
 
+def test_yellow_fever_unvaccinated_child_uses_two_dose_pediatric_schedule() -> None:
+    result = evaluate_operational(
+        "febre_amarela",
+        age_months=24,
+        yellow_fever_history="none",
+        on_date=TODAY,
+    )
+    pathway = result["pathways"][0]
+    assert pathway["eligible"] is True
+    assert pathway["requires_review"] is False
+    assert pathway["recommendation"] == "start_or_catch_up_two_dose_pediatric_schedule"
+    assert pathway["doses_remaining"] == 2
+    assert pathway["schedule"]["booster_age_months"] == 48
+    assert pathway["schedule"]["min_interval_days"] == 30
+
+
+def test_yellow_fever_unvaccinated_child_already_age_four_still_observes_min_interval() -> None:
+    result = evaluate_operational(
+        "febre_amarela",
+        age_months=50,
+        yellow_fever_history="none",
+        on_date=TODAY,
+    )
+    pathway = result["pathways"][0]
+    assert pathway["recommendation"] == "start_or_catch_up_two_dose_pediatric_schedule"
+    assert pathway["doses_remaining"] == 2
+    assert pathway["schedule"]["min_interval_days"] == 30
+
+
 def test_yellow_fever_one_dose_before_5_needs_booster_after_interval() -> None:
     result = evaluate_operational(
         "febre_amarela",
