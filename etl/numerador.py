@@ -370,6 +370,10 @@ def process_api(*, max_pages: int | None = None) -> dict:
         "taxa_cid_preenchido": 0.0,
         "sem_cid_na_fonte": True,
         "proxy_grupo_atendimento": True,
+        "evidence_level_total": "E1",
+        "decision_grade_total": True,
+        "evidence_level_clinical_breakdown": "E2",
+        "decision_grade_clinical_breakdown": False,
         "pessoas_por_uf": {uf: len(pids) for uf, pids in sorted(pessoas_uf.items())},
         "pessoas_por_municipio": {
             mun: len(pids) for mun, pids in sorted(pessoas_mun.items())
@@ -666,6 +670,12 @@ def process_csv(csv_path: Path | list[Path]) -> dict:
             "taxa_cid_preenchido": round(taxa_cid, 4),
             "sem_cid_na_fonte": not bool(col_cid),
             "proxy_grupo_atendimento": grupo_map_hits > 0,
+            "evidence_level_total": "E1",
+            "decision_grade_total": True,
+            "evidence_level_clinical_breakdown": (
+                "E1" if bool(col_cid) and grupo_map_hits == 0 else "E2"
+            ),
+            "decision_grade_clinical_breakdown": bool(col_cid) and grupo_map_hits == 0,
             "grupo_atendimento_mapeados": grupo_map_hits,
             "grupos_nao_mapeados": dict(
                 sorted(grupos_nao_mapeados.items(), key=lambda x: -x[1])[:50]
@@ -754,6 +764,10 @@ def write_fixture() -> dict:
             "sanity_divergencia_pct": 0.0,
             "evidence_level": "E5",
             "decision_grade": False,
+            "evidence_level_total": "E5",
+            "decision_grade_total": False,
+            "evidence_level_clinical_breakdown": "E5",
+            "decision_grade_clinical_breakdown": False,
             "nota": "Fixture demonstrativa (E5). Proibida para decisão operacional. Prefira API ou CSV em data/raw/.",
         }
     )
