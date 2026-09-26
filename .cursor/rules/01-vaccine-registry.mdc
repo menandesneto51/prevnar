@@ -1,0 +1,17 @@
+---
+description: Regras para vacinas, elegibilidade e normas do PREVNAR
+alwaysApply: true
+---
+
+# PREVNAR — Vaccine Registry
+
+1. `data/reference/vaccine_registry.json` é a fonte canônica para identidade da vacina e códigos PNI.
+2. `data/reference/normative_rules.json` é a fonte canônica para elegibilidade, esquema, transição e vigência.
+3. `docs/legal_register.json` deve conter todo ato normativo referenciado.
+4. Não adicionar regra clínica nova diretamente em Python/TypeScript sem registro normativo correspondente.
+5. `data/reference/vacinas_pni.json` é legado; não adicionar novas regras nele.
+6. Toda regra deve ter `rule_id`, vigência, `vaccine_id` e `normative_acts`.
+7. Em ambiguidade normativa, retorne `requires_review`; não invente esquema.
+8. Mudança normativa exige testes de regressão e revisão epidemiológica.
+9. O motor é de suporte operacional/vigilância e não substitui decisão clínica individual.
+10. Antes de release, executar o Release Guardian.
