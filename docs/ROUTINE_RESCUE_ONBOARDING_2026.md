@@ -12,7 +12,12 @@ Este documento organiza o onboarding inicial de:
 - febre amarela;
 - tríplice viral.
 
-Nesta etapa, as quatro entidades permanecem em **draft** para regras clínicas/operacionais.
+Nesta etapa, as entidades estão em estágios diferentes:
+
+- **MenACWY:** regra nacional de rotina ativa e mapeamento PNI parcial confirmado;
+- **Febre amarela:** regra nacional de rotina ativa e código PNI confirmado;
+- **Tríplice viral:** mapeamento parcial para bloqueio/intensificação; regra clínica geral permanece draft;
+- **HPV4:** permanece em onboarding, sem código PNI preenchido até confirmação nacional inequívoca.
 
 O objetivo é registrar corretamente:
 - atos normativos;
@@ -36,8 +41,10 @@ Antes de ativar regras:
 - grupos prioritários;
 - esquema por grupo;
 - faixa etária;
-- códigos PNI;
+- confirmar o código PNI no sistema nacional de registro vacinal;
 - vigência específica.
+
+Código SIES/estoque não deve ser reaproveitado como se fosse código PNI.
 
 ## MenACWY
 
@@ -50,12 +57,24 @@ A NT nº 50/2026 descreve metodologia para avaliação de indicadores da popula�
 
 **Não utilizar a NT nº 50/2026 como se fosse, isoladamente, regra de elegibilidade clínica.**
 
-O PREVNAR deverá separar:
+O PREVNAR separa:
 - regra de vacinação;
 - cálculo de cobertura;
 - coorte de nascimento;
 - reforço;
 - resgate.
+
+### Regra nacional ativa
+
+A regra `menacwy_routine_2026` cobre:
+- reforço infantil preferencialmente aos 12 meses e oportunamente até 4 anos, 11 meses e 29 dias;
+- intervalo mínimo de 60 dias após a última dose do esquema básico MenC;
+- uma dose ou reforço entre 11 e 14 anos, conforme situação vacinal.
+
+Mapeamento confirmado:
+- código PNI 74;
+- estratégia 1 — Rotina;
+- dose 38 — Reforço para o cenário descrito na NT 77/2025.
 
 ## Febre amarela
 
@@ -65,14 +84,21 @@ Fontes iniciais:
 
 A NT nº 6/2026 orienta a necessidade de dose padrão para pessoas que receberam dose fracionada na estratégia excepcional de 2018.
 
-Esse cenário deve virar uma regra separada de:
-- rotina;
-- viajantes;
-- bloqueio;
-- áreas com recomendação;
-- contraindicações/precauções.
+### Regra nacional ativa
 
-Não generalizar automaticamente a regra de 2018 para outras situações.
+A regra `febre_amarela_routine_2026` estrutura:
+- 9 meses a 4 anos: agenda pediátrica com dose e reforço;
+- a partir de 5 anos: decisão por histórico vacinal;
+- 5 a 59 anos sem histórico: uma dose padrão;
+- dose fracionada 2018 isolada: uma dose padrão de reforço;
+- >=60 anos: revisão individual de risco-benefício;
+- 6–8 meses: exceção condicionada a avaliação de risco-benefício.
+
+Mapeamento confirmado:
+- código PNI 14;
+- códigos de dose conhecidos para cobertura: 1, 9 e 36.
+
+A regra de 2018 não é generalizada para outras situações.
 
 ## Tríplice viral / sarampo
 
@@ -129,3 +155,20 @@ Quando não houver data final explícita, a regra permanece sob revisão periód
 6. criar indicadores;
 7. manter ações territoriais parametrizadas;
 8. passar pelo Release Guardian.
+
+
+## Modelo de escopo territorial
+
+Todas as regras agora possuem:
+- `rule_context`;
+- `geographic_scope`;
+- vigência.
+
+Ver `docs/RULE_SCOPE_MODEL.md`.
+
+Essa camada é obrigatória antes de ativar:
+- bloqueio;
+- intensificação;
+- campanha;
+- resposta municipal/estadual;
+- regra de viajantes.
