@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SituacaoBadge, fmtInt, fmtPct } from "@/components/Kpi";
+import { EvidenceBadge, SituacaoBadge, fmtInt, fmtPct } from "@/components/Kpi";
 import { getDashboard } from "@/lib/data";
 
 export default async function CondicoesPage() {
@@ -10,8 +10,8 @@ export default async function CondicoesPage() {
       <div>
         <h1 className="text-2xl font-semibold">Por condição</h1>
         <p className="mt-1 text-sm text-[var(--muted)]">
-          20 condições NT 52/2026 (prematuros fora do v1). Cobertura % apenas na Situação 1 com
-          cadastro carregado.
+          Condições clínicas monitoradas. Oportunidades por condição podem ser estimadas e a
+          classificação do vacinado pode ser confirmada (CID) ou proxy, conforme a fonte.
           {data.nacional.sem_cid_na_fonte ? (
             <>
               {" "}
@@ -34,7 +34,8 @@ export default async function CondicoesPage() {
               <th>Denominador</th>
               <th>Elegíveis</th>
               <th>Vacinados</th>
-              <th>Gap</th>
+              <th>Oportunidade*</th>
+              <th>Evidência</th>
               <th>Cobertura</th>
             </tr>
           </thead>
@@ -59,6 +60,12 @@ export default async function CondicoesPage() {
                   {c.gap === null ? "—" : fmtInt(c.gap)}
                 </td>
                 <td>
+                  <EvidenceBadge
+                    level={c.gap_evidence_level}
+                    decisionGrade={c.gap_decision_grade}
+                  />
+                </td>
+                <td>
                   {c.exibe_cobertura ? (
                     <span className="kpi-value">{fmtPct(c.cobertura_pct)}</span>
                   ) : (
@@ -70,6 +77,11 @@ export default async function CondicoesPage() {
           </tbody>
         </table>
       </div>
+      <p className="text-xs text-[var(--muted)]">
+        * Elegíveis − vacinados classificados na condição. Quando a classificação for proxy ou o
+        denominador for estimado, o valor deve ser interpretado conforme o nível de evidência e não
+        como contagem confirmada de pessoas únicas não vacinadas.
+      </p>
     </div>
   );
 }
