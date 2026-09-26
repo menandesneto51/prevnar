@@ -1,0 +1,20 @@
+{
+  "vaccine_id": "REPLACE_ME",
+  "name": "REPLACE_ME",
+  "display": "REPLACE_ME",
+  "pni_codes": [],
+  "active": true,
+  "monitored": true,
+  "strategies": [],
+  "normative_acts": [],
+  "pni_registration": {
+    "special_strategy_codes": [],
+    "observed_legacy_or_api_codes": [],
+    "dose_codes": {}
+  },
+  "monitoring": {
+    "default_data_start": null,
+    "note": ""
+  },
+  "note": ""
+}
