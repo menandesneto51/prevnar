@@ -58,7 +58,11 @@
           ]
         }
       },
-      "note": "Código 107. Estratégia especial normativa=2. Código 8 permanece como compatibilidade empírica da fonte e deve ser tratado separadamente da regra normativa."
+      "note": "Código 107. Estratégia especial normativa=2. Código 8 permanece como compatibilidade empírica da fonte e deve ser tratado separadamente da regra normativa.",
+      "monitoring": {
+        "default_data_start": "2026-05-01",
+        "note": "Janela analítica observacional configurável; não equivale à data de vigência de cada ato normativo."
+      }
     },
     {
       "vaccine_id": "vpc10",
