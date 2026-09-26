@@ -1,0 +1,17 @@
+{
+  "immunobiologic_id": "REPLACE_ME",
+  "type": "vaccine",
+  "name": "REPLACE_ME",
+  "display": "REPLACE_ME",
+  "active": true,
+  "monitored": false,
+  "onboarding_status": "normative_discovery",
+  "pni_codes": [],
+  "normative_acts": [],
+  "pni_registration": {},
+  "monitoring": {
+    "default_data_start": null,
+    "note": ""
+  },
+  "note": "Não ativar regra clínica antes de validação normativa, epidemiológica e testes."
+}
