@@ -119,6 +119,26 @@
       "attention_after_days": 90,
       "stale_after_days": 180,
       "critical_for_decision": true
+    },
+    {
+      "source_id": "pni_vvsr_maternal",
+      "name": "PNI/RNDS — VVSR materna",
+      "domain": "imunizacao_respiratoria_materna",
+      "cadence": "mensal_ou_superior",
+      "attention_after_days": 45,
+      "stale_after_days": 75,
+      "critical_for_decision": true,
+      "status": "mapped_not_ingested"
+    },
+    {
+      "source_id": "pni_nirsevimab",
+      "name": "PNI/RNDS — Nirsevimabe",
+      "domain": "imunizacao_passiva_vsr",
+      "cadence": "mensal_ou_superior",
+      "attention_after_days": 45,
+      "stale_after_days": 75,
+      "critical_for_decision": true,
+      "status": "mapped_not_ingested"
     }
   ]
 }
