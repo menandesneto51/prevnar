@@ -66,7 +66,8 @@ def build() -> dict:
             extracao = json.loads(p.read_text(encoding="utf-8"))
 
     nacional = (dash or {}).get("nacional") or {}
-    gap = nacional.get("gap") or 0
+    oportunidades = nacional.get("oportunidades_estimadas") or nacional.get("elegiveis") or 0
+    gap_pessoas = nacional.get("gap_pessoas")
     vac = nacional.get("pessoas_vacinadas") or 0
     doses = nacional.get("total_doses") or vac
     preco_nominal = float(bps.get("preco_unitario") or 180)
@@ -79,7 +80,7 @@ def build() -> dict:
     ipca_serie = (ipca.get("serie") or []) if isinstance(ipca, dict) else []
     ipca_fator = ipca_fator_acumulado(ipca_serie, ref_mes) if ipca_serie else 1.0
     preco = round(preco_nominal * ipca_fator, 2)
-    custo_gap = round(gap * preco, 2)
+    custo_teorico_oportunidades = round(oportunidades * preco, 2)
 
     # Monitoramento por UF
     sinan_uf: dict[str, int] = {}
@@ -154,12 +155,13 @@ def build() -> dict:
     if doses:
         esavi_100k = round(100000 * total_esavi / max(doses, 1), 2)
 
-    # Custo por UF
+    # Custo teórico bruto das oportunidades estimadas por UF.
+    # Não representa orçamento necessário nem pessoas únicas, pois há sobreposição entre condições.
     custo_rows = []
     for u in (dash or {}).get("por_uf") or []:
-        g = u.get("gap") or 0
+        opp = u.get("oportunidades_estimadas") or u.get("elegiveis") or 0
         pc = (siops.get("por_uf") or {}).get(u["uf"])
-        custo = round(g * preco, 2)
+        custo = round(opp * preco, 2)
         pop_u = pop.get(u["uf"]) or 0
         pressao = None
         if pc and pop_u:
@@ -168,7 +170,10 @@ def build() -> dict:
         custo_rows.append(
             {
                 "uf": u["uf"],
-                "gap": g,
+                "oportunidades_estimadas": opp,
+                "gap": None,
+                "gap_pessoas": None,
+                "custo_teorico_oportunidades_brl": custo,
                 "custo_gap_brl": custo,
                 "siops_per_capita": pc,
                 "pressao_fiscal_indice": pressao,
@@ -198,7 +203,10 @@ def build() -> dict:
         if ref_rs.exists():
             rs_src = json.loads(ref_rs.read_text(encoding="utf-8"))
     mun_rs = (rs_src or {}).get("municipios") or {}
-    eleg_uf = {u["uf"]: int(u.get("elegiveis") or 0) for u in (dash or {}).get("por_uf") or []}
+    eleg_uf = {
+        u["uf"]: int(u.get("oportunidades_estimadas") or u.get("elegiveis") or 0)
+        for u in (dash or {}).get("por_uf") or []
+    }
     pop_rs_uf: dict[str, int] = {}
     for m in mun_rs.values():
         uf = m.get("uf") or "ND"
@@ -235,11 +243,14 @@ def build() -> dict:
                 "n_municipios": reg.get("n_municipios"),
                 "pop_ibge_2022": pop_r,
                 "elegiveis_rateados": eleg_r,
+                "oportunidades_estimadas_rateadas": eleg_r,
                 "pessoas_vacinadas": vac_r,
-                "gap": max(0, eleg_r - vac_r),
+                "gap": None,
+                "gap_pessoas": None,
+                "gap_aproximado_legado": max(0, eleg_r - vac_r),
             }
         )
-    gap_rs_rows.sort(key=lambda x: -x["gap"])
+    gap_rs_rows.sort(key=lambda x: -x["oportunidades_estimadas_rateadas"])
 
     pop_br = sum(int(v or 0) for k, v in pop.items() if k != "ND")
     sinan_br = sum(sinan_uf.values())
@@ -250,10 +261,11 @@ def build() -> dict:
 
     # Valores atuais por indicador (para aba Indicadores)
     valores = {
-        "elegiveis": nacional.get("elegiveis"),
+        "elegiveis": oportunidades,
+        "oportunidades_estimadas": oportunidades,
         "pessoas_vacinadas_vpc20": vac,
         "pessoas_vacinadas_municipio": len(num.get("por_municipio") or []),
-        "gap_absoluto": gap,
+        "gap_absoluto": gap_pessoas,
         "cobertura_sit1": cob_sit1,
         "share_transicao_pneumo": len(serie.get("linhas") or []),
         "sies_distribuida_aplicada": (
@@ -271,11 +283,14 @@ def build() -> dict:
         "razao_doses_casos": (
             round(vac / max(sinan_br + sih_br, 1), 2) if (sinan_br + sih_br) else None
         ),
-        "custo_gap": custo_gap,
+        "custo_gap": custo_teorico_oportunidades,
         "pressao_fiscal_gap": (
             max((r.get("pressao_fiscal_indice") or 0) for r in custo_rows) if custo_rows else None
         ),
-        "gap_regiao_saude": sum(r["gap"] for r in gap_rs_rows) if gap_rs_rows else None,
+        "gap_regiao_saude": (
+            sum(r["oportunidades_estimadas_rateadas"] for r in gap_rs_rows)
+            if gap_rs_rows else None
+        ),
     }
 
     status_map = []
@@ -317,10 +332,14 @@ def build() -> dict:
     nacional_payload = {
         "atualizado_em": datetime.now(timezone.utc).isoformat(),
         "kpis": {
-            "elegiveis": nacional.get("elegiveis"),
+            "elegiveis": oportunidades,
+            "oportunidades_estimadas": oportunidades,
             "pessoas_vacinadas_vpc20": vac,
-            "gap_absoluto": gap,
-            "custo_gap_brl": custo_gap,
+            "gap_absoluto": gap_pessoas,
+            "gap_pessoas": gap_pessoas,
+            "gap_pessoas_disponivel": bool(nacional.get("gap_pessoas_disponivel")),
+            "custo_gap_brl": custo_teorico_oportunidades,
+            "custo_teorico_oportunidades_brl": custo_teorico_oportunidades,
             "preco_bps_vpc20": preco,
             "preco_bps_nominal": preco_nominal,
             "ipca_fator_acumulado": ipca_fator,
@@ -351,7 +370,9 @@ def build() -> dict:
             "nota": sies.get("nota"),
         },
         "oferta_uf": qualidade_oferta.get("oferta_uf") or [],
-        "custo_uf": sorted(custo_rows, key=lambda x: -x["custo_gap_brl"]),
+        "custo_uf": sorted(
+            custo_rows, key=lambda x: -x["custo_teorico_oportunidades_brl"]
+        ),
         "gap_regiao_saude": gap_rs_rows,
         "serie_transicao": serie,
         "linha_tempo_vpc20": num.get("linha_tempo") or [],
@@ -381,7 +402,11 @@ def build() -> dict:
         "gap_regiao_saude.json",
         {
             "atualizado_em": nacional_payload["atualizado_em"],
-            "nota": (rs_src or {}).get("nota"),
+            "nota": (
+                "Oportunidades estimadas da UF rateadas pela população IBGE 2022 da região. "
+                "Não representa pessoas únicas elegíveis nem gap de pessoas. "
+                + str((rs_src or {}).get("nota") or "")
+            ).strip(),
             "linhas": gap_rs_rows,
         },
     )
