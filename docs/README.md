@@ -14,6 +14,7 @@
 | [IMMUNOBIOLOGIC_REGISTRY.md](IMMUNOBIOLOGIC_REGISTRY.md) | Registro canônico de imunobiológicos e compatibilidade vacinal |
 | [RESPIRATORY_IMMUNIZATION_2026.md](RESPIRATORY_IMMUNIZATION_2026.md) | Arquitetura normativa e analítica para VVSR, nirsevimabe, influenza e covid-19 |
 | [ROUTINE_RESCUE_ONBOARDING_2026.md](ROUTINE_RESCUE_ONBOARDING_2026.md) | Onboarding de HPV, MenACWY, febre amarela e tríplice viral |
+| [RULE_SCOPE_MODEL.md](RULE_SCOPE_MODEL.md) | Modelo obrigatório de escopo territorial e temporal das regras |
 | [VACCINE_REGISTRY.md](VACCINE_REGISTRY.md) | Registro específico de vacinas e motor normativo versionado |
 | [ONBOARDING_IMUNOBIOLOGICO.md](ONBOARDING_IMUNOBIOLOGICO.md) | Fluxo padronizado para incorporar vacinas, anticorpos monoclonais e outros imunobiológicos |
 | [RELEASE_GUARDIAN.md](RELEASE_GUARDIAN.md) | Gates automáticos de release |
