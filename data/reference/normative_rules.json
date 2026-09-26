@@ -132,7 +132,14 @@
           "min_interval_after_conjugate_days": 56
         }
       ],
-      "immunobiologic_id": "vpc20"
+      "immunobiologic_id": "vpc20",
+      "rule_context": "special_population",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "vpc20_elderly_85_2026",
@@ -176,7 +183,14 @@
       ],
       "monitoring_target_pct": 90,
       "target_population_brazil_2026": 2337775,
-      "immunobiologic_id": "vpc20"
+      "immunobiologic_id": "vpc20",
+      "rule_context": "special_population",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "vpc20_coverage_monitoring_2026",
@@ -189,7 +203,14 @@
         "nt_69_2026_vpc20_coverage"
       ],
       "note": "Metodologia de cálculo e monitoramento de cobertura no contexto da transição VPC10→VPC20. Não deve ser confundida com elegibilidade clínica.",
-      "immunobiologic_id": "vpc20"
+      "immunobiologic_id": "vpc20",
+      "rule_context": "monitoring",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "vvsr_materna_2026",
@@ -214,7 +235,14 @@
         "repeat_each_pregnancy": true,
         "simultaneous_with_other_calendar_vaccines": true
       },
-      "note": "Uma dose a partir da 28ª semana em cada gestação. Se administrada antes da 28ª semana, não repetir a dose; realizar monitoramento conforme orientação oficial."
+      "note": "Uma dose a partir da 28ª semana em cada gestação. Se administrada antes da 28ª semana, não repetir a dose; realizar monitoramento conforme orientação oficial.",
+      "rule_context": "maternal",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "nirsevimab_vsr_2026",
@@ -276,7 +304,14 @@
         "not_combine_two_50mg_syringes_to_make_100mg": true,
         "two_100mg_injections_for_200mg_allowed": true
       },
-      "note": "Prematuros elegíveis: administração ao longo de todo o ano. Crianças com comorbidades: durante a sazonalidade do VSR (fevereiro a agosto), podendo alcançar segunda sazonalidade conforme critérios. Dose depende de peso e sazonalidade clínica aplicável."
+      "note": "Prematuros elegíveis: administração ao longo de todo o ano. Crianças com comorbidades: durante a sazonalidade do VSR (fevereiro a agosto), podendo alcançar segunda sazonalidade conforme critérios. Dose depende de peso e sazonalidade clínica aplicável.",
+      "rule_context": "passive_immunization",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "influenza_onboarding_2026",
@@ -289,7 +324,14 @@
         "calendario_nacional_2026",
         "nt_24_2026_influenza"
       ],
-      "note": "Aguardando mapeamento de códigos, estratégias e regras por grupo antes de ativação automática."
+      "note": "Aguardando mapeamento de códigos, estratégias e regras por grupo antes de ativação automática.",
+      "rule_context": "onboarding",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "covid19_onboarding_2026",
@@ -302,7 +344,14 @@
         "calendario_nacional_2026",
         "nt_91_2026_covid"
       ],
-      "note": "Aguardando estruturação por produto, faixa etária, histórico e grupo especial antes de ativação automática."
+      "note": "Aguardando estruturação por produto, faixa etária, histórico e grupo especial antes de ativação automática.",
+      "rule_context": "onboarding",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "hpv4_onboarding_2026",
@@ -315,7 +364,14 @@
         "calendario_nacional_2026",
         "nt_32_2026_hpv_nic2"
       ],
-      "note": "Separar rotina, resgate e grupos prioritários antes de ativação."
+      "note": "Separar rotina, resgate e grupos prioritários antes de ativação.",
+      "rule_context": "onboarding",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "menacwy_onboarding_2026",
@@ -329,7 +385,14 @@
         "nt_50_2026_menacwy",
         "nt_77_2025_menacwy_reforco"
       ],
-      "note": "NT 50/2026 é metodologia de avaliação por coorte e não deve ser confundida com elegibilidade clínica."
+      "note": "NT 50/2026 é metodologia de avaliação por coorte e não deve ser confundida com elegibilidade clínica.",
+      "rule_context": "onboarding",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "febre_amarela_onboarding_2026",
@@ -342,7 +405,14 @@
         "calendario_nacional_2026",
         "nt_6_2026_febre_amarela"
       ],
-      "note": "A regra específica de dose padrão após dose fracionada 2018 será estruturada separadamente."
+      "note": "A regra específica de dose padrão após dose fracionada 2018 será estruturada separadamente.",
+      "rule_context": "onboarding",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "triplice_viral_onboarding_2026",
@@ -356,7 +426,35 @@
         "nt_98_2026_triplice_viral_d0",
         "ntc_116_2026_sarampo_viajantes"
       ],
-      "note": "Dose zero e recomendações temporárias/territoriais serão modeladas por escopo explícito; nenhuma regra nacional genérica é ativada nesta etapa."
+      "note": "Dose zero e recomendações temporárias/territoriais serão modeladas por escopo explícito; nenhuma regra nacional genérica é ativada nesta etapa.",
+      "rule_context": "onboarding",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     }
+  ],
+  "schema_version": "2.0",
+  "allowed_rule_contexts": [
+    "routine",
+    "special_population",
+    "maternal",
+    "passive_immunization",
+    "monitoring",
+    "campaign",
+    "blockade",
+    "intensification",
+    "travel",
+    "rescue",
+    "onboarding"
+  ],
+  "allowed_geographic_scope_types": [
+    "national",
+    "state",
+    "municipality",
+    "polygon",
+    "facility"
   ]
 }
