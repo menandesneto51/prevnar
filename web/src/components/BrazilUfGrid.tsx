@@ -13,14 +13,15 @@ const REGIOES: Record<string, string[]> = {
 
 type UfDatum = {
   uf: string;
-  gap: number;
+  gap: number | null;
   elegiveis: number;
+  oportunidades_estimadas: number;
   pessoas_vacinadas: number;
 };
 
-function colorFor(gap: number, max: number): string {
+function colorFor(value: number, max: number): string {
   if (max <= 0) return "#1a3a63";
-  const t = Math.min(1, gap / max);
+  const t = Math.min(1, value / max);
   // navy → teal → warn
   if (t < 0.33) return "#7fa0d4";
   if (t < 0.66) return "#4a6aaf";
@@ -29,12 +30,12 @@ function colorFor(gap: number, max: number): string {
 
 export function BrazilUfGrid({ data }: { data: UfDatum[] }) {
   const map = Object.fromEntries(data.map((d) => [d.uf, d]));
-  const max = Math.max(...data.map((d) => d.gap), 1);
+  const max = Math.max(...data.map((d) => d.oportunidades_estimadas ?? d.elegiveis), 1);
 
   return (
     <div className="card p-4">
       <div className="mb-3 flex items-center justify-between gap-2">
-        <h2 className="text-sm font-semibold">Gap por UF</h2>
+        <h2 className="text-sm font-semibold">Oportunidades estimadas por UF</h2>
         <div className="flex items-center gap-2 text-[10px] text-[var(--muted)]">
           <span className="inline-block h-2 w-6 rounded" style={{ background: "#7fa0d4" }} /> baixo
           <span className="inline-block h-2 w-6 rounded" style={{ background: "#4a6aaf" }} /> médio
@@ -48,18 +49,18 @@ export function BrazilUfGrid({ data }: { data: UfDatum[] }) {
             <div className="flex flex-wrap gap-1.5">
               {ufs.map((uf) => {
                 const d = map[uf];
-                const gap = d?.gap ?? 0;
+                const oportunidades = d?.oportunidades_estimadas ?? d?.elegiveis ?? 0;
                 return (
                   <Link
                     key={uf}
                     href={`/ufs/${uf}`}
-                    title={d ? `${uf}: gap ${gap.toLocaleString("pt-BR")}` : uf}
+                    title={d ? `${uf}: oportunidades estimadas ${oportunidades.toLocaleString("pt-BR")}` : uf}
                     className="map-uf flex min-w-[3.2rem] flex-col items-center rounded-md px-2 py-1.5 text-center"
-                    style={{ background: colorFor(gap, max) }}
+                    style={{ background: colorFor(oportunidades, max) }}
                   >
                     <span className="text-xs font-bold text-white">{uf}</span>
                     <span className="text-[10px] text-white/80">
-                      {d ? (gap / 1000).toFixed(0) + "k" : "—"}
+                      {d ? (oportunidades / 1000).toFixed(0) + "k" : "—"}
                     </span>
                   </Link>
                 );

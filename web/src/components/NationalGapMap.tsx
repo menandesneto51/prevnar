@@ -75,8 +75,8 @@ export function NationalGapMap({ porUf, porMunicipio = [], ufNomes = {} }: Props
       porUf.map((u) => ({
         code: u.uf,
         name: ufNomes[u.uf] ?? u.uf,
-        gap: u.gap,
-        elegiveis: u.elegiveis,
+        gap: u.oportunidades_estimadas ?? u.elegiveis,
+        elegiveis: u.oportunidades_estimadas ?? u.elegiveis,
         vacinados: u.pessoas_vacinadas_consolidado ?? u.pessoas_vacinadas,
       })),
     [porUf, ufNomes],
@@ -118,7 +118,7 @@ export function NationalGapMap({ porUf, porMunicipio = [], ufNomes = {} }: Props
     <div className="card overflow-hidden">
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[var(--border)] px-4 py-3">
         <div>
-          <h2 className="text-sm font-semibold">Mapa de oportunidade (gap)</h2>
+          <h2 className="text-sm font-semibold">Mapa de oportunidades estimadas</h2>
           <p className="text-xs text-[var(--muted)]">
             {selectedUf
               ? `Municípios de ${selectedUf}${munCount != null ? ` · ${munCount.toLocaleString("pt-BR")} polígonos` : ""}${munComDado ? ` · ${munComDado} com vacinado` : ""} · Esc ou ← Brasil`
@@ -172,7 +172,7 @@ export function NationalGapMap({ porUf, porMunicipio = [], ufNomes = {} }: Props
 
         <aside className="map-legend border-t border-[var(--border)] p-4 lg:border-l lg:border-t-0">
           <div className="mb-3 text-[10px] uppercase tracking-wider text-[var(--muted)]">
-            {selectedUf ? "Legenda (vacinados no município)" : "Legenda (gap relativo UF)"}
+            {selectedUf ? "Legenda (vacinados no município)" : "Legenda (oportunidades relativas UF)"}
           </div>
           <ul className="mb-4 space-y-1.5">
             {selectedUf ? (
@@ -208,17 +208,19 @@ export function NationalGapMap({ porUf, porMunicipio = [], ufNomes = {} }: Props
               <div className="font-semibold">
                 {ufNomes[active.uf] ?? active.uf} ({active.uf})
               </div>
-              <div className="text-xs text-[var(--muted)]">Elegíveis (UF)</div>
-              <div className="kpi-value text-lg">{active.elegiveis.toLocaleString("pt-BR")}</div>
+              <div className="text-xs text-[var(--muted)]">Oportunidades estimadas (UF)</div>
+              <div className="kpi-value text-lg">
+                {(active.oportunidades_estimadas ?? active.elegiveis).toLocaleString("pt-BR")}
+              </div>
               <div className="text-xs text-[var(--muted)]">Vacinados (UF)</div>
               <div className="kpi-value text-lg text-[var(--accent)]">
                 {(active.pessoas_vacinadas_consolidado ?? active.pessoas_vacinadas).toLocaleString(
                   "pt-BR",
                 )}
               </div>
-              <div className="text-xs text-[var(--muted)]">Gap (UF)</div>
+              <div className="text-xs text-[var(--muted)]">Gap de pessoas únicas</div>
               <div className="kpi-value text-lg text-[var(--warn)]">
-                {fmtGapShort(active.gap)}
+                {active.gap_pessoas == null ? "não disponível" : fmtGapShort(active.gap_pessoas)}
               </div>
               {selectedMun ? (
                 <div className="mt-3 rounded-lg border border-[var(--border)] p-2 text-xs">
@@ -241,15 +243,15 @@ export function NationalGapMap({ porUf, porMunicipio = [], ufNomes = {} }: Props
                 </div>
               ) : (
                 <p className="mt-3 text-[11px] leading-relaxed text-[var(--muted)]">
-                  Cor do município = vacinados VPC20 (numerador). Cinza = zero na amostra. Gap
-                  absoluto continua só no nível UF (sem denominador municipal).
+                  Cor do município = vacinados VPC20 (numerador). Cinza = zero na amostra.
+                  O denominador municipal deduplicado ainda não está disponível.
                 </p>
               )}
             </div>
           ) : (
             <p className="text-xs leading-relaxed text-[var(--muted)]">
-              Coroplético UF por gap. No drill municipal, a cor muda por vacinados (não herda mais o
-              gap da UF).
+              Coroplético UF pela soma de oportunidades estimadas por condição. Essa métrica pode
+              conter sobreposição entre pessoas. No drill municipal, a cor representa vacinados.
             </p>
           )}
         </aside>

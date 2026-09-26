@@ -370,6 +370,10 @@ def process_api(*, max_pages: int | None = None) -> dict:
         "taxa_cid_preenchido": 0.0,
         "sem_cid_na_fonte": True,
         "proxy_grupo_atendimento": True,
+        "evidence_level_total": "E1",
+        "decision_grade_total": True,
+        "evidence_level_clinical_breakdown": "E2",
+        "decision_grade_clinical_breakdown": False,
         "pessoas_por_uf": {uf: len(pids) for uf, pids in sorted(pessoas_uf.items())},
         "pessoas_por_municipio": {
             mun: len(pids) for mun, pids in sorted(pessoas_mun.items())
@@ -389,6 +393,9 @@ def process_api(*, max_pages: int | None = None) -> dict:
                 "condicao_id": cid,
                 "uf": uf,
                 "pessoas_vacinadas": len(pids),
+                "evidence_level": "E2",
+                "clinical_match_confirmed": False,
+                "fonte_classificacao": "grupo_atendimento",
                 "fonte_proxy": "grupo_atendimento",
             }
             for (cid, uf), pids in sorted(pessoas_cond_uf.items(), key=lambda x: (-len(x[1]), x[0]))
@@ -592,6 +599,7 @@ def process_csv(csv_path: Path | list[Path]) -> dict:
         taxa_cid = 0.0
 
     counts: dict[tuple[int, str], set] = {}
+    count_sources: dict[tuple[int, str], set[str]] = {}
     unmapped: dict[str, int] = {}
     grupos_nao_mapeados: dict[str, int] = {}
     grupo_map_hits = 0
@@ -617,25 +625,36 @@ def process_csv(csv_path: Path | list[Path]) -> dict:
                 key = normalize_cid(str(cid)) or str(cid)
                 unmapped[key] = unmapped.get(key, 0) + 1
             elif m["condicao_id"] != 21:
-                counts.setdefault((m["condicao_id"], uf), set()).add(str(row["paciente_id"]))
+                key = (m["condicao_id"], uf)
+                counts.setdefault(key, set()).add(str(row["paciente_id"]))
+                count_sources.setdefault(key, set()).add("cid")
                 mapped = True
         if not mapped and col_grupo:
             g = re.sub(r"\D", "", str(row.get("grupo_atendimento") or "")).zfill(6)
             if g in grupo_to_cond:
-                counts.setdefault((grupo_to_cond[g], uf), set()).add(str(row["paciente_id"]))
+                key = (grupo_to_cond[g], uf)
+                counts.setdefault(key, set()).add(str(row["paciente_id"]))
+                count_sources.setdefault(key, set()).add("grupo_atendimento")
                 grupo_map_hits += 1
             elif g and g not in ("000000", "999999"):
                 grupos_nao_mapeados[g] = grupos_nao_mapeados.get(g, 0) + 1
 
-    linhas = [
-        {
-            "condicao_id": cid,
-            "uf": uf,
-            "pessoas_vacinadas": len(pids),
-            **({"fonte_proxy": "grupo_atendimento"} if not col_cid else {}),
-        }
-        for (cid, uf), pids in sorted(counts.items())
-    ]
+    linhas = []
+    for (cid, uf), pids in sorted(counts.items()):
+        sources = count_sources.get((cid, uf), set())
+        only_cid = bool(sources) and sources == {"cid"}
+        uses_proxy = "grupo_atendimento" in sources
+        linhas.append(
+            {
+                "condicao_id": cid,
+                "uf": uf,
+                "pessoas_vacinadas": len(pids),
+                "evidence_level": "E1" if only_cid else "E2",
+                "clinical_match_confirmed": only_cid,
+                "fonte_classificacao": "cid" if only_cid else "grupo_atendimento",
+                **({"fonte_proxy": "grupo_atendimento"} if uses_proxy else {}),
+            }
+        )
 
     return save_numerador(
         {
@@ -650,7 +669,13 @@ def process_csv(csv_path: Path | list[Path]) -> dict:
             "total_pessoas": int(total_pessoas),
             "taxa_cid_preenchido": round(taxa_cid, 4),
             "sem_cid_na_fonte": not bool(col_cid),
-            "proxy_grupo_atendimento": not bool(col_cid) and bool(col_grupo),
+            "proxy_grupo_atendimento": grupo_map_hits > 0,
+            "evidence_level_total": "E1",
+            "decision_grade_total": True,
+            "evidence_level_clinical_breakdown": (
+                "E1" if bool(col_cid) and grupo_map_hits == 0 else "E2"
+            ),
+            "decision_grade_clinical_breakdown": bool(col_cid) and grupo_map_hits == 0,
             "grupo_atendimento_mapeados": grupo_map_hits,
             "grupos_nao_mapeados": dict(
                 sorted(grupos_nao_mapeados.items(), key=lambda x: -x[1])[:50]
@@ -692,30 +717,30 @@ def process_csv(csv_path: Path | list[Path]) -> dict:
 
 def write_fixture() -> dict:
     demo = [
-        {"condicao_id": 1, "uf": "SP", "pessoas_vacinadas": 42},
-        {"condicao_id": 1, "uf": "RJ", "pessoas_vacinadas": 18},
-        {"condicao_id": 2, "uf": "SP", "pessoas_vacinadas": 65},
-        {"condicao_id": 2, "uf": "MG", "pessoas_vacinadas": 22},
-        {"condicao_id": 19, "uf": "SP", "pessoas_vacinadas": 120},
-        {"condicao_id": 19, "uf": "RJ", "pessoas_vacinadas": 55},
-        {"condicao_id": 19, "uf": "MG", "pessoas_vacinadas": 40},
-        {"condicao_id": 15, "uf": "SP", "pessoas_vacinadas": 33},
-        {"condicao_id": 10, "uf": "SP", "pessoas_vacinadas": 28},
-        {"condicao_id": 13, "uf": "RS", "pessoas_vacinadas": 15},
-        {"condicao_id": 5, "uf": "SP", "pessoas_vacinadas": 3},
-        {"condicao_id": 7, "uf": "SP", "pessoas_vacinadas": 5},
-        {"condicao_id": 3, "uf": "SP", "pessoas_vacinadas": 8},
-        {"condicao_id": 4, "uf": "SP", "pessoas_vacinadas": 4},
-        {"condicao_id": 8, "uf": "SP", "pessoas_vacinadas": 6},
-        {"condicao_id": 14, "uf": "PR", "pessoas_vacinadas": 12},
-        {"condicao_id": 16, "uf": "BA", "pessoas_vacinadas": 9},
-        {"condicao_id": 17, "uf": "PE", "pessoas_vacinadas": 7},
-        {"condicao_id": 18, "uf": "SP", "pessoas_vacinadas": 11},
-        {"condicao_id": 11, "uf": "SP", "pessoas_vacinadas": 2},
-        {"condicao_id": 20, "uf": "RJ", "pessoas_vacinadas": 1},
-        {"condicao_id": 6, "uf": "SP", "pessoas_vacinadas": 4},
-        {"condicao_id": 9, "uf": "MG", "pessoas_vacinadas": 1},
-        {"condicao_id": 12, "uf": "SP", "pessoas_vacinadas": 19},
+        {"condicao_id": 1, "uf": "SP", "pessoas_vacinadas": 42, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 1, "uf": "RJ", "pessoas_vacinadas": 18, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 2, "uf": "SP", "pessoas_vacinadas": 65, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 2, "uf": "MG", "pessoas_vacinadas": 22, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 19, "uf": "SP", "pessoas_vacinadas": 120, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 19, "uf": "RJ", "pessoas_vacinadas": 55, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 19, "uf": "MG", "pessoas_vacinadas": 40, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 15, "uf": "SP", "pessoas_vacinadas": 33, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 10, "uf": "SP", "pessoas_vacinadas": 28, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 13, "uf": "RS", "pessoas_vacinadas": 15, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 5, "uf": "SP", "pessoas_vacinadas": 3, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 7, "uf": "SP", "pessoas_vacinadas": 5, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 3, "uf": "SP", "pessoas_vacinadas": 8, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 4, "uf": "SP", "pessoas_vacinadas": 4, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 8, "uf": "SP", "pessoas_vacinadas": 6, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 14, "uf": "PR", "pessoas_vacinadas": 12, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 16, "uf": "BA", "pessoas_vacinadas": 9, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 17, "uf": "PE", "pessoas_vacinadas": 7, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 18, "uf": "SP", "pessoas_vacinadas": 11, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 11, "uf": "SP", "pessoas_vacinadas": 2, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 20, "uf": "RJ", "pessoas_vacinadas": 1, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 6, "uf": "SP", "pessoas_vacinadas": 4, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 9, "uf": "MG", "pessoas_vacinadas": 1, "evidence_level": "E5", "clinical_match_confirmed": False},
+        {"condicao_id": 12, "uf": "SP", "pessoas_vacinadas": 19, "evidence_level": "E5", "clinical_match_confirmed": False},
     ]
     total_pessoas = sum(r["pessoas_vacinadas"] for r in demo)
     por_uf: dict[str, int] = {}
@@ -737,7 +762,13 @@ def write_fixture() -> dict:
             "cids_nao_mapeados": {"X99": 3, "Z00": 1},
             "sanity_referencia_doses": total_pessoas,
             "sanity_divergencia_pct": 0.0,
-            "nota": "Fixture. Prefira API (padrão) ou CSV em data/raw/.",
+            "evidence_level": "E5",
+            "decision_grade": False,
+            "evidence_level_total": "E5",
+            "decision_grade_total": False,
+            "evidence_level_clinical_breakdown": "E5",
+            "decision_grade_clinical_breakdown": False,
+            "nota": "Fixture demonstrativa (E5). Proibida para decisão operacional. Prefira API ou CSV em data/raw/.",
         }
     )
 

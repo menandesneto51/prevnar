@@ -363,7 +363,7 @@ export default function GapChoroplethMap({
     layer.bindTooltip(
       `<strong>${level === "uf" ? props.code + " — " : ""}${props.name}</strong>` +
         (level === "municipio" ? `<br/>IBGE ${props.code}` : "") +
-        `<br/>${level === "municipio" ? gapLabel : `Gap ${gapLabel}`}` +
+        `<br/>${level === "municipio" ? gapLabel : level === "uf" ? `Oportunidades estimadas ${gapLabel}` : `Indicador ${gapLabel}`}` +
         (level === "uf" && props.vacinados != null
           ? `<br/>Vacinados ${props.vacinados.toLocaleString("pt-BR")}`
           : "") +
