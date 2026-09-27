@@ -260,3 +260,61 @@ export async function getNormativeBacklog(): Promise<NormativeBacklog | null> {
   const raw = await readFile(file, "utf-8");
   return JSON.parse(raw) as NormativeBacklog;
 }
+
+
+export type InfluenzaDashboard = {
+  immunobiologic_id: string;
+  scanned: number;
+  observed_code_hits: number;
+  observed_people: number;
+  confirmed_context_doses: number;
+  confirmed_context_people: number;
+  confirmed_share_pct: number | null;
+  sus_confirmed_doses: number;
+  private_confirmed_doses: number;
+  private_share_pct: number | null;
+  contextos_confirmados: Record<string, number>;
+  estrategias: Record<string, number>;
+  doses_codigos: Record<string, number>;
+  apresentacoes: Record<string, number>;
+  por_uf: Array<{
+    uf: string;
+    observed_doses: number;
+    observed_people: number;
+    confirmed_doses: number;
+    confirmed_people: number;
+  }>;
+  linha_tempo: Array<{
+    ano_mes: string;
+    observed_doses: number;
+    confirmed_doses: number;
+  }>;
+  mismatches: Record<string, number>;
+  reference_period: string | null;
+  pending_contexts: Array<{ id: string; reason: string }>;
+  interpretation: string;
+  pages?: number;
+  generated_at?: string;
+  provenance?: {
+    run_id?: string;
+    source_id?: string;
+    reference_period?: string | null;
+    retrieved_at?: string;
+    freshness?: {
+      status?: string;
+      age_days?: number | null;
+      critical_for_decision?: boolean;
+    };
+  };
+};
+
+export async function getInfluenzaDashboard(): Promise<InfluenzaDashboard | null> {
+  const candidates = [
+    path.join(dataDir, "influenza_2026_dashboard.json"),
+    path.join(process.cwd(), "..", "data", "mart", "influenza_2026_dashboard.json"),
+  ];
+  const file = candidates.find((candidate) => existsSync(candidate));
+  if (!file) return null;
+  const raw = await readFile(file, "utf-8");
+  return JSON.parse(raw) as InfluenzaDashboard;
+}
