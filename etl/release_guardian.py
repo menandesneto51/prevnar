@@ -22,6 +22,7 @@ from urllib.parse import urlparse
 
 from paths import MART, REF, ROOT
 from vaccine_rules import validate_registry_integrity
+from build_normative_matrix import build_matrix
 
 
 ALLOWED_EVIDENCE = {"E1", "E2", "E3", "E4", "E5"}
@@ -260,6 +261,92 @@ def check_vaccine_registry(findings: list[Finding]) -> None:
         )
 
 
+def check_normative_governance(findings: list[Finding]) -> None:
+    try:
+        matrix = build_matrix()
+    except Exception as exc:  # noqa: BLE001
+        _finding(
+            findings,
+            "error",
+            "normative_matrix_invalid",
+            f"Falha ao construir matriz normativa: {exc}",
+            REF / "normative_rules.json",
+        )
+        return
+
+    unresolved = matrix.get("summary", {}).get("unresolved_legal_references") or []
+    for act_id in unresolved:
+        _finding(
+            findings,
+            "error",
+            "normative_legal_reference_unresolved",
+            f"Referência legal não resolvida: {act_id}.",
+            REF / "normative_rules.json",
+        )
+
+    for item in matrix.get("immunobiologics") or []:
+        iid = str(item.get("immunobiologic_id") or "")
+        if item.get("monitored") and not (item.get("pni_codes") or []):
+            _finding(
+                findings,
+                "error",
+                "monitored_without_pni_code",
+                f"Imunobiológico monitorado sem código nacional: {iid}.",
+                REF / "immunobiologic_registry.json",
+            )
+
+        for rule in item.get("rules") or []:
+            if rule.get("status") != "active":
+                continue
+
+            rid = str(rule.get("rule_id") or "")
+            if not rule.get("effective_from"):
+                _finding(
+                    findings,
+                    "error",
+                    "active_rule_without_effective_from",
+                    f"Regra ativa sem effective_from: {rid}.",
+                    REF / "normative_rules.json",
+                )
+
+            scope = rule.get("geographic_scope") or {}
+            scope_type = scope.get("type")
+            scope_codes = scope.get("codes") or []
+            if not scope_type:
+                _finding(
+                    findings,
+                    "error",
+                    "active_rule_without_scope",
+                    f"Regra ativa sem geographic_scope.type: {rid}.",
+                    REF / "normative_rules.json",
+                )
+            elif scope_type == "national" and "BR" not in scope_codes:
+                _finding(
+                    findings,
+                    "error",
+                    "national_rule_without_br_scope",
+                    f"Regra nacional sem código BR: {rid}.",
+                    REF / "normative_rules.json",
+                )
+            elif scope_type != "national" and not scope_codes:
+                _finding(
+                    findings,
+                    "error",
+                    "territorial_rule_without_codes",
+                    f"Regra territorial sem códigos de escopo: {rid}.",
+                    REF / "normative_rules.json",
+                )
+
+            if not (rule.get("normative_acts") or []):
+                _finding(
+                    findings,
+                    "error",
+                    "active_rule_without_normative_act",
+                    f"Regra ativa sem normative_acts: {rid}.",
+                    REF / "normative_rules.json",
+                )
+
+
 def check_indicator_catalog(findings: list[Finding]) -> None:
     path = REF / "indicadores_nacionais.json"
     if not path.exists():
@@ -446,6 +533,7 @@ def run_guardian(mode: str = "ci") -> tuple[list[Finding], dict]:
     check_legal_register(findings)
     check_source_registry(findings)
     check_vaccine_registry(findings)
+    check_normative_governance(findings)
     check_indicator_catalog(findings)
     check_dashboard_runtime(findings, mode)
     check_secrets_and_personal_data(findings)

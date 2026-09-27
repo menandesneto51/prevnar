@@ -13,6 +13,7 @@
 | [CHECKLIST_CONFORMIDADE.md](CHECKLIST_CONFORMIDADE.md) | Checklist de fonte, indicador e release |
 | [ROADMAP_V2.md](ROADMAP_V2.md) | Evolução técnica do PREVNAR |
 | [IMMUNOBIOLOGIC_REGISTRY.md](IMMUNOBIOLOGIC_REGISTRY.md) | Registro canônico de imunobiológicos e compatibilidade vacinal |
+| [NORMATIVE_MATRIX.md](NORMATIVE_MATRIX.md) | Matriz auditável de regras, vigência, escopo e atos oficiais |
 | [RESPIRATORY_IMMUNIZATION_2026.md](RESPIRATORY_IMMUNIZATION_2026.md) | Arquitetura normativa e analítica para VVSR, nirsevimabe, influenza e covid-19 |
 | [ROUTINE_RESCUE_ONBOARDING_2026.md](ROUTINE_RESCUE_ONBOARDING_2026.md) | Onboarding de HPV, MenACWY, febre amarela e tríplice viral |
 | [ROUTINE_RESCUE_ETL.md](ROUTINE_RESCUE_ETL.md) | ETL conservador para MenACWY, febre amarela e tríplice viral |

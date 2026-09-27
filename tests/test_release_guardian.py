@@ -59,3 +59,11 @@ def test_official_url_rejects_insecure_scheme() -> None:
         "http://www.gov.br/saude",
         {"gov.br"},
     )
+
+
+def test_current_normative_governance_has_no_blocking_findings() -> None:
+    from release_guardian import Finding, check_normative_governance
+
+    findings: list[Finding] = []
+    check_normative_governance(findings)
+    assert [f for f in findings if f.severity == "error"] == []

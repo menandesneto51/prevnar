@@ -24,3 +24,8 @@ alwaysApply: true
 16. `active_rules()` deve receber contexto geográfico para resolver regras não nacionais.
 17. Código PNI/RNDS, código SIES/estoque e outros code systems são domínios distintos; nunca reutilizar um código entre sistemas sem fonte explícita.
 18. Mapeamento parcial deve ser marcado como parcial e não apresentado como cobertura integral da rotina.
+
+14. Toda regra ativa deve ter `effective_from`, `geographic_scope` e `normative_acts`.
+15. Regra nacional deve usar `geographic_scope.type = national` e incluir `BR` em `codes`.
+16. Regra territorial deve possuir códigos explícitos; nunca assumir abrangência por nome ou nota textual.
+17. O Release Guardian bloqueia referência legal não resolvida e regra ativa sem governança normativa mínima.
