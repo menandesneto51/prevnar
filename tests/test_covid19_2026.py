@@ -31,9 +31,14 @@ def test_covid_registry_integrity() -> None:
 
 def test_comirnaty_lp81_operational_profile_is_structured() -> None:
     item = get_immunobiologic("covid19")
-    assert item["pni_codes"] == []
+    assert item["pni_codes"] == ["87"]
     assert item["monitored"] is False
-    assert item["code_mapping_status"] == "product_registration_codes_pending"
+    assert (
+        item["code_mapping_status"]
+        == "immunobiologic_code_confirmed_registration_details_pending"
+    )
+    assert item["pni_registration"]["immunobiologic_code"] == "87"
+    assert item["pni_registration"]["etl_activation_status"] == "blocked_until_registration_details_complete"
 
     product = next(
         x for x in item["product_variants"]
@@ -172,11 +177,34 @@ def test_operational_rules_do_not_create_clinical_pathways() -> None:
     assert result["eligible_by_any_rule"] is False
 
 
-def test_operational_plan_keeps_pni_mapping_blocked() -> None:
+def test_operational_plan_confirms_code_87_but_keeps_etl_blocked() -> None:
     plan = json.loads(
         (ROOT / "data/reference/covid19_2026_operational_plan.json").read_text(
             encoding="utf-8"
         )
     )
-    assert plan["data_mapping"]["pni_product_codes_status"] == "pending"
-    assert "do not activate" in plan["data_mapping"]["rule"].lower()
+    mapping = plan["data_mapping"]
+    assert mapping["immunobiologic_codes"] == ["87"]
+    assert (
+        mapping["pni_product_codes_status"]
+        == "immunobiologic_code_confirmed_registration_details_pending"
+    )
+    assert mapping["strategy_codes_status"] == "pending_rules_entry_extraction"
+    assert mapping["dose_codes_status"] == "pending_rules_entry_extraction"
+    assert mapping["attendance_groups_status"] == "pending_rules_entry_extraction"
+    assert mapping["etl_activation"] == "blocked"
+    assert "do not activate" in mapping["rule"].lower()
+
+
+def test_lp81_product_is_bound_to_code_87_without_enabling_monitoring() -> None:
+    item = get_immunobiologic("covid19")
+    product = next(
+        x for x in item["product_variants"]
+        if x["product_variant_id"] == "comirnaty_lp81_refrigerated_12plus"
+    )
+    assert product["pni_immunobiologic_code"] == "87"
+    assert (
+        product["registration_mapping_status"]
+        == "immunobiologic_code_confirmed_details_pending"
+    )
+    assert item["monitored"] is False
