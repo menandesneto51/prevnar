@@ -515,7 +515,7 @@
         "ntc_116_2026_sarampo_viajantes",
         "nt_46_2025_triplice_dupla_registro"
       ],
-      "note": "Código PNI 24 confirmado; bloqueio/intensificação parcialmente mapeados. Dose zero permanece contexto específico separado. A rotina nacional e demais combinações de registro ainda precisam ser consolidadas antes de monitored=true.",
+      "note": "Código PNI 24 confirmado; contextos territoriais de bloqueio/intensificação estão parcialmente mapeados. Dose zero permanece contexto específico separado. A rotina nacional e demais combinações de registro ainda precisam ser consolidadas antes de monitored=true.",
       "pni_registration": {
         "immunobiologic_code": "24",
         "known_contexts": {
