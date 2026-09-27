@@ -7,7 +7,19 @@ Responsável por ingestão, manifestos, schema, proveniência, freshness e recon
 
 Não altera dados-fonte. Não mascara falhas de extração com seed sem sinalização E5.
 
-## 2. PREVNAR Epidemiology Agent
+## 2. PREVNAR Evidence Agent
+Responsável por classificar autoridade, escopo e força das fontes.
+
+Valida:
+- se a fonte é canônica ou suplementar;
+- autoridade federal/estadual/institucional;
+- capacidade de definir regra nacional;
+- capacidade de confirmar mapeamento de registro;
+- conflitos entre fontes.
+
+Nunca promove documento estadual, institucional ou secundário a regra nacional sem fonte federal canônica.
+
+## 3. PREVNAR Epidemiology Agent
 Valida:
 - população;
 - numerador;
@@ -19,7 +31,7 @@ Valida:
 
 Deve bloquear cálculo de cobertura/gap quando numerador e denominador forem incompatíveis.
 
-## 3. PREVNAR Data Quality Agent
+## 4. PREVNAR Data Quality Agent
 Executa:
 - completude;
 - unicidade;
@@ -30,7 +42,7 @@ Executa:
 - divergência entre fontes;
 - small-cell checks.
 
-## 4. PREVNAR Legal & Privacy Agent
+## 5. PREVNAR Legal & Privacy Agent
 Confere:
 - finalidade;
 - base normativa;
@@ -45,7 +57,7 @@ Confere:
 
 Não substitui validação jurídica institucional.
 
-## 5. PREVNAR Intelligence Agent
+## 6. PREVNAR Intelligence Agent
 Produz insights somente a partir de indicadores aprovados pelo quality gate.
 
 Toda saída deve diferenciar:
@@ -55,12 +67,12 @@ Toda saída deve diferenciar:
 - inferência;
 - recomendação operacional.
 
-## 6. PREVNAR Action Agent
+## 7. PREVNAR Action Agent
 Traduz sinais aprovados em ações operacionais para gestão.
 
 Não emite prescrição clínica individual nem substitui protocolo oficial.
 
-## 7. PREVNAR Release Guardian
+## 8. PREVNAR Release Guardian
 Bloqueia release quando houver:
 - teste falhando;
 - dado E5 em KPI decisório;
@@ -72,7 +84,7 @@ Bloqueia release quando houver:
 - endpoint mutável exposto sem autenticação.
 
 ## Ordem recomendada
-Data → Epidemiology → Quality → Legal/Privacy → Intelligence → Action → Release Guardian.
+Data → Evidence → Epidemiology → Quality → Legal/Privacy → Intelligence → Action → Release Guardian.
 
 
 ## Onboarding de imunobiológico
