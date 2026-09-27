@@ -1,0 +1,420 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "policy_note": "Classificação operacional interna do PREVNAR. Não substitui avaliação institucional LGPD/RIPD. A classificação considera o maior risco plausível da fonte de origem; publicação pública exige saída agregada/minimizada.",
+  "allowed_data_classifications": [
+    "public",
+    "internal",
+    "confidential",
+    "sensitive_health"
+  ],
+  "allowed_identification_levels": [
+    "aggregate",
+    "pseudonymized",
+    "identifiable"
+  ],
+  "allowed_environments": [
+    "public_static",
+    "institutional_restricted"
+  ],
+  "sources": [
+    {
+      "source_id": "pni",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": true,
+      "linkage_policy": "institutional_only",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "institutional_controller",
+      "custodian": "institutional_custodian",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd",
+        "portaria_5663_2024_rnds_vacinacao",
+        "nt_115_2024_rnds_registro_vacinal"
+      ],
+      "ripd_required": "evaluate_by_use_case",
+      "notes": "Identificadores técnicos eventualmente presentes na fonte não devem ser persistidos em marts públicos."
+    },
+    {
+      "source_id": "ibge_population",
+      "data_classification": "public",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": false,
+      "linkage_policy": "not_applicable",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "public_static",
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "source_attribution"
+      ],
+      "retention_policy": "public_reference",
+      "controller": "IBGE",
+      "custodian": "PREVNAR",
+      "legal_basis_refs": [],
+      "ripd_required": false
+    },
+    {
+      "source_id": "cnes",
+      "data_classification": "public",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": false,
+      "linkage_policy": "facility_level_only",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "public_static",
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "no_person_level_join"
+      ],
+      "retention_policy": "public_reference",
+      "controller": "Ministério da Saúde",
+      "custodian": "PREVNAR",
+      "legal_basis_refs": [
+        "lei_8080_1990"
+      ],
+      "ripd_required": false
+    },
+    {
+      "source_id": "sies",
+      "data_classification": "internal",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": false,
+      "linkage_policy": "not_applicable",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "review_before_publication"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "institutional_controller",
+      "custodian": "institutional_custodian",
+      "legal_basis_refs": [
+        "lei_8080_1990"
+      ],
+      "ripd_required": false
+    },
+    {
+      "source_id": "esavi",
+      "data_classification": "sensitive_health",
+      "identification_level": "identifiable",
+      "contains_cpf": "possible",
+      "contains_cns": "possible",
+      "contains_health_data": true,
+      "linkage_policy": "institutional_only",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "disclosure_risk_review",
+        "no_case_level_identifiers"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "institutional_controller",
+      "custodian": "institutional_custodian",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd"
+      ],
+      "ripd_required": "evaluate_by_use_case",
+      "notes": "Manifesto assume cenário de maior risco até confirmação do extrato efetivamente usado."
+    },
+    {
+      "source_id": "sinan_meningite",
+      "data_classification": "sensitive_health",
+      "identification_level": "identifiable",
+      "contains_cpf": "possible",
+      "contains_cns": "possible",
+      "contains_health_data": true,
+      "linkage_policy": "institutional_only",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "disclosure_risk_review"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "institutional_controller",
+      "custodian": "institutional_custodian",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd"
+      ],
+      "ripd_required": "evaluate_by_use_case"
+    },
+    {
+      "source_id": "sih",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": "possible",
+      "contains_cns": "possible",
+      "contains_health_data": true,
+      "linkage_policy": "institutional_only",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "disclosure_risk_review"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "institutional_controller",
+      "custodian": "institutional_custodian",
+      "legal_basis_refs": [
+        "lei_8080_1990",
+        "lgpd"
+      ],
+      "ripd_required": "evaluate_by_use_case"
+    },
+    {
+      "source_id": "sim",
+      "data_classification": "sensitive_health",
+      "identification_level": "identifiable",
+      "contains_cpf": "possible",
+      "contains_cns": "possible",
+      "contains_health_data": true,
+      "linkage_policy": "institutional_only",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "disclosure_risk_review"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "institutional_controller",
+      "custodian": "institutional_custodian",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd"
+      ],
+      "ripd_required": "evaluate_by_use_case"
+    },
+    {
+      "source_id": "srag",
+      "data_classification": "sensitive_health",
+      "identification_level": "identifiable",
+      "contains_cpf": "possible",
+      "contains_cns": "possible",
+      "contains_health_data": true,
+      "linkage_policy": "institutional_only",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "disclosure_risk_review"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "institutional_controller",
+      "custodian": "institutional_custodian",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd"
+      ],
+      "ripd_required": "evaluate_by_use_case"
+    },
+    {
+      "source_id": "bps",
+      "data_classification": "public",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": false,
+      "linkage_policy": "not_applicable",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "public_static",
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "source_attribution"
+      ],
+      "retention_policy": "public_reference",
+      "controller": "Ministério da Saúde",
+      "custodian": "PREVNAR",
+      "legal_basis_refs": [],
+      "ripd_required": false
+    },
+    {
+      "source_id": "ipca",
+      "data_classification": "public",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": false,
+      "linkage_policy": "not_applicable",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "public_static",
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "source_attribution"
+      ],
+      "retention_policy": "public_reference",
+      "controller": "IBGE/Banco Central",
+      "custodian": "PREVNAR",
+      "legal_basis_refs": [],
+      "ripd_required": false
+    },
+    {
+      "source_id": "siops",
+      "data_classification": "public",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": false,
+      "linkage_policy": "not_applicable",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "public_static",
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "source_attribution"
+      ],
+      "retention_policy": "public_reference",
+      "controller": "Ministério da Saúde",
+      "custodian": "PREVNAR",
+      "legal_basis_refs": [
+        "lei_8080_1990"
+      ],
+      "ripd_required": false
+    },
+    {
+      "source_id": "situacao1_manual",
+      "data_classification": "internal",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": true,
+      "linkage_policy": "not_allowed",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "review_before_publication"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "institutional_controller",
+      "custodian": "institutional_custodian",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd"
+      ],
+      "ripd_required": false
+    },
+    {
+      "source_id": "pni_vvsr_maternal",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": true,
+      "linkage_policy": "institutional_only",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "institutional_controller",
+      "custodian": "institutional_custodian",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd",
+        "portaria_5663_2024_rnds_vacinacao",
+        "nt_115_2024_rnds_registro_vacinal"
+      ],
+      "ripd_required": "evaluate_by_use_case"
+    },
+    {
+      "source_id": "pni_nirsevimab",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": true,
+      "linkage_policy": "institutional_only",
+      "linkage_allowed_in_repo": false,
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "institutional_controller",
+      "custodian": "institutional_custodian",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd",
+        "portaria_5663_2024_rnds_vacinacao",
+        "nt_115_2024_rnds_registro_vacinal"
+      ],
+      "ripd_required": "evaluate_by_use_case"
+    }
+  ]
+}
