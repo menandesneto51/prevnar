@@ -60,7 +60,27 @@ Traduz sinais aprovados em ações operacionais para gestão.
 
 Não emite prescrição clínica individual nem substitui protocolo oficial.
 
-## 7. PREVNAR Release Guardian
+## 7. PREVNAR Regulatory Watch Agent
+Monitora mudanças oficiais que possam alterar regras clínicas, regras de registro, terminologias ou interoperabilidade.
+
+Executa:
+- identificação de nova publicação oficial;
+- comparação com `legal_register.json`;
+- cálculo do benchmark regulatório interno;
+- associação com imunobiológicos e regras afetadas;
+- abertura/atualização de backlog;
+- sinalização de divergência entre orientação específica e servidor terminológico.
+
+Não pode:
+- ativar regra clínica por inferência;
+- inventar estratégia/dose/grupo;
+- definir `monitored=true` com mapeamento incompleto;
+- declarar infração jurídica automaticamente.
+
+Toda proposta de alteração deve seguir:
+Regulatory Watch → Legal/Privacy → Epidemiology → Data → Quality → Release Guardian.
+
+## 8. PREVNAR Release Guardian
 Bloqueia release quando houver:
 - teste falhando;
 - dado E5 em KPI decisório;
@@ -72,7 +92,7 @@ Bloqueia release quando houver:
 - endpoint mutável exposto sem autenticação.
 
 ## Ordem recomendada
-Data → Epidemiology → Quality → Legal/Privacy → Intelligence → Action → Release Guardian.
+Data → Epidemiology → Quality → Legal/Privacy → Regulatory Watch → Intelligence → Action → Release Guardian.
 
 
 ## Onboarding de imunobiológico
