@@ -233,14 +233,88 @@
       "name": "Vacina influenza",
       "display": "Influenza",
       "active": true,
-      "monitored": false,
-      "onboarding_status": "data_mapping_pending",
-      "pni_codes": [],
+      "monitored": true,
+      "onboarding_status": "data_mapping_structured_rule_draft",
+      "pni_codes": [
+        "33",
+        "77",
+        "110"
+      ],
       "normative_acts": [
         "calendario_nacional_2026",
         "nt_24_2026_influenza"
       ],
-      "note": "Entidade pronta para onboarding; regra clínica/registro permanece draft até mapeamento de códigos e estratégia 2026."
+      "note": "NT 24/2026 mapeia códigos 33/77/110, estratégias 1/2/8 e doses 1/2/9. Vacinação escolar ≤14 anos usa estratégia própria; código não inferido nesta versão.",
+      "pni_registration": {
+        "presentations": {
+          "33": {
+            "name": "Influenza Trivalente",
+            "sector": "SUS"
+          },
+          "77": {
+            "name": "Influenza Tetravalente",
+            "sector": "private"
+          },
+          "110": {
+            "name": "Influenza Tetravalente - alta dosagem",
+            "sector": "private"
+          }
+        },
+        "confirmed_contexts": {
+          "public_routine": {
+            "immunobiologic_code": "33",
+            "strategy_code": "1",
+            "strategy_label": "Rotina",
+            "dose_codes": [
+              "1",
+              "2",
+              "9"
+            ]
+          },
+          "public_special": {
+            "immunobiologic_code": "33",
+            "strategy_code": "2",
+            "strategy_label": "Especial",
+            "dose_codes": [
+              "1",
+              "2",
+              "9"
+            ],
+            "indication_cid10": "Z251",
+            "professional_specialty": "Enfermeiro"
+          },
+          "private_tetravalent": {
+            "immunobiologic_code": "77",
+            "strategy_code": "8",
+            "strategy_label": "Serviço Privado",
+            "dose_codes": [
+              "1",
+              "2",
+              "9"
+            ]
+          },
+          "private_high_dose": {
+            "immunobiologic_code": "110",
+            "strategy_code": "8",
+            "strategy_label": "Serviço Privado",
+            "dose_codes": [
+              "9"
+            ]
+          }
+        },
+        "dose_labels": {
+          "1": "1ª Dose",
+          "2": "2ª Dose",
+          "9": "Dose Única"
+        },
+        "school_context": {
+          "documented": true,
+          "age_max_years": 14,
+          "strategy_label": "Vacinação Escolar",
+          "strategy_code": null,
+          "mapping_status": "pending_official_code_confirmation"
+        }
+      }
     },
     {
       "immunobiologic_id": "covid19",
