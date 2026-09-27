@@ -24,3 +24,10 @@ orchestration_services:
 
 decision_services:
   - "INTERVENTION_EVALUATOR"
+
+core_runtime_specialists:
+  - "EPIDEMIOLOGIST"
+
+domain_specialists:
+  - "PUBLIC_HEALTH_MANAGEMENT_SPECIALIST"
+  - "PUBLIC_HEALTH_PROGRAM_SPECIALIST"
