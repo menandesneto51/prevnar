@@ -42,8 +42,13 @@ def test_yellow_fever_partial_mapping_uses_national_registration_code() -> None:
     assert set(item["pni_registration"]["known_coverage_dose_codes"]) == {"1", "9", "36"}
 
 
-def test_hpv_code_remains_unset_until_confirmed_in_national_registration_system() -> None:
+def test_hpv_code_is_confirmed_but_registration_mapping_remains_partial() -> None:
     payload = _load("data/reference/immunobiologic_registry.json")
     item = next(x for x in payload["immunobiologics"] if x["immunobiologic_id"] == "hpv4")
-    assert item["pni_codes"] == []
+    assert item["pni_codes"] == ["67"]
+    assert item["onboarding_status"] == "partial_data_mapping"
+    assert (
+        item["code_mapping_status"]
+        == "immunobiologic_code_confirmed_registration_details_pending"
+    )
     assert item["code_mapping_status"] == "pending_official_pni_code_confirmation"
