@@ -1,0 +1,386 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "semantics": {
+    "statuses": [
+      "confirmed",
+      "partial",
+      "pending",
+      "not_required"
+    ],
+    "evidence_types": [
+      "official_rules_entry",
+      "official_technical_note",
+      "official_calendar",
+      "official_terminology",
+      "official_coverage_rule",
+      "official_specific_guidance"
+    ],
+    "readiness_rule": "All required dimensions must be confirmed. Partial or pending dimensions block ETL readiness.",
+    "clinical_separation": "Clinical-rule completeness and registration-mapping completeness are separate dimensions."
+  },
+  "immunobiologics": [
+    {
+      "immunobiologic_id": "vpc20",
+      "required_dimensions": [
+        "immunobiologic_code",
+        "strategy",
+        "dose"
+      ],
+      "dimensions": {
+        "immunobiologic_code": {
+          "status": "confirmed",
+          "values": [
+            "107"
+          ],
+          "evidence_type": "official_terminology"
+        },
+        "strategy": {
+          "status": "confirmed",
+          "values": [
+            "2"
+          ],
+          "evidence_type": "official_technical_note",
+          "note": "Estratégia especial normativa."
+        },
+        "dose": {
+          "status": "confirmed",
+          "values": [
+            "1",
+            "2",
+            "3",
+            "38",
+            "9",
+            "37",
+            "32",
+            "33",
+            "34"
+          ],
+          "evidence_type": "official_rules_entry"
+        },
+        "attendance_group": {
+          "status": "not_required",
+          "values": [],
+          "evidence_type": "official_rules_entry",
+          "note": "Não usado como gate mínimo do ETL VPC20 atual."
+        }
+      }
+    },
+    {
+      "immunobiologic_id": "vvsr_materna",
+      "required_dimensions": [
+        "immunobiologic_code",
+        "strategy",
+        "dose",
+        "attendance_group"
+      ],
+      "dimensions": {
+        "immunobiologic_code": {
+          "status": "confirmed",
+          "values": [
+            "108"
+          ],
+          "evidence_type": "official_terminology"
+        },
+        "strategy": {
+          "status": "confirmed",
+          "values": [
+            "1"
+          ],
+          "evidence_type": "official_rules_entry"
+        },
+        "dose": {
+          "status": "confirmed",
+          "values": [
+            "9"
+          ],
+          "evidence_type": "official_rules_entry"
+        },
+        "attendance_group": {
+          "status": "confirmed",
+          "values": [
+            "001801"
+          ],
+          "evidence_type": "official_rules_entry"
+        }
+      }
+    },
+    {
+      "immunobiologic_id": "nirsevimab",
+      "required_dimensions": [
+        "immunobiologic_code",
+        "strategy",
+        "dose",
+        "attendance_group"
+      ],
+      "dimensions": {
+        "immunobiologic_code": {
+          "status": "confirmed",
+          "values": [
+            "115",
+            "116"
+          ],
+          "evidence_type": "official_terminology"
+        },
+        "strategy": {
+          "status": "confirmed",
+          "values": [
+            "2",
+            "8"
+          ],
+          "evidence_type": "official_rules_entry"
+        },
+        "dose": {
+          "status": "confirmed",
+          "values": [
+            "59",
+            "60"
+          ],
+          "evidence_type": "official_rules_entry"
+        },
+        "attendance_group": {
+          "status": "confirmed",
+          "values": [
+            "000116",
+            "000104",
+            "000117",
+            "000115",
+            "000121",
+            "000110",
+            "000120"
+          ],
+          "evidence_type": "official_rules_entry"
+        }
+      }
+    },
+    {
+      "immunobiologic_id": "influenza",
+      "required_dimensions": [
+        "immunobiologic_code",
+        "strategy",
+        "dose"
+      ],
+      "dimensions": {
+        "immunobiologic_code": {
+          "status": "confirmed",
+          "values": [
+            "33",
+            "77",
+            "110"
+          ],
+          "evidence_type": "official_technical_note"
+        },
+        "strategy": {
+          "status": "confirmed",
+          "values": [
+            "1",
+            "2",
+            "8",
+            "14"
+          ],
+          "evidence_type": "official_specific_guidance",
+          "note": "Estratégia 14 sustentada por orientação específica; sincronização terminológica separada."
+        },
+        "dose": {
+          "status": "confirmed",
+          "values": [
+            "1",
+            "2",
+            "9"
+          ],
+          "evidence_type": "official_technical_note"
+        },
+        "attendance_group": {
+          "status": "not_required",
+          "values": [],
+          "evidence_type": "official_technical_note",
+          "note": "Cobertura por grupo requer regra/denominador próprio; não bloqueia ETL observacional atual."
+        }
+      }
+    },
+    {
+      "immunobiologic_id": "covid19",
+      "required_dimensions": [
+        "immunobiologic_code",
+        "strategy",
+        "dose",
+        "attendance_group"
+      ],
+      "dimensions": {
+        "immunobiologic_code": {
+          "status": "confirmed",
+          "values": [
+            "87"
+          ],
+          "evidence_type": "official_technical_note",
+          "note": "NT 91/2026 orienta filtrar Regras de Entrada pelo imuno 87."
+        },
+        "strategy": {
+          "status": "pending",
+          "values": [],
+          "evidence_type": "official_rules_entry"
+        },
+        "dose": {
+          "status": "pending",
+          "values": [],
+          "evidence_type": "official_rules_entry"
+        },
+        "attendance_group": {
+          "status": "pending",
+          "values": [],
+          "evidence_type": "official_rules_entry"
+        }
+      }
+    },
+    {
+      "immunobiologic_id": "hpv4",
+      "required_dimensions": [
+        "immunobiologic_code",
+        "strategy",
+        "dose",
+        "attendance_group"
+      ],
+      "dimensions": {
+        "immunobiologic_code": {
+          "status": "confirmed",
+          "values": [
+            "67"
+          ],
+          "evidence_type": "official_terminology"
+        },
+        "strategy": {
+          "status": "pending",
+          "values": [],
+          "evidence_type": "official_rules_entry"
+        },
+        "dose": {
+          "status": "pending",
+          "values": [],
+          "evidence_type": "official_rules_entry"
+        },
+        "attendance_group": {
+          "status": "pending",
+          "values": [],
+          "evidence_type": "official_rules_entry"
+        }
+      }
+    },
+    {
+      "immunobiologic_id": "menacwy",
+      "required_dimensions": [
+        "immunobiologic_code",
+        "strategy",
+        "dose",
+        "attendance_group"
+      ],
+      "dimensions": {
+        "immunobiologic_code": {
+          "status": "confirmed",
+          "values": [
+            "74"
+          ],
+          "evidence_type": "official_terminology"
+        },
+        "strategy": {
+          "status": "partial",
+          "values": [
+            "1"
+          ],
+          "evidence_type": "official_technical_note",
+          "note": "Rotina conhecida; demais contextos ainda não consolidados."
+        },
+        "dose": {
+          "status": "partial",
+          "values": [
+            "38"
+          ],
+          "evidence_type": "official_technical_note",
+          "note": "Reforço conhecido; rotina completa por coorte/contexto ainda não consolidada."
+        },
+        "attendance_group": {
+          "status": "pending",
+          "values": [],
+          "evidence_type": "official_rules_entry"
+        }
+      }
+    },
+    {
+      "immunobiologic_id": "febre_amarela",
+      "required_dimensions": [
+        "immunobiologic_code",
+        "strategy",
+        "dose"
+      ],
+      "dimensions": {
+        "immunobiologic_code": {
+          "status": "confirmed",
+          "values": [
+            "14"
+          ],
+          "evidence_type": "official_terminology"
+        },
+        "strategy": {
+          "status": "pending",
+          "values": [],
+          "evidence_type": "official_rules_entry"
+        },
+        "dose": {
+          "status": "partial",
+          "values": [
+            "1",
+            "9",
+            "36"
+          ],
+          "evidence_type": "official_coverage_rule",
+          "note": "Códigos de cobertura conhecidos; não equivalem à regra de entrada completa."
+        },
+        "attendance_group": {
+          "status": "not_required",
+          "values": [],
+          "evidence_type": "official_calendar"
+        }
+      }
+    },
+    {
+      "immunobiologic_id": "triplice_viral",
+      "required_dimensions": [
+        "immunobiologic_code",
+        "strategy",
+        "dose"
+      ],
+      "dimensions": {
+        "immunobiologic_code": {
+          "status": "confirmed",
+          "values": [
+            "24"
+          ],
+          "evidence_type": "official_terminology"
+        },
+        "strategy": {
+          "status": "partial",
+          "values": [
+            "3",
+            "4"
+          ],
+          "evidence_type": "official_technical_note",
+          "note": "Bloqueio e intensificação conhecidos; rotina nacional ainda não consolidada na regra de entrada."
+        },
+        "dose": {
+          "status": "partial",
+          "values": [
+            "1",
+            "2",
+            "8",
+            "57"
+          ],
+          "evidence_type": "official_technical_note"
+        },
+        "attendance_group": {
+          "status": "not_required",
+          "values": [],
+          "evidence_type": "official_calendar"
+        }
+      }
+    }
+  ]
+}
