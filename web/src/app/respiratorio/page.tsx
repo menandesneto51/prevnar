@@ -1,5 +1,5 @@
 import { Kpi, fmtInt, fmtPct } from "@/components/Kpi";
-import { getRespiratoryDashboard } from "@/lib/data";
+import { getInfluenzaDashboard, getRespiratoryDashboard } from "@/lib/data";
 
 function FreshnessBadge({ status }: { status?: string }) {
   const cls =
@@ -14,7 +14,10 @@ function FreshnessBadge({ status }: { status?: string }) {
 }
 
 export default async function RespiratorioPage() {
-  const data = await getRespiratoryDashboard();
+  const [data, influenza] = await Promise.all([
+    getRespiratoryDashboard(),
+    getInfluenzaDashboard(),
+  ]);
 
   if (!data) {
     return (
@@ -183,6 +186,101 @@ export default async function RespiratorioPage() {
           Cobertura em elegíveis ainda não é exibida. Prematuridade e comorbidades exigem fonte
           clínica compatível ou proxy explicitamente classificado, com deduplicação válida.
         </div>
+      </section>
+
+      <section className="space-y-3">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 className="text-lg font-semibold">Influenza 2026</h2>
+            <p className="mt-1 text-xs text-[var(--muted)]">
+              NT 24/2026 · códigos 33/77/110 · rotina, especial e serviço privado separados
+            </p>
+          </div>
+          {influenza ? (
+            <FreshnessBadge status={influenza.provenance?.freshness?.status} />
+          ) : (
+            <span className="badge badge-warn">sem carga</span>
+          )}
+        </div>
+
+        {influenza ? (
+          <>
+            <div className="grid gap-3 md:grid-cols-4">
+              <Kpi label="Registros observados" value={fmtInt(influenza.observed_code_hits)} />
+              <Kpi
+                label="Contextos confirmados"
+                value={fmtInt(influenza.confirmed_context_doses)}
+                hint={`${fmtPct(influenza.confirmed_share_pct)} dos registros observados`}
+              />
+              <Kpi label="SUS confirmado" value={fmtInt(influenza.sus_confirmed_doses)} />
+              <Kpi
+                label="Privado confirmado"
+                value={fmtInt(influenza.private_confirmed_doses)}
+                hint={`Participação privada: ${fmtPct(influenza.private_share_pct)}`}
+              />
+            </div>
+
+            <div className="grid gap-3 xl:grid-cols-2">
+              <div className="card table-wrap p-2">
+                <h3 className="px-2 py-2 text-sm font-semibold">Contextos confirmados</h3>
+                <table className="data">
+                  <thead>
+                    <tr>
+                      <th>Contexto</th>
+                      <th>Registros</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {Object.entries(influenza.contextos_confirmados)
+                      .sort((a, b) => b[1] - a[1])
+                      .map(([key, value]) => (
+                        <tr key={key}>
+                          <td className="font-mono text-xs">{key}</td>
+                          <td className="kpi-value">{fmtInt(value)}</td>
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="card table-wrap p-2">
+                <h3 className="px-2 py-2 text-sm font-semibold">Top UFs</h3>
+                <table className="data">
+                  <thead>
+                    <tr>
+                      <th>UF</th>
+                      <th>Observados</th>
+                      <th>Confirmados</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[...influenza.por_uf]
+                      .sort((a, b) => b.observed_doses - a.observed_doses)
+                      .slice(0, 10)
+                      .map((row) => (
+                        <tr key={row.uf}>
+                          <td>{row.uf}</td>
+                          <td className="kpi-value">{fmtInt(row.observed_doses)}</td>
+                          <td className="kpi-value">{fmtInt(row.confirmed_doses)}</td>
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="card p-4 text-xs text-[var(--muted)]">
+              {influenza.interpretation} A vacinação escolar para pessoas ≤14 anos permanece como
+              contexto pendente até confirmação do código da estratégia. Cobertura só deve ser
+              calculada para grupos com denominador metodologicamente compatível.
+            </div>
+          </>
+        ) : (
+          <div className="card p-4 text-sm text-[var(--muted)]">
+            O mapeamento oficial está estruturado, mas ainda não existe carga agregada. Execute{" "}
+            <code>python etl/influenza_etl.py</code>.
+          </div>
+        )}
       </section>
 
       <section className="card p-4">

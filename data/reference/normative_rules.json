@@ -324,7 +324,7 @@
         "calendario_nacional_2026",
         "nt_24_2026_influenza"
       ],
-      "note": "Aguardando mapeamento de códigos, estratégias e regras por grupo antes de ativação automática.",
+      "note": "Mapeamento de registro 2026 estruturado conforme NT 24/2026. A regra clínica permanece draft até consolidar grupos-alvo, esquemas por idade/histórico e calendário 2026.",
       "rule_context": "onboarding",
       "geographic_scope": {
         "type": "national",
