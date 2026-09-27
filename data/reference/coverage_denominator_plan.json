@@ -1,0 +1,56 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "methodology_id": "menacwy_cohort_nt50_2026",
+  "immunobiologic_id": "menacwy",
+  "normative_act": "nt_50_2026_menacwy",
+  "numerator": {
+    "source": "PNI/RNDS",
+    "vaccine_code": "74",
+    "min_year": 2020,
+    "ages": [
+      11,
+      12,
+      13,
+      14
+    ],
+    "person_deduplication": true,
+    "rule": "For target age A in reference year Y, union unique persons vaccinated at ages 11..A in the corresponding cohort years Y-(A-age).",
+    "evidence_level": "E1_when_nominal_fields_available"
+  },
+  "denominator": {
+    "source": "IBGE Censo Demográfico 2022 - população por idade simples",
+    "reference_year": 2022,
+    "ages": [
+      11,
+      12,
+      13,
+      14
+    ],
+    "normalized_path": "data/manual/denominators/censo2022_age_simple.csv",
+    "required_columns": [
+      "geography_type",
+      "geography_code",
+      "age",
+      "population",
+      "census_year"
+    ],
+    "official_method_note": "MS NT 50/2026 uses Censo 2022 by simple age for all cohort years until newer suitable denominators are available.",
+    "evidence_level": "E1"
+  },
+  "outputs": {
+    "by_age": true,
+    "age_group_11_14": true,
+    "geography_levels": [
+      "BR",
+      "UF",
+      "municipality"
+    ]
+  },
+  "limitations": [
+    "Deaths are not excluded exactly from historical vaccinated cohorts.",
+    "Migration is not modeled exactly.",
+    "Coverage remains unavailable when the normalized Censo denominator is missing.",
+    "Age/year inconsistencies in nominal records are flagged as possible cross-cohort overlap."
+  ]
+}

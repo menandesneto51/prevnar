@@ -1,5 +1,5 @@
-import { Kpi, fmtInt } from "@/components/Kpi";
-import { getRoutineRescueDashboard } from "@/lib/data";
+import { Kpi, fmtInt, fmtPct } from "@/components/Kpi";
+import { getMenacwyCohortCoverage, getRoutineRescueDashboard } from "@/lib/data";
 
 function ProductBlock({
   title,
@@ -48,7 +48,10 @@ function ProductBlock({
 }
 
 export default async function RotinaResgatePage() {
-  const data = await getRoutineRescueDashboard();
+  const [data, cohort] = await Promise.all([
+    getRoutineRescueDashboard(),
+    getMenacwyCohortCoverage(),
+  ]);
 
   if (!data) {
     return (
@@ -104,6 +107,63 @@ export default async function RotinaResgatePage() {
           </div>
         }
       />
+
+      {(() => {
+        const br = cohort?.rows.find(
+          (row) => row.geography_type === "BR" && row.geography_code === "BR",
+        );
+        if (!cohort) {
+          return (
+            <div className="card p-4 text-sm text-[var(--muted)]">
+              Cobertura MenACWY por coorte ainda não foi calculada. Execute{" "}
+              <code>python etl/menacwy_cohort.py --reference-year 2026</code>.
+            </div>
+          );
+        }
+        return (
+          <section className="card p-4">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <h3 className="text-sm font-semibold">Cobertura MenACWY por coorte — NT 50/2026</h3>
+              <span className={`badge ${cohort.denominator_loaded ? "badge-sit1" : "badge-warn"}`}>
+                {cohort.denominator_loaded ? "denominador carregado" : "denominador indisponível"}
+              </span>
+            </div>
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
+              <Kpi
+                label="Cobertura 11–14 anos"
+                value={br?.coverage_11_14_pct == null ? "indisponível" : fmtPct(br.coverage_11_14_pct)}
+                hint="Coorte nominal + Censo 2022 por idade simples"
+              />
+              <Kpi label="Vacinados únicos na coorte" value={fmtInt(br?.vaccinated_unique_11_14)} />
+              <Kpi label="Denominador 11–14" value={fmtInt(br?.denominator_11_14_censo2022)} />
+            </div>
+            {br ? (
+              <div className="mt-4 table-wrap">
+                <table className="data">
+                  <thead>
+                    <tr><th>Idade</th><th>Coorte nascimento</th><th>Vacinados</th><th>Denominador</th><th>Cobertura</th></tr>
+                  </thead>
+                  <tbody>
+                    {br.ages.map((age) => (
+                      <tr key={age.age}>
+                        <td>{age.age}</td>
+                        <td>{age.birth_cohort_year}</td>
+                        <td className="kpi-value">{fmtInt(age.vaccinated_unique)}</td>
+                        <td className="kpi-value">{fmtInt(age.denominator_censo2022)}</td>
+                        <td>{age.coverage_pct == null ? "—" : fmtPct(age.coverage_pct)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : null}
+            <p className="mt-3 text-xs text-[var(--muted)]">
+              Se o Censo 2022 normalizado não estiver disponível, o PREVNAR mantém a cobertura nula;
+              não usa população total nem rateio como fallback.
+            </p>
+          </section>
+        );
+      })()}
 
       <ProductBlock
         title="Febre amarela"

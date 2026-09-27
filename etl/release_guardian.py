@@ -366,6 +366,66 @@ def check_dashboard_runtime(findings: list[Finding], mode: str) -> None:
             )
 
 
+def check_coverage_marts(findings: list[Finding], mode: str) -> None:
+    path = MART / "mart_menacwy_cohort_coverage.json"
+    if not path.exists():
+        return
+
+    try:
+        payload = _load_json(path)
+    except Exception as exc:  # noqa: BLE001
+        _finding(
+            findings,
+            "error",
+            "coverage_mart_invalid",
+            f"Mart de cobertura MenACWY inválido: {exc}",
+            path,
+        )
+        return
+
+    denominator_loaded = bool(payload.get("denominator_loaded"))
+    for row in payload.get("rows") or []:
+        geo = f"{row.get('geography_type')}:{row.get('geography_code')}"
+        if row.get("decision_grade") and not denominator_loaded:
+            _finding(
+                findings,
+                "error",
+                "coverage_without_denominator",
+                f"{geo} marcado decision-grade sem denominador carregado.",
+                path,
+            )
+        coverage = row.get("coverage_11_14_pct")
+        if coverage is not None and float(coverage) > 100:
+            _finding(
+                findings,
+                "warning",
+                "coverage_above_100",
+                (
+                    f"{geo} possui cobertura 11–14 >100% ({coverage}%). "
+                    "Preservar o valor e investigar denominador, migração, duplicidade ou registro."
+                ),
+                path,
+            )
+        for age in row.get("ages") or []:
+            if age.get("decision_grade") and age.get("denominator_censo2022") in (None, 0):
+                _finding(
+                    findings,
+                    "error",
+                    "age_coverage_without_denominator",
+                    f"{geo} idade {age.get('age')} decision-grade sem denominador válido.",
+                    path,
+                )
+            age_coverage = age.get("coverage_pct")
+            if age_coverage is not None and float(age_coverage) > 100:
+                _finding(
+                    findings,
+                    "warning",
+                    "age_coverage_above_100",
+                    f"{geo} idade {age.get('age')} cobertura >100% ({age_coverage}%).",
+                    path,
+                )
+
+
 def check_secrets_and_personal_data(findings: list[Finding]) -> None:
     for path in iter_text_files():
         try:
@@ -448,6 +508,7 @@ def run_guardian(mode: str = "ci") -> tuple[list[Finding], dict]:
     check_vaccine_registry(findings)
     check_indicator_catalog(findings)
     check_dashboard_runtime(findings, mode)
+    check_coverage_marts(findings, mode)
     check_secrets_and_personal_data(findings)
     check_mutable_api_routes(findings, mode)
 
