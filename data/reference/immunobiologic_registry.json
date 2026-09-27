@@ -330,13 +330,15 @@
       "display": "Covid-19",
       "active": true,
       "monitored": false,
-      "onboarding_status": "operational_profile_structured_data_mapping_pending",
-      "pni_codes": [],
+      "onboarding_status": "operational_profile_structured_partial_data_mapping",
+      "pni_codes": [
+        "87"
+      ],
       "normative_acts": [
         "calendario_nacional_2026",
         "nt_91_2026_covid"
       ],
-      "note": "Perfil operacional LP.8.1 ≥12 anos estruturado conforme NT 91/2026. Regras de gestante e idoso estruturadas pelo Calendário 2026; códigos PNI/produtos de registro permanecem pendentes.",
+      "note": "Perfil operacional LP.8.1 ≥12 anos estruturado conforme NT 91/2026. Código do imuno 87 confirmado pela própria NT; estratégia, dose e grupos da Regra de Entrada permanecem pendentes. monitored=false até completar o mapeamento.",
       "product_variants": [
         {
           "product_variant_id": "comirnaty_lp81_refrigerated_12plus",
@@ -358,10 +360,28 @@
           "transition_period": "second_half_2026",
           "normative_acts": [
             "nt_91_2026_covid"
-          ]
+          ],
+          "pni_immunobiologic_code": "87",
+          "registration_mapping_status": "immunobiologic_code_confirmed_details_pending"
         }
       ],
-      "code_mapping_status": "product_registration_codes_pending"
+      "code_mapping_status": "immunobiologic_code_confirmed_registration_details_pending",
+      "pni_registration": {
+        "immunobiologic_code": "87",
+        "confirmation_source": "nt_91_2026_covid",
+        "official_instruction": "Filtrar as Regras de Entrada pelo código do imuno 87 para Comirnaty Refrigerada – cepa LP.8.1.",
+        "strategy_codes_status": "pending_rules_entry_extraction",
+        "dose_codes_status": "pending_rules_entry_extraction",
+        "attendance_groups_status": "pending_rules_entry_extraction",
+        "special_strategy_requirements": {
+          "documented": true,
+          "required_fields": [
+            "motivo_indicacao_cid",
+            "especialidade_profissional_prescritor"
+          ]
+        },
+        "etl_activation_status": "blocked_until_registration_details_complete"
+      }
     },
     {
       "immunobiologic_id": "hpv4",
