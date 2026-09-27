@@ -29,3 +29,6 @@ alwaysApply: true
 15. Regra nacional deve usar `geographic_scope.type = national` e incluir `BR` em `codes`.
 16. Regra territorial deve possuir códigos explícitos; nunca assumir abrangência por nome ou nota textual.
 17. O Release Guardian bloqueia referência legal não resolvida e regra ativa sem governança normativa mínima.
+
+18. Nunca definir `monitored=true` quando `code_mapping_status` contiver `pending` ou quando o onboarding ainda estiver em `partial_data_mapping`.
+19. Confirmar apenas o código do imunobiológico não autoriza ETL decisório; estratégia, dose, grupo e combinações válidas devem estar estruturados quando exigidos pela Regra de Entrada.
