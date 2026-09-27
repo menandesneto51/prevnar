@@ -52,7 +52,7 @@ function RuleTable({ item }: { item: NormativeMatrixItem }) {
                     <div className="text-xs text-[var(--muted)]">até {rule.effective_until}</div>
                   ) : null}
                 </td>
-                <td>{ScopeLabel({ rule })}</td>
+                <td><ScopeLabel rule={rule} /></td>
               </tr>
             ))
           ) : (
