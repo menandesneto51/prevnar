@@ -27,6 +27,9 @@ jobs:
       - name: Generate regulatory benchmark
         run: python etl/regulatory_compliance.py
 
+      - name: Generate registration readiness
+        run: python etl/registration_readiness.py
+
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
