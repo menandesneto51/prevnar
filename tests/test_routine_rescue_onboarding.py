@@ -53,4 +53,5 @@ def test_mmr_note_requires_context_specific_rules() -> None:
     item = get_immunobiologic("triplice_viral")
     note = item["note"].lower()
     assert "dose zero" in note
-    assert "território" in note or "territorial" in note
+    assert "territori" in note
+    assert "bloqueio" in note or "intensificação" in note
