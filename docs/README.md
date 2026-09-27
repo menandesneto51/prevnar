@@ -38,3 +38,5 @@
 
 Documentos gerados automaticamente não devem substituir documentos normativos/manuais.
 Mudanças de método devem ser registradas, testadas e versionadas.
+
+| [REGULATORY_COMPLIANCE.md](REGULATORY_COMPLIANCE.md) | Benchmark regulatório, Portaria 5.663/2024 e painel /conformidade |
