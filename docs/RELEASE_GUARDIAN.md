@@ -27,6 +27,11 @@ Modo mais estrito. Deve ser usado após reconstrução dos marts e antes de uma 
 ## Gates implementados
 
 - registro legal válido;
+- separação SIES público (distribuição) × SIES/DW institucional (estoque);
+- proibição de inferir saldo atual a partir de doses distribuídas;
+- proibição de seed SIES como dado observado;
+- bloqueio de TLS sem verificação no extrator legado;
+- contrato institucional com CPF/CNS proibidos;
 - referências legais das regras resolvidas;
 - regra ativa com vigência definida;
 - regra ativa com escopo geográfico explícito;
