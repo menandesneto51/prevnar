@@ -14,26 +14,32 @@ type Row = {
 export default async function EstoquePage() {
   const data = (await getNacional()) as {
     kpis?: { doses_por_crie?: number | null; pct_fora_crie?: number | null };
+    distribuicao_sies_uf?: Row[];
     estoque_uf?: Row[];
-    sies_resumo?: { por_classe_insumo?: Record<string, number>; nota?: string };
+    sies_resumo?: {
+      por_classe_insumo?: Record<string, number>;
+      nota?: string;
+      data_semantics?: string;
+      decision_grade?: boolean;
+    };
     qualidade?: { sies_nota?: string };
   };
-  const rows = data.estoque_uf || [];
+  const rows = data.distribuicao_sies_uf || data.estoque_uf || [];
   const dist = rows.reduce((a, r) => a + r.distribuidas, 0);
   const apl = rows.reduce((a, r) => a + r.aplicadas, 0);
 
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-semibold">Estoque · SIES + oferta CRIE</h1>
+        <h1 className="text-2xl font-semibold">Distribuição SIES · VPC20 + oferta CRIE</h1>
         <p className="mt-1 text-sm text-[var(--muted)]">
-          Doses distribuídas (SIES) vs aplicadas (numerador VPC20), com doses por CRIE e % fora
-          do CNES CRIE.
+          Doses VPC20 identificadas diretamente como distribuídas no SIES vs pessoas vacinadas
+          no numerador VPC20, com oferta CRIE. Distribuição não equivale a saldo de estoque.
         </p>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-        <Kpi label="Distribuídas (seed/API)" value={fmtInt(dist)} />
+        <Kpi label="Distribuídas VPC20 (SIES)" value={fmtInt(dist)} />
         <Kpi label="Aplicadas" value={fmtInt(apl)} tone="accent" />
         <Kpi
           label="Razão dist÷aplic"
@@ -54,6 +60,12 @@ export default async function EstoquePage() {
             data.kpis?.pct_fora_crie == null ? "—" : fmtPct(data.kpis.pct_fora_crie)
           }
         />
+      </div>
+
+      <div className="card border border-[var(--warn)] p-4 text-xs text-[var(--muted)]">
+        Esta rota histórica mantém o caminho <code>/estoque</code> por compatibilidade, mas os
+        dados públicos aqui exibidos representam <strong>doses distribuídas</strong>. Saldo de
+        estoque, lotes, validade e perdas exigem a fonte institucional específica.
       </div>
 
       {(data.qualidade?.sies_nota || data.sies_resumo?.nota) && (
