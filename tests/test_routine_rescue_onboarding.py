@@ -68,7 +68,21 @@ def test_mmr_has_partial_official_registration_mapping_only() -> None:
     assert "não representa toda a rotina" in item["pni_registration"]["mapping_scope_note"].lower()
 
 
-def test_other_routine_rescue_codes_remain_unset_until_official_mapping() -> None:
-    for immunobiologic_id in ("hpv4", "menacwy", "febre_amarela"):
-        item = get_immunobiologic(immunobiologic_id)
-        assert item["pni_codes"] == []
+def test_hpv_code_remains_unset_until_official_mapping() -> None:
+    item = get_immunobiologic("hpv4")
+    assert item["pni_codes"] == []
+    assert item["code_mapping_status"] == "pending_official_pni_code_confirmation"
+
+
+def test_menacwy_and_yellow_fever_have_partial_official_mapping() -> None:
+    men = get_immunobiologic("menacwy")
+    fa = get_immunobiologic("febre_amarela")
+
+    assert men["pni_codes"] == ["74"]
+    assert men["onboarding_status"] == "partial_data_mapping"
+    assert men["pni_registration"]["known_routine_booster"]["strategy_code"] == "1"
+    assert men["pni_registration"]["known_routine_booster"]["dose_code"] == "38"
+
+    assert fa["pni_codes"] == ["14"]
+    assert fa["onboarding_status"] == "partial_data_mapping"
+    assert set(fa["pni_registration"]["known_coverage_dose_codes"]) == {"1", "9", "36"}
