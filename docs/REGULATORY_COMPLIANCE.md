@@ -175,3 +175,48 @@ Criar um **Regulatory Watch Agent** capaz de:
 - identificar atualização do servidor terminológico;
 - abrir/atualizar backlog;
 - nunca alterar regra clínica automaticamente sem evidência estruturada e testes.
+
+
+## Regulatory Watch agendado
+
+Workflow:
+
+`.github/workflows/regulatory-watch.yml`
+
+Agenda:
+
+```text
+10:15 UTC diariamente
+≈ 06:15 America/Cuiaba
+```
+
+Alvos atuais:
+
+1. Regras de Entrada de Dados — baseline versão 4, publicada em 04/09/2026;
+2. BRImunobiologico — versão 1.1.0, ativa em 22/08/2026;
+3. BREstrategiaVacinacao — versão 1.1.0, ativa em 22/08/2026.
+
+Exceção terminológica monitorada:
+
+```text
+14 = Vacinação Escolar
+```
+
+O código 14 está sustentado por orientação oficial específica, mas ainda não aparece no ValueSet publicado.
+
+### Comportamento
+
+Se não houver mudança:
+- gera artifact de auditoria;
+- não abre issue.
+
+Se uma fonte estiver indisponível:
+- registra `unavailable`;
+- não interpreta indisponibilidade como mudança normativa.
+
+Se houver mudança material:
+- gera relatório;
+- abre ou atualiza issue `[Regulatory Watch] Mudança oficial detectada`;
+- não altera código, registry, regra clínica ou `monitored`.
+
+Toda mudança detectada deve resultar em revisão humana e PR.
