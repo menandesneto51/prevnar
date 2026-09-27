@@ -47,3 +47,15 @@ def test_hpv_partial_mapping_is_flagged() -> None:
 def test_backlog_priority_is_technical_not_clinical() -> None:
     payload = build_backlog(as_of=AS_OF)
     assert "não prioridade clínica" in payload["interpretation"].lower()
+
+
+def test_covid_code_87_removes_missing_code_but_keeps_mapping_backlog() -> None:
+    payload = build_backlog(as_of=AS_OF)
+    categories = {
+        row["category"]
+        for row in payload["items"]
+        if row["immunobiologic_id"] == "covid19"
+    }
+    assert "national_code_missing" not in categories
+    assert "data_mapping_incomplete" in categories
+    assert "monitoring_not_enabled" in categories

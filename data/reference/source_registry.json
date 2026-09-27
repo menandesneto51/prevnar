@@ -210,6 +210,26 @@
       "critical_for_decision": true,
       "status": "contract_ready_not_connected",
       "access": "authorized_export_or_institutional_dw"
+    },
+    {
+      "source_id": "pni_covid19_2026",
+      "name": "PNI/RNDS — Covid-19 2026",
+      "domain": "imunizacao_covid19",
+      "cadence": "mensal_ou_superior",
+      "attention_after_days": 45,
+      "stale_after_days": 75,
+      "critical_for_decision": true,
+      "status": "immunobiologic_code_confirmed_registration_details_pending",
+      "access": "public_pni_rnds_after_mapping_completion",
+      "capabilities": [
+        "immunobiologic_code_87_confirmed"
+      ],
+      "limitations": [
+        "strategy_codes_pending",
+        "dose_codes_pending",
+        "attendance_groups_pending",
+        "etl_not_activated"
+      ]
     }
   ]
 }

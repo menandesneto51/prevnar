@@ -298,7 +298,7 @@ export default async function RespiratorioPage() {
               Regras clínicas selecionadas + perfil operacional Comirnaty LP.8.1
             </p>
           </div>
-          <span className="badge badge-warn">PNI por produto pendente</span>
+          <span className="badge badge-warn">PNI 87 · detalhes pendentes</span>
         </div>
 
         {covid ? (
@@ -324,7 +324,7 @@ export default async function RespiratorioPage() {
                 label="Monitoramento de doses"
                 value={covid.monitored ? "Ativo" : "Bloqueado"}
                 tone={covid.monitored ? "accent" : "warn"}
-                hint="ETL não é ativado sem códigos oficiais por produto"
+                hint="Código 87 confirmado; ETL aguarda estratégia, dose e grupos"
               />
             </div>
 
@@ -420,7 +420,8 @@ export default async function RespiratorioPage() {
             <div className="card p-4 text-xs text-[var(--muted)]">
               Caminhos clínicos ativos: {covid.clinical_automation.active_pathways.join(", ")}.
               Pendentes: {covid.clinical_automation.pending_pathways.join(", ")}.
-              A ausência de códigos PNI por produto impede a ativação de indicadores de doses.
+              O código PNI 87 está confirmado; estratégia, dose e grupos de atendimento ainda
+              precisam ser consolidados antes da ativação dos indicadores de doses.
             </div>
           </>
         ) : (
