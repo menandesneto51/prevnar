@@ -119,3 +119,22 @@ Ela não substitui:
 - governança de dados;
 - revisão epidemiológica;
 - Release Guardian.
+
+
+## Backlog derivado
+
+O módulo `etl/normative_backlog.py` deriva automaticamente pendências a partir da matriz.
+
+Categorias atuais:
+- `normative_rule_pending`;
+- `data_mapping_incomplete`;
+- `national_code_missing`;
+- `monitoring_not_enabled`.
+
+A prioridade P1/P2 é **técnica/metodológica**, não prioridade clínica.
+
+Saídas:
+- `data/mart/normative_backlog.json`;
+- `web/public/data/normative_backlog.json`.
+
+A rota `/normas` apresenta até 20 pendências prioritárias e o próximo gate esperado para cada uma.
