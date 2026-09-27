@@ -536,3 +536,54 @@ export async function getRegulatoryCompliance(): Promise<RegulatoryComplianceDas
   const raw = await readFile(file, "utf-8");
   return JSON.parse(raw) as RegulatoryComplianceDashboard;
 }
+
+
+export type RegistrationReadinessDimension = {
+  dimension: string;
+  required: boolean;
+  status: "confirmed" | "partial" | "pending" | "not_required";
+  values: string[];
+  evidence_type?: string | null;
+  note?: string | null;
+};
+
+export type RegistrationReadinessItem = {
+  immunobiologic_id: string;
+  display?: string | null;
+  monitored: boolean;
+  onboarding_status?: string | null;
+  code_mapping_status?: string | null;
+  required_dimensions: string[];
+  confirmed_required_dimensions: number;
+  required_dimension_count: number;
+  readiness_pct: number;
+  etl_ready: boolean;
+  blocking_dimensions: string[];
+  dimensions: RegistrationReadinessDimension[];
+};
+
+export type RegistrationReadinessDashboard = {
+  schema_version: string;
+  generated_at: string;
+  mapping_version?: string | null;
+  summary: {
+    immunobiologics: number;
+    etl_ready: number;
+    blocked: number;
+    monitored: number;
+    monitored_not_ready: string[];
+  };
+  items: RegistrationReadinessItem[];
+  interpretation: string;
+};
+
+export async function getRegistrationReadiness(): Promise<RegistrationReadinessDashboard | null> {
+  const candidates = [
+    path.join(dataDir, "registration_readiness.json"),
+    path.join(process.cwd(), "..", "data", "mart", "registration_readiness.json"),
+  ];
+  const file = candidates.find((candidate) => existsSync(candidate));
+  if (!file) return null;
+  const raw = await readFile(file, "utf-8");
+  return JSON.parse(raw) as RegistrationReadinessDashboard;
+}

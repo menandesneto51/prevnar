@@ -147,7 +147,7 @@
         "ntc_74_2026_nirsevimab",
         "nt_89_2026_nirsevimab"
       ],
-      "note": "Regras operacionais estruturadas; códigos da fonte e derivação automatizada de comorbidades ainda precisam de validação para monitoramento.",
+      "note": "Códigos 115/116, estratégias 2/8, doses 59/60 e grupos de atendimento estão estruturados para o ETL; derivação clínica de comorbidades permanece uma camada distinta.",
       "pni_registration": {
         "presentations": {
           "115": {
@@ -206,7 +206,7 @@
         "estrategia_vvsr_gestantes_2026",
         "calendario_nacional_2026"
       ],
-      "note": "Regra clínica estruturada; códigos da fonte PNI ainda devem ser validados antes do monitoramento automatizado.",
+      "note": "Código 108, estratégia Rotina=1, dose única=9 e grupo Gestante=001801 estão estruturados para o ETL; elegibilidade clínica permanece separada do mapeamento de registro.",
       "pni_registration": {
         "strategy_codes": [
           "1"
@@ -398,7 +398,7 @@
         "calendario_nacional_2026",
         "nt_32_2026_hpv_nic2"
       ],
-      "note": "Regra nacional de rotina estruturada (9–14 anos, dose única). Código PNI permanece pendente de confirmação no sistema nacional; resgate 15–19 e grupos especiais são contextos separados.",
+      "note": "Regra nacional de rotina estruturada (9–14 anos, dose única). Código PNI 67 confirmado; estratégias, doses e grupos da Regra de Entrada vigente ainda precisam ser consolidados. Resgate 15–19 e grupos especiais são contextos separados.",
       "code_mapping_status": "immunobiologic_code_confirmed_registration_details_pending",
       "pni_registration": {
         "immunobiologic_codes": [
@@ -430,7 +430,7 @@
         "nt_50_2026_menacwy",
         "nt_77_2025_menacwy_reforco"
       ],
-      "note": "NT 50/2026 trata metodologia de coorte 11–14 anos; regra clínica e códigos PNI ainda não ativados.",
+      "note": "Código PNI 74 confirmado. Reforço de rotina conhecido (estratégia 1, dose 38), mas estratégia/doses/grupos completos por faixa/coorte ainda requerem consolidação da Regra de Entrada vigente.",
       "pni_registration": {
         "immunobiologic_codes": [
           "74"
@@ -473,7 +473,7 @@
         "calendario_nacional_2026",
         "nt_6_2026_febre_amarela"
       ],
-      "note": "NT 6/2026 trata indivíduos que receberam dose fracionada em 2018; demais regras permanecem vinculadas ao calendário 2026 e onboarding futuro.",
+      "note": "Código PNI 14 confirmado; códigos de dose de cobertura 1/9/36 conhecidos. Estratégias e regra de entrada completa por faixa/histórico permanecem em onboarding.",
       "pni_registration": {
         "immunobiologic_codes": [
           "14"
@@ -515,7 +515,7 @@
         "ntc_116_2026_sarampo_viajantes",
         "nt_46_2025_triplice_dupla_registro"
       ],
-      "note": "Regra nacional de rotina ativa por histórico; código 24 e contextos de bloqueio/intensificação parcialmente mapeados. Dose zero e estratégias territoriais permanecem separadas.",
+      "note": "Código PNI 24 confirmado; contextos territoriais de bloqueio/intensificação estão parcialmente mapeados. Dose zero permanece contexto específico separado. A rotina nacional e demais combinações de registro ainda precisam ser consolidadas antes de monitored=true.",
       "pni_registration": {
         "immunobiologic_code": "24",
         "known_contexts": {

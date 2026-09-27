@@ -1,34 +1,48 @@
 ---
-description: Regras para imunobiológicos, elegibilidade e normas do PREVNAR
+description: Regras para imunobiológicos, elegibilidade, mapeamento e normas do PREVNAR
 alwaysApply: true
 ---
 
 # PREVNAR — Immunobiologic Registry
 
 1. `data/reference/immunobiologic_registry.json` é a fonte canônica para identidade e tipo do imunobiológico.
-2. `data/reference/vaccine_registry.json` é uma view de compatibilidade específica de vacinas durante a migração.
-3. `data/reference/normative_rules.json` é a fonte canônica para elegibilidade, esquema, transição, campanha e vigência.
+2. `data/reference/normative_rules.json` é a fonte canônica para elegibilidade, esquema, transição, campanha, vigência e escopo.
+3. `data/reference/registration_mapping_registry.json` é a fonte canônica para prontidão transacional de código, estratégia, dose e grupo.
 4. `docs/legal_register.json` deve conter todo ato normativo referenciado.
-5. Novas regras devem usar `immunobiologic_id`; `vaccine_id` é apenas compatibilidade legada.
-6. Não adicionar regra clínica diretamente em Python/TypeScript sem registro normativo correspondente.
-7. `data/reference/vacinas_pni.json` é legado; não adicionar novas regras nele.
-8. Toda regra deve ter `rule_id`, vigência, `immunobiologic_id` e `normative_acts`.
-9. Entidade cadastrada não implica regra ativa. Onboarding em `draft` nunca gera recomendação automática.
-10. Em ambiguidade normativa, retorne `requires_review`; não invente esquema.
-11. Mudança normativa exige testes de regressão e revisão epidemiológica.
-12. O motor é de suporte operacional/vigilância e não substitui decisão clínica individual.
-13. Antes de release, executar o Release Guardian.
+5. `data/reference/vaccine_registry.json` é apenas uma view de compatibilidade específica de vacinas durante a migração.
+6. `data/reference/vacinas_pni.json` é legado; não adicionar novas regras nele.
 
-14. Toda regra nova deve possuir `rule_context` e `geographic_scope`.
-15. Regras estaduais, municipais, por estabelecimento ou polígono nunca podem assumir escopo nacional por padrão.
-16. `active_rules()` deve receber contexto geográfico para resolver regras não nacionais.
-17. Código PNI/RNDS, código SIES/estoque e outros code systems são domínios distintos; nunca reutilizar um código entre sistemas sem fonte explícita.
-18. Mapeamento parcial deve ser marcado como parcial e não apresentado como cobertura integral da rotina.
+## Regras normativas
 
-14. Toda regra ativa deve ter `effective_from`, `geographic_scope` e `normative_acts`.
-15. Regra nacional deve usar `geographic_scope.type = national` e incluir `BR` em `codes`.
-16. Regra territorial deve possuir códigos explícitos; nunca assumir abrangência por nome ou nota textual.
-17. O Release Guardian bloqueia referência legal não resolvida e regra ativa sem governança normativa mínima.
+7. Toda regra deve possuir `rule_id`, `immunobiologic_id`, vigência e `normative_acts`.
+8. Toda regra nova deve possuir `rule_context` e `geographic_scope`.
+9. Regra nacional deve usar `geographic_scope.type = national` e incluir `BR` em `codes`.
+10. Regras estaduais, municipais, por estabelecimento ou polígono nunca podem assumir escopo nacional por padrão.
+11. `active_rules()` deve receber contexto geográfico para resolver regras não nacionais.
+12. Entidade cadastrada não implica regra ativa. Onboarding em `draft` nunca gera recomendação automática.
+13. Em ambiguidade normativa, retornar `requires_review`; não inventar esquema.
 
-18. Nunca definir `monitored=true` quando `code_mapping_status` contiver `pending` ou quando o onboarding ainda estiver em `partial_data_mapping`.
-19. Confirmar apenas o código do imunobiológico não autoriza ETL decisório; estratégia, dose, grupo e combinações válidas devem estar estruturados quando exigidos pela Regra de Entrada.
+## Sistemas de código
+
+14. Código PNI/RNDS, código SIES/estoque, CNES e outros code systems são domínios distintos.
+15. Nunca reutilizar código entre sistemas sem fonte explícita.
+16. Terminologia oficial confirma identidade/codificação; não substitui estratégia, dose, grupo ou regra clínica.
+17. Divergência terminológica deve ser registrada explicitamente.
+
+## Registration Readiness
+
+18. Toda dimensão obrigatória do ETL deve existir em `registration_mapping_registry.json`.
+19. Estados permitidos: `confirmed`, `partial`, `pending`, `not_required`.
+20. Uma dimensão obrigatória só libera ETL quando estiver `confirmed`.
+21. `partial` e `pending` bloqueiam readiness.
+22. `monitored=true` exige `etl_ready=true`.
+23. Confirmar apenas o código do imunobiológico nunca autoriza ETL decisório.
+24. Não inferir estratégia, dose, grupo ou combinação para elevar readiness.
+25. Regras clínicas e prontidão transacional são dimensões independentes.
+
+## Implementação
+
+26. Não adicionar regra clínica diretamente em Python/TypeScript sem registro normativo correspondente.
+27. Mudança normativa ou de mapeamento exige teste de regressão.
+28. Antes de release, executar o Release Guardian.
+29. O motor é suporte operacional/vigilância e não substitui decisão clínica individual.

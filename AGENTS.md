@@ -3,9 +3,18 @@
 O Cursor é o ambiente padrão de implementação do PREVNAR. Todos os agentes devem respeitar a documentação em `docs/`.
 
 ## 1. PREVNAR Data Agent
-Responsável por ingestão, manifestos, schema, proveniência, freshness e reconciliação de fontes.
+Responsável por ingestão, manifestos, schema, proveniência, freshness, reconciliação de fontes e evidência de mapeamento transacional.
 
-Não altera dados-fonte. Não mascara falhas de extração com seed sem sinalização E5.
+Para imunobiológicos, mantém:
+- código;
+- estratégia;
+- dose;
+- grupo de atendimento;
+- fonte oficial por dimensão
+
+em `data/reference/registration_mapping_registry.json`.
+
+Não altera dados-fonte. Não mascara falhas de extração com seed sem sinalização E5. Não promove mapeamento parcial a `confirmed`.
 
 ## 2. PREVNAR Epidemiology Agent
 Valida:
@@ -28,7 +37,10 @@ Executa:
 - atraso;
 - outliers;
 - divergência entre fontes;
-- small-cell checks.
+- small-cell checks;
+- registration readiness.
+
+Deve verificar se todas as dimensões obrigatórias estão `confirmed` antes de aceitar `etl_ready=true`.
 
 ## 4. PREVNAR Legal & Privacy Agent
 Confere:
@@ -89,7 +101,9 @@ Bloqueia release quando houver:
 - segredo versionado;
 - dado pessoal no repositório;
 - alteração metodológica sem versionamento;
-- endpoint mutável exposto sem autenticação.
+- endpoint mutável exposto sem autenticação;
+- `monitored=true` com `etl_ready=false`;
+- dimensão obrigatória de registro em `partial`/`pending` para imunobiológico monitorado.
 
 ## Ordem recomendada
 Data → Epidemiology → Quality → Legal/Privacy → Regulatory Watch → Intelligence → Action → Release Guardian.
@@ -122,3 +136,17 @@ Regras adicionais obrigatórias para todos os agentes:
 - Release Guardian deve bloquear referências territoriais estruturalmente inválidas.
 
 Ausência de contexto geográfico significa: somente regras nacionais podem ser resolvidas.
+
+
+## Registration readiness entre agentes
+
+Fluxo obrigatório:
+
+1. Legal/Privacy Agent confirma fonte oficial e escopo.
+2. Epidemiology Agent confirma que regra clínica e contexto estão corretamente separados.
+3. Data Agent registra evidência de código/estratégia/dose/grupo.
+4. Data Quality Agent executa `registration_readiness.py`.
+5. Intelligence/Action Agents só usam ETL liberado.
+6. Release Guardian bloqueia `monitored=true` sem `etl_ready=true`.
+
+**Regra clínica completa e mapeamento transacional completo são estados independentes.**

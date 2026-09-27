@@ -2,6 +2,7 @@ import { Kpi, fmtInt } from "@/components/Kpi";
 import {
   getNormativeBacklog,
   getNormativeMatrix,
+  getRegistrationReadiness,
   type NormativeMatrixItem,
   type NormativeRuleRow,
 } from "@/lib/data";
@@ -122,9 +123,10 @@ function ActsTable({ item }: { item: NormativeMatrixItem }) {
 }
 
 export default async function NormasPage() {
-  const [data, backlog] = await Promise.all([
+  const [data, backlog, readiness] = await Promise.all([
     getNormativeMatrix(),
     getNormativeBacklog(),
+    getRegistrationReadiness(),
   ]);
 
   if (!data) {
@@ -187,6 +189,80 @@ export default async function NormasPage() {
       )}
 
       <section className="card p-4 text-xs text-[var(--muted)]">{data.interpretation}</section>
+
+      {readiness ? (
+        <section className="space-y-3">
+          <div>
+            <h2 className="text-lg font-semibold">Prontidão de registro para ETL</h2>
+            <p className="mt-1 text-xs text-[var(--muted)]">
+              {readiness.interpretation} Código, estratégia, dose e grupo são avaliados
+              separadamente conforme a necessidade de cada imunobiológico.
+            </p>
+          </div>
+
+          <div className="grid gap-3 md:grid-cols-4">
+            <Kpi label="Imunobiológicos avaliados" value={fmtInt(readiness.summary.immunobiologics)} />
+            <Kpi label="ETL ready" value={fmtInt(readiness.summary.etl_ready)} tone="accent" />
+            <Kpi
+              label="Bloqueados"
+              value={fmtInt(readiness.summary.blocked)}
+              tone={readiness.summary.blocked ? "warn" : "accent"}
+            />
+            <Kpi
+              label="Monitorados sem readiness"
+              value={fmtInt(readiness.summary.monitored_not_ready.length)}
+              tone={readiness.summary.monitored_not_ready.length ? "danger" : "accent"}
+            />
+          </div>
+
+          <div className="card table-wrap p-2">
+            <table className="data">
+              <thead>
+                <tr>
+                  <th>Imunobiológico</th>
+                  <th>Prontidão</th>
+                  <th>ETL</th>
+                  <th>Monitorado</th>
+                  <th>Dimensões bloqueantes</th>
+                </tr>
+              </thead>
+              <tbody>
+                {readiness.items.map((row) => (
+                  <tr key={row.immunobiologic_id}>
+                    <td>
+                      <div className="font-medium">{row.display || row.immunobiologic_id}</div>
+                      <div className="mt-1 font-mono text-xs text-[var(--muted)]">
+                        {row.immunobiologic_id}
+                      </div>
+                    </td>
+                    <td>
+                      <div className="font-semibold">{row.readiness_pct.toFixed(0)}%</div>
+                      <div className="text-xs text-[var(--muted)]">
+                        {row.confirmed_required_dimensions}/{row.required_dimension_count} dimensões
+                      </div>
+                    </td>
+                    <td>
+                      <span className={`badge ${row.etl_ready ? "badge-sit1" : "badge-warn"}`}>
+                        {row.etl_ready ? "ready" : "bloqueado"}
+                      </span>
+                    </td>
+                    <td>
+                      <span className={`badge ${row.monitored ? "badge-sit1" : "badge-warn"}`}>
+                        {row.monitored ? "sim" : "não"}
+                      </span>
+                    </td>
+                    <td className="font-mono text-xs">
+                      {row.blocking_dimensions.length
+                        ? row.blocking_dimensions.join(", ")
+                        : "—"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ) : null}
 
       {backlog ? (
         <section className="space-y-3">

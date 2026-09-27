@@ -45,6 +45,8 @@ Modo mais estrito. Deve ser usado após reconstrução dos marts e antes de uma 
 - regra ativa com pelo menos um ato normativo;
 - imunobiológico monitorado com código nacional;
 - bloqueio de `monitored=true` quando o mapeamento de registro estiver incompleto/`pending`;
+- prontidão transacional estruturada via `registration_mapping_registry.json`;
+- `monitored=true` exige `etl_ready=true` para todas as dimensões obrigatórias;
 - source registry válido;
 - catálogo de indicadores versionado;
 - `decision_grade` obrigatório;
