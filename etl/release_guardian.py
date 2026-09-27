@@ -260,6 +260,146 @@ def check_vaccine_registry(findings: list[Finding]) -> None:
         )
 
 
+def check_privacy_manifest(findings: list[Finding]) -> None:
+    path = REF / "privacy_manifest.json"
+    source_path = REF / "source_registry.json"
+    legal_path = ROOT / "docs" / "legal_register.json"
+    if not path.exists():
+        _finding(findings, "error", "privacy_manifest_missing", "Privacy manifest ausente.", path)
+        return
+
+    try:
+        payload = _load_json(path)
+        sources_payload = _load_json(source_path)
+        legal_payload = _load_json(legal_path)
+    except Exception as exc:  # noqa: BLE001
+        _finding(findings, "error", "privacy_manifest_invalid", f"Falha ao ler manifesto: {exc}", path)
+        return
+
+    allowed_classes = set(payload.get("allowed_data_classifications") or [])
+    allowed_levels = set(payload.get("allowed_identification_levels") or [])
+    allowed_envs = set(payload.get("allowed_environments") or [])
+    source_ids = {
+        str(x.get("source_id") or "")
+        for x in (sources_payload.get("sources") or [])
+        if x.get("source_id")
+    }
+    legal_ids = {
+        str(x.get("id") or "")
+        for x in (legal_payload.get("acts") or [])
+        if x.get("id")
+    }
+    rows = payload.get("sources") or []
+    manifest_ids: set[str] = set()
+
+    for row in rows:
+        sid = str(row.get("source_id") or "")
+        if not sid:
+            _finding(findings, "error", "privacy_source_id_missing", "Entrada de privacidade sem source_id.", path)
+            continue
+        if sid in manifest_ids:
+            _finding(findings, "error", "privacy_source_duplicate", f"source_id duplicado no privacy manifest: {sid}.", path)
+        manifest_ids.add(sid)
+
+        classification = str(row.get("data_classification") or "")
+        if classification not in allowed_classes:
+            _finding(
+                findings,
+                "error",
+                "privacy_classification_invalid",
+                f"Fonte {sid} com data_classification inválida: {classification}.",
+                path,
+            )
+
+        level = str(row.get("identification_level") or "")
+        if level not in allowed_levels:
+            _finding(
+                findings,
+                "error",
+                "privacy_identification_level_invalid",
+                f"Fonte {sid} com identification_level inválido: {level}.",
+                path,
+            )
+
+        envs = {str(x) for x in (row.get("allowed_environments") or [])}
+        if not envs or not envs.issubset(allowed_envs):
+            _finding(
+                findings,
+                "error",
+                "privacy_environment_invalid",
+                f"Fonte {sid} possui allowed_environments inválido: {sorted(envs)}.",
+                path,
+            )
+
+        if row.get("linkage_allowed_in_repo") is not False:
+            _finding(
+                findings,
+                "error",
+                "privacy_repo_linkage_must_be_false",
+                f"Fonte {sid} não pode habilitar linkage individual no repositório.",
+                path,
+            )
+
+        public_allowed = row.get("public_mart_allowed")
+        if not isinstance(public_allowed, bool):
+            _finding(
+                findings,
+                "error",
+                "privacy_public_mart_flag_missing",
+                f"Fonte {sid} sem public_mart_allowed booleano.",
+                path,
+            )
+        if public_allowed:
+            requirements = {str(x) for x in (row.get("public_output_requirements") or [])}
+            if classification in {"sensitive_health", "confidential"} and "aggregate_only" not in requirements:
+                _finding(
+                    findings,
+                    "error",
+                    "privacy_sensitive_public_without_aggregation",
+                    f"Fonte {sid} sensível/confidencial permite mart público sem aggregate_only.",
+                    path,
+                )
+            if level in {"identifiable", "pseudonymized"} and not (
+                {"no_person_identifier", "aggregate_only"} & requirements
+            ):
+                _finding(
+                    findings,
+                    "error",
+                    "privacy_person_level_public_output",
+                    f"Fonte {sid} permite saída pública sem proteção contra identificadores individuais.",
+                    path,
+                )
+
+        for ref in row.get("legal_basis_refs") or []:
+            if str(ref) not in legal_ids:
+                _finding(
+                    findings,
+                    "error",
+                    "privacy_legal_basis_missing",
+                    f"Fonte {sid} referencia base legal ausente: {ref}.",
+                    path,
+                )
+
+    missing = sorted(source_ids - manifest_ids)
+    extra = sorted(manifest_ids - source_ids)
+    for sid in missing:
+        _finding(
+            findings,
+            "error",
+            "privacy_source_unclassified",
+            f"Fonte {sid} existe no source registry e não possui privacy manifest.",
+            path,
+        )
+    for sid in extra:
+        _finding(
+            findings,
+            "error",
+            "privacy_orphan_source",
+            f"Fonte {sid} existe no privacy manifest mas não no source registry.",
+            path,
+        )
+
+
 def check_indicator_catalog(findings: list[Finding]) -> None:
     path = REF / "indicadores_nacionais.json"
     if not path.exists():
@@ -445,6 +585,7 @@ def run_guardian(mode: str = "ci") -> tuple[list[Finding], dict]:
     findings: list[Finding] = []
     check_legal_register(findings)
     check_source_registry(findings)
+    check_privacy_manifest(findings)
     check_vaccine_registry(findings)
     check_indicator_catalog(findings)
     check_dashboard_runtime(findings, mode)
