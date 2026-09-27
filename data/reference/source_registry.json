@@ -32,12 +32,22 @@
     },
     {
       "source_id": "sies",
-      "name": "SIES",
-      "domain": "estoque",
+      "name": "SIES — doses distribuídas (dados abertos)",
+      "domain": "distribuicao_imunobiologicos",
       "cadence": "mensal",
       "attention_after_days": 45,
       "stale_after_days": 90,
-      "critical_for_decision": true
+      "critical_for_decision": true,
+      "status": "public_distribution_only",
+      "capabilities": [
+        "distributed_doses",
+        "territory_distribution"
+      ],
+      "limitations": [
+        "not_current_inventory",
+        "not_lot_level_stock",
+        "not_loss_monitoring"
+      ]
     },
     {
       "source_id": "esavi",
@@ -189,6 +199,17 @@
       "stale_after_days": 75,
       "critical_for_decision": true,
       "status": "mapped_not_ingested"
+    },
+    {
+      "source_id": "sies_institutional_inventory",
+      "name": "SIES/DW institucional — estoque, lotes, validade e perdas",
+      "domain": "estoque_logistica_imunobiologicos",
+      "cadence": "diaria_ou_semanal",
+      "attention_after_days": 7,
+      "stale_after_days": 21,
+      "critical_for_decision": true,
+      "status": "contract_ready_not_connected",
+      "access": "authorized_export_or_institutional_dw"
     }
   ]
 }
