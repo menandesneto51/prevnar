@@ -1,0 +1,70 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "policy": "Baseline canônico para detecção de mudança. Atualizar somente por PR após revisão humana.",
+  "targets": [
+    {
+      "target_id": "rules_entry",
+      "kind": "rules_entry_page",
+      "url": "https://www.gov.br/saude/pt-br/vacinacao/regras-para-registros-vacinais/regras-de-entrada-de-dados",
+      "expected": {
+        "latest_version": 4,
+        "published_at": "2026-09-04",
+        "file_name": "regras-de-entrada-de-dados-4.xlsx"
+      },
+      "material_change_fields": [
+        "latest_version",
+        "published_at",
+        "file_name"
+      ]
+    },
+    {
+      "target_id": "br_immunobiologic",
+      "kind": "fhir_valueset_page",
+      "url": "https://terminologia.saude.gov.br/fhir/ValueSet-BRImunobiologico.html",
+      "expected": {
+        "version": "1.1.0",
+        "active_as_of": "2026-08-22",
+        "required_code_displays": {
+          "67": "HPV4",
+          "74": "MenACWY",
+          "87": "COVID-19 PFIZER - COMIRNATY",
+          "107": "VPC20",
+          "108": "VVSR-Rec",
+          "110": "Vacina Influenza Tetravalente - Alta Dosagem"
+        }
+      },
+      "material_change_fields": [
+        "version",
+        "active_as_of",
+        "required_code_displays"
+      ]
+    },
+    {
+      "target_id": "br_vaccination_strategy",
+      "kind": "fhir_valueset_page",
+      "url": "https://terminologia.saude.gov.br/fhir/ValueSet-BREstrategiaVacinacao.html",
+      "expected": {
+        "version": "1.1.0",
+        "active_as_of": "2026-08-22",
+        "required_code_displays": {
+          "1": "Rotina",
+          "2": "Especial",
+          "3": "Bloqueio",
+          "4": "Intensificação",
+          "8": "Serviço Privado"
+        },
+        "tracked_absent_code_displays": {
+          "14": "Vacinação Escolar"
+        }
+      },
+      "material_change_fields": [
+        "version",
+        "active_as_of",
+        "required_code_displays",
+        "tracked_absent_code_displays"
+      ]
+    }
+  ],
+  "interpretation": "Mudança detectada exige revisão humana e PR. O agente não modifica regras clínicas, mapeamentos ou monitored automaticamente."
+}
