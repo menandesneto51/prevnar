@@ -51,4 +51,4 @@ def test_hpv_code_is_confirmed_but_registration_mapping_remains_partial() -> Non
         item["code_mapping_status"]
         == "immunobiologic_code_confirmed_registration_details_pending"
     )
-    assert item["code_mapping_status"] == "pending_official_pni_code_confirmation"
+    assert item["code_mapping_status"] == "immunobiologic_code_confirmed_registration_details_pending"
