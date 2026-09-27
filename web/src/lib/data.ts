@@ -291,7 +291,7 @@ export type InfluenzaDashboard = {
   }>;
   mismatches: Record<string, number>;
   reference_period: string | null;
-  pending_contexts: Array<{ id: string; reason: string }>;
+  terminology_notes?: Array<{ id: string; status: string; note: string }>;
   interpretation: string;
   pages?: number;
   generated_at?: string;
