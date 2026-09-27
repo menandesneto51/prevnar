@@ -64,6 +64,34 @@ Fonte oficial:
 
 https://bvsms.saude.gov.br/bvs/saudelegis/gm/2024/prt5663_04_11_2024.html
 
+#### Prazos e obrigações estruturadas
+
+A Portaria estabelece:
+- envio em até 24 horas para salas com conectividade;
+- envio em até 15 dias para salas sem conectividade;
+- armazenamento do retorno de integração, identificador do registro e status de sucesso/erro;
+- até 15 dias para adequação de sistemas que registram vacinação após revisão das orientações técnicas;
+- até 15 dias para o DPNI/SVSA publicar regras de novo registro de imunobiológico após liberação pela Anvisa, condicionado aos ajustes da RNDS.
+
+#### Aplicabilidade ao PREVNAR
+
+O PREVNAR atual é uma camada de **inteligência analítica**. Não deve se apresentar como sistema de registro vacinal ou emissor RIA sem que essa função seja explicitamente incorporada e homologada.
+
+Enquanto permanecer analítico:
+- os prazos de transmissão RIA não são tratados como SLA do PREVNAR;
+- o prazo de 15 dias para adequação é usado como benchmark interno;
+- a rota `/conformidade` não constitui parecer jurídico.
+
+Se futuramente o PREVNAR registrar ou transmitir eventos vacinais, deverão ser adicionados:
+- validação do modelo RIA vigente;
+- controle de retorno da RNDS;
+- idempotência;
+- identificador de evento;
+- fila/reprocessamento;
+- SLA de envio;
+- trilha de auditoria;
+- homologação institucional.
+
 ### Nota Técnica nº 115/2024-DPNI/SVSA/MS
 
 Orienta sistemas próprios e de terceiros na integração com a base nacional de imunização/RNDS.
