@@ -97,3 +97,11 @@ def test_guardian_blocks_monitoring_with_pending_registration_mapping(monkeypatc
         and finding.severity == "error"
         for finding in findings
     )
+
+
+def test_current_regulatory_policy_has_no_blocking_findings() -> None:
+    from release_guardian import Finding, check_regulatory_compliance_policy
+
+    findings: list[Finding] = []
+    check_regulatory_compliance_policy(findings)
+    assert [f for f in findings if f.severity == "error"] == []
