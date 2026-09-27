@@ -23,6 +23,7 @@ from urllib.parse import urlparse
 from paths import MART, REF, ROOT
 from vaccine_rules import validate_registry_integrity
 from build_normative_matrix import build_matrix
+from regulatory_compliance import build_regulatory_compliance
 
 
 ALLOWED_EVIDENCE = {"E1", "E2", "E3", "E4", "E5"}
@@ -631,6 +632,34 @@ def check_normative_governance(findings: list[Finding]) -> None:
                 )
 
 
+def check_regulatory_compliance_state(findings: list[Finding]) -> None:
+    try:
+        payload = build_regulatory_compliance()
+    except Exception as exc:  # noqa: BLE001
+        _finding(
+            findings,
+            "error",
+            "regulatory_compliance_build_failed",
+            f"Falha ao construir benchmark regulatório: {exc}",
+            REF / "regulatory_compliance_policy.json",
+        )
+        return
+
+    if int(payload.get("summary", {}).get("date_unavailable") or 0) > 0:
+        missing = [
+            str(row.get("act_id"))
+            for row in payload.get("items") or []
+            if row.get("benchmark_status") == "date_unavailable"
+        ]
+        _finding(
+            findings,
+            "error",
+            "referenced_regulatory_act_without_publication_date",
+            "Atos regulatórios referenciados sem data de publicação: " + ", ".join(missing),
+            ROOT / "docs" / "legal_register.json",
+        )
+
+
 def check_indicator_catalog(findings: list[Finding]) -> None:
     path = REF / "indicadores_nacionais.json"
     if not path.exists():
@@ -821,6 +850,7 @@ def run_guardian(mode: str = "ci") -> tuple[list[Finding], dict]:
     check_source_registry(findings)
     check_vaccine_registry(findings)
     check_normative_governance(findings)
+    check_regulatory_compliance_state(findings)
     check_indicator_catalog(findings)
     check_dashboard_runtime(findings, mode)
     check_secrets_and_personal_data(findings)
