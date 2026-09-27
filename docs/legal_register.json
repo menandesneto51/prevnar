@@ -92,7 +92,11 @@
       "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-52-2026-cgici-dpni-svsa-ms.pdf/view",
       "updated_by": [
         "nt_64_2026_vpc20"
-      ]
+      ],
+      "published_at": "2026-05-26",
+      "effective_from": "2026-05-26",
+      "page_updated_at": "2026-06-22",
+      "date_note": "Página oficial do PNI registra publicação em 26/05/2026; página individual do PDF registra atualização em 22/06/2026."
     },
     {
       "id": "ntc_310_2026_vpc20",
@@ -104,7 +108,9 @@
         "idosos",
         "85_mais"
       ],
-      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-310-2026.pdf/view"
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-310-2026.pdf/view",
+      "published_at": "2026-09-14",
+      "effective_from": "2026-09-14"
     },
     {
       "id": "mt_decreto_1427_2025",
