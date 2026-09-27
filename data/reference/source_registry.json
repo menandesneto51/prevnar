@@ -179,6 +179,16 @@
       "attention_after_days": 45,
       "stale_after_days": 75,
       "critical_for_decision": true
+    },
+    {
+      "source_id": "pni_influenza_2026",
+      "name": "PNI/RNDS — Influenza 2026",
+      "domain": "imunizacao_influenza",
+      "cadence": "mensal_ou_superior",
+      "attention_after_days": 45,
+      "stale_after_days": 75,
+      "critical_for_decision": true,
+      "status": "mapped_not_ingested"
     }
   ]
 }
