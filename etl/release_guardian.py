@@ -377,6 +377,93 @@ def check_regulatory_compliance_policy(findings: list[Finding]) -> None:
             )
 
 
+def check_regulatory_watch_contract(findings: list[Finding]) -> None:
+    baseline_path = REF / "regulatory_watch_baseline.json"
+    workflow_path = ROOT / ".github" / "workflows" / "regulatory-watch.yml"
+
+    if not baseline_path.exists():
+        _finding(
+            findings,
+            "error",
+            "regulatory_watch_baseline_missing",
+            "Baseline do Regulatory Watch ausente.",
+            baseline_path,
+        )
+        return
+
+    try:
+        baseline = _load_json(baseline_path)
+    except Exception as exc:  # noqa: BLE001
+        _finding(
+            findings,
+            "error",
+            "regulatory_watch_baseline_invalid",
+            f"Baseline regulatório inválido: {exc}",
+            baseline_path,
+        )
+        return
+
+    targets = {
+        str(row.get("target_id")): row
+        for row in baseline.get("targets") or []
+    }
+    required_targets = {
+        "rules_entry",
+        "br_immunobiologic",
+        "br_vaccination_strategy",
+    }
+    missing = sorted(required_targets - set(targets))
+    if missing:
+        _finding(
+            findings,
+            "error",
+            "regulatory_watch_targets_missing",
+            "Alvos obrigatórios ausentes: " + ", ".join(missing),
+            baseline_path,
+        )
+
+    rules_expected = (targets.get("rules_entry") or {}).get("expected") or {}
+    if rules_expected.get("latest_version") != 4:
+        _finding(
+            findings,
+            "error",
+            "regulatory_watch_rules_baseline_changed",
+            "Baseline de Regras de Entrada deve permanecer na versão 4 até revisão humana.",
+            baseline_path,
+        )
+
+    immuno_expected = (targets.get("br_immunobiologic") or {}).get("expected") or {}
+    immuno_codes = immuno_expected.get("required_code_displays") or {}
+    if immuno_codes.get("87") != "COVID-19 PFIZER - COMIRNATY":
+        _finding(
+            findings,
+            "error",
+            "regulatory_watch_code87_missing",
+            "Baseline deve acompanhar código 87 da Comirnaty.",
+            baseline_path,
+        )
+
+    strategy_expected = (targets.get("br_vaccination_strategy") or {}).get("expected") or {}
+    absent = strategy_expected.get("tracked_absent_code_displays") or {}
+    if absent.get("14") != "Vacinação Escolar":
+        _finding(
+            findings,
+            "error",
+            "regulatory_watch_strategy14_exception_missing",
+            "Baseline deve acompanhar a ausência terminológica da estratégia 14.",
+            baseline_path,
+        )
+
+    if not workflow_path.exists():
+        _finding(
+            findings,
+            "error",
+            "regulatory_watch_workflow_missing",
+            "Workflow agendado do Regulatory Watch ausente.",
+            workflow_path,
+        )
+
+
 def check_source_registry(findings: list[Finding]) -> None:
     path = REF / "source_registry.json"
     if not path.exists():
@@ -730,6 +817,7 @@ def run_guardian(mode: str = "ci") -> tuple[list[Finding], dict]:
     check_legal_register(findings)
     check_sies_logistics_contract(findings)
     check_regulatory_compliance_policy(findings)
+    check_regulatory_watch_contract(findings)
     check_source_registry(findings)
     check_vaccine_registry(findings)
     check_normative_governance(findings)
