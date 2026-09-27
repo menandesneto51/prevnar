@@ -15,6 +15,7 @@
 | [ROADMAP_V2.md](ROADMAP_V2.md) | Evolução técnica do PREVNAR |
 | [IMMUNOBIOLOGIC_REGISTRY.md](IMMUNOBIOLOGIC_REGISTRY.md) | Registro canônico de imunobiológicos e compatibilidade vacinal |
 | [NORMATIVE_MATRIX.md](NORMATIVE_MATRIX.md) | Matriz auditável de regras, vigência, escopo e atos oficiais |
+| [REGISTRATION_READINESS.md](REGISTRATION_READINESS.md) | Gate estruturado de código, estratégia, dose, grupo e prontidão ETL |
 | [RESPIRATORY_IMMUNIZATION_2026.md](RESPIRATORY_IMMUNIZATION_2026.md) | Arquitetura normativa e analítica para VVSR, nirsevimabe, influenza e covid-19 |
 | [INFLUENZA_2026.md](INFLUENZA_2026.md) | Registro e ETL da influenza 2026 conforme NT 24/2026 |
 | [COVID19_2026.md](COVID19_2026.md) | Regras de gestante/idoso, perfil LP.8.1 e transição operacional covid-19 |
