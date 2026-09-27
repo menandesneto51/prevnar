@@ -318,3 +318,101 @@ export async function getInfluenzaDashboard(): Promise<InfluenzaDashboard | null
   const raw = await readFile(file, "utf-8");
   return JSON.parse(raw) as InfluenzaDashboard;
 }
+
+
+export type CovidOperationalStatus = {
+  immunobiologic_id: string;
+  onboarding_status?: string | null;
+  code_mapping_status?: string | null;
+  monitored: boolean;
+  pni_codes: string[];
+  product: {
+    product_variant_id: string;
+    name: string;
+    manufacturer?: string | null;
+    technology?: string | null;
+    min_age_years?: number | null;
+    dose_ml?: number | null;
+    dose_mcg?: number | null;
+    doses_per_vial?: number | null;
+    dilution_required?: boolean | null;
+    route?: string | null;
+    anvisa_registration?: string | null;
+    storage_celsius_min?: number | null;
+    storage_celsius_max?: number | null;
+    must_not_freeze?: boolean | null;
+    max_hours_after_opening?: number | null;
+  } | null;
+  transition_management: {
+    monitor: Array<{
+      id: string;
+      source_candidate?: string | null;
+      grain?: string | null;
+    }>;
+    recommended_alerts: string[];
+  };
+  clinical_automation: {
+    active_pathways: string[];
+    pending_pathways: string[];
+  };
+  data_mapping: {
+    pni_product_codes_status?: string | null;
+    rule?: string | null;
+  };
+};
+
+export async function getCovidOperationalStatus(): Promise<CovidOperationalStatus | null> {
+  const referenceCandidates = [
+    path.join(process.cwd(), "..", "data", "reference"),
+    path.join(process.cwd(), "data", "reference"),
+  ];
+  const referenceDir = referenceCandidates.find((candidate) =>
+    existsSync(path.join(candidate, "covid19_2026_operational_plan.json")),
+  );
+  if (!referenceDir) return null;
+
+  const [planRaw, registryRaw] = await Promise.all([
+    readFile(path.join(referenceDir, "covid19_2026_operational_plan.json"), "utf-8"),
+    readFile(path.join(referenceDir, "immunobiologic_registry.json"), "utf-8"),
+  ]);
+
+  const plan = JSON.parse(planRaw) as {
+    immunobiologic_id: string;
+    product_variant_id: string;
+    transition_management: CovidOperationalStatus["transition_management"];
+    clinical_automation: CovidOperationalStatus["clinical_automation"];
+    data_mapping: CovidOperationalStatus["data_mapping"];
+  };
+  const registry = JSON.parse(registryRaw) as {
+    immunobiologics: Array<{
+      immunobiologic_id: string;
+      onboarding_status?: string | null;
+      code_mapping_status?: string | null;
+      monitored?: boolean;
+      pni_codes?: string[];
+      product_variants?: Array<CovidOperationalStatus["product"]>;
+    }>;
+  };
+  const item = registry.immunobiologics.find(
+    (row) => row.immunobiologic_id === plan.immunobiologic_id,
+  );
+  if (!item) return null;
+
+  const variants = (item.product_variants || []).filter(Boolean) as NonNullable<
+    CovidOperationalStatus["product"]
+  >[];
+  const product =
+    variants.find((row) => row.product_variant_id === plan.product_variant_id) || null;
+
+  return {
+    immunobiologic_id: item.immunobiologic_id,
+    onboarding_status: item.onboarding_status,
+    code_mapping_status: item.code_mapping_status,
+    monitored: Boolean(item.monitored),
+    pni_codes: item.pni_codes || [],
+    product,
+    transition_management: plan.transition_management,
+    clinical_automation: plan.clinical_automation,
+    data_mapping: plan.data_mapping,
+  };
+}

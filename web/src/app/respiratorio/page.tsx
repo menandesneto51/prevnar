@@ -1,5 +1,9 @@
 import { Kpi, fmtInt, fmtPct } from "@/components/Kpi";
-import { getInfluenzaDashboard, getRespiratoryDashboard } from "@/lib/data";
+import {
+  getCovidOperationalStatus,
+  getInfluenzaDashboard,
+  getRespiratoryDashboard,
+} from "@/lib/data";
 
 function FreshnessBadge({ status }: { status?: string }) {
   const cls =
@@ -14,9 +18,10 @@ function FreshnessBadge({ status }: { status?: string }) {
 }
 
 export default async function RespiratorioPage() {
-  const [data, influenza] = await Promise.all([
+  const [data, influenza, covid] = await Promise.all([
     getRespiratoryDashboard(),
     getInfluenzaDashboard(),
+    getCovidOperationalStatus(),
   ]);
 
   if (!data) {
@@ -279,6 +284,144 @@ export default async function RespiratorioPage() {
           <div className="card p-4 text-sm text-[var(--muted)]">
             O mapeamento oficial está estruturado, mas ainda não existe carga agregada. Execute{" "}
             <code>python etl/influenza_etl.py</code>.
+          </div>
+        )}
+      </section>
+
+      <section className="space-y-3">
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h2 className="text-lg font-semibold">Covid-19 2026</h2>
+            <p className="mt-1 text-xs text-[var(--muted)]">
+              Regras clínicas selecionadas + perfil operacional Comirnaty LP.8.1
+            </p>
+          </div>
+          <span className="badge badge-warn">PNI por produto pendente</span>
+        </div>
+
+        {covid ? (
+          <>
+            <div className="grid gap-3 md:grid-cols-4">
+              <Kpi
+                label="Gestante"
+                value="1 dose/gestação"
+                hint="Intervalo mínimo de 6 meses quando houver dose anterior"
+              />
+              <Kpi
+                label="≥60 anos"
+                value="Semestral"
+                hint="Uma dose a cada 6 meses"
+              />
+              <Kpi
+                label="Mapeamento PNI"
+                value={covid.pni_codes.length ? covid.pni_codes.join(", ") : "Pendente"}
+                tone="warn"
+                hint={covid.code_mapping_status || undefined}
+              />
+              <Kpi
+                label="Monitoramento de doses"
+                value={covid.monitored ? "Ativo" : "Bloqueado"}
+                tone={covid.monitored ? "accent" : "warn"}
+                hint="ETL não é ativado sem códigos oficiais por produto"
+              />
+            </div>
+
+            {covid.product ? (
+              <div className="card p-4">
+                <h3 className="text-sm font-semibold">{covid.product.name}</h3>
+                <div className="mt-3 grid gap-3 text-sm md:grid-cols-4">
+                  <div>
+                    <div className="text-xs text-[var(--muted)]">Faixa do produto</div>
+                    <div className="font-semibold">≥ {covid.product.min_age_years ?? "—"} anos</div>
+                  </div>
+                  <div>
+                    <div className="text-xs text-[var(--muted)]">Dose</div>
+                    <div className="font-semibold">
+                      {covid.product.dose_ml ?? "—"} mL · {covid.product.dose_mcg ?? "—"} mcg
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-xs text-[var(--muted)]">Frasco</div>
+                    <div className="font-semibold">{covid.product.doses_per_vial ?? "—"} doses</div>
+                  </div>
+                  <div>
+                    <div className="text-xs text-[var(--muted)]">Conservação</div>
+                    <div className="font-semibold">
+                      {covid.product.storage_celsius_min ?? "—"}–{covid.product.storage_celsius_max ?? "—"} °C
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-xs text-[var(--muted)]">Via</div>
+                    <div className="font-semibold">{covid.product.route || "—"}</div>
+                  </div>
+                  <div>
+                    <div className="text-xs text-[var(--muted)]">Diluição</div>
+                    <div className="font-semibold">
+                      {covid.product.dilution_required === false ? "Não" : "Verificar"}
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-xs text-[var(--muted)]">Após abertura</div>
+                    <div className="font-semibold">
+                      até {covid.product.max_hours_after_opening ?? "—"} h
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-xs text-[var(--muted)]">Anvisa</div>
+                    <div className="font-mono text-xs">
+                      {covid.product.anvisa_registration || "—"}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : null}
+
+            <div className="grid gap-3 xl:grid-cols-2">
+              <div className="card table-wrap p-2">
+                <h3 className="px-2 py-2 text-sm font-semibold">Transição: itens a monitorar</h3>
+                <table className="data">
+                  <thead>
+                    <tr>
+                      <th>Item</th>
+                      <th>Fonte candidata</th>
+                      <th>Granularidade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {covid.transition_management.monitor.map((row) => (
+                      <tr key={row.id}>
+                        <td className="font-mono text-xs">{row.id}</td>
+                        <td>{row.source_candidate || "—"}</td>
+                        <td className="text-xs">{row.grain || "—"}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="card p-4">
+                <h3 className="text-sm font-semibold">Alertas candidatos</h3>
+                <ul className="mt-3 list-disc space-y-2 pl-5 text-sm">
+                  {covid.transition_management.recommended_alerts.map((alert) => (
+                    <li key={alert} className="font-mono text-xs">{alert}</li>
+                  ))}
+                </ul>
+                <div className="mt-4 text-xs text-[var(--muted)]">
+                  Estes são gates operacionais de estoque/transição; não representam alertas
+                  clínicos individuais.
+                </div>
+              </div>
+            </div>
+
+            <div className="card p-4 text-xs text-[var(--muted)]">
+              Caminhos clínicos ativos: {covid.clinical_automation.active_pathways.join(", ")}.
+              Pendentes: {covid.clinical_automation.pending_pathways.join(", ")}.
+              A ausência de códigos PNI por produto impede a ativação de indicadores de doses.
+            </div>
+          </>
+        ) : (
+          <div className="card p-4 text-sm text-[var(--muted)]">
+            O perfil operacional ainda não pôde ser carregado no build atual.
           </div>
         )}
       </section>

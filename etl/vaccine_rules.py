@@ -1084,6 +1084,153 @@ def _evaluate_mmr(
 
     return payload
 
+def _evaluate_covid_maternal(
+    rule: dict[str, Any],
+    *,
+    pregnant: bool | None,
+    covid_dose_received_this_pregnancy: bool | None,
+    covid_has_prior_dose: bool | None,
+    months_since_last_covid_dose: float | None,
+) -> dict[str, Any] | None:
+    if pregnant is not True:
+        return None
+
+    schedule = rule.get("schedule") or {}
+    min_interval = float(
+        schedule.get("min_interval_months_if_previously_vaccinated") or 6
+    )
+
+    if covid_dose_received_this_pregnancy is True:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "maternal_covid",
+            "eligible": False,
+            "requires_review": False,
+            "recommendation": "dose_this_pregnancy_already_received",
+        }
+
+    if covid_dose_received_this_pregnancy is None:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "maternal_covid",
+            "eligible": True,
+            "requires_review": True,
+            "recommendation": "verify_covid_dose_this_pregnancy",
+        }
+
+    if covid_has_prior_dose is None:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "maternal_covid",
+            "eligible": True,
+            "requires_review": True,
+            "recommendation": "verify_prior_covid_vaccination",
+        }
+
+    if covid_has_prior_dose is False:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "maternal_covid",
+            "eligible": True,
+            "requires_review": False,
+            "recommendation": "one_covid_dose_this_pregnancy",
+            "schedule": schedule,
+        }
+
+    if months_since_last_covid_dose is None:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "maternal_covid",
+            "eligible": True,
+            "requires_review": True,
+            "recommendation": "verify_interval_since_last_covid_dose",
+            "min_interval_months": min_interval,
+        }
+
+    if months_since_last_covid_dose < min_interval:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "maternal_covid",
+            "eligible": True,
+            "requires_review": False,
+            "recommendation": "defer_until_minimum_interval",
+            "min_interval_months": min_interval,
+        }
+
+    return {
+        "rule_id": rule["rule_id"],
+        "pathway": "maternal_covid",
+        "eligible": True,
+        "requires_review": False,
+        "recommendation": "one_covid_dose_this_pregnancy",
+        "schedule": schedule,
+    }
+
+
+def _evaluate_covid_elderly(
+    rule: dict[str, Any],
+    *,
+    age_months: int,
+    covid_has_prior_dose: bool | None,
+    months_since_last_covid_dose: float | None,
+) -> dict[str, Any] | None:
+    population = rule.get("population") or {}
+    min_age_years = int(population.get("min_age_years") or 60)
+    if age_months < min_age_years * 12:
+        return None
+
+    schedule = rule.get("schedule") or {}
+    interval = float(schedule.get("dose_interval_months") or 6)
+
+    if covid_has_prior_dose is None:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "elderly_covid",
+            "eligible": True,
+            "requires_review": True,
+            "recommendation": "verify_prior_covid_vaccination",
+        }
+
+    if covid_has_prior_dose is False:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "elderly_covid",
+            "eligible": True,
+            "requires_review": False,
+            "recommendation": "one_covid_dose",
+            "schedule": schedule,
+        }
+
+    if months_since_last_covid_dose is None:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "elderly_covid",
+            "eligible": True,
+            "requires_review": True,
+            "recommendation": "verify_interval_since_last_covid_dose",
+            "min_interval_months": interval,
+        }
+
+    if months_since_last_covid_dose < interval:
+        return {
+            "rule_id": rule["rule_id"],
+            "pathway": "elderly_covid",
+            "eligible": True,
+            "requires_review": False,
+            "recommendation": "defer_until_semester_interval",
+            "min_interval_months": interval,
+        }
+
+    return {
+        "rule_id": rule["rule_id"],
+        "pathway": "elderly_covid",
+        "eligible": True,
+        "requires_review": False,
+        "recommendation": "one_covid_dose",
+        "schedule": schedule,
+    }
+
+
 def evaluate_operational(
     immunobiologic_id: str,
     *,
@@ -1108,6 +1255,9 @@ def evaluate_operational(
     mmr_doses_received: int | None = None,
     is_healthcare_worker: bool | None = None,
     severe_immunosuppression: bool | None = None,
+    covid_dose_received_this_pregnancy: bool | None = None,
+    covid_has_prior_dose: bool | None = None,
+    months_since_last_covid_dose: float | None = None,
     geographic_context: dict[str, Any] | None = None,
     on_date: date | None = None,
 ) -> dict[str, Any]:
@@ -1192,6 +1342,21 @@ def evaluate_operational(
                 is_healthcare_worker=is_healthcare_worker,
                 pregnant=pregnant,
                 severe_immunosuppression=severe_immunosuppression,
+            )
+        elif immunobiologic_id == "covid19" and strategy == "maternal_covid":
+            result = _evaluate_covid_maternal(
+                rule,
+                pregnant=pregnant,
+                covid_dose_received_this_pregnancy=covid_dose_received_this_pregnancy,
+                covid_has_prior_dose=covid_has_prior_dose,
+                months_since_last_covid_dose=months_since_last_covid_dose,
+            )
+        elif immunobiologic_id == "covid19" and strategy == "elderly_covid":
+            result = _evaluate_covid_elderly(
+                rule,
+                age_months=age_months,
+                covid_has_prior_dose=covid_has_prior_dose,
+                months_since_last_covid_dose=months_since_last_covid_dose,
             )
 
         if result:

@@ -16,6 +16,7 @@
 | [NORMATIVE_MATRIX.md](NORMATIVE_MATRIX.md) | Matriz auditável de regras, vigência, escopo e atos oficiais |
 | [RESPIRATORY_IMMUNIZATION_2026.md](RESPIRATORY_IMMUNIZATION_2026.md) | Arquitetura normativa e analítica para VVSR, nirsevimabe, influenza e covid-19 |
 | [INFLUENZA_2026.md](INFLUENZA_2026.md) | Registro e ETL da influenza 2026 conforme NT 24/2026 |
+| [COVID19_2026.md](COVID19_2026.md) | Regras de gestante/idoso, perfil LP.8.1 e transição operacional covid-19 |
 | [ROUTINE_RESCUE_ONBOARDING_2026.md](ROUTINE_RESCUE_ONBOARDING_2026.md) | Onboarding de HPV, MenACWY, febre amarela e tríplice viral |
 | [ROUTINE_RESCUE_ETL.md](ROUTINE_RESCUE_ETL.md) | ETL conservador para MenACWY, febre amarela e tríplice viral |
 | [ROUTINE_RESCUE_FRONTEND.md](ROUTINE_RESCUE_FRONTEND.md) | Painel de rotina, resgate e resposta com evidência/proveniência |

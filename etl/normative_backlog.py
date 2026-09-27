@@ -36,6 +36,18 @@ def build_backlog(*, as_of: date | None = None) -> dict[str, Any]:
                 "message": f"{draft_rules} regra(s) permanecem em draft e nenhuma está ativa.",
                 "next_gate": "validar norma, vigência, população, esquema e testes",
             })
+        elif draft_rules and active_rules > 0:
+            items.append({
+                "priority": "P2",
+                "category": "normative_rule_partial",
+                "immunobiologic_id": iid,
+                "display": display,
+                "message": (
+                    f"{active_rules} regra(s) ativa(s), mas {draft_rules} regra(s) "
+                    "ainda permanecem em draft."
+                ),
+                "next_gate": "concluir grupos/faixas/contextos ainda em onboarding e respectivos testes",
+            })
 
         if "partial" in onboarding or "pending" in onboarding or "pending" in mapping:
             items.append({

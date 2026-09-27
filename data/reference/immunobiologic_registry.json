@@ -323,13 +323,38 @@
       "display": "Covid-19",
       "active": true,
       "monitored": false,
-      "onboarding_status": "data_mapping_pending",
+      "onboarding_status": "operational_profile_structured_data_mapping_pending",
       "pni_codes": [],
       "normative_acts": [
         "calendario_nacional_2026",
         "nt_91_2026_covid"
       ],
-      "note": "Entidade pronta para onboarding; regras por produto/faixa/grupo especial permanecem draft nesta etapa."
+      "note": "Perfil operacional LP.8.1 ≥12 anos estruturado conforme NT 91/2026. Regras de gestante e idoso estruturadas pelo Calendário 2026; códigos PNI/produtos de registro permanecem pendentes.",
+      "product_variants": [
+        {
+          "product_variant_id": "comirnaty_lp81_refrigerated_12plus",
+          "name": "Comirnaty Refrigerada — cepa LP.8.1",
+          "manufacturer": "Pfizer Brasil Ltda.",
+          "technology": "mRNA",
+          "min_age_years": 12,
+          "dose_ml": 0.3,
+          "dose_mcg": 30,
+          "doses_per_vial": 6,
+          "dilution_required": false,
+          "route": "intramuscular",
+          "anvisa_registration": "1.2110.0481",
+          "storage_celsius_min": 2,
+          "storage_celsius_max": 8,
+          "must_not_freeze": true,
+          "max_hours_up_to_30c_before_use": 12,
+          "max_hours_after_opening": 12,
+          "transition_period": "second_half_2026",
+          "normative_acts": [
+            "nt_91_2026_covid"
+          ]
+        }
+      ],
+      "code_mapping_status": "product_registration_codes_pending"
     },
     {
       "immunobiologic_id": "hpv4",
