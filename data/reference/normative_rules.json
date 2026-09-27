@@ -344,7 +344,7 @@
         "calendario_nacional_2026",
         "nt_91_2026_covid"
       ],
-      "note": "Aguardando estruturação por produto, faixa etária, histórico e grupo especial antes de ativação automática.",
+      "note": "Gestante e idoso ≥60 anos já possuem regras nacionais ativas. Permanecem em onboarding os demais grupos/faixas, produtos e códigos de registro PNI.",
       "rule_context": "onboarding",
       "geographic_scope": {
         "type": "national",
