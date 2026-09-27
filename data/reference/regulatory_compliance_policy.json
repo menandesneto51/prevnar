@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "policy_id": "vaccination_regulatory_change_governance",
+  "legal_basis": [
+    "portaria_5663_2024_rnds_vacinacao"
+  ],
+  "legal_effective_from": "2025-03-04",
+  "applicability": {
+    "direct_legal_scope": "Sistemas de informação que registram dados de vacinação e demais atores explicitamente definidos no art. 312-A.",
+    "prevnar_current_role": "analytical_monitoring",
+    "prevnar_treatment": "internal_regulatory_benchmark",
+    "warning": "O painel não deve declarar infração legal apenas porque uma adaptação do PREVNAR ultrapassou 15 dias."
+  },
+  "benchmarks": {
+    "technical_revision_adaptation_days": 15,
+    "online_rnds_submission_hours": 24,
+    "offline_rnds_submission_days": 15,
+    "new_immunobiologic_rules_publication_days": 15
+  },
+  "tracked_act_types": [
+    "nota_tecnica",
+    "nota_tecnica_conjunta",
+    "nota_informativa",
+    "instrucao_normativa",
+    "guia_tecnico",
+    "protocolo_uso"
+  ],
+  "tracked_only_if_referenced_by_normative_rules": true,
+  "status_model": [
+    "within_benchmark",
+    "benchmark_exceeded_mapping_complete",
+    "benchmark_exceeded_mapping_pending",
+    "date_unavailable",
+    "not_in_scope"
+  ],
+  "interpretation": "Benchmark de governança regulatória para manter regras, mapeamentos e documentação próximos às revisões oficiais. Não é parecer jurídico nem declaração automática de conformidade."
+}
