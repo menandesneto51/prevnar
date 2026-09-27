@@ -43,12 +43,22 @@ def main() -> None:
         build_mart.run(refresh_sources=False)
         build_nacional.build()
 
-    print("\n=== 3/4 Governança regulatória ===", flush=True)
+    print("\n=== 3/5 Governança regulatória ===", flush=True)
     import regulatory_compliance
 
     regulatory_compliance.write_regulatory_compliance()
 
-    print("\n=== 4/4 Concluído ===", flush=True)
+    print("\n=== 4/5 Prontidão de registro ===", flush=True)
+    import registration_readiness
+
+    readiness = registration_readiness.write_registration_readiness()
+    if readiness["summary"]["monitored_not_ready"]:
+        raise RuntimeError(
+            "Imunobiológicos monitorados sem registration readiness: "
+            + ", ".join(readiness["summary"]["monitored_not_ready"])
+        )
+
+    print("\n=== 5/5 Concluído ===", flush=True)
 
 
 if __name__ == "__main__":
