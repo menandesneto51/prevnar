@@ -152,3 +152,79 @@ export async function getRoutineRescueDashboard(): Promise<RoutineRescueDashboar
   const raw = await readFile(file, "utf-8");
   return JSON.parse(raw) as RoutineRescueDashboard;
 }
+
+
+export type NormativeActRow = {
+  id: string;
+  resolved: boolean;
+  type?: string | null;
+  number?: string | null;
+  scope?: string | null;
+  published_at?: string | null;
+  effective_from?: string | null;
+  official_url?: string | null;
+  topic?: string[];
+};
+
+export type NormativeRuleRow = {
+  rule_id?: string | null;
+  rule_type?: string | null;
+  rule_context?: string | null;
+  status?: string | null;
+  active_on_as_of: boolean;
+  effective_from?: string | null;
+  effective_until?: string | null;
+  geographic_scope: {
+    type?: string | null;
+    codes: string[];
+  };
+  normative_acts: string[];
+  note?: string | null;
+};
+
+export type NormativeMatrixItem = {
+  immunobiologic_id: string;
+  display: string;
+  name?: string | null;
+  type?: string | null;
+  active_entity: boolean;
+  monitored: boolean;
+  onboarding_status?: string | null;
+  pni_codes: string[];
+  code_mapping_status?: string | null;
+  active_rule_count: number;
+  draft_rule_count: number;
+  rules: NormativeRuleRow[];
+  normative_acts: NormativeActRow[];
+};
+
+export type NormativeMatrix = {
+  schema_version: string;
+  generated_at: string;
+  as_of: string;
+  registry_version?: string | null;
+  rules_version?: string | null;
+  legal_updated_at?: string | null;
+  summary: {
+    immunobiologics: number;
+    active_rules: number;
+    draft_rules: number;
+    monitored_immunobiologics: number;
+    types: Record<string, number>;
+    onboarding_status: Record<string, number>;
+    unresolved_legal_references: string[];
+  };
+  immunobiologics: NormativeMatrixItem[];
+  interpretation: string;
+};
+
+export async function getNormativeMatrix(): Promise<NormativeMatrix | null> {
+  const candidates = [
+    path.join(dataDir, "normative_matrix.json"),
+    path.join(process.cwd(), "..", "data", "mart", "normative_matrix.json"),
+  ];
+  const file = candidates.find((candidate) => existsSync(candidate));
+  if (!file) return null;
+  const raw = await readFile(file, "utf-8");
+  return JSON.parse(raw) as NormativeMatrix;
+}
