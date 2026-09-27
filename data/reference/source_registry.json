@@ -179,6 +179,17 @@
       "stale_after_days": 75,
       "critical_for_decision": true,
       "status": "blocked_pending_official_code"
+    },
+    {
+      "source_id": "ibge_censo2022_age_simple",
+      "name": "IBGE Censo Demográfico 2022 — população por idade simples",
+      "domain": "denominador_demografico",
+      "cadence": "censo",
+      "attention_after_days": 3650,
+      "stale_after_days": 5000,
+      "critical_for_decision": true,
+      "status": "manual_normalization_required",
+      "note": "Usado pela metodologia MenACWY NT 50/2026 até disponibilidade de denominador etário mais recente compatível."
     }
   ]
 }
