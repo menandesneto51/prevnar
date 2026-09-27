@@ -255,3 +255,40 @@ export async function getRoutineRescueDashboard(): Promise<RoutineRescueDashboar
   if (!file) return null;
   return JSON.parse(await readFile(file, "utf-8")) as RoutineRescueDashboard;
 }
+
+export type MenacwyCohortCoverage = {
+  methodology_id: string;
+  reference_year: number;
+  denominator_source: string;
+  denominator_loaded: boolean;
+  rows: Array<{
+    geography_type: string;
+    geography_code: string;
+    reference_year: number;
+    ages: Array<{
+      age: number;
+      birth_cohort_year: number;
+      vaccinated_unique: number;
+      denominator_censo2022: number | null;
+      coverage_pct: number | null;
+      decision_grade: boolean;
+    }>;
+    vaccinated_unique_11_14: number;
+    denominator_11_14_censo2022: number | null;
+    coverage_11_14_pct: number | null;
+    decision_grade: boolean;
+    possible_cross_cohort_overlap: number;
+  }>;
+  limitations: string[];
+  generated_at?: string;
+};
+
+export async function getMenacwyCohortCoverage(): Promise<MenacwyCohortCoverage | null> {
+  const candidates = [
+    path.join(dataDir, "mart_menacwy_cohort_coverage.json"),
+    path.join(process.cwd(), "..", "data", "mart", "mart_menacwy_cohort_coverage.json"),
+  ];
+  const file = candidates.find((candidate) => existsSync(candidate));
+  if (!file) return null;
+  return JSON.parse(await readFile(file, "utf-8")) as MenacwyCohortCoverage;
+}
