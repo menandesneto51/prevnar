@@ -28,6 +28,7 @@ Modo mais estrito. Deve ser usado após reconstrução dos marts e antes de uma 
 
 - registro legal válido;
 - política de benchmark regulatório válida;
+- atos regulatórios referenciados com data de publicação disponível;
 - Portaria GM/MS 5.663/2024 com publicação/vigência/provisões estruturadas;
 - benchmark regulatório de 15 dias preservado como referência interna;
 - papel atual do PREVNAR explicitamente analítico, sem declaração automática de infração;
