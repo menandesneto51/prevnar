@@ -485,3 +485,54 @@ export async function getCovidTransitionDashboard(): Promise<CovidTransitionDash
   const raw = await readFile(file, "utf-8");
   return JSON.parse(raw) as CovidTransitionDashboard;
 }
+
+
+export type RegulatoryComplianceItem = {
+  act_id: string;
+  number?: string | null;
+  type?: string | null;
+  published_at?: string | null;
+  benchmark_deadline?: string | null;
+  age_days?: number | null;
+  days_to_benchmark_deadline?: number | null;
+  benchmark_status: string;
+  rule_ids: string[];
+  rule_statuses: string[];
+  immunobiologic_ids: string[];
+  mapping_pending_immunobiologic_ids: string[];
+  official_url?: string | null;
+};
+
+export type RegulatoryComplianceDashboard = {
+  schema_version: string;
+  as_of: string;
+  policy_id?: string | null;
+  legal_basis?: string[];
+  applicability?: {
+    direct_legal_scope?: string;
+    prevnar_current_role?: string;
+    prevnar_treatment?: string;
+    warning?: string;
+  };
+  benchmark_days: number;
+  summary: {
+    tracked_acts: number;
+    within_benchmark: number;
+    benchmark_exceeded_mapping_pending: number;
+    benchmark_exceeded_mapping_complete: number;
+    date_unavailable: number;
+  };
+  items: RegulatoryComplianceItem[];
+  interpretation?: string | null;
+};
+
+export async function getRegulatoryCompliance(): Promise<RegulatoryComplianceDashboard | null> {
+  const candidates = [
+    path.join(dataDir, "regulatory_compliance.json"),
+    path.join(process.cwd(), "..", "data", "mart", "regulatory_compliance.json"),
+  ];
+  const file = candidates.find((candidate) => existsSync(candidate));
+  if (!file) return null;
+  const raw = await readFile(file, "utf-8");
+  return JSON.parse(raw) as RegulatoryComplianceDashboard;
+}

@@ -1,0 +1,111 @@
+name: Regulatory Watch
+
+on:
+  schedule:
+    - cron: "15 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run Regulatory Watch
+        run: python etl/regulatory_watch.py --output regulatory_watch.json
+
+      - name: Read watch state
+        id: watch_state
+        shell: bash
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          r=json.load(open("regulatory_watch.json", encoding="utf-8"))
+          print("changed=" + str(r["changed"]).lower())
+          print("unavailable=" + str(r["unavailable"]))
+          PY
+
+      - name: Add workflow summary
+        shell: bash
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          r=json.load(open("regulatory_watch.json", encoding="utf-8"))
+          print("# PREVNAR Regulatory Watch")
+          print()
+          print("- changed:", r["changed"])
+          print("- changed targets:", r["summary"]["changed_targets"])
+          print("- unavailable targets:", r["summary"]["unavailable_targets"])
+          if r["changes"]:
+              print()
+              print("## Changes")
+              for c in r["changes"]:
+                  print("- **" + c["target_id"] + "** — " + c["field"] + " — " + c["change_type"])
+          PY
+
+      - name: Upload watch report
+        uses: actions/upload-artifact@v4
+        with:
+          name: regulatory-watch-report
+          path: regulatory_watch.json
+          retention-days: 30
+
+      - name: Create or update change issue
+        if: steps.watch_state.outputs.changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const report = JSON.parse(fs.readFileSync("regulatory_watch.json", "utf8"));
+            const title = "[Regulatory Watch] Mudança oficial detectada";
+            const lines = [
+              "O PREVNAR detectou mudança material em uma fonte oficial monitorada.",
+              "",
+              "Gerado em: " + report.generated_at,
+              "",
+              "## Mudanças"
+            ];
+            for (const c of report.changes) {
+              lines.push("- **" + c.target_id + "** — " + c.field + " — " + c.change_type);
+            }
+            lines.push(
+              "",
+              "## Guardrail",
+              "Este alerta não altera automaticamente regras clínicas, mapeamentos ou monitored.",
+              "A mudança deve ser revisada, registrada no legal/normative registry e validada por testes + Release Guardian.",
+              "",
+              "Relatório completo disponível no artifact regulatory-watch-report desta execução."
+            );
+            const body = lines.join("\n");
+
+            const response = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 100
+            });
+            const existing = response.data.find(i => i.title === title);
+
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: body
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body
+              });
+            }

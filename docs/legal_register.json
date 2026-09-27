@@ -92,7 +92,11 @@
       "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-52-2026-cgici-dpni-svsa-ms.pdf/view",
       "updated_by": [
         "nt_64_2026_vpc20"
-      ]
+      ],
+      "published_at": "2026-05-26",
+      "effective_from": "2026-05-26",
+      "page_updated_at": "2026-06-22",
+      "date_note": "Página oficial do PNI registra publicação em 26/05/2026; página individual do PDF registra atualização em 22/06/2026."
     },
     {
       "id": "ntc_310_2026_vpc20",
@@ -104,7 +108,9 @@
         "idosos",
         "85_mais"
       ],
-      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-310-2026.pdf/view"
+      "official_url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-310-2026.pdf/view",
+      "published_at": "2026-09-14",
+      "effective_from": "2026-09-14"
     },
     {
       "id": "mt_decreto_1427_2025",
@@ -442,9 +448,16 @@
         "imunobiologicos"
       ],
       "published_at": "2024-11-04",
-      "effective_from": "2024-11-04",
+      "effective_from": "2025-03-04",
       "official_url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2024/prt5663_04_11_2024.html",
-      "note": "Determina o encaminhamento dos dados de doses aplicadas à RNDS conforme o modelo de Registro de Imunobiológico Aplicado (RIA) vigente."
+      "note": "Determina o encaminhamento dos dados de doses aplicadas à RNDS conforme o modelo de Registro de Imunobiológico Aplicado (RIA) vigente.",
+      "provisions": {
+        "rnds_online_submission_hours": 24,
+        "rnds_offline_submission_days": 15,
+        "system_adaptation_after_technical_revision_days": 15,
+        "dpni_new_immunobiologic_registration_rules_days": 15
+      },
+      "applicability_note": "Os prazos dos §§ 2º a 5º do art. 312-A aplicam-se aos atores/sistemas descritos na Portaria. No PREVNAR analítico, o prazo de adequação de 15 dias é usado como benchmark interno de governança; não implica, por si só, conclusão de conformidade ou não conformidade jurídica."
     },
     {
       "id": "nt_115_2024_rnds_registro_vacinal",

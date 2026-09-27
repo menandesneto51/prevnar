@@ -23,6 +23,7 @@ from urllib.parse import urlparse
 from paths import MART, REF, ROOT
 from vaccine_rules import validate_registry_integrity
 from build_normative_matrix import build_matrix
+from regulatory_compliance import build_regulatory_compliance
 
 
 ALLOWED_EVIDENCE = {"E1", "E2", "E3", "E4", "E5"}
@@ -274,6 +275,196 @@ def check_sies_logistics_contract(findings: list[Finding]) -> None:
             )
 
 
+def check_regulatory_compliance_policy(findings: list[Finding]) -> None:
+    policy_path = REF / "regulatory_compliance_policy.json"
+    legal_path = ROOT / "docs" / "legal_register.json"
+
+    if not policy_path.exists():
+        _finding(
+            findings,
+            "error",
+            "regulatory_policy_missing",
+            "Política de benchmark regulatório ausente.",
+            policy_path,
+        )
+        return
+
+    try:
+        policy = _load_json(policy_path)
+        legal = _load_json(legal_path)
+    except Exception as exc:  # noqa: BLE001
+        _finding(
+            findings,
+            "error",
+            "regulatory_policy_invalid",
+            f"Falha ao carregar política/registro legal: {exc}",
+            policy_path,
+        )
+        return
+
+    benchmark = (
+        policy.get("benchmarks", {})
+        .get("technical_revision_adaptation_days")
+    )
+    if benchmark != 15:
+        _finding(
+            findings,
+            "error",
+            "regulatory_benchmark_changed",
+            "Benchmark de revisão técnica deve permanecer em 15 dias enquanto baseado na Portaria 5.663/2024.",
+            policy_path,
+        )
+
+    applicability = policy.get("applicability") or {}
+    if applicability.get("prevnar_current_role") != "analytical_monitoring":
+        _finding(
+            findings,
+            "error",
+            "regulatory_applicability_ambiguous",
+            "Papel atual do PREVNAR deve permanecer explicitamente analytical_monitoring.",
+            policy_path,
+        )
+    if applicability.get("prevnar_treatment") != "internal_regulatory_benchmark":
+        _finding(
+            findings,
+            "error",
+            "regulatory_benchmark_not_internal",
+            "Prazo regulatório deve ser tratado como benchmark interno no PREVNAR analítico.",
+            policy_path,
+        )
+
+    portaria = next(
+        (
+            act
+            for act in legal.get("acts", [])
+            if act.get("id") == "portaria_5663_2024_rnds_vacinacao"
+        ),
+        None,
+    )
+    if not portaria:
+        _finding(
+            findings,
+            "error",
+            "portaria_5663_missing",
+            "Portaria GM/MS 5.663/2024 ausente do registro legal.",
+            legal_path,
+        )
+        return
+
+    if portaria.get("effective_from") != "2025-03-04":
+        _finding(
+            findings,
+            "error",
+            "portaria_5663_effective_date_invalid",
+            "Vigência registrada da Portaria 5.663/2024 deve refletir os 120 dias do art. 4º.",
+            legal_path,
+        )
+
+    provisions = portaria.get("provisions") or {}
+    expected = {
+        "rnds_online_submission_hours": 24,
+        "rnds_offline_submission_days": 15,
+        "system_adaptation_after_technical_revision_days": 15,
+        "dpni_new_immunobiologic_registration_rules_days": 15,
+    }
+    for key, value in expected.items():
+        if provisions.get(key) != value:
+            _finding(
+                findings,
+                "error",
+                "portaria_5663_provision_mismatch",
+                f"Provisão {key} deve ser {value}.",
+                legal_path,
+            )
+
+
+def check_regulatory_watch_contract(findings: list[Finding]) -> None:
+    baseline_path = REF / "regulatory_watch_baseline.json"
+    workflow_path = ROOT / ".github" / "workflows" / "regulatory-watch.yml"
+
+    if not baseline_path.exists():
+        _finding(
+            findings,
+            "error",
+            "regulatory_watch_baseline_missing",
+            "Baseline do Regulatory Watch ausente.",
+            baseline_path,
+        )
+        return
+
+    try:
+        baseline = _load_json(baseline_path)
+    except Exception as exc:  # noqa: BLE001
+        _finding(
+            findings,
+            "error",
+            "regulatory_watch_baseline_invalid",
+            f"Baseline regulatório inválido: {exc}",
+            baseline_path,
+        )
+        return
+
+    targets = {
+        str(row.get("target_id")): row
+        for row in baseline.get("targets") or []
+    }
+    required_targets = {
+        "rules_entry",
+        "br_immunobiologic",
+        "br_vaccination_strategy",
+    }
+    missing = sorted(required_targets - set(targets))
+    if missing:
+        _finding(
+            findings,
+            "error",
+            "regulatory_watch_targets_missing",
+            "Alvos obrigatórios ausentes: " + ", ".join(missing),
+            baseline_path,
+        )
+
+    rules_expected = (targets.get("rules_entry") or {}).get("expected") or {}
+    if rules_expected.get("latest_version") != 4:
+        _finding(
+            findings,
+            "error",
+            "regulatory_watch_rules_baseline_changed",
+            "Baseline de Regras de Entrada deve permanecer na versão 4 até revisão humana.",
+            baseline_path,
+        )
+
+    immuno_expected = (targets.get("br_immunobiologic") or {}).get("expected") or {}
+    immuno_codes = immuno_expected.get("required_code_displays") or {}
+    if immuno_codes.get("87") != "COVID-19 PFIZER - COMIRNATY":
+        _finding(
+            findings,
+            "error",
+            "regulatory_watch_code87_missing",
+            "Baseline deve acompanhar código 87 da Comirnaty.",
+            baseline_path,
+        )
+
+    strategy_expected = (targets.get("br_vaccination_strategy") or {}).get("expected") or {}
+    absent = strategy_expected.get("tracked_absent_code_displays") or {}
+    if absent.get("14") != "Vacinação Escolar":
+        _finding(
+            findings,
+            "error",
+            "regulatory_watch_strategy14_exception_missing",
+            "Baseline deve acompanhar a ausência terminológica da estratégia 14.",
+            baseline_path,
+        )
+
+    if not workflow_path.exists():
+        _finding(
+            findings,
+            "error",
+            "regulatory_watch_workflow_missing",
+            "Workflow agendado do Regulatory Watch ausente.",
+            workflow_path,
+        )
+
+
 def check_source_registry(findings: list[Finding]) -> None:
     path = REF / "source_registry.json"
     if not path.exists():
@@ -439,6 +630,34 @@ def check_normative_governance(findings: list[Finding]) -> None:
                     f"Regra ativa sem normative_acts: {rid}.",
                     REF / "normative_rules.json",
                 )
+
+
+def check_regulatory_compliance_state(findings: list[Finding]) -> None:
+    try:
+        payload = build_regulatory_compliance()
+    except Exception as exc:  # noqa: BLE001
+        _finding(
+            findings,
+            "error",
+            "regulatory_compliance_build_failed",
+            f"Falha ao construir benchmark regulatório: {exc}",
+            REF / "regulatory_compliance_policy.json",
+        )
+        return
+
+    if int(payload.get("summary", {}).get("date_unavailable") or 0) > 0:
+        missing = [
+            str(row.get("act_id"))
+            for row in payload.get("items") or []
+            if row.get("benchmark_status") == "date_unavailable"
+        ]
+        _finding(
+            findings,
+            "error",
+            "referenced_regulatory_act_without_publication_date",
+            "Atos regulatórios referenciados sem data de publicação: " + ", ".join(missing),
+            ROOT / "docs" / "legal_register.json",
+        )
 
 
 def check_indicator_catalog(findings: list[Finding]) -> None:
@@ -626,9 +845,12 @@ def run_guardian(mode: str = "ci") -> tuple[list[Finding], dict]:
     findings: list[Finding] = []
     check_legal_register(findings)
     check_sies_logistics_contract(findings)
+    check_regulatory_compliance_policy(findings)
+    check_regulatory_watch_contract(findings)
     check_source_registry(findings)
     check_vaccine_registry(findings)
     check_normative_governance(findings)
+    check_regulatory_compliance_state(findings)
     check_indicator_catalog(findings)
     check_dashboard_runtime(findings, mode)
     check_secrets_and_personal_data(findings)

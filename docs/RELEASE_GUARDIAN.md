@@ -27,6 +27,11 @@ Modo mais estrito. Deve ser usado após reconstrução dos marts e antes de uma 
 ## Gates implementados
 
 - registro legal válido;
+- política de benchmark regulatório válida;
+- atos regulatórios referenciados com data de publicação disponível;
+- Portaria GM/MS 5.663/2024 com publicação/vigência/provisões estruturadas;
+- benchmark regulatório de 15 dias preservado como referência interna;
+- papel atual do PREVNAR explicitamente analítico, sem declaração automática de infração;
 - separação SIES público (distribuição) × SIES/DW institucional (estoque);
 - proibição de inferir saldo atual a partir de doses distribuídas;
 - proibição de seed SIES como dado observado;

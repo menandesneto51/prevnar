@@ -1,0 +1,19 @@
+---
+description: Governança regulatória e atualização de regras vacinais
+alwaysApply: true
+---
+
+# Regulatory compliance
+
+1. Tratar a Portaria GM/MS nº 5.663/2024 como base de interoperabilidade/registro vacinal.
+2. A vigência operacional da Portaria no PREVNAR é registrada a partir de 04/03/2025, após os 120 dias do art. 4º.
+3. O prazo de 15 dias após revisão técnica é obrigação dirigida aos sistemas/atores definidos no art. 312-A.
+4. Enquanto o PREVNAR permanecer analítico, usar 15 dias como benchmark interno e nunca rotular automaticamente atraso como infração legal.
+5. Toda nova regra vacinal deve possuir ato oficial, data de publicação quando disponível, vigência e escopo.
+6. Toda revisão oficial referenciada pelas normative_rules deve aparecer no benchmark regulatório.
+7. Estado `benchmark_exceeded_mapping_pending` exige backlog explícito.
+8. Não alterar `monitored=true` para mapeamento incompleto apenas para cumprir benchmark.
+9. Não inferir estratégia, dose, grupo ou elegibilidade para "fechar prazo".
+10. Divergência entre orientação oficial específica e terminologia FHIR deve ser registrada, não ocultada.
+11. O Release Guardian deve bloquear corrupção da política regulatória.
+12. O Cursor deve tratar `docs/REGULATORY_COMPLIANCE.md` como referência permanente.

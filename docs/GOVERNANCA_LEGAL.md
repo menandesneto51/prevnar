@@ -35,12 +35,12 @@ O PREVNAR deve tratar atos do Ministério da Saúde/PNI como fonte normativa pri
 ### VPC20
 
 **Nota Técnica nº 52/2026-CGICI/DPNI/SVSA/MS**  
-Define diretrizes para uso da VPC20 em estratégias especiais no SUS, no âmbito da RIE, e orienta transição dos esquemas previamente utilizados com VPC10, VPC13 e VPP23.
+Publicada em 26/05/2026; página individual posteriormente atualizada em 22/06/2026. Define diretrizes para uso da VPC20 em estratégias especiais no SUS, no âmbito da RIE, e orienta transição dos esquemas previamente utilizados com VPC10, VPC13 e VPP23.
 
 Fonte: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-52-2026-cgici-dpni-svsa-ms.pdf/view
 
 **Nota Técnica Conjunta nº 310/2026-DPNI/SVSA-DESF/SAPS/MS**  
-Amplia o uso da VPC20 no SUS para pessoas a partir de 85 anos.
+Publicada em 14/09/2026. Amplia o uso da VPC20 no SUS para pessoas a partir de 85 anos.
 
 Fonte: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-310-2026.pdf/view
 
@@ -69,6 +69,24 @@ validated_at:
 Uma nova norma não entra automaticamente em produção. Exige validação epidemiológica e institucional.
 
 ## 3. Saúde digital e interoperabilidade
+
+### Portaria GM/MS nº 5.663/2024
+
+Altera a Portaria de Consolidação GM/MS nº 1/2017 e disciplina o registro vacinal integrado à RNDS.
+
+Pontos estruturados no PREVNAR:
+- publicação: 04/11/2024;
+- vigência: 04/03/2025, após 120 dias;
+- sistemas de registro devem seguir o RIA vigente;
+- salas com conectividade: envio à RNDS em até 24 horas;
+- salas sem conectividade: envio em até 15 dias;
+- sistemas de registro próprios/terceiros: até 15 dias para adequação após revisão técnica de vacinação;
+- DPNI/SVSA: até 15 dias para publicação das regras de novo registro após liberação de novo imunobiológico pela Anvisa, condicionada aos ajustes na RNDS;
+- sistemas devem armazenar retorno de integração, identificador enviado e status de sucesso/erro.
+
+**Aplicabilidade:** o PREVNAR, enquanto plataforma analítica e não sistema transacional de registro/envio RIA, usa o prazo de 15 dias como benchmark interno de governança. Isso não equivale, por si só, a conclusão jurídica de conformidade ou descumprimento.
+
+Fonte: https://bvsms.saude.gov.br/bvs/saudelegis/gm/2024/prt5663_04_11_2024.html
 
 ### Portaria nº 1.434/2020
 Instituiu o Programa Conecte SUS, a RNDS e a adoção de padrões de interoperabilidade em saúde.
@@ -179,3 +197,23 @@ Em divergência, prevalece:
 6. regras implementadas no código.
 
 O código nunca prevalece sobre norma vigente.
+
+
+## 9. Controle regulatório contínuo
+
+O PREVNAR mantém:
+- `legal_register.json` como registro canônico de atos;
+- `normative_rules.json` como regras estruturadas;
+- `regulatory_compliance_policy.json` como benchmark interno;
+- `regulatory_watch_baseline.json` como baseline de fontes oficiais;
+- `/conformidade` como visão operacional;
+- Regulatory Watch Agent para detecção de mudanças.
+
+Mudanças em:
+- Regras de Entrada;
+- Regras de Cobertura;
+- terminologias BRImunobiologico/BREstrategiaVacinacao;
+- calendário nacional;
+- notas técnicas;
+
+devem gerar revisão humana, testes e Release Guardian antes de alterar lógica decisória.
