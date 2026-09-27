@@ -228,3 +228,35 @@ export async function getNormativeMatrix(): Promise<NormativeMatrix | null> {
   const raw = await readFile(file, "utf-8");
   return JSON.parse(raw) as NormativeMatrix;
 }
+
+
+export type NormativeBacklogItem = {
+  priority: string;
+  category: string;
+  immunobiologic_id: string;
+  display: string;
+  message: string;
+  next_gate: string;
+};
+
+export type NormativeBacklog = {
+  schema_version: string;
+  as_of: string;
+  summary: {
+    total: number;
+    by_priority: Record<string, number>;
+  };
+  items: NormativeBacklogItem[];
+  interpretation: string;
+};
+
+export async function getNormativeBacklog(): Promise<NormativeBacklog | null> {
+  const candidates = [
+    path.join(dataDir, "normative_backlog.json"),
+    path.join(process.cwd(), "..", "data", "mart", "normative_backlog.json"),
+  ];
+  const file = candidates.find((candidate) => existsSync(candidate));
+  if (!file) return null;
+  const raw = await readFile(file, "utf-8");
+  return JSON.parse(raw) as NormativeBacklog;
+}
