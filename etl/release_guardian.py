@@ -372,6 +372,23 @@ def check_normative_governance(findings: list[Finding]) -> None:
                 REF / "immunobiologic_registry.json",
             )
 
+        mapping_status = str(item.get("code_mapping_status") or "").lower()
+        onboarding_status = str(item.get("onboarding_status") or "").lower()
+        if item.get("monitored") and (
+            "pending" in mapping_status
+            or "partial_data_mapping" in onboarding_status
+        ):
+            _finding(
+                findings,
+                "error",
+                "monitored_with_incomplete_registration_mapping",
+                (
+                    f"Imunobiológico {iid} está monitorado com mapeamento de registro "
+                    f"incompleto: {item.get('code_mapping_status') or item.get('onboarding_status')}."
+                ),
+                REF / "immunobiologic_registry.json",
+            )
+
         for rule in item.get("rules") or []:
             if rule.get("status") != "active":
                 continue
