@@ -24,6 +24,7 @@ from paths import MART, REF, ROOT
 from vaccine_rules import validate_registry_integrity
 from build_normative_matrix import build_matrix
 from regulatory_compliance import build_regulatory_compliance
+from registration_readiness import build_registration_readiness
 
 
 ALLOWED_EVIDENCE = {"E1", "E2", "E3", "E4", "E5"}
@@ -660,6 +661,41 @@ def check_regulatory_compliance_state(findings: list[Finding]) -> None:
         )
 
 
+def check_registration_readiness(findings: list[Finding]) -> None:
+    try:
+        payload = build_registration_readiness()
+    except Exception as exc:  # noqa: BLE001
+        _finding(
+            findings,
+            "error",
+            "registration_readiness_invalid",
+            f"Falha ao avaliar prontidão de registro: {exc}",
+            REF / "registration_mapping_registry.json",
+        )
+        return
+
+    for iid in payload.get("summary", {}).get("monitored_not_ready") or []:
+        row = next(
+            (
+                item
+                for item in payload.get("items") or []
+                if item.get("immunobiologic_id") == iid
+            ),
+            {},
+        )
+        blocking = ", ".join(row.get("blocking_dimensions") or [])
+        _finding(
+            findings,
+            "error",
+            "monitored_without_registration_readiness",
+            (
+                f"Imunobiológico {iid} está monitored=true sem mapeamento "
+                f"transacional completo. Bloqueios: {blocking or 'não informado'}."
+            ),
+            REF / "registration_mapping_registry.json",
+        )
+
+
 def check_indicator_catalog(findings: list[Finding]) -> None:
     path = REF / "indicadores_nacionais.json"
     if not path.exists():
@@ -851,6 +887,7 @@ def run_guardian(mode: str = "ci") -> tuple[list[Finding], dict]:
     check_vaccine_registry(findings)
     check_normative_governance(findings)
     check_regulatory_compliance_state(findings)
+    check_registration_readiness(findings)
     check_indicator_catalog(findings)
     check_dashboard_runtime(findings, mode)
     check_secrets_and_personal_data(findings)
