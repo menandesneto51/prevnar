@@ -16,6 +16,7 @@
 | [RESPIRATORY_IMMUNIZATION_2026.md](RESPIRATORY_IMMUNIZATION_2026.md) | Arquitetura normativa e analítica para VVSR, nirsevimabe, influenza e covid-19 |
 | [ROUTINE_RESCUE_ONBOARDING_2026.md](ROUTINE_RESCUE_ONBOARDING_2026.md) | Onboarding de HPV, MenACWY, febre amarela e tríplice viral |
 | [ROUTINE_RESCUE_ETL.md](ROUTINE_RESCUE_ETL.md) | ETL conservador para MenACWY, febre amarela e tríplice viral |
+| [ROUTINE_RESCUE_FRONTEND.md](ROUTINE_RESCUE_FRONTEND.md) | Painel de rotina, resgate e resposta com evidência/proveniência |
 | [RULE_SCOPE_MODEL.md](RULE_SCOPE_MODEL.md) | Modelo obrigatório de escopo territorial e temporal das regras |
 | [VACCINE_REGISTRY.md](VACCINE_REGISTRY.md) | Registro específico de vacinas e motor normativo versionado |
 | [ONBOARDING_IMUNOBIOLOGICO.md](ONBOARDING_IMUNOBIOLOGICO.md) | Fluxo padronizado para incorporar vacinas, anticorpos monoclonais e outros imunobiológicos |

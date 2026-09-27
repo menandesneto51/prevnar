@@ -86,3 +86,69 @@ export async function getRespiratoryDashboard(): Promise<RespiratoryDashboard | 
   const raw = await readFile(file, "utf-8");
   return JSON.parse(raw) as RespiratoryDashboard;
 }
+
+
+export type RoutineRescueMart = {
+  immunobiologic_id: string;
+  observed_code_hits: number;
+  observed_people: number;
+  confirmed_context_doses: number;
+  confirmed_context_people: number;
+  confirmed_share_pct: number | null;
+  por_uf: Array<{
+    uf: string;
+    observed_doses: number;
+    observed_people: number;
+    confirmed_doses: number;
+    confirmed_people: number;
+  }>;
+  linha_tempo: Array<{
+    ano_mes: string;
+    observed_doses: number;
+    confirmed_doses: number;
+  }>;
+  estrategias: Record<string, number>;
+  doses_codigos: Record<string, number>;
+  grupos_atendimento: Record<string, number>;
+  contextos_confirmados: Record<string, number>;
+  mismatches: Record<string, number>;
+  reference_period: string | null;
+  interpretation: string;
+  provenance?: {
+    run_id?: string;
+    source_id?: string;
+    reference_period?: string | null;
+    retrieved_at?: string;
+    freshness?: {
+      status?: string;
+      age_days?: number | null;
+      critical_for_decision?: boolean;
+    };
+  };
+};
+
+export type RoutineRescueDashboard = {
+  generated_at: string;
+  pages: number;
+  scanned: number;
+  mapping_plan_version: string;
+  hpv4: {
+    status: string;
+    reason: string;
+    immunobiologic_codes: string[];
+  };
+  menacwy: RoutineRescueMart;
+  febre_amarela: RoutineRescueMart;
+  triplice_viral: RoutineRescueMart;
+};
+
+export async function getRoutineRescueDashboard(): Promise<RoutineRescueDashboard | null> {
+  const candidates = [
+    path.join(dataDir, "routine_rescue_dashboard.json"),
+    path.join(process.cwd(), "..", "data", "mart", "routine_rescue_dashboard.json"),
+  ];
+  const file = candidates.find((candidate) => existsSync(candidate));
+  if (!file) return null;
+  const raw = await readFile(file, "utf-8");
+  return JSON.parse(raw) as RoutineRescueDashboard;
+}
