@@ -185,12 +185,13 @@ def process_rows(rows: Iterable[dict[str, Any]]) -> dict[str, Any]:
         ],
         "mismatches": dict(mismatches),
         "reference_period": latest.isoformat()[:7] if latest else None,
-        "pending_contexts": [
+        "terminology_notes": [
             {
-                "id": "school_vaccination_le14",
-                "reason": (
-                    "NT 24/2026 determina Estratégia Vacinação Escolar para <=14 anos; "
-                    "código não validado nesta versão."
+                "id": "school_vaccination_strategy_14",
+                "status": "official_guidance_confirmed_valueset_sync_pending",
+                "note": (
+                    "Estratégia 14 é sustentada por orientação oficial específica de registro; "
+                    "BREstrategiaVacinacao 1.1.0 publicado ainda não lista o conceito."
                 ),
             }
         ],
