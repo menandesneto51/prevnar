@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "policy": "Distribuição pública e estoque institucional são domínios distintos e não intercambiáveis.",
+  "sources": {
+    "sies_public_distribution": {
+      "source_id": "sies",
+      "official_api": "https://apidadosabertos.saude.gov.br/vacinacao/sistema-de-informacao-de-insumos-estrategicos",
+      "official_dataset": "https://dadosabertos.saude.gov.br/dataset/sies",
+      "grain": "distribution_event_or_aggregate",
+      "capabilities": [
+        "distributed_doses",
+        "territory_distribution"
+      ],
+      "prohibited_inferences": [
+        "current_stock_balance",
+        "lot_expiry_risk",
+        "physical_losses",
+        "technical_losses",
+        "cold_chain_capacity"
+      ],
+      "evidence_level": "E1",
+      "decision_grade_for_distribution": true,
+      "decision_grade_for_current_inventory": false
+    },
+    "sies_institutional_inventory": {
+      "source_id": "sies_institutional_inventory",
+      "acquisition": "authorized_export_or_institutional_dw",
+      "grain": "reference_date + territory_code + facility_cnes + product_variant_id + lot",
+      "privacy": "aggregate_logistics_only",
+      "required_fields": [
+        "reference_date",
+        "territory_code",
+        "product_variant_id",
+        "lot",
+        "expiry_date",
+        "stock_available_doses",
+        "doses_administered_30d"
+      ],
+      "optional_fields": [
+        "facility_cnes",
+        "physical_losses_30d",
+        "technical_losses_30d",
+        "eligible_population_estimate",
+        "storage_capacity_doses",
+        "requested_doses_next_cycle"
+      ],
+      "forbidden_personal_fields": [
+        "cpf",
+        "cns",
+        "nome_paciente",
+        "patient_name",
+        "codigo_paciente",
+        "patient_id",
+        "patient_id_hash"
+      ],
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "note": "Aptidão decisória depende de freshness, validação de schema e proveniência do arquivo/consulta."
+    }
+  }
+}

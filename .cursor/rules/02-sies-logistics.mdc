@@ -1,0 +1,19 @@
+---
+description: Governança logística SIES/DW no PREVNAR
+alwaysApply: true
+---
+
+# SIES / logística
+
+1. Nunca tratar doses distribuídas do SIES público como saldo de estoque atual.
+2. Nunca promover "pneumo total", VPC10 ou VPC13 como VPC20.
+3. O campo legado `estoque_uf` pode existir apenas por compatibilidade; sua semântica deve ser explicitamente `distributed_doses_not_current_stock`.
+4. Estoque atual, lote, validade, perdas e capacidade de cadeia de frio exigem fonte institucional autorizada ou exportação administrativa equivalente.
+5. Dados logísticos institucionais devem seguir `covid19_transition_inventory_schema.json`.
+6. CPF, CNS, nome de paciente e identificadores individuais são proibidos nessa camada.
+7. O adaptador deve persistir apenas agregados, alertas e proveniência; nunca linhas brutas.
+8. Todo arquivo institucional usado deve entrar no manifest com SHA-256.
+9. Falha de API não autoriza seed demonstrativo como dado observado.
+10. TLS nunca deve ser desabilitado. Em proxy corporativo, usar `PREVNAR_CA_BUNDLE`.
+11. Alertas de estoque são operacionais; não são recomendações clínicas.
+12. Thresholds internos devem ser identificados como parâmetros PREVNAR, não como norma do Ministério da Saúde.

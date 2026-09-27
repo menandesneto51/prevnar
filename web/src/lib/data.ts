@@ -416,3 +416,72 @@ export async function getCovidOperationalStatus(): Promise<CovidOperationalStatu
     data_mapping: plan.data_mapping,
   };
 }
+
+
+export type CovidTransitionAlert = {
+  territory_code: string;
+  facility_cnes?: string | null;
+  product_variant_id: string;
+  lot: string;
+  expiry_date: string;
+  alert_id: string;
+  severity: string;
+  reason: string;
+};
+
+export type CovidTransitionDashboard = {
+  schema_version: string;
+  source_id: string;
+  generated_at: string;
+  reference_period: string | null;
+  record_count: number;
+  totals: {
+    stock_available_doses: number;
+    doses_administered_30d: number;
+    physical_losses_30d: number;
+    technical_losses_30d: number;
+    lots: number;
+    territories: number;
+    critical_alerts: number;
+    attention_alerts: number;
+  };
+  by_territory: Array<{
+    territory_code: string;
+    stock_available_doses: number;
+    doses_administered_30d: number;
+    physical_losses_30d: number;
+    technical_losses_30d: number;
+    lots: number;
+    critical_alerts: number;
+    attention_alerts: number;
+  }>;
+  alerts: CovidTransitionAlert[];
+  interpretation: string;
+  provenance?: {
+    run_id?: string;
+    source_id?: string;
+    retrieved_at?: string;
+    reference_period?: string | null;
+    freshness?: {
+      status?: string;
+      age_days?: number | null;
+      critical_for_decision?: boolean;
+    };
+    input_files?: Array<{
+      name?: string;
+      size_bytes?: number;
+      sha256?: string;
+    }>;
+  };
+};
+
+export async function getCovidTransitionDashboard(): Promise<CovidTransitionDashboard | null> {
+  const candidates = [
+    path.join(dataDir, "covid19_transition_dashboard.json"),
+    path.join(process.cwd(), "..", "data", "mart", "covid19_transition_dashboard.json"),
+  ];
+  const file = candidates.find((candidate) => existsSync(candidate));
+  if (!file) return null;
+  const raw = await readFile(file, "utf-8");
+  return JSON.parse(raw) as CovidTransitionDashboard;
+}

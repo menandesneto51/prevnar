@@ -3,27 +3,18 @@ from __future__ import annotations
 
 import csv
 import json
-import ssl
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-from urllib.request import Request, urlopen
 
 from paths import MANUAL, MART, RAW, REF, UF_CODES
 
-try:
-    from api_client import http_get_json, iter_pni_2026
-except ImportError:
-    http_get_json = None  # type: ignore
+from api_client import http_get_json, iter_pni_2026
 
 
 def _get(url: str) -> Any:
-    if http_get_json:
-        return http_get_json(url)
-    ctx = ssl._create_unverified_context()
-    req = Request(url, headers={"Accept": "application/json", "User-Agent": "radar-vacinal/1.0"})
-    with urlopen(req, timeout=90, context=ctx) as r:
-        return json.loads(r.read().decode("utf-8"))
+    """GET JSON sempre com validação TLS do cliente compartilhado."""
+    return http_get_json(url)
 
 
 def save(name: str, payload: Any) -> Path:
@@ -85,8 +76,6 @@ def _agg_sies(rows: list[dict], *, ano_min: int = 2024) -> dict:
             if cls == "vpc20":
                 por_uf_vpc20[uf] = por_uf_vpc20.get(uf, 0) + qtde
                 por_uf[uf] = por_uf.get(uf, 0) + qtde
-    if not por_uf:
-        por_uf = dict(por_uf_pneumo)
     return {
         "por_uf_distribuidas": por_uf,
         "por_uf_pneumo": por_uf_pneumo,
@@ -174,7 +163,7 @@ def extract_sies(max_pages: int = 25) -> dict:
         vpc20_na_api = int(agg["por_classe"].get("vpc20") or 0)
         nota = "Distribuídas pneumo conjugada ≥2024 agregadas por UF (SES-XX / IBGE)."
         if not vpc20_na_api:
-            nota += " VPC20 ainda não no SIES — proxy = pneumo total."
+            nota += " VPC20 não identificado diretamente; nenhum proxy é promovido a VPC20."
         payload = {
             "atualizado_em": datetime.now(timezone.utc).isoformat(),
             "fonte": base,
@@ -185,7 +174,9 @@ def extract_sies(max_pages: int = 25) -> dict:
             "por_uf_vpc20": agg["por_uf_vpc20"],
             "por_classe_insumo": agg["por_classe"],
             "linhas_sample": rows_all[:200],
-            "nota": nota,
+            "nota": nota + " Distribuição pública não representa saldo de estoque atual.",
+            "decision_grade": True,
+            "data_semantics": "distributed_doses",
         }
     except Exception as exc:  # noqa: BLE001
         payload = {
@@ -194,8 +185,15 @@ def extract_sies(max_pages: int = 25) -> dict:
             "erro": str(exc),
             "registros": 0,
             "linhas_sample": [],
-            "por_uf_seed": {"SP": 5000, "RJ": 2000, "MG": 1800, "BA": 1200, "RS": 1100},
-            "nota": "Fallback seed distribuídas até API estável",
+            "por_uf_distribuidas": {},
+            "por_uf_pneumo": {},
+            "por_uf_vpc20": {},
+            "por_classe_insumo": {},
+            "nota": (
+                "Extração SIES indisponível. Nenhum seed/proxy demonstrativo é publicado "
+                "como dado observado. Distribuição pública não representa estoque atual."
+            ),
+            "decision_grade": False,
         }
     save("sies.json", payload)
     return payload
