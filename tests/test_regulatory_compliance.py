@@ -67,3 +67,21 @@ def test_benchmark_output_avoids_legal_violation_language() -> None:
     text = json.dumps(payload, ensure_ascii=False).lower()
     assert "infração legal" not in text
     assert "internal_regulatory_benchmark" in text
+
+
+def test_vpc20_publication_dates_are_available() -> None:
+    payload = build_regulatory_compliance(as_of=AS_OF)
+
+    nt52 = _item(payload, "nt_52_2026_vpc20")
+    assert nt52["published_at"] == "2026-05-26"
+    assert nt52["benchmark_deadline"] == "2026-06-10"
+
+    nt310 = _item(payload, "ntc_310_2026_vpc20")
+    assert nt310["published_at"] == "2026-09-14"
+    assert nt310["benchmark_deadline"] == "2026-09-29"
+    assert nt310["benchmark_status"] == "within_benchmark"
+
+
+def test_current_regulatory_view_has_no_referenced_act_with_unknown_date() -> None:
+    payload = build_regulatory_compliance(as_of=AS_OF)
+    assert payload["summary"]["date_unavailable"] == 0
