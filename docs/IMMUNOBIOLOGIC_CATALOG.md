@@ -90,3 +90,15 @@ Isso significa que:
 - a existência de uma regra territorial ativa não implica que ela se aplique fora do território.
 
 O catálogo descreve **maturidade e existência da regra**. A resolução de aplicabilidade para uma pessoa/território é responsabilidade do motor normativo com `geographic_context`.
+
+
+## Relação entre regra e dados
+
+O catálogo deve tornar visíveis situações como:
+
+- regra ativa + dados pendentes — exemplo de maturidade clínica maior que maturidade de ingestão;
+- regra ativa + mapeamento parcial — indicador observado possível, mas cobertura completa ainda não garantida;
+- regra draft + dados conhecidos — existência de código não autoriza ativação clínica;
+- regra territorial ativa — maturidade da regra não altera seu `geographic_scope`.
+
+Essas combinações são intencionais e impedem que "código conhecido" seja interpretado como "produto pronto para decisão".
