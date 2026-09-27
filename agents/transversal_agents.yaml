@@ -21,3 +21,6 @@ rules:
 
 orchestration_services:
   - "SPECIALIST_ORCHESTRATOR"
+
+decision_services:
+  - "INTERVENTION_EVALUATOR"
