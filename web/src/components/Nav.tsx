@@ -7,6 +7,7 @@ import { assetUrl } from "@/lib/basePath";
 const links = [
   { href: "/", label: "Nacional" },
   { href: "/indicadores", label: "Indicadores" },
+  { href: "/imunobiologicos", label: "Imunobiológicos" },
   { href: "/regioes", label: "Regiões" },
   { href: "/serie", label: "Série" },
   { href: "/timeline", label: "Linha do tempo" },
