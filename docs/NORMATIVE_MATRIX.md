@@ -127,6 +127,7 @@ O módulo `etl/normative_backlog.py` deriva automaticamente pendências a partir
 
 Categorias atuais:
 - `normative_rule_pending`;
+- `normative_rule_partial` — há regras ativas, mas parte do escopo ainda permanece em draft;
 - `data_mapping_incomplete`;
 - `national_code_missing`;
 - `monitoring_not_enabled`.
