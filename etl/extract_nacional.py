@@ -76,8 +76,6 @@ def _agg_sies(rows: list[dict], *, ano_min: int = 2024) -> dict:
             if cls == "vpc20":
                 por_uf_vpc20[uf] = por_uf_vpc20.get(uf, 0) + qtde
                 por_uf[uf] = por_uf.get(uf, 0) + qtde
-    if not por_uf:
-        por_uf = dict(por_uf_pneumo)
     return {
         "por_uf_distribuidas": por_uf,
         "por_uf_pneumo": por_uf_pneumo,
@@ -165,7 +163,7 @@ def extract_sies(max_pages: int = 25) -> dict:
         vpc20_na_api = int(agg["por_classe"].get("vpc20") or 0)
         nota = "Distribuídas pneumo conjugada ≥2024 agregadas por UF (SES-XX / IBGE)."
         if not vpc20_na_api:
-            nota += " VPC20 ainda não no SIES — proxy = pneumo total."
+            nota += " VPC20 não identificado diretamente; nenhum proxy é promovido a VPC20."
         payload = {
             "atualizado_em": datetime.now(timezone.utc).isoformat(),
             "fonte": base,
