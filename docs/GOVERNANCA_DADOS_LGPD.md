@@ -71,9 +71,26 @@ ripd_requerido:
 
 ## Base legal
 
-A hipótese legal deve ser identificada por operação de tratamento e validada institucionalmente.
+A hipótese legal deve ser identificada **por operação de tratamento** e validada institucionalmente.
 
-Para dados sensíveis, observar especialmente art. 11 da LGPD e regras próprias do Poder Público. O consentimento não deve ser selecionado automaticamente quando a atividade decorre de obrigação legal, execução de política pública ou tutela da saúde.
+Para dados sensíveis, observar especialmente o art. 11 da LGPD. Entre as hipóteses que podem ser pertinentes ao contexto sanitário estão:
+- cumprimento de obrigação legal ou regulatória pelo controlador;
+- tratamento compartilhado necessário à execução, pela Administração Pública, de políticas públicas previstas em leis ou regulamentos;
+- tutela da saúde, em procedimento realizado por profissionais de saúde, serviços de saúde ou autoridade sanitária.
+
+Essas hipóteses **não são selecionadas automaticamente pelo PREVNAR**. A finalidade, necessidade, atores, fluxo e base normativa concreta devem ser documentados.
+
+O consentimento não deve ser adotado por padrão quando a atividade decorre de atribuição legal, política pública ou tutela da saúde.
+
+## Matriz de hipótese legal
+
+| Operação | Dado | Avaliação mínima |
+|---|---|---|
+| painel público agregado | não pessoal/anônimo efetivo | validar risco de reidentificação |
+| processamento institucional de vacinação nominal | sensível | finalidade pública + hipótese do art. 11 + necessidade |
+| linkage nominal entre bases | sensível | finalidade específica + minimização + RIPD/risco |
+| compartilhamento no escopo do Decreto 12.560/2025 | pessoal/sensível | RIPD prévio + proporcionalidade + direitos do titular |
+| uso de IA externa | potencialmente sensível | proibir identificadores por padrão; revisar transferência/operador/finalidade |
 
 ## Minimização
 
@@ -134,3 +151,30 @@ Seguir LGPD, Resolução CD/ANPD nº 15/2024 e normas estaduais aplicáveis.
 - ANPD Poder Público: https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia_orientativo_tratamento_de_dados_pessoais_pelo_poder_publico
 - Decreto Federal nº 12.560/2025: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12560.htm
 - Decreto MT nº 1.427/2025: https://iomat.mt.gov.br/apifront/portal/edicoes/imprimir_materia/1702926/18430?find=1.427
+
+
+## Ciclo de vida do dado
+
+Cada fluxo deve declarar:
+1. coleta/extração;
+2. uso;
+3. acesso;
+4. compartilhamento;
+5. publicação;
+6. retenção;
+7. descarte.
+
+Retenção não deve ser indefinida por padrão. Dados brutos nominais devem permanecer apenas pelo período necessário à finalidade e às obrigações institucionais aplicáveis.
+
+## Compartilhamento e Decreto nº 12.560/2025
+
+Para compartilhamentos abrangidos pelo Decreto nº 12.560/2025:
+- observar LGPD;
+- demonstrar proporcionalidade e necessidade;
+- garantir direitos dos titulares;
+- realizar RIPD prévio nos termos do Decreto;
+- documentar controlador, destinatários, finalidade, categorias de dados e salvaguardas.
+
+## Atualização ANPD
+
+A página institucional da ANPD sobre RIPD foi atualizada em setembro de 2026 e reforça que o relatório descreve tratamentos que possam gerar alto risco às liberdades civis e aos direitos fundamentais. O PREVNAR deve acompanhar futuras regulamentações adicionais sobre alto risco.
