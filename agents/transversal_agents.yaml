@@ -31,3 +31,6 @@ core_runtime_specialists:
 domain_specialists:
   - "PUBLIC_HEALTH_MANAGEMENT_SPECIALIST"
   - "PUBLIC_HEALTH_PROGRAM_SPECIALIST"
+
+engineering_services:
+  - "AI_SYSTEMS_SPECIALIST"
