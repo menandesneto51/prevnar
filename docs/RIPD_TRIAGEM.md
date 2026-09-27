@@ -39,7 +39,27 @@ Marcar **sim/não/não se aplica**.
 
 **Abrir avaliação formal de RIPD** quando houver exigência normativa expressa ou combinação de fatores de alto risco.
 
-Para compartilhamentos abrangidos pelo Decreto Federal nº 12.560/2025, observar a exigência de relatório de impacto prevista no Decreto.
+Para compartilhamentos abrangidos pelo Decreto Federal nº 12.560/2025, o compartilhamento deve ser precedido de RIPD conforme o Decreto.
+
+## Gatilhos de abertura obrigatória ou fortemente recomendada
+
+### Obrigatória pelo fluxo normativo identificado
+- compartilhamento de dados pessoais abrangido pelo Decreto Federal nº 12.560/2025.
+
+### Fortemente recomendada para decisão institucional
+- linkage nominal de múltiplas bases de saúde;
+- grande volume de dados sensíveis;
+- uso de IA/modelos sobre dados pessoais ou pseudonimizados;
+- priorização/classificação de indivíduos com potencial efeito relevante;
+- nova API nominal;
+- novo compartilhamento interinstitucional;
+- uso de serviço externo/cloud não previamente avaliado;
+- tratamento envolvendo crianças/adolescentes em escala;
+- dados geográficos muito granulares combinados com condições clínicas;
+- mudança substancial de finalidade;
+- nova tecnologia de identificação ou vinculação.
+
+A classificação final deve ser realizada pelo controlador/encarregado/Comitê Setorial competente.
 
 No Executivo de Mato Grosso, seguir também o Decreto nº 1.427/2025 e o fluxo institucional do Comitê Setorial de Proteção de Dados.
 
@@ -67,3 +87,40 @@ No Executivo de Mato Grosso, seguir também o Decreto nº 1.427/2025 e o fluxo i
 - Lei nº 13.709/2018
 - Guia ANPD para tratamento de dados pelo Poder Público
 - Decreto MT nº 1.427/2025
+
+
+## Decisão documentada
+
+A triagem deve terminar com um dos estados:
+
+```text
+RIPD_REQUIRED
+RIPD_RECOMMENDED
+RIPD_NOT_REQUIRED_WITH_JUSTIFICATION
+PENDING_PRIVACY_REVIEW
+```
+
+Registrar:
+- decisor institucional;
+- data;
+- justificativa;
+- controles exigidos;
+- prazo de revisão;
+- link/identificador do RIPD quando elaborado.
+
+## Evidências técnicas anexáveis
+
+O PREVNAR pode fornecer ao processo institucional:
+- data flow;
+- source registry;
+- campos utilizados;
+- manifests;
+- matriz de acesso;
+- retenção;
+- small-cell policy;
+- logs de processamento;
+- relatório do Release Guardian;
+- análise de riscos;
+- diagrama DEV/HML/PRD.
+
+Esses artefatos apoiam o RIPD, mas não o substituem.
