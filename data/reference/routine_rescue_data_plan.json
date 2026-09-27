@@ -1,0 +1,123 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "purpose": "Plano de mapeamento PNI/RNDS para vacinas de rotina, resgate e resposta.",
+  "sources": [
+    {
+      "source_id": "pni_hpv4",
+      "immunobiologic_id": "hpv4",
+      "source_family": "PNI/RNDS",
+      "immunobiologic_codes": [
+        "67"
+      ],
+      "mapping_status": "partial",
+      "confirmed": {
+        "immunobiologic_code": true,
+        "strategy_codes": false,
+        "dose_codes": false,
+        "attendance_groups": false
+      },
+      "required_fields": [
+        "patient_id_hash",
+        "immunobiologic_code",
+        "administration_date",
+        "municipality_code",
+        "establishment_cnes"
+      ],
+      "pending_fields": [
+        "strategy_code",
+        "dose_code",
+        "attendance_group_code"
+      ],
+      "guardrail": "Não iniciar ETL decisório de rotina até consolidar estratégia/dose/grupos da regra de entrada vigente."
+    },
+    {
+      "source_id": "pni_menacwy",
+      "immunobiologic_id": "menacwy",
+      "source_family": "PNI/RNDS",
+      "immunobiologic_codes": [
+        "74"
+      ],
+      "mapping_status": "partial",
+      "confirmed": {
+        "immunobiologic_code": true,
+        "routine_strategy_code": "1",
+        "known_booster_dose_code": "38"
+      },
+      "required_fields": [
+        "patient_id_hash",
+        "immunobiologic_code",
+        "strategy_code",
+        "dose_code",
+        "administration_date",
+        "municipality_code",
+        "establishment_cnes"
+      ],
+      "guardrail": "Cenário estratégia 1/dose 38 é confirmado para o reforço documentado; não assumir que representa todos os contextos MenACWY."
+    },
+    {
+      "source_id": "pni_febre_amarela",
+      "immunobiologic_id": "febre_amarela",
+      "source_family": "PNI/RNDS",
+      "immunobiologic_codes": [
+        "14"
+      ],
+      "mapping_status": "partial",
+      "confirmed": {
+        "immunobiologic_code": true,
+        "coverage_dose_codes": [
+          "1",
+          "9",
+          "36"
+        ]
+      },
+      "required_fields": [
+        "patient_id_hash",
+        "immunobiologic_code",
+        "dose_code",
+        "administration_date",
+        "municipality_code",
+        "establishment_cnes"
+      ],
+      "desired_fields": [
+        "strategy_code",
+        "history_or_previous_dose_date"
+      ],
+      "guardrail": "Os códigos 1/9/36 são conhecidos para cobertura; não equivalem automaticamente a toda regra clínica por histórico."
+    },
+    {
+      "source_id": "pni_triplice_viral",
+      "immunobiologic_id": "triplice_viral",
+      "source_family": "PNI/RNDS",
+      "immunobiologic_codes": [
+        "24"
+      ],
+      "mapping_status": "partial",
+      "confirmed": {
+        "immunobiologic_code": true,
+        "blockade_strategy_code": "3",
+        "intensification_strategy_code": "4",
+        "blockade_dose_codes": [
+          "1",
+          "2",
+          "8",
+          "57"
+        ],
+        "intensification_dose_codes": [
+          "1",
+          "2"
+        ]
+      },
+      "required_fields": [
+        "patient_id_hash",
+        "immunobiologic_code",
+        "strategy_code",
+        "dose_code",
+        "administration_date",
+        "municipality_code",
+        "establishment_cnes"
+      ],
+      "guardrail": "Bloqueio/intensificação são contextos específicos; não usar esse mapeamento como substituto da rotina nacional."
+    }
+  ]
+}

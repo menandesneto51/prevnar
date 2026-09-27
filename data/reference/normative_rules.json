@@ -1,5 +1,5 @@
 {
-  "version": "1.2",
+  "version": "1.5",
   "updated_at": "2026-09-26",
   "interpretation": "Decision support for surveillance and operational monitoring. Does not replace clinical assessment or official PNI guidance.",
   "rules": [
@@ -132,7 +132,14 @@
           "min_interval_after_conjugate_days": 56
         }
       ],
-      "immunobiologic_id": "vpc20"
+      "immunobiologic_id": "vpc20",
+      "rule_context": "special_population",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "vpc20_elderly_85_2026",
@@ -176,7 +183,14 @@
       ],
       "monitoring_target_pct": 90,
       "target_population_brazil_2026": 2337775,
-      "immunobiologic_id": "vpc20"
+      "immunobiologic_id": "vpc20",
+      "rule_context": "special_population",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "vpc20_coverage_monitoring_2026",
@@ -189,7 +203,14 @@
         "nt_69_2026_vpc20_coverage"
       ],
       "note": "Metodologia de cálculo e monitoramento de cobertura no contexto da transição VPC10→VPC20. Não deve ser confundida com elegibilidade clínica.",
-      "immunobiologic_id": "vpc20"
+      "immunobiologic_id": "vpc20",
+      "rule_context": "monitoring",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "vvsr_materna_2026",
@@ -214,7 +235,14 @@
         "repeat_each_pregnancy": true,
         "simultaneous_with_other_calendar_vaccines": true
       },
-      "note": "Uma dose a partir da 28ª semana em cada gestação. Se administrada antes da 28ª semana, não repetir a dose; realizar monitoramento conforme orientação oficial."
+      "note": "Uma dose a partir da 28ª semana em cada gestação. Se administrada antes da 28ª semana, não repetir a dose; realizar monitoramento conforme orientação oficial.",
+      "rule_context": "maternal",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "nirsevimab_vsr_2026",
@@ -276,7 +304,14 @@
         "not_combine_two_50mg_syringes_to_make_100mg": true,
         "two_100mg_injections_for_200mg_allowed": true
       },
-      "note": "Prematuros elegíveis: administração ao longo de todo o ano. Crianças com comorbidades: durante a sazonalidade do VSR (fevereiro a agosto), podendo alcançar segunda sazonalidade conforme critérios. Dose depende de peso e sazonalidade clínica aplicável."
+      "note": "Prematuros elegíveis: administração ao longo de todo o ano. Crianças com comorbidades: durante a sazonalidade do VSR (fevereiro a agosto), podendo alcançar segunda sazonalidade conforme critérios. Dose depende de peso e sazonalidade clínica aplicável.",
+      "rule_context": "passive_immunization",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "influenza_onboarding_2026",
@@ -289,7 +324,14 @@
         "calendario_nacional_2026",
         "nt_24_2026_influenza"
       ],
-      "note": "Aguardando mapeamento de códigos, estratégias e regras por grupo antes de ativação automática."
+      "note": "Aguardando mapeamento de códigos, estratégias e regras por grupo antes de ativação automática.",
+      "rule_context": "onboarding",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
     },
     {
       "rule_id": "covid19_onboarding_2026",
@@ -302,7 +344,271 @@
         "calendario_nacional_2026",
         "nt_91_2026_covid"
       ],
-      "note": "Aguardando estruturação por produto, faixa etária, histórico e grupo especial antes de ativação automática."
+      "note": "Aguardando estruturação por produto, faixa etária, histórico e grupo especial antes de ativação automática.",
+      "rule_context": "onboarding",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
+    },
+    {
+      "rule_id": "hpv4_onboarding_2026",
+      "immunobiologic_id": "hpv4",
+      "rule_type": "onboarding_metadata",
+      "status": "draft",
+      "effective_from": "2026-01-01",
+      "effective_until": null,
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_32_2026_hpv_nic2"
+      ],
+      "note": "Separar rotina, resgate e grupos prioritários antes de ativação.",
+      "rule_context": "onboarding",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
+    },
+    {
+      "rule_id": "menacwy_onboarding_2026",
+      "immunobiologic_id": "menacwy",
+      "rule_type": "onboarding_metadata",
+      "status": "draft",
+      "effective_from": "2026-01-01",
+      "effective_until": null,
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_50_2026_menacwy",
+        "nt_77_2025_menacwy_reforco"
+      ],
+      "note": "NT 50/2026 é metodologia de avaliação por coorte e não deve ser confundida com elegibilidade clínica.",
+      "rule_context": "onboarding",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
+    },
+    {
+      "rule_id": "febre_amarela_onboarding_2026",
+      "immunobiologic_id": "febre_amarela",
+      "rule_type": "onboarding_metadata",
+      "status": "draft",
+      "effective_from": "2026-01-01",
+      "effective_until": null,
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_6_2026_febre_amarela"
+      ],
+      "note": "A regra específica de dose padrão após dose fracionada 2018 será estruturada separadamente.",
+      "rule_context": "onboarding",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
+    },
+    {
+      "rule_id": "triplice_viral_onboarding_2026",
+      "immunobiologic_id": "triplice_viral",
+      "rule_type": "onboarding_metadata",
+      "status": "draft",
+      "effective_from": "2026-01-01",
+      "effective_until": null,
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_98_2026_triplice_viral_d0",
+        "ntc_116_2026_sarampo_viajantes"
+      ],
+      "note": "Dose zero e recomendações temporárias/territoriais serão modeladas por escopo explícito; nenhuma regra nacional genérica é ativada nesta etapa.",
+      "rule_context": "onboarding",
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      }
+    },
+    {
+      "rule_id": "menacwy_routine_2026",
+      "immunobiologic_id": "menacwy",
+      "rule_type": "eligibility_and_schedule",
+      "rule_context": "routine",
+      "status": "active",
+      "effective_from": "2025-07-01",
+      "effective_until": null,
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      },
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_77_2025_menacwy_reforco"
+      ],
+      "population": {
+        "strategy": "routine_menacwy"
+      },
+      "child_booster": {
+        "min_age_months": 12,
+        "max_age_months": 59,
+        "preferred_age_months": 12,
+        "min_interval_after_menc_days": 60,
+        "doses": 1
+      },
+      "adolescent": {
+        "min_age_months": 132,
+        "max_age_months": 179,
+        "doses": 1,
+        "note": "Dose ou reforço conforme situação vacinal encontrada."
+      },
+      "note": "Reforço infantil preferencialmente aos 12 meses, oportunamente até 4 anos 11 meses e 29 dias; adolescentes de 11 a 14 anos recebem uma dose ou reforço conforme situação vacinal."
+    },
+    {
+      "rule_id": "febre_amarela_routine_2026",
+      "immunobiologic_id": "febre_amarela",
+      "rule_type": "eligibility_and_schedule",
+      "rule_context": "routine",
+      "status": "active",
+      "effective_from": "2026-01-30",
+      "effective_until": null,
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      },
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_6_2026_febre_amarela"
+      ],
+      "population": {
+        "strategy": "routine_yellow_fever"
+      },
+      "history_rules": [
+        {
+          "history": "two_doses_before_5",
+          "recommendation": "complete_no_more_doses"
+        },
+        {
+          "history": "one_dose_before_5",
+          "recommendation": "one_booster",
+          "min_interval_days": 30
+        },
+        {
+          "history": "one_dose_at_or_after_5",
+          "recommendation": "complete_no_more_doses"
+        },
+        {
+          "history": "none_age_5_to_59",
+          "recommendation": "one_standard_dose"
+        },
+        {
+          "history": "fractional_2018_only",
+          "recommendation": "one_standard_booster"
+        }
+      ],
+      "pediatric_schedule": {
+        "min_age_months": 9,
+        "max_age_months": 59,
+        "routine_dose_age_months": 9,
+        "booster_age_months": 48,
+        "min_interval_days": 30
+      },
+      "older_adult": {
+        "min_age_years": 60,
+        "auto_recommend": false,
+        "requires_risk_benefit_review": true
+      },
+      "note": "Automação prioriza cenários explicitamente definidos por histórico. Crianças menores de 5 anos com histórico não estruturado e pessoas >=60 anos requerem revisão."
+    },
+    {
+      "rule_id": "hpv4_routine_2026",
+      "immunobiologic_id": "hpv4",
+      "rule_type": "eligibility_and_schedule",
+      "rule_context": "routine",
+      "status": "active",
+      "effective_from": "2026-01-30",
+      "effective_until": null,
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      },
+      "normative_acts": [
+        "calendario_nacional_2026"
+      ],
+      "population": {
+        "strategy": "routine_hpv4",
+        "min_age_months": 108,
+        "max_age_months": 179
+      },
+      "schedule": {
+        "required_total_doses": 1
+      },
+      "contraindications": {
+        "pregnancy": true
+      },
+      "note": "Meninas e meninos não vacinados de 9 anos a 14 anos, 11 meses e 29 dias: dose única. Resgate de 15–19 anos permanece em regra separada."
+    },
+    {
+      "rule_id": "triplice_viral_routine_2026",
+      "immunobiologic_id": "triplice_viral",
+      "rule_type": "eligibility_and_schedule",
+      "rule_context": "routine",
+      "status": "active",
+      "effective_from": "2026-01-30",
+      "effective_until": null,
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      },
+      "normative_acts": [
+        "calendario_nacional_2026"
+      ],
+      "population": {
+        "strategy": "routine_mmr"
+      },
+      "schedule": {
+        "child_first_dose_age_months": 12,
+        "child_second_dose_age_months": 15,
+        "min_interval_between_doses_days": 30,
+        "required_total_doses_through_age_29": 2,
+        "required_total_doses_age_30_59": 1,
+        "healthcare_worker_required_total_doses": 2
+      },
+      "note": "Rotina nacional por histórico. Dose zero, bloqueio, intensificação e resposta territorial permanecem em regras separadas."
     }
+  ],
+  "schema_version": "2.0",
+  "allowed_rule_contexts": [
+    "routine",
+    "special_population",
+    "maternal",
+    "passive_immunization",
+    "monitoring",
+    "campaign",
+    "blockade",
+    "intensification",
+    "travel",
+    "rescue",
+    "onboarding"
+  ],
+  "allowed_geographic_scope_types": [
+    "national",
+    "state",
+    "municipality",
+    "polygon",
+    "facility"
   ]
 }

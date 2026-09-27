@@ -18,6 +18,7 @@ from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
+from urllib.parse import urlparse
 
 from paths import MART, REF, ROOT
 from vaccine_rules import validate_registry_integrity
@@ -114,6 +115,20 @@ def iter_text_files(root: Path = ROOT) -> Iterable[Path]:
         yield path
 
 
+def _official_url_allowed(url: str, allowed_domains: set[str]) -> bool:
+    try:
+        parsed = urlparse(url)
+    except ValueError:
+        return False
+    if parsed.scheme != "https" or not parsed.hostname:
+        return False
+    host = parsed.hostname.lower().rstrip(".")
+    return any(
+        host == domain or host.endswith("." + domain)
+        for domain in allowed_domains
+    )
+
+
 def check_legal_register(findings: list[Finding]) -> None:
     path = ROOT / "docs" / "legal_register.json"
     if not path.exists():
@@ -130,6 +145,20 @@ def check_legal_register(findings: list[Finding]) -> None:
     if not acts:
         _finding(findings, "error", "legal_register_empty", "Registro legal sem atos.", path)
         return
+
+    allowed_domains = {
+        str(x).lower().strip()
+        for x in (payload.get("official_source_domains") or [])
+        if str(x).strip()
+    }
+    if not allowed_domains:
+        _finding(
+            findings,
+            "error",
+            "official_domains_missing",
+            "Registro legal sem lista de domínios oficiais autorizados.",
+            path,
+        )
 
     seen: set[str] = set()
     required = {"id", "type", "number", "scope", "official_url"}
@@ -155,6 +184,14 @@ def check_legal_register(findings: list[Finding]) -> None:
                 "error",
                 "legal_url_not_https",
                 f"URL oficial inválida para {act_id}: {url}",
+                path,
+            )
+        elif allowed_domains and not _official_url_allowed(url, allowed_domains):
+            _finding(
+                findings,
+                "error",
+                "legal_url_untrusted_domain",
+                f"URL de {act_id} não pertence a domínio oficial autorizado: {url}",
                 path,
             )
 

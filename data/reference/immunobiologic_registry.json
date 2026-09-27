@@ -256,6 +256,164 @@
         "nt_91_2026_covid"
       ],
       "note": "Entidade pronta para onboarding; regras por produto/faixa/grupo especial permanecem draft nesta etapa."
+    },
+    {
+      "immunobiologic_id": "hpv4",
+      "type": "vaccine",
+      "name": "Vacina papilomavírus humano 6, 11, 16 e 18 (recombinante)",
+      "display": "HPV4",
+      "active": true,
+      "monitored": false,
+      "onboarding_status": "partial_data_mapping",
+      "pni_codes": [
+        "67"
+      ],
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_32_2026_hpv_nic2"
+      ],
+      "note": "Regra nacional de rotina estruturada (9–14 anos, dose única). Código PNI permanece pendente de confirmação no sistema nacional; resgate 15–19 e grupos especiais são contextos separados.",
+      "code_mapping_status": "immunobiologic_code_confirmed_registration_details_pending",
+      "pni_registration": {
+        "immunobiologic_codes": [
+          "67"
+        ],
+        "mapping_scope_note": "Código 67 confirmado no CodeSystem nacional BRImunobiologico. Estratégias, doses e grupos de atendimento da regra de entrada vigente ainda precisam ser consolidados."
+      },
+      "code_mapping_sources": [
+        {
+          "source": "MS Terminologia FHIR — BRImunobiologico",
+          "url": "https://terminologia.saude.gov.br/fhir/ValueSet-BRImunobiologico.html",
+          "status": "official_national"
+        }
+      ]
+    },
+    {
+      "immunobiologic_id": "menacwy",
+      "type": "vaccine",
+      "name": "Vacina meningocócica ACWY (conjugada)",
+      "display": "MenACWY",
+      "active": true,
+      "monitored": false,
+      "onboarding_status": "partial_data_mapping",
+      "pni_codes": [
+        "74"
+      ],
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_50_2026_menacwy",
+        "nt_77_2025_menacwy_reforco"
+      ],
+      "note": "NT 50/2026 trata metodologia de coorte 11–14 anos; regra clínica e códigos PNI ainda não ativados.",
+      "pni_registration": {
+        "immunobiologic_codes": [
+          "74"
+        ],
+        "known_routine_booster": {
+          "strategy_code": "1",
+          "strategy_label": "Rotina",
+          "dose_code": "38",
+          "dose_label": "Reforço",
+          "dose_sigla": "REF",
+          "age_rule": ">=1 ano a 14 anos conforme regra de entrada citada na NT 77/2025"
+        },
+        "mapping_scope_note": "Código 74 confirmado em regra oficial de cobertura; rotina completa por faixa/coorte ainda requer consolidação da planilha 2026."
+      },
+      "code_mapping_sources": [
+        {
+          "source": "MS/InfoMS - regras de cobertura do calendário",
+          "url": "https://infoms.saude.gov.br/content/Default/NOTA_INFORMATIVA_SOBRE_CV_CALEND%C3%81RIO_NACIONAL.pdf",
+          "status": "official_national"
+        },
+        {
+          "source": "NT 77/2025-CGICI/DPNI/SVSA/MS",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/m/meningite/notas-tecnicas/nota-tecnica-no-77-2025-cgici-dpni-svsa-ms",
+          "status": "official_national"
+        }
+      ]
+    },
+    {
+      "immunobiologic_id": "febre_amarela",
+      "type": "vaccine",
+      "name": "Vacina febre amarela (atenuada)",
+      "display": "Febre amarela",
+      "active": true,
+      "monitored": false,
+      "onboarding_status": "partial_data_mapping",
+      "pni_codes": [
+        "14"
+      ],
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_6_2026_febre_amarela"
+      ],
+      "note": "NT 6/2026 trata indivíduos que receberam dose fracionada em 2018; demais regras permanecem vinculadas ao calendário 2026 e onboarding futuro.",
+      "pni_registration": {
+        "immunobiologic_codes": [
+          "14"
+        ],
+        "known_coverage_dose_codes": [
+          "1",
+          "9",
+          "36"
+        ],
+        "known_coverage_dose_labels": [
+          "D1",
+          "DU",
+          "DI"
+        ],
+        "mapping_scope_note": "Código 14 confirmado em regra oficial de cobertura. Regras de entrada completas por faixa/histórico seguem em onboarding."
+      },
+      "code_mapping_sources": [
+        {
+          "source": "MS/InfoMS - regras de cobertura do calendário",
+          "url": "https://infoms.saude.gov.br/content/Default/NOTA_INFORMATIVA_SOBRE_CV_CALEND%C3%81RIO_NACIONAL.pdf",
+          "status": "official_national"
+        }
+      ]
+    },
+    {
+      "immunobiologic_id": "triplice_viral",
+      "type": "vaccine",
+      "name": "Vacina sarampo, caxumba e rubéola (atenuada)",
+      "display": "Tríplice viral",
+      "active": true,
+      "monitored": false,
+      "onboarding_status": "routine_rule_active_partial_data_mapping",
+      "pni_codes": [
+        "24"
+      ],
+      "normative_acts": [
+        "calendario_nacional_2026",
+        "nt_98_2026_triplice_viral_d0",
+        "ntc_116_2026_sarampo_viajantes",
+        "nt_46_2025_triplice_dupla_registro"
+      ],
+      "note": "Regra nacional de rotina ativa por histórico; código 24 e contextos de bloqueio/intensificação parcialmente mapeados. Dose zero e estratégias territoriais permanecem separadas.",
+      "pni_registration": {
+        "immunobiologic_code": "24",
+        "known_contexts": {
+          "blockade": {
+            "strategy_code": "3",
+            "strategy_label": "Bloqueio",
+            "dose_codes": {
+              "1": "1ª Dose",
+              "2": "2ª Dose",
+              "8": "Dose",
+              "57": "Dose Zero"
+            }
+          },
+          "intensification": {
+            "strategy_code": "4",
+            "strategy_label": "Intensificação",
+            "dose_codes": {
+              "1": "1ª Dose",
+              "2": "2ª Dose"
+            }
+          }
+        },
+        "mapping_scope_note": "Mapeamento parcial para bloqueio/intensificação conforme NT 46/2025; não representa toda a rotina do Calendário 2026."
+      }
     }
   ]
 }

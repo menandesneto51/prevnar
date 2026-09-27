@@ -8,7 +8,7 @@ ETL = ROOT / "etl"
 if str(ETL) not in sys.path:
     sys.path.insert(0, str(ETL))
 
-from release_guardian import SECRET_PATTERNS, validate_cpf
+from release_guardian import SECRET_PATTERNS, _official_url_allowed, validate_cpf
 
 
 def test_cpf_checksum_accepts_valid_constructed_value() -> None:
@@ -29,3 +29,33 @@ def test_secret_patterns_detect_constructed_github_token() -> None:
 def test_secret_patterns_do_not_flag_normal_configuration_text() -> None:
     value = "NEXT_PUBLIC_BASE_PATH=/prevnar"
     assert not any(pattern.search(value) for _, pattern in SECRET_PATTERNS)
+
+
+def test_official_url_allows_government_subdomains() -> None:
+    allowed = {"gov.br"}
+    assert _official_url_allowed(
+        "https://www.gov.br/saude/pt-br/vacinacao",
+        allowed,
+    )
+    assert _official_url_allowed(
+        "https://bvsms.saude.gov.br/bvs/saudelegis/teste.html",
+        allowed,
+    )
+    assert _official_url_allowed(
+        "https://iomat.mt.gov.br/documento",
+        allowed,
+    )
+
+
+def test_official_url_rejects_external_https_domain() -> None:
+    assert not _official_url_allowed(
+        "https://example.com/nota-tecnica.pdf",
+        {"gov.br"},
+    )
+
+
+def test_official_url_rejects_insecure_scheme() -> None:
+    assert not _official_url_allowed(
+        "http://www.gov.br/saude",
+        {"gov.br"},
+    )

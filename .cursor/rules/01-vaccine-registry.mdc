@@ -18,3 +18,9 @@ alwaysApply: true
 11. Mudança normativa exige testes de regressão e revisão epidemiológica.
 12. O motor é de suporte operacional/vigilância e não substitui decisão clínica individual.
 13. Antes de release, executar o Release Guardian.
+
+14. Toda regra nova deve possuir `rule_context` e `geographic_scope`.
+15. Regras estaduais, municipais, por estabelecimento ou polígono nunca podem assumir escopo nacional por padrão.
+16. `active_rules()` deve receber contexto geográfico para resolver regras não nacionais.
+17. Código PNI/RNDS, código SIES/estoque e outros code systems são domínios distintos; nunca reutilizar um código entre sistemas sem fonte explícita.
+18. Mapeamento parcial deve ser marcado como parcial e não apresentado como cobertura integral da rotina.
