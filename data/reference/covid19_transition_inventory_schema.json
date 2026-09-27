@@ -1,0 +1,105 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "dataset_id": "covid19_transition_inventory",
+  "purpose": "Entrada agregada para monitoramento da transição de apresentações covid-19 conforme NT 91/2026.",
+  "grain": "reference_date + territory_code + facility_cnes + product_variant_id + lot",
+  "primary_key": [
+    "reference_date",
+    "territory_code",
+    "facility_cnes",
+    "product_variant_id",
+    "lot"
+  ],
+  "fields": [
+    {
+      "name": "reference_date",
+      "type": "date",
+      "required": true
+    },
+    {
+      "name": "territory_code",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "facility_cnes",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "product_variant_id",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "lot",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "expiry_date",
+      "type": "date",
+      "required": true
+    },
+    {
+      "name": "stock_available_doses",
+      "type": "integer_nonnegative",
+      "required": true
+    },
+    {
+      "name": "doses_administered_30d",
+      "type": "integer_nonnegative",
+      "required": true
+    },
+    {
+      "name": "physical_losses_30d",
+      "type": "integer_nonnegative",
+      "required": false,
+      "default": 0
+    },
+    {
+      "name": "technical_losses_30d",
+      "type": "integer_nonnegative",
+      "required": false,
+      "default": 0
+    },
+    {
+      "name": "eligible_population_estimate",
+      "type": "integer_nonnegative",
+      "required": false
+    },
+    {
+      "name": "storage_capacity_doses",
+      "type": "integer_nonnegative",
+      "required": false
+    },
+    {
+      "name": "requested_doses_next_cycle",
+      "type": "integer_nonnegative",
+      "required": false
+    }
+  ],
+  "derived_metrics": [
+    {
+      "id": "days_to_expiry",
+      "formula": "expiry_date - reference_date",
+      "evidence_level": "E1",
+      "decision_grade": true
+    },
+    {
+      "id": "days_of_stock_at_recent_consumption",
+      "formula": "stock_available_doses / max(doses_administered_30d/30, epsilon)",
+      "evidence_level": "E2",
+      "decision_grade": true,
+      "limitation": "Undefined when recent consumption is zero."
+    },
+    {
+      "id": "loss_rate_30d",
+      "formula": "(physical_losses_30d + technical_losses_30d) / max(doses_administered_30d + losses, 1)",
+      "evidence_level": "E2",
+      "decision_grade": true
+    }
+  ],
+  "privacy": "Aggregate stock/consumption data only; no patient identifiers."
+}
