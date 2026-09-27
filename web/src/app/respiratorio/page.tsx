@@ -1,3 +1,4 @@
+import { CovidTransitionPanel } from "@/components/CovidTransitionPanel";
 import { Kpi, fmtInt, fmtPct } from "@/components/Kpi";
 import {
   getCovidOperationalStatus,
@@ -375,6 +376,8 @@ export default async function RespiratorioPage() {
                 </div>
               </div>
             ) : null}
+
+            <CovidTransitionPanel />
 
             <div className="grid gap-3 xl:grid-cols-2">
               <div className="card table-wrap p-2">
