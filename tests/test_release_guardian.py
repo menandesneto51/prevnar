@@ -113,3 +113,11 @@ def test_current_regulatory_watch_contract_has_no_blocking_findings() -> None:
     findings: list[Finding] = []
     check_regulatory_watch_contract(findings)
     assert [f for f in findings if f.severity == "error"] == []
+
+
+def test_current_regulatory_compliance_state_has_no_blocking_findings() -> None:
+    from release_guardian import Finding, check_regulatory_compliance_state
+
+    findings: list[Finding] = []
+    check_regulatory_compliance_state(findings)
+    assert [f for f in findings if f.severity == "error"] == []
