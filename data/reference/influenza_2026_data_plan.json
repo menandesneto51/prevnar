@@ -5,7 +5,9 @@
   "immunobiologic_id": "influenza",
   "source_family": "PNI/RNDS",
   "official_basis": [
-    "nt_24_2026_influenza"
+    "nt_24_2026_influenza",
+    "ni_2_2025_vacinacao_escolar",
+    "nt_56_2026_vacinacao_escolar"
   ],
   "immunobiologic_codes": [
     "33",
@@ -55,14 +57,22 @@
         "9"
       ],
       "sector": "private"
-    }
-  ],
-  "excluded_or_pending_contexts": [
+    },
     {
       "id": "school_vaccination_le14",
-      "reason": "NT 24/2026 determina Estratégia Vacinação Escolar para <=14 anos, mas o código da estratégia não foi confirmado nesta etapa."
+      "code": "33",
+      "strategy": "14",
+      "dose_codes": [
+        "1",
+        "2",
+        "9"
+      ],
+      "sector": "SUS",
+      "age_max_years": 14,
+      "evidence_note": "Código 14 confirmado em orientação oficial de registro da vacinação escolar."
     }
   ],
+  "excluded_or_pending_contexts": [],
   "required_fields": [
     "patient_id_hash",
     "immunobiologic_code",
@@ -84,5 +94,13 @@
     "Cobertura oficial na NT 24/2026 é apresentada para crianças, gestantes e idosos >=60; demais grupos devem ser tratados como doses aplicadas até definição de denominador compatível.",
     "Serviço privado deve permanecer separado do SUS.",
     "Vacinação escolar não deve ser absorvida em Rotina/Especial sem código oficial validado."
+  ],
+  "terminology_notes": [
+    {
+      "system": "BREstrategiaVacinacao",
+      "published_version": "1.1.0",
+      "status": "strategy_14_not_listed_in_published_valueset",
+      "interpretation": "Manter rastreabilidade da divergência; usar código 14 apenas nos contextos sustentados pelas orientações oficiais específicas."
+    }
   ]
 }
