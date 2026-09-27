@@ -22,8 +22,8 @@ def test_routine_rescue_registry_integrity() -> None:
 def test_hpv_has_active_routine_rule_but_data_mapping_remains_pending() -> None:
     item = get_immunobiologic("hpv4")
     assert item["type"] == "vaccine"
-    assert item["onboarding_status"] == "rules_structured_data_mapping_pending"
-    assert item["pni_codes"] == []
+    assert item["onboarding_status"] == "partial_data_mapping"
+    assert item["pni_codes"] == ["67"]
     ids = {r["rule_id"] for r in active_rules("hpv4", on_date=TODAY)}
     assert "hpv4_routine_2026" in ids
 
@@ -60,7 +60,7 @@ def test_mmr_note_requires_context_specific_rules() -> None:
 def test_mmr_has_partial_official_registration_mapping_only() -> None:
     item = get_immunobiologic("triplice_viral")
     assert item["pni_codes"] == ["24"]
-    assert item["onboarding_status"] == "partial_data_mapping"
+    assert item["onboarding_status"] == "routine_rule_active_partial_data_mapping"
     mapping = item["pni_registration"]["known_contexts"]
     assert mapping["blockade"]["strategy_code"] == "3"
     assert mapping["blockade"]["dose_codes"]["57"] == "Dose Zero"
