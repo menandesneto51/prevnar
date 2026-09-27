@@ -12,6 +12,7 @@ const links = [
   { href: "/timeline", label: "Linha do tempo" },
   { href: "/monitoramento", label: "Monitoramento" },
   { href: "/respiratorio", label: "Respiratório" },
+  { href: "/rotina-resgate", label: "Rotina/Resgate" },
   { href: "/estoque", label: "Estoque" },
   { href: "/custo", label: "Custo teórico" },
   { href: "/condicoes", label: "Condições" },
