@@ -39,6 +39,7 @@ Modo mais estrito. Deve ser usado após reconstrução dos marts e antes de uma 
 - regra territorial com códigos de escopo;
 - regra ativa com pelo menos um ato normativo;
 - imunobiológico monitorado com código nacional;
+- bloqueio de `monitored=true` quando o mapeamento de registro estiver incompleto/`pending`;
 - source registry válido;
 - catálogo de indicadores versionado;
 - `decision_grade` obrigatório;
