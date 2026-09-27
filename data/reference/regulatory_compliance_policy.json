@@ -10,7 +10,7 @@
     "direct_legal_scope": "Sistemas de informação que registram dados de vacinação e demais atores explicitamente definidos no art. 312-A.",
     "prevnar_current_role": "analytical_monitoring",
     "prevnar_treatment": "internal_regulatory_benchmark",
-    "warning": "O painel não deve declarar infração legal apenas porque uma adaptação do PREVNAR ultrapassou 15 dias."
+    "warning": "Ultrapassar o benchmark interno de 15 dias não implica, por si só, descumprimento jurídico. A aplicabilidade deve ser analisada conforme o papel efetivo do sistema e a governança institucional."
   },
   "benchmarks": {
     "technical_revision_adaptation_days": 15,
