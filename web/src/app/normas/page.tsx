@@ -1,5 +1,6 @@
 import { Kpi, fmtInt } from "@/components/Kpi";
 import {
+  getNormativeBacklog,
   getNormativeMatrix,
   type NormativeMatrixItem,
   type NormativeRuleRow,
@@ -121,7 +122,10 @@ function ActsTable({ item }: { item: NormativeMatrixItem }) {
 }
 
 export default async function NormasPage() {
-  const data = await getNormativeMatrix();
+  const [data, backlog] = await Promise.all([
+    getNormativeMatrix(),
+    getNormativeBacklog(),
+  ]);
 
   if (!data) {
     return (
@@ -183,6 +187,55 @@ export default async function NormasPage() {
       )}
 
       <section className="card p-4 text-xs text-[var(--muted)]">{data.interpretation}</section>
+
+      {backlog ? (
+        <section className="space-y-3">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2 className="text-lg font-semibold">Pendências de governança</h2>
+              <p className="mt-1 text-xs text-[var(--muted)]">{backlog.interpretation}</p>
+            </div>
+            <div className="flex gap-2">
+              {Object.entries(backlog.summary.by_priority).map(([priority, count]) => (
+                <span
+                  key={priority}
+                  className={`badge ${priority === "P1" ? "badge-danger" : "badge-warn"}`}
+                >
+                  {priority}: {count}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="card table-wrap p-2">
+            <table className="data">
+              <thead>
+                <tr>
+                  <th>Prioridade</th>
+                  <th>Imunobiológico</th>
+                  <th>Categoria</th>
+                  <th>Pendência</th>
+                  <th>Próximo gate</th>
+                </tr>
+              </thead>
+              <tbody>
+                {backlog.items.slice(0, 20).map((row, index) => (
+                  <tr key={`${row.immunobiologic_id}-${row.category}-${index}`}>
+                    <td>
+                      <span className={`badge ${row.priority === "P1" ? "badge-danger" : "badge-warn"}`}>
+                        {row.priority}
+                      </span>
+                    </td>
+                    <td>{row.display}</td>
+                    <td className="font-mono text-xs">{row.category}</td>
+                    <td className="text-xs">{row.message}</td>
+                    <td className="text-xs text-[var(--muted)]">{row.next_gate}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ) : null}
 
       {data.immunobiologics.map((item) => (
         <section key={item.immunobiologic_id} className="space-y-3">
