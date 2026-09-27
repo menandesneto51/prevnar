@@ -23,6 +23,7 @@ from urllib.parse import urlparse
 from paths import MART, REF, ROOT
 from vaccine_rules import validate_registry_integrity
 from build_normative_matrix import build_matrix
+from evidence_governance import validate_evidence_registry
 
 
 ALLOWED_EVIDENCE = {"E1", "E2", "E3", "E4", "E5"}
@@ -195,6 +196,29 @@ def check_legal_register(findings: list[Finding]) -> None:
                 f"URL de {act_id} não pertence a domínio oficial autorizado: {url}",
                 path,
             )
+
+
+def check_evidence_governance(findings: list[Finding]) -> None:
+    try:
+        rows = validate_evidence_registry()
+    except Exception as exc:  # noqa: BLE001
+        _finding(
+            findings,
+            "error",
+            "evidence_registry_invalid",
+            f"Falha ao validar evidence_registry: {exc}",
+            REF / "evidence_registry.json",
+        )
+        return
+
+    for row in rows:
+        _finding(
+            findings,
+            row.get("severity", "error"),
+            row.get("code", "evidence_governance"),
+            row.get("message", "Falha de governança de evidência."),
+            REF / "evidence_registry.json",
+        )
 
 
 def check_sies_logistics_contract(findings: list[Finding]) -> None:
@@ -625,6 +649,7 @@ def check_mutable_api_routes(findings: list[Finding], mode: str) -> None:
 def run_guardian(mode: str = "ci") -> tuple[list[Finding], dict]:
     findings: list[Finding] = []
     check_legal_register(findings)
+    check_evidence_governance(findings)
     check_sies_logistics_contract(findings)
     check_source_registry(findings)
     check_vaccine_registry(findings)

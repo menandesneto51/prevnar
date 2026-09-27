@@ -1,0 +1,17 @@
+---
+description: Governança de evidências e autoridade de fontes no PREVNAR
+alwaysApply: true
+---
+
+# Evidence governance
+
+1. Consultar `data/reference/evidence_registry.json` antes de promover qualquer fonte a regra, mapping ou indicador decision-grade.
+2. Somente fonte federal com função normativa pode definir regra nacional.
+3. Terminologia oficial confirma códigos/conceitos, mas não cria regra clínica isoladamente.
+4. Artefato oficial de registro é canônico para estratégia, dose, grupo e combinações de registro.
+5. Documento estadual/municipal é suplementar para regra nacional, salvo quando o escopo da regra for explicitamente territorial.
+6. Fonte institucional pode ser decision-grade no próprio domínio, mas não cria escopo normativo nacional.
+7. Fonte secundária serve para descoberta; nunca ativa regra.
+8. Em conflito entre fontes, registrar o conflito e aplicar a hierarquia definida em `docs/EVIDENCE_GOVERNANCE.md`.
+9. Não preencher campo `pending` por inferência de fonte de menor autoridade.
+10. Release Guardian deve bloquear promoções que violem autoridade/escopo.
