@@ -43,7 +43,12 @@ def main() -> None:
         build_mart.run(refresh_sources=False)
         build_nacional.build()
 
-    print("\n=== 3/3 Concluído ===", flush=True)
+    print("\n=== 3/4 Governança regulatória ===", flush=True)
+    import regulatory_compliance
+
+    regulatory_compliance.write_regulatory_compliance()
+
+    print("\n=== 4/4 Concluído ===", flush=True)
 
 
 if __name__ == "__main__":
