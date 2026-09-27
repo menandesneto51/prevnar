@@ -1,0 +1,145 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-27",
+  "policy": {
+    "canonical_priority": [
+      "legislation",
+      "federal_normative",
+      "official_terminology",
+      "official_registration_artifact",
+      "state_normative",
+      "official_manual",
+      "institutional_authorized",
+      "supplementary_official",
+      "secondary"
+    ],
+    "rules": [
+      "Supplementary evidence cannot define or override a national rule.",
+      "Operational data sources do not create clinical or normative rules.",
+      "A state or municipal document may clarify local implementation but cannot be promoted to national scope unless a federal canonical source supports the same rule.",
+      "Institutional sources may be decision-grade for their data domain after governance approval, but do not create national normative scope.",
+      "Secondary sources may support discovery only and are never canonical for rule activation."
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "nt_91_2026_covid",
+      "title": "Nota Técnica nº 91/2026-DPNI/SVSA/MS",
+      "evidence_class": "federal_normative",
+      "authority_level": "federal",
+      "authority_scope": "BR",
+      "issuer": "Ministério da Saúde / DPNI / SVSA",
+      "official": true,
+      "canonical": true,
+      "can_define_national_rule": true,
+      "can_confirm_registration_mapping": true,
+      "decision_grade": true,
+      "official_url": "https://www.gov.br/saude/pt-br/composicao/svsa/pni/notas-tecnicas/2026/nota-tecnica-no-91-2026-dpni-svsa-ms",
+      "supports": [
+        "covid19_product_operational_profile",
+        "covid19_immunobiologic_code_87",
+        "covid19_transition_management"
+      ],
+      "limitations": [
+        "Does not replace the full Rules of Entry artifact for strategy, dose and attendance-group combinations."
+      ]
+    },
+    {
+      "evidence_id": "brimunobiologico_1_1_0",
+      "title": "BRImunobiologico 1.1.0",
+      "evidence_class": "official_terminology",
+      "authority_level": "federal",
+      "authority_scope": "BR",
+      "issuer": "Ministério da Saúde / servidor terminológico",
+      "official": true,
+      "canonical": true,
+      "can_define_national_rule": false,
+      "can_confirm_registration_mapping": true,
+      "decision_grade": true,
+      "official_url": "https://terminologia.saude.gov.br/fhir/ValueSet-BRImunobiologico.html",
+      "supports": [
+        "immunobiologic_code_system",
+        "covid19_immunobiologic_code_87"
+      ],
+      "limitations": [
+        "Terminology confirms code semantics but does not define clinical eligibility by itself."
+      ]
+    },
+    {
+      "evidence_id": "rules_entry_data_4",
+      "title": "Regras de Entrada de Dados 4",
+      "evidence_class": "official_registration_artifact",
+      "authority_level": "federal",
+      "authority_scope": "BR",
+      "issuer": "Ministério da Saúde / PNI",
+      "official": true,
+      "canonical": true,
+      "can_define_national_rule": false,
+      "can_confirm_registration_mapping": true,
+      "decision_grade": true,
+      "official_url": "https://www.gov.br/saude/pt-br/vacinacao/regras-para-registros-vacinais/regras-de-entrada-de-dados",
+      "retrieval_status": "official_link_identified_content_pending_structured_ingestion",
+      "supports": [
+        "strategy_codes",
+        "dose_codes",
+        "attendance_groups",
+        "registration_combinations"
+      ],
+      "limitations": [
+        "Structured content must be ingested/validated before completing mappings that depend on row-level combinations."
+      ]
+    },
+    {
+      "evidence_id": "sies_public_distribution",
+      "title": "SIES — Dados Abertos / doses distribuídas",
+      "evidence_class": "official_operational",
+      "authority_level": "federal",
+      "authority_scope": "BR",
+      "issuer": "Ministério da Saúde",
+      "official": true,
+      "canonical": true,
+      "can_define_national_rule": false,
+      "can_confirm_registration_mapping": false,
+      "decision_grade": true,
+      "official_url": "https://apidadosabertos.saude.gov.br/vacinacao/sistema-de-informacao-de-insumos-estrategicos",
+      "supports": [
+        "distributed_doses",
+        "territorial_distribution"
+      ],
+      "prohibited_inferences": [
+        "current_stock_balance",
+        "lot_expiry",
+        "losses",
+        "cold_chain_capacity"
+      ]
+    },
+    {
+      "evidence_id": "sies_institutional_inventory",
+      "title": "SIES/DW institucional — estoque agregado",
+      "evidence_class": "institutional_authorized",
+      "authority_level": "institutional",
+      "authority_scope": "SES-MT",
+      "issuer": "SES-MT",
+      "official": true,
+      "canonical": false,
+      "can_define_national_rule": false,
+      "can_confirm_registration_mapping": false,
+      "decision_grade": true,
+      "access": "authorized_export_or_institutional_dw",
+      "supports": [
+        "current_stock_balance",
+        "lot_expiry",
+        "losses",
+        "cold_chain_capacity",
+        "transition_alerts"
+      ],
+      "governance_requirements": [
+        "schema_validation",
+        "provenance",
+        "freshness",
+        "authorized_access",
+        "no_patient_identifiers"
+      ]
+    }
+  ]
+}
