@@ -137,3 +137,28 @@ def test_public_sies_accepts_direct_vpc20_only() -> None:
     agg = _agg_sies(rows, ano_min=2024)
     assert agg["por_uf_vpc20"]["MT"] == 250
     assert agg["por_uf_distribuidas"]["MT"] == 250
+
+
+def test_sies_source_contract_separates_distribution_and_inventory() -> None:
+    import json
+
+    contract = json.loads(
+        (ROOT / "data/reference/sies_transition_source_contract.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    public = contract["sources"]["sies_public_distribution"]
+    institutional = contract["sources"]["sies_institutional_inventory"]
+
+    assert "current_stock_balance" in public["prohibited_inferences"]
+    assert public["decision_grade_for_current_inventory"] is False
+    assert institutional["decision_grade"] is True
+    assert "cpf" in institutional["forbidden_personal_fields"]
+    assert "cns" in institutional["forbidden_personal_fields"]
+
+
+def test_legacy_extractor_has_no_unverified_tls_or_sies_seed() -> None:
+    source = (ROOT / "etl/extract_nacional.py").read_text(encoding="utf-8")
+    assert "_create_unverified_context" not in source
+    assert "por_uf_seed" not in source
+    assert "Fallback seed distribuídas" not in source
