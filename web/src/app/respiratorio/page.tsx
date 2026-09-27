@@ -276,9 +276,10 @@ export default async function RespiratorioPage() {
             </div>
 
             <div className="card p-4 text-xs text-[var(--muted)]">
-              {influenza.interpretation} A vacinação escolar para pessoas ≤14 anos permanece como
-              contexto pendente até confirmação do código da estratégia. Cobertura só deve ser
-              calculada para grupos com denominador metodologicamente compatível.
+              {influenza.interpretation} A vacinação escolar para pessoas ≤14 anos usa a
+              estratégia 14 conforme orientação oficial específica de registro. O ValueSet FHIR
+              BREstrategiaVacinacao 1.1.0 publicado ainda não lista esse conceito. Cobertura só
+              deve ser calculada para grupos com denominador metodologicamente compatível.
             </div>
           </>
         ) : (
