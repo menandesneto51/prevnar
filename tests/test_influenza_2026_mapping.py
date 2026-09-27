@@ -25,12 +25,13 @@ def test_influenza_registry_matches_nt24_2026() -> None:
     assert contexts["private_high_dose"]["dose_codes"] == ["9"]
 
 
-def test_influenza_school_strategy_remains_pending_code() -> None:
+def test_influenza_school_strategy_code_14_is_confirmed_by_official_guidance() -> None:
     item = get_immunobiologic("influenza")
     school = item["pni_registration"]["school_context"]
     assert school["documented"] is True
-    assert school["strategy_code"] is None
-    assert school["mapping_status"] == "pending_official_code_confirmation"
+    assert school["strategy_code"] == "14"
+    assert school["mapping_status"] == "confirmed_by_official_registration_guidance"
+    assert school["terminology_sync_status"] == "not_present_in_published_brestrategiavacinacao_1_1_0"
 
 
 def test_influenza_clinical_rule_remains_draft() -> None:
