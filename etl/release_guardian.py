@@ -197,6 +197,83 @@ def check_legal_register(findings: list[Finding]) -> None:
             )
 
 
+def check_sies_logistics_contract(findings: list[Finding]) -> None:
+    contract_path = REF / "sies_transition_source_contract.json"
+    if not contract_path.exists():
+        _finding(
+            findings,
+            "error",
+            "sies_contract_missing",
+            "Contrato SIES distribuição/estoque ausente.",
+            contract_path,
+        )
+        return
+
+    try:
+        contract = _load_json(contract_path)
+    except Exception as exc:  # noqa: BLE001
+        _finding(
+            findings,
+            "error",
+            "sies_contract_invalid",
+            f"Contrato SIES inválido: {exc}",
+            contract_path,
+        )
+        return
+
+    sources = contract.get("sources") or {}
+    public = sources.get("sies_public_distribution") or {}
+    institutional = sources.get("sies_institutional_inventory") or {}
+
+    prohibited = set(public.get("prohibited_inferences") or [])
+    if "current_stock_balance" not in prohibited:
+        _finding(
+            findings,
+            "error",
+            "sies_public_stock_inference_not_blocked",
+            "Contrato público SIES deve proibir inferência de saldo de estoque.",
+            contract_path,
+        )
+    if public.get("decision_grade_for_current_inventory") is not False:
+        _finding(
+            findings,
+            "error",
+            "sies_public_inventory_decision_grade",
+            "SIES público não pode ser decision-grade para saldo de estoque atual.",
+            contract_path,
+        )
+
+    forbidden = {str(x).lower() for x in institutional.get("forbidden_personal_fields") or []}
+    if not {"cpf", "cns"}.issubset(forbidden):
+        _finding(
+            findings,
+            "error",
+            "sies_personal_fields_guard_missing",
+            "Contrato institucional deve proibir ao menos CPF e CNS.",
+            contract_path,
+        )
+
+    legacy = ROOT / "etl" / "extract_nacional.py"
+    if legacy.exists():
+        text = legacy.read_text(encoding="utf-8", errors="ignore")
+        if "_create_unverified_context" in text:
+            _finding(
+                findings,
+                "error",
+                "unverified_tls_context",
+                "Extrator legado contém TLS sem verificação.",
+                legacy,
+            )
+        if "por_uf_seed" in text or "Fallback seed distribuídas" in text:
+            _finding(
+                findings,
+                "error",
+                "sies_seed_fallback_present",
+                "Extrator SIES não pode publicar seed como dado observado.",
+                legacy,
+            )
+
+
 def check_source_registry(findings: list[Finding]) -> None:
     path = REF / "source_registry.json"
     if not path.exists():
@@ -531,6 +608,7 @@ def check_mutable_api_routes(findings: list[Finding], mode: str) -> None:
 def run_guardian(mode: str = "ci") -> tuple[list[Finding], dict]:
     findings: list[Finding] = []
     check_legal_register(findings)
+    check_sies_logistics_contract(findings)
     check_source_registry(findings)
     check_vaccine_registry(findings)
     check_normative_governance(findings)
