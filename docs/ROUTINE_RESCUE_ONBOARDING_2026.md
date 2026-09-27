@@ -201,3 +201,32 @@ Essa camada é obrigatória antes de ativar:
 - campanha;
 - resposta municipal/estadual;
 - regra de viajantes.
+
+
+## Estado do mapeamento PNI
+
+### Tríplice viral
+
+Mapeamento parcial oficial incorporado:
+- código de imunobiológico: `24`;
+- bloqueio: estratégia `3`;
+- intensificação: estratégia `4`;
+- dose zero em bloqueio: código `57`;
+- demais códigos de dose do contexto específico conforme NT de registro.
+
+Este mapeamento **não representa toda a rotina do Calendário 2026**.
+
+### HPV4, MenACWY e febre amarela
+
+Os códigos PNI permanecem vazios neste momento.
+
+Motivo:
+- a página federal de Atualização das Regras de Entrada publica a versão 4 em planilha;
+- o conteúdo da planilha não está disponível de forma indexável na consulta automatizada realizada nesta etapa;
+- o PREVNAR não deve inferir código a partir de tabelas secundárias quando a fonte federal de registro ainda precisa ser lida/validada.
+
+Pendência:
+1. obter/ler a planilha oficial vigente;
+2. registrar código, estratégia, dose e grupo de atendimento;
+3. adicionar teste de regressão;
+4. somente então alterar o status para `data_mapping_structured`.
