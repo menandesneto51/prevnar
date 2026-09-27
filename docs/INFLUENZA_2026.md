@@ -51,11 +51,23 @@ Dose:
 
 ## Vacinação escolar
 
-A NT 24/2026 determina que vacinação em escola para pessoas <=14 anos seja registrada na Estratégia Vacinação Escolar.
+A NT 24/2026 determina o uso da Estratégia Vacinação Escolar para ações em escola com pessoas <=14 anos.
 
-O código dessa estratégia **não foi inferido** nesta versão.
+A Nota Informativa nº 2/2025-CIMVAC/CGESCO/DESCO/SAPS/MS orienta explicitamente o registro como:
 
-Esses registros devem aparecer como contexto pendente/mismatch até validação oficial.
+- estratégia `14`;
+- descrição: `Vacinação escolar`.
+
+A NT nº 56/2026 dá continuidade à estratégia em 2026.
+
+### Divergência terminológica
+
+O ValueSet publicado `BREstrategiaVacinacao` versão 1.1.0, ativo em 22/08/2026, ainda lista 13 conceitos e não apresenta o código 14.
+
+No PREVNAR:
+- o código 14 é aceito **somente** porque há orientação oficial específica de registro;
+- a divergência com o ValueSet permanece registrada;
+- uma atualização futura do servidor terminológico deve ser monitorada.
 
 ## ETL
 
