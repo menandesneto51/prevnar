@@ -1,0 +1,101 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "purpose": "Plano de ingestão e classificação observacional para vacinas de rotina/resgate com códigos PNI confirmados.",
+  "sources": [
+    {
+      "source_id": "pni_menacwy",
+      "immunobiologic_id": "menacwy",
+      "source_family": "PNI/RNDS",
+      "pni_codes": [
+        "74"
+      ],
+      "ingestion_status": "ready",
+      "classification": {
+        "observed_total": "all valid records with codigo_vacina=74",
+        "confirmed_contexts": [
+          {
+            "label": "routine_booster",
+            "strategy_code": "1",
+            "dose_code": "38",
+            "evidence_level": "E1"
+          }
+        ]
+      },
+      "constraints": [
+        "Total observado do produto não equivale automaticamente à cobertura por coorte.",
+        "Coorte 11–14 anos exige denominador compatível e regra metodológica específica."
+      ]
+    },
+    {
+      "source_id": "pni_febre_amarela",
+      "immunobiologic_id": "febre_amarela",
+      "source_family": "PNI/RNDS",
+      "pni_codes": [
+        "14"
+      ],
+      "ingestion_status": "ready",
+      "classification": {
+        "observed_total": "all valid records with codigo_vacina=14",
+        "known_dose_codes": [
+          "1",
+          "9",
+          "36"
+        ]
+      },
+      "constraints": [
+        "Histórico vacinal individual não pode ser reconstruído apenas pela dose corrente.",
+        "Cobertura e oportunidade por idade exigem denominador compatível."
+      ]
+    },
+    {
+      "source_id": "pni_triplice_viral",
+      "immunobiologic_id": "triplice_viral",
+      "source_family": "PNI/RNDS",
+      "pni_codes": [
+        "24"
+      ],
+      "ingestion_status": "ready",
+      "classification": {
+        "observed_total": "all valid records with codigo_vacina=24",
+        "confirmed_contexts": [
+          {
+            "label": "blockade",
+            "strategy_code": "3",
+            "dose_codes": [
+              "1",
+              "2",
+              "8",
+              "57"
+            ],
+            "evidence_level": "E1"
+          },
+          {
+            "label": "intensification",
+            "strategy_code": "4",
+            "dose_codes": [
+              "1",
+              "2"
+            ],
+            "evidence_level": "E1"
+          }
+        ]
+      },
+      "constraints": [
+        "Bloqueio/intensificação não devem ser confundidos com rotina.",
+        "Dose zero e ações territoriais exigem contexto temporal/geográfico."
+      ]
+    },
+    {
+      "source_id": "pni_hpv4",
+      "immunobiologic_id": "hpv4",
+      "source_family": "PNI/RNDS",
+      "pni_codes": [],
+      "ingestion_status": "blocked_pending_official_code",
+      "constraints": [
+        "Não iniciar ingestão automática até confirmação inequívoca do código PNI.",
+        "Não reutilizar código SIES/estoque como código de registro PNI."
+      ]
+    }
+  ]
+}

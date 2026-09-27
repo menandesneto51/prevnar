@@ -139,6 +139,46 @@
       "stale_after_days": 75,
       "critical_for_decision": true,
       "status": "mapped_not_ingested"
+    },
+    {
+      "source_id": "pni_menacwy",
+      "name": "PNI/RNDS — MenACWY",
+      "domain": "imunizacao_rotina",
+      "cadence": "mensal_ou_superior",
+      "attention_after_days": 45,
+      "stale_after_days": 75,
+      "critical_for_decision": true,
+      "status": "mapped_not_ingested"
+    },
+    {
+      "source_id": "pni_febre_amarela",
+      "name": "PNI/RNDS — Febre amarela",
+      "domain": "imunizacao_rotina",
+      "cadence": "mensal_ou_superior",
+      "attention_after_days": 45,
+      "stale_after_days": 75,
+      "critical_for_decision": true,
+      "status": "mapped_not_ingested"
+    },
+    {
+      "source_id": "pni_triplice_viral",
+      "name": "PNI/RNDS — Tríplice viral",
+      "domain": "imunizacao_rotina_resposta",
+      "cadence": "mensal_ou_superior",
+      "attention_after_days": 45,
+      "stale_after_days": 75,
+      "critical_for_decision": true,
+      "status": "mapped_not_ingested"
+    },
+    {
+      "source_id": "pni_hpv4",
+      "name": "PNI/RNDS — HPV4",
+      "domain": "imunizacao_rotina",
+      "cadence": "mensal_ou_superior",
+      "attention_after_days": 45,
+      "stale_after_days": 75,
+      "critical_for_decision": true,
+      "status": "blocked_pending_official_code"
     }
   ]
 }

@@ -1,0 +1,137 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-09-26",
+  "domain": "routine_rescue_immunization",
+  "indicators": [
+    {
+      "id": "menacwy_doses_observed",
+      "immunobiologic_id": "menacwy",
+      "name": "Doses MenACWY observadas",
+      "numerator": "COUNT records code 74",
+      "denominator": null,
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "menacwy_people_observed",
+      "immunobiologic_id": "menacwy",
+      "name": "Pessoas com registro MenACWY",
+      "numerator": "COUNT DISTINCT patient_id_hash code 74",
+      "denominator": null,
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "menacwy_routine_booster_records",
+      "immunobiologic_id": "menacwy",
+      "name": "Registros MenACWY em rotina/reforço conhecido",
+      "numerator": "COUNT strategy 1 and dose 38 among code 74",
+      "denominator": null,
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "menacwy_cohort_coverage_11_14",
+      "immunobiologic_id": "menacwy",
+      "name": "Cobertura MenACWY 11–14 por coorte",
+      "numerator": "eligible cohort vaccinated",
+      "denominator": "official cohort denominator",
+      "evidence_level": "E3",
+      "decision_grade": false,
+      "status": "requires_cohort_denominator"
+    },
+    {
+      "id": "yellow_fever_doses_observed",
+      "immunobiologic_id": "febre_amarela",
+      "name": "Doses de febre amarela observadas",
+      "numerator": "COUNT records code 14",
+      "denominator": null,
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "yellow_fever_people_observed",
+      "immunobiologic_id": "febre_amarela",
+      "name": "Pessoas com registro de febre amarela",
+      "numerator": "COUNT DISTINCT patient_id_hash code 14",
+      "denominator": null,
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "yellow_fever_known_dose_mix",
+      "immunobiologic_id": "febre_amarela",
+      "name": "Distribuição por códigos de dose conhecidos",
+      "numerator": "COUNT dose codes 1/9/36",
+      "denominator": "COUNT code 14",
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "yellow_fever_age_opportunity",
+      "immunobiologic_id": "febre_amarela",
+      "name": "Oportunidade vacinal por idade/histórico",
+      "numerator": "eligible not up-to-date",
+      "denominator": "eligible unique population with compatible history",
+      "evidence_level": "E4",
+      "decision_grade": false,
+      "status": "requires_history_linkage"
+    },
+    {
+      "id": "mmr_doses_observed",
+      "immunobiologic_id": "triplice_viral",
+      "name": "Doses de tríplice viral observadas",
+      "numerator": "COUNT records code 24",
+      "denominator": null,
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "mmr_blockade_records",
+      "immunobiologic_id": "triplice_viral",
+      "name": "Registros em bloqueio",
+      "numerator": "COUNT strategy 3 and allowed dose codes",
+      "denominator": null,
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "mmr_intensification_records",
+      "immunobiologic_id": "triplice_viral",
+      "name": "Registros em intensificação",
+      "numerator": "COUNT strategy 4 and dose codes 1/2",
+      "denominator": null,
+      "evidence_level": "E1",
+      "decision_grade": true,
+      "status": "ready_after_ingestion"
+    },
+    {
+      "id": "mmr_routine_coverage",
+      "immunobiologic_id": "triplice_viral",
+      "name": "Cobertura de rotina por faixa etária",
+      "numerator": "up-to-date unique persons",
+      "denominator": "official compatible denominator",
+      "evidence_level": "E3",
+      "decision_grade": false,
+      "status": "requires_denominator_and_history"
+    },
+    {
+      "id": "hpv4_ingestion_status",
+      "immunobiologic_id": "hpv4",
+      "name": "Status de ingestão HPV4",
+      "numerator": null,
+      "denominator": null,
+      "evidence_level": "E5",
+      "decision_grade": false,
+      "status": "blocked_pending_official_code"
+    }
+  ]
+}

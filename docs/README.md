@@ -33,3 +33,5 @@
 
 Documentos gerados automaticamente não devem substituir documentos normativos/manuais.
 Mudanças de método devem ser registradas, testadas e versionadas.
+
+- [ROUTINE_RESCUE_ETL.md](ROUTINE_RESCUE_ETL.md) — ETL observado de MenACWY, febre amarela e tríplice viral.

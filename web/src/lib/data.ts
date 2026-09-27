@@ -208,3 +208,50 @@ export async function getImmunobiologicCatalog(): Promise<ImmunobiologicCatalog>
     ),
   };
 }
+
+export type RoutineRescueMart = {
+  immunobiologic_id: string;
+  total_doses: number;
+  total_pessoas: number;
+  por_uf: Array<{ uf: string; doses: number; pessoas: number }>;
+  por_municipio: Array<{ municipio_ibge: string; doses: number; pessoas: number }>;
+  linha_tempo: Array<{ ano_mes: string; doses: number; pessoas: number }>;
+  estrategias: Record<string, number>;
+  doses_codigos: Record<string, number>;
+  context_counts: Record<string, number>;
+  invalid_mapping: Record<string, number>;
+  reference_period: string | null;
+  known_routine_booster_records?: number;
+  known_dose_records?: number;
+  unknown_dose_records?: number;
+  blockade_records?: number;
+  intensification_records?: number;
+  provenance?: {
+    run_id?: string;
+    source_id?: string;
+    reference_period?: string | null;
+    retrieved_at?: string;
+    freshness?: { status?: string; age_days?: number | null };
+  };
+};
+
+export type RoutineRescueDashboard = {
+  generated_at: string;
+  pages: number;
+  scanned: number;
+  target_hits: number;
+  hpv4_status: string;
+  menacwy: RoutineRescueMart;
+  febre_amarela: RoutineRescueMart;
+  triplice_viral: RoutineRescueMart;
+};
+
+export async function getRoutineRescueDashboard(): Promise<RoutineRescueDashboard | null> {
+  const candidates = [
+    path.join(dataDir, "routine_rescue_dashboard.json"),
+    path.join(process.cwd(), "..", "data", "mart", "routine_rescue_dashboard.json"),
+  ];
+  const file = candidates.find((candidate) => existsSync(candidate));
+  if (!file) return null;
+  return JSON.parse(await readFile(file, "utf-8")) as RoutineRescueDashboard;
+}
