@@ -189,6 +189,10 @@ def test_comorbidity_only_outside_season_requires_review() -> None:
     assert pathway["recommendation"] == "review_outside_or_unknown_vsr_season"
 
 
-def test_influenza_and_covid_remain_draft() -> None:
+def test_influenza_remains_draft_but_covid_has_selected_active_rules() -> None:
     assert active_rules("influenza", on_date=TODAY) == []
-    assert active_rules("covid19", on_date=TODAY) == []
+    covid_ids = {rule["rule_id"] for rule in active_rules("covid19", on_date=TODAY)}
+    assert "covid19_maternal_2026" in covid_ids
+    assert "covid19_elderly_2026" in covid_ids
+    assert "covid19_comirnaty_lp81_operational_2026" in covid_ids
+    assert "covid19_transition_management_2026" in covid_ids
