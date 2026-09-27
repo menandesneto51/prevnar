@@ -139,6 +139,46 @@
       "stale_after_days": 75,
       "critical_for_decision": true,
       "status": "mapped_not_ingested"
+    },
+    {
+      "source_id": "pni_hpv4",
+      "name": "PNI/RNDS — HPV4",
+      "domain": "imunizacao_hpv",
+      "status": "partial_mapping_not_ingested",
+      "cadence": "mensal_ou_superior",
+      "attention_after_days": 45,
+      "stale_after_days": 75,
+      "critical_for_decision": true
+    },
+    {
+      "source_id": "pni_menacwy",
+      "name": "PNI/RNDS — MenACWY",
+      "domain": "imunizacao_meningococica",
+      "status": "partial_mapping_not_ingested",
+      "cadence": "mensal_ou_superior",
+      "attention_after_days": 45,
+      "stale_after_days": 75,
+      "critical_for_decision": true
+    },
+    {
+      "source_id": "pni_febre_amarela",
+      "name": "PNI/RNDS — Febre amarela",
+      "domain": "imunizacao_febre_amarela",
+      "status": "partial_mapping_not_ingested",
+      "cadence": "mensal_ou_superior",
+      "attention_after_days": 45,
+      "stale_after_days": 75,
+      "critical_for_decision": true
+    },
+    {
+      "source_id": "pni_triplice_viral",
+      "name": "PNI/RNDS — Tríplice viral",
+      "domain": "imunizacao_sarampo_caxumba_rubeola",
+      "status": "partial_mapping_not_ingested",
+      "cadence": "mensal_ou_superior",
+      "attention_after_days": 45,
+      "stale_after_days": 75,
+      "critical_for_decision": true
     }
   ]
 }
