@@ -1,5 +1,5 @@
 {
-  "version": "1.5",
+  "version": "1.6",
   "updated_at": "2026-09-26",
   "interpretation": "Decision support for surveillance and operational monitoring. Does not replace clinical assessment or official PNI guidance.",
   "rules": [
@@ -588,6 +588,132 @@
         "healthcare_worker_required_total_doses": 2
       },
       "note": "Rotina nacional por histórico. Dose zero, bloqueio, intensificação e resposta territorial permanecem em regras separadas."
+    },
+    {
+      "rule_id": "covid19_maternal_2026",
+      "immunobiologic_id": "covid19",
+      "rule_type": "eligibility_and_schedule",
+      "rule_context": "maternal",
+      "status": "active",
+      "effective_from": "2026-01-30",
+      "effective_until": null,
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      },
+      "normative_acts": [
+        "calendario_nacional_2026"
+      ],
+      "population": {
+        "strategy": "maternal_covid",
+        "pregnancy_required": true
+      },
+      "schedule": {
+        "doses_per_pregnancy": 1,
+        "min_interval_months_if_previously_vaccinated": 6,
+        "postpartum_catchup_days_max": 45
+      },
+      "note": "Uma dose a cada gestação. Se houver dose anterior, respeitar intervalo mínimo de 6 meses. Se não vacinada durante a gestação, o calendário técnico orienta garantir vacinação no puerpério imediato até 45 dias."
+    },
+    {
+      "rule_id": "covid19_elderly_2026",
+      "immunobiologic_id": "covid19",
+      "rule_type": "eligibility_and_schedule",
+      "rule_context": "routine",
+      "status": "active",
+      "effective_from": "2026-01-30",
+      "effective_until": null,
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      },
+      "normative_acts": [
+        "calendario_nacional_2026"
+      ],
+      "population": {
+        "strategy": "elderly_covid",
+        "min_age_years": 60
+      },
+      "schedule": {
+        "dose_interval_months": 6,
+        "doses_per_interval": 1
+      },
+      "note": "Pessoas a partir de 60 anos: uma dose semestral no Calendário Nacional de Vacinação 2026."
+    },
+    {
+      "rule_id": "covid19_comirnaty_lp81_operational_2026",
+      "immunobiologic_id": "covid19",
+      "rule_type": "product_operational_profile",
+      "rule_context": "monitoring",
+      "status": "active",
+      "effective_from": "2026-09-09",
+      "effective_until": null,
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      },
+      "normative_acts": [
+        "nt_91_2026_covid"
+      ],
+      "population": {
+        "min_age_years": 12
+      },
+      "product_variant_id": "comirnaty_lp81_refrigerated_12plus",
+      "administration": {
+        "route": "intramuscular",
+        "dose_ml": 0.3,
+        "dose_mcg": 30,
+        "dose_label": "single_dose",
+        "min_interval_months_after_previous_covid_vaccine": 3
+      },
+      "storage": {
+        "min_celsius": 2,
+        "max_celsius": 8,
+        "must_not_freeze": true,
+        "max_hours_after_opening": 12
+      },
+      "note": "Perfil operacional do produto; não substitui as regras de elegibilidade por grupo do Calendário Nacional."
+    },
+    {
+      "rule_id": "covid19_transition_management_2026",
+      "immunobiologic_id": "covid19",
+      "rule_type": "inventory_transition",
+      "rule_context": "monitoring",
+      "status": "active",
+      "effective_from": "2026-09-09",
+      "effective_until": null,
+      "geographic_scope": {
+        "type": "national",
+        "codes": [
+          "BR"
+        ]
+      },
+      "normative_acts": [
+        "nt_91_2026_covid"
+      ],
+      "monitor_fields": [
+        "stock_available",
+        "doses_administered",
+        "recent_consumption",
+        "physical_losses",
+        "technical_losses",
+        "lot_expiry",
+        "eligible_population",
+        "storage_capacity"
+      ],
+      "transition_principles": [
+        "planned_and_gradual_transition",
+        "use_remaining_stock_opportunely",
+        "minimize_expiry_losses",
+        "requests_compatible_with_consumption_and_storage_capacity"
+      ],
+      "note": "Regra operacional para gestão da transição entre apresentações, sem função de elegibilidade clínica."
     }
   ],
   "schema_version": "2.0",
