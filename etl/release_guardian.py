@@ -274,6 +274,109 @@ def check_sies_logistics_contract(findings: list[Finding]) -> None:
             )
 
 
+def check_regulatory_compliance_policy(findings: list[Finding]) -> None:
+    policy_path = REF / "regulatory_compliance_policy.json"
+    legal_path = ROOT / "docs" / "legal_register.json"
+
+    if not policy_path.exists():
+        _finding(
+            findings,
+            "error",
+            "regulatory_policy_missing",
+            "Política de benchmark regulatório ausente.",
+            policy_path,
+        )
+        return
+
+    try:
+        policy = _load_json(policy_path)
+        legal = _load_json(legal_path)
+    except Exception as exc:  # noqa: BLE001
+        _finding(
+            findings,
+            "error",
+            "regulatory_policy_invalid",
+            f"Falha ao carregar política/registro legal: {exc}",
+            policy_path,
+        )
+        return
+
+    benchmark = (
+        policy.get("benchmarks", {})
+        .get("technical_revision_adaptation_days")
+    )
+    if benchmark != 15:
+        _finding(
+            findings,
+            "error",
+            "regulatory_benchmark_changed",
+            "Benchmark de revisão técnica deve permanecer em 15 dias enquanto baseado na Portaria 5.663/2024.",
+            policy_path,
+        )
+
+    applicability = policy.get("applicability") or {}
+    if applicability.get("prevnar_current_role") != "analytical_monitoring":
+        _finding(
+            findings,
+            "error",
+            "regulatory_applicability_ambiguous",
+            "Papel atual do PREVNAR deve permanecer explicitamente analytical_monitoring.",
+            policy_path,
+        )
+    if applicability.get("prevnar_treatment") != "internal_regulatory_benchmark":
+        _finding(
+            findings,
+            "error",
+            "regulatory_benchmark_not_internal",
+            "Prazo regulatório deve ser tratado como benchmark interno no PREVNAR analítico.",
+            policy_path,
+        )
+
+    portaria = next(
+        (
+            act
+            for act in legal.get("acts", [])
+            if act.get("id") == "portaria_5663_2024_rnds_vacinacao"
+        ),
+        None,
+    )
+    if not portaria:
+        _finding(
+            findings,
+            "error",
+            "portaria_5663_missing",
+            "Portaria GM/MS 5.663/2024 ausente do registro legal.",
+            legal_path,
+        )
+        return
+
+    if portaria.get("effective_from") != "2025-03-04":
+        _finding(
+            findings,
+            "error",
+            "portaria_5663_effective_date_invalid",
+            "Vigência registrada da Portaria 5.663/2024 deve refletir os 120 dias do art. 4º.",
+            legal_path,
+        )
+
+    provisions = portaria.get("provisions") or {}
+    expected = {
+        "rnds_online_submission_hours": 24,
+        "rnds_offline_submission_days": 15,
+        "system_adaptation_after_technical_revision_days": 15,
+        "dpni_new_immunobiologic_registration_rules_days": 15,
+    }
+    for key, value in expected.items():
+        if provisions.get(key) != value:
+            _finding(
+                findings,
+                "error",
+                "portaria_5663_provision_mismatch",
+                f"Provisão {key} deve ser {value}.",
+                legal_path,
+            )
+
+
 def check_source_registry(findings: list[Finding]) -> None:
     path = REF / "source_registry.json"
     if not path.exists():
@@ -626,6 +729,7 @@ def run_guardian(mode: str = "ci") -> tuple[list[Finding], dict]:
     findings: list[Finding] = []
     check_legal_register(findings)
     check_sies_logistics_contract(findings)
+    check_regulatory_compliance_policy(findings)
     check_source_registry(findings)
     check_vaccine_registry(findings)
     check_normative_governance(findings)
