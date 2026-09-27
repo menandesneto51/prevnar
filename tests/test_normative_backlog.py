@@ -22,14 +22,14 @@ def test_backlog_is_deterministic_and_prioritized() -> None:
     assert priorities == sorted(priorities, key=lambda x: rank[x])
 
 
-def test_influenza_and_covid_are_flagged_as_normative_pending() -> None:
+def test_influenza_is_pending_and_covid_is_partial_normative_onboarding() -> None:
     payload = build_backlog(as_of=AS_OF)
     pairs = {
         (row["immunobiologic_id"], row["category"])
         for row in payload["items"]
     }
     assert ("influenza", "normative_rule_pending") in pairs
-    assert ("covid19", "normative_rule_pending") in pairs
+    assert ("covid19", "normative_rule_partial") in pairs
 
 
 def test_hpv_partial_mapping_is_flagged() -> None:
