@@ -71,7 +71,19 @@
     ]
   },
   "data_mapping": {
-    "pni_product_codes_status": "pending",
-    "rule": "Do not activate vaccine administration ETL until codes are confirmed in an official national registration source."
+    "pni_product_codes_status": "immunobiologic_code_confirmed_registration_details_pending",
+    "immunobiologic_codes": [
+      "87"
+    ],
+    "confirmation_source": "nt_91_2026_covid",
+    "strategy_codes_status": "pending_rules_entry_extraction",
+    "dose_codes_status": "pending_rules_entry_extraction",
+    "attendance_groups_status": "pending_rules_entry_extraction",
+    "special_strategy_required_fields": [
+      "motivo_indicacao_cid",
+      "especialidade_profissional_prescritor"
+    ],
+    "etl_activation": "blocked",
+    "rule": "Do not activate vaccine administration ETL until strategy, dose and attendance-group rules for imuno 87 are consolidated from the official Rules of Entry."
   }
 }
