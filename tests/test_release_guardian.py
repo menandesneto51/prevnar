@@ -67,3 +67,33 @@ def test_current_normative_governance_has_no_blocking_findings() -> None:
     findings: list[Finding] = []
     check_normative_governance(findings)
     assert [f for f in findings if f.severity == "error"] == []
+
+
+def test_guardian_blocks_monitoring_with_pending_registration_mapping(monkeypatch) -> None:
+    import release_guardian
+
+    fake_matrix = {
+        "summary": {"unresolved_legal_references": []},
+        "immunobiologics": [
+            {
+                "immunobiologic_id": "covid19",
+                "monitored": True,
+                "pni_codes": ["87"],
+                "code_mapping_status": (
+                    "immunobiologic_code_confirmed_registration_details_pending"
+                ),
+                "onboarding_status": "operational_profile_structured_partial_data_mapping",
+                "rules": [],
+            }
+        ],
+    }
+    monkeypatch.setattr(release_guardian, "build_matrix", lambda: fake_matrix)
+
+    findings: list[release_guardian.Finding] = []
+    release_guardian.check_normative_governance(findings)
+
+    assert any(
+        finding.code == "monitored_with_incomplete_registration_mapping"
+        and finding.severity == "error"
+        for finding in findings
+    )
