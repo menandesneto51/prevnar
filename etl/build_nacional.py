@@ -128,12 +128,13 @@ def build() -> dict:
             }
         )
 
-    # Estoque: SIES agregado ou seed
-    sies_uf = sies.get("por_uf_distribuidas") or sies.get("por_uf_seed") or {}
-    estoque_rows = []
+    # Distribuição pública SIES: não representa saldo de estoque atual.
+    # Para VPC20, usar somente registros classificados diretamente como VPC20.
+    sies_uf = sies.get("por_uf_vpc20") or {}
+    distribuicao_sies_rows = []
     for uf, dist in sorted(sies_uf.items()):
         aplicada = int(pessoas_uf.get(uf) or 0)
-        estoque_rows.append(
+        distribuicao_sies_rows.append(
             {
                 "uf": uf,
                 "distribuidas": dist,
@@ -143,7 +144,7 @@ def build() -> dict:
         )
     # enriquecer com doses/CRIE
     oferta_by_uf = {r["uf"]: r for r in (qualidade_oferta.get("oferta_uf") or [])}
-    for row in estoque_rows:
+    for row in distribuicao_sies_rows:
         of = oferta_by_uf.get(row["uf"]) or {}
         row["doses_por_crie"] = of.get("doses_por_crie")
         row["pct_fora_crie"] = of.get("pct_fora_crie")
@@ -269,7 +270,8 @@ def build() -> dict:
         "cobertura_sit1": cob_sit1,
         "share_transicao_pneumo": len(serie.get("linhas") or []),
         "sies_distribuida_aplicada": (
-            round(sum(r["distribuidas"] for r in estoque_rows) / max(vac, 1), 2) if vac else None
+            round(sum(r["distribuidas"] for r in distribuicao_sies_rows) / max(vac, 1), 2)
+            if vac and distribuicao_sies_rows else None
         ),
         "doses_por_crie": qualidade_oferta.get("doses_por_crie_nacional"),
         "pct_fora_crie": qualidade_oferta.get("pct_fora_crie"),
@@ -375,10 +377,14 @@ def build() -> dict:
             mon_rows,
             key=lambda x: -(x["sih_internacoes"] + x["sinan_casos"] + x["sim_obitos"] + x["srag_casos"]),
         ),
-        "estoque_uf": estoque_rows,
+        "distribuicao_sies_uf": distribuicao_sies_rows,
+        "estoque_uf": distribuicao_sies_rows,  # compatibilidade legada; semântica = distribuição
         "sies_resumo": {
             "por_classe_insumo": sies.get("por_classe_insumo"),
             "nota": sies.get("nota"),
+            "data_semantics": sies.get("data_semantics") or "distributed_doses",
+            "decision_grade": bool(sies.get("decision_grade")) and bool(sies.get("por_uf_vpc20")),
+            "legacy_estoque_field_semantics": "distributed_doses_not_current_stock",
         },
         "oferta_uf": qualidade_oferta.get("oferta_uf") or [],
         "custo_uf": sorted(
