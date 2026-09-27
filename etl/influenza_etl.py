@@ -70,6 +70,8 @@ def _context(row: dict[str, Any]) -> str | None:
         return "public_routine"
     if code == "33" and strategy == "2" and dose in {"1", "2", "9"}:
         return "public_special"
+    if code == "33" and strategy == "14" and dose in {"1", "2", "9"}:
+        return "school_vaccination"
     if code == "77" and strategy == "8" and dose in {"1", "2", "9"}:
         return "private_tetravalent"
     if code == "110" and strategy == "8" and dose == "9":
@@ -183,12 +185,13 @@ def process_rows(rows: Iterable[dict[str, Any]]) -> dict[str, Any]:
         ],
         "mismatches": dict(mismatches),
         "reference_period": latest.isoformat()[:7] if latest else None,
-        "pending_contexts": [
+        "terminology_notes": [
             {
-                "id": "school_vaccination_le14",
-                "reason": (
-                    "NT 24/2026 determina Estratégia Vacinação Escolar para <=14 anos; "
-                    "código não validado nesta versão."
+                "id": "school_vaccination_strategy_14",
+                "status": "official_guidance_confirmed_valueset_sync_pending",
+                "note": (
+                    "Estratégia 14 é sustentada por orientação oficial específica de registro; "
+                    "BREstrategiaVacinacao 1.1.0 publicado ainda não lista o conceito."
                 ),
             }
         ],
@@ -225,7 +228,9 @@ def collect_api(*, max_pages: int | None = None) -> dict[str, Any]:
     warnings: list[str] = []
     if payload["mismatches"].get("code_hit_outside_confirmed_context"):
         warnings.append("records_outside_confirmed_mapping_context")
-    warnings.append("school_strategy_code_pending")
+    # Estratégia 14 é confirmada por orientação oficial específica de registro.
+    # O ValueSet FHIR BREstrategiaVacinacao 1.1.0 ainda não lista esse conceito;
+    # manter a divergência documentada no registry/data plan.
 
     manifest = write_manifest(
         source_id="pni_influenza_2026",

@@ -242,9 +242,11 @@
       ],
       "normative_acts": [
         "calendario_nacional_2026",
-        "nt_24_2026_influenza"
+        "nt_24_2026_influenza",
+        "ni_2_2025_vacinacao_escolar",
+        "nt_56_2026_vacinacao_escolar"
       ],
-      "note": "NT 24/2026 mapeia códigos 33/77/110, estratégias 1/2/8 e doses 1/2/9. Vacinação escolar ≤14 anos usa estratégia própria; código não inferido nesta versão.",
+      "note": "NT 24/2026 mapeia códigos 33/77/110, estratégias 1/2/8 e doses 1/2/9. Estratégia 14 (Vacinação Escolar) confirmada por orientação oficial de registro; ValueSet BREstrategiaVacinacao 1.1.0 publicado ainda não a lista.",
       "pni_registration": {
         "presentations": {
           "33": {
@@ -310,9 +312,14 @@
         "school_context": {
           "documented": true,
           "age_max_years": 14,
+          "strategy_code": "14",
           "strategy_label": "Vacinação Escolar",
-          "strategy_code": null,
-          "mapping_status": "pending_official_code_confirmation"
+          "mapping_status": "confirmed_by_official_registration_guidance",
+          "terminology_sync_status": "not_present_in_published_brestrategiavacinacao_1_1_0",
+          "sources": [
+            "ni_2_2025_vacinacao_escolar",
+            "nt_56_2026_vacinacao_escolar"
+          ]
         }
       }
     },
