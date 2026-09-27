@@ -27,6 +27,13 @@ Modo mais estrito. Deve ser usado após reconstrução dos marts e antes de uma 
 ## Gates implementados
 
 - registro legal válido;
+- referências legais das regras resolvidas;
+- regra ativa com vigência definida;
+- regra ativa com escopo geográfico explícito;
+- regra nacional com código BR;
+- regra territorial com códigos de escopo;
+- regra ativa com pelo menos um ato normativo;
+- imunobiológico monitorado com código nacional;
 - source registry válido;
 - catálogo de indicadores versionado;
 - `decision_grade` obrigatório;
