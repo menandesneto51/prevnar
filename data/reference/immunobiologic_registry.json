@@ -264,14 +264,29 @@
       "display": "HPV4",
       "active": true,
       "monitored": false,
-      "onboarding_status": "rules_structured_data_mapping_pending",
-      "pni_codes": [],
+      "onboarding_status": "partial_data_mapping",
+      "pni_codes": [
+        "67"
+      ],
       "normative_acts": [
         "calendario_nacional_2026",
         "nt_32_2026_hpv_nic2"
       ],
       "note": "Regra nacional de rotina estruturada (9–14 anos, dose única). Código PNI permanece pendente de confirmação no sistema nacional; resgate 15–19 e grupos especiais são contextos separados.",
-      "code_mapping_status": "pending_official_pni_code_confirmation"
+      "code_mapping_status": "immunobiologic_code_confirmed_registration_details_pending",
+      "pni_registration": {
+        "immunobiologic_codes": [
+          "67"
+        ],
+        "mapping_scope_note": "Código 67 confirmado no CodeSystem nacional BRImunobiologico. Estratégias, doses e grupos de atendimento da regra de entrada vigente ainda precisam ser consolidados."
+      },
+      "code_mapping_sources": [
+        {
+          "source": "MS Terminologia FHIR — BRImunobiologico",
+          "url": "https://terminologia.saude.gov.br/fhir/ValueSet-BRImunobiologico.html",
+          "status": "official_national"
+        }
+      ]
     },
     {
       "immunobiologic_id": "menacwy",
