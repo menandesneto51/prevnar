@@ -55,3 +55,20 @@ def test_mmr_note_requires_context_specific_rules() -> None:
     assert "dose zero" in note
     assert "territori" in note
     assert "bloqueio" in note or "intensificação" in note
+
+
+def test_mmr_has_partial_official_registration_mapping_only() -> None:
+    item = get_immunobiologic("triplice_viral")
+    assert item["pni_codes"] == ["24"]
+    assert item["onboarding_status"] == "partial_data_mapping"
+    mapping = item["pni_registration"]["known_contexts"]
+    assert mapping["blockade"]["strategy_code"] == "3"
+    assert mapping["blockade"]["dose_codes"]["57"] == "Dose Zero"
+    assert mapping["intensification"]["strategy_code"] == "4"
+    assert "não representa toda a rotina" in item["pni_registration"]["mapping_scope_note"].lower()
+
+
+def test_other_routine_rescue_codes_remain_unset_until_official_mapping() -> None:
+    for immunobiologic_id in ("hpv4", "menacwy", "febre_amarela"):
+        item = get_immunobiologic(immunobiologic_id)
+        assert item["pni_codes"] == []
