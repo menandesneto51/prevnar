@@ -68,10 +68,15 @@ def test_mmr_has_partial_official_registration_mapping_only() -> None:
     assert "não representa toda a rotina" in item["pni_registration"]["mapping_scope_note"].lower()
 
 
-def test_hpv_code_remains_unset_until_official_mapping() -> None:
+def test_hpv_has_confirmed_immunobiologic_code_but_partial_mapping() -> None:
     item = get_immunobiologic("hpv4")
-    assert item["pni_codes"] == []
-    assert item["code_mapping_status"] == "pending_official_pni_code_confirmation"
+    assert item["pni_codes"] == ["67"]
+    assert item["onboarding_status"] == "partial_data_mapping"
+    assert (
+        item["code_mapping_status"]
+        == "immunobiologic_code_confirmed_registration_details_pending"
+    )
+    assert item["pni_registration"]["immunobiologic_codes"] == ["67"]
 
 
 def test_menacwy_and_yellow_fever_have_partial_official_mapping() -> None:
