@@ -13,6 +13,7 @@ const links = [
   { href: "/monitoramento", label: "Monitoramento" },
   { href: "/respiratorio", label: "Respiratório" },
   { href: "/rotina-resgate", label: "Rotina/Resgate" },
+  { href: "/normas", label: "Normas" },
   { href: "/estoque", label: "Estoque" },
   { href: "/custo", label: "Custo teórico" },
   { href: "/condicoes", label: "Condições" },
