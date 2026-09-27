@@ -93,7 +93,19 @@ def test_people_are_deduplicated() -> None:
     assert out["reference_period"] == "2026-05"
 
 
-def test_school_context_remains_explicitly_pending() -> None:
-    out = process_rows([])
-    assert out["pending_contexts"][0]["id"] == "school_vaccination_le14"
-    assert "código não validado" in out["pending_contexts"][0]["reason"].lower()
+def test_school_strategy_14_is_confirmed_context() -> None:
+    out = process_rows([
+        _row(patient="school", vaccine="33", strategy="14", dose="9"),
+    ])
+    assert out["observed_code_hits"] == 1
+    assert out["confirmed_context_doses"] == 1
+    assert out["contextos_confirmados"]["school_vaccination"] == 1
+
+
+def test_unknown_school_like_strategy_still_becomes_mismatch() -> None:
+    out = process_rows([
+        _row(patient="school", vaccine="33", strategy="99", dose="9"),
+    ])
+    assert out["observed_code_hits"] == 1
+    assert out["confirmed_context_doses"] == 0
+    assert out["mismatches"]["code_hit_outside_confirmed_context"] == 1
