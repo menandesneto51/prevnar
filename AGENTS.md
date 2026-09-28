@@ -57,6 +57,19 @@ Confere:
 
 Não substitui validação jurídica institucional.
 
+### Privacy Manifest gate
+
+Antes de aprovar nova fonte, ETL, linkage, mart ou endpoint, deve:
+- confirmar o `source_id` em `data/reference/privacy_manifest.json`;
+- validar classificação, nível de identificação e ambientes autorizados;
+- conferir `legal_basis_refs` contra `docs/legal_register.json`;
+- bloquear processamento público de dado confidencial/sensível;
+- exigir finalidade explícita para linkage;
+- exigir agregação e revisão de risco de divulgação antes de saída pública;
+- exigir gate de RIPD para dado de saúde não agregado.
+
+Fonte sem privacy manifest é `BLOCKED`.
+
 ## 6. PREVNAR Intelligence Agent
 Produz insights somente a partir de indicadores aprovados pelo quality gate.
 
@@ -81,7 +94,11 @@ Bloqueia release quando houver:
 - segredo versionado;
 - dado pessoal no repositório;
 - alteração metodológica sem versionamento;
-- endpoint mutável exposto sem autenticação.
+- endpoint mutável exposto sem autenticação;
+- fonte sem privacy manifest;
+- dado restrito processado em ambiente público;
+- linkage sem finalidade/ambiente autorizado;
+- referência legal de privacidade não resolvida.
 
 ## Ordem recomendada
 Data → Evidence → Epidemiology → Quality → Legal/Privacy → Intelligence → Action → Release Guardian.
