@@ -24,6 +24,7 @@ from paths import MART, REF, ROOT
 from vaccine_rules import validate_registry_integrity
 from build_normative_matrix import build_matrix
 from evidence_governance import validate_evidence_registry
+from privacy_governance import validate_privacy_manifest
 
 
 ALLOWED_EVIDENCE = {"E1", "E2", "E3", "E4", "E5"}
@@ -218,6 +219,29 @@ def check_evidence_governance(findings: list[Finding]) -> None:
             row.get("code", "evidence_governance"),
             row.get("message", "Falha de governança de evidência."),
             REF / "evidence_registry.json",
+        )
+
+
+def check_privacy_governance(findings: list[Finding]) -> None:
+    try:
+        rows = validate_privacy_manifest()
+    except Exception as exc:  # noqa: BLE001
+        _finding(
+            findings,
+            "error",
+            "privacy_manifest_invalid",
+            f"Falha ao validar privacy_manifest: {exc}",
+            REF / "privacy_manifest.json",
+        )
+        return
+
+    for row in rows:
+        _finding(
+            findings,
+            row.get("severity", "error"),
+            row.get("code", "privacy_governance"),
+            row.get("message", "Falha de governança de privacidade."),
+            REF / "privacy_manifest.json",
         )
 
 
@@ -650,6 +674,7 @@ def run_guardian(mode: str = "ci") -> tuple[list[Finding], dict]:
     findings: list[Finding] = []
     check_legal_register(findings)
     check_evidence_governance(findings)
+    check_privacy_governance(findings)
     check_sies_logistics_contract(findings)
     check_source_registry(findings)
     check_vaccine_registry(findings)
