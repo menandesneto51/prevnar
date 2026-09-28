@@ -1,0 +1,16 @@
+---
+description: Privacy Manifest obrigatório por source_id no PREVNAR
+alwaysApply: true
+---
+
+# Privacy Manifest
+
+1. Antes de ingerir ou transformar uma fonte, localizar seu `source_id` em `data/reference/privacy_manifest.json`.
+2. Se o `source_id` não existir, bloquear a implementação e classificar a fonte primeiro.
+3. Nunca versionar CPF, CNS, nome, endereço, telefone, e-mail ou outro identificador de pessoa.
+4. Dado `confidential` ou `sensitive_health` só pode ser processado em `institutional_restricted`.
+5. Linkage individual exige `linkage_allowed=true`, finalidade explícita e ambiente institucional restrito.
+6. Saída pública de fonte restrita deve ser agregada, minimizada e submetida a revisão de risco de divulgação.
+7. Toda base legal referenciada deve existir em `docs/legal_register.json`.
+8. Não reduzir classificação de risco apenas para fazer CI/release passar.
+9. O Release Guardian é fail-closed para fonte sem manifesto ou política inconsistente.
