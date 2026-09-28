@@ -1,0 +1,679 @@
+{
+  "version": "2.0",
+  "updated_at": "2026-09-27",
+  "policy_note": "Classificação operacional conservadora do PREVNAR. O manifesto descreve o maior risco plausível da fonte de origem e não substitui validação jurídica institucional. Nenhum dado nominal é permitido no GitHub.",
+  "allowed_data_classifications": [
+    "public",
+    "internal",
+    "confidential",
+    "sensitive_health"
+  ],
+  "allowed_identification_levels": [
+    "aggregate",
+    "pseudonymized",
+    "identifiable"
+  ],
+  "allowed_environments": [
+    "public_static",
+    "institutional_restricted"
+  ],
+  "sources": [
+    {
+      "source_id": "bps",
+      "data_classification": "public",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": false,
+      "linkage_allowed": false,
+      "linkage_purpose": null,
+      "allowed_environments": [
+        "public_static",
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "source_attribution"
+      ],
+      "retention_policy": "public_reference",
+      "controller": "Ministério da Saúde",
+      "custodian": "PREVNAR public repository",
+      "legal_basis_refs": [],
+      "ripd_required": false,
+      "notes": "Somente camada pública/agregada é admitida no repositório."
+    },
+    {
+      "source_id": "cnes",
+      "data_classification": "public",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": false,
+      "linkage_allowed": false,
+      "linkage_purpose": null,
+      "allowed_environments": [
+        "public_static",
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "source_attribution"
+      ],
+      "retention_policy": "public_reference",
+      "controller": "Ministério da Saúde",
+      "custodian": "PREVNAR public repository",
+      "legal_basis_refs": [],
+      "ripd_required": false,
+      "notes": "Somente camada pública/agregada é admitida no repositório."
+    },
+    {
+      "source_id": "esavi",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": true,
+      "contains_cns": true,
+      "contains_health_data": true,
+      "linkage_allowed": true,
+      "linkage_purpose": "vigilancia_epidemiologica_e_monitoramento_sanitario_autorizado",
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "disclosure_risk_review",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "Ministério da Saúde",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd"
+      ],
+      "ripd_required": true,
+      "notes": "Classificação conservadora da fonte de origem. Identificadores nunca podem ser versionados no GitHub."
+    },
+    {
+      "source_id": "ibge_population",
+      "data_classification": "public",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": false,
+      "linkage_allowed": false,
+      "linkage_purpose": null,
+      "allowed_environments": [
+        "public_static",
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "source_attribution"
+      ],
+      "retention_policy": "public_reference",
+      "controller": "IBGE",
+      "custodian": "PREVNAR public repository",
+      "legal_basis_refs": [],
+      "ripd_required": false,
+      "notes": "Somente camada pública/agregada é admitida no repositório."
+    },
+    {
+      "source_id": "ipca",
+      "data_classification": "public",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": false,
+      "linkage_allowed": false,
+      "linkage_purpose": null,
+      "allowed_environments": [
+        "public_static",
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "source_attribution"
+      ],
+      "retention_policy": "public_reference",
+      "controller": "IBGE / Banco Central do Brasil",
+      "custodian": "PREVNAR public repository",
+      "legal_basis_refs": [],
+      "ripd_required": false,
+      "notes": "Somente camada pública/agregada é admitida no repositório."
+    },
+    {
+      "source_id": "pni",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": true,
+      "contains_cns": true,
+      "contains_health_data": true,
+      "linkage_allowed": true,
+      "linkage_purpose": "vigilancia_epidemiologica_e_monitoramento_sanitario_autorizado",
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "disclosure_risk_review",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "Ministério da Saúde",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd",
+        "portaria_5663_2024_rnds_vacinacao",
+        "nt_115_2024_rnds_registro_vacinal",
+        "decreto_12560_2025"
+      ],
+      "ripd_required": true,
+      "notes": "Classificação conservadora da fonte de origem. Identificadores nunca podem ser versionados no GitHub."
+    },
+    {
+      "source_id": "pni_covid19_2026",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": true,
+      "contains_cns": true,
+      "contains_health_data": true,
+      "linkage_allowed": true,
+      "linkage_purpose": "vigilancia_epidemiologica_e_monitoramento_sanitario_autorizado",
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "disclosure_risk_review",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "Ministério da Saúde",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd",
+        "portaria_5663_2024_rnds_vacinacao",
+        "nt_115_2024_rnds_registro_vacinal",
+        "decreto_12560_2025"
+      ],
+      "ripd_required": true,
+      "notes": "Classificação conservadora da fonte de origem. Identificadores nunca podem ser versionados no GitHub."
+    },
+    {
+      "source_id": "pni_febre_amarela",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": true,
+      "contains_cns": true,
+      "contains_health_data": true,
+      "linkage_allowed": true,
+      "linkage_purpose": "vigilancia_epidemiologica_e_monitoramento_sanitario_autorizado",
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "disclosure_risk_review",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "Ministério da Saúde",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd",
+        "portaria_5663_2024_rnds_vacinacao",
+        "nt_115_2024_rnds_registro_vacinal",
+        "decreto_12560_2025"
+      ],
+      "ripd_required": true,
+      "notes": "Classificação conservadora da fonte de origem. Identificadores nunca podem ser versionados no GitHub."
+    },
+    {
+      "source_id": "pni_hpv4",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": true,
+      "contains_cns": true,
+      "contains_health_data": true,
+      "linkage_allowed": true,
+      "linkage_purpose": "vigilancia_epidemiologica_e_monitoramento_sanitario_autorizado",
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "disclosure_risk_review",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "Ministério da Saúde",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd",
+        "portaria_5663_2024_rnds_vacinacao",
+        "nt_115_2024_rnds_registro_vacinal",
+        "decreto_12560_2025"
+      ],
+      "ripd_required": true,
+      "notes": "Classificação conservadora da fonte de origem. Identificadores nunca podem ser versionados no GitHub."
+    },
+    {
+      "source_id": "pni_influenza_2026",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": true,
+      "contains_cns": true,
+      "contains_health_data": true,
+      "linkage_allowed": true,
+      "linkage_purpose": "vigilancia_epidemiologica_e_monitoramento_sanitario_autorizado",
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "disclosure_risk_review",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "Ministério da Saúde",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd",
+        "portaria_5663_2024_rnds_vacinacao",
+        "nt_115_2024_rnds_registro_vacinal",
+        "decreto_12560_2025"
+      ],
+      "ripd_required": true,
+      "notes": "Classificação conservadora da fonte de origem. Identificadores nunca podem ser versionados no GitHub."
+    },
+    {
+      "source_id": "pni_menacwy",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": true,
+      "contains_cns": true,
+      "contains_health_data": true,
+      "linkage_allowed": true,
+      "linkage_purpose": "vigilancia_epidemiologica_e_monitoramento_sanitario_autorizado",
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "disclosure_risk_review",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "Ministério da Saúde",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd",
+        "portaria_5663_2024_rnds_vacinacao",
+        "nt_115_2024_rnds_registro_vacinal",
+        "decreto_12560_2025"
+      ],
+      "ripd_required": true,
+      "notes": "Classificação conservadora da fonte de origem. Identificadores nunca podem ser versionados no GitHub."
+    },
+    {
+      "source_id": "pni_nirsevimab",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": true,
+      "contains_cns": true,
+      "contains_health_data": true,
+      "linkage_allowed": true,
+      "linkage_purpose": "vigilancia_epidemiologica_e_monitoramento_sanitario_autorizado",
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "disclosure_risk_review",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "Ministério da Saúde",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd",
+        "portaria_5663_2024_rnds_vacinacao",
+        "nt_115_2024_rnds_registro_vacinal",
+        "decreto_12560_2025"
+      ],
+      "ripd_required": true,
+      "notes": "Classificação conservadora da fonte de origem. Identificadores nunca podem ser versionados no GitHub."
+    },
+    {
+      "source_id": "pni_triplice_viral",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": true,
+      "contains_cns": true,
+      "contains_health_data": true,
+      "linkage_allowed": true,
+      "linkage_purpose": "vigilancia_epidemiologica_e_monitoramento_sanitario_autorizado",
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "disclosure_risk_review",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "Ministério da Saúde",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd",
+        "portaria_5663_2024_rnds_vacinacao",
+        "nt_115_2024_rnds_registro_vacinal",
+        "decreto_12560_2025"
+      ],
+      "ripd_required": true,
+      "notes": "Classificação conservadora da fonte de origem. Identificadores nunca podem ser versionados no GitHub."
+    },
+    {
+      "source_id": "pni_vvsr_maternal",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": true,
+      "contains_cns": true,
+      "contains_health_data": true,
+      "linkage_allowed": true,
+      "linkage_purpose": "vigilancia_epidemiologica_e_monitoramento_sanitario_autorizado",
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "disclosure_risk_review",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "Ministério da Saúde",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd",
+        "portaria_5663_2024_rnds_vacinacao",
+        "nt_115_2024_rnds_registro_vacinal",
+        "decreto_12560_2025"
+      ],
+      "ripd_required": true,
+      "notes": "Classificação conservadora da fonte de origem. Identificadores nunca podem ser versionados no GitHub."
+    },
+    {
+      "source_id": "sies",
+      "data_classification": "public",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": false,
+      "linkage_allowed": false,
+      "linkage_purpose": null,
+      "allowed_environments": [
+        "public_static",
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "source_attribution"
+      ],
+      "retention_policy": "public_reference",
+      "controller": "Ministério da Saúde",
+      "custodian": "PREVNAR public repository",
+      "legal_basis_refs": [],
+      "ripd_required": false,
+      "notes": "Somente camada pública/agregada é admitida no repositório."
+    },
+    {
+      "source_id": "sies_institutional_inventory",
+      "data_classification": "internal",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": false,
+      "linkage_allowed": false,
+      "linkage_purpose": null,
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": false,
+      "public_output_requirements": [
+        "institutional_only",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "SES-MT",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_8080_1990",
+        "lgpd",
+        "mt_decreto_1427_2025",
+        "mt_decreto_1428_2025"
+      ],
+      "ripd_required": false,
+      "notes": "Estoque, lote, validade e perdas permanecem em ambiente institucional; publicação depende de produto agregado específico."
+    },
+    {
+      "source_id": "sih",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": true,
+      "contains_cns": true,
+      "contains_health_data": true,
+      "linkage_allowed": true,
+      "linkage_purpose": "vigilancia_epidemiologica_e_monitoramento_sanitario_autorizado",
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "disclosure_risk_review",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "Ministério da Saúde",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd"
+      ],
+      "ripd_required": true,
+      "notes": "Classificação conservadora da fonte de origem. Identificadores nunca podem ser versionados no GitHub."
+    },
+    {
+      "source_id": "sim",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": true,
+      "contains_cns": true,
+      "contains_health_data": true,
+      "linkage_allowed": true,
+      "linkage_purpose": "vigilancia_epidemiologica_e_monitoramento_sanitario_autorizado",
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "disclosure_risk_review",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "Ministério da Saúde",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd"
+      ],
+      "ripd_required": true,
+      "notes": "Classificação conservadora da fonte de origem. Identificadores nunca podem ser versionados no GitHub."
+    },
+    {
+      "source_id": "sinan_meningite",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": true,
+      "contains_cns": true,
+      "contains_health_data": true,
+      "linkage_allowed": true,
+      "linkage_purpose": "vigilancia_epidemiologica_e_monitoramento_sanitario_autorizado",
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "disclosure_risk_review",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "Ministério da Saúde",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd"
+      ],
+      "ripd_required": true,
+      "notes": "Classificação conservadora da fonte de origem. Identificadores nunca podem ser versionados no GitHub."
+    },
+    {
+      "source_id": "siops",
+      "data_classification": "public",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": false,
+      "linkage_allowed": false,
+      "linkage_purpose": null,
+      "allowed_environments": [
+        "public_static",
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "source_attribution"
+      ],
+      "retention_policy": "public_reference",
+      "controller": "Ministério da Saúde",
+      "custodian": "PREVNAR public repository",
+      "legal_basis_refs": [],
+      "ripd_required": false,
+      "notes": "Somente camada pública/agregada é admitida no repositório."
+    },
+    {
+      "source_id": "situacao1_manual",
+      "data_classification": "confidential",
+      "identification_level": "aggregate",
+      "contains_cpf": false,
+      "contains_cns": false,
+      "contains_health_data": true,
+      "linkage_allowed": false,
+      "linkage_purpose": null,
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "review_before_publication",
+        "disclosure_risk_review"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "SES-MT",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd",
+        "mt_decreto_1427_2025",
+        "mt_decreto_1428_2025"
+      ],
+      "ripd_required": true,
+      "notes": "Cadastros administrativos só podem gerar saída pública após agregação e revisão."
+    },
+    {
+      "source_id": "srag",
+      "data_classification": "sensitive_health",
+      "identification_level": "pseudonymized",
+      "contains_cpf": true,
+      "contains_cns": true,
+      "contains_health_data": true,
+      "linkage_allowed": true,
+      "linkage_purpose": "vigilancia_epidemiologica_e_monitoramento_sanitario_autorizado",
+      "allowed_environments": [
+        "institutional_restricted"
+      ],
+      "public_mart_allowed": true,
+      "public_output_requirements": [
+        "aggregate_only",
+        "no_person_identifier",
+        "disclosure_risk_review",
+        "minimum_necessary_fields"
+      ],
+      "retention_policy": "institutional_policy_required",
+      "controller": "Ministério da Saúde",
+      "custodian": "SES-MT authorized institutional environment",
+      "legal_basis_refs": [
+        "lei_6259_1975",
+        "lei_8080_1990",
+        "lgpd"
+      ],
+      "ripd_required": true,
+      "notes": "Classificação conservadora da fonte de origem. Identificadores nunca podem ser versionados no GitHub."
+    }
+  ]
+}
